@@ -17,7 +17,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Immutable Tutorial - 5min ⏱️
+            Get Started!
           </Link>
         </div>
       </div>
@@ -30,11 +30,8 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title="Immutable X Developer Documentation"
-      description="Description will go into a meta tag in <head />">
+      description="Explanations, Reference, Tutorials and How-To Guides for Immutable X, a next-generation protocol for trading non-fungible Ethereum assets.">
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
     </Layout>
   );
 }

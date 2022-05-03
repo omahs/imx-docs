@@ -1,6 +1,6 @@
 ---
 title: "Architecture overview"
-slug: "architecture-overview"
+slug: "/architecture-overview"
 excerpt: "The core components of Immutable X"
 sidebar_position: 5
 ---
