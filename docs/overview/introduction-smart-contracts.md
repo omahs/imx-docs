@@ -14,7 +14,7 @@ A smart contract is simply a program that runs on the Ethereum blockchain. It’
 Currently, the most popular language for writing smart contracts on Ethereum is Solidity, which was created by the [Ethereum Foundation](https://ethereum.org/en/). If you have experience with Javascript, C++, Python, or other object-oriented scripting languages, you should find Solidity easy enough to understand. 
 
 Here's an annotated, Hello World example of a smart contract:
-```solidity
+```solidity title="HelloWorld.sol"
 // Specifies the version of Solidity, using semantic versioning.
 // Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
@@ -50,9 +50,9 @@ contract HelloWorld {
 
 ```
 ## ERC-721 standard
-The information on this page is specific to smart contracts for ERC-721 tokens, commonly known as [non-fungible tokens](doc:core-concepts#non-fungible-tokens) (NFTs). NFTs allow you to tokenize ownership of any arbitrary data and represent a unique digital asset on the blockchain. The ERC-721 standard outlines a set of common rules that all tokens can follow on the Ethereum network to produce expected results.
+The information on this page is specific to smart contracts for ERC-721 tokens, commonly known as [non-fungible tokens](./core-concepts.md#non-fungible-tokens) (NFTs). NFTs allow you to tokenize ownership of any arbitrary data and represent a unique digital asset on the blockchain. The ERC-721 standard outlines a set of common rules that all tokens can follow on the Ethereum network to produce expected results.
 
-[Token standards](doc:core-concepts#token-standards) primarily stipulate the following characteristics about a token:
+[Token standards](./core-concepts.md#token-standards) primarily stipulate the following characteristics about a token:
 * How is ownership decided?
 * How are tokens created?
 * How are tokens transferred?
@@ -61,28 +61,25 @@ The information on this page is specific to smart contracts for ERC-721 tokens, 
 The ERC-721 standard is provided to you as an interface that your NFT contract can inherit functions from, or override for custom implementations.
 
 Below we’ve defined a very simple NFT. The constructor initializes the contract name as **Doggo** and the token symbol as **DOG**. Although *very* basic, this is a perfectly valid NFT inheriting all the functions from the ERC-721 base contract, sourced from [OpenZeppelin](https://docs.openzeppelin.com/openzeppelin/).
-[block:code]
-{
-  "codes": [
-    {
-      "code": "import \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\n​\ncontract Doggo is ERC721 {\n  constructor() public ERC721(\"Doggo\", \"DOG\") {}\n}",
-      "language": "sol"
-    }
-  ]
+```solidity title="Doggo.sol"
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+​
+contract Doggo is ERC721 {
+  constructor() public ERC721("Doggo", "DOG") {}
 }
-[/block]
+
+```
 ## Metadata
 Now that we have an NFT, we can define some on-chain metadata, which refers to properties or characteristics that you want to set for your NFT and store within the smart contract itself.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "contract NyNFT is ERC721 {\n  mapping(uint256 => string) public idToName;\n​\n  function setName(uint256 tokenId, string _name) public {\n    idToName[tokenId] = _name\n  }\n}",
-      "language": "sol"
-    }
-  ]
+```solidity title="MyNFT.sol"
+contract MyNFT is ERC721 {
+  mapping(uint256 => string) public idToName;
+​
+  function setName(uint256 tokenId, string _name) public {
+    idToName[tokenId] = _name
+  }
 }
-[/block]
+```
 The `idToName` mapping is stored on-chain and is available for anyone to read from the smart contract. You can set on-chain metadata properties like this through a public function, which means that the name for any token can be changed by anyone sending a transaction calling the `setName` function. 
 
 You can set immutable properties for your NFT if you don't expose a way to change it, for example, setting the name at the time of minting. However, there are costs associated with storing data on the blockchain. Operations that involve writing to the blockchain, like the `setName` example above, are relatively expensive for the sender of the transaction. 
@@ -105,36 +102,80 @@ In our smart contract templates on Github (visit [imx-contracts](https://github.
 The Asset.sol contract in our repo inherits from the ERC-721 standard, as well as our custom Mintable contract, explained further down. 
 
 This contract implements the `_mintFor` function which is called by a function in Mintable.sol when the asset is minted to L1, mainnet Ethereum at the time of withdrawal from Immutable X on L2. 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.4;\n​\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\nimport \"./Mintable.sol\";\n​\ncontract Asset is ERC721, Mintable {\n    constructor(\n        address _owner,\n        string memory _name,\n        string memory _symbol,\n        address _imx\n    ) ERC721(_name, _symbol) Mintable(_owner, _imx) {}\n​\n    function _mintFor(\n        address user,\n        uint256 id,\n        bytes memory\n    ) internal override {\n        _safeMint(user, id);\n    }\n}",
-      "language": "sol"
-    }
-  ]
+```solidity title="Asset.sol"
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.4;
+​
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "./Mintable.sol";
+​
+contract Asset is ERC721, Mintable {
+    constructor(
+        address _owner,
+        string memory _name,
+        string memory _symbol,
+        address _imx
+    ) ERC721(_name, _symbol) Mintable(_owner, _imx) {}
+​
+    function _mintFor(
+        address user,
+        uint256 id,
+        bytes memory
+    ) internal override {
+        _safeMint(user, id);
+    }
 }
-[/block]
+```
 In the `_mintFor` function we call `_safeMint` which is an inherited function from the ERC-721 contract that mints the NFT [in a safe way](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#ERC721-_safeMint-address-uint256-). You can use this contract for your NFT as is. The name, symbol, owner, and Immutable X contract address is passed in the constructor.
-[block:callout]
-{
-  "type": "info",
-  "title": "Solidity naming standard",
-  "body": "The use of an underscore before a function name or variable (e.g. `_mintFor`) is a naming standard in Solidity to indicate that it is an internal function or variable."
-}
-[/block]
+:::info Solidity naming standard
+The use of an underscore before a function name or variable (e.g. `_mintFor`) is a naming standard in Solidity to indicate that it is an internal function or variable.
+:::
 ### Mintable contract
 In the Mintable.sol contract below, you can see the asset will be initialized in the constructor with an owner and an imx address. More details on these below.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.4;\n​\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\nimport \"./IMintable.sol\";\nimport \"./utils/Minting.sol\";\n​\nabstract contract Mintable is Ownable, IMintable {\n    address public imx;\n    mapping(uint256 => bytes) public blueprints;\n​\n    event AssetMinted(address to, uint256 id, bytes blueprint);\n​\n    constructor(address _owner, address _imx) {\n        imx = _imx;\n        require(_owner != address(0), \"Owner must not be empty\");\n        transferOwnership(_owner);\n    }\n​\n    modifier onlyIMX() {\n        require(msg.sender == imx, \"Function can only be called by IMX\");\n        _;\n    }\n​\n    function mintFor(\n        address user,\n        uint256 quantity,\n        bytes calldata mintingBlob\n    ) external override onlyIMX {\n        require(quantity == 1, \"Mintable: invalid quantity\");\n        (uint256 id, bytes memory blueprint) = Minting.split(mintingBlob);\n        _mintFor(user, id, blueprint);\n        blueprints[id] = blueprint;\n        emit AssetMinted(user, id, blueprint);\n    }\n​\n    function _mintFor(\n        address to,\n        uint256 id,\n        bytes memory blueprint\n    ) internal virtual;\n}",
-      "language": "sol"
-    }
-  ]
+```solidity title="Mintable.sol"
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.4;
+​
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "./IMintable.sol";
+import "./utils/Minting.sol";
+​
+abstract contract Mintable is Ownable, IMintable {
+    address public imx;
+    mapping(uint256 => bytes) public blueprints;
+​
+    event AssetMinted(address to, uint256 id, bytes blueprint);
+​
+    constructor(address _owner, address _imx) {
+        imx = _imx;
+        require(_owner != address(0), "Owner must not be empty");
+        transferOwnership(_owner);
+    }
+​
+    modifier onlyIMX() {
+        require(msg.sender == imx, "Function can only be called by IMX");
+        _;
+    }
+​
+    function mintFor(
+        address user,
+        uint256 quantity,
+        bytes calldata mintingBlob
+    ) external override onlyIMX {
+        require(quantity == 1, "Mintable: invalid quantity");
+        (uint256 id, bytes memory blueprint) = Minting.split(mintingBlob);
+        _mintFor(user, id, blueprint);
+        blueprints[id] = blueprint;
+        emit AssetMinted(user, id, blueprint);
+    }
+​
+    function _mintFor(
+        address to,
+        uint256 id,
+        bytes memory blueprint
+    ) internal virtual;
 }
-[/block]
+```
 More information about these smart contract examples:
 - Owner is the wallet address you choose to be the minter of the contract, so it should be a very safe, secure wallet. 
 - `transferOwnership(_owner)` does exactly as described, and transfers the ownership of the contract from the contract deployer to the specific wallet address.
@@ -143,7 +184,7 @@ More information about these smart contract examples:
 - The [blueprint](doc:minting-on-immutable-x#metadata-blueprint) is saved as on-chain, immutable metadata in the mapping blueprints. For custom blueprint decoding, you can override the mintFor function in Asset.sol to save it in something like tokenURI, or split the string into different components.
 - The function emits an event `AssetMinted` when the mintFor completes successfully, and this can be listened on by applications.
 
-# General advice
+## General advice
 Here are some extra tips and guidance related to smart contract development:
 
 ## Development and testing

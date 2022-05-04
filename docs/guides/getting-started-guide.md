@@ -10,9 +10,9 @@ These are the core components of the Immutable X stack:
 - **Link** - Immutable X projects can embed the Link UI directly into their site’s transaction flow.
 - **ZK-Rollups** - Immutable X combines NFT-specific exchange and proof logic with the cutting edge rollup technology developed by [StarkWare](https://starkware.co/).
 
-**[Learn more about Immutable X architecture](doc:architecture-overview)** 
+**[Learn more about Immutable X architecture](../overview/architecture-overview.md)** 
 
-# Prepare to test
+## Prepare to test
 No matter what your goal is for building on Immutable X — for example: drop an NFT collection, launch a marketplace or ecosystem product, integrate with your crypto game — there are three things you’ll need to get started:
 
 ## Wallet
@@ -26,13 +26,9 @@ To create a MetaMask wallet:
 3. Change the network selection from Main Ethereum Network to **Ropsten Test Network**.
 
 Again, be mindful of how you store your seed phrase. If you lose this, you will lose access to your wallet forever, and neither we nor MetaMask are able to restore it for you.
-[block:callout]
-{
-  "type": "success",
-  "body": "If you already have an Ethereum wallet, you can [import it into MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489331-How-to-import-an-Account).",
-  "title": "Already have a wallet?"
-}
-[/block]
+:::tip Already have a wallet?
+If you already have an Ethereum wallet, you can [import it into MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489331-How-to-import-an-Account).
+:::
 ## Test ETH
 In order to make transactions while testing on Ropsten, you’ll need to fund your wallet with some ETH. Here are some faucets where you can get some:
 - https://faucet.ropsten.be/

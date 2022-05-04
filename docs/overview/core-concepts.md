@@ -7,8 +7,7 @@ sidebar_position: 2
 This page is a work-in-progress overview of some key concepts related to the Ethereum blockchain and Immutable X. 
 
 We’re actively working on new explanations to help newcomers understand the technology. If there’s something you’re wondering about that we haven’t covered yet, scroll to the bottom of this page where you can submit feedback on the helpfulness of this article. 
-:::info
-## Rate the docs
+:::info Rate the docs
 Got a spare 3 minutes? Take the *Dev Docs Experience Survey* to provide feedback on what it's been like using this site. Your input will help us fix what matters most first.
 
 **[Take the survey](https://forms.gle/zYbUhjNWsVvt6G4v7)**
