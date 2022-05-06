@@ -52,7 +52,7 @@ function tokenURI(uint256 _tokenId) external view returns (string);
 Because this data is off-chain, whoever controls the storage location has the ability to change it. For example, if their server is shut down the metadata will no longer be accessible. Concerns like this are often why developers choose to use [IPFS](https://docs.ipfs.io/) hashes or links to guarantee the reliability and immutability of this off-chain data.
 
 ## Metadata API
-Projects are expected to self-host their media assets, including both the endpoints for the metadata of the assets, as well as other media defined by the metadata. When [registering your collection's contract](../guides/onboarding/collection-registrationx.mdx) with Immutable X, you need to provide a metadata API endpoint for us to retrieve metadata properties for each of your NFTs. 
+Projects are expected to self-host their media assets, including both the endpoints for the metadata of the assets, as well as other media defined by the metadata. When [registering your collection's contract](../guides/onboarding/collection-registration.mdx) with Immutable X, you need to provide a metadata API endpoint for us to retrieve metadata properties for each of your NFTs. 
 
 Our metadata crawler will access `<metadata_api_url>/<token_id>` at the time of minting a new token. It appends `/<token_id>` to the metadata_api_url, for example: `https://metadata_api_url.com/1` 
 
