@@ -31,10 +31,10 @@ Sharding involves dividing a chain state into smaller partitions called shards. 
 ## Side chains
 Side chains have their own consensus mechanism meaning they don't inherit security from mainnet, and are therefore far less secure, meaning valuable assets can be stolen. Side chains are also not **truly** scalable; they are heavily constrained at the upper limits as security and censorship risks continue to increase with volume. They also offer poor liquidity, lacking interoperability with layer 1. 
 
-## Ethereum 2.0
-Ethereum 2.0 (Eth2) is a significant update to the way that Ethereum currently functions that promises to increase its bandwidth and reduce the gas fees. 
+## Ethereum PoS Merge
+The Ethereum Merge to Proof of Stake (Pos), previously known as Eth2.0, is a signficant consensus mechanism update scheduled to take place in Q3 2022. The move to Proof of Stake will see significant reduction in energy usage, uniform block time, more resilient network and build the foundation for sharding to be implemented (https://ethereum.org/en/upgrades/merge/). However the Merge itself does not scale the network in terms of transaction processing capabilities, this will be addressed in the sharding update scheduled for much later (2023 and beyond).
 
-Eth2 is currently being tested (2021) with the ‘Medalla Testnet’, which involves over 20,000 validators worldwide. However, it has been plagued by delays, setbacks, and concerns within the developer community regarding the security of E2.0. While this upgrade will help congestion, it is not nearly enough to meet the surging demand for the Ethereum network. Testing suggests that Eth2.0 will only be able to achieve around 3,000 transactions per second. 
+Even after the Merge and Sharding are implemented on Ethereum, layer 2 will still be the solution to provide real scale, read the Ethereum foundation's vision on layer 2s here (https://ethereum.org/en/layer-2/).
 
 # Existing layer 2 solutions
 
