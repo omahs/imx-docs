@@ -43,7 +43,18 @@ const config = {
           src: 'img/immutable_logo.svg',
         },
         items: [
-          
+          {
+            type: 'doc',
+            docId: 'overview/welcome',
+            position: 'left',
+            label: 'Documentation',
+          },
+          {
+            position: 'left',
+            label: 'Guides',
+            type: 'doc',
+            docId: 'guides/getting-started-guide',
+          },
         ],
       },
       colorMode: {
@@ -101,6 +112,11 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['solidity']
       },
+      algolia: {
+        appId: "2KKA2HFUSD",
+        apiKey: "2cb7547e9bf1ee7ee1b033acb6387c1d", // Public API key: it is safe to commit it
+        indexName: "dev_imxdocs",
+      }
     }),
 };
 
