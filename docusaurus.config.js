@@ -115,7 +115,7 @@ const config = {
       algolia: {
         appId: "2KKA2HFUSD",
         apiKey: "2cb7547e9bf1ee7ee1b033acb6387c1d", // Public API key: it is safe to commit it
-        indexName: "dev_imxdocs",
+        indexName: "prod_imxdocs",
       }
     }),
 };
