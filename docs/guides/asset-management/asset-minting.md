@@ -29,7 +29,7 @@ Immutable exposes a minting API. You can mint more than one asset in an API call
 Our metadata crawler will access `<project_metadata_endpoint>/<token_id>` at the time of minting a new token. Please be sure that your endpoint returns a JSON response for each token ID that will be minted.
 
 Here is a high-level overview of the L2 asset minting process:
-![Asset Minting](../../../static/img/Asset%20Minting.png)
+![Asset Minting](../../../static/img/AssetMinting.png)
 
 Here is a [mint tokens](ref:post_v1-mints-1) example:
 ```json
