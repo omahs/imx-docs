@@ -17,7 +17,7 @@ const config = {
   title: 'Immutable X Documentation',
   tagline:
     'Experience zero gas fees, instant trades, and carbon neutral NFTs for marketplaces, games, and applications without compromise. Build your NFT business in hours with our APIs.',
-  url: 'https://docs.x.immutable.com',
+  url: 'https://beta.docs.x.immutable.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -101,11 +101,11 @@ const config = {
             type: 'doc',
             docId: 'guides/getting-started-guide',
           },
-          // {
-          //   position: 'left',
-          //   label: 'API Reference',
-          //   to: '/reference',
-          // },
+          {
+            position: 'left',
+            label: 'API Reference',
+            to: '/reference',
+          },
         ],
       },
       colorMode: {

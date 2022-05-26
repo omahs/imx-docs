@@ -1,0 +1,22 @@
+name: Bug report
+description: Create a bug report
+body:
+  - type: checkboxes
+    attributes:
+      label: Are you sure it's a bug?
+      description: If you're uncertain, feel free to ping us at our community Discord server instead - https://discord.gg/6GjgPkp464
+      options:
+        - label: Yes, it looks like a bug
+          required: true
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this bug?
+      description: Please search GitHub issues to see if an issue already exists
+      options:
+        - label: I have searched existing issues, and this bug hasn't been reported yet
+          required: true
+  - type: textarea
+    attributes:
+      label: Issue description
+    validations:
+      required: true

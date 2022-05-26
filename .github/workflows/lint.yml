@@ -1,0 +1,34 @@
+name: Check for lint/build errors
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 16
+        registry-url: https://registry.npmjs.org/
+
+    - name: yarn install, lint
+      run: |
+        yarn install
+        yarn run lint
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: 16
+        registry-url: https://registry.npmjs.org/
+
+    - name: yarn install, build
+      run: |
+        yarn install
+        yarn run build
