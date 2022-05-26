@@ -1,114 +1,161 @@
 ---
-description: How to contribute to Immutable X's open source documentation
+title: "Contributing to these docs"
+slug: "/contributing"
+excerpt: "How to contribute to Immutable X's open source documentation"
+sidebar_position: 6
 ---
 
-# 🤝 Contributing to these Docs
+# Contributing to Immutable X Documentation 🙌
 
-Github Repository: [https://github.com/immutable/imx-docs](https://github.com/immutable/imx-docs)
+## Github Repository
+
+[https://github.com/immutable/imx-docs](https://github.com/immutable/imx-docs)
 
 ## Why Contribute?
 
-Web3 was built to make traditionally inaccessible industries, knowledge, and power, widely available to everyone - no matter what. However, this bold mission comes at a cost of complexity. It can be extremely challenging to break into the web3 space as a developer due to the intricate nature of blockchain technology.
+Getting started with web3 can be daunting even for the most experienced developers. There are so many new paradigms and ways of working to learn. Great documentation makes the learning process a breeze and enables developers to achieve their goals efficiently. 
 
-This is where documentation comes in. We need resources, guides, and tutorials from the beginner to the expert level, that teaches people how to build things. No one is more qualified to do this than the builders themselves.
+If you've been building on web3 for a while, you might have noticed that reading a project's documentation end to end might not make you productive on that platform immediately. You might run into an issue that for which a solution might not be immediately forthcoming. There may be others going through the same issue, but even the highest levels of google-fu might not get you a solution. [XKCD 979](https://xkcd.com/979/) represents this feeling accurately.  However, when you persevere and figure out the solution to your problem, the feeling of relief and pride is unmatched. 
 
-Almost everyone who has built in web3 has, at one point or another, felt frustrated with the lack of resources or explanations when developing, ranging from deploying your first smart contract to creating complex defi tools. However, those same developers oftentimes persevere and figure out how to build it anyways. If this is you, come write a tutorial about it! Odds are, hundreds of other developers felt the same way and gave up - you have an extremely unique opportunity to massively impact their experience, and get rewarded for doing so.
+We want to enable builders like you to contribute your knowledge to others who might be going through a similar learning journey and have a massive impact on the development experience of hundreds of others and get recognized for it. We'll also be opening up rewards for significant contributions in the future. Watch this space for more details!
 
-Yes, we are giving out rewards for people who contribute! These include but are not limited to:
+## Getting started with a contribution:
 
-* Free Alchemy credits to help fuel your dApps
-* Exclusive Beta access to new Alchemy features
-* VIP support for your Alchemy account
-* Free Alchemy Swag
-* Twitter shout out from the Alchemy account
+We have a generic list of topics for you to get started with a contribution. This list is not exhaustive, but just a few ideas to get you started.
 
-_\*Note: The type of award given will be determined on a case-by-case basis_
+* **Immutable X Developer Assistance**
+  * How To guides
+    * eg: How to withdraw an asset to L1?
+  * Tutorials
+    * eg: Building a marketplace with Immutable X
+* **Maintenance of existing content**
+  * Maintain documentation, tutorials and how-to guides to keep them up-to-date
+    * Update outdated commands
+    * Find and fix typos
+    * Add helpful context / tips
+    * Raise issues for other contributors to address
+    * Edit for findability, accuracy, relevancy, and clarity
+* **Fix existing issues**
+  * Go to the [issues page on Github](https://github.com/immutable/imx-docs/issues) and pick up an issue to fix
 
-## Identifying An Area to Contribute:
+If your contribution is a massive effort or if you're doing a major restructure or revamp of the docs, please [open an issue on GitHub](https://github.com/immutable/imx-docs/issues/new) and discuss your idea with the maintainers *before* beginning your work. Doing so ensures that you will have all the context required and have maximum impact while reducing rework. 
 
-If you have a specific contribution in mind, confirm whether the contribution is appropriate by first reaching out to an admin in the [Alchemy Discord group](https://alchemy.com/discord) directly.
+## Contribute Immutable X Docs:
 
-If you do not have a specific contribution in mind but are generally interested in adding to the open-source community, we are looking for everything ranging from edits, updates to outdated commands, to how-to guides/tutorials. Here's a non-exhaustive list of potential areas for you to explore:
+There are a couple of ways to contribute to the [Immutable X Docs:](https://github.com/immmutable/imx-docs)
 
-* **Developer Content Projects** 🦾
-  * How-to guides/tutorials
-    * ex: How to monitor pending transactions
-* **General Content Projects 📝**
-  * Articles on new features, use cases, and new crypto content
-    * ex: [https://blog.alchemy.com/blog/eip-1559](https://blog.alchemy.com/blog/eip-1559)
-* **Maintenance Projects 🛠️**
-  * Maintain tutorials/docs to keep them up-to-date
-    * If you get to a command in a tutorial that's out of date or has been replaced with a new best practice- update it!
-  * Find and fix typos
-  * Add additional helpful context / tips
-  * Raise issues for other contributors to address
-* **Fix an existing issue**
-  * Navigate to the [issues page on Github](https://github.com/alchemyplatform/alchemy-docs/issues) and pick off one of the existing issues to fix!
+1. [Send a pull request (PR) with changes](contributing.md)
+2. [Reporting an issue](contributing.md)
 
-## Contribute Alchemy Docs: <a href="contribute-alchemy-docs" id="contribute-alchemy-docs"></a>
+### Send a Pull Request (PR) with Changes
 
-There are three ways to contribute to the [Alchemy Docs:](https://github.com/alchemyplatform/alchemy-docs)
+Github Repository: [https://github.com/immutable/imx-docs](https://github.com/immutable/imx-docs)
 
-1. [Make a pull request (PR) with changes](contributing-to-docs.md#make-a-pull-request-with-changes)
-2. [Submit a new repository to be merged](contributing-to-docs.md#submit-a-new-repository-to-be-merged)
-3. [Submit an issue](contributing-to-docs.md#submitting-issues)
+#### 1. Fork the [Immutable X Docs repository](https://github.com/immutable/imx-docs)
 
-{% hint style="info" %}
-**NOTE:** If you \__\*\*_\_want your Github to be featured on the Alchemy Docs for your contributions, please submit a pull request with your changes
-{% endhint %}
+> To learn how to fork a repository, check out [GitHub's documentation on forking a repository](https://help.github.com/en/articles/fork-a-repo)
 
-### 1. Make a Pull Request with Changes <a href="make-a-pull-request-with-changes" id="make-a-pull-request-with-changes"></a>
 
-**Repository:** [https://github.com/alchemyplatform/alchemy-docs](https://github.com/alchemyplatform/alchemy-docs)
+#### 2. Clone the forked repository
 
-Please note that our docs are written in the Markdown. For more info about Markdown check out this [cheat-sheet](https://www.markdownguide.org/cheat-sheet/). For all submitted changes to the Alchemy Docs, please submit a pull request on Github for review by following the steps below:
+```shell
+git clone git@github.com:[your_github_handle]/imx-docs
+```
 
-#### 1. Clone the [Alchemy Docs repo](https://github.com/alchemyplatform/alchemy-docs)
+#### 3. Navigate to the cloned folder
 
-`git clone` [`https://github.com/alchemyplatform/alchemy-docs.git`](https://github.com/alchemyplatform/alchemy-docs.git)
+```shell
+cd imx-docs
+```
 
-#### 2. Navigate to the appropriate files / make your edits to your local repo.
+#### 4. Link your cloned repository to the upstream repository.
 
-When making edits to files, include descriptive commit messages to ensure that Community Maintainers are able to understand and follow your train of thought.
+```shell
+git remote add upstream git@github.com:immutable/imx-docs.git
+```
 
-`git commit -m "fixed typo on Enhanced API page"`
+> For further help, see [GitHub Docs: Configuring a remote for a fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork).
 
-#### 3. Push your local repo and submit a pull request to merge your local repo to the `master` Alchemy Docs repo.
+#### 5. If you have already cloned the imx-docs repository, ensure that your fork is upto date with with the latest upstream changes. 
 
-For example, if you wanted to submit a pull request for a specific part of the [Alchemy Docs](https://github.com/alchemyplatform/alchemy-docs), you would navigate to [https://github.com/alchemyplatform/alchemy-docs/pulls](https://github.com/alchemyplatform/alchemy-docs/pulls) and submit a pull request through the UI.
+> For further help, refer to [GitHub Docs: Syncing a fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
 
-(Don't forget to select the appropriate branches you wish to merge!)
+```shell
+  git checkout main
+  git fetch upstream
+  git merge upstream/main
+```
 
-![](https://static.slab.com/prod/uploads/7adb25ff/posts/images/THP\_fF\_YarD3zd-kVKh5vVQq.png)
+#### 6. Create a new branch for your changes
 
-#### 4. The Alchemy team / Community Maintainers will review the PR or reach out accordingly either approving it or contacting you to edit it.
+```shell
+  git checkout -b [new_branch_name]
+```
 
-Sample edit PR: [https://github.com/alchemyplatform/alchemy-docs/issues/2](https://github.com/alchemyplatform/alchemy-docs/issues/2)
+#### 7. Commit your changes while ensuring you follow our Git guidelines
 
-### 2. Submit a new Repository to be Merged <a href="submit-a-new-repository-to-be-merged" id="submit-a-new-repository-to-be-merged"></a>
+```shell
+  git commit -m "feat: brief description of changes [Fixes #420]"
+```
 
-If submitting a new tutorial or document and not a change on the Alchemy Docs directly, it is recommended to have a detailed summary/introduction as part of the README to help Community Maintainers understand what content is being added and to help developers follow along.
+#### 8. Push your changes
 
-See [https://github.com/alchemyplatform/Alchemy-Notify-Tutorial](https://github.com/alchemyplatform/Alchemy-Notify-Tutorial) for a sample tutorial that was previously accepted to the Alchemy Platforms repo.
+```
+git push
+```
 
-To submit a larger document/file like the Alchemy Notify Tutorial, please reach out to the Community Maintainers through Discord and send us a link to your public repo. We will review the code and content, verify accuracy, and suggest any edits. If the repo is ready for pulling into the Alchemy Platform repo, we will pull your repo and place it within the [Official Alchemy Github Page](https://github.com/alchemyplatform).
+#### 9. The Community Maintainers / IMX team will review your PR
 
-### 3. Submitting Issues: <a href="submitting-issues" id="submitting-issues"></a>
+One of the community maintainers or the IMX team will review your PR and either accept it as it is, or add their comments as part of their review. Accepted PRs will get approved and merged into the `main` branch.
 
-If you notice any particular bugs, mistakes, or unclear components in published docs, but are unable to fix the issue yourself, feel free to raise an issue to help guide contributors who are looking for items to work on!
+### Reporting Issues
 
-#### If you find an issue with a particular part of docs and want to flag it for others to fix, navigate to the appropriate Github page containing the page that the tutorial resides within.
+If you notice bugs, mistakes, or unclear components in published docs, but are unable to fix the issue yourself, feel free to raise an issue to help contributors who are looking for items to work on!
 
-For example, if you wanted to submit an issue with [https://github.com/alchemyplatform/Alchemy-Notify-Tutorial](https://github.com/alchemyplatform/Alchemy-Notify-Tutorial), you would navigate to [https://github.com/alchemyplatform/Alchemy-Notify-Tutorial/issues](https://github.com/alchemyplatform/Alchemy-Notify-Tutorial/issues) and submit an issue through the UI.
+If you find an issue with a particular page and want to an issue with it, go to the page and scroll down till the end of the page, and click on the `Edit this page` button. Include the URL of the page on GitHub you landed with your issue report
 
-( Don't forget to raise an appropriate flag for the issue at hand!)
+- Create a [new issue](https://github.com/immutable/imx-docs/issues) to report a bug, request a feature, or suggest changes.
+- Comment on the issue if you would like to be assigned to it so [the maintainers can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
+- If you do not have a specific issue in mind, you can also browse all [existing issues](https://github.com/immutable/imx-docs/issues).
+- Issues that additionally have the `good first issue` label are considered ideal for first-time contributors.
 
-#### For issues that cannot be easily conveyed through the Github issues tab, please reach out to the Community Maintainers through [Discord](https://alchemy.com/discord) or email.
+#### For security reports or other sensitive issues, please reach out to the Community Maintainers through [Discord](https://discord.gg/6GjgPkp464) or email.
 
-## Github Contribution Guidelines: <a href="github-contribution-guidelines" id="github-contribution-guidelines"></a>
+## Github Contribution Guidelines
 
-To best provide valuable content for developers and the Alchemy community at large, we defined a few general guidelines to help steer contributions.
+To ensure high quality contributions, please follow the guidelines below:
 
-* **Size**: Please try to keep pull requests small when possible. Alchemy prefers small pull requests to give more detailed feedback and granular updates. If a large pull request is not for a single cohesive idea/tutorial, we may ask that you break it into smaller components for review.
-* **Quality**: Code and content as a whole should come with descriptive commit messages and quality assurance such that it is easy for peer-review and unlikely to break functionality with existing content.
-  * If you add API calls within your pull request, please ensure that you include an example payload/request and an example expected response!
+* **Size**: Please keep pull requests small where possible. IMX prefers small pull requests to effectively review them. If a tutorial or how-to guide is a big topic, it's advisable to split it into smaller components and send separate PRs for them
+* **Quality**: Code & Commit messages should follow the guidelines below:
+
+### Code Styleguide
+
+The code should:
+
+- Have meaningful variable names using `camelCase`.
+- Have no `lint` issues.
+- Have meaningful slugs, file names, directory names and directory structure.
+- be easy to fix, refactor and scale.
+
+### Reference the issue a PR resolves
+
+In the commit message, please reference the issue it resolves. For help, see [GitHub Docs: Linking a pull request to an issue using a keyword](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
+
+
+### Commit Messages should follow the below pattern:
+
+```bash
+feat: Description # if a new feature is added
+fix: Description # if a bug is fixed
+refactor: Description # if code is refactored
+docs: Description # if documentation is added
+lint: Description # if a lint issue is fixed
+```
+
+### Issues should follow the below pattern
+
+```bash
+update: Description # if an update is required for a feature
+bug: Description # if there is a bug in a particular feature
+suggestion: Description # if you want to suggest a better way to implement a feature
+```
