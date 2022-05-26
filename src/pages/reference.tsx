@@ -28,7 +28,7 @@ export default function APIPage() {
         }
       >
         {() => {
-          // eslint-disable-next-line no-undef
+          // eslint-disable-next-line @typescript-eslint/no-var-requires
           const { API } = require('@stoplight/elements');
           return (
             <>
