@@ -1,4 +1,4 @@
-name: Release to GHR
+name: Release to github
 on:
   push:
     branches:
