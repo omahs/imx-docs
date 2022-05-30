@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.immutable.com">
-    <img width="150" src="https://assets-global.website-files.com/5f7eec37ff782e797edabe11/5f8d36771ffcf8c91b03e7f4_dark.svg">
+    <img src="https://cdn.dribbble.com/users/1299339/screenshots/7133657/media/837237d447d36581ebd59ec36d30daea.gif" width="280"/>
   </a>
 
   <h2 align="center">Immutable X Docs</h3>
