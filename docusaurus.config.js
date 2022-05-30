@@ -1,12 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
 /* eslint-disable */
-const { webpackPlugin } = require('./src/plugins')
-const { ProvidePlugin } = require('webpack')
+const { webpackPlugin } = require('./src/plugins');
+const { ProvidePlugin } = require('webpack');
 
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -17,7 +16,7 @@ const config = {
   title: 'Immutable X Documentation',
   tagline:
     'Experience zero gas fees, instant trades, and carbon neutral NFTs for marketplaces, games, and applications without compromise. Build your NFT business in hours with our APIs.',
-  url: 'https://beta.docs.x.immutable.com',
+  url: 'https://docs.immutable.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -51,9 +50,9 @@ const config = {
               path: require.resolve('path-browserify'),
               buffer: require.resolve('buffer/'),
               url: require.resolve('url/'),
-            }
+            },
           },
-        }
+        };
       },
     }),
   ],
@@ -83,28 +82,58 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Immutable X Developer Documentation',
         logo: {
           alt: 'Immutable Logo',
-          src: 'img/immutable_logo.svg',
+          src: 'img/logoLight.svg',
+          srcDark: 'img/logoDark.svg',
         },
         items: [
+          {
+            to: '/',
+            position: 'left',
+            label: 'Home',
+          },
           {
             type: 'doc',
             docId: 'overview/welcome',
             position: 'left',
-            label: 'Documentation',
+            label: 'Docs',
+          },
+          {
+            type: 'doc',
+            docId: 'overview/welcome',
+            position: 'left',
+            label: 'APIs',
           },
           {
             position: 'left',
-            label: 'Guides',
+            label: 'SDKs',
             type: 'doc',
             docId: 'guides/getting-started-guide',
           },
           {
+            to: 'https://support.immutable.com/hc/en-us/articles/4405227590799-Immutable-X-Whitepaper',
+            label: 'IMX Whitepaper',
             position: 'left',
-            label: 'API Reference',
-            to: '/reference',
+            className: 'custom_sidebar_menu',
+          },
+          {
+            to: 'https://support.immutable.com/hc/en-us/articles/4404531555855-Immutable-X-Token',
+            label: 'IMX Tokenomics',
+            position: 'left',
+            className: 'custom_sidebar_menu',
+          },
+          {
+            to: 'https://immutascan.io/',
+            label: 'Immutascan.io',
+            position: 'left',
+            className: 'custom_sidebar_menu',
+          },
+          {
+            to: 'https://www.immutable.com/careers',
+            label: 'Careers at immutable',
+            position: 'left',
+            className: 'custom_sidebar_menu',
           },
         ],
       },
@@ -112,51 +141,6 @@ const config = {
         defaultMode: 'light',
         disableSwitch: false,
         respectPrefersColorScheme: true,
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Get Started',
-                to: '/docs/welcome',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Discourse',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/6GjgPkp464',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/Immutable',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                href: 'https://medium.com/@immutablex',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/immutable',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Immutable.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -168,8 +152,8 @@ const config = {
         apiKey: '2cb7547e9bf1ee7ee1b033acb6387c1d', // Public API key: it is safe to commit it
         indexName: 'prod_imxdocs',
         contextualSearch: true,
-      }
+      },
     }),
-}
+};
 
-module.exports = config
+module.exports = config;

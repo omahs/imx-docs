@@ -1,0 +1,49 @@
+.headerSection {
+  display: none;
+}
+
+@media (min-width: 997px) {
+  .headerSection {
+    display: block;
+    background: #131313;
+    width: 100%;
+  }
+
+  .headerContainer {
+    padding: 0.5rem 3rem;
+  }
+
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 3rem;
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .iconsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .linksContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .headerLink {
+    composes: text-body-02 from '../../css/custom.css';
+    color: #eeeeee;
+  }
+  .headerLink:hover,
+  .headerLink:active {
+    color: #eeeeee;
+  }
+}

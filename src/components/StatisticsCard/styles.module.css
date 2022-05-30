@@ -1,0 +1,115 @@
+.cardContainer {
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 400ms;
+}
+.cardContainer:hover .imageContainer,
+.cardContainer:focus .imageContainer {
+  transform: scale(1.05);
+}
+
+.cardContainer:first-child > .imageContainer {
+  background: linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)),
+    url(/static/img/vyWorlds.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cardContainer:nth-child(2) > .imageContainer {
+  background: linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)),
+    url(/static/img/illuvium.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.statisticsNumber {
+  composes: text-heading-title from '../../css/custom.css';
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+.statisticsLabel {
+  composes: text-body-03 from '../../css/custom.css';
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  composes: text-heading-03 from '../../css/custom.css';
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+.description {
+  composes: text-body-02 from '../../css/custom.css';
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.titleContainer {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.subtitleContainer {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media (min-width: 640px) {
+  .titleContainer {
+    top: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .subtitleContainer {
+    bottom: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cardContainer {
+    height: 520px;
+  }
+  .statisticsNumber {
+    font-family: 'Suisse-Intl';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 72px;
+  }
+  .titleContainer {
+    top: 56px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .subtitleContainer {
+    bottom: 46px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
