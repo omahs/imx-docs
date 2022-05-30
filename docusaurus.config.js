@@ -100,8 +100,7 @@ const config = {
             label: 'Docs',
           },
           {
-            type: 'doc',
-            docId: 'overview/welcome',
+            to: '/reference',
             position: 'left',
             label: 'APIs',
           },

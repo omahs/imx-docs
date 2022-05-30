@@ -81,13 +81,7 @@ const Footer = () => {
           />
           <button
             onClick={() =>
-              window.open('https://twitter.com/Immutable', '_blank')
-            }
-            className={clsx(styles.socialIcons, styles.telegram)}
-          />
-          <button
-            onClick={() =>
-              window.open('https://twitter.com/Immutable', '_blank')
+              window.open('https://www.reddit.com/r/immutable', '_blank')
             }
             className={clsx(styles.socialIcons, styles.reddit)}
           />

@@ -15,13 +15,22 @@ const GlobalHeader = () => {
           <StudioIcon />
         </div>
         <div className={styles.linksContainer}>
-          <a href="/careers" className={clsx(styles.headerLink, 'hyperlink')}>
+          <a
+            href="https://www.immutable.com/careers"
+            className={clsx(styles.headerLink, 'hyperlink')}
+          >
             Careers
           </a>
-          <a href="/twitter" className={clsx(styles.headerLink, 'hyperlink')}>
+          <a
+            href="https://twitter.com/immutable/"
+            className={clsx(styles.headerLink, 'hyperlink')}
+          >
             Twitter
           </a>
-          <a href="/discord" className={clsx(styles.headerLink, 'hyperlink')}>
+          <a
+            href="https://discord.com/invite/Dmhp398dna"
+            className={clsx(styles.headerLink, 'hyperlink')}
+          >
             Discord
           </a>
         </div>
