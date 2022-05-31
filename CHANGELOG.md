@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/immutable/imx-docs/compare/v1.1.2...v1.2.0) (2022-05-31)
+
+
+### Features
+
+* global header for all pages ([6b68498](https://github.com/immutable/imx-docs/commit/6b684983f1ad93672f142ae0daaba4ac7730844c))
+
 ## [1.1.2](https://github.com/immutable/imx-docs/compare/v1.1.1...v1.1.2) (2022-05-30)
 
 
