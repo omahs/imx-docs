@@ -207,7 +207,6 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
-      <GlobalHeader />
       <Layout>
         <div className={styles.root}>
           <div />
