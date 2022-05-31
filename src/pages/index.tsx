@@ -85,34 +85,35 @@ const Homepage = () => {
       title: 'IMX SDKs',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
-    {
-      LightIcon: SaleLightIcon,
-      DarkIcon: SaleDarkIcon,
-      title: 'Primary sale',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Open Docs',
-    },
+    // {
+    //   LightIcon: SaleLightIcon,
+    //   DarkIcon: SaleDarkIcon,
+    //   title: 'Primary sale',
+    //   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    //   buttonText: 'Open Docs',
+    // },
     {
       LightIcon: ContractLightIcon,
       DarkIcon: ContractDarkIcon,
-      title: 'Contracts',
+      // title: 'Contracts',
+      title: 'Code examples',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       buttonText: 'Open Docs',
     },
-    {
-      LightIcon: GoSdkLightIcon,
-      DarkIcon: GoSdkDarkIcon,
-      title: 'IMX Go SDK',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Open Docs',
-    },
-    {
-      LightIcon: DappsLightIcon,
-      DarkIcon: DappsDarkIcon,
-      title: 'DAPPs',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Open Docs',
-    },
+    // {
+    //   LightIcon: GoSdkLightIcon,
+    //   DarkIcon: GoSdkDarkIcon,
+    //   title: 'IMX Go SDK',
+    //   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    //   buttonText: 'Open Docs',
+    // },
+    // {
+    //   LightIcon: DappsLightIcon,
+    //   DarkIcon: DappsDarkIcon,
+    //   title: 'DAPPs',
+    //   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    //   buttonText: 'Open Docs',
+    // },
     {
       LightIcon: ExplorerLightIcon,
       DarkIcon: ExplorerDarkIcon,
@@ -135,18 +136,18 @@ const Homepage = () => {
       ),
       cta: ['Know more'],
     },
-    {
-      LightIcon: BugBountyLightIcon,
-      DarkIcon: BugBountyDarkIcon,
-      title: 'Bug bounty',
-      subtitle: (
-        <>
-          Find out our vulnerabilities
-          <br /> and win a bounty.
-        </>
-      ),
-      cta: ['Know more'],
-    },
+    // {
+    //   LightIcon: BugBountyLightIcon,
+    //   DarkIcon: BugBountyDarkIcon,
+    //   title: 'Bug bounty',
+    //   subtitle: (
+    //     <>
+    //       Find out our vulnerabilities
+    //       <br /> and win a bounty.
+    //     </>
+    //   ),
+    //   cta: ['Know more'],
+    // },
     {
       LightIcon: ContributorsLightIcon,
       DarkIcon: ContributorsDarkIcon,
@@ -196,7 +197,8 @@ const Homepage = () => {
       isLongCard: false,
     },
     {
-      title: 'Contribute & earn',
+      // title: 'Contribute & earn',
+      title: 'Reddit',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       buttonText: 'Contribute',
       isLongCard: true,
@@ -208,7 +210,9 @@ const Homepage = () => {
       <GlobalHeader />
       <Layout>
         <div className={styles.root}>
-          <div className={styles.heroImage} />
+          <div />
+          {/* Remove image until new branding is released */}
+          {/* <div className={styles.heroImage} /> */}
           <Title
             title={
               <div className={clsx('grad', styles.title)}>
@@ -236,11 +240,21 @@ const Homepage = () => {
               className={styles.displayFromExtraSmall}
             />
           </div>
-          <div className={styles.articlesSection}>
+          <hr
+            style={{
+              width: '100%',
+              textAlign: 'center',
+              margin: '60px',
+              backgroundColor: '#e0e0e0',
+            }}
+          />
+
+          {/* Removing this section until the content is ready */}
+          {/* <div className={styles.articlesSection}>
             {articleSectionData.map((article, index) => (
               <Article {...article} key={index} />
             ))}
-          </div>
+          </div> */}
 
           <Title
             title="IMX tools"
@@ -263,13 +277,14 @@ const Homepage = () => {
               styles.displayFromSmall,
               styles.articlesSection2
             )}
+            style={{ alignItems: 'center' }}
           >
             {articleSection2Data.map((article, index) => (
               <Article {...article} key={index} />
             ))}
           </div>
-
-          <Title
+          {/* Removing until content is ready */}
+          {/* <Title
             title="Built with IMX"
             subtitle={
               <>
@@ -282,7 +297,7 @@ const Homepage = () => {
             {statisticsSectionData.map((statisticsInfo, index) => (
               <StatisticsCard {...statisticsInfo} key={index} />
             ))}
-          </div>
+          </div> */}
 
           <Title
             title="Join the community"
