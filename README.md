@@ -69,7 +69,7 @@ yarn run start
 Read the [Contributors Guide](CONTRIBUTING.md) for more details
 
 ### Add or edit page
-Adding a new page is simple! Identify the section under which your new page goes inside the `docs` folder, and then create a markdown file in that folder. For example, if you want to add a new page to the `Link SDK` guide, you'd create a new page under `docs/guides/link-sdk`. Ensure that the new page has a section at the top of the page like below, where you can specify the name of the article, the slug by which you can navigate to it, an exerpt and the page's position in the sidebar.
+Adding a new page is simple! Identify the section under which your new page goes inside the `docs` folder, and then create a markdown file in that folder. For example, if you want to add a new page to the `Link SDK` guide, you'd create a new page under `docs/guides/link-sdk`. Ensure that the new page has a section at the top of the page like below, where you can specify the name of the article, the slug by which you can navigate to it, an excerpt and the page's position in the sidebar.
 
 ```
 ---

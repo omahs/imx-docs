@@ -85,7 +85,7 @@ git remote add upstream git@github.com:immutable/imx-docs.git
 
 > For further help, see [GitHub Docs: Configuring a remote for a fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork).
 
-#### 5. If you have already cloned the imx-docs repository, ensure that your fork is upto date with with the latest upstream changes. 
+#### 5. If you have already cloned the imx-docs repository, ensure that your fork is up to date with with the latest upstream changes. 
 
 > For further help, refer to [GitHub Docs: Syncing a fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork).
 
