@@ -152,6 +152,9 @@ const config = {
         indexName: 'prod_imxdocs',
         contextualSearch: true,
       },
+      gtag: {
+        trackingID: "G-4JBHZ7F06X",
+      },
     }),
 };
 
