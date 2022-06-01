@@ -19,6 +19,8 @@ const Footer = () => {
           <a
             href="https://support.immutable.com/hc/en-us/articles/4405227590799-Immutable-X-Whitepaper"
             className="hyperlink"
+            target="_blank"
+            rel="noreferrer"
           >
             IMX Whitepaper
           </a>{' '}
@@ -26,6 +28,8 @@ const Footer = () => {
           <a
             href="https://support.immutable.com/hc/en-us/articles/4404531555855-Immutable-X-Token"
             className="hyperlink"
+            target="_blank"
+            rel="noreferrer"
           >
             IMX Tokenomics
           </a>{' '}
@@ -34,15 +38,25 @@ const Footer = () => {
             API
           </a>{' '}
           •{' '}
-          <a href="/guides/getting-started-guide" className="hyperlink">
+          <a href="/docs/getting-started-guide" className="hyperlink">
             SDK
           </a>{' '}
           •{' '}
-          <a href="https://immutascan.io/" className="hyperlink">
+          <a
+            href="https://immutascan.io/"
+            target="_blank"
+            className="hyperlink"
+            rel="noreferrer"
+          >
             Immutascan.io
           </a>{' '}
           •{' '}
-          <a href="https://www.immutable.com/careers" className="hyperlink">
+          <a
+            href="https://www.immutable.com/careers"
+            target="_blank"
+            className="hyperlink"
+            rel="noreferrer"
+          >
             Careers at Immutable
           </a>
         </p>

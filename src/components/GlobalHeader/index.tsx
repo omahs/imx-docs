@@ -17,19 +17,25 @@ const GlobalHeader = () => {
         <div className={styles.linksContainer}>
           <a
             href="https://www.immutable.com/careers"
+            target="_blank"
             className={clsx(styles.headerLink, 'hyperlink')}
+            rel="noreferrer"
           >
             Careers
           </a>
           <a
             href="https://twitter.com/immutable/"
+            target="_blank"
             className={clsx(styles.headerLink, 'hyperlink')}
+            rel="noreferrer"
           >
             Twitter
           </a>
           <a
             href="https://discord.com/invite/Dmhp398dna"
+            target="_blank"
             className={clsx(styles.headerLink, 'hyperlink')}
+            rel="noreferrer"
           >
             Discord
           </a>

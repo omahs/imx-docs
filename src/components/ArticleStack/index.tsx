@@ -34,9 +34,10 @@ const ArticleStack = ({
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
-      <a href={link}>
+      <a href={link} target="_blank" rel="noreferrer">
         <Button
           variant="solid"
+          className={styles.articleStackButton}
           onClick={() => console.log('Learn more clicked')}
         >
           {buttonText}

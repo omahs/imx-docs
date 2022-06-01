@@ -230,13 +230,13 @@ const Homepage = () => {
                 Docs
               </Button>
             </a>
-            <a href="/docs/welcome">
+            {/* <a href="/docs/welcome">
               <IconButton
                 onClick={() => console.log('')}
                 Icon={<RightArrowIcon />}
                 className={styles.displayFromExtraSmall}
               />
-            </a>
+            </a> */}
           </div>
           <br />
           <br />
