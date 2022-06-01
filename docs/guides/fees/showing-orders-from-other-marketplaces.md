@@ -3,11 +3,11 @@ title: "Showing orders from other marketplaces"
 slug: "/showing-orders-from-other-marketplaces"
 sidebar_position: 2
 ---
-Immutable X has a shared orderbook. This means the response returned from `client.getOrders()` or the  `/v1/orders` [API](https://docs.x.immutable.com/reference#get_orders-1) can come from any marketplace on the Immutable X protocol. This helps promote liquidity. 
+Immutable X has a shared orderbook. This means the response returned from `client.getOrders()` or the  `/v1/orders` [API](/operations/listOrders) can come from any marketplace on the Immutable X protocol. This helps promote liquidity. 
 
 For backwards compatibility, the amount in `buy.data.quantity` is now fee-inclusive for orders with fees. 
 
-**Note:** Fees breakdown is not included by default in older versions of the Link SDK for backwards compatibility. If you require the fee breakdown, please upgrade to version `1.1.0` or higher. This also applies for the API which will omit the `fees` array in the result unless it exists for that order and the `include_fees` flag is appended as a query param. See the [API docs](https://docs.x.immutable.com/reference#get_orders-1) for more info.
+**Note:** Fees breakdown is not included by default in older versions of the Link SDK for backwards compatibility. If you require the fee breakdown, please upgrade to version `1.1.0` or higher. This also applies for the API which will omit the `fees` array in the result unless it exists for that order and the `include_fees` flag is appended as a query param. See the [API docs](/operations/listOrders) for more info.
 ```json
 {
   "result": [

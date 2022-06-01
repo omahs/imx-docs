@@ -38,17 +38,17 @@ Sale / listing price: 100 + 0.5 + 2 + 2 = 104.5 ETH (what’s shown on the marke
 
 ## Distributions
 
-Immutable X will pay out these fees immediately after each transaction is confirmed. Each party wanting to collect fees must have [registered an Immutable X account](doc:getting-started-guide#register-a-user-account) to allow the settlement of gas-less fees.
+Immutable X will pay out these fees immediately after each transaction is confirmed. Each party wanting to collect fees must have [registered an Immutable X account](../getting-started-guide.md#register-a-user-account) to allow the settlement of gas-less fees.
 
 ## Royalties
 
-Royalty percentages for one or more recipients can be set at the time an asset is minted. Royalties will be distributed to [the recipients' Immutable X wallet](doc:getting-started-guide#wallet).
+Royalty percentages for one or more recipients can be set at the time an asset is minted. Royalties will be distributed to [the recipients' Immutable X wallet](../getting-started-guide.md#wallet).
 
-At this stage, royalties for assets minted on Immutable X are only enforced on layer 2. If withdrawn assets are re-deposited onto Immutable X at a later date, royalties will continue to work alongside gas-free trading. Read more about [minting with royalties](doc:minting-with-royalties).
+At this stage, royalties for assets minted on Immutable X are only enforced on layer 2. If withdrawn assets are re-deposited onto Immutable X at a later date, royalties will continue to work alongside gas-free trading. Read more about [minting with royalties](./minting-with-royalties.md).
 
 ## Maker fees
 
-Marketplaces can create orders through [Link](doc:https:sdk-api) using `Link.sell` which supports specifying an arbitrary list of fees that are added to the order at the time of creation.
+Marketplaces can create orders through [Link](../link-sdk/index.md) using `Link.sell` which supports specifying an arbitrary list of fees that are added to the order at the time of creation.
 ```javascript
 const makerFees = [{
     percentage: 0.5 // 0.5%

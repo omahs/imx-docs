@@ -32,12 +32,12 @@ Here’s an example:
 
 In this example, marketplace A receives their market-maker fee and marketplace B receives their market-taker fee on the sale. To summarize, having orders listed on more than one marketplace means that your orders are more likely to sell faster, or for a greater price if on auction.
 
-**[Learn more about fees](doc:fees-migration)**
+**[Learn more about fees](../guides/fees/index.md)**
 
 ## Asset metadata
 There are two types of metadata:
 - **Immutable metadata** — Set at the time of asset creation, enforced by the proof, and available [on-chain](./minting-on-immutable-x.md#on-chain-versus-off-chain) when an L2-minted NFT is withdrawn for the first time. The on-chain metadata is stored in the [blueprint](./minting-on-immutable-x.md#metadata-blueprint) or `mintingBlob`. This is where you should store permanent properties, such as IPFS hashes or values you want to access on L1. 
-- **Mutable metadata** — Fully controlled by the application, and not recorded on-chain, mutable metadata is most useful for marketplaces to describe assets accurately to users. To ensure your NFT appears in marketplaces built on Immutable X correctly, it is recommended that every project register a metadata schema for their collection. [Learn more](doc:asset-metadata).
+- **Mutable metadata** — Fully controlled by the application, and not recorded on-chain, mutable metadata is most useful for marketplaces to describe assets accurately to users. To ensure your NFT appears in marketplaces built on Immutable X correctly, it is recommended that every project register a metadata schema for their collection. [Learn more](../guides/asset-management/asset-metadata.mdx).
 
 ## On-chain versus off-chain
 On-chain metadata refers to properties or characteristics that you set for your assets within the smart contract itself, meaning data that is stored on the blockchain (A.K.A on-chain). 
@@ -63,7 +63,7 @@ Important:
 - Do not include any trailing characters on the metadata API URL that you provide. For example, if you submit `https://metadata_api_url.com/` it will be read as `/<token_id>`, resulting in https://metadata_api_url.com//1
 - Your metadata endpoint does not have to be at the very root of your domain. For example, `https://api.metadata.com/token` is still a valid metadata URL and will result in a crawl of `https://api.metadata.com/token/1`.
 
-After an asset from your collection is minted, we store the metadata returned by this endpoint in our database, and subsequent callers can use these [metadata properties](doc:asset-metadata#core-properties) in filter queries to the APIs (as defined in your metadata schema).
+After an asset from your collection is minted, we store the metadata returned by this endpoint in our database, and subsequent callers can use these [metadata properties](../guides/asset-management/asset-metadata.mdx#core-properties) in filter queries to the APIs (as defined in your metadata schema).
 :::info Updating metadata
 Currently, your collection’s metadata schema can only be updated by [contacting support](https://support.immutable.com/hc/en-us/requests/new). We're currently working on a self-serve model, which will allow applications to update their collections' metadata on-demand.
 :::
@@ -94,7 +94,7 @@ If you have an existing smart contract you want to mint assets into, you'll need
 
 ## Minting assets
 You can mint more than one asset in an API call, and even mint multiple assets to multiple users. 
-After your [collection's contract has been registered](doc:collection-registration), you can begin minting. 
+After your [collection's contract has been registered](../guides/onboarding/collection-registration.mdx), you can begin minting. 
 
 Here's a summary of things to be aware of:
 - **On-chain properties** — If your contract contains [on-chain properties](./minting-on-immutable-x.md#on-chain-versus-off-chain), ensure they are passed into the mint function's [blueprint metadata](./minting-on-immutable-x.md#metadata-blueprint), as those are the only extra values the `mintFor` receives during withdrawal.
@@ -104,4 +104,4 @@ Here's a summary of things to be aware of:
 - **Minting throughput** — We recommend doing more mints per minting request over multiple minting requests with fewer mints per request. There is no restriction on the volume of concurrent minting requests, however, you should handle http status code `429` (too many requests) with a sensible retry mechanism. For example: Wait a second then try again. If the same error occurs, wait two seconds and try again, and so on.
 - **Length of your asset ID** – Remember that your Asset ID is part of your on-chain mint. If an owner of your collection withdraws the asset to L1, the larger the ID you use, the more gas it will cost buyers to withdraw and transact in L1.
 
-**[Read more about minting assets](doc:asset-minting)**
+**[Read more about minting assets](../guides/asset-management/asset-minting.md)**

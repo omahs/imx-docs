@@ -81,7 +81,7 @@ Assets can have one of the following statuses:
 </table>
 
 
-To display assets which are currently in Immutable X, you will need to use the [Assets API](ref:get_v1-assets-1). Note that this API will return all assets (including those on-chain or in the withdrawal process). A common use case is displaying a user's inventory:
+To display assets which are currently in Immutable X, you will need to use the [Assets API](/reference#/operations/listAssets). Note that this API will return all assets (including those on-chain or in the withdrawal process). A common use case is displaying a user's inventory:
 ```bash
 GET https://api.x.immutable.com/v1/assets?collection=0x...&user=0x...&status=imx
 ```
@@ -175,4 +175,4 @@ GET https://api.godsunchained.com/metadata?collection=0x...&token_ids=1456,5423
     }
 }
 ```
-If you've set up the above, then your users will have full access to the liquidity and scalability of Immutable X. If you'd like to support trading yourself, see our guide on [supporting asset trading](doc:trading-assets).
+If you've set up the above, then your users will have full access to the liquidity and scalability of Immutable X. If you'd like to support trading yourself, see our guide on [supporting asset trading](./trading-assets.md)

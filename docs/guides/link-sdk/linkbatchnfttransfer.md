@@ -24,7 +24,7 @@ const payload: LinkParams.BatchNftTransfer = [
 ]
 ```
 
-The response type will be identical to that of the [existing transfers](https://docs.x.immutable.com/docs/linktransfer).
+The response type will be identical to that of the [existing transfers](./linktransfer.md)).
 
 ## Notes
 

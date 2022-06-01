@@ -7,17 +7,17 @@ To build a marketplace that supports trading of Immutable X assets, you need to:
 - Use our Orderbook APIs to display assets that are currently for sale.
 - Use Link SDK to prompt user actions.
 
-If you haven't already, you should also learn about supporting Immutable X assets in your application. See: [Asset Ownership](doc:asset-ownership). 
+If you haven't already, you should also learn about supporting Immutable X assets in your application. See: [Asset Ownership](./asset-ownership.mdx). 
 ## Central Orderbook
 
 To help facilitate liquidity, Immutable maintains a central orderbook which can be immediately accessed by any application via our API. Adding your orders to this book will enable them to be filled by any other client application, improving your likelihood of being able to capture fees from these orders.
 
 The APIs for this orderbook are as follows:
 
-- [Get Orders](ref:get_v1-orders-1) 
-- [Get Order](ref:get_v1-orders-id-1) 
-- [Create Order](ref:post_v1-orders-1)
-- [Cancel Order](ref:delete_v1-orders-id-1)
+- [Get Orders](/reference#/operations/listOrders) 
+- [Get Order](/reference#/operations/getOrder) 
+- [Create Order](/reference#/operations/createOrder)
+- [Cancel Order](/reference#/operations/cancelOrder)
 
 Currently, Immutable X doesn't support updating existing orders, only cancellation and replacement.
 :::info Expiration timestamp format
@@ -28,7 +28,7 @@ The Unix epoch (or Unix time or POSIX time or Unix timestamp) is the number of s
 
 ## Submitting Trades
 
-If you have matched two orders on L2, you can submit those directly to the API using the [Create Trade](ref:post_v1-trades-1) endpoint. Note that these trades must still be signed by the relevant users.
+If you have matched two orders on L2, you can submit those directly to the API using the [Create Trade](/reference#/operations/createTrade) endpoint. Note that these trades must still be signed by the relevant users.
 
 ## Immutable Link
 
@@ -36,7 +36,7 @@ Immutable X allows users to keep their existing Ethereum wallet: no installation
 
 To ensure that users are able to sign trades which can be processed by Immutable X, and to ensure that applications display the correct assets to users and provide them with informed consent, Immutable provides a bridging service called **Immutable Link**. This service uses a signed security string to derive a STARK-friendly Immutable X key, which the user will use to sign L2 interactions. This ensures that users can always recover assets as long as they retain access to their Ethereum wallet. 
 
-Immutable Link is a separate web application, now with iframe support [more information here](https://docs.x.immutable.com/docs/link-iframe-support). All StarkEx-specific Immutable X interactions are abstracted away from your marketplace and into Immutable Link.
+Immutable Link is a separate web application, now with iframe support [more information here](../link-sdk/link-iframe-support.md). All StarkEx-specific Immutable X interactions are abstracted away from your marketplace and into Immutable Link.
 
 Immutable Link will soon be open source and made publicly available.
 
@@ -97,11 +97,11 @@ A high-level overview of the trading process is as follows.
 
 To help understand how this works, consider a marketplace for Axies:
 
-First, the marketplace uses the [get orders](ref:get_v1-orders-1) endpoint to load a list of active orders. Our buyer decides to buy a Mystic Axie for 3 ETH. The marketplace uses the [Link SDK](doc:sdk-api) to prompt the Link. 
+First, the marketplace uses the [get orders](/reference#/operations/listOrders) endpoint to load a list of active orders. Our buyer decides to buy a Mystic Axie for 3 ETH. The marketplace uses the [Link SDK](../link-sdk/index.md) to prompt the Link. 
 
-Link will then use the [get order details](ref:get_v1-orders-id-1) endpoint to get the required parameters for the user to sign. The user will sign the order, and the Link will use the [submit order](ref:post_v1-orders-1) endpoint to send it to Immutable X. 
+Link will then use the [get order details](/reference#/operations/getOrder) endpoint to get the required parameters for the user to sign. The user will sign the order, and the Link will use the [submit order](/reference#/operations/createOrder) endpoint to send it to Immutable X. 
 
-The exchange then confirms or rejects the trade, and notifies Link, which will send an `ImXTxResponse` back to the marketplace, which can display the success or failure of the trade to the user. The asset will be *immediately* available for trading or use within Axie Infinity, provided they [support asset ownership](doc:supporting-assets-in-your-application).
+The exchange then confirms or rejects the trade, and notifies Link, which will send an `ImXTxResponse` back to the marketplace, which can display the success or failure of the trade to the user. The asset will be *immediately* available for trading or use within Axie Infinity, provided they [support asset ownership](./asset-ownership.mdx).
 
 ## Frequently Asked Questions
 

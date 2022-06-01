@@ -7,7 +7,7 @@ sidebar_position: 2
 Your web3 wallet (e.g. Metamask) is used to create, connect, and sign transactions on Immutable X. Using Link SDK calls, we can handle account management activities.
 
 ## Security for your users
-If you're integrating your application with Immutable X, you must use the [Link SDK](doc:sdk-api) for registering new users. This ensures that the L2 key that is generated for the user’s wallet is created correctly, and will work across the ecosystem. Failing to create the key correctly may result in a key that cannot be used to deposit or withdraw tokens.
+If you're integrating your application with Immutable X, you must use the [Link SDK](../link-sdk/index.md) for registering new users. This ensures that the L2 key that is generated for the user’s wallet is created correctly, and will work across the ecosystem. Failing to create the key correctly may result in a key that cannot be used to deposit or withdraw tokens.
 
 Link SDK must also be used when requesting a user’s signature for an action. Not generating the key with Link may result in security issues for your users.
 

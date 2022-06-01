@@ -6,9 +6,9 @@ sidebar_position: 1
 
 ## contract_already_exists
 
-The collection has already been registered. A collection can only be registered once. Check that the value of the `contract_address` field passed to the [register collection API](ref:post_v1-collections-1) is correct.
+The collection has already been registered. A collection can only be registered once. Check that the value of the `contract_address` field passed to the [register collection API](/reference#/operations/createCollection) is correct.
 
-If you have previously registered a collection and want to update some of its details, view the [update collection API](ref:patch_v1-collections-address-1) documentation.
+If you have previously registered a collection and want to update some of its details, view the [update collection API](/reference#/operations/updateCollection) documentation.
 
 ## missing_metadata_key
 
@@ -20,7 +20,7 @@ At least one *required* metadata key was not provided in the request. The `messa
 
 ## metadata_key_already_exists
 
-The metadata you are trying to add to a collection is already present. To update collection metadata, view the [update collection metadata API](ref:patch_v1-collections-address-metadata-schema-name).
+The metadata you are trying to add to a collection is already present. To update collection metadata, view the [update collection metadata API](/reference#/operations/updateCollection).
 
 ## mint_validation_failed
 

@@ -3,7 +3,7 @@ title: 'Link SDK'
 slug: '/sdk-api'
 ---
 
-For context, read our [overview of the Immutable X SDK](doc:immutable-x-sdk).
+For context, read our [overview of the Immutable X SDK](../integrate-your-application/immutable-x-sdk.md).
 
 ## Link usage
 

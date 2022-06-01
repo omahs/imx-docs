@@ -3,12 +3,12 @@ title: "Minting with royalties"
 slug: "/minting-with-royalties"
 sidebar_position: 1
 ---
-Royalties for a given asset are defined at the point of minting a new asset to the Immutable X protocol. Please ensure your [recipients are registered](doc:user-registration) before minting.
+Royalties for a given asset are defined at the point of minting a new asset to the Immutable X protocol. Please ensure your [recipients are registered](../user-registration.md) before minting.
 
 ## Royalty fees for newly minted assets
 Minting with royalties requires `@imtbl/imx-sdk` version that is `>= 1.1.3`.
 
-To set up your `minter`, refer to this [minting example](https://docs.x.immutable.com/docs/minting-assets-1#minting-example).
+To set up your `minter`, refer to this [minting example](../asset-management/asset-minting.md#minting-example).
 
 The main difference between the example above and the one below is the object structure of the `mints`. The previous example does not support fees and will be deprecated and replaced with the example below.
 ```typescript
@@ -85,6 +85,6 @@ You can specify the percentage up to 2 decimal places. Anything beyond that will
 
 ## Viewing the asset royalty fees
 
-You can view the royalty information for a given asset via the [assets api](https://docs.x.immutable.com/reference/get_v1-assets-1). This will return the royalty recipient and fee percentage for each royalty associated with an asset.
+You can view the royalty information for a given asset via the [assets API](/reference#/operations/getAsset). This will return the royalty recipient and fee percentage for each royalty associated with an asset.
 
-If you require the fee breakdown, please upgrade to version `1.1.0` or higher. This also applies for the API which will omit the `fees` array in the result unless it exists for that order and the `include_fees` flag is appended as a query param. See the [API docs](https://docs.x.immutable.com/reference/get_v1-assets-1) for more info.
+If you require the fee breakdown, please upgrade to version `1.1.0` or higher. This also applies for the API which will omit the `fees` array in the result unless it exists for that order and the `include_fees` flag is appended as a query param. See the [API docs](/reference#/operations/listAssets) for more info.

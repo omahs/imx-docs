@@ -256,7 +256,7 @@ In the integrated terminal, run the command `npm run onboarding:user-registratio
 
 ## Create your project
 
-To create an NFT collection in Immutable X, you need to first create a project, then register your collection to that project. To learn more about this, visit the [Onboard Guide](https://docs.x.immutable.com/docs/onboarding). 
+To create an NFT collection in Immutable X, you need to first create a project, then register your collection to that project. To learn more about this, visit the [Onboard Guide](../guides/onboarding/index.md). 
 
 Navigate to *src/onboarding/2-create-project.ts* file and add values for the following:
 
@@ -290,7 +290,7 @@ Remember to remove the prepending double slashes ”//” in relation to the fie
 
 ## Create metadata schema
 
-Each NFT collection needs a metadata schema. For more information on metadata schemas, check out the [Metadata Schema Guide](https://docs.x.immutable.com/docs/metadata-schema-registration).
+Each NFT collection needs a metadata schema. For more information on metadata schemas, check out the [Metadata Schema Guide](../guides/onboarding/metadata-schema-registration.mdx).
 
 Navigate to the *src/onboarding/4-add-metadata-schema.ts* file and update metadata on line 43:
 

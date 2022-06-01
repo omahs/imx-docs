@@ -6,7 +6,7 @@ sidebar_position: 1
 ---
 The Immutable X SDK is a Javascript package created by Immutable to allow simple interfacing with Immutable X’s API. The primarily used packages are Link SDK and the Immutable X Client.
 
-The Immutable X Client is used for most backend operations, and the [Link SDK](doc:sdk-api) is used for frontend, user-facing interactions.
+The Immutable X Client is used for most backend operations, and the [Link SDK](../link-sdk/index.md) is used for frontend, user-facing interactions.
 
 The IMX Client ('ImmutableXClient') is a module wrapping the REST requests in a method call. Using this package, developers can make sure their calls are up to date with the latest API standards.
 
@@ -45,4 +45,4 @@ const link = new Link(linkAddress);
 // IMX Client
 const client = await ImmutableXClient.build({ publicApiUrl: apiAddress });
 ```
-For more details, see the [Link SDK](doc:sdk-api) docs and the [package on NPM](https://www.npmjs.com/package/@imtbl/imx-sdk).
+For more details, see the [Link SDK](../link-sdk/index.md) docs and the [package on NPM](https://www.npmjs.com/package/@imtbl/imx-sdk).

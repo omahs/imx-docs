@@ -10,8 +10,8 @@ The withdrawal process for both on-chain and L2 minted assets are identical. Bel
 
 ## Withdrawal process
 Withdrawal is a 2-step process: 
-- The first call to [gets details of a signable withdrawal](ref:post_v1-signable-withdrawal-details-1) is similar to the get signable details call for an on-chain asset deposit, returning the vault allocated for the asset. 
-- The second call to [withdrawal](ref:post_v1-withdrawals-1) will initiate the withdrawal process, post validating the request, submits the withdrawal request to be included in the generation and submission of the next batch.
+- The first call to [gets details of a signable withdrawal](/reference#/operations/getSignableWithdrawal) is similar to the get signable details call for an on-chain asset deposit, returning the vault allocated for the asset. 
+- The second call to [withdrawal](/reference#/operations/createWithdrawal) will initiate the withdrawal process, post validating the request, submits the withdrawal request to be included in the generation and submission of the next batch.
 
 Upon batch confirmation (on-chain state update), the asset is now available to be withdrawn by the initial owner / originator of the asset. 
 

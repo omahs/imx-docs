@@ -84,7 +84,7 @@ The `idToName` mapping is stored on-chain and is available for anyone to read fr
 
 You can set immutable properties for your NFT if you don't expose a way to change it, for example, setting the name at the time of minting. However, there are costs associated with storing data on the blockchain. Operations that involve writing to the blockchain, like the `setName` example above, are relatively expensive for the sender of the transaction. 
 
-Read more about on-chain versus off-chain metadata, and data storage, in our [minting guide](doc:minting-on-immutable-x#on-chain-versus-off-chain).
+Read more about on-chain versus off-chain metadata, and data storage, in our [minting guide](../guides/minting-on-immutable-x.md#on-chain-versus-off-chain).
 
 # Integration requirements
 A crucial part of building on Immutable X is having a Layer 1 (L1) Ethereum smart contract, which is required for minting assets that can be withdrawn from Immutable X on Layer 2 (L2). 
@@ -93,7 +93,7 @@ For a smart contract to work with Immutable X, we need an implementation of a `m
 
 **[Read a high-level overview of the StarkEx service](https://docs.starkware.co/starkex-v3/overview)**
 
-There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata. When minting on Immutable X, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. You also have to provide a [blueprint for each token](doc:minting-on-immutable-x#metadata-blueprint). The blueprint represents the immutable, [on-chain metadata](doc:minting-on-immutable-x#on-chain-versus-off-chain) of the NFT that will be passed (along with the token ID) to your `mintFor` function. 
+There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata. When minting on Immutable X, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. You also have to provide a [blueprint for each token](../guides/minting-on-immutable-x.md#metadata-blueprint). The blueprint represents the immutable, [on-chain metadata](../guides/minting-on-immutable-x.md#on-chain-versus-off-chain) of the NFT that will be passed (along with the token ID) to your `mintFor` function. 
 
 ## Example contracts
 In our smart contract templates on Github (visit [imx-contracts](https://github.com/immutable/imx-contracts)) you can find a simple implementation of an ERC-721 token with the `mintFor` function implemented correctly to work with Immutable X.
@@ -181,7 +181,7 @@ More information about these smart contract examples:
 - `transferOwnership(_owner)` does exactly as described, and transfers the ownership of the contract from the contract deployer to the specific wallet address.
 - The imx address refers to the Immutable X contract address that is interacting with your smart contract to perform minting operations. You can find this address for each environment in the readme of the imx-contracts repository (see the table at the top). This address is used in the `onlyIMX` modifier, which checks if the sender of the transaction is our contract or not. This is a way of whitelisting our contract and ensuring that no one else can mint assets through your smart contract.
 - The `mintFor` function is called by the Immutable X smart contract at the time of withdrawing the NFT to mainnet. The function has the `onlyIMX` modifier, explained above. Because you’re minting NFTs, which are unique, ensure that quantity = 1. 
-- The [blueprint](doc:minting-on-immutable-x#metadata-blueprint) is saved as on-chain, immutable metadata in the mapping blueprints. For custom blueprint decoding, you can override the mintFor function in Asset.sol to save it in something like tokenURI, or split the string into different components.
+- The [blueprint](../guides/minting-on-immutable-x.md#metadata-blueprint) is saved as on-chain, immutable metadata in the mapping blueprints. For custom blueprint decoding, you can override the mintFor function in Asset.sol to save it in something like tokenURI, or split the string into different components.
 - The function emits an event `AssetMinted` when the mintFor completes successfully, and this can be listened on by applications.
 
 ## General advice

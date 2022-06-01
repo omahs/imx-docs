@@ -43,4 +43,4 @@ To begin testing, you need to register as a user with Immutable X. Registration 
 
 To register, visit the [testnet version of our marketplace](https://market.ropsten.immutable.com/), then click **Connect Wallet** and follow the prompts. You'll need to repeat these steps again when registering on mainnet, by visiting: https://market.immutable.com/ 
 
-Registration enables you to use our authentication system, which protects your project's administrative-level assets from being accessed or updated by someone else. [Learn more about user security](doc:user-registration#user-security).
+Registration enables you to use our authentication system, which protects your project's administrative-level assets from being accessed or updated by someone else. [Learn more about user security](../guides/user-registration.md#user-security).

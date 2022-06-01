@@ -31,7 +31,7 @@ Our metadata crawler will access `<project_metadata_endpoint>/<token_id>` at the
 Here is a high-level overview of the L2 asset minting process:
 ![Asset Minting](../../../static/img/AssetMinting.png)
 
-Here is a [mint tokens](ref:post_v1-mints-1) example:
+Here is a [mint tokens](/reference#/operations/mintTokens) example:
 ```json
 {
   "mints":
@@ -73,7 +73,7 @@ Our implementation adopts an all-or-nothing approach, where if any one of our va
 
 Once your mint request comes through, you'll be able to trade immediately with your assets.
 
-The withdrawal of a L2-minted asset follows the same process as an on-chain minted asset. See [asset withdrawals](doc:asset-withdrawals) to learn more. 
+The withdrawal of a L2-minted asset follows the same process as an on-chain minted asset. See [asset withdrawals](./asset-withdrawals.md) to learn more. 
 
 :::caution Minting with Royalties
 NFTs minted using mint v1 will not have royalties. We will only manually add royalties to Ethereum contracts that have implemented mint v1 that are registered before **Thursday 25th of November, 11.59pm AEST**. 
@@ -89,7 +89,7 @@ In the case of timeout, please retry with some gap in between.
 ## Token validation
 Tokens that are minted on our platform (L2) are validated to ensure they can later be successfully withdrawn to the Ethereum (L1) layer. This validation occurs during the minting process.
 
-If the validation fails, a `mint_unwithdrawable` error code will be thrown. [See error description](https://docs.x.immutable.com/docs/error-codes#mint_unwithdrawable).
+If the validation fails, a `mint_unwithdrawable` error code will be thrown. [See error description](../../troubleshooting/error-codes.md#mint_unwithdrawable).
 
 ## Minting example
 Here's and example script to mint tokens in TypeScript:

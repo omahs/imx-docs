@@ -50,7 +50,7 @@ link.sell({
 
 To restrict your marketplace to selling in a specific whitelisted currency, you need to provide `currencyAddress` for a token.
 
-In this flow, Link UI will be displayed asking the user to specify the amount. A list of whitelisted tokens is available via API endpoint [/get_v1-tokens-1](https://docs.x.immutable.com/reference/get_v1-tokens-1)
+In this flow, Link UI will be displayed asking the user to specify the amount. A list of whitelisted tokens is available via API endpoint [/get_v1-tokens-1]/reference#/operations/listTokens)
 
 ```typescript
 link.sell({

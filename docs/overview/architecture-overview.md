@@ -24,7 +24,7 @@ The read functionality also offers various filtering options. This includes filt
 - assets minted
 - orders (e.g. display all the orders made).
 
-**[View the API reference documentation](https://docs.x.immutable.com/reference/get_v1-assets-1)**
+**[View the API reference documentation](/reference)**
 
 ## ZK-Rollups
 Immutable X combines NFT-specific exchange and proof logic with the cutting edge rollup technology developed by StarkWare to create one of the most advanced tools for trading NFTs ever built. Rollups allow for world-class scalability and user experience while retaining the underlying security of Ethereum.
@@ -42,11 +42,11 @@ To learn more, check out [Vitalik's Incomplete Guide to Rollups](https://vitalik
 ## Link UI
 The Link is the conduit that we use to connect users to the Immutable X protocol. This allows Immutable X to support a thriving third-party marketplace ecosystem, without presenting a security risk.
 
-Unlike other blockchains or sidechains, Immutable X currently supports all desktop Ethereum wallets without forcing the user to switch networks. All new Immutable X users are required to [register as a user](doc:getting-started-guide#register-a-user-account), which means setting up a Layer 2 wallet via Link.
+Unlike other blockchains or sidechains, Immutable X currently supports all desktop Ethereum wallets without forcing the user to switch networks. All new Immutable X users are required to [register as a user](../guides/getting-started-guide.md#register-a-user-account), which means setting up a Layer 2 wallet via Link.
 
 Immutable X partners can embed the Link directly into their site’s transaction flow, making buying and selling NFTs more efficient and intuitive. The Link screens will show up in the site’s transaction flow, allowing their users to authorize purchases, listings, and transfers of ETH and NFTs, all without leaving the page.
 
-**[Learn more about Link SDK](doc:sdk-api)**
+**[Learn more about Link SDK](../guides/link-sdk/index.md)**
 
 ## Immutable X SDK
 The Immutable X SDK, combined with the APIs, will allow partners to build NFT projects in hours rather than weeks. Currently, a Typescript SDK implementation is available, designed to make it easy to integrate the protocol into websites. The SDK allows for types access to the Immutable X APIs and wallet.
