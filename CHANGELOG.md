@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/immutable/imx-docs/compare/v1.4.0...v1.5.0) (2022-06-01)
+
+
+### Features
+
+* adds code-examples page ([cc146cb](https://github.com/immutable/imx-docs/commit/cc146cb3b0c682bcccb8330acab897dbf14be52c))
+
 # [1.4.0](https://github.com/immutable/imx-docs/compare/v1.3.2...v1.4.0) (2022-06-01)
 
 
