@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/immutable/imx-docs/compare/v1.5.1...v1.5.2) (2022-06-01)
+
+
+### Bug Fixes
+
+* algolia links ([f1029b1](https://github.com/immutable/imx-docs/commit/f1029b14cef6946a5fb93841ca2985e36520ec7e))
+
 ## [1.5.1](https://github.com/immutable/imx-docs/compare/v1.5.0...v1.5.1) (2022-06-01)
 
 
