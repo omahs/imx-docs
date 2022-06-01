@@ -74,6 +74,9 @@ const config = {
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
         },
+        gtag: {
+          trackingID: "G-4JBHZ7F06X",
+        },
       }),
     ],
   ],
@@ -151,10 +154,7 @@ const config = {
         apiKey: '2cb7547e9bf1ee7ee1b033acb6387c1d', // Public API key: it is safe to commit it
         indexName: 'prod_imxdocs',
         contextualSearch: true,
-      },
-      gtag: {
-        trackingID: "G-4JBHZ7F06X",
-      },
+      }
     }),
 };
 
