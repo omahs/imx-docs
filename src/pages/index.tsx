@@ -239,14 +239,9 @@ const Homepage = () => {
               className={styles.displayFromExtraSmall}
             />
           </div>
-          <hr
-            style={{
-              width: '100%',
-              textAlign: 'center',
-              margin: '60px',
-              backgroundColor: '#e0e0e0',
-            }}
-          />
+          <br />
+          <br />
+          <br />
 
           {/* Removing this section until the content is ready */}
           {/* <div className={styles.articlesSection}>
