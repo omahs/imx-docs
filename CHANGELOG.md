@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/immutable/imx-docs/compare/v1.5.0...v1.5.1) (2022-06-01)
+
+
+### Bug Fixes
+
+* the config for gtag and a link ([5758869](https://github.com/immutable/imx-docs/commit/57588691f8190fc4fdb0a95067ae3921b8a25c20))
+
 # [1.5.0](https://github.com/immutable/imx-docs/compare/v1.4.0...v1.5.0) (2022-06-01)
 
 
