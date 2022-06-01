@@ -108,7 +108,7 @@ const config = {
             position: 'left',
             label: 'SDKs',
             type: 'doc',
-            docId: 'guides/getting-started-guide',
+            docId: 'sdks/index',
           },
           {
             to: 'https://support.immutable.com/hc/en-us/articles/4405227590799-Immutable-X-Whitepaper',

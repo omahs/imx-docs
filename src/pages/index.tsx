@@ -94,7 +94,7 @@ const Homepage = () => {
       title: 'Code Examples',
       subtitle: 'Accelerate your build with code snippets and samples.',
       buttonText: 'Learn More',
-      link: '/code-samples',
+      link: '/docs/code-examples',
     },
     {
       LightIcon: ExplorerLightIcon,
