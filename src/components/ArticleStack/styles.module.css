@@ -7,6 +7,7 @@
   padding: 2rem 1.5rem;
   background: var(--ifm-color-home-elevation-00);
 }
+
 [data-theme='dark'] .articleStackContainer {
   background: var(--ifm-color-home-elevation-02);
 }
@@ -40,4 +41,8 @@
   color: var(--ifm-color-home-text-primary);
   margin: 0;
   margin-top: 10px;
+}
+
+.articleStackButton {
+  width: 'fit-content'
 }

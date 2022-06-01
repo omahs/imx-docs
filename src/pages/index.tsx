@@ -92,7 +92,7 @@ const Homepage = () => {
       LightIcon: ContractLightIcon,
       DarkIcon: ContractDarkIcon,
       title: 'Code Examples',
-      subtitle: '“Accelerate your build with code snippets and samples.',
+      subtitle: 'Accelerate your build with code snippets and samples.',
       buttonText: 'Learn More',
       link: '/code-samples',
     },
@@ -230,13 +230,13 @@ const Homepage = () => {
                 Docs
               </Button>
             </a>
-            <a href="/docs/welcome">
+            {/* <a href="/docs/welcome">
               <IconButton
                 onClick={() => console.log('')}
                 Icon={<RightArrowIcon />}
                 className={styles.displayFromExtraSmall}
               />
-            </a>
+            </a> */}
           </div>
           <br />
           <br />

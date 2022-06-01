@@ -31,7 +31,7 @@ const CommunityCard = ({
         <h3 className={clsx('grad', styles.title)}>{title}</h3>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
-      <a href={url}>
+      <a href={url} target="_blank" rel="noreferrer">
         <Button
           className={styles.cardButton}
           onClick={() => console.log('Button clicked')}
