@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/immutable/imx-docs/compare/v1.3.0...v1.3.1) (2022-06-01)
+
+
+### Bug Fixes
+
+* correct all internal linking ([8ccc7b7](https://github.com/immutable/imx-docs/commit/8ccc7b7cbaec016e850395776bba17825cd0d8b4))
+* fix home page links ([9a6d816](https://github.com/immutable/imx-docs/commit/9a6d81623ec02cb4a7424107ddf919c9fe56b125))
+* fix the broken links ([c17da1a](https://github.com/immutable/imx-docs/commit/c17da1a0b925a5fed69b888fad36d5c95afced60))
+
 # [1.3.0](https://github.com/immutable/imx-docs/compare/v1.2.0...v1.3.0) (2022-06-01)
 
 
