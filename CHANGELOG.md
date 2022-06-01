@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/immutable/imx-docs/compare/v1.2.0...v1.3.0) (2022-06-01)
+
+
+### Features
+
+* add missing docs articles ([ec6e3e4](https://github.com/immutable/imx-docs/commit/ec6e3e430fdfc6b6e33c4e6a168c8c23db5a3c40))
+
 # [1.2.0](https://github.com/immutable/imx-docs/compare/v1.1.2...v1.2.0) (2022-05-31)
 
 
