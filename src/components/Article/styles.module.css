@@ -90,4 +90,5 @@
   color: var(--ifm-color-home-text-primary);
   height: 24px;
   width: 20px;
+  vertical-align: middle;
 }

@@ -86,7 +86,7 @@ const Homepage = () => {
       subtitle:
         'View all the SDKs on offer to easily integrate with Immutable X.',
       buttonText: 'Learn More',
-      link: '/sdks',
+      link: '/docs/sdks',
     },
     {
       LightIcon: ContractLightIcon,
