@@ -1,18 +1,18 @@
 {
   "index_name": "prod_imxdocs",
-  "sitemap_urls": ["http://beta.docs.x.immutable.com/sitemap.xml"],
+  "sitemap_urls": ["https://docs.x.immutable.com/sitemap.xml"],
   "start_urls": [
     {
-      "url": "http://beta.docs.x.immutable.com/docs/welcome",
+      "url": "https://docs.x.immutable.com/docs/welcome",
       "tags": ["overview"]
     },
     {
-      "url": "http://beta.docs.x.immutable.com/docs/getting-started-guide",
+      "url": "https://docs.x.immutable.com/docs/getting-started-guide",
       "selectors_key": "guides",
       "tags": ["guides"]
     },
     {
-      "url": "http://beta.docs.x.immutable.com/docs/sdk-api",
+      "url": "https://docs.x.immutable.com/docs/sdk-api",
       "selectors_key": "link sdk",
       "tags": ["link sdk"]
     }
