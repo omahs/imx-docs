@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/immutable/imx-docs/compare/v1.3.1...v1.3.2) (2022-06-01)
+
+
+### Bug Fixes
+
+* **stray link:** stray link ([479a7bc](https://github.com/immutable/imx-docs/commit/479a7bc8a91b7b3dd2dcfe73b22deb16cab69fc3))
+
 ## [1.3.1](https://github.com/immutable/imx-docs/compare/v1.3.0...v1.3.1) (2022-06-01)
 
 
