@@ -15,9 +15,6 @@ const Footer = () => {
   return (
     <div className={styles.footerContainer}>
       <div>
-        <p className={styles.footerText}>
-          Made for people who love the world of NFTs
-        </p>
         <p className={clsx(styles.footerText, styles.displayFromSmall)}>
           <a
             href="https://support.immutable.com/hc/en-us/articles/4405227590799-Immutable-X-Whitepaper"

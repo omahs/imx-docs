@@ -4,12 +4,16 @@ import styles from './styles.module.css';
 import { useColorMode } from '@docusaurus/theme-common';
 import clsx from 'clsx';
 
+interface Cta {
+  link: string;
+  text: string;
+}
 interface ArticleProps {
   LightIcon?: ({ className }: { className?: string }) => JSX.Element;
   DarkIcon?: ({ className }: { className?: string }) => JSX.Element;
   title: string | ReactNode;
   subtitle: string | ReactNode;
-  cta: string[];
+  cta: Cta[];
 }
 
 const Article = ({
@@ -39,12 +43,14 @@ const Article = ({
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
       <div className={styles.ctaSection}>
-        {cta.map((ctaTitle, index) => {
+        {cta.map((c, index) => {
           return (
-            <div className={styles.ctaContainer} key={index}>
-              <RightArrowIcon className={styles.ctaIcon} />
-              <p className={styles.ctaTitle}>{ctaTitle}</p>
-            </div>
+            <a href={c.link} key={index}>
+              <div className={styles.ctaContainer} key={index}>
+                <RightArrowIcon className={styles.ctaIcon} />
+                <p className={styles.ctaTitle}>{c.text}</p>
+              </div>
+            </a>
           );
         })}
       </div>

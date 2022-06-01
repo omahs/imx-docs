@@ -83,43 +83,26 @@ const Homepage = () => {
       LightIcon: SdkLightIcon,
       DarkIcon: SdkDarkIcon,
       title: 'IMX SDKs',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      subtitle:
+        'View all the SDKs on offer to easily integrate with Immutable X.',
+      buttonText: 'Learn More',
+      link: '/sdks',
     },
-    // {
-    //   LightIcon: SaleLightIcon,
-    //   DarkIcon: SaleDarkIcon,
-    //   title: 'Primary sale',
-    //   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    //   buttonText: 'Open Docs',
-    // },
     {
       LightIcon: ContractLightIcon,
       DarkIcon: ContractDarkIcon,
-      // title: 'Contracts',
-      title: 'Code examples',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Open Docs',
+      title: 'Code Examples',
+      subtitle: '“Accelerate your build with code snippets and samples.',
+      buttonText: 'Learn More',
+      link: '/code-samples',
     },
-    // {
-    //   LightIcon: GoSdkLightIcon,
-    //   DarkIcon: GoSdkDarkIcon,
-    //   title: 'IMX Go SDK',
-    //   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    //   buttonText: 'Open Docs',
-    // },
-    // {
-    //   LightIcon: DappsLightIcon,
-    //   DarkIcon: DappsDarkIcon,
-    //   title: 'DAPPs',
-    //   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    //   buttonText: 'Open Docs',
-    // },
     {
       LightIcon: ExplorerLightIcon,
       DarkIcon: ExplorerDarkIcon,
-      title: 'Explorer',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Open Docs',
+      title: 'Immutascan',
+      subtitle: 'Explore live transactions and trade events in real time.',
+      buttonText: 'Visit Immutascan.io',
+      link: 'https://immutascan.io',
     },
   ];
 
@@ -129,12 +112,14 @@ const Homepage = () => {
       DarkIcon: DevelopersDarkIcon,
       title: 'Developer grants',
       subtitle: (
-        <>
-          Early BUIDL grants, marketing support,
-          <br /> technical guidance and much more.
-        </>
+        <>Immutable X offers Grants to help you fund your next web3 project.</>
       ),
-      cta: ['Know more'],
+      cta: [
+        {
+          link: '/docs/contact#building-on-immutable-x',
+          text: 'Know More',
+        },
+      ],
     },
     // {
     //   LightIcon: BugBountyLightIcon,
@@ -152,9 +137,13 @@ const Homepage = () => {
       LightIcon: ContributorsLightIcon,
       DarkIcon: ContributorsDarkIcon,
       title: 'Help contribute',
-      subtitle:
-        'Help us close the gaps in knowledge by contributing to ImmutableX developer documentaion.',
-      cta: ['Contributer guidelines'],
+      subtitle: 'Help us improve our documentation by contributing!',
+      cta: [
+        {
+          link: '/docs/contributing',
+          text: 'Contributor Guidelines',
+        },
+      ],
     },
   ];
 
@@ -180,28 +169,34 @@ const Homepage = () => {
   const communitySectionData = [
     {
       title: 'ImmutableX forum',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'View channel',
+      subtitle:
+        'Review past questions & get answers to your queries over on the forum.',
+      buttonText: 'Visit the Forum',
       isLongCard: true,
+      url: 'https://forum.immutable.com',
     },
     {
       title: 'Discord',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Join',
+      subtitle:
+        'Join the conversation! Interact with the Immutable X developer community on Discord.',
+      buttonText: 'Join the Discord',
       isLongCard: false,
+      url: 'https://discord.com/invite/Dmhp398dna',
     },
     {
       title: 'Twitter',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Follow',
+      subtitle:
+        'Follow us on Twitter for the latest tech updates & company news.',
+      buttonText: 'Follow Us',
       isLongCard: false,
+      url: 'https://twitter.com/Immutable',
     },
     {
-      // title: 'Contribute & earn',
       title: 'Reddit',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Contribute',
+      subtitle: 'Follow us on Reddit for all the memes, updates and more.',
+      buttonText: 'Follow Us on Reddit',
       isLongCard: true,
+      url: 'https://www.reddit.com/r/ImmutableX/',
     },
   ];
 
@@ -215,29 +210,33 @@ const Homepage = () => {
           <Title
             title={
               <div className={clsx('grad', styles.title)}>
-                Build your
-                <br className={styles.displayForExtraSmall} /> NFT project
+                Build with
+                <br className={styles.displayForExtraSmall} /> Immutable X
               </div>
             }
             subtitle={
               <>
-                Immutable X. The one stop shop to create
-                <br /> world-class NFTs projects
+                Everything you need to superpower your next web3 project,
+                without comprising security or scalability.
               </>
             }
             className={styles.heroTitle}
           />
           <div className={styles.heroButtonSection}>
-            <Button onClick={() => console.log('Explore Docs Page')}>
-              Explore{' '}
-              <span className={styles.displayFromExtraSmall}>Developer</span>{' '}
-              Docs
-            </Button>
-            <IconButton
-              onClick={() => console.log('Explore Docs Page')}
-              Icon={<RightArrowIcon />}
-              className={styles.displayFromExtraSmall}
-            />
+            <a href="/docs/welcome">
+              <Button onClick={() => console.log('')}>
+                Explore{' '}
+                <span className={styles.displayFromExtraSmall}>Developer</span>{' '}
+                Docs
+              </Button>
+            </a>
+            <a href="/docs/welcome">
+              <IconButton
+                onClick={() => console.log('')}
+                Icon={<RightArrowIcon />}
+                className={styles.displayFromExtraSmall}
+              />
+            </a>
           </div>
           <br />
           <br />
@@ -251,13 +250,8 @@ const Homepage = () => {
           </div> */}
 
           <Title
-            title="IMX tools"
-            subtitle={
-              <>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                <br /> ultrices fringilla pharetra nullam placerat tellus.
-              </>
-            }
+            title="Developer Tools"
+            subtitle={<>Everything you need to start building today.</>}
           />
           <div className={styles.articleStackSection}>
             {articleStackSectionData.map((article, index) => (
@@ -294,13 +288,8 @@ const Homepage = () => {
           </div> */}
 
           <Title
-            title="Join the community"
-            subtitle={
-              <>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                <br /> ultrices fringilla pharetra nullam placerat tellus.
-              </>
-            }
+            title="Join The Community"
+            subtitle={<>Be a part of our community!</>}
           />
           <div className={styles.communityCardSection}>
             {communitySectionData.map((communityInfo, index) => (

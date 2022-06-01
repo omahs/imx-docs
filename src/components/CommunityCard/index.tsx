@@ -9,6 +9,7 @@ interface CommunityCardProps {
   subtitle: string;
   buttonText: string;
   isLongCard?: boolean;
+  url: string;
 }
 
 const CommunityCard = ({
@@ -16,6 +17,7 @@ const CommunityCard = ({
   subtitle,
   buttonText,
   isLongCard = false,
+  url,
 }: CommunityCardProps) => {
   const theme = useColorMode();
   return (
@@ -29,12 +31,14 @@ const CommunityCard = ({
         <h3 className={clsx('grad', styles.title)}>{title}</h3>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
-      <Button
-        className={styles.cardButton}
-        onClick={() => console.log('Button clicked')}
-      >
-        {buttonText}
-      </Button>
+      <a href={url}>
+        <Button
+          className={styles.cardButton}
+          onClick={() => console.log('Button clicked')}
+        >
+          {buttonText}
+        </Button>
+      </a>
     </div>
   );
 };

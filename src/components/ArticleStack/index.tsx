@@ -9,6 +9,7 @@ interface ArticleStackProps {
   title: string | ReactNode;
   subtitle: string;
   buttonText?: string;
+  link: string;
 }
 
 const ArticleStack = ({
@@ -17,6 +18,7 @@ const ArticleStack = ({
   title,
   subtitle,
   buttonText = 'Learn More',
+  link,
 }: ArticleStackProps) => {
   const theme = useColorMode();
 
@@ -32,9 +34,14 @@ const ArticleStack = ({
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
-      <Button variant="solid" onClick={() => console.log('Learn more clicked')}>
-        {buttonText}
-      </Button>
+      <a href={link}>
+        <Button
+          variant="solid"
+          onClick={() => console.log('Learn more clicked')}
+        >
+          {buttonText}
+        </Button>
+      </a>
     </div>
   );
 };
