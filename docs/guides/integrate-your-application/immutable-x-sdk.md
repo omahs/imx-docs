@@ -15,6 +15,12 @@ The Link SDK provides a clean popup and UI to help users navigate through the fi
 Applications monitoring the status of the assets will use the IMX Client to retrieve data. Marketplace and applications relying on user interaction will use both packages.
 
 ## Setting up the SDK
+:::caution Note: If you are using the latest version of 'create-react-app'...
+You will encounter a bunch of webpack errors when you try use the [@imbt/imx-sdk](https://www.npmjs.com/package/@imtbl/imx-sdk) SDK with your app.
+
+Follow this guide: [How to resolve webpack errors](https://docs.x.immutable.com/docs/create-react-app-webpack-5-errors)
+:::
+
 For this tutorial we will assume Yarn is being used as the package manager. The following node modules need to be added to the project:
 ```bash
 yarn add @imtbl/imx-sdk
