@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/immutable/imx-docs/compare/v1.5.2...v1.5.3) (2022-06-02)
+
+
+### Bug Fixes
+
+* remove the global header ([731e96a](https://github.com/immutable/imx-docs/commit/731e96a27cd35529c3c2b3bc5dbec836b39a6a68))
+
 ## [1.5.2](https://github.com/immutable/imx-docs/compare/v1.5.1...v1.5.2) (2022-06-01)
 
 
