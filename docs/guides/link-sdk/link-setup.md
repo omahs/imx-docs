@@ -11,7 +11,7 @@ Check out our [Link reference tool](https://tools.immutable.com/link-reference/)
 ## Parameters
 
 ```typescript
-// Use the default Link.setup params: { providerPreference: "metamask" }
+// Use the default Link.setup params (providerPreference is "metamask")
 {}
 
 // Specify the provider preference
@@ -24,7 +24,7 @@ Check out our [Link reference tool](https://tools.immutable.com/link-reference/)
 
 ```typescript
 // Sample link.setup call using the default provider:
-const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference })
+const setupResponsePayload: SetupResultsCodec = await link.setup({})
 
 // Specifying a provider:
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "magic_link" })
