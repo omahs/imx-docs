@@ -5,7 +5,6 @@ import GlobalHeader from '../components/GlobalHeader';
 export default function Root({ children }) {
   return (
     <>
-      <GlobalHeader />
       {children}
     </>
   );
