@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/immutable/imx-docs/compare/v1.5.3...v1.6.0) (2022-06-03)
+
+
+### Features
+
+* adds a redirect for /docs and removes icons from the footer ([ceaef8a](https://github.com/immutable/imx-docs/commit/ceaef8ad3b3d31410c46610d859f188d0205873f))
+
 ## [1.5.3](https://github.com/immutable/imx-docs/compare/v1.5.2...v1.5.3) (2022-06-02)
 
 
