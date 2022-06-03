@@ -63,21 +63,6 @@ const Footer = () => {
       </div>
       <div className={styles.iconsContainer}>
         <div className={styles.center}>
-          {theme.colorMode === 'dark' ? (
-            <>
-              <FooterODarkIcon className={styles.footerIcon} />
-              <FooterXDarkIcon className={styles.footerIcon} />
-              <FooterSDarkIcon className={styles.footerIcon} />
-            </>
-          ) : (
-            <>
-              <FooterOLightIcon className={styles.footerIcon} />
-              <FooterXLightIcon className={styles.footerIcon} />
-              <FooterSLightIcon className={styles.footerIcon} />
-            </>
-          )}
-        </div>
-        <div className={styles.center}>
           <button
             onClick={() =>
               window.open('https://discord.gg/6GjgPkp464', '_blank')
