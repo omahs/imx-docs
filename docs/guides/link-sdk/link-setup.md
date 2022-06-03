@@ -4,9 +4,11 @@ slug: '/link-setup'
 sidebar_position: 1
 ---
 
-A user's web3 wallet (e.g. Metamask) is used to create, connect, and sign transactions on Immutable X. However, before a user can do this, they need to have registered on Immutable and be signed into their account. Both these steps can be done with a single call to `Link.setup`. If a user has already registered, this function can also be called to sign them in.
+:::note Link reference tool
+Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
+:::
 
-Check out our [Link reference tool](https://tools.immutable.com/link-reference/) to understand how `Link.setup` works without having to write any code.
+A user's web3 wallet (e.g. Metamask) is used to create, connect, and sign transactions on Immutable X. However, before a user can do this, they need to have registered on Immutable and be signed into their account. Both these steps can be done with a single call to `Link.setup`. If a user has already registered, this function can also be called to sign them in.
 
 ## Parameters
 

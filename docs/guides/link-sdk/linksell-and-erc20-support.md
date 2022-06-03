@@ -4,13 +4,15 @@ slug: '/linksell-and-erc20-support'
 sidebar_position: 7
 ---
 
+:::note Link reference tool
+Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
+:::
+
 **SDK v1.3.13+** supports different currencies in the sell process, allowing users to list items in ETH and whitelisted tokens (USDC, GODS or IMX token). The listing can be only bought for the same currency it was listed for.
 
 :::info Limited Currency Support
 We only support USDC, GODS or IMX token
 :::
-
-Check out our [Link reference tool](https://tools.immutable.com/link-reference/) to understand how `Link.sell` works without having to write any code.
 
 Immutable X is not prescriptive in how marketplaces handle the sell process. There are several optional parameters you can use for your marketplace, to influence the user journey for the listing and the listing order itself.
 
