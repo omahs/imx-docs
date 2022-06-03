@@ -16,3 +16,5 @@ const response = await link.completeWithdrawal({
 console.log(response)
 // returns { transactionId: '0x...' }
 ```
+
+Check out our [Link reference tool](https://tools.immutable.com/link-reference/) to understand how `Link.completeWithdrawal` works without having to write any code.

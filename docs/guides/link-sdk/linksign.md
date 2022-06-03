@@ -6,6 +6,8 @@ sidebar_position: 10
 
 SDK v1.14.1+ used with Link UI add support to request arbitrary L1 signatures. This feature provide some flexibility for the developer to request L1 signatures for different actions that are not core to the platform such as like, follow, comment, etc.
 
+Check out our [Link reference tool](https://tools.immutable.com/link-reference/) to understand how `Link.sign` works without having to write any code.
+
 ## Parameters
 
 This method requires message that an engineer wants to sign and description that presents a user friendly message that will be shown to a user

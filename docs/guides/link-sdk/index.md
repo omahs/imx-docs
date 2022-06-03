@@ -5,6 +5,10 @@ slug: '/sdk-api'
 
 For context, read our [overview of the Immutable X SDK](../integrate-your-application/immutable-x-sdk.md).
 
+:::info
+Check out our [Link reference tool](https://tools.immutable.com/link-reference/) to understand how `Link` methods work without having to write any code.
+:::
+
 ## Link usage
 
 The Link SDK is used for frontend, user-facing interactions.

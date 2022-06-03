@@ -17,3 +17,5 @@ const response = await link.prepareWithdrawal({
 console.log(response)
 // returns { withdrawalId: 123456 }
 ```
+
+Check out our [Link reference tool](https://tools.immutable.com/link-reference/) to understand how `Link.prepareWithdrawal` works without having to write any code.
