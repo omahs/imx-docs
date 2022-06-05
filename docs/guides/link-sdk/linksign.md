@@ -4,6 +4,10 @@ slug: '/linksign'
 sidebar_position: 10
 ---
 
+:::note Link reference tool
+Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
+:::
+
 SDK v1.14.1+ used with Link UI add support to request arbitrary L1 signatures. This feature provide some flexibility for the developer to request L1 signatures for different actions that are not core to the platform such as like, follow, comment, etc.
 
 ## Parameters

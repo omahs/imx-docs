@@ -5,6 +5,10 @@ excerpt: "Link can now be used to kick off buy flows containing multiple order I
 sidebar_position: 4
 ---
 
+:::note Link reference tool
+Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
+:::
+
 Here's how you can initiate a buy order:
 
 ```typescript
@@ -12,6 +16,7 @@ import { Link, ImmutableXClient, ImmutableOrderStatus} from ‘@imtbl/imx-sdk’
 const link = new Link("https://link.ropsten.x.immutable.com")
 buyResults: BuyResponse = await link.buy({ orderIds: ['1', '2', '3'] });
 ```
+
 
 Just like all other link SDK methods, **buy** returns a promise, which resolves once all operations are complete, or rejects once the link encounters a critical error.
 

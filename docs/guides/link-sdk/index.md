@@ -3,6 +3,10 @@ title: 'Link SDK'
 slug: '/sdk-api'
 ---
 
+:::note Link reference tool
+Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
+:::
+
 For context, read our [overview of the Immutable X SDK](../integrate-your-application/immutable-x-sdk.md).
 
 ## Link usage
