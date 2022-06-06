@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/immutable/imx-docs/compare/v1.6.1...v1.7.0) (2022-06-06)
+
+
+### Features
+
+* add StarkWare logo, clean up copy ([40b4197](https://github.com/immutable/imx-docs/commit/40b4197b7220a22e96b16c796d5d26df885e61b1))
+
 ## [1.6.1](https://github.com/immutable/imx-docs/compare/v1.6.0...v1.6.1) (2022-06-06)
 
 
