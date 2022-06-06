@@ -18,7 +18,7 @@ A user's web3 wallet (e.g. Metamask) is used to create, connect, and sign transa
 
 // Specify the provider preference
 { 
-    providerPreference: "metamask" | "none" | "magic_link" | "wallet_connect"
+    providerPreference: "metamask" | "none" | "magic_link"
 }
 ```
 
@@ -77,9 +77,5 @@ result = {
 
 ### magic_link
 ![magic_link](../../../static/img/link-setup/magic_link.png 'magic_link')
-
-### wallet_connect
-![wallet_connect](../../../static/img/link-setup/wallet_connect.png 'wallet_connect')
-
 
 For more information about user wallet registration, see [User Registration](../user-registration.md) and [Account Management](../integrate-your-application/account-management.md).
