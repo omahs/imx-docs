@@ -3,8 +3,7 @@
 Describe your pull request here.
 
 ## Resolved issues
-
-Closes #1
+Jira:
 
 ### Before submitting the PR, please consider the follow:
 - [ ] It's beneficial if your pull request references an issue used to discuss the pull request ahead of time. If you haven't previously created an issue, please create one and discuss your contribution with the maintainers.
