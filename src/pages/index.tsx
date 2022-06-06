@@ -101,7 +101,7 @@ const Homepage = () => {
       DarkIcon: ExplorerDarkIcon,
       title: 'Immutascan',
       subtitle: 'Explore live transactions and trade events in real time.',
-      buttonText: 'Visit Immutascan.io',
+      buttonText: 'Visit Immutascan',
       link: 'https://immutascan.io',
     },
   ];
@@ -110,14 +110,14 @@ const Homepage = () => {
     {
       LightIcon: DevelopersLightIcon,
       DarkIcon: DevelopersDarkIcon,
-      title: 'Developer grants',
+      title: 'Developer Grants',
       subtitle: (
-        <>Immutable X offers Grants to help you fund your next web3 project.</>
+        <>Immutable X offers grants to help you fund your next web3 project.</>
       ),
       cta: [
         {
           link: '/docs/contact#building-on-immutable-x',
-          text: 'Know More',
+          text: 'Learn More',
         },
       ],
     },
@@ -136,7 +136,7 @@ const Homepage = () => {
     {
       LightIcon: ContributorsLightIcon,
       DarkIcon: ContributorsDarkIcon,
-      title: 'Help contribute',
+      title: 'Help Contribute',
       subtitle: 'Help us improve our documentation by contributing!',
       cta: [
         {
@@ -186,15 +186,15 @@ const Homepage = () => {
     {
       title: 'Twitter',
       subtitle:
-        'Follow us on Twitter for the latest tech updates & company news.',
+        'Follow us on Twitter for the latest product updates & company news.',
       buttonText: 'Follow Us',
       isLongCard: false,
       url: 'https://twitter.com/Immutable',
     },
     {
       title: 'Reddit',
-      subtitle: 'Follow us on Reddit for all the memes, updates and more.',
-      buttonText: 'Follow Us on Reddit',
+      subtitle: 'Join our subreddit for community memes, updates and more.',
+      buttonText: 'Join Subreddit',
       isLongCard: true,
       url: 'https://www.reddit.com/r/ImmutableX/',
     },

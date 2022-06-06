@@ -68,6 +68,29 @@
   background-color: var(--ifm-color-home-elevation-04);
 }
 
+.starkwareIconContainer {
+  display: flex;
+  align-items: center;  
+  margin: 5px;
+}
+
+.starkwareIcon {
+  float: right;
+  cursor: pointer;
+  width: 125px;
+  background-repeat: no-repeat;
+  height: 23px;
+  margin: 0 5px;
+  display: block;
+}
+
+.starkware {
+  background-image: url(/static/img/logo--starkware-light.svg);
+}
+[data-theme='dark'] .starkware {
+  background-image: url(/static/img/logo--starkware-dark.svg);
+}
+
 .discord {
   background-image: url(/static/img/discordLight.svg);
 }

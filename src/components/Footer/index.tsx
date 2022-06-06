@@ -48,7 +48,7 @@ const Footer = () => {
             className="hyperlink"
             rel="noreferrer"
           >
-            Immutascan.io
+            Immutascan Block Explorer
           </a>{' '}
           •{' '}
           <a
@@ -82,6 +82,13 @@ const Footer = () => {
             className={clsx(styles.socialIcons, styles.reddit)}
           />
         </div>
+        <span className={styles.starkwareIconContainer}>
+          Powered By
+          <div
+            onClick={() => window.open('https://www.starkware.co', '_blank')}
+            className={clsx(styles.starkwareIcon, styles.starkware)}
+          ></div>
+        </span>
       </div>
     </div>
   );
