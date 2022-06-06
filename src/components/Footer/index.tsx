@@ -85,13 +85,10 @@ const Footer = () => {
         <span className={styles.starkwareIconContainer}>
           Powered By
           <div
-            onClick={() =>
-              window.open('https://www.starkware.co', '_blank')
-            }
+            onClick={() => window.open('https://www.starkware.co', '_blank')}
             className={clsx(styles.starkwareIcon, styles.starkware)}
-          >
-          </div>
-          </span>
+          ></div>
+        </span>
       </div>
     </div>
   );
