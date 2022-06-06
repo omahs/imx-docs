@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/immutable/imx-docs/compare/v1.6.0...v1.6.1) (2022-06-06)
+
+
+### Bug Fixes
+
+* remove non-public repository ([3d9bc6b](https://github.com/immutable/imx-docs/commit/3d9bc6b1f2d54a439334015d33042518c8cec350))
+
 # [1.6.0](https://github.com/immutable/imx-docs/compare/v1.5.3...v1.6.0) (2022-06-03)
 
 
