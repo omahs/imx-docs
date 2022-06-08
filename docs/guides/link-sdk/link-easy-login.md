@@ -40,4 +40,4 @@ To prevent any issues, please make sure you're using always the the same e-mail 
 
 ## Configurations and setup
 
-Please refer to the [Link Setup](../link-setup.md) for more details on the different options to display the Magic Easy Login prompt and provider configuration.
+Please refer to the [Link Setup](./link-setup.md) for more details on the different options to display the Magic Easy Login prompt and provider configuration.
