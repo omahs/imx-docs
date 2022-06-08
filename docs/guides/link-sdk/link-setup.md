@@ -28,6 +28,9 @@ A user's web3 wallet (e.g. Metamask) is used to create, connect, and sign transa
 // Sample link.setup call using the default provider:
 const setupResponsePayload: SetupResultsCodec = await link.setup({})
 
+// Using none as option (list all available options including Magic):
+const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "none" })
+
 // Specifying a provider:
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "magic_link" })
 ```
@@ -70,12 +73,24 @@ result = {
 # UI based on different providers
 
 ### default/metamask
+```typescript
+// Sample link.setup call using the default provider:
+const setupResponsePayload: SetupResultsCodec = await link.setup({})
+```
 ![default/metamask](../../../static/img/link-setup/default-metamask.png 'default/metamask')
 
 ### none
+```typescript
+// Using none as option (list all available options including Magic):
+const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "none" })
+```
 ![none](../../../static/img/link-setup/none.png 'none')
 
 ### magic_link
+```typescript
+// Specifying Magic as provider:
+const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "magic_link" })
+```
 ![magic_link](../../../static/img/link-setup/magic_link.png 'magic_link')
 
 For more information about user wallet registration, see [User Registration](../user-registration.md) and [Account Management](../integrate-your-application/account-management.md).
