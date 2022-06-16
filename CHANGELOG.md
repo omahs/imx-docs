@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/immutable/imx-docs/compare/v1.7.0...v1.7.1) (2022-06-16)
+
+
+### Bug Fixes
+
+* point the API reference to the right OpenAPI endpoint ([63a449f](https://github.com/immutable/imx-docs/commit/63a449f70d466b1821b403289ea7514f6ea890a5))
+
 # [1.7.0](https://github.com/immutable/imx-docs/compare/v1.6.1...v1.7.0) (2022-06-06)
 
 
