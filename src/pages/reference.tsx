@@ -33,7 +33,7 @@ export default function APIPage() {
           return (
             <>
               <API
-                apiDescriptionUrl="https://api.ropsten.x.immutable.com/openapi"
+                apiDescriptionUrl="https://api.ropsten.x.immutable.com/openapi-docs"
                 router="hash"
                 basePath="/"
                 layout="sidebar"
