@@ -66,10 +66,20 @@ const Footer = () => {
         <div className={styles.center}>
           {theme.colorMode === 'dark' ? (
             <>
-              <div onClick={() => window.open('https://immutable.com/company', '_blank')} style={{ cursor: 'pointer' }}>
+              <div
+                onClick={() =>
+                  window.open('https://immutable.com/company', '_blank')
+                }
+                style={{ cursor: 'pointer' }}
+              >
                 <FooterODarkIcon className={styles.footerIcon} />
               </div>
-              <div onClick={() => window.open('https://docs.x.immutable.com', '_blank')} style={{ cursor: 'pointer' }}>
+              <div
+                onClick={() =>
+                  window.open('https://docs.x.immutable.com', '_blank')
+                }
+                style={{ cursor: 'pointer' }}
+              >
                 <FooterXDarkIcon className={styles.footerIcon} />
               </div>
               <div style={{ display: 'block' }}>
@@ -83,10 +93,20 @@ const Footer = () => {
             </>
           ) : (
             <>
-              <div onClick={() => window.open('https://immutable.com/company', '_blank')} style={{ cursor: 'pointer' }}>
+              <div
+                onClick={() =>
+                  window.open('https://immutable.com/company', '_blank')
+                }
+                style={{ cursor: 'pointer' }}
+              >
                 <FooterOLightIcon className={styles.footerIcon} />
               </div>
-              <div onClick={() => window.open('https://docs.x.immutable.com', '_blank')} style={{ cursor: 'pointer' }}>
+              <div
+                onClick={() =>
+                  window.open('https://docs.x.immutable.com', '_blank')
+                }
+                style={{ cursor: 'pointer' }}
+              >
                 <FooterXLightIcon className={styles.footerIcon} />
               </div>
               <div style={{ display: 'block' }}>
@@ -128,7 +148,7 @@ const Footer = () => {
           ></div>
         </span>
       </div>
-    </div >
+    </div>
   );
 };
 

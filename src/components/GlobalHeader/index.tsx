@@ -10,10 +10,20 @@ const GlobalHeader = () => {
     <header className={styles.headerSection}>
       <div className={styles.headerContainer}>
         <div className={styles.iconsContainer}>
-          <div onClick={() => window.open('https://immutable.com/company', '_blank')} style={{ cursor: 'pointer' }}>
+          <div
+            onClick={() =>
+              window.open('https://immutable.com/company', '_blank')
+            }
+            style={{ cursor: 'pointer' }}
+          >
             <OIcon />
           </div>
-          <div onClick={() => window.open('https://docs.x.immutable.com', '_blank')} style={{ cursor: 'pointer' }}>
+          <div
+            onClick={() =>
+              window.open('https://docs.x.immutable.com', '_blank')
+            }
+            style={{ cursor: 'pointer' }}
+          >
             <XIcon />
           </div>
           <div style={{ display: 'block' }}>
