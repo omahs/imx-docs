@@ -5,7 +5,8 @@ import GlobalHeader from '../components/GlobalHeader';
 export default function Root({ children }) {
   return (
     <>
-      <GlobalHeader />
+      {/* Not including GlobalHeader until icons are fixed */}
+      {/* <GlobalHeader /> */}
       {children}
     </>
   );

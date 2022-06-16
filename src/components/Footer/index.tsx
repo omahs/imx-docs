@@ -8,6 +8,7 @@ import FooterXDarkIcon from '@site/static/icons/FooterXDark';
 import FooterOLightIcon from '@site/static/icons/FooterOLight';
 import FooterSLightIcon from '@site/static/icons/FooterSLight';
 import FooterXLightIcon from '@site/static/icons/FooterXLight';
+import Studio from '@site/static/icons/Studio';
 
 const Footer = () => {
   const theme = useColorMode();
@@ -63,6 +64,43 @@ const Footer = () => {
       </div>
       <div className={styles.iconsContainer}>
         <div className={styles.center}>
+          {theme.colorMode === 'dark' ? (
+            <>
+              <div onClick={() => window.open('https://immutable.com/company', '_blank')} style={{ cursor: 'pointer' }}>
+                <FooterODarkIcon className={styles.footerIcon} />
+              </div>
+              <div onClick={() => window.open('https://docs.x.immutable.com', '_blank')} style={{ cursor: 'pointer' }}>
+                <FooterXDarkIcon className={styles.footerIcon} />
+              </div>
+              <div style={{ display: 'block' }}>
+                <button
+                  onClick={() =>
+                    window.open('https://immutable.com/games-studio', '_blank')
+                  }
+                  className={clsx(styles.socialIcons, styles.studioIcon)}
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              <div onClick={() => window.open('https://immutable.com/company', '_blank')} style={{ cursor: 'pointer' }}>
+                <FooterOLightIcon className={styles.footerIcon} />
+              </div>
+              <div onClick={() => window.open('https://docs.x.immutable.com', '_blank')} style={{ cursor: 'pointer' }}>
+                <FooterXLightIcon className={styles.footerIcon} />
+              </div>
+              <div style={{ display: 'block' }}>
+                <button
+                  onClick={() =>
+                    window.open('https://immutable.com/games-studio', '_blank')
+                  }
+                  className={clsx(styles.socialIcons, styles.studioIcon)}
+                />
+              </div>
+            </>
+          )}
+        </div>
+        <div className={styles.center}>
           <button
             onClick={() =>
               window.open('https://discord.gg/6GjgPkp464', '_blank')
@@ -90,7 +128,7 @@ const Footer = () => {
           ></div>
         </span>
       </div>
-    </div>
+    </div >
   );
 };
 

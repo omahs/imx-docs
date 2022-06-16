@@ -15,7 +15,8 @@
   text-align: left;
   margin: 0;
 }
-.footerText > a {
+
+.footerText>a {
   color: var(--ifm-color-home-text-primary);
   text-decoration: none;
 }
@@ -56,13 +57,16 @@
   transition: background-color 300ms ease-in-out;
   background-color: var(--ifm-color-home-elevation-01);
 }
+
 .socialIcons:hover,
 .socialIcons:active {
   background-color: var(--ifm-color-home-elevation-02);
 }
+
 [data-theme='dark'] .socialIcons {
   background-color: var(--ifm-color-home-elevation-03);
 }
+
 [data-theme='dark'] .socialIcons:hover,
 [data-theme='dark'] .socialIcons:active {
   background-color: var(--ifm-color-home-elevation-04);
@@ -70,7 +74,7 @@
 
 .starkwareIconContainer {
   display: flex;
-  align-items: center;  
+  align-items: center;
   margin: 5px;
 }
 
@@ -87,6 +91,7 @@
 .starkware {
   background-image: url(/static/img/logo--starkware-light.svg);
 }
+
 [data-theme='dark'] .starkware {
   background-image: url(/static/img/logo--starkware-dark.svg);
 }
@@ -94,37 +99,57 @@
 .discord {
   background-image: url(/static/img/discordLight.svg);
 }
+
 [data-theme='dark'] .discord {
   background-image: url(/static/img/discordDark.svg);
 }
+
 .twitter {
   background-image: url(/static/img/twitterLight.svg);
 }
+
 [data-theme='dark'] .twitter {
   background-image: url(/static/img/twitterDark.svg);
 }
+
 .telegram {
   background-image: url(/static/img/telegramLight.svg);
 }
+
 [data-theme='dark'] .telegram {
   background-image: url(/static/img/telegramDark.svg);
 }
+
 .reddit {
   background-image: url(/static/img/redditLight.svg);
 }
+
 [data-theme='dark'] .reddit {
   background-image: url(/static/img/redditDark.svg);
 }
 
+.studioIcon {
+  background-image: url(/static/icons/StudioDark.png);
+  background-size: contain
+}
+
+[data-theme='dark'] .studioIcon {
+  background-image: url(/static/icons/StudioLight.png);
+  background-size: contain
+}
+
 @media (min-width: 640px) {
+
   .footerIcon,
   .socialIcons {
     width: 48px;
     height: 48px;
   }
+
   .displayFromSmall {
     display: block;
   }
+
   .center {
     gap: 1rem;
   }
