@@ -15,6 +15,7 @@ export default function APIPage() {
         <link
           rel="stylesheet"
           href="https://unpkg.com/@stoplight/elements@7.3.7/styles.min.css"
+          className="absolute right-20 top-24 inline-flex cursor-pointer items-center justify-center rounded-md bg-orange-600 px-4 py-1 text-sm text-white hover:text-white hover:no-underline"
         />
       </Head>
       <BrowserOnly

@@ -204,9 +204,7 @@ const Homepage = () => {
     <div className="homepage">
       <Layout>
         <div className={styles.root}>
-          <div />
-          {/* Remove image until new branding is released */}
-          {/* <div className={styles.heroImage} /> */}
+          <div className={styles.heroImage} />
           <Title
             title={
               <div className={clsx('grad', styles.title)}>
