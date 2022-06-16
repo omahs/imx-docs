@@ -23,9 +23,7 @@
 
 .imageBackground {
   border: none;
-  /* Removing gradient background until new branding is released */
-  /* background-image: url(/static/img/hero.jpg); */
-  background: #e0e0e0;
+  background-image: url(/static/img/hero.jpg);
 }
 
 .imageBackground:first-child {

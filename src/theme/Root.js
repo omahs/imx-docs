@@ -3,5 +3,10 @@ import GlobalHeader from '../components/GlobalHeader';
 
 // Default implementation, that you can customize
 export default function Root({ children }) {
-  return <>{children}</>;
+  return (
+    <>
+      <GlobalHeader />
+      {children}
+    </>
+  );
 }
