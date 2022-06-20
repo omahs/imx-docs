@@ -3,7 +3,7 @@ title: "NFT Minting Tutorial"
 slug: "/zero-to-hero-nft-minting"
 sidebar_position: 1
 ---
-*Estimated completion time: 15 mins*
+*Estimated completion time: 20 mins*
 
 
 This tutorial provides a step by step guide on how to mint a NFT on Immutable X. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. If you'd prefer to dive into the code, check out our [SDK](https://github.com/immutable/imx-core-sdk/). 
@@ -13,7 +13,7 @@ By the end of this tutorial you will have:
 - Deployed a smart contract
 - Minted and listed an NFT 
 
-If you get stuck at any point, reach out on the dev-faq and dev-discussion channels in our [Discord](https://discord.gg/TkVumkJ9D6).
+If you get stuck at any point, reach out on the dev-faq and dev-discussion channels in our [Discord](https://discord.gg/TkVumkJ9D6). Click [here](https://docs.google.com/forms/d/e/1FAIpQLSdTLIXldLRZQB4i2YTHtQwxmrDbTkHphuxtLoVe7j-YVU7VYw/viewform) to provide feedback on the tutorial or let us know what topics you'd like to see in our documentation.
 
 
 ## Step 1: Prerequisites 
@@ -571,10 +571,58 @@ Our assets will now be accessible in our Ropsten Wallet. However, for other user
    
 ## Conclusion 
 
-Congratulations on minting and listing an NFT on the Ropsten test network! 
+Congratulations on minting and listing an NFT on the Ropsten test network!
 
-When you are ready to launch your project live on mainnet, you can use this tutorial, with a few small changes: 
+:::info Feedback
+ This tutorial covered the simplest implementation of minting, however we are continuing to build out the workflow. Feel free to leave any feedback [here](https://docs.google.com/forms/d/e/1FAIpQLSdTLIXldLRZQB4i2YTHtQwxmrDbTkHphuxtLoVe7j-YVU7VYw/viewform).
+:::
 
-* Changing the Ropsten variable to Ethereum as necessary
-* Change your MetaMask to the Ethereum network 
-* Ensure .env file uses Ethereum mainnet instead of Ropsten
+
+If you'd like to reuse these steps for a mainnet launch, note the following changes:
+
+<table>
+  <thead>
+  <tr>
+    <th>
+      Step
+    </th>
+    <th>
+      Change
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+      <tr>
+    <td>
+      Step 2
+    </td>
+    <td>
+     Metamask Network should use Ethereum Mainnet 
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Step 9.1
+    </td>
+    <td>
+    <code>yarn hardhat run deploy/asset.ts --network mainnet</code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Step 10
+    </td>
+    <td>
+      Set <code>ETH_NETWORK</code> to mainnet in the .env file
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Step 10
+    </td>
+    <td>
+     Remove ropsten from the URL in <code>PUBLIC_API_URL</code> in the .env file
+    </td>
+  </tr>
+  </tbody>
+</table>
