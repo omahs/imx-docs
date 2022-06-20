@@ -2,7 +2,7 @@
   font-family: 'Roboto';
   src: url('/static/fonts/roboto-regular.woff2') format('woff2'),
     url('/static/fonts/roboto-regular.woff') format('woff');
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -42,24 +42,14 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-/* [data-theme='dark'] {
+[data-theme='dark'] {
   --ifm-color-primary: #24d1e9;
   --ifm-color-primary-dark: #20b8cc;
   --ifm-color-primary-darker: #1b9cad;
   --ifm-color-primary-darkest: #208896;
   --ifm-color-primary-light: #049bb1;
   --ifm-color-primary-lighter: #219caf;
-  --ifm-color-primary-lightest: #4099a7; */
-
-[data-theme='dark'] {
-  --ifm-color-primary: red;
-  --ifm-color-primary-dark: red;
-  --ifm-color-primary-darker: red;
-  --ifm-color-primary-darkest: red;
-  --ifm-color-primary-light: red;
-  --ifm-color-primary-lighter: #219caf;
   --ifm-color-primary-lightest: #4099a7;
-
 
   /* Homepage Colors */
   --ifm-color-home-background: #2b2b2b;
