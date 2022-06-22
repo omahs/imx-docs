@@ -1,16 +1,17 @@
 ---
 title: "NFT Minting Tutorial"
-slug: "/zero-to-hero-nft-minting"
+slug: "/NFT-minting-tutorial"
 sidebar_position: 1
 ---
 *Estimated completion time: 20 mins*
 
 
-This tutorial provides a step by step guide on how to mint a NFT on Immutable X. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. If you'd prefer to dive into the code, check out our [SDK](https://github.com/immutable/imx-core-sdk/). 
+This tutorial provides a step by step guide on how to mint a NFT on Immutable X. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. 
 
 By the end of this tutorial you will have:
+
 - Prepared an NFT collection
-- Deployed a smart contract
+- Deployed a smart contract for your NFT collection 
 - Minted and listed an NFT 
 
 If you get stuck at any point, reach out on the dev-faq and dev-discussion channels in our [Discord](https://discord.gg/TkVumkJ9D6). Click [here](https://docs.google.com/forms/d/e/1FAIpQLSdTLIXldLRZQB4i2YTHtQwxmrDbTkHphuxtLoVe7j-YVU7VYw/viewform) to provide feedback on the tutorial or let us know what topics you'd like to see in our documentation.
@@ -20,14 +21,14 @@ If you get stuck at any point, reach out on the dev-faq and dev-discussion chann
 There are a few tools required for this tutorial: 
 
 
-** [Homebrew](https://brew.sh/) **
+** [Homebrew](.https://brewsh/) **
 
 :::info 
 Homebrew is only needed for Mac OS.
 :::
 
 
-Homebrew installs the packages needed for this tutorial. Copy the command on the Homebrew website, then run in the terminal. 
+Homebrew installs the packages needed for this tutorial. Copy the command on the [Homebrew website](https://brew.sh/), then run in the terminal. 
 
 **  [NodeJS](https://nodejs.org/)**
 
@@ -85,7 +86,7 @@ Changing the network enables us to deploy on a testnet where we can experiment u
 ## Step 3: Obtain rEth
 To deploy our smart contract to the Ropsten test network, we’ll need some test Eth. To get test Eth you can go to the [Ropsten faucet](https://faucet.metamask.io/) and enter your Ropsten account address, then click “Send Ropsten Eth.” It may take a few minutes for the rEth to arrive. 
 
-If this faucet doesn't work, you can try alternate faucets here:
+If this faucet doesn't work, you can try these alternative faucets:
 
 - [Faucet 1](https://faucet.dimensions.network/)
 - [Faucet 2](https://faucet.egorfine.com/)
@@ -195,7 +196,7 @@ An Etherscan API Key is necessary to verify that you're the owner of the smart c
 
 
 
-## Step 7: Rename .env File and Update Variables
+## Step 7: Create NFT contract
 
 Next we will need to update the variables for our smart contract. 
 
@@ -294,9 +295,9 @@ Paste your contract address into [Ropsten Etherscan](https://ropsten.etherscan.i
 :::
 
 
-## Step 10: Onboard Smart Contract
+## Step 10: Add your NFT Collection to Immutable X
 
-The next steps cover how to [onboard](https://docs.x.immutable.com/docs/onboarding) a smart contract with Immutable X to ensure your collection displays correctly:
+After deploying your contract to Layer 1, you will need to [register](https://docs.x.immutable.com/docs/onboarding) it with Immutable X by creating a project and a collection. 
 
 1. Download the [imx-examples repo](https://github.com/immutable/imx-examples)
 2. Open the folder in Visual Studio Code
@@ -351,9 +352,9 @@ The next steps cover how to [onboard](https://docs.x.immutable.com/docs/onboardi
 
 
 
-## Step 11: Register User
+## Step 11: Register as a User
 
-Registering as a user creates an Layer 2 wallet and enables us to make transactions on Layer 2. 
+Before you can create a project, you will need to register as a user. Registering as a user creates a Layer 2 wallet and enables us to make transactions on Layer 2. 
 
 1. Navigate to the [Ropsten Test Marketplace](https://market.ropsten.immutable.com/)
 2. Press `Connect Wallet`
@@ -361,7 +362,7 @@ Registering as a user creates an Layer 2 wallet and enables us to make transacti
 
 ## Step 12: Create Project
 
- A [project ](https://docs.x.immutable.com/docs/guides/onboarding/project-registration)is an administrative level entity associatied with an owner wallet address. This address is needed to make changes like creating or updating collections. Begin by navigating to **src/onboarding/2-create-project.ts**.
+ A [project](https://docs.x.immutable.com/docs/guides/onboarding/project-registration) is an admin level entity associatied with an owner wallet address. This address is needed to make changes like creating or updating collections. Begin by navigating to **src/onboarding/2-create-project.ts**.
 
 ![Onboarding Project](../../static/img/zero-to-hero/Step12_1.png 'Onboarding Project')
 
@@ -374,8 +375,8 @@ Registering as a user creates an Layer 2 wallet and enables us to make transacti
 ![Step12](../../static/img/zero-to-hero/Step12_2.png 'Step12')
 
 
-## Step 13: Create Collection 
-A [collection](https://docs.x.immutable.com/docs/collection-registration) refers to a deployed smart contract and each collection belongs to a project. Collections are displayed on the marketplace to end users, eg Gods Unchained. 
+## Step 13: Register Collection
+  A [collection](https://docs.x.immutable.com/docs/collection-registration) is a group of NFTs that share a smart contract and each collection belongs to a project. Collections are displayed on the marketplace to end users, eg Gods Unchained. 
 
  Navigate to the ***src/onboarding/3-create-collections.ts*** file and populate the following values:
 
@@ -494,7 +495,7 @@ To add metadata schema to the collection, run the command `npm run onboarding:ad
 
 ## Step 15: Mint NFT
 
-Now that we have onboarded our contract, the final step is to add our assets to the blockchain by minting them. 
+Now that we have added our contract to Immutable X, the final step is to add our assets to the blockchain by minting them. 
 
 1. Navigate to the .env file 
 2. Fill in the follow under the 'Bulk Minting' section 
