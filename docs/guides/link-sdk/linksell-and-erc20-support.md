@@ -76,3 +76,19 @@ link.sell({
   currencyAddress: '0x4c04c39fb6d2b356ae8b06c47843576e32a1963e',
 })
 ```
+
+## Error Messages
+
+### 6000 - Something went wrong.
+
+There are no more things that can be done by the user on Screen.
+
+Check with provider.
+
+### 6001 - Unable to list asset
+
+### 6002 - Asset is unavailable.
+
+### 6003 - Unknown currency.
+
+### 6004 - Price should be at least ${minPrice}
