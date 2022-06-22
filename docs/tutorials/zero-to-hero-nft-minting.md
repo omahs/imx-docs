@@ -1,6 +1,6 @@
 ---
 title: "NFT Minting Tutorial"
-slug: "/NFT-minting-tutorial"
+slug: "/zero-to-hero-nft-minting"
 sidebar_position: 1
 ---
 *Estimated completion time: 20 mins*
