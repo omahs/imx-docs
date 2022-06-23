@@ -6,7 +6,7 @@ sidebar_position: 1
 *Estimated completion time: 20 mins*
 
 
-This tutorial provides a step by step guide on how to mint a NFT on Immutable X. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. 
+This tutorial provides a step by step guide on how to mint an NFT on Immutable X. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. 
 
 By the end of this tutorial you will have:
 
@@ -86,14 +86,14 @@ Changing the network enables us to deploy on a testnet where we can experiment u
 ## Step 3: Obtain rEth
 To deploy our smart contract to the Ropsten test network, we’ll need some test Eth. To get test Eth you can go to the [Ropsten faucet](https://faucet.metamask.io/) and enter your Ropsten account address, then click “Send Ropsten Eth.” It may take a few minutes for the rEth to arrive. 
 
-If this faucet doesn't work, you can try these alternative faucets:
+If this faucet doesn't work, try these alternative faucets:
 
 - [Faucet 1](https://faucet.dimensions.network/)
 - [Faucet 2](https://faucet.egorfine.com/)
 - [Faucet 3 (Request L1Eth)](https://imxfaucet.xyz/)
 
 ## Step 4: Setup Pinata
-Pinata is a service that allows users to host files on the [InterPlanetary File System](https://docs.ipfs.io/concepts/what-is-ipfs/#decentralization) (IPFS) network. We will Pinata to store our NFT metadata because it ensures the authenticity of the file will be verifiable and that the file will always be accessible. Follow the steps below to prepare your collection: 
+Pinata is a service that allows users to host files on the [InterPlanetary File System](https://docs.ipfs.io/concepts/what-is-ipfs/#decentralization) (IPFS) network. We use Pinata to store our NFT metadata as it ensures the authenticity of the file will be verifiable and the file will always be accessible. Follow the steps below to prepare your collection: 
 
 :::info 
 You can use the free version for this tutorial, however consider creating a paid account for your real collection to ensure your images can be loaded. Be aware that your images will be publicly hosted on IPFS. 
