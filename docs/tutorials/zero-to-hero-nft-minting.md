@@ -117,7 +117,7 @@ Your URLs should have the format `https://gateway.pinata.cloud/ipfs/QmWfjs6CVu4E
 
 ## Step 5: Create Metadata
 
-[NFT Metadata](https://docs.x.immutable.com/docs/asset-metadata) contains information about the the characteristics and properties of an NFT. 
+[NFT Metadata](https://docs.x.immutable.com/docs/asset-metadata) contains information about the characteristics and properties of an NFT. 
 
 1. Open Visual Studio Code
 2. Create New Folder (Open Folder --> New Folder)
