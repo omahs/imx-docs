@@ -62,4 +62,4 @@ If the multi-buy flow is found to contain 0 valid orders after minimal client-si
 
 | Code | Error Message | Suggested Action |
 |---|---|---|
-| 5000<br />5001<br />5002 | Something went wrong. | On this screen, there are no more actions possible for the user.<br />Check with provider. |
+| 5000<br />5001<br />5002 | Something went wrong. | There are no more actions possible for the user.<br />Check with provider. |
