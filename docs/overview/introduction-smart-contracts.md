@@ -207,6 +207,6 @@ Your code should therefore try to be as efficient as possible with fewer operati
 ### Usage example
 Let’s look at [Gods Unchained](https://godsunchained.com/) (GU) as an example: 
 
-GU cards pass only the proto (the card ID) and the quality in the blueprint to save on-chain, and these two properties alone can uniquely determine the value of the card. All other properties for the cards — such as attack, defense, image_url, etc. — are stored in the off-chain metadata API. This makes it cheaper for a user (player) to withdraw a card from Immutable X as they are writing less data to the blockchain. 
+GU cards pass only the proto (the card ID) and the quality in the blueprint to save on-chain, and these two properties alone can uniquely determine the value of the card. All other properties for the cards — such as attack, defense, image_url, etc. — are stored in the off-chain metadata (which is accessed via a [metadata API endpoint](https://docs.x.immutable.com/docs/minting-on-immutable-x#metadata-api)). This makes it cheaper for a user (player) to withdraw a card from Immutable X as they are writing less data to the blockchain. 
 
-The is also useful for the Gods Unchained engineering team to be able to make changes to metadata, for example, increasing the attack of a particular card as part of a balance patch.
+Having the metadata stored at a separately hosted (off-chain) endpoint is useful for the Gods Unchained engineering team to be able to make changes to it, for example, increasing the attack of a particular card as part of a balance patch.
