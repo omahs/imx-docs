@@ -77,18 +77,12 @@ link.sell({
 })
 ```
 
-## Error Messages
+## Errors
 
-### 6000 - Something went wrong.
-
-There are no more things that can be done by the user on Screen.
-
-Check with provider.
-
-### 6001 - Unable to list asset
-
-### 6002 - Asset is unavailable.
-
-### 6003 - Unknown currency.
-
-### 6004 - Price should be at least ${minPrice}
+| Code | Error Message | Suggested Action |
+|---|---|---|
+| 6000 | Something went wrong. | There are no more actions possible for the user.<br />Check with provider |
+| 6001 | Unable to list asset | There are no more actions possible for the user.<br />Check with provider |
+| 6002 | Asset is unavailable. | There are no more actions possible for the user.<br />Check with provider |
+| 6003 | Unknown currency. | There are no more actions possible for the user.<br />Check with provider |
+| 6004 | Price should be at least ${minPrice} | There are no more actions possible for the user.<br />Check with provider |

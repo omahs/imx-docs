@@ -93,42 +93,13 @@ const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPrefe
 ```
 ![magic_link](../../../static/img/link-setup/magic_link.png 'magic_link')
 
-## Error Messages
+## Errors
 
-### 1000 - Something went wrong
-
-Failed to instantiate SDK IMX Client when connecting wallet.
-
-It is a critical issue. Nothing can be done here by an user but to contact the support team. Although this one likely would happen during the partner integration process itself.
-
-Contact support team or Check Sdk settings (if partner integrating).
-
-### 1001 - Something went wrong retrieving your tokens list ${apiError}
-
-Unable to retrieve tokens list.
-
-This one can be related to a connection failure communicating with the Api.
-- Just retry the operation to redo the connection.
-- If not related to connection issues, contact the support team.
-
-Retry the operation/Refresh the page or Contact support team
-
-### 1002 - Something went wrong when retrieving your wallet address. Check with your wallet provider
-
-Failed to retrieve the wallet address.
-
-- There are no more things that can be done by the user on Screen. It will be needed to fix the provider issue and then redo the operation.
-
-Check with provider.
-
-For more information about user wallet registration, see [User Registration](../user-registration.md) and [Account Management](../integrate-your-application/account-management.md).
-
-### 8000 - Something went wrong retrieving the transactions: ${details}
-
-Try again, if the error persists, contact our support team. 
-
-### "9000 - Something went wrong retrieving the order details." / "9001 - Something went wrong retrieving the token details."
-
-User can try again, if the error persists, can contact the support team. 
-
-If the error persists, can contact the support team.
+| Code | Error Message | Suggested Action |
+|---|---|---|
+| 1000 | Something went wrong | Contact support team or check SDK settings (if partner integrating). |
+| 1001 | Something went wrong retrieving your tokens list: ${apiError} | Retry the operation/Refresh the page or Contact support team. |
+| 1002 | Something went wrong when retrieving your wallet address. Check with your wallet provider. | Check with provider. |
+| 8000 | Something went wrong retrieving the transactions: ${details} | Please, try again.<br />If the error persists, contact the support team. |
+| 9000 | Something went wrong retrieving the order details. | Please, try again.<br />If the error persists, contact the support team. |
+| 9001 | Something went wrong retrieving the token details. | Please, try again.<br />If the error persists, contact the support team. |
