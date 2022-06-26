@@ -23,7 +23,7 @@ This package allows us to update the webpack config file to fix the polyfill nod
 
 Install with **npm**:
 ```shell
-npm install --save-dev react-app-rewired"
+npm install --save-dev react-app-rewired
 ```
 
 Install with **yarn**: 
