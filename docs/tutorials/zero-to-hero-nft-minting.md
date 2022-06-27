@@ -1,53 +1,42 @@
 ---
-title: "Zero to Hero NFT Minting Tutorial"
+title: "NFT Minting Tutorial"
 slug: "/zero-to-hero-nft-minting"
 sidebar_position: 1
 ---
-Immutable X is the easiest way to mint NFTs 100% gas-free on Layer 2. Our APIs abstract much of the complexity you'd have to navigate on other blockchains. Follow this tutorial and you'll have a solid foundation to ship an NFT collection on Immutable X. 
+*Estimated completion time: 20 mins*
 
-To complete this tutorial, you will not need any coding experience - we will give you everything you need at each step. This is the most straightforward implementation of the minting primitive; check out the rest of the documentation for information on what else you can do with Immutable X. 
 
-There are slight differences between following this tutorial on a Mac and a PC. These will be called out throughout the tutorial. 
+This tutorial provides a step by step guide on how to mint an NFT on Immutable X. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. 
 
-Finally, if you get stuck along the way, visit us on [Discord](https://discord.gg/TkVumkJ9D6) and the Immutable team and community will be happy to help you along the way. 
+By the end of this tutorial you will have:
 
-## Concepts covered in this tutorial
+- Prepared an NFT collection
+- Deployed a smart contract for your NFT collection 
+- Minted and listed an NFT 
 
-* [Tools and Packages](#tools-and-packages)
-* [Prepare your collection](#collection-preparation)
-* [Deploy your smart contract](#deploy-your-smart-contract)
-* [Onboard your smart contract](#onboard-your-smart-contract)
-* [Register an account with Immutable X](#register-a-user-account-with-imx)
-* [Create your project](#create-your-project)
-* [Create your collection](#create-your-collection)
-* [Create metadata schema](#create-metadata-schema)
-* [Mint your NFTs](#mint-your-nfts) 
-* [List your NFT](#list-your-nft)
+If you get stuck at any point, reach out on the dev-faq and dev-discussion channels in our [Discord](https://discord.gg/TkVumkJ9D6). Click [here](https://docs.google.com/forms/d/e/1FAIpQLSdTLIXldLRZQB4i2YTHtQwxmrDbTkHphuxtLoVe7j-YVU7VYw/viewform) to provide feedback on the tutorial or let us know what topics you'd like to see in our documentation.
 
-:::info Completing this tutorial
-In order to be able to launch your collection, you need to sign up for a few services and download some packages and tools. The services, packages, and tools in this guide are just suggestions, and we are in no way endorsing or partnering with these services
+
+## Step 1: Prerequisites 
+There are a few tools required for this tutorial: 
+
+
+** [Homebrew](.https://brewsh/) **
+
+:::info 
+Homebrew is only needed for Mac OS.
 :::
 
-## Tools and Packages
 
-To complete this tutorial, the first step is to download some tools and packages. In this section, we will step through those pre-requisites.
+Homebrew installs the packages needed for this tutorial. Copy the command on the [Homebrew website](https://brew.sh/), then run in the terminal. 
 
-### Download [Homebrew](https://brew.sh/) 
-::: info Only for Mac OS
-This step is only required for Mac users
-:::
+**  [NodeJS](https://nodejs.org/)**
 
-Homebrew installs the packages you need for this tutorial that Apple (or your Linux system) didn’t. Copy the command on the [Homebrew website](https://brew.sh/), then run in the terminal. 
-
-### Download [NodeJS](https://nodejs.org/)
-
-NodeJS allows you to use JavaScript on the backend to build and run applications, for example, to mint NFTs on Immutable X. To download, NodeJS head to the [NodeJS website](https://nodejs.org/). 
+NodeJS allows us to use JavaScript to build and run applications. 
 
 :::danger Nodejs Version
-Ensure that you get the latest LTS version or you may experience issues following the turorial"
+Ensure that you get the latest LTS version or you may experience issues following the turorial.
 :::
-
-![Node js version](../../static/img/zero-to-hero/nodejs-version.png 'Node js version')
 
 For PC users, check that NodeJS is working by opening powershell or command line and executing the command:
 
@@ -60,68 +49,88 @@ For Mac users, open up the terminal and run
 brew install node@16
 ``` 
 
-### Install Yarn
+** Yarn**
 
-The next step is to install yarn, the open-source package manager.
 
-For PC users, to install run the following command in powershell.
+Yarn is an open source package manager. Follow the steps below to install: 
+
+For **PC** users, run the following command in powershell.
 ```shell
 npm install yarn -g
 ```
 
-For Mac users, run the following command in the terminal.
+For **Mac** users, run the following command in the terminal.
 ```shell
 brew install yarn
 ```
 
-### Download [Visual Studio Code](https://code.visualstudio.com/)
+**[Visual Studio Code](https://code.visualstudio.com/)
+**
 
-The next step is to download Visual Studio Code, which is the code editor that we will be using for this tutorial. Head to their [website](https://code.visualstudio.com/), download the application and unzip to install. 
 
-### MetaMask
+Visual Studio Code is the code editor we will be using for this tutorial.
 
-We need an Ethereum account to send and receive transactions. For this tutorial, we're using the Immutable X compatible wallet MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](https://ethereum.org/en/developers/docs/transactions/) from the Ethereum foundation.
 
-You can download and create a Metamask account for free [here](https://metamask.io/download/). You will need a browser that allows extensions, such as Chrome or Firefox. When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right (so that your collection is deployed on the testnet).
+## Step 2: Setup MetaMask 
+To trade cryptocurrencies and NFTs, we need a wallet. For this tutorial, we will use Metamask. 
 
-###  Add rEth from the faucet
+1. Open [metamask.io](https://metamask.io/download/) to install the browser extension.
+2. Follow the steps in the plugin to create a new wallet, then record and store your seed phrase in a safe location.
+3. Ensure you display test networks
+4. Change the network selection from **Ethereum Mainnet** to **Ropsten Test Network**.
+5. Note down your [private key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key) and [public key ](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-)
 
-In order to deploy our smart contract to the test network, we’ll need some test Eth. To get test Eth you can go to the [Ropsten faucet](https://faucet.dimensions.network/) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your Metamask account soon after!
+Changing the network enables us to deploy on a testnet where we can experiment using test Eth. To learn more about transactions on Ethereum work, check out [this page](https://ethereum.org/en/developers/docs/transactions/) from the Ethereum foundation.
 
-If this faucet doesn't work, you can try alternate faucets here: 
-* [Ropsten testnet faucet](https://faucet.egorfine.com/)
-* [Test Ether Faucet](https://faucet.metamask.io/)
-* [IMX Faucet](https://imxfaucet.xyz/)
 
-## Collection Preparation
+## Step 3: Obtain rEth
+To deploy our smart contract to the Ropsten test network, we’ll need some test Eth. To get test Eth you can go to the [Ropsten faucet](https://faucet.metamask.io/) and enter your Ropsten account address, then click “Send Ropsten Eth.” It may take a few minutes for the rEth to arrive. 
 
-In the spirit of decentralization, we’ll be using IPFS to host our images and metadata. The InterPlanetary File System (IPFS) is a protocol and peer-to-peer network for storing and sharing data in a distributed file system (from Wikipedia). IPFS uses content-addressing to uniquely identify each file in a global namespace connecting all computing devices. So each file uploaded to IPFS has a unique identifier of the format `QmTVVUvBhYdiGJ8Wh3HqkhJfZms7ficvWBuBH6SjfKEtQ8`.
+If this faucet doesn't work, try these alternative faucets:
 
-How do you access a file with that unique identifier? There are a few public “gateways” that allow access to files with their identifier. Without using an IPFS gateway, the only way to access content on the IPFS network is by running your own IPFS node. 
+- [Faucet 1](https://faucet.dimensions.network/)
+- [Faucet 2](https://faucet.egorfine.com/)
+- [Faucet 3 (Request L1Eth)](https://imxfaucet.xyz/)
 
-Pinata is an IPFS gateway and pinning service. It simplifies the process of uploading and managing files on IPFS. Pinning a file in IPFS allows you to retain the file for posterity. Services like Pinata guarantee that your file is pinned for a fee. You can learn more about pinning [here](https://docs.ipfs.io/concepts/persistence/#persistence-versus-permanence).
+## Step 4: Setup Pinata
+Pinata is a service that allows users to host files on the [InterPlanetary File System](https://docs.ipfs.io/concepts/what-is-ipfs/#decentralization) (IPFS) network. We use Pinata to store our NFT metadata as it ensures the authenticity of the file will be verifiable and the file will always be accessible. Follow the steps below to prepare your collection: 
 
-### Sign up to [Pinata](https://www.pinata.cloud/)
+:::info 
+You can use the free version for this tutorial, however consider creating a paid account for your real collection to ensure your images can be loaded. Be aware that your images will be publicly hosted on IPFS. 
+:::
 
-Sign up to Pinata by heading to the [website](https://www.pinata.cloud/). For this tutorial, you can just get the free version, but for your real collection, we highly suggest that you create a paid account to ensure your images can be loaded. 
 
-Choose 3 images to upload as your NFT images. You can use images from [This Person Does Not Exist](https://this-person-does-not-exist.com/en) (refresh to get another image), or alternatively provide your own images, just be aware that they will be publically hosted on IPFS. 
+1. Sign up to [Pinata](https://www.pinata.cloud/)
+2. Prepare 3 images for your NFTs 
+3. Upload an image by pressing Upload and selecting the file
+   
 
-To upload, press "+ Upload" and select file, then upload the image you have chosen. Do this for each of your 3 images. 
+![Pinata1](../../static/img/zero-to-hero/Pinata1.png 'Pinata1')
 
-![Pinata Upload File](../../static/img/zero-to-hero/pinata-upload-file.png 'Pinata Upload File')
+4. Upload the remaining 2 images
+5. Note down the URL for each file
 
-Once done, click on the images you just uploaded and note down the URL for each file
 
-![Note the URL](../../static/img/zero-to-hero/pinata-upload-file.png 'Note the URL of the uploaded file')
+![Pinata2](../../static/img/zero-to-hero/Pinata2.png 'Pinata2')
 
-Your URLs should have the format `https://gateway.pinata.cloud/ipfs/QmPLrvyVbx6mYzzH7K8MLj9ADMoNhid2dAzSuzPQWXLV8G`
+Your URLs should have the format `https://gateway.pinata.cloud/ipfs/QmWfjs6CVu4ENgXGNfdPhgaSdzEhCsCfB5XEFUosPFGsNV`
 
-### Create Metadata
+## Step 5: Create Metadata
 
-Each NFT needs metadata, which you will create now. In VS Code, create a new folder (Open folder > New folder) then create 3 files within the folder, named 1, 2 and 3. 
+[NFT Metadata](https://docs.x.immutable.com/docs/asset-metadata) contains information about the characteristics and properties of an NFT. 
 
-Populate each file with the metadata for the corresponding NFT. You can use the following metadata for your test collection, just make sure that you replace each `image_URL` with the URLs that you created earlier to host your NFT images.
+1. Open Visual Studio Code
+2. Create New Folder (Open Folder --> New Folder)
+3. Press the page icon 3x to create 3 files
+4. Name the files **1,2 & 3**. These are our Token IDs. 
+
+![FileCreation](../../static/img/zero-to-hero/step5_filecreation.png 'FileCreation')
+   
+:::warning
+Ensure the files are named **1, 2 & 3** or you may run into errors later.
+:::
+
+Populate each file with the metadata for the corresponding NFT. You can use the following metadata for your test collection, however make sure to replace each `image_URL` with the URLs that you created earlier to host your NFT images.
 
 ```json "Metadata File 1"
 {
@@ -147,7 +156,7 @@ Populate each file with the metadata for the corresponding NFT. You can use the 
 ```json "Metadata File 3"
 {
   "name": "3rd NFT",
-  "description": "This is your 3rdnft",
+  "description": "This is your 3rd nft",
   "image_url":"<replace this with your own IPFS picture  link>",
   "attack": 323,
   "collectable": true,
@@ -155,132 +164,278 @@ Populate each file with the metadata for the corresponding NFT. You can use the 
 }
 ```
 
-Once you have created your files, upload the folder into Pinata. 
+Ensure you press **save** before uploading the folder into Pinata. Double check this by closing the file and re opening - make sure that the values have saved. 
 
-![Upload Folder](../../static/img/zero-to-hero/upload-folder.png 'Upload Folder')
+![Upload Folder](../../static/img/zero-to-hero/pinata3%20folder.png 'Upload Folder')
 
-Once completed, the folder will look like this
+Click on the folder name to obtain your ** metadata API URL**. This endpoint is used by the metadata crawler to add metadata to your NFTs when they are minted. Note this down. 
 
-![Folder Appearance](../../static/img/zero-to-hero/folder-appearance.png 'Folder Appearance')
 
-Click on the folder and note down the resulting URL. This is your metadata API URL, which is the endpoint that the metadata crawler looks to add metadata to your NFTs when they are minted. 
-:::warning
- Be sure to remove `?preview=1` if it appears at the end of your URL
+![Folder Appearance](../../static/img/zero-to-hero/Step5_Metadata.png 'Folder Appearance')
+
+The resulting URL should have the format `https://gateway.pinata.cloud/ipfs/QmWfKt2pXLnQ2AB5jfS2KYB9K2hxFtgcMNxyndkSGT3yuj`. 
+
+:::info Check your work
+Click on your metadata API URL and ensure that there are 3 files named 1,2 & 3. Click into each file and confirm the data is correct. If any of them are empty, you will need to reupload your folder.
 :::
 
-The resulting URL should have the format `https://gateway.pinata.cloud/ipfs/QmTSQLBNg94WuP56as1HwYjHtZZ7F6ryJD4q2q1EZ8TP6q`. The crawler adds `/{token-id}` to the end of the metadata API URL. You can test it by adding `/1` to the end of the URL and pasting it into your browser. It should return JSON. 
 
-### Create an Etherscan API Key
 
-Next, sign up to Etherscan and get an API key to verify your smart contract’s source code.
+## Step 6: Create Etherscan API
 
-1. Head to [Etherscan](https://etherscan.io/), the Ethereum block explorer
+An Etherscan API Key is necessary to verify that you're the owner of the smart contract that you're trying to publish. Follow the steps below: 
+
+1. Navigate to [Etherscan](https://etherscan.io/)
 2. Sign in (or create a new account) 
 3. Navigate to `API-KEYS` and add a new key
-4. Note down the API key that is generated
+4. Note down the generated API key. 
 
 
-![Etherscan API Key](../../static/img/zero-to-hero/etherscan-api-key.png 'Etherscan API Key')
+![Etherscan API Key](../../static/img/zero-to-hero/Etherscan1%20no%20arrow.png 'Etherscan API Key')
+![Etherscan API Key2](../../static/img/zero-to-hero/Etherscan2.png 'Etherscan API Key')
 
-![Etherscan Add API Key](../../static/img/zero-to-hero/etherscan-add-api-key.png 'Etherscan Add API Key')
 
-![Etherscan Note API Key](../../static/img/zero-to-hero/etherscan-note-api-key.png 'Etherscan Note API Key')
 
-## Deploy your smart contract
+## Step 7: Create NFT contract
 
-Now the fun begins! It's time to deploy your smart contract. 
+Next we will need to update the variables for our smart contract. 
 
-To start, clone or download the [imx-contracts](https://github.com/immutable/imx-contracts) code from github.
+1. Clone or download the [imx-contracts](https://github.com/immutable/imx-contracts) code from github.
+2. Unzip the file and open it in Visual Studio Code (File--> Open Folder)
+3. Rename the `.env.example` to `.env` 
 
-![Download Zip](../../static/img/zero-to-hero/etherscan-note-api-key.png 'Download Zip')
+![Env file](../../static/img/env.png 'Env file')
 
-Unzip the file and open it up in Visual Studio Code
+4. Fill in the following details: 
 
-![Open Folder](../../static/img/zero-to-hero/open-folder.png 'Open Folder')
+<table>
+  <thead>
+  <tr>
+    <th>
+      Field Name
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+      <tr>
+    <td>
+      <code>Etherscan API Key</code>
+    </td>
+    <td>
+      Etherscan API Key from previous step
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>CONTRACT_OWNER_ADDRESS</code>
+    </td>
+    <td>
+     Metamask wallet address also known as public key
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>DEPLOYER_ROPSTEN_PRIVATE_KEY
+       DEPLOYER_MAINNET_PRIVATE_KEY</code>
+    </td>
+    <td>
+      Metamask wallet private key
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>CONTRACT_NAME</code>
+    </td>
+    <td>
+      Name of your NFT collection eg "Spaghetti Adventures"
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>CONTRACT_SYMBOL</code>
+    </td>
+    <td>
+      This is a shortened version of your collection name eg "SPAG"
+    </td>
+  </tr>
+  </tbody>
+</table>
 
-### Rename .env file and update variables
+:::info Alchemy API Key
+Note down the `ALCHEMY_API_KEY`. We do not need to update this value now, but we will use this value later. 
+:::
 
-Rename .env.example to .env and fill in details in the file. Don't forget to press save.
 
-1. `DEPLOYER_ROPSTEN_PRIVATE_KEY` is your `CONTRACT_OWNER_ADDRESS` wallet’s private key so you can programmatically sign transactions. 
-2.`ETHERSCAN_API_KEY` is the Etherscan API key you noted down in a previous step
-3. `DEPLOYER_MAINNET_PRIVATE_KEY` is the same as `DEPLOYER_ROPSTEN_PRIVATE_KEY`
-4. `CONTRACT_OWNER_ADDRESS` is the address of the wallet which will be deploying the contract (your metamask wallet address)
-5. `CONTRACT_NAME` is the name of your NFT Collection and `CONTRACT_SYMBOL` is the shortened and capitalized symbol or “ticker” for your NFT collection. 
-6. You can use the `ALCHEMY_API_KEY` that is pre-populated for the sake of this tutorial
+## Step 8: Install Dev library
+Next we will need to install packages needed for deploying our smart contract. 
 
-![Fill the .env file](../../static/img/zero-to-hero/fill-env-file.png 'Fill the .env file')
+1. Right click on any file in the explorer
+2. Select 'Open in Integrated Terminal'
 
-### Build and install the dev library
+![Open the integrated terminal](../../static/img/zero-to-hero/Integrated%20Terminal.png 'Open the integrated terminal')
 
-The next step is to build and install the dev library. To start, in node.js, right-click on any file in the explorer pane, then select "Open in Integrated Terminal". 
+3. Run `npm install --include=dev` and wait until the installation is completed. 
+4. Save your work
 
-![Open the integrated terminal](../../static/img/zero-to-hero/fill-env-file.png 'Open the integrated terminal')
 
-In the terminal, run `npm install --include=dev` and wait until the installation is completed. For mac users, save your work. 
+## Step 9: Deploy Contract
+Before we can mint on Layer 2, we need to deploy a smart contract on Layer 1 to ensure assets can be withdrawn to Layer 1. Click [here](https://docs.x.immutable.com/docs/ethereum-scalability) to learn more about the differences between Layer 1 and Layer 2. 
 
-### Deploy contract
+1. Run `yarn hardhat run deploy/asset.ts --network ropsten`
+2. It will take ~5 minutes to deploy your contract to Ropsten Etherscan 
+3. Copy the deployed contract address 
 
-To deploy your contract, run the yard command `yarn hardhat run deploy/asset.ts --network ropsten`. It will take ~5 minutes to deploy your contract as you are simultaneously deploying your contract and verifying it and publishing the smart contract to [Ropsten Etherscan](https://ropsten.etherscan.io/). When it’s done, copy the Deployed Contract Address that is created and displayed on the terminal after executing this command. 
+![Step9_Deploying the contract](../../static/img/zero-to-hero/Step9DeployContract.png 'Deploying the contract')
 
-![Deploying the contract](../../static/img/zero-to-hero/deploying-the-contract.png 'Deploying the contract')
+:::info Check your work
+Paste your contract address into [Ropsten Etherscan](https://ropsten.etherscan.io/). It should say **contract** in the upper left. If this says address, ensure you are on the correct network
+:::
 
-You can then search on your deployed contract address (highlighted above) on [Ropsten Etherscan](https://ropsten.etherscan.io/). 
 
-🥳 You have just put something on the (test) blockchain!
+## Step 10: Add your NFT Collection to Immutable X
 
-## Onboard your smart contract
+After deploying your contract to Layer 1, you will need to [register](https://docs.x.immutable.com/docs/onboarding) it with Immutable X by creating a project and a collection. 
 
-In this step, we will onboard your smart contract, which is registering it with Immutable X. 
+1. Download the [imx-examples repo](https://github.com/immutable/imx-examples)
+2. Open the folder in Visual Studio Code
+3. Rename `.env.example` to `.env` and save 
+4. Fill in the following: 
 
-1. To start, download the [imx-examples repo](https://github.com/immutable/imx-examples) from Github, then open that folder in Visual Studio Code, the same way as you did for the imx-contracts repo. 
+<table>
+  <thead>
+  <tr>
+    <th>
+      Field Name
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+      <tr>
+    <td>
+      <code>ALCHEMY_API_KEY</code>
+    </td>
+    <td>
+      <code>AlCHEMY_API_KEY</code> from step 7
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>OWNER_ACCOUNT_PRIVATE_KEY</code>
+    </td>
+    <td>
+     Metamask private key  from step 2
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>COLLECTION_CONTRACT_ADDRESS</code>
+    </td>
+    <td>
+       Deployed contract address from previous step
+    </td>
+  
+  </tr>
+  </tbody>
+</table>
 
-2. Again, locate the .env.example file and rename it to .env. Then provide values for the following: 
-  i. In the “General” section, enter a value for `ALCHEMY_API_KEY`, you can use the value used in the .env file in imx-contracts. 
-  ii. In the “Onboarding” section, provide values for:
 
-* `OWNER_ACCOUNT_PRIVATE_KEY` - This is your MetaMask wallet, Ropsten Test Network, private key.
-* `COLLECTION_CONTRACT_ADDRESS` - The Deployed Contract Address you generated previously. 
+![Step10_1](../../static/img/zero-to-hero/Step10_1.png 'Step10_1')
 
-  Save your changes.
+1. Save 
+2. Run `npm install`
 
-3. Again in Visual Studio Code, right-click on any file in the explorer pane, then select Open in Integrated Terminal and run the command `npm install`. 
 
-# Register a user account with IMX
 
-In order to create a collection, developers (you, in this case) first need to register as an Immutable X user. This just means connecting your MetaMask wallet to Ropsten test network via the [Immutable X Test Marketplace](https://market.ropsten.x.immutable.com/ ). You can do this by accessing the marketplace and linking your account, or you can register a user account programmatically. 
+## Step 11: Register as a User
 
-## Register a user account programmatically
+Before you can create a project, you will need to register as a user. Registering as a user creates a Layer 2 wallet and enables us to make transactions on Layer 2. 
 
-In the integrated terminal, run the command `npm run onboarding:user-registration` to register your wallet with Immutable X. 
+1. Navigate to the [Ropsten Test Marketplace](https://market.ropsten.immutable.com/)
+2. Press `Connect Wallet`
+3. Follow the prompts 
 
-## Create your project
+## Step 12: Create Project
 
-To create an NFT collection in Immutable X, you need to first create a project, then register your collection to that project. To learn more about this, visit the [Onboard Guide](../guides/onboarding/index.md). 
+ A [project](https://docs.x.immutable.com/docs/guides/onboarding/project-registration) is an admin level entity associatied with an owner wallet address. This address is needed to make changes like creating or updating collections. Begin by navigating to **src/onboarding/2-create-project.ts**.
 
-Navigate to *src/onboarding/2-create-project.ts* file and add values for the following:
+![Onboarding Project](../../static/img/zero-to-hero/Step12_1.png 'Onboarding Project')
 
-1. `name` - your project’s name. For example, God's Unchained's project name would be: God's Unchained.  
-2. `company_name` - name of your company
-3. `contact_email` - your business contact email address
+1. Fill in `name`, `company_name` and `contact_email`
+2. Press save 
+3. Run `npm run onboarding:create-project`
+4. Copy the Project ID from the output
+5. Use this to populate the `COLLECTION_PROJECT_ID` in the .env file and press save
 
-![Onboarding Project](../../static/img/zero-to-hero/onboarding-project.png 'Onboarding Project')
+![Step12](../../static/img/zero-to-hero/Step12_2.png 'Step12')
 
-Remember to save your changes. 
 
-In the integrated terminal, run the command `npm run onboarding:create-project` to register your project. This will generate a project ID. Copy that number across to the .env file in the "Onboarding" section, the press save. 
+## Step 13: Register Collection
+  A [collection](https://docs.x.immutable.com/docs/collection-registration) is a group of NFTs that share a smart contract and each collection belongs to a project. Collections are displayed on the marketplace to end users, eg Gods Unchained. 
 
-![Add Project ID](../../static/img/zero-to-hero/add-project-id.png 'Add Project ID')
+ Navigate to the ***src/onboarding/3-create-collections.ts*** file and populate the following values:
 
-## Create your collection
 
-Navigate to the *src/onboarding/3-create-collections.ts* file and populate the following values:
+<table>
+  <thead>
+  <tr>
+    <th>
+      Field Name
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+      <tr>
+    <td>
+      <code>name</code>
+    </td>
+    <td>
+      Name of your collection on the marketplace
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>description</code>
+    </td>
+    <td>
+    The description for your collection
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>icon_url</code>
+    </td>
+    <td>
+      Icon that displays for your collection
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>metadata_api_url</code>
+    </td>
+    <td>
+      Metadata API URL that we generated earlier (ensure there is no trailing /s)
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>collection_image_url</code>
+    </td>
+    <td>
+      Image of your collection that displays on the marketplace
+    </td>
+  </tr>
+  </tbody>
+</table>
 
-* `name` the name of your collection on the marketplace
-* `description` the description for your collection
-* `icon_url` the icon that displays on the Immutable X marketplace. For test purposes you can use one of the image URLs from Pinata.
-* `metadata_api_url` the metadata API URL that you generated earlier in the tutorial. Make sure there is no trailing / at the end of the URL.
-* `collection_image_url` the image of your collection that displays on the Immutable X marketplace.  For test purposes you can use one of the image URLs from Pinata.
 
 To register the collection, run the command `npm run onboarding:create-collection`. 
 
@@ -288,11 +443,13 @@ To register the collection, run the command `npm run onboarding:create-collectio
 Remember to remove the prepending double slashes ”//” in relation to the fields described below as these comment out the code.
 :::
 
-## Create metadata schema
+## Step 14: Create Metadata Schema
 
-Each NFT collection needs a metadata schema. For more information on metadata schemas, check out the [Metadata Schema Guide](../guides/onboarding/metadata-schema-registration.mdx).
+A collection's metadata schema describes the properties of the NFTs it can mint, as well as the potential values and types of those properties. These fields can be used as filters in the marketplace later on. Click [here](https://docs.x.immutable.com/docs/metadata-schema-registration) to learn more about Metadata Schema.
 
-Navigate to the *src/onboarding/4-add-metadata-schema.ts* file and update metadata on line 43:
+
+
+Navigate to **src/onboarding/4-add-metadata-schema.ts** and update metadata on line 43:
 
 ![Add Metadata](../../static/img/zero-to-hero/add-metadata.png 'Add Metadata')
 
@@ -336,35 +493,137 @@ You can use the example metadata schema provided here, or use your own. Copy and
 
 To add metadata schema to the collection, run the command `npm run onboarding:add-metadata-schema` in the integrated terminal. 
 
-## Mint your NFTs
+## Step 15: Mint NFT
 
-You have now deployed and registered your smart contract, created your project and collection, and created metadata and a metadata schema. The final step in creating your collection is to mint your NFTs!
+Now that we have added our contract to Immutable X, the final step is to add our assets to the blockchain by minting them. 
 
-Update .env file again, this time filling in values for the “Bulk Minting” details:
+1. Navigate to the .env file 
+2. Fill in the follow under the 'Bulk Minting' section 
 
-* `PRIVATE_KEY1` this is again asking for your MetaMask wallet, Ropsten Test Network, private key. Copy-paste it from OWNER_ACCOUNT_PRIVATE_KEY in the “Onboarding” section in this same file. 
-* `TOKEN_ID` enter 1 as the TOKEN_ID if this is the first time you’re minting from your collection. If you have already minted a few NFTs, then take the TOKEN_ID of the last minted NFT, and increment it by 1 and enter it here.
-* `TOKEN_ADDRESS` this is asking for your COLLECTION_CONTRACT_ADDRESS, but in a different way. Copy-paste it from the “Onboarding” section in this same file. 
-* `BULK_MINT_MAX`for the purpose of this walkthrough, just enter 50 as shown below. This allows you to configure the maximum number of NFTs that can be minted in bulk in one go.
 
-![Specify Metadata](../../static/img/zero-to-hero/add-metadata.png 'Specify Metadata')
+![Specify Metadata](../../static/img/zero-to-hero/Step15_1.png 'Specify Metadata')
 
-To mint, run the command `npm run bulk-mint -- -n <number of tokens to mint> -w <your wallet address>` where
+<table>
+  <thead>
+  <tr>
+    <th>
+      Field name
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+      <tr>
+    <td>
+      <code>PRIVATE_KEY1</code>
+    </td>
+    <td>
+      MetaMask Private Key - Copy from 'Onboarding' section.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>TOKEN_ID</code>
+    </td>
+    <td>
+    Enter 1 as the <code>TOKEN_ID</code> if this is the first time you’re minting from your collection. If you have already minted a few NFTs, then take the TOKEN_ID of the last minted NFT, and increment it by 1 and enter it here.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>TOKEN_ADDRESS</code>
+    </td>
+    <td>
+      Same as <code>COLLECTION_CONTRACT_ADDRESS</code> - Copy from 'Onboarding' section.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <code>BULK_MINT_MAX</code>
+    </td>
+    <td>
+    Enter 50 for this tutorial. This allows us to configure the maximum number of NFTs that can be minted in bulk in one go.
+    </td>
+  </tr>
+  </tbody>
+</table>
 
-* `<number of tokens to mint>` is the number of NFTs you wish to mint. This cannot exceed BULK_MINT_MAX in .env. In this tutorial, this number is 3. 
-* `<your wallet address>` is the MetaMask wallet you’re minting your NFTs to. For each contract (in other words, for each TOKEN_ADDRESS) you are minting tokens for, remember to set the TOKEN_ID in .env to the latest incremented index.
 
-## List your NFT 
+:::info Save
+Don't forget to press save after updating the values
+:::
 
-Congrats, you’ve done it! Visit the [Ropsten IMX Marketplace](https://market.ropsten.x.immutable.com/) and click Connect Wallet to view your inventory on Immutable X (Ropsten) marketplace. 
 
-It can take a little while to appear. Click Inventory after connecting your wallet, or after signing in again if you’ve previously connected. List your NFT for sale by clicking through to one in your collection. You’ll see the LIST FOR SALE button below the description. 
+**To Mint**
+1. Run `npm run bulk-mint -- -n <number of tokens to mint> -w <your wallet address>` where
+ * `<number of tokens to mint>`  is the number of NFTs you wish to mint. In this tutorial, this number is 3. 
+ * `<your wallet address>` is the MetaMask wallet you’re minting your NFTs to. For each contract (in other words, for each TOKEN_ADDRESS) you are minting tokens for, remember to set the TOKEN_ID in .env to the latest incremented index.
 
-## Celebrate 🥳 🥳 🥳
+## Step 16: List your NFT 
 
-Congratulations - you have now minted 3 NFTs! 
+Our assets will now be accessible in our Ropsten Wallet. However, for other users to see them we will need to list them on the marketplace. 
 
-This tutorial has shown you how to mint an NFT on the Ropsten test network. When you are ready to launch your project live on mainnet, you can use this tutorial, with a few small changes: 
+1. Visit the [Ropsten IMX Marketplace](https://market.ropsten.x.immutable.com/) 
+2. Click Connet Wallet and follow the prompts
+3. Click My Assets --> Select an NFT
+4. Press List for Sale
+   
+## Conclusion 
 
-* Changing the Ropsten variable to Ethereum as necessary
-* Change your MetaMask to the Ethereum network
+Congratulations on minting and listing an NFT on the Ropsten test network!
+
+:::info Feedback
+ This tutorial covered the simplest implementation of minting, however we are continuing to build out the workflow. Feel free to leave any feedback [here](https://docs.google.com/forms/d/e/1FAIpQLSdTLIXldLRZQB4i2YTHtQwxmrDbTkHphuxtLoVe7j-YVU7VYw/viewform).
+:::
+
+
+If you'd like to reuse these steps for a mainnet launch, note the following changes:
+
+<table>
+  <thead>
+  <tr>
+    <th>
+      Step
+    </th>
+    <th>
+      Change
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+      <tr>
+    <td>
+      Step 2
+    </td>
+    <td>
+     Metamask Network should use Ethereum Mainnet 
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Step 9.1
+    </td>
+    <td>
+    <code>yarn hardhat run deploy/asset.ts --network mainnet</code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Step 10
+    </td>
+    <td>
+      Set <code>ETH_NETWORK</code> to mainnet in the .env file
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Step 10
+    </td>
+    <td>
+     Remove ropsten from the URL in <code>PUBLIC_API_URL</code> in the .env file
+    </td>
+  </tr>
+  </tbody>
+</table>
