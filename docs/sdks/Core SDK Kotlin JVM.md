@@ -5,11 +5,11 @@ slug: '/imx-core-sdk-kotlin-jvm'
 
 ## Github
 
-Find the [Immutable Core SDK in Kotlin/JVM on Github](https://github.com/immutable/imx-core-sdk-kotlin-jvm)
+Find the [Immutable Core SDK in Kotlin/JVM on Github](https://github.com/immutable/imx-core-sdk-kotlin-jvm).
 
 ## Installation
 
-1. Create an Access Token [(see here)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with `read:packages` enabled.
+1. Create a [Github Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with `read:packages` enabled.
 2. Add the GitHub package as a repository either in your `build.gradle` file or `settings.gradle` if you have one:
 ```gradle
 repositories {
@@ -23,8 +23,11 @@ repositories {
     }
 }
 ```
-Note: will look to have this accessible directly via the `mavenCentral()` repository in the future.
-3. Add dependency to your app `build.gradle` file:
+:::info
+Note: We are looking to have this accessible directly via the `mavenCentral()` repository in the future.
+:::
+
+3. Add the dependency to your app `build.gradle` file:
 ```gradle
 dependencies {
     implementation 'com.immutable.sdk:imx-core-sdk-kotlin-jvm:$version'
@@ -49,11 +52,11 @@ val response = CollectionsApi().getCollections(
     direction = "asc"
 )
 ```
-View the [OpenAPI spec](openapi.json) for a full list of API requests available in the Core SDK.
+View the [OpenAPI spec](https://github.com/immutable/imx-core-sdk-kotlin-jvm/blob/main/openapi.json) for a full list of API requests available in the Core SDK.
 
 ## Workflow Functions
 
-Utility functions that will chain necessary API calls to complete a process or perform a transaction.
+[Utility functions](https://github.com/immutable/imx-core-sdk-kotlin-jvm/tree/main/imx-core-sdk-kotlin-jvm/src/main/kotlin/com/immutable/sdk/workflows) that will chain necessary API calls to complete a process or perform a transaction:
 
 * Register a user with ImmutableX and returns the Stark key pair
 * Buy cryptocurrency via Moonpay
