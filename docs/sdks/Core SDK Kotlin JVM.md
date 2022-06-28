@@ -55,12 +55,15 @@ View the [OpenAPI spec](openapi.json) for a full list of API requests available 
 
 Utility functions that will chain necessary API calls to complete a process or perform a transaction.
 
-* Register a user with ImmutableX and returns the Stark key pair
-* Buy cryptocurrency via Moonpay
-* Buy ERC721
-* Sell ERC721
-* Cancel listing
-* Transfer ERC20/ERC721/ETH
+
+| Workflow           | Description                                                  |
+|--------------------|--------------------------------------------------------------|
+| `registerOffchain` | Register L2 wallet.                                          |
+| `transfer`         | Transfer tokens to another wallet.                           |
+| `sell`             | Create an order to sell an asset.                            |
+| `cancel`           | Cancel a sell order.                                         |
+| `buy`              | Create a trade to buy an asset.                              |
+| `buyCrypto`        | Get a MoonPay URL to purchase cryptocurrency directly on L2. |
 
 ### Wallet Connection
 
