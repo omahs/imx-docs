@@ -92,3 +92,5 @@ const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPrefe
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "magic_link" })
 ```
 ![magic_link](../../../static/img/link-setup/magic_link.png 'magic_link')
+
+For more information about user wallet registration, see [User Registration](../user-registration.md) and [Account Management](../integrate-your-application/account-management.md).
