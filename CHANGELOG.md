@@ -1,3 +1,11 @@
+# [1.8.0](https://github.com/immutable/imx-docs/compare/v1.7.1...v1.8.0) (2022-06-28)
+
+
+### Features
+
+* add core sdk kotlin jvm docs ([598d552](https://github.com/immutable/imx-docs/commit/598d55210bb4166f4e83cf1676e0b5b661f95fc2))
+* convert workflows to a table ([0299e07](https://github.com/immutable/imx-docs/commit/0299e072ab56fc5f63b2f12ef84c321349f47a4a))
+
 ## [1.7.1](https://github.com/immutable/imx-docs/compare/v1.7.0...v1.7.1) (2022-06-16)
 
 
