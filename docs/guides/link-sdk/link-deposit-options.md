@@ -86,11 +86,3 @@ link.deposit()
 ```
 
 ![Deposit Without Params](../../../static/img/link-deposit/deposit-without-params.png 'Deposit Without Params')
-
-## Errors
-
-| Code | Error Message | Suggested Action |
-|---|---|---|
-| 2000 | Something went wrong when retrieving your wallet address. Check with your wallet provider. | There are no more actions possible for the user.<br />Check with provider |
-| 2001 | Token not available in IMX. | Contact support team informing the invalid token. |
-| 2002 | Insufficient funds. | Check your wallet balance, if have funds, please contact support team. |

@@ -145,12 +145,3 @@ const TransferV2ResultsCodec = t.interface({
   ]
 }
 ```
-
-## Errors
-
-| Code | Error Message | Suggested Action |
-|---|---|---|
-| 7000 | Something went wrong retrieving token details. | Please, try again. <br />If the error persists, contact the support team. |
-| 7001 | Something went wrong retrieving your ${tokenType} token balance. | Please, try again. <br />If the error persists, contact the support team. |
-| 7002 | Transfers have failed validation. The following validation errors were identified: ${listOfFailedValidations} | Check the details displayed on each token, they are returning the backend error and will give an idea on what went wrong.<br />Depending on the error, user can try again, if the error persists, contact the support team. |
-| 7003 | The API rejected the transfer: ${details} | Check the details displayed on each token, they are returning the backend error and will give an idea on what went wrong.<br />Depending on the error, user can try again, if the error persists, contact the support team. |

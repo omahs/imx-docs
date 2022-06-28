@@ -73,28 +73,3 @@ To test the transactions in the Ropsten test environment, please use the followi
 **DATE**: 12/2022  
 **CVC**: 123  
 :::
-
-## Errors
-
-### fiatToCrypto
-
-| Code | Error Message | Suggested Action |
-|---|---|---|
-| 10000 | Something went wrong. | Contact support team. |
-| 10001 | Something went wrong. | Contact the provider (Moonpay) to see why the transaction failed. |
-| 10002 | Connection Error. | Please, try again.<br />If the error persists, contact the support team. |
-| 10003 | Invalid currencies. | Contact support team. |
-| 10004 | Something went wrong. | Please, try again.<br />If the error persists, contact the support team. |
-
-### cryptoToFiat
-
-| Code | Error Message | Suggested Action |
-|---|---|---|
-| 11000 | Something went wrong. | Contact support team. |
-| 11001 | Something went wrong. | Contact the provider (Moonpay) to see why the transaction failed. |
-| 11002 | Connection Error. | Please, try again.<br />If the error persists, contact the support team. |
-| 11003 | Something went wrong. | Please, try again.<br />If the error persists, contact the support team. |
-| 11004 | Currencies not available | Please, try again  with other currency.<br />If the error persists, contact the support team. |
-| 11005 | Invalid currency amount | Change the amount of currency. |
-| 11006 | Something went wrong. | Contact support team. |
-

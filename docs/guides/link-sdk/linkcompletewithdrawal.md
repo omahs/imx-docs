@@ -20,9 +20,3 @@ const response = await link.completeWithdrawal({
 console.log(response)
 // returns { transactionId: '0x...' }
 ```
-
-## Errors
-
-| Code | Error Message | Suggested Action |
-|---|---|---|
-| 4000 | Something went wrong when retrieving your wallet address. Check with your wallet provider. | Check with provider. |

@@ -92,14 +92,3 @@ const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPrefe
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "magic_link" })
 ```
 ![magic_link](../../../static/img/link-setup/magic_link.png 'magic_link')
-
-## Errors
-
-| Code | Error Message | Suggested Action |
-|---|---|---|
-| 1000 | Something went wrong | Contact support team or check SDK settings (if partner integrating). |
-| 1001 | Something went wrong retrieving your tokens list: ${apiError} | Retry the operation/Refresh the page or Contact support team. |
-| 1002 | Something went wrong when retrieving your wallet address. Check with your wallet provider. | Check with provider. |
-| 8000 | Something went wrong retrieving the transactions: ${details} | Please, try again.<br />If the error persists, contact the support team. |
-| 9000 | Something went wrong retrieving the order details. | Please, try again.<br />If the error persists, contact the support team. |
-| 9001 | Something went wrong retrieving the token details. | Please, try again.<br />If the error persists, contact the support team. |
