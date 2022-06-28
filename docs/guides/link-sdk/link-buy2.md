@@ -57,9 +57,3 @@ An example resolve payload from a semi-successful `buy()` flow:
 ```
 
 If the multi-buy flow is found to contain 0 valid orders after minimal client-side validation, then link will error out (and reject the promise it returned from the buy() method) and no orders will be purchased.
-
-## Errors
-
-| Code | Error Message | Suggested Action |
-|---|---|---|
-| 5000<br />5001<br />5002 | Something went wrong. | There are no more actions possible for the user.<br />Check with provider. |
