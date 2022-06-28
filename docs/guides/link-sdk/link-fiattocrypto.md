@@ -1,17 +1,11 @@
 ---
-title: 'Link SDK Moonpay integration'
-slug: '/link-sdk-moonpay-exchange-integration'
+title: 'Link.fiatToCrypto'
+slug: '/link-fiat-to-crypto'
 sidebar_position: 11
 ---
 
 The exchange functionality is available in SDK v1.3.33+ and is a collaboration between Immutable X and Moonpay. `cryptoCurrencies` param is available in SDK v1.3.38+
-:::caution Early access feature
-As of January 2021 only onramping funds is supported. Offramp support will soon follow.\nOnramp functionality is available in **SDK v1.3.33+**
 
-Onramp is in early access and will be updated and extended in the future.
-
-API endpoints to get the exchange process status will be available in the future.
-:::
 The exchange process allows users to buy crypto from the Immutable X platform using a credit card. There's no gas price for purchases, only a Moonpay transaction fee.
 
 The deposit happens directly on L2 via the transfer from Moonpay accounts.
