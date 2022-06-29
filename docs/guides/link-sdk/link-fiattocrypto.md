@@ -10,7 +10,11 @@ The exchange process allows users to buy crypto from the Immutable X platform us
 
 The deposit happens directly on L2 via the transfer from Moonpay accounts.
 
-The amount, fee and currency are selected within the Moonpay widget, and are under user's control. There's a minimal deposit amount of $20USD.
+The amount, fee and currency are selected within the Moonpay widget, and are under user's control.
+
+:::info Minimal deposit amount
+There's a minimal deposit amount of $20USD.
+:::
 
 The current available cryptocurrencies are:
 

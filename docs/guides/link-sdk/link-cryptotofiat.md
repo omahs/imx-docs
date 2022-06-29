@@ -10,7 +10,9 @@ The exchange process allows users to sell crypto from the Immutable X platform u
 
 The withdraw happens directly on L2 via the transfer to Moonpay accounts.
 
+:::info Minimal withdraw amount
 There's a minimal withdraw amount of 0.015 ETH.
+:::
 
 The current available cryptocurrencies are:
 - ETH
