@@ -94,3 +94,7 @@ const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPrefe
 ![magic_link](../../../static/img/link-setup/magic_link.png 'magic_link')
 
 For more information about user wallet registration, see [User Registration](../user-registration.md) and [Account Management](../integrate-your-application/account-management.md).
+
+## Errors
+
+See error responses [here](./link-errors-table.md#general-errors).

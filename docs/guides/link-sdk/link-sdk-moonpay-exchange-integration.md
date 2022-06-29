@@ -73,3 +73,7 @@ To test the transactions in the Ropsten test environment, please use the followi
 **DATE**: 12/2022  
 **CVC**: 123  
 :::
+
+## Errors
+
+See error responses [here](./link-errors-table.md#fiat-to-crypto).
