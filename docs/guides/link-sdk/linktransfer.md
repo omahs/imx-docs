@@ -148,4 +148,4 @@ const TransferV2ResultsCodec = t.interface({
 
 ## Errors
 
-See error responses [here](./link-errors-table.md#transfer).
+See error responses [here](./link-errors.md#transfer).

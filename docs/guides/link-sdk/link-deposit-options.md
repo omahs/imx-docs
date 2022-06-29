@@ -89,4 +89,4 @@ link.deposit()
 
 ## Errors
 
-See error responses [here](./link-errors-table.md#deposits).
+See error responses [here](./link-errors.md#deposits).

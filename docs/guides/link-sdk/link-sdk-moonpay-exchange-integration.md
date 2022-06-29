@@ -76,4 +76,4 @@ To test the transactions in the Ropsten test environment, please use the followi
 
 ## Errors
 
-See error responses [here](./link-errors-table.md#fiat-to-crypto).
+See error responses [here](./link-errors.md#fiat-to-crypto).

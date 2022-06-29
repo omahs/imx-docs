@@ -60,4 +60,4 @@ If the multi-buy flow is found to contain 0 valid orders after minimal client-si
 
 ## Errors
 
-See error responses [here](./link-errors-table.md#buy).
+See error responses [here](./link-errors.md#buy).

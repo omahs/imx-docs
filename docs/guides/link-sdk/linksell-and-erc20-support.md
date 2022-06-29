@@ -79,4 +79,4 @@ link.sell({
 
 ## Errors
 
-See error responses [here](./link-errors-table.md#sell).
+See error responses [here](./link-errors.md#sell).

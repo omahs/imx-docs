@@ -97,4 +97,4 @@ For more information about user wallet registration, see [User Registration](../
 
 ## Errors
 
-See error responses [here](./link-errors-table.md#general-errors).
+See error responses [here](./link-errors.md#general-errors).

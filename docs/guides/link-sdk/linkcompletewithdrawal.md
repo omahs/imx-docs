@@ -23,4 +23,4 @@ console.log(response)
 
 ## Errors
 
-See error responses [here](./link-errors-table.md#complete-withdrawal).
+See error responses [here](./link-errors.md#complete-withdrawal).

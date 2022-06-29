@@ -1,6 +1,6 @@
 ---
-title: 'Link Errors Table'
-slug: '/link-errors-table'
+title: 'Link Errors'
+slug: '/link-errors'
 sidebar_position: 13
 ---
 
