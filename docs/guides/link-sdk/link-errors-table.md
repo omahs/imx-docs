@@ -1,7 +1,7 @@
 ---
 title: 'Link Errors Table'
 slug: '/link-errors-table'
-sidebar_position: 2
+sidebar_position: 13
 ---
 
 Find below the list of errors that can be displayed in Link.
