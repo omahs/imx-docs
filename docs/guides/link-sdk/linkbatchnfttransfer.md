@@ -24,7 +24,7 @@ const payload: LinkParams.BatchNftTransfer = [
 ]
 ```
 
-The response type will be identical to that of the [existing transfers](./linktransfer.md)).
+The response type is the same as [Link.transfer](./linktransfer.md).
 
 ## Notes
 
@@ -52,3 +52,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 ![All Batches Complete](../../../static/img/linkbatchnfttransfer/batch-complete.png "All Batches Complete")
 
 ![Example Validation Error](../../../static/img/linkbatchnfttransfer/example-validation-error.png "Example Validation Error")
+
+## Errors
+
+See error responses [here](./link-errors.md#transfer).
