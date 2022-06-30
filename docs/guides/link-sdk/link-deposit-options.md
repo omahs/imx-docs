@@ -86,3 +86,7 @@ link.deposit()
 ```
 
 ![Deposit Without Params](../../../static/img/link-deposit/deposit-without-params.png 'Deposit Without Params')
+
+## Errors
+
+See error responses [here](./link-errors.md#deposits).

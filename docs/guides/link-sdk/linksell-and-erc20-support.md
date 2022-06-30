@@ -76,3 +76,7 @@ link.sell({
   currencyAddress: '0x4c04c39fb6d2b356ae8b06c47843576e32a1963e',
 })
 ```
+
+## Errors
+
+See error responses [here](./link-errors.md#sell).
