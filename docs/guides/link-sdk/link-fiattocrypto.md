@@ -6,7 +6,7 @@ sidebar_position: 11
 
 The exchange functionality is available in SDK v1.3.33+ and is a collaboration between Immutable X and Moonpay. `cryptoCurrencies` param is available in SDK v1.3.38+
 
-The exchange process allows users to buy crypto from the Immutable X platform using a credit card. There's no gas price for purchases, only a Moonpay transaction fee.
+The exchange process allows users to buy crypto from the Immutable X platform using a credit card. There's no gas price for purchases, only a [Moonpay transaction fee](https://support.moonpay.com/hc/en-gb/articles/360011930117-What-fees-do-you-charge-).
 
 The deposit happens directly on L2 via the transfer from Moonpay accounts.
 
