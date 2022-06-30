@@ -1,3 +1,20 @@
+# [1.9.0](https://github.com/immutable/imx-docs/compare/v1.8.0...v1.9.0) (2022-06-30)
+
+
+### Features
+
+* adding documentation about Link Error Messages ([514bfef](https://github.com/immutable/imx-docs/commit/514bfefcc2b75017192463ab597587344981dca0))
+* adding footer link to see error responses on each page ([d9fa79d](https://github.com/immutable/imx-docs/commit/d9fa79d624cd347de62a97742585176c50e053f1))
+* adding footer to see error responses on each page ([fe5b941](https://github.com/immutable/imx-docs/commit/fe5b9415a1a4e11eb598921c78d0d97c1806ed9c))
+* chage format of errors ([26c0509](https://github.com/immutable/imx-docs/commit/26c05096177466f2609fbd3cca50572877825047))
+* chage format of errors ([3e08ff4](https://github.com/immutable/imx-docs/commit/3e08ff49abe3b9eb6af073abdef280849ca388d1))
+* chage format of errors ([e93ae8a](https://github.com/immutable/imx-docs/commit/e93ae8a961363214f7a0288c8f24dffdcfc759fd))
+* chage format of errors ([6232efd](https://github.com/immutable/imx-docs/commit/6232efda991c67adf18a7b1cf6e84c43aced6495))
+* moving docs from troubleshooting to docs/link ([6385d80](https://github.com/immutable/imx-docs/commit/6385d80289db61e10aaeb40a4d6852cefb1c6956))
+* moving docs from troubleshooting to docs/link ([10a35c8](https://github.com/immutable/imx-docs/commit/10a35c8837a983e7bf44885afe56d0f044a1a47e))
+* moving to link section ([fd905cb](https://github.com/immutable/imx-docs/commit/fd905cb76f38412ae846da0dba2ddff56bc6a0f5))
+* removing wrong text ([19bcc6e](https://github.com/immutable/imx-docs/commit/19bcc6e165f1deb7d59a7f6a14580576981fc048))
+
 # [1.8.0](https://github.com/immutable/imx-docs/compare/v1.7.1...v1.8.0) (2022-06-28)
 
 
