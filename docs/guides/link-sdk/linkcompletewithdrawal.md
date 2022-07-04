@@ -20,3 +20,7 @@ const response = await link.completeWithdrawal({
 console.log(response)
 // returns { transactionId: '0x...' }
 ```
+
+## Errors
+
+See error responses [here](./link-errors.md#complete-withdrawal).
