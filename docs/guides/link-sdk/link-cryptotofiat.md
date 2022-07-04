@@ -17,6 +17,14 @@ There's a minimal withdraw amount of 0.015 ETH.
 The current available cryptocurrencies are:
 - ETH
 
+
+:::caution Supported countries
+
+The crypto to fiat off-ramp only available in EU, UK, and select US states. 
+
+For more information please refer to [Moonpay’s help desk](https://support.moonpay.com/hc/en-gb/articles/4406268234641-What-countries-are-supported-to-sell-crypto-with-MoonPay-)
+:::
+
 :::danger Exchange requires authenticated user
 `Link.cryptoToFiat({})` should only be called when user is authenticated and logged in, otherwise it will require user to reconnect
 :::
