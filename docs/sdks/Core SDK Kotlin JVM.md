@@ -35,7 +35,7 @@ dependencies {
 ```
 4. Set the correct environment (Ropsten or Production/Mainnet)
 ```kt
-ImmutableXSdk.setBase(ImmutableXBase.Ropsten)
+ImmutableXCore.setBase(ImmutableXBase.Ropsten)
 ```
 
 ## Usage
