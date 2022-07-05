@@ -6,9 +6,7 @@ sidebar_position: 12
 
 The crypto to fiat functionality is available in SDK v1.21.3+ and is a collaboration between Immutable X and Moonpay.
 
-The exchange process allows users to sell crypto from the Immutable X platform using to their bank details. There's no gas price for purchases, only a [Moonpay transaction fee](https://support.moonpay.com/hc/en-gb/articles/360011930117-What-fees-do-you-charge-).
-
-The withdraw happens directly on L2 via the transfer to Moonpay accounts.
+The exchange process allows users to sell crypto held on L2 on the Immutable X platform directly for fiat funds. These funds will be deposited directly into the users nominated bank account. There's no gas price for purchases, only a [Moonpay transaction fee](https://support.moonpay.com/hc/en-gb/articles/360011930117-What-fees-do-you-charge-).
 
 :::info Minimal withdraw amount
 There's a minimal withdraw amount of 0.015 ETH.
