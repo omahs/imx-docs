@@ -30,46 +30,29 @@ The build step is the starting point and is responsible for instantiating and pr
 call to `buildWalletsSDK` helper function, available in the package:
 
 ```ts
-import { 
-  ENVIRONMENTS,
-  buildWalletsSDK
-} from '@immutable/imx-wallets-web-sdk';
-
-// Defines the build params (environment)
-const buildParams = { env: ENVIRONMENTS.ROPSTEN };
+import { buildWalletsSDK } from '@immutable/imx-wallets-web-sdk';
 
 // Uses the helper function to get the SDK object instance
-const walletsSdk = await buildWalletsSDK(buildParams);
+const walletsSdk = await buildWalletsSDK();
 ```
-
-> **NOTICE:** An environment is required in order to instantiate the `WalletsSDK` object on top of the correct Ethereum network. For this particular, the enum `ENVIRONMENTS` can be imported from the package and used for such purpose. Access the [supported environments reference](#supported-environments) to check which environments are currently supported.
 
 #### Connect
 
 The connection step takes care of communicating with the selected L1 and L2 providers, establishing the connection, and retrieving the signers for each one of them, letting the L1 and L2 signers be available in the `WalletsSDK` object through the `getL1Signer` and `getL2Signer` methods:
 
 ```ts
-import { 
-  ENVIRONMENTS,
-  buildWalletsSDK,
-  L1_PROVIDERS
-} from '@immutable/imx-wallets-web-sdk';
-
-// Defines the build params (environment)
-const buildParams = { env: ENVIRONMENTS.ROPSTEN };
+import { L1_PROVIDERS, buildWalletsSDK } from '@immutable/imx-wallets-web-sdk';
 
 // Uses the helper function to get the SDK object instance
-const walletsSdk = await buildWalletsSDK(buildParams);
+const walletsSdk = await buildWalletsSDK();
 
 // Defines the connection params (L1 provider)
 const connectionParams = { provider: L1_PROVIDERS.METAMASK };
-
 // Connects to the desired wallets
 await walletsSdk.connect(connectionParams);
 
 // Gets the L1 signer
 const l1Signer = walletsSdk.getL1Signer();
-
 // Gets the L2 signer
 const l2Signer = walletsSdk.getL2Signer();
 ```
@@ -86,11 +69,6 @@ To check the available options for both L1 and L2 providers, access the [support
 > TBD
 
 ## Reference
-
-### Supported Environments
-
-  * `ENVIRONMENTS.ROPSTEN` - For testing and validation on the Ropsten Ethereum network.
-  * `ENVIRONMENTS.MAINNET` - For the Mainnet Ethereum production network.
 
 ### Supported L1 Wallets
 
@@ -110,23 +88,30 @@ To check versions of Core SDK which currently accepts the Wallets SDK integratio
 ### Buy (Create Trade)
 
 ```ts
-import { 
-  ENVIRONMENTS,
-  buildWalletsSDK,
-  L1_PROVIDERS
-} from '@immutable/imx-wallets-web-sdk';
+import { L1_PROVIDERS, buildWalletsSDK } from '@immutable/imx-wallets-web-sdk';
 import { getConfig, Workflows } from '@imtbl/core-sdk';
 
 // Wallets SDK setup
-const buildParams = { env: ENVIRONMENTS.ROPSTEN };
-const walletsSdk = await buildWalletsSDK(buildParams);
-const connectionParams = { provider: L1_PROVIDERS.METAMASK };
-await walletsSdk.connect(connectionParams);
+const walletsSdk = await buildWalletsSDK();
+await walletsSdk.connect({ provider: L1_PROVIDERS.METAMASK });
+
+// Gets L1 and L2 signers from the WalletsSDK object 
+const l1Signer = walletsSdk.getL1Signer();
+const l2Signer = walletsSdk.getL2Signer();
 
 // Core SDK setup
 const ethNetwork = 'ropsten';
 const config = getConfig(ethNetwork);
 const coreSdkWorkflows = new Workflows(config);
+
+// Checks if the user is already registered off-chain
+const isRegisteredOffChain = 
+  await coreSdkWorkflows.isRegisteredOffChainWithSigner(l1Signer, l2Signer);
+
+// If user is not registered off-chain, executes the register off-chain method
+if (!isRegisteredOffChain) {
+  await coreSdkWorkflows.registerOffChainWithSigner(l1Signer, l2Signer);
+}
 
 // Creates a fake object of type GetSignableTradeRequest (just for reference)
 const fakeTradeRequest = {
@@ -136,35 +121,11 @@ const fakeTradeRequest = {
 
 // Executes the create trade method
 const createTradeResponse = await coreSdkWorkflows.createTradeWithSigner(
-  walletsSdk.getL1Signer(), // The L1 signer contained inside the WalletsSDK object
-  walletsSdk.getL2Signer(), // The L2 signer contained inside the WalletsSDK object
-  fakeTradeRequest,         // The trade request object
+  l1Signer, 
+  l2Signer, 
+  fakeTradeRequest,
 );
 ```
-
-### Burn
-
-> TBD
-
-### Deposit
-
-> TBD
-
-### Mint
-
-> TBD
-
-### Orders
-
-> TBD
-
-### Registration
-
-> TBD
-
-### Withdraw
-
-> TBD
 
 ## Compatibility Matrix
 
