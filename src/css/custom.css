@@ -285,14 +285,14 @@ a.navbar__item.navbar__link:active {
     height: 3rem;
     width: 220px;
     background-repeat: no-repeat;
-    background: url('/static/img/logoLight.svg');
+    background: url('/static/img/logo-light.svg');
   }
 
   [data-theme='dark'] .navbar__inner a.navbar__brand {
     height: 3rem;
     width: 220px;
     background-repeat: no-repeat;
-    background: url('/static/img/logoDark.svg');
+    background: url('/static/img/logo-dark.svg');
   }
 }
 

@@ -20,7 +20,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon-32x32.png',
+  favicon: 'img/favicon.png',
   organizationName: 'immutable', // Usually your GitHub org/user name.
   projectName: 'imx-docs', // Usually your repo name.
 
