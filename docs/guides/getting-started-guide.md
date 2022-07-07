@@ -31,7 +31,6 @@ If you already have an Ethereum wallet, you can [import it into MetaMask](https:
 :::
 ## Test ETH
 In order to make transactions while testing on Ropsten, you’ll need to fund your wallet with some ETH. Here are some faucets where you can get some:
-- https://faucet.ropsten.be/
 - https://imxfaucet.xyz/ 
 - https://faucet.metamask.io/
 - https://faucet.dimensions.network/
