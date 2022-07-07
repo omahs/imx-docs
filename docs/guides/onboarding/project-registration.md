@@ -36,7 +36,7 @@ Response header limit information includes:
 - `collection_limit` - The collection limit available to the project for each four-week window.
 
 :::info Increase project limits
-Project limits, for both minting and collections, can be increased by [contacting customer support](https://support.immutable.com/hc/en-us/requests/new) about your project. Be sure to include your reason for an increase. Our team will respond to your request within 2 business days."
+Project limits, for both minting and collections, can be increased by [contacting support](https://support.immutable.com) about your project. Be sure to include your reason for an increase. Our team will respond to your request within 2 business days."
 :::
 ## Minting limits
 - Projects are limited to **50,000** mints within a four-week period.

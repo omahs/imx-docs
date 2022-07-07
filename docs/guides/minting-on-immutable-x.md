@@ -65,7 +65,7 @@ Important:
 
 After an asset from your collection is minted, we store the metadata returned by this endpoint in our database, and subsequent callers can use these [metadata properties](../guides/asset-management/asset-metadata.mdx#core-properties) in filter queries to the APIs (as defined in your metadata schema).
 :::info Updating metadata
-Currently, your collection’s metadata schema can only be updated by [contacting support](https://support.immutable.com/hc/en-us/requests/new). We're currently working on a self-serve model, which will allow applications to update their collections' metadata on-demand.
+Currently, your collection’s metadata schema can only be updated by [contacting support](https://support.immutable.com). We're currently working on a self-serve model, which will allow applications to update their collections' metadata on-demand.
 :::
 
 ## Metadata blueprint

@@ -21,7 +21,7 @@ We suggest that you whitelist access to this action to our contract `0x5FDCCA536
 
 Example smart contracts are available in our [imx-contracts](https://github.com/immutable/imx-contracts) repo. 
 
-For help, [contact support](https://support.immutable.com/hc/en-us/requests/new) to discuss the viability with your existing contract.
+For help, [contact support](https://support.immutable.com) to discuss the viability with your existing contract.
 
 # Minting assets
 Immutable exposes a minting API. You can mint more than one asset in an API call, and even mint multiple assets to multiple users.

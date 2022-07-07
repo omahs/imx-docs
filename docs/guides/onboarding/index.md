@@ -56,7 +56,7 @@ View the guide: [Metadata schema registration](./metadata-schema-registration.md
 :::caution Metadata refreshing requires support
 While you can register your own collections and metadata on Ropsten, you **cannot** execute a metadata refresh yourself. 
 
-To refresh metadata changes, you need to [contact support](https://support.immutable.com/hc/en-us/requests/new) and identify the tokens that need to be re-crawled, and the updates that have been made to them.
+To refresh metadata changes, you need to [contact support](https://support.immutable.com) and identify the tokens that need to be re-crawled, and the updates that have been made to them.
 
 Requests may take up to 2 business days (AEST).
 :::
