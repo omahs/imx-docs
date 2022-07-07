@@ -104,14 +104,8 @@ const ethNetwork = 'ropsten';
 const config = getConfig(ethNetwork);
 const coreSdkWorkflows = new Workflows(config);
 
-// Checks if the user is already registered off-chain
-const isRegisteredOffChain = 
-  await coreSdkWorkflows.isRegisteredOffChainWithSigner(l1Signer, l2Signer);
-
-// If user is not registered off-chain, executes the register off-chain method
-if (!isRegisteredOffChain) {
-  await coreSdkWorkflows.registerOffChainWithSigner(l1Signer, l2Signer);
-}
+// Registers the user off-chain if needed
+await coreSdkWorkflows.registerOffChainWithSigner(l1Signer, l2Signer);
 
 // Creates a fake object of type GetSignableTradeRequest (just for reference)
 const fakeTradeRequest = {
