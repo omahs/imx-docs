@@ -75,7 +75,7 @@ const config = {
           ignorePatterns: ['/tags/**'],
         },
         gtag: {
-          trackingID: "G-4JBHZ7F06X",
+          trackingID: 'G-4JBHZ7F06X',
         },
       }),
     ],
@@ -87,8 +87,8 @@ const config = {
       navbar: {
         logo: {
           alt: 'Immutable Logo',
-          src: 'img/logoLight.svg',
-          srcDark: 'img/logoDark.svg',
+          src: 'img/logo-light.svg',
+          srcDark: 'img/logo-dark.svg',
         },
         items: [
           {
@@ -154,7 +154,7 @@ const config = {
         apiKey: '2cb7547e9bf1ee7ee1b033acb6387c1d', // Public API key: it is safe to commit it
         indexName: 'prod_imxdocs',
         contextualSearch: true,
-      }
+      },
     }),
 };
 
