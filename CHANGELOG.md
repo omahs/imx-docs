@@ -1,3 +1,11 @@
+## [1.9.1](https://github.com/immutable/imx-docs/compare/v1.9.0...v1.9.1) (2022-07-07)
+
+
+### Bug Fixes
+
+* logo ([96c61cd](https://github.com/immutable/imx-docs/commit/96c61cd323df8b3a60c43622db3773fdb3a16e84))
+* update logos to match the new brand ([6d08944](https://github.com/immutable/imx-docs/commit/6d0894466a4f0deb01bcb4ac75745167662bf539))
+
 # [1.9.0](https://github.com/immutable/imx-docs/compare/v1.8.0...v1.9.0) (2022-06-30)
 
 
