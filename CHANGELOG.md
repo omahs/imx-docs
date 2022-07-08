@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/immutable/imx-docs/compare/v1.9.1...v1.9.2) (2022-07-08)
+
+
+### Bug Fixes
+
+* **logo-dark.svg, logo-light.svg:** resizes viewport for new logo's so there are no blemishes ([78ca852](https://github.com/immutable/imx-docs/commit/78ca852ed550cdbbf47d6123903b16b9badd8596))
+
 ## [1.9.1](https://github.com/immutable/imx-docs/compare/v1.9.0...v1.9.1) (2022-07-07)
 
 
