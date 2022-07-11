@@ -25,10 +25,10 @@ This is not supported at the moment, though most NFT projects don’t have a nee
 
 It is not possible to update immutable metadata (otherwise known as the blueprint) of an NFT that has been minted to Layer 2 because this is trustlessly passed to the Layer 1 smart contract when withdrawing — alongside the client token ID. However, you can update mutable metadata by changing the data returned by your metadata API. 
 
-Currently, our metadata crawler only runs once at the time of minting so if you make changes to the off-chain metadata that we retrieve from your endpoint, you need to [inform our customer support team](https://support.immutable.com/hc/en-us/requests/new) so it can be updated on Immutable X. 
+Currently, our metadata crawler only runs once at the time of minting so if you make changes to the off-chain metadata that we retrieve from your endpoint, you need to [inform our customer support team](https://support.immutable.com) so it can be updated on Immutable X. 
 
 :::info "Pre-approval to refresh metadata"
-**Jan 2022:** If you intend to refresh metadata after your collection is minted, you need to have approval from our Customer Success team in advance of your initial mint. We are working on making this process entirely self-service, but in the meantime, please [submit a request here](https://support.immutable.com/hc/en-us/requests/new).
+**Jan 2022:** If you intend to refresh metadata after your collection is minted, you need to have approval from our Customer Success team in advance of your initial mint. We are working on making this process entirely self-service, but in the meantime, please [submit a request here](https://support.immutable.com).
 :::
 
 ## Orders
