@@ -18,9 +18,13 @@ A user's web3 wallet (e.g. Metamask) is used to create, connect, and sign transa
 
 // Specify the provider preference
 { 
-    providerPreference: "metamask" | "none" | "magic_link"
+    providerPreference: "metamask" | "none" | "magic_link" | "gamestop"
 }
 ```
+
+:::info Gamestop
+**gamestop** option is available in SDK v1.22.0
+:::
 
 ## Usage
 
@@ -92,6 +96,19 @@ const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPrefe
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "magic_link" })
 ```
 ![magic_link](../../../static/img/link-setup/magic_link.png 'magic_link')
+
+
+### gamestop
+```typescript
+// Specifying Magic as provider:
+const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "gamestop" })
+```
+
+:::danger
+Gamestop is available only on mainnet
+:::
+
+![gamestop](../../../static/img/link-setup/gamestop.png 'gamestop')
 
 For more information about user wallet registration, see [User Registration](../user-registration.md) and [Account Management](../integrate-your-application/account-management.md).
 
