@@ -104,7 +104,7 @@ const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPrefe
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "gamestop" })
 ```
 
-:::danger
+:::caution
 Gamestop is available only on mainnet
 :::
 
