@@ -10,6 +10,13 @@ Check out our **[Link reference tool](https://tools.immutable.com/link-reference
 
 A user's web3 wallet (e.g. Metamask) is used to create, connect, and sign transactions on Immutable X. However, before a user can do this, they need to have registered on Immutable and be signed into their account. Both these steps can be done with a single call to `Link.setup`. If a user has already registered, this function can also be called to sign them in.
 
+## Supported wallets
+
+Lists the wallets supported in Link:
+- Metamask
+- Magic Link
+- Gamestop Wallet
+
 ## Parameters
 
 ```typescript
@@ -22,8 +29,8 @@ A user's web3 wallet (e.g. Metamask) is used to create, connect, and sign transa
 }
 ```
 
-:::info Gamestop
-**gamestop** option is available in SDK v1.22.0
+:::info Gamestop Wallet
+**Gamestop Wallet** is available in SDK v1.22.0
 :::
 
 ## Usage
@@ -74,23 +81,23 @@ result = {
 }
 ```
 
-# UI based on different providers
-
-### default/metamask
-```typescript
-// Sample link.setup call using the default provider:
-const setupResponsePayload: SetupResultsCodec = await link.setup({})
-```
-![default/metamask](../../../static/img/link-setup/default-metamask.png 'default/metamask')
-
-### none
+### List all available options
 ```typescript
 // Using none as option (list all available options including Magic):
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "none" })
 ```
 ![none](../../../static/img/link-setup/none.png 'none')
 
-### magic_link
+# UI based on different providers
+
+### Metamask (default)
+```typescript
+// Sample link.setup call using the default provider:
+const setupResponsePayload: SetupResultsCodec = await link.setup({})
+```
+![default/metamask](../../../static/img/link-setup/default-metamask.png 'default/metamask')
+
+### Magic Link
 ```typescript
 // Specifying Magic as provider:
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "magic_link" })
@@ -98,19 +105,19 @@ const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPrefe
 ![magic_link](../../../static/img/link-setup/magic_link.png 'magic_link')
 
 
-### gamestop
+### Gamestop Wallet
 ```typescript
 // Specifying Magic as provider:
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "gamestop" })
 ```
 
 :::caution
-Gamestop is available only on mainnet
+Gamestop Wallet is available only on mainnet
 :::
 
-![gamestop](../../../static/img/link-setup/gamestop.png 'gamestop')
+![Gamestop Wallet](../../../static/img/link-setup/gamestop.png 'Gamestop Wallet')
 
-### Multiple browser wallets detected
+## Multiple browser wallets detected
 
 :::caution
 Immutable supports different wallets to be used to connect to our platform. However, the wallet has the option to be set as the default wallet extension and, if this option is enabled, you might find issues when trying to connect using your another wallet.
