@@ -110,6 +110,14 @@ Gamestop is available only on mainnet
 
 ![gamestop](../../../static/img/link-setup/gamestop.png 'gamestop')
 
+### Multiple browser wallets detected
+
+:::caution
+Immutable supports different wallets to be used to connect to our platform. However, the wallet has the option to be set as the default wallet extension and, if this option is enabled, you might find issues when trying to connect using your another wallet.
+:::
+
+![multiple-wallets](../../../static/img/link-setup/multiple-wallets.png 'multiple-wallets')
+
 For more information about user wallet registration, see [User Registration](../user-registration.md) and [Account Management](../integrate-your-application/account-management.md).
 
 ## Errors
