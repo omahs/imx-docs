@@ -34,14 +34,14 @@ import {
 } from '@imtbl/imx-wallets-sdk-web';
 
 // Uses the static "build" function to get the SDK object instance
-const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.ROPSTEN });
+const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
 ```
 
-> **NOTICE:** An environment is required in order to instantiate the `WalletsSDK` object on top of the correct Ethereum network. For this particular, the enum `ENVIRONMENTS` can be imported from the package and used for such purpose. Access the [supported environments reference](#supported-environments) to check which environments are currently supported.
+> **NOTICE:** An environment is required to put the `WalletsSDK` object running into the correct infrastructure. For this particular, the enum `ENVIRONMENTS` can be imported from the package and used for such purpose. Access the [supported environments reference](#supported-environments) to check which environments are currently supported.
 
 #### Connect
 
-The connection step takes care of communicating with the selected L1 and L2 providers, establishing the connection, and retrieving the signers for each one of them, letting the L1 and L2 signers be available in the `WalletConnection` object through the `getWalletConnection` method:
+The connection step takes care of communicating with the selected L1 and L2 providers, establishing the connection, and retrieving the signers for each one of them, letting the L1 and L2 signers available in the `WalletConnection` object through the `getWalletConnection` method:
 <!-- TODO: The WalletConnection is also returned by the connection function itself. Document it properly. -->
 
 ```ts
@@ -52,7 +52,7 @@ import {
 } from '@imtbl/imx-wallets-sdk-web';
 
 // Uses the static "build" function to get the SDK object instance
-const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.ROPSTEN });
+const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
 
 // Defines the connection params (L1 provider)
 const connectionParams = { provider: L1_PROVIDERS.METAMASK };
@@ -78,8 +78,9 @@ To check the available options for both L1 and L2 providers, access the [support
 
 ### Supported Environments
 
-  * `ENVIRONMENTS.ROPSTEN` - For testing and validation on the Ropsten Ethereum network.
-  * `ENVIRONMENTS.MAINNET` - For the Mainnet Ethereum production network.
+  * `ENVIRONMENTS.DEVELOPMENT` - For local development infrastructure. Usually combined with the Ropsten Ethereum network.
+  * `ENVIRONMENTS.STAGING` - For testing and validation infrastructure. Usually combined with the Ropsten Ethereum network.
+  * `ENVIRONMENTS.PRODUCTION` - For the live and fresh daily basis infrastructure. Usually combined with the Mainnet Ethereum network.
 
 ### Supported L1 Wallets
 
@@ -106,18 +107,15 @@ import {
 } from '@imtbl/imx-wallets-sdk-web';
 import { getConfig, Workflows } from '@imtbl/core-sdk';
 
-// Defines the network to be used
-const ethNetwork = ENVIRONMENTS.ROPSTEN;
-
 // Sets up Wallets SDK
-const walletsSdk = await WalletsSDK.build({ env: ethNetwork });
+const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
 await walletsSdk.connect({ provider: L1_PROVIDERS.METAMASK });
 
 // Gets the "WalletConnection" object which contains the L1 and L2 signers
 const walletConnection = walletsSdk.getWalletConnection();
 
 // Sets up Core SDK
-const config = getConfig(ethNetwork);
+const config = getConfig('ropsten');
 const coreSdkWorkflows = new Workflows(config);
 
 // Registers the user off-chain if needed
