@@ -21,12 +21,18 @@ Wallets supported in Link:
 
 ```typescript
 // Use the default Link.setup params (providerPreference is "metamask")
-{}
+link.setup({})
 
 // Specify the provider preference
-{ 
-    providerPreference: "metamask" | "none" | "magic_link" | "gamestop"
+link.setup({providerPreference: ProviderPreference})
+
+enum ProviderPreference {
+    GAMESTOP = 'gamestop',
+    METAMASK = 'metamask',
+    MAGIC_LINK = 'magic_link',
+    NONE = 'none',
 }
+
 ```
 
 :::info Gamestop Wallet
