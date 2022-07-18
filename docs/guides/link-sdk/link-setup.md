@@ -121,7 +121,10 @@ Gamestop Wallet is available only on mainnet
 
 :::caution
 Immutable supports different wallets to be used to connect to our platform. However, the wallet has the option to be set as the default wallet extension and, if this option is enabled, you might find issues when trying to connect using your another wallet.
+
+For more information see [How to manage multiple wallet extensions for Immutable](https://support.immutable.com/hc/en-us/articles/5160531224079-Managing-multiple-wallet-extensions-for-Immutable)
 :::
+
 
 ![multiple-wallets](../../../static/img/link-setup/multiple-wallets.png 'multiple-wallets')
 
