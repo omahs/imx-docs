@@ -1,3 +1,16 @@
+# [1.10.0](https://github.com/immutable/imx-docs/compare/v1.9.2...v1.10.0) (2022-07-19)
+
+
+### Bug Fixes
+
+* **agnolia search:** upgrade DocSearch to v3 ([4fdf80a](https://github.com/immutable/imx-docs/commit/4fdf80aaff5018715cd5d08ead06c735069fe61e))
+* **docsearch v3:** remove CI crawlers as this is n ow done automatically ([f0b783a](https://github.com/immutable/imx-docs/commit/f0b783a8e7ecd4fca7a2946b7143bea7a9de9a0f))
+
+
+### Features
+
+* **agnolia docsearch v3:** update index for Agnolia ([357c926](https://github.com/immutable/imx-docs/commit/357c92668f6dfa13c5b5071f9108eecd4840241a))
+
 ## [1.9.2](https://github.com/immutable/imx-docs/compare/v1.9.1...v1.9.2) (2022-07-08)
 
 
