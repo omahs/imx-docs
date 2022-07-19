@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/immutable/imx-docs/compare/v1.10.0...v1.10.1) (2022-07-19)
+
+
+### Bug Fixes
+
+* onboarding links. Fixes [#34](https://github.com/immutable/imx-docs/issues/34) ([b771a4b](https://github.com/immutable/imx-docs/commit/b771a4bbdf9a368e9b78a49a5b01a913262e0b08))
+
 # [1.10.0](https://github.com/immutable/imx-docs/compare/v1.9.2...v1.10.0) (2022-07-19)
 
 
