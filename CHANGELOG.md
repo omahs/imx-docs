@@ -1,3 +1,11 @@
+## [1.10.2](https://github.com/immutable/imx-docs/compare/v1.10.1...v1.10.2) (2022-07-21)
+
+
+### Bug Fixes
+
+* divide the navbar items and the social content ([ea99bb0](https://github.com/immutable/imx-docs/commit/ea99bb0781da89c8340696c57a63b44ae3639bde))
+* handle flexbox as column for mobile view and fix mobile nav styling ([f81a43c](https://github.com/immutable/imx-docs/commit/f81a43cad5204d423db1e350fa6a76218db7744d))
+
 ## [1.10.1](https://github.com/immutable/imx-docs/compare/v1.10.0...v1.10.1) (2022-07-19)
 
 
