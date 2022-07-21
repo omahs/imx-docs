@@ -513,6 +513,10 @@ button.clean-btn.navbar-sidebar__close>svg {
   color: var(--ifm-color-primary) !important;
 }
 
+[data-theme='dark'] .elements-container :is(.token.punctuation,.token.operator,.token.boolean,.token.number) {
+  color: #fff !important;
+}
+
 .custom_sidebar_menu hr {
   width: 100% !important;
   margin: 26.4px !important;
