@@ -16,12 +16,12 @@ To start, here are some explanations of common terms:
 
 Here's a breakdown of current and future trading fees:
 
-| Fee          | Description                                                                                                | Current Value                                                           |
-| ------------ | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Protocol fee | Fee to support maker marketplace for providing liquidity. Requires >=v1.3.49 of the SDK to set maker fees. | 2% of the base price                                                    |
-| Maker fee    | Fee to support maker marketplace for providing liquidity. Requires >=v1.3.49 of the SDK to set maker fees. | x% <br><br> Set by the maker marketplace when listing an asset for sale |
-| Taker fee    | Fee to support taker marketplace for providing liquidity. Requires >=v1.3.49 of the SDK to set maker fees. | x% <br><br> Set by the taker marketplace when purchasing an asset       |
-| Royalty fee  | Fee distributed to the asset originator when the asset is sold.                                            | x% <br><br> Set at the time of minting by the asset originator.         |
+| Fee          | Description                                                                                                | Current Value                                                               |
+| ------------ | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Protocol fee | Fee to support maker marketplace for providing liquidity. Requires >=v1.3.49 of the SDK to set maker fees. | 2% of the base price                                                        |
+| Maker fee    | Fee to support maker marketplace for providing liquidity. Requires >=v1.3.49 of the SDK to set maker fees. | x% <br /><br /> Set by the maker marketplace when listing an asset for sale |
+| Taker fee    | Fee to support taker marketplace for providing liquidity. Requires >=v1.3.49 of the SDK to set maker fees. | x% <br /><br /> Set by the taker marketplace when purchasing an asset       |
+| Royalty fee  | Fee distributed to the asset originator when the asset is sold.                                            | x% <br /><br /> Set at the time of minting by the asset originator.         |
 
 Here's an example breakdown of a transaction to understand how trading fees work:
 
