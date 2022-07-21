@@ -114,6 +114,12 @@ const config = {
             docId: 'sdks/index',
           },
           {
+            type: 'html',
+            position: 'left',
+            value: '<hr/>',
+            className: 'custom_sidebar_menu hr',
+          },
+          {
             to: 'https://support.immutable.com/hc/en-us/articles/4405227590799-Immutable-X-Whitepaper',
             label: 'IMX Whitepaper',
             position: 'left',
@@ -133,7 +139,7 @@ const config = {
           },
           {
             to: 'https://www.immutable.com/careers',
-            label: 'Careers at immutable',
+            label: 'Careers at Immutable',
             position: 'left',
             className: 'custom_sidebar_menu',
           },
