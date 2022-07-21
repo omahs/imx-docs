@@ -63,7 +63,7 @@ const Footer = () => {
         </p>
       </div>
       <div className={styles.iconsContainer}>
-        <div className={styles.center}>
+        <div className={styles.iconsRow}>
           {theme.colorMode === 'dark' ? (
             <>
               <div
@@ -120,7 +120,7 @@ const Footer = () => {
             </>
           )}
         </div>
-        <div className={styles.center}>
+        <div className={styles.iconsRow}>
           <button
             onClick={() =>
               window.open('https://discord.gg/6GjgPkp464', '_blank')

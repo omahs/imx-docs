@@ -497,35 +497,36 @@ button.clean-btn.navbar-sidebar__close>svg {
 .navbar-sidebar .menu .menu__link {
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 15px;
   color: var(--ifm-color-home-text-primary);
-  padding-bottom: 12px;
-  padding-left: 0;
+  padding-left: 0.5rem;
   padding-right: 0;
+}
+
+.menu__link--sublist {
+  line-height: 20px !important;
+}
+
+.custom_sidebar_menu hr {
+  width: 100% !important;
+  margin: 26.4px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .navbar-sidebar__brand {
   height: 64px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .navbar__inner .custom_sidebar_menu {
   display: none;
 }
 
-.navbar-sidebar .menu .menu__list-item:nth-child(5) {
-  margin-top: 100px;
-}
-
 .custom_sidebar_menu {
-  font-family: 'Roboto' !important;
-  font-weight: 400 !important;
   font-size: 16px !important;
-  line-height: 24px !important;
-  padding-bottom: 6px !important;
-  margin-bottom: 8px !important;
 }
 
 [data-theme='dark'] .custom_sidebar_menu {
