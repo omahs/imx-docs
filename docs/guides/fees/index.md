@@ -16,12 +16,13 @@ To start, here are some explanations of common terms:
 
 Here's a breakdown of current and future trading fees:
 
-<table><thead><tr><th>Fee</th><th>Description</th><th>Current Value</th></tr></thead><tbody><tr><td>Protocol fee (coming soon)</td><td>Fee to support the ongoing development and maintenance of the Immutable X ecosystem.</td><td>2% of the base price</td></tr><tr><td>Maker fee</td><td>Fee to support maker marketplace for providing liquidity.<br />
-Requires &gt;=v1.3.49 of the SDK to set maker fees.</td><td>x%<br /><br />
-Set by the maker marketplace when listing an asset for sale</td></tr><tr><td>Taker fee</td><td>Fee to support taker marketplace for providing liquidity.<br />
-Requires &gt;=v1.3.49 of the SDK to set maker fees.</td><td>x%<br /><br />
-Set by the taker marketplace when purchasing an asset</td></tr><tr><td>Royalty fee</td><td>Fee distributed to the asset originator when the asset is sold.</td><td>x%<br /><br />
-Set at the time of minting by the asset originator.</td></tr></tbody></table>
+| Fee          | Description                                                                                                | Current Value                                                           |
+| ------------ | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Protocol fee | Fee to support maker marketplace for providing liquidity. Requires >=v1.3.49 of the SDK to set maker fees. | 2% of the base price                                                    |
+| Maker fee    | Fee to support maker marketplace for providing liquidity. Requires >=v1.3.49 of the SDK to set maker fees. | x% <br><br> Set by the maker marketplace when listing an asset for sale |
+| Taker fee    | Fee to support taker marketplace for providing liquidity. Requires >=v1.3.49 of the SDK to set maker fees. | x% <br><br> Set by the taker marketplace when purchasing an asset       |
+| Royalty fee  | Fee distributed to the asset originator when the asset is sold.                                            | x% <br><br> Set at the time of minting by the asset originator.         |
+
 Here's an example breakdown of a transaction to understand how trading fees work:
 
 Base price: 100 ETH
