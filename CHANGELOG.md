@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/immutable/imx-docs/compare/v1.10.2...v1.10.3) (2022-07-21)
+
+
+### Bug Fixes
+
+* **api:** ensure that the dark mode font for API schemas is lighter so it is visible ([c86f3bf](https://github.com/immutable/imx-docs/commit/c86f3bf270099e5a40df7524710c4116612995fb))
+
 ## [1.10.2](https://github.com/immutable/imx-docs/compare/v1.10.1...v1.10.2) (2022-07-21)
 
 
