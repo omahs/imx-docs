@@ -9,8 +9,8 @@ module.exports = {
         'authentication',
         'quickstart',
         'workflows',
-        'additional-info'
-      ]
-    }
-  ]
-}
+        'additional-info',
+      ],
+    },
+  ],
+};

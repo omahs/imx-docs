@@ -9,8 +9,8 @@ module.exports = {
         // 'authentication', // auth instructions included in installation docs
         'quickstart',
         'sdk-functions',
-        'additional-info'
-      ]
-    }
-  ]
-}
+        'additional-info',
+      ],
+    },
+  ],
+};
