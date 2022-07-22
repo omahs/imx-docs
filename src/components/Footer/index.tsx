@@ -3,12 +3,9 @@ import React from 'react';
 import styles from './styles.module.css';
 import { useColorMode } from '@docusaurus/theme-common';
 import FooterODarkIcon from '@site/static/icons/FooterODark';
-import FooterSDarkIcon from '@site/static/icons/FooterSDark';
 import FooterXDarkIcon from '@site/static/icons/FooterXDark';
 import FooterOLightIcon from '@site/static/icons/FooterOLight';
-import FooterSLightIcon from '@site/static/icons/FooterSLight';
 import FooterXLightIcon from '@site/static/icons/FooterXLight';
-import Studio from '@site/static/icons/Studio';
 
 const Footer = () => {
   const theme = useColorMode();

@@ -1,5 +1,5 @@
 import React from 'react';
-import GlobalHeader from '../components/GlobalHeader';
+// import GlobalHeader from '../components/GlobalHeader';
 
 // Default implementation, that you can customize
 export default function Root({ children }) {

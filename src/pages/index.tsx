@@ -7,77 +7,20 @@ import Title from '../components/Title';
 import Button from '../components/Button';
 import Footer from '../components/Footer';
 import Article from '../components/Article';
-import IconButton from '../components/IconButton';
-import GlobalHeader from '../components/GlobalHeader';
 import ArticleStack from '../components/ArticleStack';
 import CommunityCard from '../components/CommunityCard';
-import StatisticsCard from '../components/StatisticsCard';
 import SdkDarkIcon from '@site/static/icons/SdkDark';
 import SdkLightIcon from '@site/static/icons/SdkLight';
-import SaleDarkIcon from '@site/static/icons/SaleDark';
-import SaleLightIcon from '@site/static/icons/SaleLight';
-import GoSdkDarkIcon from '@site/static/icons/GoSdkDark';
-import DappsDarkIcon from '@site/static/icons/DappsDark';
-import GoSdkLightIcon from '@site/static/icons/GoSdkLight';
-import DappsLightIcon from '@site/static/icons/DappsLight';
-import RightArrowIcon from '@site/static/icons/RightArrow';
 import ContractDarkIcon from '@site/static/icons/ContractDark';
 import ExplorerDarkIcon from '@site/static/icons/ExplorerDark';
-import NftDarkIcon from '@site/static/icons/pictograms/NftDark';
 import ContractLightIcon from '@site/static/icons/ContractLight';
 import ExplorerLightIcon from '@site/static/icons/ExplorerLight';
-import NftLightIcon from '@site/static/icons/pictograms/NftLight';
-import UtilityDarkIcon from '@site/static/icons/pictograms/UtilityDark';
-import UtilityLightIcon from '@site/static/icons/pictograms/UtilityLight';
-import BugBountyDarkIcon from '@site/static/icons/pictograms/BugBountyDark';
-import BugBountyLightIcon from '@site/static/icons/pictograms/BugBountyLight';
 import DevelopersDarkIcon from '@site/static/icons/pictograms/DevelopersDark';
 import DevelopersLightIcon from '@site/static/icons/pictograms/DevelopersLight';
-import MarketplaceDarkIcon from '@site/static/icons/pictograms/MarketplaceDark';
-import MarketplaceLightIcon from '@site/static/icons/pictograms/MarketplaceLight';
 import ContributorsDarkIcon from '@site/static/icons/pictograms/ContributorsDark';
 import ContributorsLightIcon from '@site/static/icons/pictograms/ContributorsLight';
 
 const Homepage = () => {
-  const articleSectionData = [
-    {
-      LightIcon: NftLightIcon,
-      DarkIcon: NftDarkIcon,
-      title: (
-        <>
-          Launch an
-          <br className={styles.hideForExtraSmall} /> NFT project
-        </>
-      ),
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      cta: ['IP Collectible projects', 'Web3 NFT games'],
-    },
-    {
-      LightIcon: MarketplaceLightIcon,
-      DarkIcon: MarketplaceDarkIcon,
-      title: (
-        <>
-          Build a
-          <br className={styles.hideForExtraSmall} /> Marketplace
-        </>
-      ),
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      cta: ['Create a new marketplace', 'Integrating IMX'],
-    },
-    {
-      LightIcon: UtilityLightIcon,
-      DarkIcon: UtilityDarkIcon,
-      title: (
-        <>
-          Build
-          <br className={styles.hideForExtraSmall} /> WEB3 utility
-        </>
-      ),
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      cta: ['IP Collectible projects', 'Web3 NFT games'],
-    },
-  ];
-
   const articleStackSectionData = [
     {
       LightIcon: SdkLightIcon,
@@ -144,25 +87,6 @@ const Homepage = () => {
           text: 'Contributor Guidelines',
         },
       ],
-    },
-  ];
-
-  const statisticsSectionData = [
-    {
-      image: '/static/img/vyWorlds.png',
-      statisticsNumber: '18m',
-      statisticsLabel: 'Gas saved',
-      subtitle: 'VY Worlds',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices fringilla pharetra nullam placerat tellus.',
-    },
-    {
-      image: '/static/img/illuvium.png',
-      statisticsNumber: '20m',
-      statisticsLabel: 'NFTs TRADED',
-      subtitle: 'Illuvium',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices fringilla pharetra nullam placerat tellus.',
     },
   ];
 
