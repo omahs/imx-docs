@@ -1,3 +1,10 @@
+## [1.10.6](https://github.com/immutable/imx-docs/compare/v1.10.5...v1.10.6) (2022-07-25)
+
+
+### Bug Fixes
+
+* typo on code block ([b063cdf](https://github.com/immutable/imx-docs/commit/b063cdf74d568fd8f5893792b7256c1d274d7061))
+
 ## [1.10.5](https://github.com/immutable/imx-docs/compare/v1.10.4...v1.10.5) (2022-07-25)
 
 
