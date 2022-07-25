@@ -25,6 +25,7 @@
   - [Add a table](#add-a-table)
   - [Add an admonition](#add-an-admonition)
 - [Document Instance Versioning](#document-instance-versioning)
+- [Hosted SDK API References](#hosted-sdk-api-references)
 - [Contributing](#contributing)
 - [Community Support](#community-support)
 - [License](#license)
@@ -165,6 +166,22 @@ yarn run docusaurus docs:version:<doc_instance_id> <version>
 This will copy the existing set of docs into a `<doc_instance_id>_versioned_docs/version-<version>` folder in the root of the project folder (this appears to be unconfigurable).
 
 Check out the [docusaurus docs on versioning](https://docusaurus.io/docs/versioning) for more info about how it works.
+
+## Hosted SDK API References
+
+SDK API reference documentation can be hosted as static assets.
+
+Put the generatedf docs in the `api-docs/sdk-references` folder in the appropriate SDK folder. Rename the API reference folder to be the version number, replacing `.` with `-` in the folder name.
+
+```shell
+api-docs/
+  sdk-references/
+    <core-sdk-lang>
+      <x-x-x>
+        index.html # docs entry point
+```
+
+The SDK API references should be available at `<docsBaseUrl>/sdk-references/<core-sdk-lang>/<x-x-x>/`
 
 ## Contributing
 
