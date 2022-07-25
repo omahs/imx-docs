@@ -3,7 +3,11 @@ import DocSidebar from '@theme-original/DocSidebar';
 import SdkSwitcher from '@site/src/components/SdkSwitcher';
 import styles from './styles.module.css';
 
-export default function DocSidebarWrapper(props) {
+interface SidebarProps {
+  path: string;
+}
+
+const DocSidebarWrapper = (props: SidebarProps) => {
   const isSdkDocsPath = props.path.startsWith('/sdk-docs/') || false;
 
   return (
@@ -12,4 +16,6 @@ export default function DocSidebarWrapper(props) {
       <DocSidebar {...props} />
     </div>
   );
-}
+};
+
+export default DocSidebarWrapper;
