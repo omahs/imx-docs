@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import Layout from '@theme/Layout'; // eslint-disable-line import/no-unresolved
+import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import Title from '../components/Title';
 import Button from '../components/Button';

@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from '@docusaurus/Head'; // eslint-disable-line import/no-unresolved
-import BrowserOnly from '@docusaurus/BrowserOnly'; // eslint-disable-line import/no-unresolved
-import Layout from '@theme/Layout'; // eslint-disable-line import/no-unresolved
+import Head from '@docusaurus/Head';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import Layout from '@theme/Layout';
 
 export default function APIPage() {
   return (

@@ -42,14 +42,13 @@ module.exports = {
     'import/resolver': {
       typescript: {},
     },
+  },
+  rules: {
+    'import/prefer-default-export': 0,
     'import/no-unresolved': [
       2,
       { ignore: ['^@theme', '^@docusaurus', '^@site'] },
     ],
-  },
-  rules: {
-    'import/prefer-default-export': 0,
-    'import/no-unresolved': 'error',
     'no-nested-ternary': 0,
     'no-console': 0,
     'no-unused-vars': 0,

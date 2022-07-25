@@ -12,7 +12,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "lint": "eslint . --ext .ts --ext .js --ext .jsx --ext .tsx --max-warnings=0",
+    "lint": "eslint . --ext .ts,.js,.jsx,.tsx --max-warnings=0",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,css}'",
     "test": "jest --passWithNoTests",
@@ -21,7 +21,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{ts,js,jsx,tsx}": "yarn run lint:fix",
+    "src/**/*.{ts,js,jsx,tsx}": "yarn run lint:fix",
     "**/*.{ts,tsx}": "yarn run typecheck-staged"
   },
   "dependencies": {
