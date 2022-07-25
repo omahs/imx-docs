@@ -3,6 +3,10 @@ title: 'Core SDK Kotlin/JVM'
 slug: '/imx-core-sdk-kotlin-jvm'
 ---
 
+:::danger Core SDK Interface is unstable
+The TypeScript SDK hasn't hit v1.0 yet. Its public interface is unstable, and there are breaking changes scheduled to happen in the coming weeks to its interface. 
+:::
+
 ## Github
 
 Find the [Immutable Core SDK in Kotlin/JVM on Github](https://github.com/immutable/imx-core-sdk-kotlin-jvm).
