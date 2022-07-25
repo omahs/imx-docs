@@ -22,7 +22,7 @@ If you get stuck at any point, reach out on the dev-faq and dev-discussion chann
 There are a few tools required for this tutorial: 
 
 
-** [Homebrew](.https://brewsh/) **
+** [Homebrew](https://brew.sh/) **
 
 :::info 
 Homebrew is only needed for Mac OS.

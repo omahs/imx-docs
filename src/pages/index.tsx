@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
 import Layout from '@theme/Layout';
-
 import styles from './index.module.css';
 import Title from '../components/Title';
 import Button from '../components/Button';
@@ -64,18 +63,6 @@ const Homepage = () => {
         },
       ],
     },
-    // {
-    //   LightIcon: BugBountyLightIcon,
-    //   DarkIcon: BugBountyDarkIcon,
-    //   title: 'Bug bounty',
-    //   subtitle: (
-    //     <>
-    //       Find out our vulnerabilities
-    //       <br /> and win a bounty.
-    //     </>
-    //   ),
-    //   cta: ['Know more'],
-    // },
     {
       LightIcon: ContributorsLightIcon,
       DarkIcon: ContributorsDarkIcon,
@@ -152,24 +139,10 @@ const Homepage = () => {
                 Docs
               </Button>
             </a>
-            {/* <a href="/docs/welcome">
-              <IconButton
-                onClick={() => console.log('')}
-                Icon={<RightArrowIcon />}
-                className={styles.displayFromExtraSmall}
-              />
-            </a> */}
           </div>
           <br />
           <br />
           <br />
-
-          {/* Removing this section until the content is ready */}
-          {/* <div className={styles.articlesSection}>
-            {articleSectionData.map((article, index) => (
-              <Article {...article} key={index} />
-            ))}
-          </div> */}
 
           <Title
             title="Developer Tools"
@@ -193,21 +166,6 @@ const Homepage = () => {
               <Article {...article} key={index} />
             ))}
           </div>
-          {/* Removing until content is ready */}
-          {/* <Title
-            title="Built with IMX"
-            subtitle={
-              <>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                <br /> ultrices fringilla pharetra nullam placerat tellus.
-              </>
-            }
-          />
-          <div className={styles.statisticsSection}>
-            {statisticsSectionData.map((statisticsInfo, index) => (
-              <StatisticsCard {...statisticsInfo} key={index} />
-            ))}
-          </div> */}
 
           <Title
             title="Join The Community"

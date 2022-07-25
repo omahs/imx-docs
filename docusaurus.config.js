@@ -1,6 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-/* eslint-disable */
 const { ProvidePlugin } = require('webpack');
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -12,7 +11,7 @@ const pageOptions = {
 };
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+const configuration = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -191,4 +190,4 @@ const config = {
     }),
 };
 
-module.exports = config;
+module.exports = configuration;
