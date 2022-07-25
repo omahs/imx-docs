@@ -6,70 +6,20 @@ import Title from '../components/Title';
 import Button from '../components/Button';
 import Footer from '../components/Footer';
 import Article from '../components/Article';
-// import IconButton from '../components/IconButton';
 import ArticleStack from '../components/ArticleStack';
 import CommunityCard from '../components/CommunityCard';
-// import StatisticsCard from '../components/StatisticsCard';
 import SdkDarkIcon from '@site/static/icons/SdkDark';
 import SdkLightIcon from '@site/static/icons/SdkLight';
-// import RightArrowIcon from '@site/static/icons/RightArrow';
 import ContractDarkIcon from '@site/static/icons/ContractDark';
 import ExplorerDarkIcon from '@site/static/icons/ExplorerDark';
-// import NftDarkIcon from '@site/static/icons/pictograms/NftDark';
 import ContractLightIcon from '@site/static/icons/ContractLight';
 import ExplorerLightIcon from '@site/static/icons/ExplorerLight';
-// import NftLightIcon from '@site/static/icons/pictograms/NftLight';
-// import UtilityDarkIcon from '@site/static/icons/pictograms/UtilityDark';
-// import UtilityLightIcon from '@site/static/icons/pictograms/UtilityLight';
-// import BugBountyDarkIcon from '@site/static/icons/pictograms/BugBountyDark';
-// import BugBountyLightIcon from '@site/static/icons/pictograms/BugBountyLight';
 import DevelopersDarkIcon from '@site/static/icons/pictograms/DevelopersDark';
 import DevelopersLightIcon from '@site/static/icons/pictograms/DevelopersLight';
-// import MarketplaceDarkIcon from '@site/static/icons/pictograms/MarketplaceDark';
-// import MarketplaceLightIcon from '@site/static/icons/pictograms/MarketplaceLight';
 import ContributorsDarkIcon from '@site/static/icons/pictograms/ContributorsDark';
 import ContributorsLightIcon from '@site/static/icons/pictograms/ContributorsLight';
 
 const Homepage = () => {
-  // const articleSectionData = [
-  //   {
-  //     LightIcon: NftLightIcon,
-  //     DarkIcon: NftDarkIcon,
-  //     title: (
-  //       <>
-  //         Launch an
-  //         <br className={styles.hideForExtraSmall} /> NFT project
-  //       </>
-  //     ),
-  //     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  //     cta: ['IP Collectible projects', 'Web3 NFT games'],
-  //   },
-  //   {
-  //     LightIcon: MarketplaceLightIcon,
-  //     DarkIcon: MarketplaceDarkIcon,
-  //     title: (
-  //       <>
-  //         Build a
-  //         <br className={styles.hideForExtraSmall} /> Marketplace
-  //       </>
-  //     ),
-  //     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  //     cta: ['Create a new marketplace', 'Integrating IMX'],
-  //   },
-  //   {
-  //     LightIcon: UtilityLightIcon,
-  //     DarkIcon: UtilityDarkIcon,
-  //     title: (
-  //       <>
-  //         Build
-  //         <br className={styles.hideForExtraSmall} /> WEB3 utility
-  //       </>
-  //     ),
-  //     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  //     cta: ['IP Collectible projects', 'Web3 NFT games'],
-  //   },
-  // ];
-
   const articleStackSectionData = [
     {
       LightIcon: SdkLightIcon,
@@ -113,18 +63,6 @@ const Homepage = () => {
         },
       ],
     },
-    // {
-    //   LightIcon: BugBountyLightIcon,
-    //   DarkIcon: BugBountyDarkIcon,
-    //   title: 'Bug bounty',
-    //   subtitle: (
-    //     <>
-    //       Find out our vulnerabilities
-    //       <br /> and win a bounty.
-    //     </>
-    //   ),
-    //   cta: ['Know more'],
-    // },
     {
       LightIcon: ContributorsLightIcon,
       DarkIcon: ContributorsDarkIcon,
@@ -138,25 +76,6 @@ const Homepage = () => {
       ],
     },
   ];
-
-  // const statisticsSectionData = [
-  //   {
-  //     image: '/static/img/vyWorlds.png',
-  //     statisticsNumber: '18m',
-  //     statisticsLabel: 'Gas saved',
-  //     subtitle: 'VY Worlds',
-  //     description:
-  //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices fringilla pharetra nullam placerat tellus.',
-  //   },
-  //   {
-  //     image: '/static/img/illuvium.png',
-  //     statisticsNumber: '20m',
-  //     statisticsLabel: 'NFTs TRADED',
-  //     subtitle: 'Illuvium',
-  //     description:
-  //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices fringilla pharetra nullam placerat tellus.',
-  //   },
-  // ];
 
   const communitySectionData = [
     {
@@ -220,24 +139,10 @@ const Homepage = () => {
                 Docs
               </Button>
             </a>
-            {/* <a href="/docs/welcome">
-              <IconButton
-                onClick={() => console.log('')}
-                Icon={<RightArrowIcon />}
-                className={styles.displayFromExtraSmall}
-              />
-            </a> */}
           </div>
           <br />
           <br />
           <br />
-
-          {/* Removing this section until the content is ready */}
-          {/* <div className={styles.articlesSection}>
-            {articleSectionData.map((article, index) => (
-              <Article {...article} key={index} />
-            ))}
-          </div> */}
 
           <Title
             title="Developer Tools"
@@ -261,21 +166,6 @@ const Homepage = () => {
               <Article {...article} key={index} />
             ))}
           </div>
-          {/* Removing until content is ready */}
-          {/* <Title
-            title="Built with IMX"
-            subtitle={
-              <>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                <br /> ultrices fringilla pharetra nullam placerat tellus.
-              </>
-            }
-          />
-          <div className={styles.statisticsSection}>
-            {statisticsSectionData.map((statisticsInfo, index) => (
-              <StatisticsCard {...statisticsInfo} key={index} />
-            ))}
-          </div> */}
 
           <Title
             title="Join The Community"
