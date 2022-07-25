@@ -509,6 +509,14 @@ button.clean-btn.navbar-sidebar__close>svg {
   line-height: 20px !important;
 }
 
+[data-theme='dark'] .elements-container :is(.token.string, .token.function, .token.property) {
+  color: var(--ifm-color-primary) !important;
+}
+
+[data-theme='dark'] .elements-container :is(.token.punctuation,.token.operator,.token.boolean,.token.number) {
+  color: #fff !important;
+}
+
 .custom_sidebar_menu hr {
   width: 100% !important;
   margin: 26.4px !important;

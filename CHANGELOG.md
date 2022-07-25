@@ -1,3 +1,17 @@
+## [1.10.4](https://github.com/immutable/imx-docs/compare/v1.10.3...v1.10.4) (2022-07-21)
+
+
+### Bug Fixes
+
+* **api:** dark mode style punctuation, operators, booleans & numbers ([8fef579](https://github.com/immutable/imx-docs/commit/8fef579349dc22055a8812b8cda7ac1167995488))
+
+## [1.10.3](https://github.com/immutable/imx-docs/compare/v1.10.2...v1.10.3) (2022-07-21)
+
+
+### Bug Fixes
+
+* **api:** ensure that the dark mode font for API schemas is lighter so it is visible ([c86f3bf](https://github.com/immutable/imx-docs/commit/c86f3bf270099e5a40df7524710c4116612995fb))
+
 ## [1.10.2](https://github.com/immutable/imx-docs/compare/v1.10.1...v1.10.2) (2022-07-21)
 
 

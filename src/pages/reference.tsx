@@ -30,7 +30,7 @@ export default function APIPage() {
         {() => {
           const { API } = require('@stoplight/elements');
           return (
-            <>
+            <div className="elements-container">
               <API
                 apiDescriptionUrl="https://api.ropsten.x.immutable.com/openapi-docs"
                 router="hash"
@@ -38,7 +38,7 @@ export default function APIPage() {
                 layout="sidebar"
                 hideSchemas
               />
-            </>
+            </div>
           );
         }}
       </BrowserOnly>

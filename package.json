@@ -1,6 +1,6 @@
 {
   "name": "imx-docs",
-  "version": "1.10.2",
+  "version": "1.10.4",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -22,7 +22,7 @@
   },
   "lint-staged": {
     "*.{ts,js,jsx,tsx}": "yarn run lint:fix",
-    "**/*.ts": "yarn run typecheck-staged"
+    "**/*.{ts,tsx}": "yarn run typecheck-staged"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-beta.20",
