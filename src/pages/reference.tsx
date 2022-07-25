@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-
 import Layout from '@theme/Layout';
 
 export default function APIPage() {
@@ -29,7 +28,6 @@ export default function APIPage() {
         }
       >
         {() => {
-          // eslint-disable-next-line @typescript-eslint/no-var-requires
           const { API } = require('@stoplight/elements');
           return (
             <>
