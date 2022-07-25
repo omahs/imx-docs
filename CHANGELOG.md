@@ -1,3 +1,10 @@
+## [1.10.5](https://github.com/immutable/imx-docs/compare/v1.10.4...v1.10.5) (2022-07-25)
+
+
+### Bug Fixes
+
+* adds periods to sentences ([8052cbc](https://github.com/immutable/imx-docs/commit/8052cbc7532e2c76619a1c8fc1628aeb5c70ab1f))
+
 ## [1.10.4](https://github.com/immutable/imx-docs/compare/v1.10.3...v1.10.4) (2022-07-21)
 
 
