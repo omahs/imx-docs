@@ -575,3 +575,7 @@ button.clean-btn.navbar-sidebar__close>svg {
 .sidebar_src-theme-DocSidebar-styles-module div:nth-child(2) {
   padding-top: 0.5rem;
 }
+
+.theme-doc-version-badge {
+  margin-bottom: 1rem;
+}

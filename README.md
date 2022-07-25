@@ -19,12 +19,14 @@
   - [Requirements](#requirements)
   - [Installation](#installation)
 - [Writing Documentation](#writing-documentation)
-    - [Add or edit page](#add-a-new-page)
-    - [Add a new sidebar section](#add-a-new-sidebar-section)
-    - [Add a code block](#add-a-code-block)
-    - [Add a table](#add-a-table)
-    - [Add an admonition](#add-an-admonition)
-- [Support](#support)
+  - [Add or edit page](#add-or-edit-page)
+  - [Add a new Sidebar Section](#add-a-new-sidebar-section)
+  - [Add a code block](#add-a-code-block)
+  - [Add a table](#add-a-table)
+  - [Add an admonition](#add-an-admonition)
+- [Document Instance Versioning](#document-instance-versioning)
+- [Contributing](#contributing)
+- [Community Support](#community-support)
 - [License](#license)
 
 ## Introduction
@@ -129,6 +131,40 @@ Some **content** with _markdown_ `syntax`. Check [this `api`](#).
 ```
 
 Read more about using [Admonitions in Docusaurus](https://docusaurus.io/docs/markdown-features/admonitions)
+
+## Document Instance Versioning
+
+Each SDK has been configured as a docusaurus document instance. Each document instance `id`, which can be found in the `docusaurus.config.js` file.
+
+```js
+// example docusaurus.config.js
+
+plugins: [
+  ...,
+  [
+    '@docusaurus/plugin-content-docs',
+    {
+      path: 'docs/sdk-docs/core-sdk-ts/',     // path to the markdown files
+      routeBasePath: '/sdk-docs/core-sdk-ts', // URL path to rewrite in the browser
+      id: 'sdks-core-sdk-ts',                 // doc instance id
+      sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-ts.js'),
+      ...pageOptions
+    },
+  ],
+  ...
+]
+```
+
+Once you have the document instance `id`, the document instances can be versioned using the docusaurus CLI:
+
+```sh
+# versioning a specific doc instance
+yarn run docusaurus docs:version:<doc_instance_id> <version>
+```
+
+This will copy the existing set of docs into a `<doc_instance_id>_versioned_docs/version-<version>` folder in the root of the project folder (this appears to be unconfigurable).
+
+Check out the [docusaurus docs on versioning](https://docusaurus.io/docs/versioning) for more info about how it works.
 
 ## Contributing
 
