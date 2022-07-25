@@ -2,7 +2,7 @@ import React from 'react';
 // import GlobalHeader from '../components/GlobalHeader';
 
 interface Props {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 // Default implementation, that you can customize
