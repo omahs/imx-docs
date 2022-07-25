@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'Roboto';
   src: url('/static/fonts/roboto-regular.woff2') format('woff2'),
@@ -565,4 +569,9 @@ button.clean-btn.navbar-sidebar__close>svg {
     height: 3rem;
     width: 220px;
   }
+}
+
+/* override the DocSidebar top padding */
+.sidebar_src-theme-DocSidebar-styles-module div:nth-child(2) {
+  padding-top: 0.5rem;
 }
