@@ -4,7 +4,7 @@ slug: '/imx-core-sdk-ts'
 ---
 
 :::danger Core SDK Interface is unstable
-The TypeScript hasn't hit v1.0 yet. Its public interface is unstable, and there are breaking changes scheduled to happen in the coming weeks to its interface. Some of the upcoming changes include: 
+The TypeScript SDK hasn't hit v1.0 yet. Its public interface is unstable, and there are breaking changes scheduled to happen in the coming weeks to its interface. Some of the upcoming changes include: 
 - The `config` object is getting a revamp
 - The `/src/utils/stark` signing methods will end up private
 - The `/src/utils/crypt`o methods will end up private
