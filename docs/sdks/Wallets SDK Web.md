@@ -5,7 +5,7 @@ slug: "/imx-wallets-sdk-web"
 
 ## Github
 
-Find the [Immutable Wallets SDK Web on Github](https://github.com/immutable/imx-wallets-sdk-web)
+Find the <a href="https://github.com/immutable/imx-wallets-sdk-web">Immutable Wallets SDK Web on Github</a>.
 
 ## Installation
 
@@ -26,8 +26,7 @@ Two main steps are required to have the SDK up and running:
 
 #### Build
 
-The build step is the starting point and is responsible for instantiating and providing the `WalletsSDK` object. To make
-it happen it is needed to import the `WalletsSDK` and call its static `build` method:
+The build step is the starting point and is responsible for instantiating and providing the `WalletsSDK` object. To make it happen it is needed to import the `WalletsSDK` and call its static `build` method:
 
 ```ts
 import {
@@ -43,31 +42,54 @@ const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
 
 #### Connect
 
-The connection step takes care of communicating with the selected L1 and L2 providers, establishing the connection, and
-retrieving the signers for each one of them, letting the L1 and L2 signers available in the `WalletConnection` object
-through the `getWalletConnection` method:
+The connection step takes care of communicating with the selected L1 and L2 providers, establishing the connection, and retrieving the signers for each one of them, letting the L1 and L2 signers available in the `WalletConnection` object through the `getWalletConnection` method:
 <!-- TODO: The WalletConnection is also returned by the connection function itself. Document it properly. -->
+
+> **NOTICE:** Only the L1 provider is selectable at this point, the supported providers can be found on the enum `L1_PROVIDERS`. The L2 provider also has an enum (`L2_PROVIDERS`) but it is always resolved by default to `L2_PROVIDERS.IMX_WALLET` which is the SDK built-in L2 wallet solution. To check the available options for both L1 and L2 providers, access the [supported L1 wallets reference](#supported-l1-wallets) and [supported L2 wallets reference](#supported-l2-wallets).
+
+##### MetaMask
 
 ```ts
 import {
   ENVIRONMENTS,
-  L1_PROVIDERS
+  L1_PROVIDERS,
   WalletsSDK,
 } from '@imtbl/imx-wallets-sdk-web';
 
-// Uses the static "build" function to get the SDK object instance
-const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
-
-// Defines the connection params (L1 provider)
-const connectionParams = { provider: L1_PROVIDERS.METAMASK };
-// Connects to the desired wallets
-await walletsSdk.connect(connectionParams);
-
-// Gets the "WalletConnection" object which contains the L1 and L2 signers
-const walletConnection = walletsSdk.getWalletConnection();
+async function connect() {
+  // Uses the static "build" function to get the SDK object instance
+  const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
+  
+  // Defines the connection params (L1 provider)
+  const connectionParams = { provider: L1_PROVIDERS.METAMASK };
+  // Connects to the desired wallets
+  await walletsSdk.connect(connectionParams);
+  
+  // Gets the "WalletConnection" object which contains the L1 and L2 signers
+  const walletConnection = walletsSdk.getWalletConnection();
+}
 ```
 
-> **NOTICE:** L1 provider is the only selectable at this point, and it can be found on the enum `L1_PROVIDERS` available in package. The L2 provider also has an enum (`L2_PROVIDERS`) but it is always resolved by default to `L2_PROVIDERS.IMX_WALLET` which is the SDK built-in L2 wallet solution. To check the available options for both L1 and L2 providers, access the [supported L1 wallets reference](#supported-l1-wallets) and [supported L2 wallets reference](#supported-l2-wallets).
+##### WalletConnect
+
+```ts
+import {
+  ENVIRONMENTS,
+  L1_PROVIDERS,
+  WalletsSDK,
+} from '@imtbl/imx-wallets-sdk-web';
+
+async function connect() {
+  const walletsSdk = await WalletsSDK.build({
+    env: ENVIRONMENTS.STAGING,
+    rpc: {
+      '3': "https://rpc.url",
+    }
+  });
+  
+  await walletsSdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
+}
+```
 
 ### IsConnected
 
@@ -89,58 +111,18 @@ const walletConnection = walletsSdk.getWalletConnection();
 
 ### Supported L1 Wallets
 
-* `L1_PROVIDERS.METAMASK` - To connect using [](MetaMask).
-* `L1_PROVIDERS.WALLET_CONNECT` - To connect using [](WalletConnect).
+* `L1_PROVIDERS.METAMASK` - To connect using <a href="https://docs.metamask.io/guide/">MetaMask</a>.
+* `L1_PROVIDERS.WALLET_CONNECT` - To connect using <a href="https://docs.walletconnect.com/">WalletConnect</a>.
 
 ### Supported L2 Wallets
 
-* `L2_PROVIDERS.IMX_WALLET` - To make use of the SDK built-in L2 wallet solution.
+* `L2_PROVIDERS.IMX_WALLET` - Built-in L2 wallet solution.
 
 ## Code Examples
 
-### Connect
-
-#### MetaMask
-
-```ts
-import {
-  ENVIRONMENTS,
-  L1_PROVIDERS,
-  WalletsSDK,
-} from '@imtbl/imx-wallets-sdk-web';
-
-const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
-await walletsSdk.connect({ provider: L1_PROVIDERS.METAMASK });
-
-// Gets the "WalletConnection" object which contains the L1 and L2 signers
-const walletConnection = walletsSdk.getWalletConnection();
-```
-
-#### WalletConnect
-
-```ts
-import {
-  ENVIRONMENTS,
-  L1_PROVIDERS,
-  WalletsSDK,
-} from '@imtbl/imx-wallets-sdk-web';
-
-const walletsSdk = await WalletsSDK.build({
-  env: ENVIRONMENTS.STAGING,
-  rpc: {
-    '3': "https://rpc.url",
-  }
-});
-await walletsSdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
-
-// Gets the "WalletConnection" object which contains the L1 and L2 signers
-const walletConnection = walletsSdk.getWalletConnection();
-```
-
 ### Workflows
 
-Refer to the following code examples to understand how to use the [Core SDK]() workflows and signers provided by the
-Wallets SDK.
+Refer to the following code examples to understand how to use the [Core SDK](/docs/imx-core-sdk-ts) workflows and signers provided by the Wallets SDK.
 
 > :warning: The following examples use a Core SDK package version compatible with Wallets SDK integration.
 > 
