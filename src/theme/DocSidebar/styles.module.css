@@ -13,7 +13,6 @@
     height: 100%;
     position: sticky;
     top: 0;
-    width: var(--doc-sidebar-width);
     transition: opacity 50ms ease;
   }
 

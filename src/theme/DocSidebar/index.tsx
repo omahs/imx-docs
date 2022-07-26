@@ -1,4 +1,5 @@
 import React from 'react';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import DocSidebar from '@theme-original/DocSidebar';
 import SdkSwitcher from '@site/src/components/SdkSwitcher';
 import styles from './styles.module.css';
@@ -11,10 +12,14 @@ const DocSidebarWrapper = (props: SidebarProps) => {
   const isSdkDocsPath = props.path.startsWith('/sdk-docs/') || false;
 
   return (
-    <div className={styles.sidebar}>
-      {isSdkDocsPath && <SdkSwitcher />}
-      <DocSidebar {...props} />
-    </div>
+    <BrowserOnly>
+      {() => (
+        <div className={styles.sidebar}>
+          {isSdkDocsPath && <SdkSwitcher />}
+          <DocSidebar {...props} />
+        </div>
+      )}
+    </BrowserOnly>
   );
 };
 
