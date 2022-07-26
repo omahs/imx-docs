@@ -1,5 +1,7 @@
 import clsx from 'clsx';
+import classNames from 'classnames';
 import React, { Fragment, useState } from 'react';
+import { History } from 'history';
 import { useHistory } from 'react-router';
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
@@ -15,10 +17,6 @@ interface SdkList extends Array<SdkItem> {}
 
 const SDK_ID_KEY = 'imx-docs-core-sdk-id';
 
-const classNames = (...classes: string[]): string => {
-  return classes.filter(Boolean).join(' ');
-};
-
 const getSdkId = (sdkList: SdkList): number => {
   const localId = parseInt(localStorage.getItem(SDK_ID_KEY)) || 0;
 
@@ -29,19 +27,19 @@ const getSdkId = (sdkList: SdkList): number => {
 };
 
 const SdkSwitcher = () => {
-  const history = useHistory();
+  const history: History = useHistory();
   const sdkId = getSdkId(sdks);
-  const [selectedSdk, setSelectedSdk] = useState(sdks[sdkId]);
+  const [selectedSdk, setSelectedSdk] = useState<SdkItem>(sdks[sdkId]);
 
-  const onSelect = (value) => {
-    localStorage.setItem(SDK_ID_KEY, value.id);
-    setSelectedSdk(value);
-    history.push(value.url);
+  const handleOnChange = (sdkItem: SdkItem) => {
+    localStorage.setItem(SDK_ID_KEY, sdkItem.id.toString());
+    setSelectedSdk(sdkItem);
+    history.push(sdkItem.url);
   };
 
   return (
     <div className={clsx(styles.sdkSwitcher)}>
-      <Listbox value={selectedSdk} onChange={onSelect}>
+      <Listbox value={selectedSdk} onChange={handleOnChange}>
         {({ open }) => (
           <>
             <Listbox.Label className="block text-sm font-medium text-gray-700">

@@ -171,7 +171,7 @@ Check out the [docusaurus docs on versioning](https://docusaurus.io/docs/version
 
 SDK API reference documentation can be hosted as static assets.
 
-Put the generatedf docs in the `api-docs/sdk-references` folder in the appropriate SDK folder. Rename the API reference folder to be the version number, replacing `.` with `-` in the folder name.
+Put the generated docs in the `api-docs/sdk-references` folder in the appropriate SDK folder. Rename the API reference folder to be the version number, replacing `.` with `-` in the folder name.
 
 ```shell
 api-docs/
