@@ -1,3 +1,25 @@
+# [1.11.0](https://github.com/immutable/imx-docs/compare/v1.10.6...v1.11.0) (2022-07-26)
+
+
+### Bug Fixes
+
+* **broken link:** fix broken link ([a11cac4](https://github.com/immutable/imx-docs/commit/a11cac4f110e8494c7abce277dc7c7309e6282c1))
+* **build:** upgrade Docusaurus to fix build errors ([064ecb3](https://github.com/immutable/imx-docs/commit/064ecb33b282841b630d92a89b042e9c9f18006b))
+* **ci:** authorize CI to release when has correct permissions ([2a87cac](https://github.com/immutable/imx-docs/commit/2a87cacfebd4ffcff66ca9f6255ce70e67b455d0))
+* **eslint:** fix outstanding ESLint errors ([4ed57e7](https://github.com/immutable/imx-docs/commit/4ed57e7c1ae58dede89be03e157f96216f038adb))
+* **eslint:** use literal over number representation for raise type ([70342d8](https://github.com/immutable/imx-docs/commit/70342d8332f6df124cf28fcc131b8ec608151bb3))
+* **hooks:** ensure release doesnt hang due to husky hooks ([a62a725](https://github.com/immutable/imx-docs/commit/a62a725213165bd5d360ff15b6dd178d8c0c71b9))
+* **prettier:** make files pretty! ([89eeb85](https://github.com/immutable/imx-docs/commit/89eeb859957930d31bd8544b5e6bbd0c3aa12c3e))
+* remove unnecessary code ([759f76f](https://github.com/immutable/imx-docs/commit/759f76f27fc79d390274cac1c36cdea9bd3d1887))
+* revert unnecessary semantic release changes ([7c44cc8](https://github.com/immutable/imx-docs/commit/7c44cc88b02d4c0a6527905f2bd08b851b427ac0))
+* **typecheck:** fix typecheck lint error ([7fbb682](https://github.com/immutable/imx-docs/commit/7fbb68254cd8567260ceefffd78890f9a094359f))
+* **unused code:** remove unused code ([8667673](https://github.com/immutable/imx-docs/commit/86676731ea726f6c5cd9ef35e1525ac625cce0c5))
+
+
+### Features
+
+* add precommit hook for linting, lint-staged ([98dd8df](https://github.com/immutable/imx-docs/commit/98dd8df2170e7b3b2d2b5a4cbbe2e6def37c0d6d))
+
 ## [1.10.6](https://github.com/immutable/imx-docs/compare/v1.10.5...v1.10.6) (2022-07-25)
 
 
