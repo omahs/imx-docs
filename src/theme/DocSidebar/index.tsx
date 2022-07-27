@@ -14,7 +14,7 @@ const DocSidebarWrapper = (props: SidebarProps) => {
   return (
     <BrowserOnly>
       {() => (
-        <div className={styles.sidebar}>
+        <div className={styles.sidebarWrapper} id="sidebar-wrapper">
           {isSdkDocsPath && <SdkSwitcher />}
           <DocSidebar {...props} />
         </div>
