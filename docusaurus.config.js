@@ -78,7 +78,6 @@ const configuration = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -160,6 +159,12 @@ const configuration = {
         contextualSearch: true,
       },
     }),
+  scripts: [
+    {
+      src: 'https://survey.survicate.com/workspaces/eda6c86ea6ecb85e8b2eb630f344dcd5/web_surveys.js',
+      async: true,
+    },
+  ],
 };
 
 module.exports = configuration;
