@@ -35,12 +35,8 @@ import {
 } from '@imtbl/imx-wallets-sdk-web';
 
 (async () => {
-  // Uses the static "build" function to get the SDK object instance
-  const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
-})();
-
-(async () => {
-  // If you want to support WalletConnect, make sure to set your RPC config as well
+  // RPC config is optional if you don't want to support WalletConnect
+  // But If you do, make sure to set your RPC config following this reference:
   // Reference: https://docs.walletconnect.com/quick-start/dapps/web3-provider#provider-options
   const walletsSdk = await WalletsSDK.build({
     env: ENVIRONMENTS.STAGING,
