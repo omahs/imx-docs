@@ -1,2 +1,4 @@
 build/
-sidebars.js
+sidebars/
+api-docs/
+.eslintrc.js

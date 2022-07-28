@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-
 import Layout from '@theme/Layout';
 
 export default function APIPage() {
@@ -29,10 +28,9 @@ export default function APIPage() {
         }
       >
         {() => {
-          // eslint-disable-next-line @typescript-eslint/no-var-requires
           const { API } = require('@stoplight/elements');
           return (
-            <>
+            <div className="elements-container">
               <API
                 apiDescriptionUrl="https://api.ropsten.x.immutable.com/openapi-docs"
                 router="hash"
@@ -40,7 +38,7 @@ export default function APIPage() {
                 layout="sidebar"
                 hideSchemas
               />
-            </>
+            </div>
           );
         }}
       </BrowserOnly>

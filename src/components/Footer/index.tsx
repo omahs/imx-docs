@@ -3,12 +3,9 @@ import React from 'react';
 import styles from './styles.module.css';
 import { useColorMode } from '@docusaurus/theme-common';
 import FooterODarkIcon from '@site/static/icons/FooterODark';
-import FooterSDarkIcon from '@site/static/icons/FooterSDark';
 import FooterXDarkIcon from '@site/static/icons/FooterXDark';
 import FooterOLightIcon from '@site/static/icons/FooterOLight';
-import FooterSLightIcon from '@site/static/icons/FooterSLight';
 import FooterXLightIcon from '@site/static/icons/FooterXLight';
-import Studio from '@site/static/icons/Studio';
 
 const Footer = () => {
   const theme = useColorMode();
@@ -63,7 +60,7 @@ const Footer = () => {
         </p>
       </div>
       <div className={styles.iconsContainer}>
-        <div className={styles.center}>
+        <div className={styles.iconsRow}>
           {theme.colorMode === 'dark' ? (
             <>
               <div
@@ -120,7 +117,7 @@ const Footer = () => {
             </>
           )}
         </div>
-        <div className={styles.center}>
+        <div className={styles.iconsRow}>
           <button
             onClick={() =>
               window.open('https://discord.gg/6GjgPkp464', '_blank')
