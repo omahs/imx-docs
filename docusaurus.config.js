@@ -193,6 +193,11 @@ const configuration = {
       async: true,
     },
   ],
+  customFields: {
+    survicate: {
+      surveyId: '4ef30791a4b4838a',
+    },
+  },
 };
 
 module.exports = configuration;
