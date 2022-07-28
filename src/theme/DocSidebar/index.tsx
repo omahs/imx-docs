@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import DocSidebar from '@theme-original/DocSidebar';
-import SdkSwitcher from '@site/src/components/SdkSwitcher';
+// import SdkSwitcher from '@site/src/components/SdkSwitcher';
 import styles from './styles.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
@@ -11,8 +11,7 @@ interface SidebarProps {
 
 const DocSidebarWrapper = (props: SidebarProps) => {
   const { siteConfig } = useDocusaurusContext();
-
-  const isSdkDocsPath = props.path.startsWith('/sdk-docs/') || false;
+  // const isSdkDocsPath = props.path.startsWith('/sdk-docs/') || false;
 
   const addSurvicateEventListener = () => {
     window._sva.addEventListener(
@@ -56,8 +55,8 @@ const DocSidebarWrapper = (props: SidebarProps) => {
     <BrowserOnly>
       {() => (
         <div className={styles.sidebar}>
-          {isSdkDocsPath && <SdkSwitcher />}
-          <button onClick={handleOnClick}>Rate</button>
+          {/* {isSdkDocsPath && <SdkSwitcher />} */}
+          <button onClick={handleOnClick}>Rate this page</button>
           <DocSidebar {...props} />
         </div>
       )}
