@@ -34,8 +34,21 @@ import {
   WalletsSDK,
 } from '@imtbl/imx-wallets-sdk-web';
 
-// Uses the static "build" function to get the SDK object instance
-const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
+(async () => {
+  // Uses the static "build" function to get the SDK object instance
+  const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
+})();
+
+(async () => {
+  // If you want to support WalletConnect, make sure to set your RPC config as well
+  // Reference: https://docs.walletconnect.com/quick-start/dapps/web3-provider#provider-options
+  const walletsSdk = await WalletsSDK.build({
+    env: ENVIRONMENTS.STAGING,
+    rpc: {
+      1: "https://mainnet.mycustomnode.com",
+    }
+  });
+})();
 ```
 
 > **NOTICE:** An environment is required to put the `WalletsSDK` object running into the correct infrastructure. For this particular, the enum `ENVIRONMENTS` can be imported from the package and used for such purpose. Access the [supported environments reference](#supported-environments) to check which environments are currently supported.
@@ -47,8 +60,6 @@ The connection step takes care of communicating with the selected L1 and L2 prov
 
 > **NOTICE:** Only the L1 provider is selectable at this point, the supported providers can be found on the enum `L1_PROVIDERS`. The L2 provider also has an enum (`L2_PROVIDERS`) but it is always resolved by default to `L2_PROVIDERS.IMX_WALLET` which is the SDK built-in L2 wallet solution. To check the available options for both L1 and L2 providers, access the [supported L1 wallets reference](#supported-l1-wallets) and [supported L2 wallets reference](#supported-l2-wallets).
 
-##### MetaMask
-
 ```ts
 import {
   ENVIRONMENTS,
@@ -56,39 +67,15 @@ import {
   WalletsSDK,
 } from '@imtbl/imx-wallets-sdk-web';
 
-async function connect() {
-  // Uses the static "build" function to get the SDK object instance
-  const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
-  
-  // Defines the connection params (L1 provider)
-  const connectionParams = { provider: L1_PROVIDERS.METAMASK };
-  // Connects to the desired wallets
-  await walletsSdk.connect(connectionParams);
+(async () => {
+  // Defines the connection params (L1 provider) for MetaMask
+  await walletsSdk.connect({ provider: L1_PROVIDERS.METAMASK });
+  // Or WalletConnect
+  await walletsSdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
   
   // Gets the "WalletConnection" object which contains the L1 and L2 signers
   const walletConnection = walletsSdk.getWalletConnection();
-}
-```
-
-##### WalletConnect
-
-```ts
-import {
-  ENVIRONMENTS,
-  L1_PROVIDERS,
-  WalletsSDK,
-} from '@imtbl/imx-wallets-sdk-web';
-
-async function connect() {
-  const walletsSdk = await WalletsSDK.build({
-    env: ENVIRONMENTS.STAGING,
-    rpc: {
-      '3': "https://rpc.url",
-    }
-  });
-  
-  await walletsSdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
-}
+})();
 ```
 
 ### IsConnected
@@ -138,31 +125,33 @@ import {
 } from '@imtbl/imx-wallets-sdk-web';
 import { getConfig, Workflows } from '@imtbl/core-sdk';
 
-// Sets up Wallets SDK
-const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
-await walletsSdk.connect({ provider: L1_PROVIDERS.METAMASK });
+(async () => {
+  // Sets up Wallets SDK
+  const walletsSdk = await WalletsSDK.build({ env: ENVIRONMENTS.STAGING });
+  await walletsSdk.connect({ provider: L1_PROVIDERS.METAMASK });
 
-// Gets the "WalletConnection" object which contains the L1 and L2 signers
-const walletConnection = walletsSdk.getWalletConnection();
+  // Gets the "WalletConnection" object which contains the L1 and L2 signers
+  const walletConnection = walletsSdk.getWalletConnection();
 
-// Sets up Core SDK
-const config = getConfig('ropsten');
-const coreSdkWorkflows = new Workflows(config);
+  // Sets up Core SDK
+  const config = getConfig('ropsten');
+  const coreSdkWorkflows = new Workflows(config);
 
-// Registers the user off-chain if needed
-await coreSdkWorkflows.registerOffChain(walletConnection);
+  // Registers the user off-chain if needed
+  await coreSdkWorkflows.registerOffChain(walletConnection);
 
-// Creates a fake object of type GetSignableTradeRequest (just for reference)
-const fakeTradeRequest = {
-  user: '0x00',   // Ethereum address of the submitting user
-  order_id: 1000, // The ID of the maker order involved
-};
+  // Creates a fake object of type GetSignableTradeRequest (just for reference)
+  const fakeTradeRequest = {
+    user: '0x00',   // Ethereum address of the submitting user
+    order_id: 1000, // The ID of the maker order involved
+  };
 
-// Executes the create trade method
-const createTradeResponse = await coreSdkWorkflows.createTrade(
-  walletConnection,
-  fakeTradeRequest,
-);
+  // Executes the create trade method
+  const createTradeResponse = await coreSdkWorkflows.createTrade(
+    walletConnection,
+    fakeTradeRequest,
+  );
+})();
 ```
 
 ## Compatibility Matrix
