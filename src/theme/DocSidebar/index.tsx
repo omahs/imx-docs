@@ -56,7 +56,12 @@ const DocSidebarWrapper = (props: SidebarProps) => {
       {() => (
         <div className={styles.sidebar}>
           {/* {isSdkDocsPath && <SdkSwitcher />} */}
-          <button onClick={handleOnClick}>Rate this page</button>
+          <button
+            style={{ display: 'block', marginTop: '5rem' }}
+            onClick={handleOnClick}
+          >
+            Rate this page
+          </button>
           <DocSidebar {...props} />
         </div>
       )}
