@@ -14,27 +14,35 @@ const DocSidebarWrapper = (props: SidebarProps) => {
 
   const isSdkDocsPath = props.path.startsWith('/sdk-docs/') || false;
 
+  const addSurvicateEventListener = () => {
+    window._sva.addEventListener(
+      'question_answered',
+      function (surveyId, questionId, answer) {
+        console.log('surveyId: ', surveyId);
+        console.log('questionId: ', questionId);
+        console.log('answer: ', answer);
+        console.log('------------------------------------------------');
+      }
+    );
+  };
+
   useEffect(() => {
     // Disabling automatic targeting
     // https://developers.survicate.com/javascript/configuration/#disabling-automatic-targeting
-    (function (opts) {
-      opts.disableTargeting = true;
-    })((window._sva = window._sva || {}));
+    // (function (opts) {
+    //   opts.disableTargeting = true;
+    // })((window._sva = window._sva || {}));
+
+    if (window._sva !== undefined) {
+      addSurvicateEventListener();
+    }
 
     // Ensure Survicate script has loaded
     // when attempting to addEventListener
     window.addEventListener('SurvicateReady', function () {
-      window._sva.addEventListener(
-        'question_answered',
-        function (surveyId, questionId, answer) {
-          console.log('surveyId: ', surveyId);
-          console.log('questionId: ', questionId);
-          console.log('answer: ', answer);
-          console.log('------------------------------------------------');
-        }
-      );
+      addSurvicateEventListener();
     });
-  }, []);
+  }, [window._sva]);
 
   const handleOnClick = () => {
     const surveyId = (siteConfig.customFields.survicate as any).surveyId;
