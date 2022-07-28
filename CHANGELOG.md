@@ -1,3 +1,15 @@
+# [1.12.0](https://github.com/immutable/imx-docs/compare/v1.11.0...v1.12.0) (2022-07-27)
+
+
+### Bug Fixes
+
+* sSR fix ([be2ce66](https://github.com/immutable/imx-docs/commit/be2ce66feb5b6e4954c84d6f2af5f4e9cd0fdf8e))
+
+
+### Features
+
+* sDK document switcher ([7d98200](https://github.com/immutable/imx-docs/commit/7d98200836a546fd836a3fb3924b02caf1dc6e73))
+
 # [1.11.0](https://github.com/immutable/imx-docs/compare/v1.10.6...v1.11.0) (2022-07-26)
 
 

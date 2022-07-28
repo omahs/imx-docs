@@ -5,6 +5,11 @@ const { ProvidePlugin } = require('webpack');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const pageOptions = {
+  sidebarCollapsible: false,
+  showLastUpdateTime: true,
+};
+
 /** @type {import('@docusaurus/types').Config} */
 const configuration = {
   i18n: {
@@ -14,14 +19,14 @@ const configuration = {
   title: 'Immutable X Documentation',
   tagline:
     'Experience zero gas fees, instant trades, and carbon neutral NFTs for marketplaces, games, and applications without compromise. Build your NFT business in hours with our APIs.',
-  url: 'https://docs.immutable.com',
+  url: 'https://docs.x.immutable.com',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'immutable', // Usually your GitHub org/user name.
   projectName: 'imx-docs', // Usually your repo name.
-
+  staticDirectories: ['api-docs', 'static'],
   plugins: [
     () => ({
       name: 'custom-webpack-config',
@@ -53,6 +58,26 @@ const configuration = {
         };
       },
     }),
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        path: 'docs/sdk-docs/core-sdk-ts/', // path to the markdown files
+        routeBasePath: '/sdk-docs/core-sdk-ts', // URL path to rewrite in the browser
+        id: 'sdks-core-sdk-ts', // doc instance id
+        sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-ts.js'),
+        ...pageOptions,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        path: 'docs/sdk-docs/core-sdk-kotlin/',
+        routeBasePath: '/sdk-docs/core-sdk-kotlin',
+        id: 'sdks-core-sdk-kotlin',
+        sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-kotlin.js'),
+        ...pageOptions,
+      },
+    ],
   ],
   presets: [
     [
@@ -60,7 +85,10 @@ const configuration = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          path: 'docs/main',
+          routeBasePath: '/docs',
+          id: 'default',
+          sidebarPath: require.resolve('./sidebars/sidebars-docs.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/immutable/imx-docs/tree/main/',
         },
@@ -105,10 +133,10 @@ const configuration = {
             label: 'APIs',
           },
           {
+            type: 'doc',
+            docId: 'sdks',
             position: 'left',
             label: 'SDKs',
-            type: 'doc',
-            docId: 'sdks/index',
           },
           {
             type: 'html',
