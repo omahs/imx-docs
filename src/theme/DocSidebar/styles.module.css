@@ -6,7 +6,7 @@
  */
 
  @media (min-width: 997px) {
-  .sidebar {
+  .sidebarWrapper {
     display: flex;
     flex-direction: column;
     max-height: 100vh;
