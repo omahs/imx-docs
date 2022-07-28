@@ -134,8 +134,7 @@ const configuration = {
             label: 'APIs',
           },
           {
-            type: 'doc',
-            docId: 'sdks',
+            to: '/sdk-docs/core-sdk-ts/overview',
             position: 'left',
             label: 'SDKs',
           },
