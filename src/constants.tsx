@@ -9,4 +9,9 @@ export const sdks = [
     name: 'Core SDK Kotlin',
     url: '/sdk-docs/core-sdk-kotlin',
   },
+  {
+    id: 2,
+    name: 'Wallets SDK Web',
+    url: '/sdk-docs/wallets-sdk-web',
+  },
 ];

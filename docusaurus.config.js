@@ -78,6 +78,16 @@ const configuration = {
         ...pageOptions,
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        path: 'docs/sdk-docs/wallets-sdk-web/',
+        routeBasePath: '/sdk-docs/wallets-sdk-web',
+        id: 'sdks-wallets-sdk-web',
+        // sidebarPath: require.resolve('./sidebars/sidebars-wallets-sdk-web.js'),
+        ...pageOptions,
+      },
+    ],
   ],
   presets: [
     [

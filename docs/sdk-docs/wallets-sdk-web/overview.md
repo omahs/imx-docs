@@ -1,7 +1,15 @@
 ---
-title: "Wallets SDK Web"
-slug: "/imx-wallets-sdk-web"
+description: Overview of the Wallets SDK Web
+id: overview
+slug: /overview
+tags: [wallets-sdk-web]
 ---
+
+<!-- TODO: Separate in the correct parts after docs restructuring -->
+
+## Introduction
+
+The Immutable Wallets SDK provide a straightforward way to connect with a range of L1 and L2 wallets to access the needed signers for the Core SDK functionalities.
 
 ## Github
 
