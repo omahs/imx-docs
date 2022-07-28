@@ -41,7 +41,7 @@ const DocSidebarWrapper = (props: SidebarProps) => {
     window.addEventListener('SurvicateReady', function () {
       addSurvicateEventListener();
     });
-  }, [window._sva]);
+  }, []);
 
   const handleOnClick = () => {
     const surveyId = (siteConfig.customFields.survicate as any).surveyId;
