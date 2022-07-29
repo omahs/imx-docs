@@ -1,3 +1,10 @@
+## [1.12.2](https://github.com/immutable/imx-docs/compare/v1.12.1...v1.12.2) (2022-07-29)
+
+
+### Bug Fixes
+
+* redirect broken link ([2f1cdc0](https://github.com/immutable/imx-docs/commit/2f1cdc04b65883de2217c5bfb923c6aefe942900))
+
 ## [1.12.1](https://github.com/immutable/imx-docs/compare/v1.12.0...v1.12.1) (2022-07-28)
 
 
