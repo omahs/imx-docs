@@ -33,7 +33,7 @@
   width: 100%;
 }
 
-.center {
+.iconsRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -138,6 +138,20 @@
   background-size: contain
 }
 
+@media (max-width: 600px) {
+  .iconsContainer {
+    flex-direction: column;
+  }
+
+  .iconsRow {
+    padding: 0.5rem;
+  }
+
+  .starkwareIconContainer {
+    padding: 1rem;
+  }
+}
+
 @media (min-width: 640px) {
 
   .footerIcon,
@@ -150,7 +164,7 @@
     display: block;
   }
 
-  .center {
+  .iconsRow {
     gap: 1rem;
   }
 }

@@ -1,3 +1,100 @@
+## [1.12.1](https://github.com/immutable/imx-docs/compare/v1.12.0...v1.12.1) (2022-07-28)
+
+
+### Bug Fixes
+
+* style fix ([9045c8e](https://github.com/immutable/imx-docs/commit/9045c8e5beb965de6466809f1c9ad6bc97d86efe))
+
+# [1.12.0](https://github.com/immutable/imx-docs/compare/v1.11.0...v1.12.0) (2022-07-27)
+
+
+### Bug Fixes
+
+* sSR fix ([be2ce66](https://github.com/immutable/imx-docs/commit/be2ce66feb5b6e4954c84d6f2af5f4e9cd0fdf8e))
+
+
+### Features
+
+* sDK document switcher ([7d98200](https://github.com/immutable/imx-docs/commit/7d98200836a546fd836a3fb3924b02caf1dc6e73))
+
+# [1.11.0](https://github.com/immutable/imx-docs/compare/v1.10.6...v1.11.0) (2022-07-26)
+
+
+### Bug Fixes
+
+* **broken link:** fix broken link ([a11cac4](https://github.com/immutable/imx-docs/commit/a11cac4f110e8494c7abce277dc7c7309e6282c1))
+* **build:** upgrade Docusaurus to fix build errors ([064ecb3](https://github.com/immutable/imx-docs/commit/064ecb33b282841b630d92a89b042e9c9f18006b))
+* **ci:** authorize CI to release when has correct permissions ([2a87cac](https://github.com/immutable/imx-docs/commit/2a87cacfebd4ffcff66ca9f6255ce70e67b455d0))
+* **eslint:** fix outstanding ESLint errors ([4ed57e7](https://github.com/immutable/imx-docs/commit/4ed57e7c1ae58dede89be03e157f96216f038adb))
+* **eslint:** use literal over number representation for raise type ([70342d8](https://github.com/immutable/imx-docs/commit/70342d8332f6df124cf28fcc131b8ec608151bb3))
+* **hooks:** ensure release doesnt hang due to husky hooks ([a62a725](https://github.com/immutable/imx-docs/commit/a62a725213165bd5d360ff15b6dd178d8c0c71b9))
+* **prettier:** make files pretty! ([89eeb85](https://github.com/immutable/imx-docs/commit/89eeb859957930d31bd8544b5e6bbd0c3aa12c3e))
+* remove unnecessary code ([759f76f](https://github.com/immutable/imx-docs/commit/759f76f27fc79d390274cac1c36cdea9bd3d1887))
+* revert unnecessary semantic release changes ([7c44cc8](https://github.com/immutable/imx-docs/commit/7c44cc88b02d4c0a6527905f2bd08b851b427ac0))
+* **typecheck:** fix typecheck lint error ([7fbb682](https://github.com/immutable/imx-docs/commit/7fbb68254cd8567260ceefffd78890f9a094359f))
+* **unused code:** remove unused code ([8667673](https://github.com/immutable/imx-docs/commit/86676731ea726f6c5cd9ef35e1525ac625cce0c5))
+
+
+### Features
+
+* add precommit hook for linting, lint-staged ([98dd8df](https://github.com/immutable/imx-docs/commit/98dd8df2170e7b3b2d2b5a4cbbe2e6def37c0d6d))
+
+## [1.10.6](https://github.com/immutable/imx-docs/compare/v1.10.5...v1.10.6) (2022-07-25)
+
+
+### Bug Fixes
+
+* typo on code block ([b063cdf](https://github.com/immutable/imx-docs/commit/b063cdf74d568fd8f5893792b7256c1d274d7061))
+
+## [1.10.5](https://github.com/immutable/imx-docs/compare/v1.10.4...v1.10.5) (2022-07-25)
+
+
+### Bug Fixes
+
+* adds periods to sentences ([8052cbc](https://github.com/immutable/imx-docs/commit/8052cbc7532e2c76619a1c8fc1628aeb5c70ab1f))
+
+## [1.10.4](https://github.com/immutable/imx-docs/compare/v1.10.3...v1.10.4) (2022-07-21)
+
+
+### Bug Fixes
+
+* **api:** dark mode style punctuation, operators, booleans & numbers ([8fef579](https://github.com/immutable/imx-docs/commit/8fef579349dc22055a8812b8cda7ac1167995488))
+
+## [1.10.3](https://github.com/immutable/imx-docs/compare/v1.10.2...v1.10.3) (2022-07-21)
+
+
+### Bug Fixes
+
+* **api:** ensure that the dark mode font for API schemas is lighter so it is visible ([c86f3bf](https://github.com/immutable/imx-docs/commit/c86f3bf270099e5a40df7524710c4116612995fb))
+
+## [1.10.2](https://github.com/immutable/imx-docs/compare/v1.10.1...v1.10.2) (2022-07-21)
+
+
+### Bug Fixes
+
+* divide the navbar items and the social content ([ea99bb0](https://github.com/immutable/imx-docs/commit/ea99bb0781da89c8340696c57a63b44ae3639bde))
+* handle flexbox as column for mobile view and fix mobile nav styling ([f81a43c](https://github.com/immutable/imx-docs/commit/f81a43cad5204d423db1e350fa6a76218db7744d))
+
+## [1.10.1](https://github.com/immutable/imx-docs/compare/v1.10.0...v1.10.1) (2022-07-19)
+
+
+### Bug Fixes
+
+* onboarding links. Fixes [#34](https://github.com/immutable/imx-docs/issues/34) ([b771a4b](https://github.com/immutable/imx-docs/commit/b771a4bbdf9a368e9b78a49a5b01a913262e0b08))
+
+# [1.10.0](https://github.com/immutable/imx-docs/compare/v1.9.2...v1.10.0) (2022-07-19)
+
+
+### Bug Fixes
+
+* **agnolia search:** upgrade DocSearch to v3 ([4fdf80a](https://github.com/immutable/imx-docs/commit/4fdf80aaff5018715cd5d08ead06c735069fe61e))
+* **docsearch v3:** remove CI crawlers as this is n ow done automatically ([f0b783a](https://github.com/immutable/imx-docs/commit/f0b783a8e7ecd4fca7a2946b7143bea7a9de9a0f))
+
+
+### Features
+
+* **agnolia docsearch v3:** update index for Agnolia ([357c926](https://github.com/immutable/imx-docs/commit/357c92668f6dfa13c5b5071f9108eecd4840241a))
+
 ## [1.9.2](https://github.com/immutable/imx-docs/compare/v1.9.1...v1.9.2) (2022-07-08)
 
 

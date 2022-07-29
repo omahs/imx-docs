@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'Roboto';
   src: url('/static/fonts/roboto-regular.woff2') format('woff2'),
@@ -497,35 +501,44 @@ button.clean-btn.navbar-sidebar__close>svg {
 .navbar-sidebar .menu .menu__link {
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 15px;
   color: var(--ifm-color-home-text-primary);
-  padding-bottom: 12px;
-  padding-left: 0;
+  padding-left: 0.5rem;
   padding-right: 0;
+}
+
+.menu__link--sublist {
+  line-height: 20px !important;
+}
+
+[data-theme='dark'] .elements-container :is(.token.string, .token.function, .token.property) {
+  color: var(--ifm-color-primary) !important;
+}
+
+[data-theme='dark'] .elements-container :is(.token.punctuation,.token.operator,.token.boolean,.token.number) {
+  color: #fff !important;
+}
+
+.custom_sidebar_menu hr {
+  width: 100% !important;
+  margin: 26.4px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .navbar-sidebar__brand {
   height: 64px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .navbar__inner .custom_sidebar_menu {
   display: none;
 }
 
-.navbar-sidebar .menu .menu__list-item:nth-child(5) {
-  margin-top: 100px;
-}
-
 .custom_sidebar_menu {
-  font-family: 'Roboto' !important;
-  font-weight: 400 !important;
   font-size: 16px !important;
-  line-height: 24px !important;
-  padding-bottom: 6px !important;
-  margin-bottom: 8px !important;
 }
 
 [data-theme='dark'] .custom_sidebar_menu {
@@ -556,4 +569,13 @@ button.clean-btn.navbar-sidebar__close>svg {
     height: 3rem;
     width: 220px;
   }
+}
+
+/* override the DocSidebar top padding */
+#sidebar-wrapper div:nth-child(2) {
+  padding-top: 0.5rem;
+}
+
+.theme-doc-version-badge {
+  margin-bottom: 1rem;
 }
