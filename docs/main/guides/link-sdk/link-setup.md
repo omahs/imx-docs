@@ -37,7 +37,9 @@ enum ProviderPreference {
 ```
 
 :::info Gamestop Wallet
-**Gamestop Wallet** is available in SDK v1.22.0
+**Gamestop Wallet** is available in SDK v1.22.0.
+
+**Gamestop Wallet** should be at least version 0.6.0.
 :::
 
 ## Usage
