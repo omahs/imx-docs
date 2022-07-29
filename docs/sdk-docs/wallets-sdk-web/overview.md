@@ -5,6 +5,10 @@ slug: /overview
 tags: [wallets-sdk-web]
 ---
 
+:::danger WALLETS SDK WEB IS UNSTABLE AND HASN'T HIT v1.0 YET.
+Its public interface shouldn't be considered final, and we may need to release breaking changes without further notice.
+:::
+
 <!-- TODO: Separate in the correct parts after docs restructuring -->
 
 ## Introduction
