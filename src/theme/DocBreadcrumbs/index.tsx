@@ -6,6 +6,7 @@ import { ThemeClassNames } from '@docusaurus/theme-common';
 import {
   useSidebarBreadcrumbs,
   useHomePageRoute,
+  // @ts-ignore: weird docusaurus thing, this still works
 } from '@docusaurus/theme-common/internal';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
