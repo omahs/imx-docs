@@ -1,3 +1,18 @@
+## [1.12.3](https://github.com/immutable/imx-docs/compare/v1.12.2...v1.12.3) (2022-07-29)
+
+
+### Bug Fixes
+
+* redirect Old Kotlin docs ([8530afe](https://github.com/immutable/imx-docs/commit/8530afe3ad3559fbdfe4459119d8e90ac6273f29))
+* redirect to TS SDK overview - remove code flash ([4d01dbb](https://github.com/immutable/imx-docs/commit/4d01dbb09ad9f9e605058583ab15562432c1d44d))
+
+## [1.12.2](https://github.com/immutable/imx-docs/compare/v1.12.1...v1.12.2) (2022-07-29)
+
+
+### Bug Fixes
+
+* redirect broken link ([2f1cdc0](https://github.com/immutable/imx-docs/commit/2f1cdc04b65883de2217c5bfb923c6aefe942900))
+
 ## [1.12.1](https://github.com/immutable/imx-docs/compare/v1.12.0...v1.12.1) (2022-07-28)
 
 
