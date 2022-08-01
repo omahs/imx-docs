@@ -81,23 +81,12 @@ export default function DocBreadcrumbs() {
     window._sva.addEventListener(
       'question_answered',
       function (surveyId, questionId, answer) {
-        console.log('surveyId: ', surveyId);
-        console.log('questionId: ', questionId);
-        console.log('answer: ', answer);
-        console.log('------------------------------------------------');
+        // TODO: persist answer to cache
       }
     );
   };
 
   useEffect(() => {
-    // Disabling automatic targeting
-    // https://developers.survicate.com/javascript/configuration/#disabling-automatic-targeting
-    // (function (opts) {
-    //   opts.disableTargeting = true;
-    // })((window._sva = window._sva || {}));
-
-    // Ensure Survicate script has loaded
-    // when attempting to addEventListener
     window.addEventListener('SurvicateReady', function () {
       addSurvicateEventListener();
     });
