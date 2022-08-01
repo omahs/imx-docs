@@ -154,7 +154,7 @@ export default function DocBreadcrumbs() {
         })}
       </ul>
       <Button variant="solid" onClick={handleSurvicate}>
-        {'Rate this page'}
+        {'Rate this page ⭐️'}
       </Button>
     </nav>
   );
