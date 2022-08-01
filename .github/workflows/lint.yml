@@ -23,6 +23,7 @@ jobs:
         run: |
           yarn install
           yarn run lint
+          yarn run typecheck
   build:
     runs-on: ubuntu-latest
     steps:
