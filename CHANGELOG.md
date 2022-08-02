@@ -1,3 +1,11 @@
+## [1.12.4](https://github.com/immutable/imx-docs/compare/v1.12.3...v1.12.4) (2022-08-02)
+
+
+### Bug Fixes
+
+* fix code flash ([3174f0c](https://github.com/immutable/imx-docs/commit/3174f0c486cd835ccd0af9956346a2bd7c45ada7))
+* fix switcher styling ([6597954](https://github.com/immutable/imx-docs/commit/6597954ffdb9603944753958b61eac51d1e91652))
+
 ## [1.12.3](https://github.com/immutable/imx-docs/compare/v1.12.2...v1.12.3) (2022-07-29)
 
 
