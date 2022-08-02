@@ -1,5 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+require('dotenv').config();
 const { ProvidePlugin } = require('webpack');
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -194,7 +195,7 @@ const configuration = {
   ],
   customFields: {
     survicate: {
-      surveyId: '4ef30791a4b4838a',
+      surveyId: process.env.SURVICATE_DQS_SURVEY_ID,
     },
   },
 };
