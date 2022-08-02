@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React from 'react';
 import clsx from 'clsx';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { ThemeClassNames } from '@docusaurus/theme-common';
 import {
   useSidebarBreadcrumbs,
@@ -12,8 +11,9 @@ import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { translate } from '@docusaurus/Translate';
 import IconHome from '@theme/Icon/Home';
-import Button from '@site/src/components/Button';
 import styles from './styles.module.css';
+import SurvicateWidget from '@site/src/components/SurvicateWidget';
+
 // TODO move to design system folder
 function BreadcrumbsItemLink({ children, href, isLast }) {
   const className = 'breadcrumbs__link';
@@ -74,36 +74,8 @@ function HomeBreadcrumbItem() {
   );
 }
 export default function DocBreadcrumbs() {
-  const { siteConfig } = useDocusaurusContext();
   const breadcrumbs = useSidebarBreadcrumbs();
   const homePageRoute = useHomePageRoute();
-
-  const addSurvicateEventListener = () => {
-    window._sva.addEventListener(
-      'question_answered',
-      function (surveyId, questionId, answer) {
-        // TODO: persist answer to cache
-      }
-    );
-  };
-
-  useEffect(() => {
-    window.addEventListener('SurvicateReady', function () {
-      addSurvicateEventListener();
-    });
-
-    if (window._sva !== undefined) {
-      addSurvicateEventListener();
-    }
-  }, []);
-
-  const handleSurvicate = () => {
-    const surveyId = (siteConfig.customFields.survicate as any).surveyId;
-    return window._sva.showSurvey(surveyId, {
-      forceDisplay: true,
-      displayMethod: 'immediately',
-    });
-  };
 
   if (!breadcrumbs) {
     return null;
@@ -143,9 +115,7 @@ export default function DocBreadcrumbs() {
           );
         })}
       </ul>
-      <Button variant="solid" onClick={handleSurvicate}>
-        {'Rate this page ⭐️'}
-      </Button>
+      <SurvicateWidget />
     </nav>
   );
 }

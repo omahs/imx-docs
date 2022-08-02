@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import { ThemeClassNames } from '@docusaurus/theme-common';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 // @ts-ignore: weird docusaurus thing, this still works
 import { useDoc } from '@docusaurus/theme-common/internal';
 import LastUpdated from '@theme/LastUpdated';
 import EditThisPage from '@theme/EditThisPage';
 import TagsListInline from '@theme/TagsListInline';
-import Button from '@site/src/components/Button';
 import styles from './styles.module.css';
+import SurvicateWidget from '@site/src/components/SurvicateWidget';
 function TagsRow(props) {
   return (
     <div
@@ -54,7 +53,6 @@ function EditMetaRow({
 }
 export default function DocItemFooter() {
   const { metadata } = useDoc();
-  const { siteConfig } = useDocusaurusContext();
   const {
     editUrl,
     lastUpdatedAt,
@@ -68,33 +66,6 @@ export default function DocItemFooter() {
   if (!canDisplayFooter) {
     return null;
   }
-
-  const addSurvicateEventListener = () => {
-    window._sva.addEventListener(
-      'question_answered',
-      function (surveyId, questionId, answer) {
-        // TODO: persist answer to cache
-      }
-    );
-  };
-
-  useEffect(() => {
-    window.addEventListener('SurvicateReady', function () {
-      addSurvicateEventListener();
-    });
-
-    if (window._sva !== undefined) {
-      addSurvicateEventListener();
-    }
-  }, []);
-
-  const handleSurvicate = () => {
-    const surveyId = (siteConfig.customFields.survicate as any).surveyId;
-    return window._sva.showSurvey(surveyId, {
-      forceDisplay: true,
-      displayMethod: 'immediately',
-    });
-  };
 
   return (
     <footer
@@ -113,9 +84,7 @@ export default function DocItemFooter() {
           formattedLastUpdatedAt={formattedLastUpdatedAt}
         />
       )}
-      <Button variant="solid" onClick={handleSurvicate}>
-        {'Rate this page ⭐️'}
-      </Button>
+      <SurvicateWidget />
     </footer>
   );
 }
