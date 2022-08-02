@@ -31,4 +31,9 @@ export const sdks = [
     displayName: 'Immutable Core SDK - Swift',
     url: '/sdk-docs/core-sdk-swift/overview',
   },
+  {
+    id: 2,
+    name: 'Core SDK Example',
+    url: '/sdk-docs/core-sdk-example',
+  },
 ];

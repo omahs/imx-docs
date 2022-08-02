@@ -92,6 +92,16 @@ const configuration = {
         ...pageOptions,
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        path: 'docs/sdk-docs/core-sdk-example/', // path to the markdown files
+        routeBasePath: '/sdk-docs/core-sdk-example', // URL path to rewrite in the browser
+        id: 'sdks-core-sdk-example', // doc instance id
+        sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-example.js'),
+        ...pageOptions,
+      },
+    ],
   ],
   presets: [
     [
