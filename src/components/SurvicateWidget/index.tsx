@@ -26,6 +26,7 @@ const SurvicateWidget = () => {
 
   const handleSurvicate = () => {
     const surveyId = (siteConfig.customFields.survicate as any).surveyId;
+    console.log('surveyId: ' + surveyId);
     return window._sva.showSurvey(surveyId, {
       forceDisplay: true,
       displayMethod: 'immediately',
