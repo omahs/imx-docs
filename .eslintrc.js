@@ -45,6 +45,7 @@ module.exports = {
   },
   rules: {
     'import/prefer-default-export': 0,
+    'react/prop-types': 0,
     'import/no-unresolved': [
       'error',
       { ignore: ['^@theme', '^@docusaurus', '^@site'] },
