@@ -578,3 +578,7 @@ button.clean-btn.navbar-sidebar__close>svg {
 .theme-doc-version-badge {
   margin-bottom: 1rem;
 }
+
+.theme-doc-sidebar-container {
+  clip-path: none !important;
+}
