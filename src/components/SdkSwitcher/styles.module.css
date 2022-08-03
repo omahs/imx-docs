@@ -2,7 +2,6 @@
   margin: 3.5rem 0.5rem 0rem 0.75rem;
   padding: 0.25rem;
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .switcherLabel {
@@ -63,10 +62,8 @@
   width: 1.25rem;
 }
 
-/* ul */
-
 [data-theme='dark'] .switcherList {
-  color: var(--ifm-color-primary);
+  color: white;
   background-color: var(--ifm-dropdown-background-color);
 }
 
@@ -90,7 +87,6 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   width: 263px;
-  border: 1px solid #e5e7eb;
 }
 
 /* li */
@@ -135,7 +131,7 @@
 .switcherListOptionTextSelected {
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-weight: 600;
+  color: var(--ifm-color-primary);
 }
 
 /* span selected option check mark container */
@@ -143,6 +139,7 @@
   display: flex;
   align-items: center;
   color: var(--ifm-color-primary-darkest);
+  background-color: var(--ifm-dropdown-hover-background-color);
 }
 
 .switcherListOptionSelectedActive {
