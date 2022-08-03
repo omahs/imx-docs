@@ -82,13 +82,6 @@ const SdkSwitcher = () => {
                           const defaultStyle = clsx(
                             styles.switcherListOptionContent
                           );
-                          const checkActive = clsx(
-                            styles.switcherListOptionSelected,
-                            styles.switcherListOptionSelectedActive
-                          );
-                          const defaultCheck = clsx(
-                            styles.switcherListOptionSelected
-                          );
 
                           return (
                             <div
@@ -104,22 +97,7 @@ const SdkSwitcher = () => {
                                 }
                               >
                                 {sdk.name}
-                              </span>
-
-                              {selected ? (
-                                <span
-                                  className={
-                                    active ? checkActive : defaultCheck
-                                  }
-                                >
-                                  <CheckIcon
-                                    className={clsx(
-                                      styles.switcherListOptionSelectedCheck
-                                    )}
-                                    aria-hidden="true"
-                                  />
-                                </span>
-                              ) : null}
+                              </span>{' '}
                             </div>
                           );
                         }}
