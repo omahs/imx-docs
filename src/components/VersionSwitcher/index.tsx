@@ -1,23 +1,33 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import {
   useVersions,
   useActiveDocContext,
+  // @ts-ignore eslint-ignore
 } from '@docusaurus/plugin-content-docs/client';
 import { useDocsPreferredVersion } from '@docusaurus/theme-common';
+// @ts-ignore
 import { useDocsVersionCandidates } from '@docusaurus/theme-common/internal';
 import { translate } from '@docusaurus/Translate';
 import DefaultNavbarItem from '@theme/NavbarItem/DefaultNavbarItem';
 import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
+
+interface VersionSwitcherProps {
+  mobile: false;
+  docsPluginId: string;
+}
+
 const getVersionMainDoc = (version) =>
   version.docs.find((doc) => doc.id === version.mainDocId);
-export default function DocsVersionDropdownNavbarItem({
+
+const VersionSwitcher = ({
   mobile = false,
   docsPluginId,
   // dropdownActiveClassDisabled,
   // dropdownItemsBefore,
   // dropdownItemsAfter,
   ...props
-}) {
+}: VersionSwitcherProps) => {
   const activeDocContext = useActiveDocContext(docsPluginId);
   const versions = useVersions(docsPluginId);
   const { savePreferredVersionName } = useDocsPreferredVersion(docsPluginId);
@@ -73,7 +83,6 @@ export default function DocsVersionDropdownNavbarItem({
       />
     );
   }
-
   return (
     <DropdownNavbarItem
       {...props}
@@ -84,4 +93,6 @@ export default function DocsVersionDropdownNavbarItem({
       // isActive={dropdownActiveClassDisabled ? () => false : undefined}
     />
   );
-}
+};
+
+export default VersionSwitcher;

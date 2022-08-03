@@ -3,8 +3,8 @@ import React, { Fragment, useState } from 'react';
 import { History } from 'history';
 import { useHistory } from 'react-router';
 import { Listbox, Transition } from '@headlessui/react';
-import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
-import DocsVersionDropdownNavbarItem from '@site/src/components/VersionSwitcher';
+import { SelectorIcon } from '@heroicons/react/solid';
+import VersionSwitcher from '@site/src/components/VersionSwitcher';
 import styles from './styles.module.css';
 import { sdks } from '@site/src/constants';
 
@@ -106,7 +106,10 @@ const SdkSwitcher = () => {
                   </Listbox.Options>
                 </Transition>
               </div>
-              <DocsVersionDropdownNavbarItem docsPluginId={selectedSdk.sdkId} />
+              <VersionSwitcher
+                mobile={false}
+                docsPluginId={selectedSdk.sdkId}
+              />
             </>
           )}
         </Listbox>
