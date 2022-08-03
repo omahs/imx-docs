@@ -4,11 +4,13 @@ import { History } from 'history';
 import { useHistory } from 'react-router';
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
+import DocsVersionDropdownNavbarItem from '@site/src/components/VersionSwitcher';
 import styles from './styles.module.css';
 import { sdks } from '@site/src/constants';
 
 interface SdkItem {
   id: number;
+  sdkId: string;
   name: string;
   url: string;
 }
@@ -37,94 +39,101 @@ const SdkSwitcher = () => {
   };
 
   return (
-    <div className={clsx(styles.sdkSwitcher)}>
-      <Listbox value={selectedSdk} onChange={handleOnChange}>
-        {({ open }) => (
-          <>
-            <Listbox.Label className={clsx(styles.switcherLabel)}>
-              Core SDK
-            </Listbox.Label>
-            <div className="mt-1 relative">
-              <Listbox.Button className={clsx(styles.switcherButton)}>
-                <span className={clsx(styles.switcherButtonContent)}>
-                  <span className={clsx(styles.switcherButtonText)}>
-                    {selectedSdk.name}
+    <>
+      <div className={clsx(styles.switcherLabel)}>Core SDK</div>
+      <div className={clsx(styles.sdkSwitcher)}>
+        <Listbox value={selectedSdk} onChange={handleOnChange}>
+          {({ open }) => (
+            <>
+              <div>
+                <Listbox.Button className={clsx(styles.switcherButton)}>
+                  <span className={clsx(styles.switcherButtonContent)}>
+                    <span className={clsx(styles.switcherButtonText)}>
+                      {selectedSdk.name}
+                    </span>
                   </span>
-                </span>
-                <span className={clsx(styles.switcherButtonIconGroup)}>
-                  <SelectorIcon
-                    className={clsx(styles.switcherButtonIcon)}
-                    aria-hidden="true"
-                  />
-                </span>
-              </Listbox.Button>
+                  <span className={clsx(styles.switcherButtonIconGroup)}>
+                    <SelectorIcon
+                      className={clsx(styles.switcherButtonIcon)}
+                      aria-hidden="true"
+                    />
+                  </span>
+                </Listbox.Button>
 
-              <Transition
-                show={open}
-                as={Fragment}
-                leave="transition ease-in duration-100"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-              >
-                <Listbox.Options className={clsx(styles.switcherList)}>
-                  {sdks.map((sdk) => (
-                    <Listbox.Option
-                      key={sdk.id}
-                      className={clsx(styles.switcherListOption)}
-                      value={sdk}
-                    >
-                      {({ selected, active }) => {
-                        const activeStyles = clsx(
-                          styles.switcherListOptionContent,
-                          styles.switcherListOptionActive
-                        );
-                        const defaultStyle = clsx(
-                          styles.switcherListOptionContent
-                        );
-                        const checkActive = clsx(
-                          styles.switcherListOptionSelected,
-                          styles.switcherListOptionSelectedActive
-                        );
-                        const defaultCheck = clsx(
-                          styles.switcherListOptionSelected
-                        );
+                <Transition
+                  show={open}
+                  as={Fragment}
+                  leave="transition ease-in duration-100"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <Listbox.Options className={clsx(styles.switcherList)}>
+                    {sdks.map((sdk) => (
+                      <Listbox.Option
+                        key={sdk.id}
+                        className={clsx(styles.switcherListOption)}
+                        value={sdk}
+                      >
+                        {({ selected, active }) => {
+                          const activeStyles = clsx(
+                            styles.switcherListOptionContent,
+                            styles.switcherListOptionActive
+                          );
+                          const defaultStyle = clsx(
+                            styles.switcherListOptionContent
+                          );
+                          const checkActive = clsx(
+                            styles.switcherListOptionSelected,
+                            styles.switcherListOptionSelectedActive
+                          );
+                          const defaultCheck = clsx(
+                            styles.switcherListOptionSelected
+                          );
 
-                        return (
-                          <div className={active ? activeStyles : defaultStyle}>
-                            <span
-                              className={
-                                selected
-                                  ? clsx(styles.switcherListOptionTextSelected)
-                                  : clsx(styles.switcherListOptionText)
-                              }
+                          return (
+                            <div
+                              className={active ? activeStyles : defaultStyle}
                             >
-                              {sdk.name}
-                            </span>
-
-                            {selected ? (
                               <span
-                                className={active ? checkActive : defaultCheck}
+                                className={
+                                  selected
+                                    ? clsx(
+                                        styles.switcherListOptionTextSelected
+                                      )
+                                    : clsx(styles.switcherListOptionText)
+                                }
                               >
-                                <CheckIcon
-                                  className={clsx(
-                                    styles.switcherListOptionSelectedCheck
-                                  )}
-                                  aria-hidden="true"
-                                />
+                                {sdk.name}
                               </span>
-                            ) : null}
-                          </div>
-                        );
-                      }}
-                    </Listbox.Option>
-                  ))}
-                </Listbox.Options>
-              </Transition>
-            </div>
-          </>
-        )}
-      </Listbox>
-    </div>
+
+                              {selected ? (
+                                <span
+                                  className={
+                                    active ? checkActive : defaultCheck
+                                  }
+                                >
+                                  <CheckIcon
+                                    className={clsx(
+                                      styles.switcherListOptionSelectedCheck
+                                    )}
+                                    aria-hidden="true"
+                                  />
+                                </span>
+                              ) : null}
+                            </div>
+                          );
+                        }}
+                      </Listbox.Option>
+                    ))}
+                  </Listbox.Options>
+                </Transition>
+              </div>
+              <DocsVersionDropdownNavbarItem docsPluginId={selectedSdk.sdkId} />
+            </>
+          )}
+        </Listbox>
+      </div>
+    </>
   );
 };
 

@@ -65,6 +65,7 @@ const configuration = {
         routeBasePath: '/sdk-docs/core-sdk-ts', // URL path to rewrite in the browser
         id: 'sdks-core-sdk-ts', // doc instance id
         sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-ts.js'),
+        includeCurrentVersion: false,
         ...pageOptions,
       },
     ],
@@ -75,6 +76,7 @@ const configuration = {
         routeBasePath: '/sdk-docs/core-sdk-kotlin',
         id: 'sdks-core-sdk-kotlin',
         sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-kotlin.js'),
+        // includeCurrentVersion: false, // enable this when Kotlin docs are versioned
         ...pageOptions,
       },
     ],
