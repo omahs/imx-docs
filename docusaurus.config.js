@@ -1,5 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+require('dotenv').config();
 const { ProvidePlugin } = require('webpack');
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -106,7 +107,6 @@ const configuration = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -187,6 +187,17 @@ const configuration = {
         contextualSearch: true,
       },
     }),
+  scripts: [
+    {
+      src: 'https://survey.survicate.com/workspaces/eda6c86ea6ecb85e8b2eb630f344dcd5/web_surveys.js',
+      async: true,
+    },
+  ],
+  customFields: {
+    survicate: {
+      surveyId: process.env.SURVICATE_DQS_SURVEY_ID,
+    },
+  },
 };
 
 module.exports = configuration;

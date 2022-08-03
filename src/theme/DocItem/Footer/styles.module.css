@@ -1,0 +1,21 @@
+.lastUpdated {
+  margin-top: 0.2rem;
+  font-style: italic;
+  font-size: smaller;
+}
+
+.docFooterWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.docFooterEditMetaRow {
+  width: 20rem;
+}
+
+@media (min-width: 997px) {
+  .lastUpdated {
+    text-align: right;
+  }
+}
