@@ -1,27 +1,54 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '@site/src/components/Button';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+interface Rating {
+  answer: number;
+  page: string;
+  createdAt: Date;
+}
 
 const SurvicateWidget = () => {
   const { siteConfig } = useDocusaurusContext();
 
+  const [ratings, setRatings] = useState<Rating[]>(
+    JSON.parse(localStorage.getItem('sva_ratings')) || []
+  );
+
+  const handleSurvicateAnswer = (surveyId, questionId, answer) => {
+    // we only care about the rating question
+    console.log('answer', answer);
+    if (questionId === 1459131) {
+      const mockAnswer = 5;
+      const pageUrl = window.location.href;
+
+      const updatedRatings = [
+        ...ratings,
+        {
+          answer: mockAnswer,
+          page: pageUrl,
+          createdAt: new Date(),
+        },
+      ];
+
+      setRatings(updatedRatings);
+      localStorage.setItem('sva_ratings', JSON.stringify(updatedRatings));
+    }
+  };
+
   const addSurvicateEventListener = () => {
-    window._sva.addEventListener(
+    return window._sva.addEventListener(
       'question_answered',
-      function (surveyId, questionId, answer) {
-        // TODO: persist answer to cache
-      }
+      handleSurvicateAnswer
     );
   };
 
   useEffect(() => {
-    window.addEventListener('SurvicateReady', function () {
-      addSurvicateEventListener();
-    });
-
-    if (window._sva !== undefined) {
-      addSurvicateEventListener();
-    }
+    window.addEventListener('SurvicateReady', addSurvicateEventListener);
+    return () => {
+      window._sva.removeEventListener('question_answered');
+      window.removeEventListener('SurvicateReady', addSurvicateEventListener);
+    };
   }, []);
 
   const handleSurvicate = () => {
@@ -32,10 +59,20 @@ const SurvicateWidget = () => {
     });
   };
 
+  const pageRated = ratings.find(
+    (rating: Rating) => rating.page === window.location.href
+  );
+
   return (
-    <Button variant="solid" onClick={handleSurvicate}>
-      {'Rate this page ⭐️'}
-    </Button>
+    <>
+      {pageRated ? (
+        <p>Rated with Score: {pageRated.answer}</p>
+      ) : (
+        <Button variant="solid" onClick={handleSurvicate}>
+          {'Rate this page ⭐️'}
+        </Button>
+      )}
+    </>
   );
 };
 
