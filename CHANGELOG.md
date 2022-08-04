@@ -1,3 +1,63 @@
+# [1.14.0](https://github.com/immutable/imx-docs/compare/v1.13.0...v1.14.0) (2022-08-04)
+
+
+### Bug Fixes
+
+* build error ([ee567ba](https://github.com/immutable/imx-docs/commit/ee567ba1418ade80bb4a57cd93d7f9f5de7841eb))
+
+
+### Features
+
+* add SDK version switcher ([961024c](https://github.com/immutable/imx-docs/commit/961024c28f5c419906203cc91416111336996a5d))
+
+# [1.13.0](https://github.com/immutable/imx-docs/compare/v1.12.4...v1.13.0) (2022-08-03)
+
+
+### Bug Fixes
+
+* build error ([6900025](https://github.com/immutable/imx-docs/commit/6900025d5ed80dd0996f6c00a35cd45fb8db97c5))
+* **build error:** build error ([34280db](https://github.com/immutable/imx-docs/commit/34280db5d1a75adc7525309a4d01c700ed074180))
+* check that sva exists properly on window ([0808d4b](https://github.com/immutable/imx-docs/commit/0808d4be691e5d962d839b945f86511817e4bef3))
+* code review fixes ([e4709d6](https://github.com/immutable/imx-docs/commit/e4709d62d8d6cc96cb652afd5067b369c2ef4bac))
+* render button temporarily ([792a2c8](https://github.com/immutable/imx-docs/commit/792a2c829e1eb38d898c3f92d28fd80cdc5eb99d))
+* **sidebar:** revert sidebar changes ([b53558d](https://github.com/immutable/imx-docs/commit/b53558d10c00a308f8afaf28291c6b5982316285))
+* **survicate:** revert survicate env var test as it works ([c3ed6bd](https://github.com/immutable/imx-docs/commit/c3ed6bdf1aaff1c5c0d8ffaaa9483805651a8be6))
+* **tsc:** ignore weird error for swizzle'd component ([4db5291](https://github.com/immutable/imx-docs/commit/4db52910c74ba8f805b828b36a1d0100bc31da88))
+
+
+### Features
+
+* **dotenv:** add dotenv for netlify env setup for Survicate ([6641205](https://github.com/immutable/imx-docs/commit/66412057add0a657b001d1d33a5c7501dfc3376a))
+* **dotenv:** configure deploy context env var setup for survicate ([a20757c](https://github.com/immutable/imx-docs/commit/a20757c43fafb3e3ae1886650a99a1f1ad910e63))
+* **rate:** add rate button to breadcrumb swizzle ([fac5110](https://github.com/immutable/imx-docs/commit/fac5110c0f45b98eec0d410c47050925038b253a))
+* **rating:** add rating button to footer ([69ae81b](https://github.com/immutable/imx-docs/commit/69ae81b25bae47454033a47f7cd38d172371971c))
+* **rating:** add rating button to top breadcrumb ([2ed6058](https://github.com/immutable/imx-docs/commit/2ed60582515ddff1cf437721342300caa3fe2771))
+* **survicate poc:** add PoC for survicate for mock custom rating component and listeners ([28ebb7a](https://github.com/immutable/imx-docs/commit/28ebb7a9f27730fca7ee07700083a5d07735d6f2))
+* **survicate:** add survicate integration script ([e7629f5](https://github.com/immutable/imx-docs/commit/e7629f5c0c6804981f5e95f9efb435dd5236afa2))
+
+## [1.12.4](https://github.com/immutable/imx-docs/compare/v1.12.3...v1.12.4) (2022-08-02)
+
+
+### Bug Fixes
+
+* fix code flash ([3174f0c](https://github.com/immutable/imx-docs/commit/3174f0c486cd835ccd0af9956346a2bd7c45ada7))
+* fix switcher styling ([6597954](https://github.com/immutable/imx-docs/commit/6597954ffdb9603944753958b61eac51d1e91652))
+
+## [1.12.3](https://github.com/immutable/imx-docs/compare/v1.12.2...v1.12.3) (2022-07-29)
+
+
+### Bug Fixes
+
+* redirect Old Kotlin docs ([8530afe](https://github.com/immutable/imx-docs/commit/8530afe3ad3559fbdfe4459119d8e90ac6273f29))
+* redirect to TS SDK overview - remove code flash ([4d01dbb](https://github.com/immutable/imx-docs/commit/4d01dbb09ad9f9e605058583ab15562432c1d44d))
+
+## [1.12.2](https://github.com/immutable/imx-docs/compare/v1.12.1...v1.12.2) (2022-07-29)
+
+
+### Bug Fixes
+
+* redirect broken link ([2f1cdc0](https://github.com/immutable/imx-docs/commit/2f1cdc04b65883de2217c5bfb923c6aefe942900))
+
 ## [1.12.1](https://github.com/immutable/imx-docs/compare/v1.12.0...v1.12.1) (2022-07-28)
 
 

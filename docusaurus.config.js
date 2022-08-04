@@ -1,5 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+require('dotenv').config();
 const { ProvidePlugin } = require('webpack');
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -65,6 +66,7 @@ const configuration = {
         routeBasePath: '/sdk-docs/core-sdk-ts', // URL path to rewrite in the browser
         id: 'sdks-core-sdk-ts', // doc instance id
         sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-ts.js'),
+        includeCurrentVersion: false,
         ...pageOptions,
       },
     ],
@@ -75,6 +77,7 @@ const configuration = {
         routeBasePath: '/sdk-docs/core-sdk-kotlin',
         id: 'sdks-core-sdk-kotlin',
         sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-kotlin.js'),
+        // includeCurrentVersion: false, // enable this when Kotlin docs are versioned
         ...pageOptions,
       },
     ],
@@ -116,7 +119,6 @@ const configuration = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -197,6 +199,17 @@ const configuration = {
         contextualSearch: true,
       },
     }),
+  scripts: [
+    {
+      src: 'https://survey.survicate.com/workspaces/eda6c86ea6ecb85e8b2eb630f344dcd5/web_surveys.js',
+      async: true,
+    },
+  ],
+  customFields: {
+    survicate: {
+      surveyId: process.env.SURVICATE_DQS_SURVEY_ID,
+    },
+  },
 };
 
 module.exports = configuration;

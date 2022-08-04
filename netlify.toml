@@ -1,0 +1,5 @@
+[context.production.environment]
+  SURVICATE_DQS_SURVEY_ID = "c52aa7ca680247d5"
+
+[context.deploy-preview.environment]
+  SURVICATE_DQS_SURVEY_ID = "4ef30791a4b4838a"
