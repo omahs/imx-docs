@@ -40,6 +40,10 @@
   --ifm-color-home-elevation-03: #dddddd;
   --ifm-color-home-elevation-04: #d3d3d3;
 
+  /* Rating Colors */
+  --ifm-color-star-rating-on: #FFE234;
+  --ifm-color-star-rating-off: var(--ifm-color-home-elevation-04);
+
   /* Doc Sidebar */
   --doc-sidebar-width: 320px !important;
 }
@@ -62,6 +66,9 @@
   --ifm-color-home-elevation-02: #404040;
   --ifm-color-home-elevation-03: #535353;
   --ifm-color-home-elevation-04: #5c5c5c;
+
+  /* Rating Colors */
+  --ifm-color-star-rating-off: #dddddd;
 }
 
 .docusaurus-highlight-code-line {
