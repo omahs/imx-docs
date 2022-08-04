@@ -198,6 +198,22 @@
   line-height: 16px;
 }
 
+.text-body-04 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.text-body-04-emphasis {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+}
+
 /* Custom classes */
 .hyperlink:hover {
   text-decoration: underline;
