@@ -37,7 +37,7 @@ const SurvicateWidget = () => {
   // use a temporary state as survey
   // can be closed before completing
   const [tempRatings, setTempRatings] = useState<Rating[]>([]);
-  const tempRatingsRef = useRef();
+  const tempRatingsRef = useRef<Rating[]>([]);
   tempRatingsRef.current = tempRatings;
 
   const pageRating = ratings.find(
