@@ -1,3 +1,15 @@
+# [1.14.0](https://github.com/immutable/imx-docs/compare/v1.13.0...v1.14.0) (2022-08-04)
+
+
+### Bug Fixes
+
+* build error ([ee567ba](https://github.com/immutable/imx-docs/commit/ee567ba1418ade80bb4a57cd93d7f9f5de7841eb))
+
+
+### Features
+
+* add SDK version switcher ([961024c](https://github.com/immutable/imx-docs/commit/961024c28f5c419906203cc91416111336996a5d))
+
 # [1.13.0](https://github.com/immutable/imx-docs/compare/v1.12.4...v1.13.0) (2022-08-03)
 
 

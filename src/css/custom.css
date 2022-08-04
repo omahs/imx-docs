@@ -39,6 +39,9 @@
   --ifm-color-home-elevation-02: #e7e7e7;
   --ifm-color-home-elevation-03: #dddddd;
   --ifm-color-home-elevation-04: #d3d3d3;
+
+  /* Doc Sidebar */
+  --doc-sidebar-width: 320px !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -584,10 +587,14 @@ button.clean-btn.navbar-sidebar__close>svg {
 }
 
 /* override the DocSidebar top padding */
-#sidebar-wrapper div:nth-child(2) {
+#sidebar-wrapper div:nth-child(3) {
   padding-top: 0.5rem;
 }
 
 .theme-doc-version-badge {
   margin-bottom: 1rem;
+}
+
+.theme-doc-sidebar-container {
+  clip-path: none !important;
 }
