@@ -133,6 +133,9 @@ Some **content** with _markdown_ `syntax`. Check [this `api`](#).
 
 Read more about using [Admonitions in Docusaurus](https://docusaurus.io/docs/markdown-features/admonitions)
 
+### Add documentation for a new SDK (internal Immutable)
+Please see [this guide](https://immutable.atlassian.net/wiki/spaces/PPS/pages/1916994017/SDK+documentation+guide).
+
 ## Document Instance Versioning
 
 Each SDK has been configured as a docusaurus document instance. Each document instance `id`, which can be found in the `docusaurus.config.js` file.
