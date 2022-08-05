@@ -1,6 +1,6 @@
 ---
-id: "api-changelog-overview"
-title: "API changelog overview"
+id: "api-changelog"
+title: "API changelog"
 ---
 
 # API changelog
