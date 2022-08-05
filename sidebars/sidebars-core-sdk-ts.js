@@ -15,6 +15,7 @@ module.exports = {
           label: 'Reference',
           href: 'https://docs.x.immutable.com/sdk-references/core-sdk-ts/0-6-0/',
         },
+        'changelog',
       ],
     },
   ],
