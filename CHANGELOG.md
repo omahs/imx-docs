@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/immutable/imx-docs/compare/v1.14.0...v1.14.1) (2022-08-05)
+
+
+### Bug Fixes
+
+* replace code flash with SDK landing page ([7ed2056](https://github.com/immutable/imx-docs/commit/7ed20561f59eb9ee5646856308561a8938e8fd26))
+
 # [1.14.0](https://github.com/immutable/imx-docs/compare/v1.13.0...v1.14.0) (2022-08-04)
 
 
