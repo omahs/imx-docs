@@ -17,6 +17,7 @@ module.exports = {
           label: 'Reference',
           href: `${url}/sdk-references/core-sdk-ts/0-6-0/`,
         },
+        'changelog',
       ],
     },
   ],
