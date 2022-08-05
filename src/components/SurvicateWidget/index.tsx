@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 interface Rating {
   score: number;
   page: string;
-  createdAt: Date;
+  updatedAt: Date;
 }
 
 const StarRating = (numOfStars: number) => {
@@ -30,19 +30,25 @@ const StarRating = (numOfStars: number) => {
 const SurvicateWidget = () => {
   const { siteConfig } = useDocusaurusContext();
 
-  const [ratings, setRatings] = useState<Rating[]>(
-    JSON.parse(localStorage.getItem('sva_ratings')) || []
-  );
+  const [ratings, setRatings] = useState<Rating[]>([]);
+  const ratingsRef = useRef<Rating[]>([]); // to be used for event listener callbacks
+  ratingsRef.current = ratings;
 
   // use a temporary state as survey
   // can be closed before completing
   const [tempRatings, setTempRatings] = useState<Rating[]>([]);
-  const tempRatingsRef = useRef<Rating[]>([]);
+  const tempRatingsRef = useRef<Rating[]>([]); // to be used for event listener callbacks
   tempRatingsRef.current = tempRatings;
 
-  const pageRating = ratings.find(
-    (rating: Rating) => rating.page === window.location.href
-  );
+  useEffect(() => {
+    const cachedRatings = JSON.parse(localStorage.getItem('sva_ratings'));
+    if (cachedRatings) {
+      setRatings(cachedRatings);
+    }
+  }, []);
+
+  const pageRating = (log: Rating[]) =>
+    log.find((rating: Rating) => rating.page === window.location.href);
 
   const handleSurvicateAnswer = (
     surveyId: string,
@@ -55,17 +61,19 @@ const SurvicateWidget = () => {
       const score = answer.answer_value;
       const page = window.location.href;
 
-      let existingRatings = ratings;
+      let existingRatings = ratingsRef.current;
 
-      if (pageRating)
-        existingRatings = existingRatings.filter((r) => r.page !== page);
+      if (pageRating(existingRatings))
+        existingRatings = existingRatings.filter(
+          (r: Rating) => r.page !== page
+        );
 
       const updatedRatings = [
         ...existingRatings,
         {
           score,
           page,
-          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ];
 
@@ -103,7 +111,7 @@ const SurvicateWidget = () => {
   }, []);
 
   const handleSurvicate = async () => {
-    // assume every new rating is a new rating
+    // assume every new attempt at a rating is a new rating
     // or re-rating an existing rating
     window._sva.destroyVisitor();
 
@@ -118,7 +126,7 @@ const SurvicateWidget = () => {
     <Button variant="solid" size="md" onClick={handleSurvicate}>
       <div className={styles.ratingWrapper}>
         {'Rate this page:'}
-        {StarRating(pageRating?.score || 0)}
+        {StarRating(pageRating(ratings)?.score || 0)}
       </div>
     </Button>
   );
