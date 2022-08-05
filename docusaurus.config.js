@@ -134,6 +134,13 @@ const configuration = {
             to: '/reference',
             position: 'left',
             label: 'APIs',
+            type: 'dropdown',
+            items: [
+              {
+                label: 'API Changelog',
+                to: '/api-changelog',
+              },
+            ]
           },
           {
             to: '/sdk-docs/core-sdk-ts/overview',
@@ -170,6 +177,23 @@ const configuration = {
             position: 'left',
             className: 'custom_sidebar_menu',
           },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Community',
+          //   position: 'left',
+          //   items: [
+          //     {
+          //       label: 'Facebook',
+          //       href: 'https://www.facebook.com',
+          //     },
+          //     // {
+          //     //   type: 'doc',
+          //     //   label: 'Social',
+          //     //   docId: 'social',
+          //     // },
+          //     // ... more items
+          //   ],
+          // },
         ],
       },
       colorMode: {
