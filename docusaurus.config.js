@@ -140,7 +140,7 @@ const configuration = {
                 label: 'API Changelog',
                 to: '/api-changelog',
               },
-            ]
+            ],
           },
           {
             to: '/sdk-docs/core-sdk-ts/overview',
