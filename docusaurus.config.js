@@ -84,10 +84,11 @@ const configuration = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        path: 'docs/sdk-docs/wallets-sdk-web/',
-        routeBasePath: '/sdk-docs/wallets-sdk-web',
-        id: 'sdks-wallets-sdk-web',
-        // sidebarPath: require.resolve('./sidebars/sidebars-wallets-sdk-web.js'),
+        path: 'docs/sdk-docs/wallet-sdk-web/',
+        routeBasePath: '/sdk-docs/wallet-sdk-web',
+        id: 'sdks-wallet-sdk-web',
+        sidebarPath: require.resolve('./sidebars/sidebars-wallet-sdk-web.js'),
+        // includeCurrentVersion: false, // TODO: uncomment when the first version generated
         ...pageOptions,
       },
     ],

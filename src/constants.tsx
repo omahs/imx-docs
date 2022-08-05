@@ -13,7 +13,8 @@ export const sdks = [
   },
   {
     id: 2,
-    name: 'Wallets SDK Web',
-    url: '/sdk-docs/wallets-sdk-web',
+    sdkId: 'sdks-wallet-sdk-web',
+    name: 'Wallet SDK Web',
+    url: '/sdk-docs/wallet-sdk-web/overview',
   },
 ];
