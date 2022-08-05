@@ -7,7 +7,7 @@ title: "API changelog"
 
 This is the list of API versions and the changes associated with them that are released every time a breaking change is introduced.
 
-A breaking change is one that is *not* [backwards compatible](#what-are-backwards-compatible-changes).
+A breaking change is one that is *not* [backwards compatible](#backwards-compatible-changes).
 
 ### Backwards-compatible changes:
 * Adding new API resources.
@@ -16,7 +16,7 @@ A breaking change is one that is *not* [backwards compatible](#what-are-backward
 * Changing the order of properties in existing API responses.
 * Changing the length or format of opaque strings, such as object IDs, error messages, and other human-readable strings. This includes adding or removing fixed prefixes.
 
-## API changelog
+## Changelog
 
 <table>
   <tbody>
