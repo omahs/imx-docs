@@ -191,7 +191,7 @@ const configuration = {
                 label: 'API Changelog',
                 to: '/api-changelog',
               },
-            ]
+            ],
           },
           {
             to: '/docs/sdks',
