@@ -13,6 +13,12 @@ export const sdks = [
   },
   {
     id: 2,
+    sdkId: 'sdks-core-sdk-swift',
+    name: 'Core SDK Swift',
+    url: '/sdk-docs/core-sdk-swift/overview',
+  },
+  {
+    id: 3,
     sdkId: 'sdks-wallet-sdk-web',
     name: 'Wallet SDK Web',
     url: '/sdk-docs/wallet-sdk-web/overview',

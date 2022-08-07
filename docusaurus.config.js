@@ -84,6 +84,17 @@ const configuration = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        path: 'docs/sdk-docs/core-sdk-swift/',
+        routeBasePath: '/sdk-docs/core-sdk-swift',
+        id: 'sdks-core-sdk-swift',
+        sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-swift.js'),
+        // includeCurrentVersion: false, // enable this when Swift docs are versioned
+        ...pageOptions,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         path: 'docs/sdk-docs/wallet-sdk-web/',
         routeBasePath: '/sdk-docs/wallet-sdk-web',
         id: 'sdks-wallet-sdk-web',
@@ -147,7 +158,7 @@ const configuration = {
             label: 'APIs',
           },
           {
-            to: '/sdk-docs/core-sdk-ts/overview',
+            to: '/docs/sdks',
             position: 'left',
             label: 'SDKs',
           },
