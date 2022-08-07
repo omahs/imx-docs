@@ -1,5 +1,5 @@
 ---
-description: Installation of the Wallet SDK Web
+description: Installing the Wallet SDK Web into your application
 id: installation
 slug: /installation
 tags: [wallet-sdk-web, installation, setup]
