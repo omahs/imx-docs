@@ -17,7 +17,7 @@ The Immutable X Wallet SDK provides a straightforward way to connect with a rang
 
 See the [developer guides](https://docs.x.immutable.com) for information on building on Immutable X.
 
-See the [Core SDK Typescript guide](https://docs.x.immutable.com/sdk-docs/core-sdk-ts) for information on building with Core SDK Typescript.
+See the [Core SDK Typescript guide](/sdk-docs/core-sdk-ts) for information on building with Core SDK Typescript.
 
 <!-- TODO: Uncomment when publicly opened -->
 <!-- ## Github
