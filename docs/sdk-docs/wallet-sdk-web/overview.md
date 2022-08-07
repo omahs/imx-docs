@@ -19,7 +19,6 @@ See the [developer guides](https://docs.x.immutable.com) for information on buil
 
 See the [Core SDK Typescript guide](/sdk-docs/core-sdk-ts) for information on building with Core SDK Typescript.
 
-<!-- TODO: Uncomment when publicly opened -->
-<!-- ## Github
+## Github
 
-Access the [Github repository](https://github.com/immutable/imx-wallet-sdk-web) for source code guidance and contribution. -->
+Access the [Github repository](https://github.com/immutable/imx-wallet-sdk-web) for source code guidance and contribution.
