@@ -30,7 +30,8 @@ import {
     },
   });
 
-  // Connects on the chosen provider WalletConnect
+  // Connects on the chosen provider:
+  // WalletConnect
   const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
   // Or MetaMask
   // const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.METAMASK });
