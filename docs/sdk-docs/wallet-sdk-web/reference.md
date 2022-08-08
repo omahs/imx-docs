@@ -37,9 +37,9 @@ See the [Events examples](/sdk-docs/wallet-sdk-web/code-examples#events) to chec
 
 ## Compatibility Matrix
 
-| Core SDK Typescript version  | Wallets SDK Web version |
-| ---------------------------- | ----------------------- |
-| `0.7.0`                      | `0.1.2`                 |
-| `0.7.0`                      | `0.1.3`                 |
-| `0.7.0`                      | `0.1.4`                 |
-| `0.7.0`                      | `0.1.5`                 |
+| Core SDK Typescript version                                    | Wallets SDK Web version                                                                |
+| -------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.2](https://www.npmjs.com/package/@imtbl/imx-wallet-sdk-web/v/0.1.2)               |
+| [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.3](https://www.npmjs.com/package/@imtbl/imx-wallet-sdk-web/v/0.1.3)               |
+| [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.4](https://www.npmjs.com/package/@imtbl/imx-wallet-sdk-web/v/0.1.4)               |
+| [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.5](https://www.npmjs.com/package/@imtbl/imx-wallet-sdk-web/v/0.1.5)               |
