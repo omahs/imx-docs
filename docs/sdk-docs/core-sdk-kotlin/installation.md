@@ -1,5 +1,5 @@
 ---
-description: Install Core SDK TypKotlineScript
+description: Install Core SDK Kotlin
 id: installation
 slug: /installation
 tags: [core-sdk-kotlin, installation, setup]
