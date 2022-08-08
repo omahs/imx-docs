@@ -21,31 +21,36 @@ import {
   const sdk = await WalletSDK.build({
     env: ENVIRONMENTS.STAGING,
     /*
-      RPC config is optional if you do not want to support WalletConnect. But If 
-      you do, make sure to set your RPC config following this reference: 
+      RPC config is just used for WalletConnect supporting. If it is the case, 
+      make sure to set the RPC config following this reference:
       https://docs.walletconnect.com/quick-start/dapps/web3-provider#provider-options
     */
     rpc: {
-      1: "https://mainnet.mycustomnode.com",
-    }
+      3: 'https://ropsten.mycustomnode.com',
+    },
   });
 
   // Connects on the chosen provider WalletConnect
-  await sdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
+  const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
   // Or MetaMask
-  // await sdk.connect({ provider: L1_PROVIDERS.METAMASK });
-  
-  // Gets the "WalletConnection" object containing the L1 and L2 signers
-  const walletConnection = sdk.getWalletConnection();
+  // const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.METAMASK });
 
   // Passing the "WalletConnection" for the chosen core workflow
-  await coreSdkWorkflows.registerOffChain(walletConnection);
+  await coreSdkWorkflows.registerOffchain(walletConnection);
 })();
 ```
 
 :::tip
-The object `WalletConnection` can also be directly retrieved from the return of the method `connect`.
+The object `WalletConnection` can also be retrieved: 
 ```ts
-const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
+// By calling the method `getWalletConnection`
+const walletConnection = sdk.getWalletConnection();
+
+// By listening to the event `WALLET_SDK_EVENTS.CONNECTION_UPDATED`
+walletSdkEvents.on(
+  WALLET_SDK_EVENTS.CONNECTION_UPDATED,
+  (updatedWalletConnection: WalletConnection) 
+    => { const walletConnection = updatedWalletConnection; },
+);
 ```
 :::

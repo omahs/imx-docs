@@ -44,7 +44,7 @@ import { getConfig, Workflows } from '@imtbl/core-sdk';
   const coreSdkWorkflows = new Workflows(coreSdkConfig);
 
   // Registers the user
-  await coreSdkWorkflows.registerOffChain(walletConnection);
+  await coreSdkWorkflows.registerOffchain(walletConnection);
 
   // Creates a fake object of type GetSignableTradeRequest (just for reference)
   const fakeTradeRequest = {

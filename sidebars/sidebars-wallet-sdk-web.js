@@ -7,7 +7,6 @@ module.exports = {
         'overview',
         'installation',
         'quickstart',
-        'events',
         'code-examples',
         'reference',
       ],
