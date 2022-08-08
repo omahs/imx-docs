@@ -15,6 +15,6 @@ Parts of the Core SDK are automagically generated.
 
 We use OpenAPI (formally known as Swagger) to auto-generate the API clients that connect to the public APIs.
 
-The OpenAPI spec is retrieved from https://api.x.immutable.com/openapi and also saved in the repo [here](openapi.json).
+The OpenAPI spec is retrieved from https://api.x.immutable.com/openapi and also saved in the repo [here](https://github.com/immutable/imx-core-sdk-swift/blob/main/openapi.json).
 
 Upon updating the `openapi.json` file, ensure [openapi-generator](https://openapi-generator.tech/) is installed, then run `./generateapi.sh` to regenerate the files. Any custom templates should be appropriately modified or removed as needed. These can be found in the `.openapi-generator/templates` directory.
