@@ -49,8 +49,8 @@ const walletConnection = sdk.getWalletConnection();
 // By listening to the event `WALLET_SDK_EVENTS.CONNECTION_UPDATED`
 walletSdkEvents.on(
   WALLET_SDK_EVENTS.CONNECTION_UPDATED,
-  (updatedWalletConnection: WalletConnection) 
-    => { const walletConnection = updatedWalletConnection; },
+  (updatedWalletConnection: WalletConnection) =>
+    { const walletConnection = updatedWalletConnection; },
 );
 ```
 :::

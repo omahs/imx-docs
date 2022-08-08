@@ -24,44 +24,16 @@ tags: [wallet-sdk-web, reference]
 
 - `L2_PROVIDERS.IMX_WALLET` To connect using the built-in L2 wallet solution.
 
-## Events
+## Supported Events
 
-The [Immutable X Wallet SDK package](https://www.npmjs.com/package/@imtbl/imx-wallet-sdk-web) make use of the [Event system](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) in order to provide meaningful indications of its current state through the emitter `walletSdkEvents` and the enum `WALLET_SDK_EVENTS`. Check out below the current list of events and examples on how to use them.
+The Immutable X Wallet SDK make use of the [Event system](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) in order to provide meaningful indications of its current state through the emitter `walletSdkEvents` and the enum `WALLET_SDK_EVENTS`. Check out below the current list of events.
 
 - `WALLET_SDK_EVENTS.CONNECTION_UPDATED` When the user connects a fresh wallet or opens the application with a wallet already connected before.
-```ts
-import {
-  ENVIRONMENTS,
-  WALLET_SDK_EVENTS,
-  L1_PROVIDERS,
-  WalletSDK,
-  walletSdkEvents,
-} from '@imtbl/imx-wallet-sdk-web';
-import { Workflows } from '@imtbl/core-sdk';
-
-const walletConnection: WalletConnection | null = null;
-
-// Listens for connection notifications
-walletSdkEvents.on(
-  WALLET_SDK_EVENTS.CONNECTION_UPDATED,
-  (updatedWalletConnection: WalletConnection) 
-    => walletConnection = updatedWalletConnection;
-);
-
-// Connects to the wallet
-async function connect(walletSdk: WalletSDK) {
-  await walletSdk.connect({ provider: L1_PROVIDERS.METAMASK });
-}
-
-// Registers a user
-async function registerUser(coreSdkWorkflows: Workflows) {
-  if(!walletConnection) throw new Error('There is still no wallet connection available.');
-
-  await coreSdkWorkflows.registerOffChain(walletConnection);
-}
-```
 - `WALLET_SDK_EVENTS.WALLET_DISCONNECTED` When the user disconnects the wallet on purpose, changes the wallet itself or changes the network.
 
+:::note
+See the [Events examples](/sdk-docs/wallet-sdk-web/code-examples#events) to check some code examples.
+:::
 
 ## Compatibility Matrix
 
@@ -69,3 +41,5 @@ async function registerUser(coreSdkWorkflows: Workflows) {
 | ---------------------------- | ----------------------- |
 | `0.7.0`                      | `0.1.2`                 |
 | `0.7.0`                      | `0.1.3`                 |
+| `0.7.0`                      | `0.1.4`                 |
+| `0.7.0`                      | `0.1.5`                 |
