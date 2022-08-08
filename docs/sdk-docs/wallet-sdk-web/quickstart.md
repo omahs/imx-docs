@@ -35,7 +35,7 @@ import {
   // Or MetaMask
   // const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.METAMASK });
 
-  // Passing the "WalletConnection" for the chosen core workflow
+  // Ensures user registered
   await coreSdkWorkflows.registerOffchain(walletConnection);
 })();
 ```
