@@ -135,6 +135,12 @@ Read more about using [Admonitions in Docusaurus](https://docusaurus.io/docs/mar
 
 ## Document Instance Versioning
 
+Instructions for versioning a document instance with the Docusaurus CLI tool.
+
+> **NOTE 1**: Use the docusaurus CLI tool described here for versioning document instances. Attempting to copy/paste version folders may not work as expected.  
+
+> **NOTE 2**: If the document instance only has 1 version of docs, ***do not*** version the document instance by running the CLI command below.
+
 Each SDK has been configured as a docusaurus document instance. Each document instance `id`, which can be found in the `docusaurus.config.js` file.
 
 ```js
@@ -165,7 +171,13 @@ yarn run docusaurus docs:version:<doc_instance_id> <version>
 
 This will copy the existing set of docs into a `<doc_instance_id>_versioned_docs/version-<version>` folder in the root of the project folder (this appears to be unconfigurable).
 
-Check out the [docusaurus docs on versioning](https://docusaurus.io/docs/versioning) for more info about how it works.
+A few things to note once a document set has been versioned:
+
+* The SDK files `docs/main/sdk-docs/<your_sdk>` are now treated as the `next` version set of docs. Updating those docs will **not** update the docs on the published site. These docs will be used when running the version command (above) to generate a new version of the docs. So once a document instance has been versioned, treat the docs in `docs/main/sdk-docs/<your_sdk>` as work in progress version of your doc instance. 
+*  To update the latest/current (or previous) version docs, you will need to update the files in the appropriate `<doc_instance_id>_versioned_docs/version-<version>` folder.
+*  A version switcher button will appear next to the SDK switcher button of the newly versioned SDK docs. [Example of the version switcher](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/overview) (in the right-hand sidebar).
+
+Check out the [docusaurus docs on versioning](https://docusaurus.io/docs/versioning) for more info about how document instance versioning works.
 
 ## Hosted SDK API References
 
