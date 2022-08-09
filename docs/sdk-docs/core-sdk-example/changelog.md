@@ -1,0 +1,189 @@
+---
+description: Core SDK changelog
+id: changelog
+slug: /changelog
+tags: [core-sdk-example]
+---
+
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.7.0] - 2022-08-03
+
+### Added
+
+- Added on all workflow methods a chain check comparing the current connected wallet chain versus the chain informed on setup phase
+
+### Changed
+
+- [listMints](https://docs.x.immutable.com/reference#/operations/listMints) endpoint accepts `max_timestamp`, `min_timestamp` instead of `updated_max_timestamp`, `updated_min_timestamp` respectively
+- [BREAKING CHANGE] `x-imx-eth-address`, and `x-imx-eth-signature` headers are now required for [createOrder](https://docs.x.immutable.com/reference#/operations/createOrder),
+[cancelOrder](https://docs.x.immutable.com/reference#/operations/cancelOrder), [createTransfer](https://docs.x.immutable.com/reference#/operations/createTransfer), [createTransferV1](https://docs.x.immutable.com/reference#/operations/createTransferV1), [createWithdrawal](https://docs.x.immutable.com/reference#/operations/createWithdrawal), and [createTrade](https://docs.x.immutable.com/reference#/operations/createTrade) endpoints.
+- [BREAKING CHANGE] Removed the `getKeyPairFromPrivateKey` function
+- [BREAKING CHANGE] Removed the `getStarkPublicKey` function
+- [BREAKING CHANGE] `getConfig` method now requires environment parameters and returns the new [ImmutableXConfiguration](https://github.com/immutable/imx-core-sdk/blob/cf33110d1dc6503c1e747dfced4fff0ec57bb536/src/types/index.ts#L35)
+- [BREAKING CHANGE] Renamed the `registerOffchainWithSigner` method to `registerOffchain`
+- [BREAKING CHANGE] Renamed the `isRegisteredOnchainWithSigner` method to `isRegisteredOnchain`
+- [BREAKING CHANGE] Renamed the `transferWithSigner` method to `transfer`
+- [BREAKING CHANGE] Renamed the `batchNftTransferWithSigner` method to `batchNftTransfer`
+- [BREAKING CHANGE] Renamed the `burnWithSigner` method to `burn`
+- [BREAKING CHANGE] Renamed the `prepareWithdrawalWithSigner` method to `prepareWithdrawal`
+- [BREAKING CHANGE] Renamed the `createOrderWithSigner` method to `createOrder`
+- [BREAKING CHANGE] Renamed the `cancelOrderWithSigner` method to `cancelOrder`
+- [BREAKING CHANGE] Renamed the `createTradeWithSigner` method to `createTrade`
+
+- Changed the `getAddress` method from the `L2Signer` interface to be able to return both `string` or async `Promise<string>`
+
+### Removed
+
+- [BREAKING CHANGE] Removed the deprecated `registerOffchain` method
+- [BREAKING CHANGE] Removed the deprecated `isRegisteredOnchain` method
+- [BREAKING CHANGE] Removed the deprecated `transfer` method
+- [BREAKING CHANGE] Removed the deprecated `batchNftTransfer` method
+- [BREAKING CHANGE] Removed the deprecated `burn` method
+- [BREAKING CHANGE] Removed the deprecated `prepareWithdrawal` method
+- [BREAKING CHANGE] Removed the deprecated `createOrder` method
+- [BREAKING CHANGE] Removed the deprecated `cancelOrder` method
+- [BREAKING CHANGE] Removed the deprecated `createTrade` method
+
+## [0.6.0] - 2022-07-18
+
+### Added
+
+- Added `createOrderWithSigner` function to enable create order with l2signer
+- Added `cancelOrderWithSigner` function to enable cancel order with l2signer
+- Added `WalletConnection` type
+- Added `transferWithSigner` function to enable transfer with l2signer
+- Added `batchNftTransferWithSigner` function to enable batch transfer with l2signer
+- Added `prepareWithdrawalWorkflowWithSigner` function to enable prepare withdrawal with l2signer
+- Added `burnWithSigner` function to enable burn with l2signer
+- Added `getStarkPublicKeyWithXCoordinate` method to get the same public key as the `generateStarkWallet` returns
+
+### Deprecated
+
+- `createOrder`, use `createOrderWithSigner` instead
+- `cancelOrder`, use `cancelOrderWithSigner` instead
+- `transfer`, use `transferWithSigner` instead
+- `batchNftTransfer`, use `batchNftTransferWithSigner` instead
+- `prepareWithdrawalWorkflow`, use `prepareWithdrawalWorkflowWithSigner` instead
+- `burn`, use `burnWithSigner` instead
+- `getStarkPublicKey`, use BaseSigner's `getAddress` instead
+
+## [0.5.0] - 2022-07-12
+
+### Added
+
+- Added `registerOffchainWithSigner` function to enable register offchain user with L2Signer
+
+### Changed
+
+- Changed `registerOffchainWorkflowWithSigner` to return a void promise and return early if wallet is already registered
+- RegisterUserRequest `email` property added
+- [BREAKING CHANGE] `Transfer` and `ListTransfersResponse` objects swapped `data` and `type` properties with `token`
+
+### Deprecated
+
+- `registerOffchain`, use `registerOffchainWithSigner` instead
+
+### Fixed
+
+- `getAddress` method from BaseSigner
+- Mark `project_id` as required on `CreateCollectionRequest`
+- Updated list orders OpenAPI spec to document the `include_fees` query param
+
+## [0.4.0] - 2022-07-05
+
+### Added
+
+- Added `BaseSigner`, a default implementation of the Stark L2Signer interface
+- Added `createTradeWithSigner` function to enable creating trade workflow with l2signer
+
+### Changed
+
+- Mark `createTrade` as deprecated
+
+## [0.3.1] - 2022-07-01
+
+### Fixed
+
+- Include ethers as a dependency
+- Resolved dependabot alerts https://github.com/immutable/imx-core-sdk/security/dependabot/3
+
+## [0.3.0] - 2022-06-21
+
+### Added
+
+- Added `generateStarkWalletFromSignedMessage` function to generate stark keys from EthAddress and Signature
+- Added `L2Signer` type
+
+### Changed
+
+- Added `project_owner_address` property to collection objects returned from `GET` `/v1/collections` public API endpoints.
+- Exported `L1Signer` and `L2Signer`
+
+## [0.2.2] - 2022-06-02
+
+### Fixed
+
+- Correctly exported type definitions with the published package.
+
+## [0.2.1] - 2022-05-30
+
+### Fixed
+
+- Updated the auto-generated API clients
+
+## [0.2.0] - 2022-05-27
+
+### Added
+
+- Added Workflows
+  - `createOrder`
+  - `cancelOrder`
+  - `createTrade`
+- Added SDK version headers
+- Removed requirements for lowercase ETH addresses
+
+### Fixed
+
+- Regenerated clients to correctly indicate `nullable` fields.
+- Correct the response type fields which were indicated as possible undefined.
+
+## [0.1.0] - 2022-05-25
+
+### Added
+
+- Added Workflows
+  - `registerOffchain`
+  - `isRegisteredOnchain`
+  - `mint`
+  - `transfer`
+  - `batchNftTransfer`
+  - `burn`
+  - `getBurn`
+  - `deposit`
+  - `depositEth`
+  - `depositERC20`
+  - `depositERC721`
+  - `prepareWithdrawal`
+  - `completeEthWithdrawal`
+  - `completeERC20Withdrawal`
+  - `completeERC721Withdrawal`
+  - `completeWithdrawal`
+  - `cancelOrder`
+
+## [0.0.2] - 2022-05-19
+
+### Added
+
+- Changelog and changelog management tool (release-it)
+
+## [0.0.1] - 2022-05-05
+
+### Added
+
+- Initial release
