@@ -26,6 +26,7 @@
   - [Add an admonition](#add-an-admonition)
 - [Document Instance Versioning](#document-instance-versioning)
 - [Hosted SDK API References](#hosted-sdk-api-references)
+  - [Linking to Hosted SDK API References](#linking-to-hosted-sdk-api-references)
 - [Contributing](#contributing)
 - [Community Support](#community-support)
 - [License](#license)
@@ -194,6 +195,21 @@ api-docs/
 ```
 
 The SDK API references should be available at `<docsBaseUrl>/sdk-references/<core-sdk-lang>/<x-x-x>/`
+
+### Linking to Hosted SDK API References
+
+If you want a sidebar link to the hosted API reference, add a link type sidebar item to the respective SDK sidebar config:
+
+```js
+  // example link type config object
+  {
+    type: 'link',
+    label: 'Reference',
+    href: `${url}/sdk-references/<core-sdk-lang>/<x-x-x>/`,
+  },
+```
+
+Check the [Core SDK TypeScript sidebar config](./sidebars/sidebars-core-sdk-ts.js) for an example.
 
 ## Contributing
 
