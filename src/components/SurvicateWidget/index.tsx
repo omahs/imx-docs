@@ -10,17 +10,9 @@ interface Rating {
 const StarRating = (numOfStars: number) => {
   return (
     <div className={styles.starsWrapper}>
-      {[...Array(5)].map((star, i) => {
-        return (
-          <span
-            key={i}
-            title={'Page Rating'}
-            className={i + 1 <= numOfStars ? styles.on : styles.off}
-          >
-            &#9733;
-          </span>
-        );
-      })}
+      <span key={1} title={'Page Rating'} className={styles.on}>
+        &#9733;
+      </span>
     </div>
   );
 };
