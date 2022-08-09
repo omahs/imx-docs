@@ -7,7 +7,10 @@ sidebar_position: 2
 
 # API changelog
 
-This page aims to convey the changes to our API over time. It will include updates on both breaking and non-breaking changes.
+This page is to convey:
+* [Upcoming breaking changes](#upcoming-breaking-changes)
+* [Changelog (breaking and non-breaking changes)](#changelog)
+
 
 Currently, we use resource versioning (URI-based), i.e. `/v1/<endpoint>`. While we aim to ensure that breaking changes (non-[backwards compatible changes](#backwards-compatible-changes-non-breaking)) are versioned, there are occasions where it is necessary for us to introduce a breaking change to an existing endpoint. This will be communicated to you in advance, and information about this will also be made available on this page.
 
@@ -17,6 +20,23 @@ Currently, we use resource versioning (URI-based), i.e. `/v1/<endpoint>`. While 
 * Adding new properties to existing API responses.
 * Changing the order of properties in existing API responses.
 * Changing the length or format of opaque strings, such as object IDs, error messages, and other human-readable strings. This includes adding or removing fixed prefixes.
+
+## Upcoming breaking changes
+
+<table>
+  <tbody>
+    <tr>
+      <th>Anticipated date of change</th>
+      <th>Description of change</th>
+    </tr>
+    <tr>
+      <td>9 Aug 2022</td>
+      <td>
+        Insert change description
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Changelog
 
@@ -31,12 +51,12 @@ Currently, we use resource versioning (URI-based), i.e. `/v1/<endpoint>`. While 
       <td>9 Aug 2022</td>
       <td>
         <ul>
-          <li>Description of change 1</li>
+          <li>Description of change</li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>Description of change 1</li>
+          <li>Description of change</li>
         </ul>
       </td>
     </tr>
