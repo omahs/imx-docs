@@ -35,6 +35,8 @@
 
 The [Immutable X documentation website](https://docs.x.immutable.com) is built using [Docusaurus](https://docusaurus.io/). Docusaurus is a static-site generator built with [React](https://reactjs.org/) and [MDX](https://mdxjs.com). It builds a single-page application (SPA) that's SEO friendly. But you don't need to learn React to be able to write documentation or contribute to it! All docs are written in [Markdown](https://docusaurus.io/docs/markdown-features).
 
+> **Internal Immutable X Developers**: Please read over the [SDK Documentation Guide](https://immutable.atlassian.net/wiki/spaces/PPS/pages/1916994017/SDK+documentation+guide#How-to-add-your-SDK-documentation-to-imx-docs?) on Confluence too.
+
 ### Tech Stack
 
 - [Docusaurus](https://docusaurus.io/)
