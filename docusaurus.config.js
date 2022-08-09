@@ -189,7 +189,7 @@ const configuration = {
             items: [
               {
                 label: 'API Changelog',
-                to: '/api-changelog',
+                to: '/docs/api-changelog',
               },
             ],
           },
