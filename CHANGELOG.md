@@ -1,3 +1,18 @@
+## [1.14.2](https://github.com/immutable/imx-docs/compare/v1.14.1...v1.14.2) (2022-08-08)
+
+
+### Bug Fixes
+
+* **kotlin:** fix some mistakes on Kotlin docs ([f866746](https://github.com/immutable/imx-docs/commit/f866746567b2fa4635c12917a9b039928d6eb88c))
+* **swift:** fix broken open api links ([4340e49](https://github.com/immutable/imx-docs/commit/4340e4954715ae272e832801a33f0536d5c71623))
+
+## [1.14.1](https://github.com/immutable/imx-docs/compare/v1.14.0...v1.14.1) (2022-08-05)
+
+
+### Bug Fixes
+
+* replace code flash with SDK landing page ([7ed2056](https://github.com/immutable/imx-docs/commit/7ed20561f59eb9ee5646856308561a8938e8fd26))
+
 # [1.14.0](https://github.com/immutable/imx-docs/compare/v1.13.0...v1.14.0) (2022-08-04)
 
 

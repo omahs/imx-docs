@@ -11,4 +11,10 @@ export const sdks = [
     name: 'Core SDK Kotlin',
     url: '/sdk-docs/core-sdk-kotlin/overview',
   },
+  {
+    id: 2,
+    sdkId: 'sdks-core-sdk-swift',
+    name: 'Core SDK Swift',
+    url: '/sdk-docs/core-sdk-swift/overview',
+  },
 ];
