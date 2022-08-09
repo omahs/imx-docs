@@ -40,12 +40,12 @@ const SurvicateWidget = () => {
   tempRatingRef.current = tempRating;
 
   useEffect(() => {
-    const pageUrl = window.location.pathname;
+    const formattedPathname = window.location.pathname.replace(/\/$/, ''); // strip trailing slash
     const cachedRating: Rating = JSON.parse(
       localStorage.getItem('sva_ratings')
     );
-    if (cachedRating && cachedRating[pageUrl]) {
-      setRating(cachedRating[pageUrl]);
+    if (cachedRating && cachedRating[formattedPathname]) {
+      setRating(cachedRating[formattedPathname]);
     }
     return () => {
       setRating(0);
@@ -67,8 +67,9 @@ const SurvicateWidget = () => {
 
   const handleSurvicateSurveyCompleted = () => {
     setRating(tempRatingRef.current);
+    const formattedPathname = window.location.pathname.replace(/\/$/, ''); // strip trailing slash
     let existingRatings = JSON.parse(localStorage.getItem('sva_ratings')) || {};
-    existingRatings[window.location.pathname] = tempRatingRef.current;
+    existingRatings[formattedPathname] = tempRatingRef.current;
     localStorage.setItem('sva_ratings', JSON.stringify(existingRatings));
   };
 
