@@ -28,14 +28,14 @@ const StarRating = (numOfStars: number) => {
 const SurvicateWidget = () => {
   const { siteConfig } = useDocusaurusContext();
 
-  const [rating, setRating] = useState<number>(null);
-  const ratingRef = useRef<number>(null); // to be used for event listener callbacks
+  const [rating, setRating] = useState<number>(0);
+  const ratingRef = useRef<number>(0); // used for event listener callbacks
   ratingRef.current = rating;
 
   // use a temporary state as survey
   // can be closed before completing
-  const [tempRating, setTempRating] = useState<number>(null);
-  const tempRatingRef = useRef<number>(null); // to be used for event listener callbacks
+  const [tempRating, setTempRating] = useState<number>(0);
+  const tempRatingRef = useRef<number>(0); // used for event listener callbacks
   tempRatingRef.current = tempRating;
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const SurvicateWidget = () => {
       setRating(cachedRating[pageUrl]);
     }
     return () => {
-      setRating(null);
+      setRating(0);
     };
   }, []);
 
