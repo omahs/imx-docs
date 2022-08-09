@@ -2,7 +2,7 @@
 id: "token-data-object"
 title: "Token data object"
 slug: "/token-data-object"
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 Currently, in our API reference, we have a `token.data` object required as a parameter for a bunch of endpoints. 

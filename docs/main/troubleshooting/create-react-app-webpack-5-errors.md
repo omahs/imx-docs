@@ -2,7 +2,7 @@
 id: "create-react-app-webpack-5-errors"
 title: "Webpack 5 Errors"
 slug: "/create-react-app-webpack-5-errors"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 If you're using the latest version of [create-react-app](https://create-react-app.dev/) with the [@imtbl/imx-sdk](https://www.npmjs.com/package/@imtbl/imx-sdk) module, you may see errors like this when trying to start up the app:

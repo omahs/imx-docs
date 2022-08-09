@@ -2,7 +2,7 @@
 id: "generate-imx-signature"
 title: "Generate IMX-Signature"
 slug: "/generate-imx-signature"
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 Some of our API endpoints require **IMX-Signature** in the Headers:
