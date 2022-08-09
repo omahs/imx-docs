@@ -1,3 +1,22 @@
+# [1.15.0](https://github.com/immutable/imx-docs/compare/v1.14.2...v1.15.0) (2022-08-09)
+
+
+### Bug Fixes
+
+* **build:** account for trailing slashes in url when caching ([a6d8600](https://github.com/immutable/imx-docs/commit/a6d8600f983797ea384b8dfd43c32f9da2772079))
+* **builkd:** fix build error by using lodash instead ([72cbb59](https://github.com/immutable/imx-docs/commit/72cbb59f5471c4be9e1e813917eaf26fc8db9f31))
+* **cr:** use correct state default for number type ([457448d](https://github.com/immutable/imx-docs/commit/457448d68093255c7cb333cfd1bc56da988d890b))
+* **cr:** use hashmap for localstorage structure ([5352dda](https://github.com/immutable/imx-docs/commit/5352dda16d597eff2316a23196f1ea518858b0d4))
+* **survicate:** store state properly via refs for use in event listener callbacks ([37b0f6d](https://github.com/immutable/imx-docs/commit/37b0f6d183c12ce2e409d21a052c3d8ef092e58c))
+* **typecheck:** fix typecheck ([cea6771](https://github.com/immutable/imx-docs/commit/cea677192f6dd6fa17ee2aa41050dd9c94fb67b0))
+
+
+### Features
+
+* **survicate:** add cached persisting of ratings and reactive design ([ce1b8de](https://github.com/immutable/imx-docs/commit/ce1b8dee5a91bb63d50dfd908065e8221a3684d4))
+* **survicate:** add new env for surveys rating question ([71b7058](https://github.com/immutable/imx-docs/commit/71b70580342f1bdc30f1b18af7e12b1d73c533c5))
+* **survicate:** drafted cache of ratings ([1023d3e](https://github.com/immutable/imx-docs/commit/1023d3eb409befcc52227dafec9618eacd78741f))
+
 ## [1.14.2](https://github.com/immutable/imx-docs/compare/v1.14.1...v1.14.2) (2022-08-08)
 
 
