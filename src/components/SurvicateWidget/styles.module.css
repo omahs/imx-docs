@@ -1,0 +1,17 @@
+.on {
+  color: var(--ifm-color-star-rating-on);
+}
+
+.off {
+  color: var(--ifm-color-star-rating-off);
+}
+
+.starsWrapper {
+  display: inline-flex;
+  gap: 0.1rem;
+}
+.ratingWrapper {
+  white-space: nowrap;
+  display: inline-flex;
+  gap: 0.5rem;
+}

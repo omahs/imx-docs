@@ -8,10 +8,12 @@ interface ButtonProps {
   onClick: () => void;
   disabled?: boolean;
   className?: string;
+  size?: 'xs' | 'sm' | 'md' | 'lg';
 }
 
 const Button = ({
   variant = 'default',
+  size = 'lg',
   children,
   onClick,
   disabled = false,
@@ -22,6 +24,7 @@ const Button = ({
       onClick={onClick}
       className={clsx(
         variant === 'default' ? styles.defaultButton : styles.solidButton,
+        styles[size],
         className
       )}
       disabled={disabled}
