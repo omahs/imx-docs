@@ -4,9 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 
 interface Rating {
-  score: number;
-  page: string;
-  updatedAt: Date;
+  [key: string]: number;
 }
 
 const StarRating = (numOfStars: number) => {
@@ -30,25 +28,28 @@ const StarRating = (numOfStars: number) => {
 const SurvicateWidget = () => {
   const { siteConfig } = useDocusaurusContext();
 
-  const [ratings, setRatings] = useState<Rating[]>([]);
-  const ratingsRef = useRef<Rating[]>([]); // to be used for event listener callbacks
-  ratingsRef.current = ratings;
+  const [rating, setRating] = useState<number>(null);
+  const ratingRef = useRef<number>(null); // to be used for event listener callbacks
+  ratingRef.current = rating;
 
   // use a temporary state as survey
   // can be closed before completing
-  const [tempRatings, setTempRatings] = useState<Rating[]>([]);
-  const tempRatingsRef = useRef<Rating[]>([]); // to be used for event listener callbacks
-  tempRatingsRef.current = tempRatings;
+  const [tempRating, setTempRating] = useState<number>(null);
+  const tempRatingRef = useRef<number>(null); // to be used for event listener callbacks
+  tempRatingRef.current = tempRating;
 
   useEffect(() => {
-    const cachedRatings = JSON.parse(localStorage.getItem('sva_ratings'));
-    if (cachedRatings) {
-      setRatings(cachedRatings);
+    const pageUrl = window.location.pathname;
+    const cachedRating: Rating = JSON.parse(
+      localStorage.getItem('sva_ratings')
+    );
+    if (cachedRating && cachedRating[pageUrl]) {
+      setRating(cachedRating[pageUrl]);
     }
+    return () => {
+      setRating(null);
+    };
   }, []);
-
-  const pageRating = (log: Rating[]) =>
-    log.find((rating: Rating) => rating.page === window.location.href);
 
   const handleSurvicateAnswer = (
     surveyId: string,
@@ -58,32 +59,16 @@ const SurvicateWidget = () => {
     // we only care about the rating question
     const id = (siteConfig.customFields.survicate as any).starRatingQuestionId;
     if (questionId === parseInt(id)) {
-      const score = answer.answer_value;
-      const page = window.location.href;
-
-      let existingRatings = ratingsRef.current;
-
-      if (pageRating(existingRatings))
-        existingRatings = existingRatings.filter(
-          (r: Rating) => r.page !== page
-        );
-
-      const updatedRatings = [
-        ...existingRatings,
-        {
-          score,
-          page,
-          updatedAt: new Date(),
-        },
-      ];
-
-      setTempRatings(updatedRatings);
+      const score = parseInt(answer.answer_value);
+      setTempRating(score);
     }
   };
 
   const handleSurvicateSurveyCompleted = () => {
-    setRatings(tempRatingsRef.current);
-    localStorage.setItem('sva_ratings', JSON.stringify(tempRatingsRef.current));
+    setRating(tempRatingRef.current);
+    let existingRatings = JSON.parse(localStorage.getItem('sva_ratings')) || {};
+    existingRatings[window.location.pathname] = tempRatingRef.current;
+    localStorage.setItem('sva_ratings', JSON.stringify(existingRatings));
   };
 
   const addSurvicateEventListeners = () => {
@@ -102,10 +87,12 @@ const SurvicateWidget = () => {
     }
 
     return () => {
-      window._sva.removeEventListener(
-        'question_answered',
-        handleSurvicateAnswer
-      );
+      if (window._sva) {
+        window._sva.removeEventListener(
+          'question_answered',
+          handleSurvicateAnswer
+        );
+      }
       window.removeEventListener('SurvicateReady', addSurvicateEventListeners);
     };
   }, []);
@@ -126,7 +113,7 @@ const SurvicateWidget = () => {
     <Button variant="solid" size="md" onClick={handleSurvicate}>
       <div className={styles.ratingWrapper}>
         {'Rate this page:'}
-        {StarRating(pageRating(ratings)?.score || 0)}
+        {StarRating(rating || 0)}
       </div>
     </Button>
   );
