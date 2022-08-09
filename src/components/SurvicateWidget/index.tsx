@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Button from '@site/src/components/Button';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
+import { times } from 'lodash';
 
 interface Rating {
   [key: string]: number;
@@ -10,7 +11,7 @@ interface Rating {
 const StarRating = (numOfStars: number) => {
   return (
     <div className={styles.starsWrapper}>
-      {[...Array(5)].map((star, i) => {
+      {times(5).map((star, i) => {
         return (
           <span
             key={i}
