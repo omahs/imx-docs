@@ -3,6 +3,7 @@ description: Core SDK changelog
 id: changelog
 slug: /changelog
 tags: [core-sdk-example]
+keywords: [imx-teamname]
 ---
 
 # Changelog

@@ -3,6 +3,7 @@ description: Install Core SDK TypeScript
 id: installation
 slug: /installation
 tags: [core-sdk-example, installation, setup]
+keywords: [imx-teamname]
 ---
 
 # Installation

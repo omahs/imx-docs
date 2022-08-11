@@ -3,6 +3,7 @@ description: Authorised SDK requests
 id: authentication
 slug: /authentication
 tags: [core-sdk-example, auth]
+keywords: [imx-teamname]
 ---
 
 # Authentication

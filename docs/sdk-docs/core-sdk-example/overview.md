@@ -3,6 +3,7 @@ description: Overview of the Core SDK TypeScript
 id: overview
 slug: /overview
 tags: [core-sdk-example]
+keywords: [imx-teamname]
 ---
 
 # Overview
