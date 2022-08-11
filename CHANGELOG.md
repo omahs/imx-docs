@@ -1,3 +1,10 @@
+## [1.16.3](https://github.com/immutable/imx-docs/compare/v1.16.2...v1.16.3) (2022-08-11)
+
+
+### Bug Fixes
+
+* fix switcher incorrect selected SDK bug ([127a016](https://github.com/immutable/imx-docs/commit/127a0166cd848de3f34e092423ae9487aff3331f))
+
 ## [1.16.2](https://github.com/immutable/imx-docs/compare/v1.16.1...v1.16.2) (2022-08-11)
 
 
