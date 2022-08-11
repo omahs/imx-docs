@@ -3,6 +3,8 @@ import Button from '@site/src/components/Button';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 import { times } from 'lodash';
+// @ts-ignore
+import { useDoc } from '@docusaurus/theme-common/internal';
 
 interface Rating {
   [key: string]: number;
@@ -28,6 +30,9 @@ const StarRating = (numOfStars: number) => {
 
 const SurvicateWidget = () => {
   const { siteConfig } = useDocusaurusContext();
+  const {
+    metadata: { tags },
+  } = useDoc();
 
   const [rating, setRating] = useState<number>(0);
   const ratingRef = useRef<number>(0); // used for event listener callbacks
@@ -73,6 +78,16 @@ const SurvicateWidget = () => {
     localStorage.setItem('sva_ratings', JSON.stringify(existingRatings));
   };
 
+  const getArticleTeamOwners = () => {
+    if (tags.length > 0) {
+      const teamOwnerTags = tags
+        .map((t) => t.label)
+        .filter((label) => label.includes('imx-'));
+      return teamOwnerTags;
+    }
+    return [];
+  };
+
   const addSurvicateEventListeners = () => {
     window._sva.addEventListener(
       'survey_completed',
@@ -81,11 +96,25 @@ const SurvicateWidget = () => {
     window._sva.addEventListener('question_answered', handleSurvicateAnswer);
   };
 
+  const setupSurvicate = () => {
+    addSurvicateEventListeners();
+
+    const teamOwnerTags = getArticleTeamOwners();
+    // https://developers.survicate.com/javascript/configuration/
+    (function (opts) {
+      opts.disableTargeting = true;
+      // Tag survey with article team ownership
+      opts.traits = {
+        ...(teamOwnerTags.length > 0 && { imx_teams: teamOwnerTags }),
+      };
+    })((window._sva = window._sva || {}));
+  };
+
   useEffect(() => {
     if (window._sva) {
-      addSurvicateEventListeners();
+      setupSurvicate();
     } else {
-      window.addEventListener('SurvicateReady', addSurvicateEventListeners);
+      window.addEventListener('SurvicateReady', setupSurvicate);
     }
 
     return () => {
@@ -95,7 +124,7 @@ const SurvicateWidget = () => {
           handleSurvicateAnswer
         );
       }
-      window.removeEventListener('SurvicateReady', addSurvicateEventListeners);
+      window.removeEventListener('SurvicateReady', setupSurvicate);
     };
   }, []);
 
