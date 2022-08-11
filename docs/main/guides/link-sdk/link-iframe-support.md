@@ -3,6 +3,7 @@ id: "link-iframe-support"
 title: "Link iFrame Support"
 slug: "/link-iframe-support"
 sidebar_position: 3
+keywords: [imx-wallets]
 ---
 
 ## How to trigger link inside an iframe

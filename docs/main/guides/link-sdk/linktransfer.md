@@ -4,6 +4,7 @@ title: "Link.transfer"
 slug: "/linktransfer"
 excerpt: "Link can now be used to kick off flows containing multiple token transfers"
 sidebar_position: 1
+keywords: [imx-wallets]
 ---
 
 :::caution Registration is required for Receiver Wallet

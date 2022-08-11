@@ -3,6 +3,7 @@ id: "link-fiat-to-crypto"
 title: "Link.fiatToCrypto"
 slug: "/link-fiat-to-crypto"
 sidebar_position: 11
+keywords: [imx-wallets]
 ---
 
 The exchange functionality is available in SDK v1.3.33+ and is a collaboration between Immutable X and Moonpay. `cryptoCurrencies` param is available in SDK v1.3.38+

@@ -3,6 +3,7 @@ id: "linksign"
 title: "Link.sign"
 slug: "/linksign"
 sidebar_position: 10
+keywords: [imx-wallets]
 ---
 
 :::note Link reference tool

@@ -4,6 +4,7 @@ title: "Ethereum scalability"
 slug: "/ethereum-scalability"
 excerpt: "Immutable X's solution for Ethereum scalability issues"
 sidebar_position: 3
+keywords: [imx-dx]
 ---
 Scalability refers to a blockchain network's ability to support high transactional throughput and future growth. It’s critical because it represents the only way for a blockchain network to reasonably compete with the rapid settlement times of centralized platforms. 
 

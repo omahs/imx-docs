@@ -3,6 +3,7 @@ id: "linkpreparewithdrawal"
 title: "Link.prepareWithdrawal"
 slug: "/linkpreparewithdrawal"
 sidebar_position: 5
+keywords: [imx-wallets]
 ---
 
 :::note Link reference tool

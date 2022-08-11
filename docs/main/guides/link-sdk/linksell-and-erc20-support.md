@@ -3,6 +3,7 @@ id: "linksell-and-erc20-support"
 title: "Link.sell and ERC20 support"
 slug: "/linksell-and-erc20-support"
 sidebar_position: 7
+keywords: [imx-wallets]
 ---
 
 :::note Link reference tool

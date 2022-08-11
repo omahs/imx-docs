@@ -4,6 +4,7 @@ title: "Core Concepts"
 slug: "/core-concepts"
 excerpt: "Ethereum blockchain and Immutable X key concepts"
 sidebar_position: 2
+keywords: [imx-dx]
 ---
 This page is a work-in-progress overview of some key concepts related to the Ethereum blockchain and Immutable X. 
 

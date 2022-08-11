@@ -3,6 +3,7 @@ id: "zero-to-hero-nft-minting"
 title: "NFT Minting Tutorial"
 slug: "/zero-to-hero-nft-minting"
 sidebar_position: 1
+keywords: [imx-growth]
 ---
 *Estimated completion time: 20 mins*
 

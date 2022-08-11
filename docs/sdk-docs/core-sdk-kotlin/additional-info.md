@@ -3,6 +3,7 @@ description: Additional into about the Core SDK Kotlin
 id: additional-info
 slug: /additional-info
 tags: [core-sdk-kotlin]
+keywords: [imx-wallets]
 ---
 
 # Additional Info

@@ -3,6 +3,7 @@ description: Overview of the Core SDK Kotlin
 id: overview
 slug: /overview
 tags: [core-sdk-kotlin]
+keywords: [imx-wallets]
 ---
 
 # Overview
