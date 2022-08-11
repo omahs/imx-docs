@@ -3,6 +3,7 @@ import Button from '@site/src/components/Button';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 import { times } from 'lodash';
+// @ts-ignore
 import { useDoc } from '@docusaurus/theme-common/internal';
 
 interface Rating {
