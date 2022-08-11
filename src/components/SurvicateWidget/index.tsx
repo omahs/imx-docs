@@ -118,9 +118,7 @@ const SurvicateWidget = () => {
 
   const getArticleTeamOwners = () => {
     if (keywords && keywords.length > 0) {
-      const teamOwners =
-        keywords &&
-        keywords.map((t) => t).filter((label) => label.includes('imx-'));
+      const teamOwners = keywords.filter((k) => k.includes('imx-'));
       return teamOwners;
     }
     return [];
