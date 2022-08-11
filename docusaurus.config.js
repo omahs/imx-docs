@@ -148,7 +148,7 @@ const configuration = {
             type: 'dropdown',
             items: [
               {
-                label: 'API Changelog',
+                label: 'API changelog',
                 to: '/docs/api-changelog',
               },
             ],
