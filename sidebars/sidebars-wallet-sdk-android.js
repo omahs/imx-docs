@@ -1,3 +1,5 @@
+const { url } = require('../docusaurus.config');
+
 module.exports = {
   mainSidebar: [
     {
@@ -8,6 +10,11 @@ module.exports = {
         'installation',
         'quickstart',
         'additional-info',
+        {
+          type: 'link',
+          label: 'Reference',
+          href: `${url}/sdk-references/wallet-sdk-android/0-2-0/`,
+        },
       ],
     },
   ],

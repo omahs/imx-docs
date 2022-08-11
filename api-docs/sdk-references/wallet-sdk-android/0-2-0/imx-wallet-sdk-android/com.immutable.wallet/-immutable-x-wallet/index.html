@@ -1,0 +1,196 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ImmutableXWallet</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">imx-wallet-sdk-android</a></div>
+      <div>0.2.0</div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="imx-wallet-sdk-android::com.immutable.wallet/ImmutableXWallet///PointingToDeclaration//-1500036973">
+          <div class="breadcrumbs"><a href="../../../index.html">imx-wallet-sdk-android</a>/<a href="../index.html">com.immutable.wallet</a>/<a href="index.html">ImmutableXWallet</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Immutable</span><wbr></wbr><span><span>XWallet</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">ImmutableXWallet</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph"><a href="index.html">ImmutableXWallet</a> provides an easy way to connect your users Layer 1 Ethereum wallets and the derivation of an Immutable Layer 2 wallet.</p><p class="paragraph">Once both wallets are connected you will have access to the <code class="lang-kotlin">Signer</code> (L1 wallet) and <code class="lang-kotlin">StarkSigner</code> (L2 wallet) which can be used to perform transactions on Immutable X.</p><p class="paragraph">Session management is handled for you and any changes to the wallets connection will be notified through the callback.</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-968756732%2FFunctions%2F-1500036973" anchor-label="connect" id="-968756732%2FFunctions%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="connect.html"><span><span>connect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-968756732%2FFunctions%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="connect.html"><span class="token function">connect</span></a><span class="token punctuation">(</span>provider<span class="token operator">: </span><a href="../../com.immutable.wallet.provider/-provider/index.html">Provider</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Connects a wallet using the given provider if no wallet is currently connected. This is asynchronous so make sure to have called <a href="set-callback.html">setCallback</a> to listen for the result.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1396123294%2FFunctions%2F-1500036973" anchor-label="disconnect" id="1396123294%2FFunctions%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="disconnect.html"><span><span>disconnect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1396123294%2FFunctions%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="disconnect.html"><span class="token function">disconnect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Attempts to disconnect the active wallet session. This is asynchronous so make sure to have called <a href="set-callback.html">setCallback</a> to listen for the <a href="../-immutable-x-wallet-status/-disconnected/index.html">ImmutableXWalletStatus.Disconnected</a> event.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1438851989%2FFunctions%2F-1500036973" anchor-label="getWalletAddress" id="1438851989%2FFunctions%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="get-wallet-address.html"><span>get</span><wbr></wbr><span>Wallet</span><wbr></wbr><span><span>Address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1438851989%2FFunctions%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-wallet-address.html"><span class="token function">getWalletAddress</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Get the Ethereum wallet's public address</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="541260212%2FFunctions%2F-1500036973" anchor-label="init" id="541260212%2FFunctions%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="init.html"><span><span>init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="541260212%2FFunctions%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="init.html"><span class="token function">init</span></a><span class="token punctuation">(</span>app<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Initialises the Immutable Wallet SDK. If there was a previous wallet session it will be automatically restarted if it hasn't expired. When you call <a href="set-callback.html">setCallback</a> it will be immediately triggered with the last state so you can check if it's connecting or already successfully connected.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-798488767%2FFunctions%2F-1500036973" anchor-label="isConnected" id="-798488767%2FFunctions%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="is-connected.html"><span>is</span><wbr></wbr><span><span>Connected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-798488767%2FFunctions%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-connected.html"><span class="token function">isConnected</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Check if there is a wallet from any provider connected and an Immutable wallet derived</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1382514801%2FFunctions%2F-1500036973" anchor-label="removeCallback" id="1382514801%2FFunctions%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="remove-callback.html"><span>remove</span><wbr></wbr><span><span>Callback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1382514801%2FFunctions%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="remove-callback.html"><span class="token function">removeCallback</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Remove the callback for being notified of wallet status changes</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-929453677%2FFunctions%2F-1500036973" anchor-label="restartSession" id="-929453677%2FFunctions%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="restart-session.html"><span>restart</span><wbr></wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-929453677%2FFunctions%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="restart-session.html"><span class="token function">restartSession</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Attempt to restart an existing session from any provider. This is asynchronous so make sure to have called <a href="set-callback.html">setCallback</a> to listen for the result.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-242081607%2FFunctions%2F-1500036973" anchor-label="setCallback" id="-242081607%2FFunctions%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="set-callback.html"><span>set</span><wbr></wbr><span><span>Callback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-242081607%2FFunctions%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-callback.html"><span class="token function">setCallback</span></a><span class="token punctuation">(</span>callback<span class="token operator">: </span><a href="../-immutable-x-wallet-callback/index.html">ImmutableXWalletCallback</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Set the callback to be notified when the wallet status changes or failed to change.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="1448833616%2FProperties%2F-1500036973" anchor-label="signer" id="1448833616%2FProperties%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="signer.html">signer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1448833616%2FProperties%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><a data-name="1448833616%2FProperties%2F-1500036973" anchor-label="signer" id="1448833616%2FProperties%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="signer.html">signer</a><span class="token operator">: </span><span data-unresolved-link="com.immutable.sdk/Signer///PointingToDeclaration/">Signer</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1448833616%2FProperties%2F-1500036973" anchor-label="signer" id="1448833616%2FProperties%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a><p class="paragraph">The Layer 1 Wallet as a <span data-unresolved-link="com.immutable.sdk/Signer///PointingToDeclaration/">Signer</span>, will be null if not connected</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1261835299%2FProperties%2F-1500036973" anchor-label="starkSigner" id="-1261835299%2FProperties%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a>
+                <div class="table-row" data-filterable-current=":imx-wallet-sdk-android:dokkaHtml/release" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="stark-signer.html">starkSigner</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1261835299%2FProperties%2F-1500036973"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-wallet-sdk-android:dokkaHtml/release"><a data-name="-1261835299%2FProperties%2F-1500036973" anchor-label="starkSigner" id="-1261835299%2FProperties%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="stark-signer.html">starkSigner</a><span class="token operator">: </span><span data-unresolved-link="com.immutable.sdk/StarkSigner///PointingToDeclaration/">StarkSigner</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1261835299%2FProperties%2F-1500036973" anchor-label="starkSigner" id="-1261835299%2FProperties%2F-1500036973" data-filterable-set=":imx-wallet-sdk-android:dokkaHtml/release"></a><p class="paragraph">The Layer 2 (Immutable) Wallet as a <span data-unresolved-link="com.immutable.sdk/StarkSigner///PointingToDeclaration/">StarkSigner</span>, will be null if not connected</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+
