@@ -4,6 +4,7 @@ title: "Link.buy"
 slug: "/link-buy2"
 excerpt: "Link can now be used to kick off buy flows containing multiple order ID's"
 sidebar_position: 4
+keywords: [imx-wallets]
 ---
 
 :::note Link reference tool

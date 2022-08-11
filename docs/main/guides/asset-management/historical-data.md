@@ -3,6 +3,7 @@ id: "historical-data"
 title: "Historical Data"
 slug: "historical-data"
 sidebar_position: 8
+keywords: [imx-dx]
 ---
 Immutable X allows you to get a complete history of user actions on the exchange, including their deposits, withdrawals and trades. This is useful for displaying user history, calculating your application's volume and estimating asset prices. In future, we may allow users to designate certain actions as private, but we currently do not support this.
 

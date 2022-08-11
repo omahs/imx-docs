@@ -1,3 +1,10 @@
+## [1.16.2](https://github.com/immutable/imx-docs/compare/v1.16.1...v1.16.2) (2022-08-11)
+
+
+### Bug Fixes
+
+* **syntax:** clean up ([4ac8c9a](https://github.com/immutable/imx-docs/commit/4ac8c9af22eeae4e29cb3e843f5c24292241f6a1))
+
 ## [1.16.1](https://github.com/immutable/imx-docs/compare/v1.16.0...v1.16.1) (2022-08-11)
 
 

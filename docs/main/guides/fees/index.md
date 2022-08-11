@@ -3,6 +3,7 @@ id: "fees"
 title: 'Fees'
 slug: '/fees'
 excerpt: 'Marketplace trading fees'
+keywords: [imx-tokens]
 ---
 
 To start, here are some explanations of common terms:

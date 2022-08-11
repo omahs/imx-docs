@@ -3,6 +3,7 @@ id: "link-deposit-options"
 title: "Link.deposit"
 slug: "/link-deposit-options"
 sidebar_position: 8
+keywords: [imx-wallets]
 ---
 
 :::note Link reference tool

@@ -3,6 +3,7 @@ id: "token-data-object"
 title: "Token data object"
 slug: "/token-data-object"
 sidebar_position: 4
+keywords: [imx-games]
 ---
 
 Currently, in our API reference, we have a `token.data` object required as a parameter for a bunch of endpoints. 

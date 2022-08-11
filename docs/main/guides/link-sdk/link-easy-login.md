@@ -4,6 +4,7 @@ title: "Link Easy Login"
 slug: "/link-easy-login"
 excerpt: "IMX SDK supports easy login through Magic.link"
 sidebar_position: 13
+keywords: [imx-wallets]
 ---
 
 IMX SDK supports easy login and wallet management functionality through [Magic.link](https://magic.link/). This allows users to easily generate wallets and login through email without manual wallet generation and additional password management.

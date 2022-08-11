@@ -4,6 +4,7 @@ title: "Getting started"
 slug: "/getting-started-guide"
 excerpt: "Register with Immutable X and prepare for testing"
 sidebar_position: 1
+keywords: [imx-wallets]
 ---
 These are the core components of the Immutable X stack: 
 - **API** - Our API contains both the read and write functionality required to build applications without building a backend.
