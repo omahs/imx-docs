@@ -8,23 +8,8 @@ import VersionSwitcher from '@site/src/components/VersionSwitcher';
 import styles from './styles.module.css';
 import { SdkIdKey, SdkItem, SdkList, sdks } from '@site/src/constants';
 
-// interface SdkItem {
-//   id: number;
-//   sdkId: string;
-//   name: string;
-//   url: string;
-// }
-// interface SdkList extends Array<SdkItem> {}
-
-// const SdkIdKey = 'imx-docs-core-sdk-id';
-
 const getSdkId = (sdkList: SdkList): number => {
-  const val = localStorage.getItem(SdkIdKey);
-  console.log('val', val);
-
   const localId = parseInt(localStorage.getItem(SdkIdKey)) || 0;
-
-  console.log('getSdkId.localId', localId);
 
   if (localId > sdkList.length - 1) {
     return 0;
