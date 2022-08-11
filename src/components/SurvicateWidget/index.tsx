@@ -119,7 +119,7 @@ const SurvicateWidget = () => {
     if (tags.length > 0) {
       const teamOwnerTags = tags
         .map((t) => t.label)
-        .filter((label) => label.includes('imx_'));
+        .filter((label) => label.includes('imx-'));
       return teamOwnerTags;
     }
     return [];
