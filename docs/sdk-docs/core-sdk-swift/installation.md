@@ -3,6 +3,7 @@ description: Install Core SDK Swift
 id: installation
 slug: /installation
 tags: [core-sdk-swift, installation, setup]
+keywords: [imx-wallets]
 ---
 
 # Installation

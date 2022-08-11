@@ -4,6 +4,7 @@ title: "Contributing to these docs"
 slug: "/contributing"
 excerpt: "How to contribute to Immutable X's open source documentation"
 sidebar_position: 6
+keywords: [imx-dx]
 ---
 
 # Contributing to Immutable X Documentation 🙌

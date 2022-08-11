@@ -3,6 +3,7 @@ id: "linkcompletewithdrawal"
 title: "Link.completeWithdrawal"
 slug: "/linkcompletewithdrawal"
 sidebar_position: 6
+keywords: [imx-wallets]
 ---
 
 :::note Link reference tool

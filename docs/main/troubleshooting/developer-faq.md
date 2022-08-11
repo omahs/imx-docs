@@ -3,6 +3,7 @@ id: "developer-faq"
 title: "FAQ"
 slug: "/developer-faq"
 sidebar_position: 2
+keywords: [imx-games, imx-dx]
 ---
 
 ## General 

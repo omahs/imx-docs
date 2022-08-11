@@ -3,6 +3,7 @@ id: "trading-assets"
 title: "Asset Trading"
 slug: "/trading-assets"
 sidebar_position: 6
+keywords: [imx-games]
 ---
 To build a marketplace that supports trading of Immutable X assets, you need to:
 - Use our Orderbook APIs to display assets that are currently for sale.

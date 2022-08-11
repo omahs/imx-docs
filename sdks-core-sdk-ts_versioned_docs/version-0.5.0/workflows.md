@@ -3,6 +3,7 @@ description: How to make a first SDK request
 id: workflows
 slug: /workflows
 tags: [core-sdk-ts, sdk functions]
+keywords: [imx-games]
 ---
 
 # Workflows

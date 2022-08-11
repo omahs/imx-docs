@@ -3,6 +3,7 @@ description: Functions included in the SDK
 id: sdk-functions
 slug: /sdk-functions
 tags: [core-sdk-kotlin, sdk functions]
+keywords: [imx-wallets]
 ---
 
 # SDK Functions
