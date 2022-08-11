@@ -1,3 +1,17 @@
+# [1.16.0](https://github.com/immutable/imx-docs/compare/v1.15.0...v1.16.0) (2022-08-11)
+
+
+### Bug Fixes
+
+* **lint:** fix typecheck ([0fb4051](https://github.com/immutable/imx-docs/commit/0fb4051bd94010843791b4580448cbcf90d03e24))
+* **rating:** only send team owner trait if one exists ([acbb1b3](https://github.com/immutable/imx-docs/commit/acbb1b30f8e2e48673d1b89f4c7dec67da240b27))
+* **rating:** use correct dash operator syntax for tags ([3f4f059](https://github.com/immutable/imx-docs/commit/3f4f059bc604cb5230f6391b7d302ce1de8e6a3e))
+
+
+### Features
+
+* **rating:** tag survey with article team ownership ([eed3a80](https://github.com/immutable/imx-docs/commit/eed3a80de3fb50724a01872b6bd2d83601464160))
+
 # [1.15.0](https://github.com/immutable/imx-docs/compare/v1.14.2...v1.15.0) (2022-08-09)
 
 
