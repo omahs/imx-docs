@@ -1,0 +1,8 @@
+.sdkButtonList {
+  display: flex;
+  flex-direction: column;
+}
+
+.sdkButton {
+  margin: 0.8rem 0;
+}

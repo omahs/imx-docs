@@ -4,37 +4,14 @@ title: 'Immutable X SDKs'
 slug: '/sdks'
 description: 'Immutable X SDKs'
 ---
-
-import Button from '@site/src/components/Button';
-import RightArrowIcon from '@site/static/icons/RightArrow';
-import styles from '@site/src/components/Article/styles.module.css';
+import SdkButtonList from '@site/src/components/SdkButtonList';
+import articleStyles from '@site/src/components/Article/styles.module.css';
 
 ## Immutable Core SDKs
 
 The Immutable Core SDKs provide convenient access to the Immutable APIs and Ethereum Contract methods for applications that want to integrate with Immutable. The Core SDK is presently available in Typescript and Kotlin/JVM will be available in many languages in the near future.
 
-<a href="/sdk-docs/core-sdk-ts/overview">
-  <Button>
-    {'Immutable Core SDK - Typescript '}
-    <RightArrowIcon className={styles.ctaIcon} />
-  </Button>
-</a>
-<br />
-<br />
-<a href="/sdk-docs/core-sdk-kotlin/overview">
-  <Button>
-    {'Immutable Core SDK - Kotlin/JVM '}
-    <RightArrowIcon className={styles.ctaIcon} />
-  </Button>
-</a>
-<br />
-<br />
-<a href="/sdk-docs/core-sdk-swift/overview">
-  <Button>
-    {'Immutable Core SDK - Swift '}
-    <RightArrowIcon className={styles.ctaIcon} />
-  </Button>
-</a>
+<SdkButtonList />
 
 ## Open API Specification
 
@@ -42,6 +19,6 @@ Immutable's Open API specification empowers developers to be able to interact ef
 
 <a href="https://github.com/immutable/imx-core-sdk/blob/main/openapi.json">
   <Button>
-    Immutable Open API Spec <RightArrowIcon className={styles.ctaIcon} />
+    Immutable Open API Spec <RightArrowIcon className={articleStyles.ctaIcon} />
   </Button>
 </a>
