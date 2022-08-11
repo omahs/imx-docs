@@ -31,4 +31,10 @@ export const sdks = [
     displayName: 'Immutable Core SDK - Swift',
     url: '/sdk-docs/core-sdk-swift/overview',
   },
+  {
+    id: 3,
+    sdkId: 'sdks-wallet-sdk-android',
+    name: 'Wallet SDK Android',
+    url: '/sdk-docs/wallet-sdk-android/overview',
+  },
 ];
