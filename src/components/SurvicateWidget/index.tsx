@@ -31,7 +31,7 @@ const StarRating = (numOfStars: number) => {
 const SurvicateWidget = () => {
   const { siteConfig } = useDocusaurusContext();
   const {
-    metadata: { tags },
+    frontMatter: { keywords },
   } = useDoc();
 
   const [rating, setRating] = useState<number>(0);
@@ -117,24 +117,24 @@ const SurvicateWidget = () => {
   };
 
   const getArticleTeamOwners = () => {
-    if (tags.length > 0) {
-      const teamOwnerTags = tags
-        .map((t) => t.label)
-        .filter((label) => label.includes('imx-'));
-      return teamOwnerTags;
+    if (keywords && keywords.length > 0) {
+      const teamOwners =
+        keywords &&
+        keywords.map((t) => t).filter((label) => label.includes('imx-'));
+      return teamOwners;
     }
     return [];
   };
 
   useEffect(() => {
-    const teamOwnerTags = getArticleTeamOwners();
+    const teamOwners = getArticleTeamOwners();
 
     // https://developers.survicate.com/javascript/configuration/
     (function (opts) {
       opts.disableTargeting = true;
       // Tag survey with article team ownership
       opts.traits = {
-        ...(teamOwnerTags.length > 0 && { imx_teams: teamOwnerTags }),
+        ...(teamOwners.length > 0 && { imx_teams: teamOwners }),
       };
     })((window._sva = window._sva || {}));
   }, []);
