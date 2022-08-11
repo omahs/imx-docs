@@ -14,6 +14,7 @@ Jira:
 - [ ] Make sure that the current branch is up to date with the `main` branch.
 
 ### For internal Immutable developers:
+- [ ] If you are adding or updating a documentation page, please also add or update the team ownership of that page (follow [this guide](https://immutable.atlassian.net/wiki/spaces/PPS/pages/1947927045/Docs+ownership+registry#What-to-do-when-adding%2Fupdating-documentation-pages%3F)).
 - [ ] If you are adding or updating documentation for an SDK, please make sure that you meet the requirements in [this doc](https://immutable.atlassian.net/wiki/spaces/PPS/pages/1916994017/SDK+documentation+guide).
 - [ ] Please obtain PR approval from all of the following:
     - Your tech lead (Fallback: Team lead or engineering manager)

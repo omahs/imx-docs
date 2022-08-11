@@ -1,3 +1,72 @@
+## [1.16.3](https://github.com/immutable/imx-docs/compare/v1.16.2...v1.16.3) (2022-08-11)
+
+
+### Bug Fixes
+
+* fix switcher incorrect selected SDK bug ([127a016](https://github.com/immutable/imx-docs/commit/127a0166cd848de3f34e092423ae9487aff3331f))
+
+## [1.16.2](https://github.com/immutable/imx-docs/compare/v1.16.1...v1.16.2) (2022-08-11)
+
+
+### Bug Fixes
+
+* **syntax:** clean up ([4ac8c9a](https://github.com/immutable/imx-docs/commit/4ac8c9af22eeae4e29cb3e843f5c24292241f6a1))
+
+## [1.16.1](https://github.com/immutable/imx-docs/compare/v1.16.0...v1.16.1) (2022-08-11)
+
+
+### Bug Fixes
+
+* **survicate:** configure survicate traits when sva will always exist ([f572578](https://github.com/immutable/imx-docs/commit/f57257839db92e72c536ee924d80b99b7961c14d))
+
+# [1.16.0](https://github.com/immutable/imx-docs/compare/v1.15.0...v1.16.0) (2022-08-11)
+
+
+### Bug Fixes
+
+* **lint:** fix typecheck ([0fb4051](https://github.com/immutable/imx-docs/commit/0fb4051bd94010843791b4580448cbcf90d03e24))
+* **rating:** only send team owner trait if one exists ([acbb1b3](https://github.com/immutable/imx-docs/commit/acbb1b30f8e2e48673d1b89f4c7dec67da240b27))
+* **rating:** use correct dash operator syntax for tags ([3f4f059](https://github.com/immutable/imx-docs/commit/3f4f059bc604cb5230f6391b7d302ce1de8e6a3e))
+
+
+### Features
+
+* **rating:** tag survey with article team ownership ([eed3a80](https://github.com/immutable/imx-docs/commit/eed3a80de3fb50724a01872b6bd2d83601464160))
+
+# [1.15.0](https://github.com/immutable/imx-docs/compare/v1.14.2...v1.15.0) (2022-08-09)
+
+
+### Bug Fixes
+
+* **build:** account for trailing slashes in url when caching ([a6d8600](https://github.com/immutable/imx-docs/commit/a6d8600f983797ea384b8dfd43c32f9da2772079))
+* **builkd:** fix build error by using lodash instead ([72cbb59](https://github.com/immutable/imx-docs/commit/72cbb59f5471c4be9e1e813917eaf26fc8db9f31))
+* **cr:** use correct state default for number type ([457448d](https://github.com/immutable/imx-docs/commit/457448d68093255c7cb333cfd1bc56da988d890b))
+* **cr:** use hashmap for localstorage structure ([5352dda](https://github.com/immutable/imx-docs/commit/5352dda16d597eff2316a23196f1ea518858b0d4))
+* **survicate:** store state properly via refs for use in event listener callbacks ([37b0f6d](https://github.com/immutable/imx-docs/commit/37b0f6d183c12ce2e409d21a052c3d8ef092e58c))
+* **typecheck:** fix typecheck ([cea6771](https://github.com/immutable/imx-docs/commit/cea677192f6dd6fa17ee2aa41050dd9c94fb67b0))
+
+
+### Features
+
+* **survicate:** add cached persisting of ratings and reactive design ([ce1b8de](https://github.com/immutable/imx-docs/commit/ce1b8dee5a91bb63d50dfd908065e8221a3684d4))
+* **survicate:** add new env for surveys rating question ([71b7058](https://github.com/immutable/imx-docs/commit/71b70580342f1bdc30f1b18af7e12b1d73c533c5))
+* **survicate:** drafted cache of ratings ([1023d3e](https://github.com/immutable/imx-docs/commit/1023d3eb409befcc52227dafec9618eacd78741f))
+
+## [1.14.2](https://github.com/immutable/imx-docs/compare/v1.14.1...v1.14.2) (2022-08-08)
+
+
+### Bug Fixes
+
+* **kotlin:** fix some mistakes on Kotlin docs ([f866746](https://github.com/immutable/imx-docs/commit/f866746567b2fa4635c12917a9b039928d6eb88c))
+* **swift:** fix broken open api links ([4340e49](https://github.com/immutable/imx-docs/commit/4340e4954715ae272e832801a33f0536d5c71623))
+
+## [1.14.1](https://github.com/immutable/imx-docs/compare/v1.14.0...v1.14.1) (2022-08-05)
+
+
+### Bug Fixes
+
+* replace code flash with SDK landing page ([7ed2056](https://github.com/immutable/imx-docs/commit/7ed20561f59eb9ee5646856308561a8938e8fd26))
+
 # [1.14.0](https://github.com/immutable/imx-docs/compare/v1.13.0...v1.14.0) (2022-08-04)
 
 

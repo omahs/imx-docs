@@ -2,6 +2,7 @@
 id: "integrate-your-application"
 title: "Integrate your application"
 slug: "/integrate-your-application"
+keywords: [imx-dx]
 ---
 This section goes through the steps of connecting and using Immutable X within your application. 
 

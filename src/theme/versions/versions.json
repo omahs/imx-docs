@@ -1,8 +1,0 @@
-{
-  "core-sdk-ts": {
-    "versions": ["0.6.0", "0.5.0"]
-  },
-  "core-sdk-kotlin": {
-    "versions": []
-  }
-}

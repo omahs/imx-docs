@@ -3,6 +3,7 @@ description: Authorised SDK requests
 id: authentication
 slug: /authentication
 tags: [core-sdk-ts, auth]
+keywords: [imx-games]
 ---
 
 # Authentication

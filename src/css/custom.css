@@ -40,6 +40,10 @@
   --ifm-color-home-elevation-03: #dddddd;
   --ifm-color-home-elevation-04: #d3d3d3;
 
+  /* Rating Colors */
+  --ifm-color-star-rating-on: #FFE234;
+  --ifm-color-star-rating-off: var(--ifm-color-home-elevation-04);
+
   /* Doc Sidebar */
   --doc-sidebar-width: 320px !important;
 }
@@ -62,6 +66,9 @@
   --ifm-color-home-elevation-02: #404040;
   --ifm-color-home-elevation-03: #535353;
   --ifm-color-home-elevation-04: #5c5c5c;
+
+  /* Rating Colors */
+  --ifm-color-star-rating-off: #dddddd;
 }
 
 .docusaurus-highlight-code-line {
@@ -199,6 +206,22 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
+}
+
+.text-body-04 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.text-body-04-emphasis {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
 }
 
 /* Custom classes */

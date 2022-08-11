@@ -1,14 +1,24 @@
 ---
-id: "sdks"
-title: "SDKs"
-slug: "/sdks"
-description: "Core SDK TypeScript"
+id: 'sdks'
+title: 'Immutable X SDKs'
+slug: '/sdks'
+description: 'Immutable X SDKs'
 ---
+import SdkButtonList from '@site/src/components/SdkButtonList';
+import articleStyles from '@site/src/components/Article/styles.module.css';
 
-# Core SDK TypeScript - Home
+## Immutable Core SDKs
 
-import {Redirect} from '@docusaurus/router';
+The Immutable Core SDKs provide convenient access to the Immutable APIs and Ethereum Contract methods for applications that want to integrate with Immutable. The Core SDK is presently available in Typescript and Kotlin/JVM will be available in many languages in the near future.
 
-const Home = () => {
-  return <Redirect to="/sdk-docs/core-sdk-ts" />;
-};
+<SdkButtonList />
+
+## Open API Specification
+
+Immutable's Open API specification empowers developers to be able to interact efficiently with our APIs by supporting the automatic client generation in many languages.
+
+<a href="https://github.com/immutable/imx-core-sdk/blob/main/openapi.json">
+  <Button>
+    Immutable Open API Spec <RightArrowIcon className={articleStyles.ctaIcon} />
+  </Button>
+</a>

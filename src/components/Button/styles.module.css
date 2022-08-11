@@ -3,8 +3,7 @@
   width: fit-content;
   color: var(--ifm-color-home-text-primary);
   height: 48px;
-  padding-left: 28px;
-  padding-right: 28px;
+  padding: 0 28px;
   border-width: 2px;
   border-color: var(--ifm-color-home-text-primary);
   border-radius: 48px;
@@ -48,3 +47,27 @@
 [data-theme='dark'] .solidButton:active {
   background: var(--ifm-color-home-elevation-04);
 }
+
+.xs {
+  composes: text-body-04-emphasis from '../../css/custom.css';
+  height: 25px;
+  padding: 0px 15px;
+}
+
+.sm {
+  composes: text-body-03-emphasis from '../../css/custom.css';
+  height: 30px;
+  padding: 0 15px;
+}
+
+.md {
+  composes: text-body-02-emphasis from '../../css/custom.css';
+  height: 40px;
+  padding: 0 15px;
+}
+
+.lg {
+  composes: text-body-01-emphasis from '../../css/custom.css';
+}
+
+

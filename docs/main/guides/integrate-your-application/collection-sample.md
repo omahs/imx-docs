@@ -4,6 +4,7 @@ title: "Collection sample"
 slug: "/collection-sample"
 excerpt: "Code example of a sample collection"
 sidebar_position: 5
+keywords: [imx-games, imx-wallets]
 ---
 ## Code samples to work with a sample Collection
 ```javascript

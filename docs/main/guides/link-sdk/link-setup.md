@@ -3,6 +3,7 @@ id: "link-setup"
 title: "Link.setup"
 slug: "/link-setup"
 sidebar_position: 1
+keywords: [imx-wallets]
 ---
 
 :::note Link reference tool

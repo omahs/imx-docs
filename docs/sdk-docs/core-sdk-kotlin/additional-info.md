@@ -3,6 +3,7 @@ description: Additional into about the Core SDK Kotlin
 id: additional-info
 slug: /additional-info
 tags: [core-sdk-kotlin]
+keywords: [imx-wallets]
 ---
 
 # Additional Info
@@ -15,7 +16,7 @@ Parts of the Core SDK are automagically generated.
 
 We use OpenAPI (formally known as Swagger) to auto-generate the API clients that connect to the public APIs.
 
-The OpenAPI spec is retrieved from https://api.x.immutable.com/openapi and also saved in the repo [here](openapi.json).
+The OpenAPI spec is retrieved from https://api.x.immutable.com/openapi and also saved in the repo [here](https://github.com/immutable/imx-core-sdk-kotlin-jvm/blob/main/openapi.json).
 
 When updating the `org.openapi.generator` plugin ensure that any custom templates are appropriately modified or removed. These can be found in the .openapi-generator/templates directory.
 
@@ -24,10 +25,12 @@ The generation always happens on preBuild so triggering a project build will reg
 ## Wrapping CompletableFuture
 
 ### RxJava
+
 Rx provides a `fromFuture` method that will trigger `future.get()` which is a blocking call so it must be moved off the main thread.
 
 Disposing the resulting observable will not cancel the future so that needs to be done manually using `doOnDispose`.
-```
+
+```kt
 val future = ImmutableWallet.cancel(orderId)
 Observable.fromFuture(future)
     .subscribeOn(Schedulers.io())
@@ -36,15 +39,18 @@ Observable.fromFuture(future)
 ```
 
 ### Coroutines
+
 The Kotlin team has a set of packages for jdk8 that provide an easy extension for using CompletableFuture.
 
 First add this import to your project:
-```
+
+```gradle
 implementation "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:$coroutines_version"
 ```
 
 Then simply call `.await()` on the workflow `CompletableFuture` and wrap it with a try/catch to handle any exceptions.
-```
+
+```kt
 launch(Dispatchers.Default) {
     try {
         val id = ImmutableWallet.cancel(orderId).await()

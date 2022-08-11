@@ -2,6 +2,7 @@
 title: "Project registration"
 slug: "./project-registration"
 sidebar_position: 1
+keywords: [imx-dx]
 ---
 For project registration, you first need to [register as a user with Immutable X](../getting-started-guide.md#register-a-user-account).
 

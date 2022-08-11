@@ -1,3 +1,5 @@
+const { url } = require('../docusaurus.config');
+
 module.exports = {
   mainSidebar: [
     {
@@ -13,7 +15,7 @@ module.exports = {
         {
           type: 'link',
           label: 'Reference',
-          href: 'https://docs.x.immutable.com/sdk-references/core-sdk-ts/0-6-0/',
+          href: `${url}/sdk-references/core-sdk-ts/0-6-0/`,
         },
         'changelog',
       ],

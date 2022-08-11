@@ -3,6 +3,7 @@ id: "link-crypto-to-fiat"
 title: "Link.cryptoToFiat"
 slug: "/link-crypto-to-fiat"
 sidebar_position: 12
+keywords: [imx-wallets]
 ---
 
 The crypto to fiat functionality is available in SDK v1.21.3+ and is a collaboration between Immutable X and Moonpay.

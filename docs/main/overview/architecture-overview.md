@@ -4,6 +4,7 @@ title: "Architecture overview"
 slug: "/architecture-overview"
 excerpt: "The core components of Immutable X"
 sidebar_position: 5
+keywords: [imx-dx]
 ---
 The Immutable X stack consists primarily of: the ZK-Rollup scaling engine, Link UI, and the APIs. Together, these components lower the barriers of entry in the NFT space for developers and users, enabling instant trade confirmation, massive scalability, and gas-free minting and trading — all without compromising user custody.
 
