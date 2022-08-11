@@ -133,7 +133,7 @@ const SurvicateWidget = () => {
       opts.disableTargeting = true;
       // Tag survey with article team ownership
       opts.traits = {
-        imx_teams: teamOwnerTags,
+        ...(teamOwnerTags.length > 0 && { imx_teams: teamOwnerTags }),
       };
     })((window._sva = window._sva || {}));
   }, []);
