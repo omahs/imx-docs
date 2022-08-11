@@ -78,6 +78,14 @@ const SurvicateWidget = () => {
     localStorage.setItem('sva_ratings', JSON.stringify(existingRatings));
   };
 
+  const getArticleTeamOwners = () => {
+    if (keywords && keywords.length > 0) {
+      const teamOwners = keywords.filter((k) => k.includes('imx-'));
+      return teamOwners;
+    }
+    return [];
+  };
+
   const addSurvicateEventListeners = () => {
     window._sva.addEventListener(
       'survey_completed',
@@ -86,11 +94,26 @@ const SurvicateWidget = () => {
     window._sva.addEventListener('question_answered', handleSurvicateAnswer);
   };
 
+  const setupSurvicate = () => {
+    addSurvicateEventListeners();
+
+    const teamOwners = getArticleTeamOwners();
+
+    // https://developers.survicate.com/javascript/configuration/
+    (function (opts) {
+      opts.disableTargeting = true;
+      // Tag survey with article team ownership
+      opts.traits = {
+        ...(teamOwners.length > 0 && { imx_teams: teamOwners }),
+      };
+    })((window._sva = window._sva || {}));
+  };
+
   useEffect(() => {
     if (window._sva) {
-      addSurvicateEventListeners();
+      setupSurvicate();
     } else {
-      window.addEventListener('SurvicateReady', addSurvicateEventListeners);
+      window.addEventListener('SurvicateReady', setupSurvicate);
     }
 
     return () => {
@@ -100,7 +123,7 @@ const SurvicateWidget = () => {
           handleSurvicateAnswer
         );
       }
-      window.removeEventListener('SurvicateReady', addSurvicateEventListeners);
+      window.removeEventListener('SurvicateReady', setupSurvicate);
     };
   }, []);
 
@@ -115,27 +138,6 @@ const SurvicateWidget = () => {
       displayMethod: 'immediately',
     });
   };
-
-  const getArticleTeamOwners = () => {
-    if (keywords && keywords.length > 0) {
-      const teamOwners = keywords.filter((k) => k.includes('imx-'));
-      return teamOwners;
-    }
-    return [];
-  };
-
-  useEffect(() => {
-    const teamOwners = getArticleTeamOwners();
-
-    // https://developers.survicate.com/javascript/configuration/
-    (function (opts) {
-      opts.disableTargeting = true;
-      // Tag survey with article team ownership
-      opts.traits = {
-        ...(teamOwners.length > 0 && { imx_teams: teamOwners }),
-      };
-    })((window._sva = window._sva || {}));
-  }, []);
 
   return (
     <Button variant="solid" size="md" onClick={handleSurvicate}>
