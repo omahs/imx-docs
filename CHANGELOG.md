@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/immutable/imx-docs/compare/v1.16.0...v1.16.1) (2022-08-11)
+
+
+### Bug Fixes
+
+* **survicate:** configure survicate traits when sva will always exist ([f572578](https://github.com/immutable/imx-docs/commit/f57257839db92e72c536ee924d80b99b7961c14d))
+
 # [1.16.0](https://github.com/immutable/imx-docs/compare/v1.15.0...v1.16.0) (2022-08-11)
 
 
