@@ -3,6 +3,7 @@ id: "generate-imx-signature"
 title: "Generate IMX-Signature"
 slug: "/generate-imx-signature"
 sidebar_position: 5
+keywords: [imx-games]
 ---
 
 Some of our API endpoints require **IMX-Signature** in the Headers:

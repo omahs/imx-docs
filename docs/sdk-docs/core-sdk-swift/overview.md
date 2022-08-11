@@ -3,6 +3,7 @@ description: Overview of the Core SDK Swift
 id: overview
 slug: /overview
 tags: [core-sdk-swift]
+keywords: [imx-wallets]
 ---
 
 # Overview

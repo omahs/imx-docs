@@ -3,6 +3,7 @@ description: Additional into about the Core SDK Swift
 id: additional-info
 slug: /additional-info
 tags: [core-sdk-swift]
+keywords: [imx-wallets]
 ---
 
 # Additional Info

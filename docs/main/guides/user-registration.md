@@ -4,6 +4,7 @@ title: "User registration"
 slug: "/user-registration"
 excerpt: "Prior to trading on Immutable X, all users need to be registered"
 sidebar_position: 8
+keywords: [imx-wallets]
 ---
 All new Immutable X users are required to set up a Layer 2 wallet via [Link](../guides/link-sdk/index.md), which will register and associate the Layer 1 wallet address with a newly generated STARK key.
 

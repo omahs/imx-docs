@@ -3,6 +3,7 @@ description: Additional into about the Core SDK
 id: additional-info
 slug: /additional-info
 tags: [core-sdk-ts]
+keywords: [imx-games]
 ---
 
 # Additional Info

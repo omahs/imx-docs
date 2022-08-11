@@ -4,6 +4,7 @@ title: 'Personal inventory'
 slug: '/personal-inventory'
 excerpt: 'View account balances and manage assets'
 sidebar_position: 3
+keywords: [imx-wallets]
 ---
 
 Monitoring and interacting with a user’s account will require both the IMX client and the Link SDK. Additional imports of type constants may also be needed for inventory requests.

@@ -3,6 +3,7 @@ id: "asset-minting"
 title: "Asset Minting"
 slug: "/asset-minting"
 sidebar_position: 3
+keywords: [imx-games]
 ---
 A key advantage of Immutable X is that applications are able to mint assets on Layer 2, rather than minting on Ethereum and then depositing into the exchange. This makes minting gas-free for both applications and users, a massive improvement over the current landscape.  
 

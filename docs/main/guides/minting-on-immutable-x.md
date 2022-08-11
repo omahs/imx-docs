@@ -3,6 +3,7 @@ id: "minting-on-immutable-x"
 title: "Minting on Immutable X"
 slug: "/minting-on-immutable-x"
 sidebar_position: 4
+keywords: [imx-games]
 ---
 This guide provides context on the steps required to list your game items, collectibles, or other ERC-721 assets  (otherwise known as NFTs) on Immutable X. It's a good overview of tasks and concepts if you're new to the space, or if you want to learn more about the benefits of minting on Immutable X. 
 :::info Ready to start?

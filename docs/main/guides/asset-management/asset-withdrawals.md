@@ -3,6 +3,7 @@ id: "asset-withdrawals"
 title: "Asset Withdrawals"
 slug: "asset-withdrawals"
 sidebar_position: 4
+keywords: [imx-games]
 ---
 Withdrawals move assets from the off-chain environment to the on-chain environment. Users submit a withdrawal request, then wait for that withdrawal to be included in a batch and published on-chain. After the batch has been published, the user can send a transaction. 
 

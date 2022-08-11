@@ -3,6 +3,7 @@ id: "linkbatchnfttransfer"
 title: "Link.batchNftTransfer"
 slug: "/linkbatchnfttransfer"
 sidebar_position: 2
+keywords: [imx-wallets]
 ---
 
 As of `1.3.52`, the `@imtbl/imx-sdk` supports transferring large amounts of NFT assets in batches. To begin a new batch transfer flow, link should be called like so:
