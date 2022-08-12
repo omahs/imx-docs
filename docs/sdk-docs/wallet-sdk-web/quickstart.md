@@ -1,5 +1,5 @@
 ---
-description: Quickly starting to enjoy the benefits of the Wallet SDK Web
+description: Quickly starting to enjoy the benefits of the Wallet SDK
 id: quickstart
 slug: /quickstart
 tags: [wallet-sdk-web, quickstart]
@@ -7,7 +7,7 @@ tags: [wallet-sdk-web, quickstart]
 
 # Quickstart
 
-Setting up and starting using the Wallet SDK Web is effortless. All that is needed is to `build`, `connect`, `getWalletConnection` and begin using the signers for the purposes.
+It is easy to set up and start using the Wallet SDK:
 
 ```ts
 import {
@@ -17,12 +17,12 @@ import {
 } from '@imtbl/imx-wallet-sdk-web';
 
 (async () => {
-  // Builds the sdk object
+  // Builds the Wallet SDK object
   const sdk = await WalletSDK.build({
     env: ENVIRONMENTS.STAGING,
     /*
-      RPC config is just used for WalletConnect supporting. If it is the case, 
-      make sure to set the RPC config following this reference:
+      RPC config is only required if the WalletConnect provider (L1_PROVIDERS.WALLET_CONNECT)
+      is being used. Follow this reference for the RPC config:
       https://docs.walletconnect.com/quick-start/dapps/web3-provider#provider-options
     */
     rpc: {
@@ -30,19 +30,23 @@ import {
     },
   });
 
-  // Connects on the chosen provider:
-  // WalletConnect
+  // Connects on the chosen provider - WalletConnect
   const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
-  // Or MetaMask
+  // For Metamask:
   // const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.METAMASK });
 
-  // Ensures user registered
+  // Register the user using the Core SDK
   await coreSdkWorkflows.registerOffchain(walletConnection);
 })();
 ```
 
+:::note
+The `coreSdkWorkflows` object setup was omitted for brevity. <br/>
+Check out the [Workflows examples](/sdk-docs/wallet-sdk-web/code-examples#workflows) to get examples of how to set up the Core SDK workflows.
+:::
+
 :::tip
-The object `WalletConnection` can also be retrieved: 
+The object `WalletConnection` can also be retrieved in the following ways:
 ```ts
 // By calling the method `getWalletConnection`
 const walletConnection = sdk.getWalletConnection();

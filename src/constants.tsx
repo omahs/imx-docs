@@ -35,6 +35,7 @@ export const sdks = [
     id: 3,
     sdkId: 'sdks-wallet-sdk-web',
     name: 'Wallet SDK Web',
+    displayName: 'Immutable Wallet SDK Web',
     url: '/sdk-docs/wallet-sdk-web/overview',
   },
 ];

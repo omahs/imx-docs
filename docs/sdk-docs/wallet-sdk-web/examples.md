@@ -1,5 +1,5 @@
 ---
-description: Examples using the Wallet SDK Web
+description: Examples using the Wallet SDK
 id: code-examples
 slug: /code-examples
 tags: [wallet-sdk-web, code-examples]
@@ -7,15 +7,17 @@ tags: [wallet-sdk-web, code-examples]
 
 # Examples
 
-## Events 
+## Events
 
-Events can be used for a sort of different scenarios. Check out below some examples controlling the application flow through the events provided by the Immutable X Wallet SDK.
+Events are a really powerful tool that can be used for a sort of different scenarios. Find below some different examples on how to control the application flow using the events provided by the Wallet SDK.
 
 :::note
-Access the [Supported Events reference](sdk-docs/wallet-sdk-web/reference#supported-events) to check the complete list of events provided.
+Check out the [Supported events reference](/sdk-docs/wallet-sdk-web/reference#supported-events) to get the complete list of events.
 :::
 
-### Ensuring Up-to-date Connections
+### Ensuring an up-to-date connection
+
+It is important that applications have the most recent wallet connected for each user, to ensure that functions behave as expected. There may be instances where users change wallets or have two wallets connected, so the below code ensures the connection is up to date.
 
 ```ts
 import {
@@ -63,7 +65,9 @@ async function registerUser(coreSdkWorkflows: Workflows) {
 }
 ```
 
-### Handling Screen Statuses
+### Handling screen statuses
+
+It is useful for users to understand the status of their wallet (e.g Connected/disconnected). The below code allows developers to return the wallet status:
 
 ```ts
 import {
@@ -100,11 +104,11 @@ function getWalletStatus(): WalletStatus {
 
 ## Workflows 
 
-Refer to the following code examples to understand how to use the [Core SDK Typescript](/sdk-docs/core-sdk-ts) workflows with the `WalletConnection` provided by the Immutable X Wallet SDK.
+The Wallet SDK was designed to work in tandem with Core SDK and, as such, you can use the signers provided by the Wallet SDK to perform the workflows available in the Core SDK. Below you can find some examples of how to use the Wallet SDK to perform some of the workflows.
 
 :::note
-The following examples use a Core SDK package version compatible with Wallets SDK integration. <br/>
-Access the [Compatibility Matrix](/sdk-docs/wallet-sdk-web/reference#compatibility-matrix) to check versions of Core SDK which currently accepts the Wallets SDK integration.
+The following examples use a Core SDK package version compatible with Wallet SDK integration.
+Check out the [Compatibility matrix](/sdk-docs/wallet-sdk-web/reference#compatibility-matrix) to get versions of the Core SDK which currently accepts Wallet SDK integration.
 :::
 
 ### Buy (Create Trade)
@@ -148,7 +152,7 @@ async function setupWalletSDK(): Promise<WalletConnection> {
   return await sdk.connect({ provider: L1_PROVIDERS.METAMASK });
 }
 
-// Provides a function to build the Core SDK Workflows
+// Provides a function to build the Core SDK workflows
 function setupCoreSDKWorkflows(): Workflows {
   const coreSdkConfig = getConfig({
     coreContractAddress: '0x4527BE8f31E2ebFbEF4fCADDb5a17447B27d2aef',
@@ -163,15 +167,15 @@ function setupCoreSDKWorkflows(): Workflows {
 // Provides a function to execute the Create Trade workflow
 async function createTrade(
   walletConnection: WalletConnection,
-  workflows: Workflows,
+  coreSdkWorkflows: Workflows,
   tradeRequest: GetSignableTradeRequest,
 ) {
   if (!walletConnection) throw new Error('There is still no wallet connection available.');
 
-  await workflows.registerOffchain(walletConnection);
+  await coreSdkWorkflows.registerOffchain(walletConnection);
 
   const createTradeResponse =
-    await workflows.createTrade(
+    await coreSdkWorkflows.createTrade(
       walletConnection,
       tradeRequest,
     );
@@ -182,7 +186,7 @@ async function createTrade(
 (async () => {
   state.walletConnection = await setupWalletSDK();
 
-  const workflows = setupCoreSDKWorkflows();
+  const coreSdkWorkflows = setupCoreSDKWorkflows();
 
   const fakeTradeRequest = {
     user: '0x00', // Ethereum address of the submitting user
@@ -191,6 +195,6 @@ async function createTrade(
 
   const { walletConnection } = state;
 
-  await createTrade(walletConnection, workflows, fakeTradeRequest);
+  await createTrade(walletConnection, coreSdkWorkflows, fakeTradeRequest);
 })();
 ```

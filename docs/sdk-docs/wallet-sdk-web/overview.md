@@ -1,5 +1,5 @@
 ---
-description: Understanding what is the Wallet SDK Web
+description: Understanding what is the Wallet SDK
 id: overview
 slug: /overview
 tags: [wallet-sdk-web]
@@ -7,18 +7,14 @@ tags: [wallet-sdk-web]
 
 # Overview
 
-:::danger WALLET SDK WEB IS UNSTABLE
-Since it has not hit the version 1.0 yet, its public interface should not be considered final, and future releases may need to have breaking changes without further notice.
+:::danger IMMUTABLE WALLET SDK WEB IS UNSTABLE
+Since it has not hit the version 1.0 yet, its public interface should not be considered final. Future releases may include breaking changes without further notice. We will do our best to keep this documentation updated providing visibility on breaking changes planned.
 :::
 
-The Immutable X Wallet SDK provides a straightforward way to connect with a range of L1 and L2 wallets to access the needed signers for the Core SDK functionalities.
+The [Immutable Wallet SDK Web](https://github.com/immutable/imx-wallet-sdk-web) (Wallet SDK) connects with users' L1 and L2 wallets and returns "signers". Signers are abstractions of blockchain user accounts (also known as "wallets") that can be used to sign messages and transactions that execute blockchain state-changing operations. The Wallet SDK is used in conjunction with the [Immutable Core SDK Typescript](https://github.com/immutable/imx-core-sdk) (Core SDK), to which the Wallet SDK passes the signers to the Core SDK to execute its functionality.
 
 ## Documentation
 
-See the [developer guides](https://docs.x.immutable.com) for information on building on Immutable X.
-
-See the [Core SDK Typescript guide](/sdk-docs/core-sdk-ts) for information on building with Core SDK Typescript.
-
-## Github
-
-Access the [Github repository](https://github.com/immutable/imx-wallet-sdk-web) for source code guidance and contribution.
+- [Wallet SDK reference](/sdk-docs/wallet-sdk-web)
+- [Core SDK reference](/sdk-docs/core-sdk-ts)
+- [Immutable X developer docs](/)
