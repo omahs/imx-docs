@@ -88,7 +88,7 @@ const configuration = {
         routeBasePath: '/sdk-docs/core-sdk-swift',
         id: 'sdks-core-sdk-swift',
         sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-swift.js'),
-        // includeCurrentVersion: false, // enable this when Swift docs are versioned
+        includeCurrentVersion: false,
         ...pageOptions,
       },
     ],
