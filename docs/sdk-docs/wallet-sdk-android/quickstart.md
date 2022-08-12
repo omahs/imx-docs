@@ -10,6 +10,9 @@ tags: [wallet-sdk-android, quickstart]
 ## Connect wallet
 
 ### Connect via WalletConnect
+
+MetaMask and Rainbow can be connected using this WalletConnect provider.
+
 ```kotlin
 ImmutableXWallet.connect(
     Provider.WalletConnect(
