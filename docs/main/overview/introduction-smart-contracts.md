@@ -4,6 +4,7 @@ title: "Smart contracts"
 slug: "/introduction-smart-contracts"
 excerpt: "An introduction to smart contracts"
 sidebar_position: 4
+keywords: [imx-dx]
 ---
 If you're new to smart contract development, this is the place to start. We have smart contract templates on GitHub and this article covers the basics, as well as smart contract requirements for integrating with Immutable X. 
 

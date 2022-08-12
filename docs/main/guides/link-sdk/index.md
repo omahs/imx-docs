@@ -2,6 +2,7 @@
 id: "sdk-api"
 title: "Link SDK"
 slug: "/sdk-api"
+keywords: [imx-wallets]
 ---
 
 :::note Link reference tool

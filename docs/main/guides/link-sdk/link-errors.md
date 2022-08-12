@@ -3,6 +3,7 @@ id: "link-errors"
 title: "Link Errors"
 slug: "/link-errors"
 sidebar_position: 13
+keywords: [imx-wallets]
 ---
 
 Find below the list of errors that can be displayed in Link.

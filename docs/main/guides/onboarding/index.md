@@ -1,6 +1,7 @@
 ---
 title: "Onboarding"
 slug: "/onboarding"
+keywords: [imx-dx]
 ---
 Below is a high-level overview of the steps required to onboard with Immutable X.
 

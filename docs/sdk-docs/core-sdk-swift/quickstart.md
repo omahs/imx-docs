@@ -3,6 +3,7 @@ description: How to make a first SDK request
 id: quickstart
 slug: /quickstart
 tags: [core-sdk-swift, quickstart]
+keywords: [imx-wallets]
 ---
 
 # Quickstart
@@ -33,6 +34,6 @@ let collections = try await CollectionsAPI.listCollections(
 )
 ```
 
-View the [OpenAPI spec](openapi.json) for a full list of API requests available in the Core SDK.
+View the [OpenAPI spec](https://github.com/immutable/imx-core-sdk-swift/blob/main/openapi.json) for a full list of API requests available in the Core SDK.
 
 NOTE: Closure based APIs are also available.

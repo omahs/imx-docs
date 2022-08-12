@@ -3,13 +3,14 @@ description: Overview of the Core SDK Kotlin
 id: overview
 slug: /overview
 tags: [core-sdk-kotlin]
+keywords: [imx-wallets]
 ---
 
 # Overview
 
 :::danger Core SDK Interface is unstable
 
-The TypeScript SDK hasn't hit v1.0 yet. Its public interface is unstable, and there are breaking changes scheduled to happen in the coming weeks to its interface. 
+The Kotlin SDK hasn't hit v1.0 yet. Its public interface is unstable, and there are breaking changes scheduled to happen in the coming weeks to its interface.
 
 :::
 

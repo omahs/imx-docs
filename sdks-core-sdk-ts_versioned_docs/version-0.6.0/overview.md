@@ -3,6 +3,7 @@ description: Overview of the Core SDK TypeScript
 id: overview
 slug: /overview
 tags: [core-sdk-ts]
+keywords: [imx-games]
 ---
 
 # Overview

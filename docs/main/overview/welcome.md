@@ -4,6 +4,7 @@ title: "Welcome"
 slug: "/welcome"
 excerpt: "The who, why and how of Immutable X"
 sidebar_position: 1
+keywords: [imx-dx]
 ---
 Immutable X is a next-generation protocol for trading Ethereum NFTs. It gives users instant trade confirmation, massive scalability, and no gas fees — without compromising user custody.
 
