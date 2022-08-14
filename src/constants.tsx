@@ -9,26 +9,26 @@ export interface SdkItem {
 
 export interface SdkList extends Array<SdkItem> {}
 
-export const sdks = [
+export const coreSDKs = [
   {
     id: 0,
     sdkId: 'sdks-core-sdk-ts',
     name: 'Core SDK TypeScript',
-    displayName: 'Immutable Core SDK - Typescript',
+    displayName: 'Typescript',
     url: '/sdk-docs/core-sdk-ts/overview',
   },
   {
     id: 1,
     sdkId: 'sdks-core-sdk-kotlin',
     name: 'Core SDK Kotlin',
-    displayName: 'Immutable Core SDK - Kotlin/JVM',
+    displayName: 'Kotlin/JVM',
     url: '/sdk-docs/core-sdk-kotlin/overview',
   },
   {
     id: 2,
     sdkId: 'sdks-core-sdk-swift',
     name: 'Core SDK Swift',
-    displayName: 'Immutable Core SDK - Swift',
+    displayName: 'Swift',
     url: '/sdk-docs/core-sdk-swift/overview',
   },
   {
@@ -37,5 +37,31 @@ export const sdks = [
     name: 'Wallet SDK Web',
     displayName: 'Immutable Wallet SDK Web',
     url: '/sdk-docs/wallet-sdk-web/overview',
+  },
+];
+
+export const walletSDKs = [
+  {
+    id: 0,
+    sdkId: 'sdks-wallet-sdk-web',
+    name: 'Wallet SDK Web',
+    displayName: 'Web',
+    url: '/sdk-docs/wallet-sdk-web/overview',
+  },
+  {
+    id: 1,
+    sdkId: 'sdks-wallet-sdk-android',
+    name: 'Wallet SDK Android',
+    displayName: 'Android',
+    url: '/sdk-docs/wallet-sdk-android/overview',
+  },
+];
+
+export const linkSDK = [
+  {
+    id: 0,
+    name: 'Link SDK',
+    displayName: 'Link SDK reference',
+    url: '/docs/sdk-api',
   },
 ];
