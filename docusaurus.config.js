@@ -174,6 +174,11 @@ const configuration = {
             to: '/docs/sdks',
             position: 'left',
             label: 'SDKs',
+            type: 'dropdown',
+            items: [
+              { label: 'Core SDKs', to: '/sdk-docs/core-sdk-ts/overview' },
+              { label: 'Wallet SDKs', to: '/sdk-docs/wallet-sdk-web/overview' },
+            ],
           },
           {
             type: 'html',

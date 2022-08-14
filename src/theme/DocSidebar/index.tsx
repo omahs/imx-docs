@@ -2,6 +2,7 @@ import React from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import DocSidebar from '@theme-original/DocSidebar';
 import SdkSwitcher from '@site/src/components/SdkSwitcher';
+import { coreSDKs } from '@site/src/constants';
 import styles from './styles.module.css';
 
 interface SidebarProps {
@@ -15,7 +16,7 @@ const DocSidebarWrapper = (props: SidebarProps) => {
     <BrowserOnly>
       {() => (
         <div className={styles.sidebar} id="sidebar-wrapper">
-          {isSdkDocsPath && <SdkSwitcher />}
+          {isSdkDocsPath && <SdkSwitcher sdks={coreSDKs} />}
           <DocSidebar {...props} />
         </div>
       )}

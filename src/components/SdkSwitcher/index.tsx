@@ -6,7 +6,7 @@ import { Listbox, Transition } from '@headlessui/react';
 import { SelectorIcon } from '@heroicons/react/solid';
 import VersionSwitcher from '@site/src/components/VersionSwitcher';
 import styles from './styles.module.css';
-import { SdkIdKey, SdkItem, SdkList, sdks } from '@site/src/constants';
+import { SdkIdKey, SdkItem, SdkList } from '@site/src/constants';
 
 const getSdkId = (sdkList: SdkList): number => {
   const localId = parseInt(localStorage.getItem(SdkIdKey)) || 0;
@@ -17,7 +17,7 @@ const getSdkId = (sdkList: SdkList): number => {
   return localId;
 };
 
-const SdkSwitcher = () => {
+const SdkSwitcher = ({ sdks }) => {
   const history: History = useHistory();
   const sdkId = getSdkId(sdks);
   const [selectedSdk, setSelectedSdk] = useState<SdkItem>(sdks[sdkId]);
