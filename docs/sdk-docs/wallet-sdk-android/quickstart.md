@@ -26,7 +26,7 @@ ImmutableXWallet.connect(
 If you want to use your own bridge server instead of the default provide it via `bridgeServerUrl` when connecting. For more info on how WalletConnect and the bridge works [see here](https://docs.walletconnect.com/tech-spec).
 
 ### Handle callbacks
-All of the `ImmutableXWallet` methods (connect, disconnect etc) are asynchronous and changes to the status are communicated via the callback.
+All the `ImmutableXWallet` methods (connect, disconnect, etc.) are asynchronous, and changes to the status are communicated via the callback.
 
 ### Set callback
 ```kotlin
@@ -44,9 +44,9 @@ ImmutableXWallet.setCallback(object: ImmutableXWalletCallback {
 ```
 
 #### Pending states
-If a wallet app has been launched to connect or sign and your app has resumed but no result has arrived, PendingConnection or PendingSignature will be sent to the callback.
+If a wallet app has been launched to connect or sign and your app has resumed but no result has arrived, `PendingConnection` or `PendingSignature` will be sent to the callback.
 
-This allows you to handle this scenario flexibly, you could use the provided intent to prompt the user to re-launch their wallet and complete the flow or continue showing a waiting state.
+This allows you to handle this scenario flexibly; you could use the provided intent to prompt the user to re-launch their wallet and complete the flow or continue showing a waiting state.
 
 ### Remove callback
 
