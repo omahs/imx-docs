@@ -1,39 +1,12 @@
 ---
 title: "L1 <> L2 asset transfers"
-slug: "/wip/l1-l2-transfers"
+slug: "/guides-new/l1-l2-transfers"
+keywords: [imx-wallets, imx-dx]
 ---
 
-<table>
-  <tbody>
-    <tr>
-      <th>Settlement layer</th>
-      <th>Guides</th>
-    </tr>
-    <tr>
-      <td>StarkEx</td>
-      <td>
-        <ul>
-          <li><a href='/docs/wip/l1-l2-transfers/api'>API</a></li>
-          <li><a href='/docs/wip/l1-l2-transfers/wallet-core#kotlin-jvm'>Kotlin (Wallet SDK + Core SDK)</a></li>
-          <li><a href='/docs/wip/l1-l2-transfers/wallet-core#typescript'>Typescript (Wallet SDK + Core SDK)</a></li>
-          <li><a href='/docs/wip/l1-l2-transfers/link'>Typescript (with wallet UI) (Link SDK)</a></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>StarkNet</td>
-      <td>
-        <ul>
-          <li><a href='/docs/wip/l1-l2-transfers/starknet'>Using the Arch bridging protocol</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+The great thing about Immutable X is that you can transfer your assets between L1 and L2, depending on the layer on which you would like to transact with them. This means that you can take advantage of the cheaper transaction fees on L2 for transactions such as minting, or buying, or selling, NFTs, but you can withdraw them to L1 if you decide that you now want to sell this asset on L1 instead.
 
-The beauty of using Immutable X is that you can transfer your assets (with [some caveats](#)) between L1 and L2, depending on the layer on which you would like to transact with them. This means that you can take advantage of the cheaper transaction fees on L2 for transactions such as minting, or buying, or selling, NFTs, but you can withdraw them to L1 if you decide that you now want to hold this asset in your L1 wallet instead of L2 wallet.
-
-Other terminology to note:
+Terminology to note:
 * "Bridging" - another term for transferring assets between different layers
 * "Deposits" - transferring an asset from L1 to L2 (depositing to L2)
 * "Withdrawal" - transferring an asset from L2 to L1 (withdrawing to L1)
@@ -42,9 +15,9 @@ Other terminology to note:
 
 | Token type                                      | StarkEx | StarkNet     |
 | ----------------------------------------------- | ------- | ------------ |
-| ERC-20 (fungible tokens, including ETH and IMX) | Yes     | No           |
-| ERC-721 (non-fungible tokens)                   | Yes     | Yes          |
-| ERC-1155 (non-fungible tokens)                  | No      | Coming soon  |         
+| ERC-20 (fungible tokens, including ETH and IMX) | ✅      | ❌            |
+| ERC-721 (non-fungible tokens)                   | ✅      | ✅            |
+| ERC-1155 (non-fungible tokens)                  | ❌      | Coming soon  |         
 
 ### Examples of asset transfers...
 
@@ -56,6 +29,35 @@ Other terminology to note:
 * A user has earned ETH from selling their NFT on L2, however, they want to use this ETH on L1 so they transfer it from their L2 to L1 wallet.
 * A user has purchased an NFT on an Immutable marketplace, however, now wants to sell it on an L1 marketplace, so they withdraw it from L2 to L1 in order to do so.
 
+## Guides
+<table>
+  <tbody>
+    <tr>
+      <th>Settlement layer</th>
+      <th>Guides</th>
+    </tr>
+    <tr>
+      <td>StarkEx</td>
+      <td>
+        <ul>
+          <li><a href='/docs/guides-new/l1-l2-transfers/api'>API</a></li>
+          <li><a href='/docs/guides-new/l1-l2-transfers/typescript'>Typescript</a></li>
+          <li><a href='/docs/guides-new/l1-l2-transfers/link'>Typescript (with wallet UI - Link SDK)</a></li>
+          <li><a href='/docs/guides-new/l1-l2-transfers/kotlin-jvm'>Kotlin</a></li>
+          <li><a href='/docs/guides-new/l1-l2-transfers/swift'>Swift</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>StarkNet</td>
+      <td>
+        <ul>
+          <li><a href='/docs/guides-new/l1-l2-transfers/starknet'>Using the Arch bridging protocol</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 

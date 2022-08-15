@@ -1,7 +1,43 @@
 ---
 title: "User registration"
-slug: "/wip/user-registration"
+slug: "/guides-new/user-registration"
+keywords: [imx-wallets, imx-dx]
 ---
+
+Only users on the [StarkEx settlement layer](#) need to be registered.
+
+## What is user registration?
+
+In order for a user to be registered, they first need an existing L1 wallet.
+
+Then it consists of 2 main steps:
+1. Generating an L2 wallet for the user based on the keys of their L1 wallet
+2. Registering the L1-L2 wallet pair (recording that the L1 and L2 wallets are associated with each other either)
+
+### On-chain vs off-chain registration
+**On-chain** registration means recording the L1-L2 wallet pair on Ethereum (L1).
+
+**Off-chain** registration is when the L1-L2 wallet pair is recorded in an Immutable database. All transactions that the user performs on L2 are recorded against this registered L2 user, however, L1 is not yet aware of the wallet mapping.
+
+By default, Immutable's API and libraries provide for off-chain registration when a user is first registered. Then, when the users performs a transaction that requires an update of the state of the corresponding L1 wallet (ie. withdrawing an NFT from the L2 wallet to the L1 wallet), the user is registered on-chain.
+
+## Why do you need to register users?
+
+The L1-L2 mapping of user wallets needs to occur so that users can transfer assets between their L1 and L2 wallets (also known as "bridging").
+
+## Developer tools
+
+Immutable provide a number of tools for your application to register users:
+
+| Tool                                     | Language                  | Steps covered (from [here](#what-is-user-registration)) | Description |
+| ---------------------------------------- | ------------------------- | ------------- | ----------- |
+| **[Link SDK](https://www.npmjs.com/package/@imtbl/imx-sdk)** | Typescript | 1, 2 | Provides end-to-end user wallet connection and registration, complete with a UI |
+| **Wallet SDK** | [Typescript](https://github.com/immutable/imx-wallet-sdk-web), [Android](https://github.com/immutable/imx-wallet-sdk-android) | 1 | Provides a connection to users' L1 and L2 wallets and returns 'signers' that can be used to sign transactions. No UI. |
+| **Core SDK** | [Typescript](/docs/sdk-docs/wallet-sdk-web/overview.md), [Kotlin (JVM)](/docs/sdk-docs/core-sdk-kotlin/overview.md), [Swift](/docs/sdk-docs/core-sdk-swift/overview.md) | 2 | Performs off-chain registration of users. Requires 'signers' to obtain user signatures - can be provided by the **Wallet SDK** or implemented manually |
+| **[API](https://docs.x.immutable.com/reference#/)** | -- | 1, 2 | Provides endpoints for connection to user wallets, obtaining signatures and registering users off-chain |
+
+## Guides
+Only users on the StarkEx settlement layer need to be registered.
 
 <table>
   <tbody>
@@ -13,58 +49,13 @@ slug: "/wip/user-registration"
       <td>StarkEx</td>
       <td>
         <ul>
-          <li><a href='/docs/wip/user-registration/api'>API</a></li>
-          <li><a href='/docs/wip/user-registration/wallet-core#kotlin-jvm'>Kotlin (Wallet SDK + Core SDK)</a></li>
-          <li><a href='/docs/wip/user-registration/wallet-core#typescript'>Typescript (Wallet SDK + Core SDK)</a></li>
-          <li><a href='/docs/wip/user-registration/link'>Typescript (with wallet UI) (Link SDK)</a></li>
+          <li><a href='/docs/guides-new/user-registration/api'>API</a></li>
+          <li><a href='/docs/guides-new/user-registration/typescript'>Typescript</a></li>
+          <li><a href='/docs/guides-new/user-registration/link'>Typescript (with wallet UI - Link SDK)</a></li>
+          <li><a href='/docs/guides-new/user-registration/kotlin-jvm'>Kotlin</a></li>
+          <li><a href='/docs/guides-new/user-registration/swift'>Swift</a></li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
-
-## Why do you need to register users?
-
-Your application may want to enable users to carry out transactions that require the user's 'signature' (a.k.a. approval/authorization). Examples of such transactions include:
-* Buying NFTs
-* Creating a sell order for an NFT
-* Transferring ownership of an NFT to another user
-
-On Immutable X, these are generally transactions that deal with changes in asset ownership that require the approval of asset owners. These are transactions that update the 'state' of things on the blockchain, as opposed to just reading information.
-
-User accounts (a.k.a. 'wallets'), are used to authorize transactions. In order for users to transact on L2, they need an L2 wallet. User registration on Immutable creates this L2 wallet for them.
-
-## How to register users?
-
-### Steps involved with registering users
-First, the user needs an existing L1 wallet. The reason for this is that an L2 wallet needs to be associated with an L1 wallet in order to “bridge” (move) a user’s assets between L1 and L2. 
-
-1. The user's L1 wallet is used to generate a key that is used for the user's L2 wallet. This consists of:
-    1. Connecting to the user's L1 wallet
-    2. Prompting the user to use their L1 wallet to sign a message that generates their L2 wallet keys ([How is the key generated?](#))
-2. The L1 and L2 wallet key pair is registered off-chain ([Why off-chain?](#))
-
-### Immutable X tools/libraries
-Immutable provide a number of tools for your application to register users:
-
-| Tool                                     | Language                  | Steps covered | Description |
-| ---------------------------------------- | ------------------------- | ------------- | ----------- |
-| [Link SDK](https://www.npmjs.com/package/@imtbl/imx-sdk) | Typescript | 1, 2 | Provides end-to-end user wallet connection and registration, complete with a UI |
-| Wallet SDK | [Typescript](https://github.com/immutable/imx-wallet-sdk-web), [Kotlin (JVM)](https://github.com/immutable/imx-wallet-sdk-android) | 1 | Provides a connection to users' L1 and L2 wallets and returns 'signers' that can be used to sign transactions. No UI. |
-| Core SDK | [Typescript](/docs/sdk-docs/wallet-sdk-web/overview.md), [Kotlin (JVM)](/docs/sdk-docs/core-sdk-kotlin/overview.md) | 2 | Uses 'signers' provided by the Wallet SDK to register users off-chain |
-| [API](https://docs.x.immutable.com/reference#/) | N/A | 1, 2 | Provides endpoints for connection to user wallets, obtaining signatures and registering users off-chain |
-
-### What tools should you use?
-
-| Guide                                                              | Use for...               |
-| ------------------------------------------------------------------ | ------------------------ |
-| [Wallet SDK + Core SDK (Typescript)](./wallet-core.mdx#typescript) | Browser applications     |
-| [Wallet SDK + Core SDK (Kotlin/JVM)](./wallet-core.mdx#kotlin-jvm) | Mobile/JVM applications  |
-| [Link SDK](./link.mdx)                                             | Browser applications     |
-| [API](./api.mdx)                                                   | Any                      |
-
-## On-chain vs off-chain registration
-* **On-chain**: The L1 and L2 wallet pair is recorded on the Ethereum blockchain.
-* **Off-chain**: The L1 and L2 wallet pair is stored in an Immutable database. It is only when the user requests for a transaction that requires the state of the corresponding L1 wallet to change (ie. withdrawing an NFT from the L2 wallet to the L1 wallet) that the pairing of the user's L1 and L2 wallet is recorded on-chain, on Ethereum.
-
-#### Why is off-chain registration preferred?
