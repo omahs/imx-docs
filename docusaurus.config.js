@@ -95,6 +95,19 @@ const configuration = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        path: 'docs/sdk-docs/wallet-sdk-android/',
+        routeBasePath: '/sdk-docs/wallet-sdk-android',
+        id: 'sdks-wallet-sdk-android',
+        sidebarPath: require.resolve(
+          './sidebars/sidebars-wallet-sdk-android.js'
+        ),
+        // includeCurrentVersion: false, // enable this when Android docs are versioned
+        ...pageOptions,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         path: 'docs/sdk-docs/wallet-sdk-web/',
         routeBasePath: '/sdk-docs/wallet-sdk-web',
         id: 'sdks-wallet-sdk-web',
