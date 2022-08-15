@@ -11,3 +11,7 @@ Guides contain step-by-step instructions on how to achieve a specific goal. They
 ## Guides
 * [User registration](/docs/guides-new/user-registration)
 * [Creating orders](/docs/guides-new/orders)
+* [Creating trades](/docs/guides-new/trades)
+* [Asset transfers](/docs/guides-new/transfers)
+* [L1 <-> L2 asset transfers](/docs/guides-new/l1-l2-transfers)
+* [Getting data](/docs/guides-new/getting-data)

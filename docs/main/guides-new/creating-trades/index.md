@@ -29,7 +29,7 @@ A **trade** is simply filling an order. A user executes a trade by agreeing to p
       <td>StarkNet</td>
       <td>
         <ul>
-          <li>?</li>
+          <li><a href='/docs/guides-new/trades/starknet'>Guide</a></li>
         </ul>
       </td>
     </tr>
