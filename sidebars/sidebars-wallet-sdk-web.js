@@ -9,6 +9,7 @@ module.exports = {
         'quickstart',
         'reference',
         'code-examples',
+        'changelog',
       ],
     },
   ],
