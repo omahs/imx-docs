@@ -1,3 +1,20 @@
+# [1.17.0](https://github.com/immutable/imx-docs/compare/v1.16.3...v1.17.0) (2022-08-15)
+
+
+### Bug Fixes
+
+* add displayName to constant ([9382c24](https://github.com/immutable/imx-docs/commit/9382c244df5e6571906046b5561ea1ad719ca3b8))
+* remove Wallet SDKs section ([5333b17](https://github.com/immutable/imx-docs/commit/5333b173aec6c90fc719574a973f87db239a461c))
+
+
+### Features
+
+* add supported wallets line ([a02d19d](https://github.com/immutable/imx-docs/commit/a02d19df2cd51ae67ac92de09d4f72f599423244))
+* add wallet sdk android api reference ([730233e](https://github.com/immutable/imx-docs/commit/730233ee17e1c934e3b71a42b25a1b8b75fa45af))
+* add wallet sdk android docs ([0650334](https://github.com/immutable/imx-docs/commit/0650334c5406a2fff2023ecf1efea92494be294f))
+* grammatical improvements ([8297deb](https://github.com/immutable/imx-docs/commit/8297deb2ad8946a4c1a551825722f1d8ffca67fd))
+* remove wallet sdk from constants ([914c32d](https://github.com/immutable/imx-docs/commit/914c32d72a03a80170c4a813f5696f66c444c6d0))
+
 ## [1.16.3](https://github.com/immutable/imx-docs/compare/v1.16.2...v1.16.3) (2022-08-11)
 
 
