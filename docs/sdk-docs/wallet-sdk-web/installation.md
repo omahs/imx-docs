@@ -3,6 +3,7 @@ description: Installing the Wallet SDK into your application
 id: installation
 slug: /installation
 tags: [wallet-sdk-web, installation, setup]
+keywords: [imx-wallets]
 ---
 
 # Installation

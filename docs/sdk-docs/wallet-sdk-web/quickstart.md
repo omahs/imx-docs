@@ -3,6 +3,7 @@ description: Quickly starting to enjoy the benefits of the Wallet SDK
 id: quickstart
 slug: /quickstart
 tags: [wallet-sdk-web, quickstart]
+keywords: [imx-wallets]
 ---
 
 # Quickstart

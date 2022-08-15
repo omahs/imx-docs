@@ -3,6 +3,7 @@ description: General Wallet SDK reference
 id: reference
 slug: /reference
 tags: [wallet-sdk-web, reference]
+keywords: [imx-wallets]
 ---
 
 # Reference

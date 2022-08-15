@@ -3,6 +3,7 @@ description: Understanding what is the Wallet SDK
 id: overview
 slug: /overview
 tags: [wallet-sdk-web]
+keywords: [imx-wallets]
 ---
 
 # Overview

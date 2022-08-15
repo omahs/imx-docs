@@ -3,6 +3,7 @@ description: Wallet SDK changelog
 id: changelog
 slug: /changelog
 tags: [wallet-sdk-web, changelog]
+keywords: [imx-wallets]
 ---
 
 # Changelog

@@ -3,6 +3,7 @@ description: Examples using the Wallet SDK
 id: code-examples
 slug: /code-examples
 tags: [wallet-sdk-web, code-examples]
+keywords: [imx-wallets]
 ---
 
 # Examples
