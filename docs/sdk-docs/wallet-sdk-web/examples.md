@@ -25,7 +25,7 @@ import {
   WALLET_SDK_EVENTS,
   WalletConnection,
   walletSdkEvents,
-} from '@imtbl/imx-wallet-sdk-web';
+} from '@imtbl/wallet-sdk-web';
 import { Workflows } from '@imtbl/core-sdk';
 
 // Defines a simple state interface
@@ -74,7 +74,7 @@ It is useful for users to understand the status of their wallet (e.g Connected/d
 import {
   WALLET_SDK_EVENTS,
   walletSdkEvents,
-} from '@imtbl/imx-wallet-sdk-web';
+} from '@imtbl/wallet-sdk-web';
 
 // Defines possible wallet statuses
 enum WalletStatus {
@@ -122,7 +122,7 @@ import {
   WalletConnection,
   walletSdkEvents,
   WalletSDK,
-} from '@imtbl/imx-wallet-sdk-web';
+} from '@imtbl/wallet-sdk-web';
 import {
   getConfig,
   Workflows,

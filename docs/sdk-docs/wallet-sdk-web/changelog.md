@@ -13,6 +13,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [SemVer - Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.8] - 16/08/2022
+
+### Added
+
+- Switch to the expected chain when connect to the wallet
+
+### Changed
+
+- Standardized the package name changing from `@imtl/imx-wallet-sdk-web` to `@imtl/wallet-sdk-web`
+
 ## [0.1.7] - 12/08/2022
 
 ### Added
