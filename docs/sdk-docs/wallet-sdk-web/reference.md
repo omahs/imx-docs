@@ -36,13 +36,21 @@ To help keep the application up to date with possible wallet changes externally 
 Check out the [Events examples](/sdk-docs/wallet-sdk-web/code-examples#events) for code examples.
 :::
 
-<!-- ## Error dictionary -->
-<!-- TODO: TBD -->
+## Errors
+
+Refer to the following list for the most common errors raised by the Wallet SDK and to get a guidance on how to solve them.
+
+| Error message | Scenario | Solution |
+| ------------- | -------- | -------- |
+| `The L1 provider {L1Provider} is not a valid option.` | When an invalid L1 provider option was informed when calling `connect()`. | Provide a valid L1 provider option based on the [Supported L1 wallets](#supported-l1-wallets). |
+| `The MetaMask provider was not found.` | When a `connect()` using MetaMask was attempted but most likely the MetaMask extension was not installed. | Install the MetaMask extension or provide another valid L1 provider option based on the [Supported L1 wallets](#supported-l1-wallets). |
+| `You cannot connect to WalletConnect Provider because RPC is not defined.` | When a `connect()` using WalletConnect was attemped but the RPC was not provided. | Provide the RPC based on the [Quickstart example](#quickstart). |
+| `The L2 IMX Wallet connection has failed.` | When a `connect()` was attempted on the L2 but was not succeeded. | Retry a connection, and if the error persists, [contact the support team](https://support.immutable.com). |
 
 ## Compatibility matrix
 
-| Core SDK version                                               | Wallet SDK version                                                        |
-| -------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Core SDK version | Wallet SDK version |
+| :--------------: | :----------------: |
 | [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.2](https://www.npmjs.com/package/@imtbl/imx-wallet-sdk-web/v/0.1.2)  |
 | [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.3](https://www.npmjs.com/package/@imtbl/imx-wallet-sdk-web/v/0.1.3)  |
 | [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.4](https://www.npmjs.com/package/@imtbl/imx-wallet-sdk-web/v/0.1.4)  |
