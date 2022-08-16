@@ -45,7 +45,7 @@ Refer to the following list for the most common errors raised by the Wallet SDK 
 | `The L1 provider {L1Provider} is not a valid option.` | When an invalid L1 provider option was informed when calling `connect()`. | Provide a valid L1 provider option based on the [Supported L1 wallets](#supported-l1-wallets). |
 | `The MetaMask provider was not found.` | When a `connect()` using MetaMask was attempted but most likely the MetaMask extension was not installed. | Install the MetaMask extension or provide another valid L1 provider option based on the [Supported L1 wallets](#supported-l1-wallets). |
 | `You cannot connect to WalletConnect Provider because RPC is not defined.` | When a `connect()` using WalletConnect was attemped but the RPC was not provided. | Provide the RPC based on the [Quickstart example](#quickstart). |
-| `The L2 IMX Wallet connection has failed.` | a `connect()` was attempted on the L2 but was not succeeded. | Retry a connection, and if the error persists, contact the support team. |
+| `The L2 IMX Wallet connection has failed.` | When a `connect()` was attempted on the L2 but was not succeeded. | Retry a connection, and if the error persists, [contact the support team](https://support.immutable.com/). |
 
 ## Compatibility matrix
 
