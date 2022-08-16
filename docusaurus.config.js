@@ -77,7 +77,7 @@ const configuration = {
         routeBasePath: '/sdk-docs/core-sdk-kotlin',
         id: 'sdks-core-sdk-kotlin',
         sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-kotlin.js'),
-        includeCurrentVersion: false, 
+        includeCurrentVersion: false,
         ...pageOptions,
       },
     ],
