@@ -14,7 +14,7 @@ The Kotlin SDK hasn't hit v1.0 yet. Its public interface is unstable, and there 
 
 :::
 
-The Immutable X Core SDK Kotlin/JVM provides convenient access to the Immutable API's for applications written on the Immutable X platform.
+The Immutable Core SDK Kotlin/JVM provides convenient access to the Immutable API's for applications written on the Immutable X platform.
 
 ## Documentation
 
