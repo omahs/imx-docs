@@ -29,6 +29,17 @@ import {
     rpc: {
       3: 'https://ropsten.mycustomnode.com',
     },
+    /*
+      Will switch the chain based on this configured chainID when connecting to the wallet.(Optional)
+      Following the table below to get the chainID and name mapping. 
+      Consult https://chainlist.org/ for more.
+      ChainId	| Network
+      --- --- | --- --- 
+      1	      | Ethereum Main Network (Mainnet)
+      3	      | Ropsten Test Network
+      5	      | Goerli Test Network
+    */
+    chainID: 3,
   });
 
   // Connects on the chosen provider - WalletConnect
