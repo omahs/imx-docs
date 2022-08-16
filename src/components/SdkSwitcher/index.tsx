@@ -6,21 +6,14 @@ import { Listbox, Transition } from '@headlessui/react';
 import { SelectorIcon } from '@heroicons/react/solid';
 import VersionSwitcher from '@site/src/components/VersionSwitcher';
 import styles from './styles.module.css';
-import { SdkIdKey, SdkItem, SdkList } from '@site/src/constants';
-
-const getSdkId = (sdkList: SdkList): number => {
-  const localId = parseInt(localStorage.getItem(SdkIdKey)) || 0;
-
-  if (localId > sdkList.length - 1) {
-    return 0;
-  }
-  return localId;
-};
+import { SdkIdKey, SdkItem } from '@site/src/constants';
 
 const SdkSwitcher = ({ sdks }) => {
   const history: History = useHistory();
-  const sdkId = getSdkId(sdks);
-  const [selectedSdk, setSelectedSdk] = useState<SdkItem>(sdks[sdkId]);
+  const currentSDK = sdks.find(
+    (sdk: { url: string }) => sdk.url == history.location.pathname
+  );
+  const [selectedSdk, setSelectedSdk] = useState<SdkItem>(currentSDK);
 
   const handleOnChange = (sdkItem: SdkItem) => {
     localStorage.setItem(SdkIdKey, sdkItem.id.toString());

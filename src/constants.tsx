@@ -31,25 +31,20 @@ export const coreSDKs = [
     displayName: 'Core SDK Swift',
     url: '/sdk-docs/core-sdk-swift/overview',
   },
-  {
-    id: 3,
-    sdkId: 'sdks-wallet-sdk-web',
-    name: 'Wallet SDK Web',
-    displayName: 'Immutable Wallet SDK Web',
-    url: '/sdk-docs/wallet-sdk-web/overview',
-  },
 ];
 
 export const walletSDKs = [
   {
-    id: 0,
+    // Starting from the end of coreSDK IDs because both
+    // arrays will be concatenated as Switcher input
+    id: 3,
     sdkId: 'sdks-wallet-sdk-web',
     name: 'Wallet SDK Web',
     displayName: 'Wallet SDK Web',
     url: '/sdk-docs/wallet-sdk-web/overview',
   },
   {
-    id: 1,
+    id: 4,
     sdkId: 'sdks-wallet-sdk-android',
     name: 'Wallet SDK Android',
     displayName: 'Wallet SDK Android',

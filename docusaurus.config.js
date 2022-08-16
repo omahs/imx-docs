@@ -178,6 +178,7 @@ const configuration = {
             items: [
               { label: 'Core SDKs', to: '/sdk-docs/core-sdk-ts/overview' },
               { label: 'Wallet SDKs', to: '/sdk-docs/wallet-sdk-web/overview' },
+              { label: 'Link SDK', to: '/docs/sdk-api' },
             ],
           },
           {
