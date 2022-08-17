@@ -1,3 +1,16 @@
+# [1.18.0](https://github.com/immutable/imx-docs/compare/v1.17.0...v1.18.0) (2022-08-17)
+
+
+### Bug Fixes
+
+* lint ([2a0ede4](https://github.com/immutable/imx-docs/commit/2a0ede4ed1d3c53b58b8b822b82e19da27e7e1b0))
+
+
+### Features
+
+* add 0.6.0 docs and version 0.5.2 ([7ec54f5](https://github.com/immutable/imx-docs/commit/7ec54f5437c215d5832c0470c5fd721019056ec4))
+* add core sdk kotlin api docs ([7475738](https://github.com/immutable/imx-docs/commit/7475738fae5d2774952fa1ffed91704938ab5b6c))
+
 # [1.17.0](https://github.com/immutable/imx-docs/compare/v1.16.3...v1.17.0) (2022-08-15)
 
 
