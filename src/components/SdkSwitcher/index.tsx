@@ -10,8 +10,8 @@ import { SdkIdKey, SdkItem } from '@site/src/constants';
 
 const SdkSwitcher = ({ sdks }) => {
   const history: History = useHistory();
-  const currentSDK = sdks.find(
-    (sdk: { url: string }) => history.location.pathname.toLowerCase().includes(sdk.url.split('/', 3)[2])
+  const currentSDK = sdks.find((sdk: { url: string }) =>
+    history.location.pathname.toLowerCase().includes(sdk.url.split('/', 3)[2])
   );
 
   const [selectedSdk, setSelectedSdk] = useState<SdkItem>(currentSDK);
