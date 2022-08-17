@@ -330,20 +330,6 @@ a.navbar__item.navbar__link:active {
   }
 }
 
-/* Override Dropdown styles for Navbar */
-div.navbar__item.dropdown.dropdown--hoverable {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-size: 16px;
-  line-height: 24px;
-  margin-right: 32px;
-  padding: 0;
-}
-
-div.navbar__item.dropdown.dropdown--hoverable .navbar__link {
-  font-weight: 700;
-}
-
 /* Header icons */
 /* Hamburger Icon */
 button.navbar__toggle.clean-btn>svg {
@@ -553,7 +539,7 @@ button.clean-btn.navbar-sidebar__close>svg {
   color: var(--ifm-color-primary) !important;
 }
 
-[data-theme='dark'] .elements-container :is(.token.punctuation, .token.operator, .token.boolean, .token.number) {
+[data-theme='dark'] .elements-container :is(.token.punctuation,.token.operator,.token.boolean,.token.number) {
   color: #fff !important;
 }
 
