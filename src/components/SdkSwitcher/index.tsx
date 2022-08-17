@@ -10,9 +10,15 @@ import { SdkIdKey, SdkItem } from '@site/src/constants';
 
 const SdkSwitcher = ({ sdks }) => {
   const history: History = useHistory();
-  const currentSDK = sdks.find(
-    (sdk: { url: string }) => sdk.url == history.location.pathname
-  );
+  const currentSDK = sdks.find((sdk: { url: string }) => {
+    const sdkURL = sdk.url.split('/').slice(0, 3).join('/');
+    const currentURL = history.location.pathname
+      .split('/')
+      .slice(0, 3)
+      .join('/');
+    return sdkURL == currentURL;
+  });
+
   const [selectedSdk, setSelectedSdk] = useState<SdkItem>(currentSDK);
 
   const handleOnChange = (sdkItem: SdkItem) => {
