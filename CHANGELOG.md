@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/immutable/imx-docs/compare/v1.19.0...v1.19.1) (2022-08-17)
+
+
+### Bug Fixes
+
+* fix switcher to ignore version in url ([37e83e5](https://github.com/immutable/imx-docs/commit/37e83e5662e579f4ce67fee5ccb0ec310ea29b78))
+
 # [1.19.0](https://github.com/immutable/imx-docs/compare/v1.18.0...v1.19.0) (2022-08-17)
 
 
