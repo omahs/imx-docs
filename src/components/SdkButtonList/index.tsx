@@ -2,13 +2,13 @@ import clsx from 'clsx';
 import React from 'react';
 import { History } from 'history';
 import { useHistory } from 'react-router';
-import { SdkIdKey, SdkItem, sdks } from '@site/src/constants';
+import { SdkIdKey, SdkItem } from '@site/src/constants';
 import Button from '@site/src/components/Button';
 import RightArrowIcon from '@site/static/icons/RightArrow';
 import ArticleStyles from '@site/src/components/Article/styles.module.css';
 import styles from './styles.module.css';
 
-const SdkButtonList = () => {
+const SdkButtonList = ({ sdks }) => {
   const history: History = useHistory();
 
   const handleClick = (sdk: SdkItem) => {
