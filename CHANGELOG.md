@@ -1,3 +1,12 @@
+# [1.19.0](https://github.com/immutable/imx-docs/compare/v1.18.0...v1.19.0) (2022-08-17)
+
+
+### Features
+
+* update css add overview link ([f5e59d9](https://github.com/immutable/imx-docs/commit/f5e59d9efa8097617cb799e8abd50ecff657a721))
+* update switcher component, add dropdown for SDKs ([9cc3b8f](https://github.com/immutable/imx-docs/commit/9cc3b8f3b1802d964fe2b639ae142eae4bfcc749))
+* update switcher inputs and fix initial sdk displayed ([7b14f5f](https://github.com/immutable/imx-docs/commit/7b14f5fa2707ee444da845688ad171541bc3bb04))
+
 # [1.18.0](https://github.com/immutable/imx-docs/compare/v1.17.0...v1.18.0) (2022-08-17)
 
 
