@@ -4,46 +4,7 @@ slug: "/guides-new/user-registration/kotlin-jvm"
 keywords: [imx-wallets]
 ---
 
-### Steps:
-1. Connect to the user's wallet
-
-### 1. Connect to the user's wallet
-A connection to a user's L1 wallet is required in order to facilitate the signing of transactions. There are two ways to do this:
-1. Build your own wallet connection
-2. Use the Web Wallet SDK
-
-
-```typescript
-import {
-  ENVIRONMENTS,
-  L1_PROVIDERS,
-  WalletSDK,
-} from '@imtbl/imx-wallet-sdk-web';
-
-(async () => {
-  // Builds the Wallet SDK object
-  const sdk = await WalletSDK.build({
-    env: ENVIRONMENTS.STAGING,
-    /*
-      RPC config is only required if the WalletConnect provider (L1_PROVIDERS.WALLET_CONNECT)
-      is being used. Follow this reference for the RPC config:
-      https://docs.walletconnect.com/quick-start/dapps/web3-provider#provider-options
-    */
-    rpc: {
-      3: 'https://ropsten.mycustomnode.com',
-    },
-  });
-
-  // Connects on the chosen provider - WalletConnect
-  const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.WALLET_CONNECT });
-  // For Metamask:
-  // const walletConnection = await sdk.connect({ provider: L1_PROVIDERS.METAMASK });
-
-  // Register the user using the Core SDK
-  await coreSdkWorkflows.registerOffchain(walletConnection);
-})();
-
-```
+# User registration (Kotlin JVM)
 
 Notes for devs updating this page:
 * Include info to generate own Stark Wallet (https://github.com/immutable/imx-core-sdk-kotlin-jvm#wallet-connection) as well as using the Android Wallet SDK (https://github.com/immutable/imx-wallet-sdk-android)
