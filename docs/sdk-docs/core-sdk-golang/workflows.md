@@ -49,9 +49,7 @@ Sample usages of workflows can be found in [examples](https://github.com/immutab
 | `Burn`                   | Burn tokens.                                         |
 | `GetBurn`                | Verify burn/transfer details.                        |
 | `Deposit`                | Deposit based on token type. (ETH, ERC20, ERC721)    |
-| `PrepareEthWithdrawal`   | Prepare Eth token for withdrawal.                    |
-| `PrepareERC20Withdrawal` | Prepare ERC20 token for withdrawal.                  |
-| `PrepareERC721Withdrawal`| Prepare ERC721 token for withdrawal.                 |
+| `PrepareWithdrawal`      | Prepare token (ETH, ERC20, ERC721) for withdrawal.   |
 | `CompleteEthWithdrawal`  | Withdraw ETH to L1.                                  |
 | `CompleteWithdrawal`     | Withdraw to L1 based on token type. (ERC20, ERC721)  |
 | `CreateOrder`            | Create an order to sell an asset.                    |
