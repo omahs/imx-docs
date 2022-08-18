@@ -20,7 +20,7 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
         </tr>
         <tr>
             <td>Provider List</td>
-            <td><img src="/img/wallet-sdk-ui-guide/list.png" alt="Provider List" width="70%" height="70%"></td>
+            <td><img src="/img/wallet-sdk-ui-guide/list.png" alt="Provider List" width="70%" height="70%" /></td>
             <td>
                 <strong>Parter must</strong>
                 <ul>
@@ -31,7 +31,7 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
         </tr>
         <tr>
             <td>Email Login</td>
-            <td><img src="/img/wallet-sdk-ui-guide/email.png" alt="Email Login" width="70%" height="70%"></td>
+            <td><img src="/img/wallet-sdk-ui-guide/email.png" alt="Email Login" width="70%" height="70%" /></td>
             <td>
                 If partner chooses to surface the email wallet (provided by Magic), then the partner must:
                 <ul>
@@ -42,7 +42,7 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
         </tr>
         <tr>
             <td>MetaMask + GameStop</td>
-            <td><img src="/img/wallet-sdk-ui-guide/sign.png" alt="Signature Request" width="70%" height="70%"></td>
+            <td><img src="/img/wallet-sdk-ui-guide/sign.png" alt="Signature Request" width="70%" height="70%" /></td>
             <td>
                 Useful to include:
                 <ul>
@@ -78,7 +78,7 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
         </tr>
         <tr>
             <td>Disconnect Wallet</td>
-            <td><img src="/img/wallet-sdk-ui-guide/disconnect.png" alt="Disconnect Wallet" width="70%" height="70%"></td>
+            <td><img src="/img/wallet-sdk-ui-guide/disconnect.png" alt="Disconnect Wallet" width="70%" height="70%" /></td>
             <td>
                 <strong>Partner must</strong>
                 <ul>
@@ -99,8 +99,8 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
         <tr>
             <td>Listing Screen</td>
             <td>
-                <img src="/img/wallet-sdk-ui-guide/list-1.png" alt="List asset 1" width="50%" height="50%"><br>
-                <img src="/img/wallet-sdk-ui-guide/list-2.png" alt="List asset 2" width="70%" height="70%">
+                <img src="/img/wallet-sdk-ui-guide/list-1.png" alt="List asset 1" width="50%" height="50%" /><br>
+                <img src="/img/wallet-sdk-ui-guide/list-2.png" alt="List asset 2" width="70%" height="70%" />
             </td>
             <td>
                 <strong>Partner must</strong>
@@ -129,7 +129,7 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
         <tr>
             <td>Asset Screen</td>
             <td>
-                <img src="/img/wallet-sdk-ui-guide/buy.png" alt="Buy Asset Screen" width="70%" height="70%">
+                <img src="/img/wallet-sdk-ui-guide/buy.png" alt="Buy Asset Screen" width="70%" height="70%" />
             </td>
             <td>
                 <strong>Partner must</strong>
@@ -163,7 +163,7 @@ Requirement for custom UI:
         <tr>
             <td>Add funds flow</td>
             <td>
-                <img src="/img/wallet-sdk-ui-guide/add-funds.png" alt="Add Funds" width="50%" height="50%">
+                <img src="/img/wallet-sdk-ui-guide/add-funds.png" alt="Add Funds" width="50%" height="50%" />
             </td>
             <td>
                 <strong>Partner must</strong>
@@ -175,7 +175,7 @@ Requirement for custom UI:
         <tr>
             <td>Deposit flow</td>
             <td>
-                <img src="/img/wallet-sdk-ui-guide/deposit.png" alt="Deposit Screen" width="50%" height="50%">
+                <img src="/img/wallet-sdk-ui-guide/deposit.png" alt="Deposit Screen" width="50%" height="50%" />
             </td>
             <td>
                 <strong>Partner must</strong>
@@ -204,8 +204,8 @@ Requirement for custom UI:
     <tr>
         <td>Withdraw flow</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/withdraw-1.png" alt="Withdraw Screen" width="50%" height="50%"><br>
-            <img src="/img/wallet-sdk-ui-guide/withdraw-2.png" alt="Withdraw Confirmation" width="50%" height="50%">
+            <img src="/img/wallet-sdk-ui-guide/withdraw-1.png" alt="Withdraw Screen" width="50%" height="50%" /><br>
+            <img src="/img/wallet-sdk-ui-guide/withdraw-2.png" alt="Withdraw Confirmation" width="50%" height="50%" />
         </td>
         <td>
             <strong>Partner must</strong>
@@ -236,7 +236,7 @@ Requirement for custom UI:
     <tr>
         <td>Fiat onramp</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/fiat-onramp.png" alt="Add Funds" width="50%" height="50%">
+            <img src="/img/wallet-sdk-ui-guide/fiat-onramp.png" alt="Add Funds" width="50%" height="50%" />
         </td>
         <td>
             <strong>Partner must</strong>
@@ -259,7 +259,7 @@ Requirement for custom UI:
     <tr>
         <td>Crypto offramp</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/fiat-offramp.png" alt="Withdraw to bank account" width="50%" height="50%">
+            <img src="/img/wallet-sdk-ui-guide/fiat-offramp.png" alt="Withdraw to bank account" width="50%" height="50%" />
         </td>
         <td>
             <strong>Partner must</strong>
@@ -286,7 +286,7 @@ Requirement for custom UI:
     <tr>
         <td>Error states</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/errors.png" alt="Error screens" width="50%" height="50%">
+            <img src="/img/wallet-sdk-ui-guide/errors.png" alt="Error screens" width="50%" height="50%" />
         </td>
         <td>
             <strong>Partner must</strong>
@@ -313,7 +313,7 @@ Requirement for custom UI:
     <tr>
         <td>Transaction History</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/transaction-history.png" alt="Transaction history screen" width="50%" height="50%">
+            <img src="/img/wallet-sdk-ui-guide/transaction-history.png" alt="Transaction history screen" width="50%" height="50%" />
         </td>
         <td>
             <strong>Partner must</strong>
