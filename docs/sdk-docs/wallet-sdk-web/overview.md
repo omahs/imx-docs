@@ -16,6 +16,5 @@ The [Immutable Wallet SDK Web](https://github.com/immutable/imx-wallet-sdk-web) 
 
 ## Documentation
 
-- [Wallet SDK reference](/sdk-docs/wallet-sdk-web)
 - [Core SDK reference](/sdk-docs/core-sdk-ts)
 - [Immutable X developer docs](/)
