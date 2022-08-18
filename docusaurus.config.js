@@ -95,6 +95,17 @@ const configuration = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        path: 'docs/sdk-docs/core-sdk-golang/',
+        routeBasePath: '/sdk-docs/core-sdk-golang',
+        id: 'sdks-core-sdk-golang',
+        sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-golang.js'),
+        // includeCurrentVersion: false, // uncomment when golang docs are versioned
+        ...pageOptions,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         path: 'docs/sdk-docs/wallet-sdk-android/',
         routeBasePath: '/sdk-docs/wallet-sdk-android',
         id: 'sdks-wallet-sdk-android',

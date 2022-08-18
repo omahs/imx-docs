@@ -31,6 +31,13 @@ export const coreSDKs = [
     displayName: 'Core SDK Swift',
     url: '/sdk-docs/core-sdk-swift/overview',
   },
+  {
+    id: 3,
+    sdkId: 'sdks-core-sdk-golang',
+    name: 'Core SDK Golang',
+    displayName: 'Core SDK Golang',
+    url: '/sdk-docs/core-sdk-golang/overview',
+  },
 ];
 
 export const walletSDKs = [
