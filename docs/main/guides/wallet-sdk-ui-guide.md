@@ -99,7 +99,7 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
         <tr>
             <td>Listing Screen</td>
             <td>
-                <img src="/img/wallet-sdk-ui-guide/list-1.png" alt="List asset 1" width="50%" height="50%" /><br>
+                <img src="/img/wallet-sdk-ui-guide/list-1.png" alt="List asset 1" width="50%" height="50%" /></br>
                 <img src="/img/wallet-sdk-ui-guide/list-2.png" alt="List asset 2" width="70%" height="70%" />
             </td>
             <td>
@@ -204,7 +204,7 @@ Requirement for custom UI:
     <tr>
         <td>Withdraw flow</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/withdraw-1.png" alt="Withdraw Screen" width="50%" height="50%" /><br>
+            <img src="/img/wallet-sdk-ui-guide/withdraw-1.png" alt="Withdraw Screen" width="50%" height="50%" /></br>
             <img src="/img/wallet-sdk-ui-guide/withdraw-2.png" alt="Withdraw Confirmation" width="50%" height="50%" />
         </td>
         <td>
@@ -266,7 +266,7 @@ Requirement for custom UI:
             <ul>
                 <li>Trigger the offramp flow</li>
             </ul>
-            Moonpay widget will take care of the rest.<br>
+            Moonpay widget will take care of the rest.</br>
             Useful to have:
             <ul>
                 <li>Moonpay Offramp is only available to users in the US, UK, and EU</li>
