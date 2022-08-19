@@ -19,9 +19,14 @@ module.exports = {
         },
         {
           type: 'link',
-          label: 'Api Client Reference',
+          label: 'Api client reference',
           href: `${url}/sdk-references/core-sdk-golang/0-1-0/apiclient/`,
         },
+        // {  // TODO update when package is released
+        //   type: 'link',
+        //   label: 'Package reference',
+        //   href: `https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang/imx@v0.1.0`,
+        // },
       ],
     },
   ],
