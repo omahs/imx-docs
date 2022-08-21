@@ -62,7 +62,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
                         <li>Requesting for the user's signature</li>
                         <li>Setting up an Immutable X layer 2 wallet key (only needed the first time a user connects with Immutable X - this is user registration)</li>
                     </ul>
-                    <li>If MetaMask and GameStop are both provided as wallet options, explain that having both plugins at the same time can create wallet connection issues</li>
+                    <li>If MetaMask and GameStop are both provided as wallet options, explain that having both plugins at the same time can create wallet connection issues (more information available <a href="https://support.immutable.com/hc/en-us/articles/5160531224079-Managing-multiple-wallet-extensions-for-Immutable">here</a>)</li>
                 </ul>    
             </td>
         </tr>
@@ -153,11 +153,6 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
             </td>
         </tr>
 </table>
-
-Requirement for custom UI:
-
-- View asset listing amount
-- Payment flow entry points (Deposit from L1, Onramp with Moonpay, Pay with CC through Moonpay).
 
 # L1 to L2 Deposit
 
