@@ -97,7 +97,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
 </table>
 
-### List Asset
+### List asset
 
 <table>
     <tr>
