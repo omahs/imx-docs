@@ -40,7 +40,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
             </td>
         </tr>
         <tr>
-            <td>Email Login</td>
+            <td>Email login</td>
             <td><img src="/img/wallet-sdk-ui-guide/email.png" alt="Email Login" width="70%" height="70%" /></td>
             <td>
                 If an application chooses to provide the email wallet (provided by Magic) as an option, it must:
@@ -67,7 +67,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
             </td>
         </tr>
         <tr>
-            <td>Wallet Connected</td>
+            <td>Wallet connected</td>
             <td></td>
             <td>
                 Not mandatory, but useful to include:
@@ -78,7 +78,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
 </table>
 
-# Disconnect Wallet
+### Disconnect wallet
 
 <table>
     <tr>
@@ -87,7 +87,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
             <th>Requirements</th>
         </tr>
         <tr>
-            <td>Disconnect Wallet</td>
+            <td>Disconnect wallet</td>
             <td><img src="/img/wallet-sdk-ui-guide/disconnect.png" alt="Disconnect Wallet" width="70%" height="70%" /></td>
             <td>
                 <ul>
@@ -97,7 +97,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
 </table>
 
-# List Asset
+### List Asset
 
 <table>
     <tr>
@@ -106,7 +106,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
             <th>Requirements</th>
         </tr>
         <tr>
-            <td>Listing Screen</td>
+            <td>Listing screen</td>
             <td>
                 <img src="/img/wallet-sdk-ui-guide/list-1.png" alt="List asset 1" width="50%" height="50%" /><br/>
                 <img src="/img/wallet-sdk-ui-guide/list-2.png" alt="List asset 2" width="70%" height="70%" />
@@ -126,7 +126,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
 </table>
 
-# Buy Asset
+### Buy asset
 
 <table>
     <tr>
@@ -135,7 +135,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
             <th>Requirements</th>
         </tr>
         <tr>
-            <td>Asset Screen</td>
+            <td>Asset screen</td>
             <td>
                 <img src="/img/wallet-sdk-ui-guide/buy.png" alt="Buy Asset Screen" width="70%" height="70%" />
             </td>
@@ -154,7 +154,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
 </table>
 
-# L1 to L2 Deposit
+### L1 to L2 deposit
 
 <table>
     <tr>
@@ -193,7 +193,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
 </table>
 
-# L2 to L1 withdrawal
+### L2 to L1 withdrawals
 
 <table>
     <tr>
@@ -225,7 +225,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     </tr>
 </table>
 
-# Fiat On-Ramp [ workflow to be added ]
+### Fiat onramp [ wip ]
 
 <table>
     <tr>
@@ -247,7 +247,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     </tr>
 </table>
 
-# Crypto to Fiat (Off-Ramp) [workflow to be added]
+### Crypto to fiat (offramp) [ wip ]
 
 <table>
     <tr>
@@ -273,7 +273,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     </tr>
 </table>
 
-# Error States
+### Error states
 
 <table>
     <tr>
@@ -298,7 +298,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     </tr>
 </table>
 
-# Transaction History
+### Transaction history
 
 <table>
     <tr>
@@ -307,7 +307,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         <th>Requirements</th>
     </tr>
     <tr>
-        <td>Transaction History</td>
+        <td>Transaction history</td>
         <td>
             <img src="/img/wallet-sdk-ui-guide/transaction-history.png" alt="Transaction history screen" width="50%" height="50%" />
         </td>
