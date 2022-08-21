@@ -288,7 +288,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </td>
         <td>
             <ul>
-                <li>Provide user feedback about specific errors (full list of errors can be found <a href="https://docs.x.immutable.com/docs/link-errors/">here</a>)</li></li>
+                <li>Provide user feedback about specific errors (full list of errors can be found <a href="https://docs.x.immutable.com/docs/link-errors/">here</a>)</li>
             </ul>
             Not mandatory, but useful to have:
             <ul>
