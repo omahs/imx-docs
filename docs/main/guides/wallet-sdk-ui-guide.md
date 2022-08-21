@@ -264,8 +264,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
             <ul>
                 <li>Trigger the offramp flow</li>
             </ul>
-            The Moonpay widget will take care of the rest.
-
+            The Moonpay widget will take care of the rest.<br/>
             Not mandatory, but useful to have:
             <ul>
                 <li>A note informing the user that the Moonpay offramp is only available to users in the US, UK, and EU.</li>
