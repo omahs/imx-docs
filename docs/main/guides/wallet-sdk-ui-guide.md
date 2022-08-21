@@ -1,6 +1,6 @@
 ---
 id: "wallet-sdk-ui-guide"
-title: "Wallet-SDK UI/UX Guide"
+title: "UI guide for implementing user wallet interactions"
 slug: "/wallet-sdk-ui-guide"
 sidebar_position: 10
 keywords: [imx-wallets]
@@ -8,9 +8,20 @@ keywords: [imx-wallets]
 
 # Wallet SDK UI/UX Guide
 
-This guide is aimed to provide some clarity on the minimum requirements needed to ensure the Core SDK and Wallet SDK workflows are functional. Beyond the partner must haves, the rest is up to the partner to design.
+This guide is aimed at providing clarity on the minimum requirements when implementing user wallet connections and interactions. 
 
-# Connect Wallet
+Previously, applications using the [Link SDK](/docs/sdk-api) did not have to worry about this because the Link SDK provided an opinionated UI that implemented our best practices. Now, when using the [Core SDK with the Wallet SDK](/docs/sdks#how-do-the-sdks-work-together), applications may need to implement their design. Other than the must-haves outlined in this guide, the rest is up the application.
+
+## User interactions
+* [Connect wallet](#connect-wallet)
+* [Disconnect wallet](#disconnect-wallet)
+* [List asset](#list-asset)
+* [Buy asset](#buy-asset)
+* [L1 to L2 deposit](#l1-to-l2-deposit)
+* [L2 to L1 withdrawals](#l2-to-l1-withdrawals)
+* [L1 to L2 deposit](#l1-to-l2-deposit)
+
+### Connect wallet
 
 <table>
         <tr>
@@ -19,13 +30,12 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
             <th>Requirements</th>
         </tr>
         <tr>
-            <td>Provider List</td>
+            <td>Provider list</td>
             <td><img src="/img/wallet-sdk-ui-guide/list.png" alt="Provider List" width="70%" height="70%" /></td>
             <td>
-                <strong>Parter must</strong>
                 <ul>
-                    <li>Provide some mechanism to surface the wallet options</li>
-                    <li>Include user acceptance of Immutable’s T&C and privacy policy</li>
+                    <li>Provide a mechanism to surface the wallet options</li>
+                    <li>Include user acceptance statement of Immutable’s T&C and privacy policy</li>
                 </ul>    
             </td>
         </tr>
@@ -33,10 +43,10 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
             <td>Email Login</td>
             <td><img src="/img/wallet-sdk-ui-guide/email.png" alt="Email Login" width="70%" height="70%" /></td>
             <td>
-                If partner chooses to surface the email wallet (provided by Magic), then the partner must:
+                If an application chooses to provide the email wallet (provided by Magic) as an option, it must:
                 <ul>
-                    <li>Provide some way to obtaining the user’s email / partner to pass through</li>
-                    <li>Include Magic’s T&C and Privacy policy</li>
+                    <li>Provide a field for the user to enter their email address</li>
+                    <li>Include Magic’s T&C and privacy policy</li>
                 </ul>    
             </td>
         </tr>
@@ -44,15 +54,15 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
             <td>MetaMask + GameStop</td>
             <td><img src="/img/wallet-sdk-ui-guide/sign.png" alt="Signature Request" width="70%" height="70%" /></td>
             <td>
-                Useful to include:
+                Not mandatory, but useful to include:
                 <ul>
-                    <li>Explanation of why there are multiple signature requests from the non-custodial wallet</li>
+                    <li>An explanation of why there are multiple signature requests from the non-custodial wallet for:</li>
                     <ul>
-                        <li>Connecting an account</li>
-                        <li>Signature request for access</li>
-                        <li>Setting up a IMX Key (needed on the first time only)</li>
+                        <li>Connecting to a user wallet</li>
+                        <li>Requesting for the user's signature</li>
+                        <li>Setting up an Immutable X layer 2 wallet key (only needed the first time a user connects with Immutable X - this is user registration)</li>
                     </ul>
-                    <li>If having both Metamask and Gamestop as wallet options, explain somehow that having both plugins at the same time can cause issues to the wallet connection</li>
+                    <li>If MetaMask and GameStop are both provided as wallet options, explain that having both plugins at the same time can create wallet connection issues</li>
                 </ul>    
             </td>
         </tr>
@@ -60,7 +70,7 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
             <td>Wallet Connected</td>
             <td></td>
             <td>
-                Useful to include:
+                Not mandatory, but useful to include:
                 <ul>
                     <li>User feedback that wallet is successfully connected</li>
                 </ul>    
@@ -80,9 +90,8 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
             <td>Disconnect Wallet</td>
             <td><img src="/img/wallet-sdk-ui-guide/disconnect.png" alt="Disconnect Wallet" width="70%" height="70%" /></td>
             <td>
-                <strong>Partner must</strong>
                 <ul>
-                    <li>provide some exit point for user to disconnect their wallet</li>
+                    <li>Provide an way for users to disconnect their wallets from the application</li>
                 </ul>    
             </td>
         </tr>
@@ -103,16 +112,15 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
                 <img src="/img/wallet-sdk-ui-guide/list-2.png" alt="List asset 2" width="70%" height="70%" />
             </td>
             <td>
-                <strong>Partner must</strong>
                 <ul>
-                    <li>Collect listing price</li>
-                    <li>Collect listing currency (assuming you support multiple currencies)</li>
-                    <li>Maker / taker fee breakdown</li>
+                    <li>Enable the user to input their listing price</li>
+                    <li>Enable the user to select their listing currency (if multiple options are provided)</li>
+                    <li>Provide breakdown of any maker and taker fees that apply</li>
                 </ul>
-                Useful to have:
+                Not mandatory, but useful to have:
                 <ul>
-                    <li>Processing indicator</li>
-                    <li>User feedback that listing was successful</li>
+                    <li>Processing indicator when the user has initiated listing an asset and the transaction has not yet completed</li>
+                    <li>Feedback when an asset has successfully been listed</li>
                 </ul>    
             </td>
         </tr>
@@ -132,16 +140,15 @@ This guide is aimed to provide some clarity on the minimum requirements needed t
                 <img src="/img/wallet-sdk-ui-guide/buy.png" alt="Buy Asset Screen" width="70%" height="70%" />
             </td>
             <td>
-                <strong>Partner must</strong>
                 <ul>
-                    <li>Surface purchase price</li>
-                    <li>Surface purchase currency (assuming you support multiple currencies)</li>
-                    <li>Maker / taker fee breakdown</li>
+                    <li>Display the purchase price</li>
+                    <li>Display the purchase currency</li>
+                    <li>Provide breakdown of any maker and taker fees that apply</li>
                 </ul>
-                Useful to have:
+                Not mandatory, but useful to have:
                 <ul>
                     <li>User feedback that purchase was successful</li>
-                    <li>Send users to add funds flow if they have insufficient funds</li>
+                    <li>Send users to an "add funds" flow if they have insufficient funds</li>
                 </ul>    
             </td>
         </tr>
@@ -166,9 +173,8 @@ Requirement for custom UI:
                 <img src="/img/wallet-sdk-ui-guide/add-funds.png" alt="Add Funds" width="50%" height="50%" />
             </td>
             <td>
-                <strong>Partner must</strong>
                 <ul>
-                    <li>Surface add funds flow</li>
+                    <li>Provide an "add funds" flow</li>
                 </ul>
             </td>
         </tr>
@@ -178,22 +184,21 @@ Requirement for custom UI:
                 <img src="/img/wallet-sdk-ui-guide/deposit.png" alt="Deposit Screen" width="50%" height="50%" />
             </td>
             <td>
-                <strong>Partner must</strong>
                 <ul>
-                    <li>Collect currency type (assuming multiple currencies available)</li>
-                    <li>Collect amount to be deposited</li>
+                    <li>Provide a field for the user to input the currency type</li>
+                    <li>Provide a field for the user to input the amount they want to deposit</li>
                 </ul>
-                Useful to have:
+                Not mandatory, but useful to have:
                 <ul>
-                    <li>Icon for different currency types</li>
+                    <li>Icons representing different currency types</li>
                     <li>Available L1 balance to be deposited</li>
-                    <li> User feedback that deposit was successful</li>
+                    <li> Feedback when a deposit is successful</li>
                 </ul>    
             </td>
         </tr>
 </table>
 
-# L2 to L1 Withdraw
+# L2 to L1 withdrawal
 
 <table>
     <tr>
@@ -239,11 +244,10 @@ Requirement for custom UI:
             <img src="/img/wallet-sdk-ui-guide/fiat-onramp.png" alt="Add Funds" width="50%" height="50%" />
         </td>
         <td>
-            <strong>Partner must</strong>
             <ul>
                 <li>Trigger the onramp flow</li>
             </ul>
-            Moonpay widget will take care of the rest
+            The Moonpay widget will take care of the rest.
         </td>
     </tr>
 </table>
@@ -262,14 +266,14 @@ Requirement for custom UI:
             <img src="/img/wallet-sdk-ui-guide/fiat-offramp.png" alt="Withdraw to bank account" width="50%" height="50%" />
         </td>
         <td>
-            <strong>Partner must</strong>
             <ul>
                 <li>Trigger the offramp flow</li>
             </ul>
-            Moonpay widget will take care of the rest.<br/>
-            Useful to have:
+            The Moonpay widget will take care of the rest.
+
+            Not mandatory, but useful to have:
             <ul>
-                <li>Moonpay Offramp is only available to users in the US, UK, and EU</li>
+                <li>A note informing the user that the Moonpay offramp is only available to users in the US, UK, and EU.</li>
             </ul>
         </td>
     </tr>
@@ -289,12 +293,10 @@ Requirement for custom UI:
             <img src="/img/wallet-sdk-ui-guide/errors.png" alt="Error screens" width="50%" height="50%" />
         </td>
         <td>
-            <strong>Partner must</strong>
             <ul>
-                <li>Provide user feedback about specific errors</li>
-                <li> Error list can be found <a href="https://docs.x.immutable.com/docs/link-errors/">here</a></li>
+                <li>Provide user feedback about specific errors (full list of errors can be found <a href="https://docs.x.immutable.com/docs/link-errors/">here</a>)</li></li>
             </ul>
-            Useful to have:
+            Not mandatory, but useful to have:
             <ul>
                 <li>Link to Immutable support page</li>
             </ul>
@@ -316,13 +318,9 @@ Requirement for custom UI:
             <img src="/img/wallet-sdk-ui-guide/transaction-history.png" alt="Transaction history screen" width="50%" height="50%" />
         </td>
         <td>
-            <strong>Partner must</strong>
             <ul>
-                <li>Provide entry point for transactions</li>
-                <li>Transaction ID</li>
-                <li>Asset</li>
-                <li>Action</li>
-                <li>Cost</li>
+                <li>Provide users with the ability to view their transaction history</li>
+                <li>For each transaction, they must provide information about the transaction ID, asset details, type of transaction and the costs involved.</li>
             </ul>
         </td>
     </tr>
