@@ -20,7 +20,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
 * [L1 to L2 deposit](#l1-to-l2-deposit)
 * [L2 to L1 withdrawals](#l2-to-l1-withdrawals)
 * [Fiat onramp](#fiat-onramp)
-* [Crypto to fiat offramo](#crypto-to-fiat-offramp)
+* [Crypto to fiat offramp](#crypto-to-fiat-offramp)
 * [Error states](#error-states)
 * [Transaction history](#transaction-history)
 
