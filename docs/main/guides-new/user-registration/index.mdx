@@ -25,19 +25,11 @@ By default, Immutable's API and libraries provide for off-chain registration whe
 
 The L1-L2 mapping of user wallets needs to occur so that users can transfer assets between their L1 and L2 wallets (also known as "bridging").
 
-## Developer tools
-
-Immutable provide a number of tools for your application to register users:
-
-| Tool                                     | Language                  | Steps covered (from [here](#what-is-user-registration)) | Description |
-| ---------------------------------------- | ------------------------- | ------------- | ----------- |
-| **[Link SDK](https://www.npmjs.com/package/@imtbl/imx-sdk)** | Typescript | 1, 2 | Provides end-to-end user wallet connection and registration, complete with a UI |
-| **Wallet SDK** | [Typescript](https://github.com/immutable/imx-wallet-sdk-web), [Android](https://github.com/immutable/imx-wallet-sdk-android) | 1 | Provides a connection to users' L1 and L2 wallets and returns 'signers' that can be used to sign transactions. No UI. |
-| **Core SDK** | [Typescript](/docs/sdk-docs/wallet-sdk-web/overview.md), [Kotlin (JVM)](/docs/sdk-docs/core-sdk-kotlin/overview.md), [Swift](/docs/sdk-docs/core-sdk-swift/overview.md) | 2 | Performs off-chain registration of users. Requires 'signers' to obtain user signatures - can be provided by the **Wallet SDK** or implemented manually |
-| **[API](https://docs.x.immutable.com/reference#/)** | -- | 1, 2 | Provides endpoints for connection to user wallets, obtaining signatures and registering users off-chain |
-
 ## Guides
 Only users on the StarkEx settlement layer need to be registered.
+
+#### Pre-requisites:
+* [User signatures](/docs/guides-new/user-signatures)
 
 <table>
   <tbody>
@@ -59,3 +51,58 @@ Only users on the StarkEx settlement layer need to be registered.
     </tr>
   </tbody>
 </table>
+
+## Typescript
+From [here](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/workflows).
+
+```ts
+import { Workflows, getConfig } from '@imtbl/core-sdk';
+
+// Sets up the Core SDK workflows
+const coreSdkConfig = getConfig({
+  // Example contract addresses
+  coreContractAddress: '0x4527BE8f31E2ebFbEF4fCADDb5a17447B27d2aef',
+  registrationContractAddress: '0x6C21EC8DE44AE44D0992ec3e2d9f1aBb6207D864',
+  chainID: 3,
+  basePath:  'https://api.ropsten.x.immutable.com',
+});
+const coreSdkWorkflows = new Workflows(coreSdkConfig);
+
+// Registers the user
+await coreSdkWorkflows.registerOffchain(walletConnection);
+```
+
+## Kotlin (JVM)
+
+```kotlin
+// Get L1 and L2 signers (see 'Obtaining user signatures' step)
+
+// Register user
+ImmutableXCore.registerOffchain(L1Signer, L2Signer)
+```
+
+## Swift
+
+```swift
+// Get L1 and L2 signers (see 'Obtaining user signatures' step)
+
+// Register user
+ImmutableXCore.registerOffchain(L1Signer, L2Signer)
+```
+
+## Link
+See [Link.setup](https://docs.x.immutable.com/docs/link-setup) guide.
+
+## API
+```typescript
+// Provide instructions on how to get the params for regiserUser endpoint
+const registerUserParams = {
+  email: 'email',
+  eth_signature: 'eth sig',
+  ether_key: 'ether key string',
+  stark_key: 'stark key',
+  stark_signature: 'stark sig',
+}
+
+// Call registerUser endpoint with params object
+```

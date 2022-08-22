@@ -9,6 +9,7 @@ sidebar_position: 1
 Guides contain step-by-step instructions on how to achieve a specific goal. They utilize Immutable's developer tools, such as our API and SDKs. Each guide contains multiple options based on the tools we have in different languages or frameworks.
 
 ## Guides
+* [Obtaining user signatures](/docs/guides-new/user-signatures)
 * [User registration](/docs/guides-new/user-registration)
 * [Creating orders](/docs/guides-new/orders)
 * [Creating trades](/docs/guides-new/trades)
