@@ -6,11 +6,11 @@ sidebar_position: 10
 keywords: [imx-wallets]
 ---
 
-# Wallet SDK UI/UX Guide
+# UI guide for implementing user wallet interactions
 
 This guide is aimed at providing clarity on the minimum requirements when implementing user wallet connections and interactions. 
 
-Previously, applications using the [Link SDK](/docs/sdk-api) did not have to worry about this because the Link SDK provided an opinionated UI that implemented our best practices. Now, when using the [Core SDK with the Wallet SDK](/docs/sdks#how-do-the-sdks-work-together), applications may need to implement their design. Other than the must-haves outlined in this guide, the rest is up the application.
+Previously, applications using the [Link SDK](/docs/sdk-api) did not have to worry about this because the Link SDK provided an opinionated UI that implemented our best practices. Now, when using the [Core SDK with the Wallet SDK](/docs/sdks#how-do-the-sdks-work-together), applications may need to implement their own design. Other than the must-haves outlined in this guide, the rest is up the application.
 
 ## User interactions
 * [Connect wallet](#connect-wallet)
@@ -240,9 +240,8 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </td>
         <td>
             <ul>
-                <li>Trigger the onramp flow</li>
+                <li>Trigger the onramp flow (the Moonpay widget will take care of the rest)</li>
             </ul>
-            The Moonpay widget will take care of the rest.
         </td>
     </tr>
 </table>
@@ -262,9 +261,8 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </td>
         <td>
             <ul>
-                <li>Trigger the offramp flow</li>
+                <li>Trigger the offramp flow (the Moonpay widget will take care of the rest)</li>
             </ul>
-            The Moonpay widget will take care of the rest.<br/>
             Not mandatory, but useful to have:
             <ul>
                 <li>A note informing the user that the Moonpay offramp is only available to users in the US, UK, and EU.</li>
