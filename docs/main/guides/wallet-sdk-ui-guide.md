@@ -19,7 +19,10 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
 * [Buy asset](#buy-asset)
 * [L1 to L2 deposit](#l1-to-l2-deposit)
 * [L2 to L1 withdrawals](#l2-to-l1-withdrawals)
-* [L1 to L2 deposit](#l1-to-l2-deposit)
+* [Fiat onramp](#fiat-onramp)
+* [Crypto to fiat offramo](#crypto-to-fiat-offramp)
+* [Error states](#error-states)
+* [Transaction history](#transaction-history)
 
 ### Connect wallet
 
@@ -31,7 +34,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
         <tr>
             <td>Provider list</td>
-            <td><img src="/img/wallet-sdk-ui-guide/list.png" alt="Provider List" width="70%" height="70%" /></td>
+            <td><a href="/img/wallet-sdk-ui-guide/list.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/list.png" alt="Provider List" width="85%" height="85%" /></a></td>
             <td>
                 <ul>
                     <li>Provide a mechanism to surface the wallet options</li>
@@ -41,7 +44,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
         <tr>
             <td>Email login</td>
-            <td><img src="/img/wallet-sdk-ui-guide/email.png" alt="Email Login" width="70%" height="70%" /></td>
+            <td><a href="/img/wallet-sdk-ui-guide/email.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/email.png" alt="Email Login" width="85%" height="85%" /></a></td>
             <td>
                 If an application chooses to provide the email wallet (provided by Magic) as an option, it must:
                 <ul>
@@ -52,7 +55,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
         <tr>
             <td>MetaMask + GameStop</td>
-            <td><img src="/img/wallet-sdk-ui-guide/sign.png" alt="Signature Request" width="70%" height="70%" /></td>
+            <td><a href="/img/wallet-sdk-ui-guide/sign.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/sign.png" alt="Signature Request" width="85%" height="85%" /></a></td>
             <td>
                 Not mandatory, but useful to include:
                 <ul>
@@ -88,7 +91,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         </tr>
         <tr>
             <td>Disconnect wallet</td>
-            <td><img src="/img/wallet-sdk-ui-guide/disconnect.png" alt="Disconnect Wallet" width="70%" height="70%" /></td>
+            <td><a href="/img/wallet-sdk-ui-guide/disconnect.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/disconnect.png" alt="Disconnect Wallet" width="85%" height="85%" /></a></td>
             <td>
                 <ul>
                     <li>Provide an way for users to disconnect their wallets from the application</li>
@@ -108,8 +111,8 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         <tr>
             <td>Listing screen</td>
             <td>
-                <img src="/img/wallet-sdk-ui-guide/list-1.png" alt="List asset 1" width="50%" height="50%" /><br/>
-                <img src="/img/wallet-sdk-ui-guide/list-2.png" alt="List asset 2" width="70%" height="70%" />
+                <a href="/img/wallet-sdk-ui-guide/list-1.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/list-1.png" alt="List asset 1" width="65%" height="65%" /></a><br/>
+                <a href="/img/wallet-sdk-ui-guide/list-2.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/list-2.png" alt="List asset 2" width="85%" height="85%" /></a>
             </td>
             <td>
                 <ul>
@@ -137,7 +140,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         <tr>
             <td>Asset screen</td>
             <td>
-                <img src="/img/wallet-sdk-ui-guide/buy.png" alt="Buy Asset Screen" width="70%" height="70%" />
+                <a href="/img/wallet-sdk-ui-guide/buy.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/buy.png" alt="Buy Asset Screen" width="85%" height="85%" /></a>
             </td>
             <td>
                 <ul>
@@ -165,7 +168,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         <tr>
             <td>Add funds flow</td>
             <td>
-                <img src="/img/wallet-sdk-ui-guide/add-funds.png" alt="Add Funds" width="50%" height="50%" />
+                <a href="/img/wallet-sdk-ui-guide/add-funds.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/add-funds.png" alt="Add Funds" width="65%" height="65%" /></a>
             </td>
             <td>
                 <ul>
@@ -176,7 +179,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
         <tr>
             <td>Deposit flow</td>
             <td>
-                <img src="/img/wallet-sdk-ui-guide/deposit.png" alt="Deposit Screen" width="50%" height="50%" />
+                <a href="/img/wallet-sdk-ui-guide/deposit.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/deposit.png" alt="Deposit Screen" width="65%" height="65%" /></a>
             </td>
             <td>
                 <ul>
@@ -204,8 +207,8 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     <tr>
         <td>Withdraw flow</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/withdraw-1.png" alt="Withdraw Screen" width="50%" height="50%" /><br/>
-            <img src="/img/wallet-sdk-ui-guide/withdraw-2.png" alt="Withdraw Confirmation" width="50%" height="50%" />
+            <a href="/img/wallet-sdk-ui-guide/withdrawal-1.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/withdraw-1.png" alt="Withdraw Screen" width="65%" height="65%" /></a><br/>
+            <a href="/img/wallet-sdk-ui-guide/withdrawal-2.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/withdraw-2.png" alt="Withdraw Confirmation" width="65%" height="65%" /></a>
         </td>
         <td>
             <strong>Partner must</strong>
@@ -225,7 +228,13 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     </tr>
 </table>
 
-### Fiat onramp [ wip ]
+### Fiat onramp
+
+:::note
+
+_Fiat onramp_ is still under development and not available in the SDK yet.
+
+:::
 
 <table>
     <tr>
@@ -236,7 +245,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     <tr>
         <td>Fiat onramp</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/fiat-onramp.png" alt="Add Funds" width="50%" height="50%" />
+            <a href="/img/wallet-sdk-ui-guide/fiat-onramp.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/fiat-onramp.png" alt="Add Funds" width="65%" height="65%" /></a>
         </td>
         <td>
             <ul>
@@ -246,7 +255,14 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     </tr>
 </table>
 
-### Crypto to fiat (offramp) [ wip ]
+### Crypto to fiat offramp
+
+:::note
+
+_Crypto to fiat offramp_ is still under development and not available in the SDK yet.
+
+:::
+
 
 <table>
     <tr>
@@ -257,7 +273,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     <tr>
         <td>Crypto offramp</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/fiat-offramp.png" alt="Withdraw to bank account" width="50%" height="50%" />
+            <a href="/img/wallet-sdk-ui-guide/fiat-offramp.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/fiat-offramp.png" alt="Withdraw to bank account" width="65%" height="65%" /></a>
         </td>
         <td>
             <ul>
@@ -282,7 +298,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     <tr>
         <td>Error states</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/errors.png" alt="Error screens" width="50%" height="50%" />
+            <a href="/img/wallet-sdk-ui-guide/errors.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/errors.png" alt="Error screens" width="65%" height="65%" /></a>
         </td>
         <td>
             <ul>
@@ -298,6 +314,13 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
 
 ### Transaction history
 
+:::note
+
+_Transaction history_ is still under development and not available in the SDK yet.
+
+:::
+
+
 <table>
     <tr>
         <th>Flow</th>
@@ -307,7 +330,7 @@ Previously, applications using the [Link SDK](/docs/sdk-api) did not have to wor
     <tr>
         <td>Transaction history</td>
         <td>
-            <img src="/img/wallet-sdk-ui-guide/transaction-history.png" alt="Transaction history screen" width="50%" height="50%" />
+            <a href="/img/wallet-sdk-ui-guide/transaction-history.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/transaction-history.png" alt="Transaction history screen" width="65%" height="65%" /></a>
         </td>
         <td>
             <ul>
