@@ -99,14 +99,17 @@ const SurvicateWidget = () => {
 
     const teamOwners = getArticleTeamOwners();
 
-    // https://developers.survicate.com/javascript/configuration/
+    // https://developers.survicate.com/javascript/configuration/#disabling-automatic-targeting
     (function (opts) {
       opts.disableTargeting = true;
-      // Tag survey with article team ownership
-      opts.traits = {
-        ...(teamOwners.length > 0 && { imx_teams: teamOwners }),
-      };
     })((window._sva = window._sva || {}));
+
+    // https://developers.survicate.com/javascript/methods/#set-visitor-traits
+    if (teamOwners.length > 0) {
+      window._sva.setVisitorTraits({
+        imx_teams: teamOwners.toString(),
+      });
+    }
   };
 
   useEffect(() => {
