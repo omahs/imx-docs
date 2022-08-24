@@ -8,11 +8,12 @@ keywords: [imx-dx]
 
 # Authentication
 
-### Authorised project owner requests
+## Authorised project owner requests
 
 Some methods require authorisation by the project owner, which consists of a Unix epoch timestamp signed with your ETH key and included in the request header.
 
 On project and collection methods that require authorisation, this signed timestamp string can typically be passed as the `IMXSignature` and `IMXTimestamp` parameters.
+See [here](quickstart.md#how-to-generate-the-required-signers) for how to generate the signers required.
 
 ```go
 // Example method to generate authorisation headers

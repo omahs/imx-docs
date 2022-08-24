@@ -9,6 +9,6 @@ keywords: [imx-dx]
 # Installation
 
 ```sh
-go get immutable.com/imx-core-sdk-golang
+go get github.com/immutable/imx-core-sdk-golang
 ```
 

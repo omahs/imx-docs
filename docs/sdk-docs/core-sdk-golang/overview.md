@@ -13,9 +13,10 @@ keywords: [imx-dx]
 Its public interface shouldn't be considered final, and we may need to release breaking changes as we push towards v1.0.
 :::
 
-The Immutable Core SDK Golang provides convenient access to the Immutable API's and Ethereum contract methods for applications written on the Immutable X platform.
+The Immutable Core SDK Golang provides convenient access to the Immutable X API and Ethereum contract methods for applications written on the Immutable X platform.
 
-Currently, our SDK supports interactions with our application-specific rollup based on StarkWare's StarkEx. In the future, we'll be adding StarkNet support across our platform.
+Currently, our SDK supports interactions with our application-specific rollup based on StarkWare's [StarkEx](https://starkware.co/starkex/). In the future, we'll be adding [StarkNet](https://starknet.io/) support across our platform.
+
 
 ## Documentation
 

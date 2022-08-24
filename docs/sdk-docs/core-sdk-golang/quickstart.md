@@ -12,17 +12,17 @@ keywords: [imx-dx]
 
 ### Configuration
 
-A configuration object is required to setup the environment for which the Core SDK requests are made. This can be obtained by using the `GetConfig` function available within the `config` package of Core SDK.
+A configuration object is provided with preset configurations for both Test and Production networks to simplify the environment setup required for which the Core SDK requests are made. This can be obtained by using the `GetConfig` function available within the `config` package of Core SDK. 
 
 Select one of the following Ethereum networks Immutable X platform currently supports.
 
 | Environment | Description   |
 |-------------|---------------|
-| Sandbox     | Test Network  |
+| Sandbox     | Test network  |
 | Mainnet     | Production    |
 
 ```go
-import "immutable.com/imx-core-sdk-golang/config"
+import "github.com/immutable/imx-core-sdk-golang/config"
 
 const alchemyAPIKey = "alchemy api key"
 
@@ -32,26 +32,32 @@ func main() {
 }
 ```
 
+#### Ethereum client
+
+For information about how Ethereum client is setup, see [`examples/workflows/main.go`](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/workflows/main.go)
+
+### How to generate the required signers
+
 #### L1 Signer
 
-The L1 signer is based on your ethereum wallet ([Getting started > Wallet](https://docs.x.immutable.com/docs/getting-started-guide/#wallet)).
-To use most workflow functions, you will need to implement an L1 signer using your ethereum wallet.
-Your implementation must satisfy [L1Signer interface](https://github.com/immutable/imx-core-sdk-golang/tree/main/src/signers/signers.go).
-See [BaseL1Signer](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/workflows/utils/signer.go) for a sample implementation of L1 Signer.
+Almost all the POST requests will need signed message. To sign a message as a minimum an L1 signer is required. An Ethereum wallet can be used to implement an L1 signer ([Getting started > Wallet](https://docs.x.immutable.com/docs/getting-started-guide/#wallet)).
 
+When you implement an L1signer, it must satisfy [L1Signer interface](https://github.com/immutable/imx-core-sdk-golang/tree/main/signers/signers.go). See [BaseL1Signer](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/workflows/utils/signer.go) for a sample implementation of L1 Signer.
+
+Also refer [`examples/publicapi/list_assets/main.go`](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/publicapi/list_assets/main.go) for environment setup examples.
 #### L2 Signer
 
-Some methods require an L2 signer as a parameter. The Core SDK expects you will generate your own L2 signer.
+Some of the endpoints like Withdrawal, Orders, Trades, Transfers require an L2 signer. See `signers/stark` for information about generating your own L2 signer and also the following code snippet.
 
 ```go
 import (
-   "immutable.com/imx-core-sdk-golang/signers/stark"
+   "github.com/immutable/imx-core-sdk-golang/signers/stark"
    ...
 )
 
 func main() {
    // L1 credentials
-   l1signer := YourImplementationOfL1SignerInterface() // See examples/workflows/utils/signer.go 
+   l1signer := YourImplementationOfL1SignerInterface() // See examples/workflows/utils/signer.go
 
    // L2 credentials
    // Obtain the stark signer associated with this user.
@@ -61,3 +67,6 @@ func main() {
    }
 }
 ```
+
+Also see the examples for a sample l2 signer usage [`examples/workflows/main.go`](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/workflows/main.go#L63)
+
