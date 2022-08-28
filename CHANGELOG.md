@@ -1,3 +1,10 @@
+## [1.19.2](https://github.com/immutable/imx-docs/compare/v1.19.1...v1.19.2) (2022-08-28)
+
+
+### Bug Fixes
+
+* **switcher:** remove null padding from switcher component ([2bc9ba9](https://github.com/immutable/imx-docs/commit/2bc9ba97256a0adfe4809059365e3fa0162e0fe1))
+
 ## [1.19.1](https://github.com/immutable/imx-docs/compare/v1.19.0...v1.19.1) (2022-08-17)
 
 
