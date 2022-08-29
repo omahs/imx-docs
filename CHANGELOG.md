@@ -1,3 +1,10 @@
+## [1.19.3](https://github.com/immutable/imx-docs/compare/v1.19.2...v1.19.3) (2022-08-29)
+
+
+### Bug Fixes
+
+* **survicate:** stringify teams trait value so survicate api accepts it ([62c7c6b](https://github.com/immutable/imx-docs/commit/62c7c6bceabe317a29cc0048f14410c9f5af4a90))
+
 ## [1.19.2](https://github.com/immutable/imx-docs/compare/v1.19.1...v1.19.2) (2022-08-28)
 
 
