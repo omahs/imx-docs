@@ -1,3 +1,11 @@
+## [1.19.4](https://github.com/immutable/imx-docs/compare/v1.19.3...v1.19.4) (2022-08-30)
+
+
+### Bug Fixes
+
+* core sdk swift docs for version 0.2.0 ([494983b](https://github.com/immutable/imx-docs/commit/494983b82e68967555fdc27f3c6b5de8213e6808))
+* core sdk swift docs for version 0.2.1 ([fe6ff64](https://github.com/immutable/imx-docs/commit/fe6ff64c910b0178ffff71a0ad3b821e095bc7da))
+
 ## [1.19.3](https://github.com/immutable/imx-docs/compare/v1.19.2...v1.19.3) (2022-08-29)
 
 
