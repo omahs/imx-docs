@@ -28,6 +28,7 @@ const configuration = {
   organizationName: 'immutable', // Usually your GitHub org/user name.
   projectName: 'imx-docs', // Usually your repo name.
   staticDirectories: ['api-docs', 'static'],
+  clientModules: [require.resolve('./nps.js')],
   plugins: [
     () => ({
       name: 'custom-webpack-config',
@@ -250,9 +251,14 @@ const configuration = {
   ],
   customFields: {
     survicate: {
-      surveyId: process.env.SURVICATE_DQS_SURVEY_ID,
-      starRatingQuestionId:
-        process.env.SURVICATE_DQS_SURVEY_STAR_RATING_QUESTION_ID,
+      dqs: {
+        surveyId: process.env.SURVICATE_DQS_SURVEY_ID,
+        starRatingQuestionId:
+          process.env.SURVICATE_DQS_SURVEY_STAR_RATING_QUESTION_ID,
+      },
+      nps: {
+        surveyId: process.env.SURVICATE_NPS_SURVEY_ID,
+      },
     },
   },
 };
