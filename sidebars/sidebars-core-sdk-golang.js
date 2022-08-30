@@ -19,7 +19,7 @@ module.exports = {
         },
         {
           type: 'link',
-          label: 'Api client reference',
+          label: 'API client reference',
           href: `${url}/sdk-references/core-sdk-golang/0-1-0/apiclient/`,
         },
         {
