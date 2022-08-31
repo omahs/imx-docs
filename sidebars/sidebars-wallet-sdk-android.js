@@ -13,7 +13,7 @@ module.exports = {
         {
           type: 'link',
           label: 'Reference',
-          href: `${url}/sdk-references/wallet-sdk-android/0-2-0/`,
+          href: `${url}/sdk-references/wallet-sdk-android/0-3-0/`,
         },
       ],
     },

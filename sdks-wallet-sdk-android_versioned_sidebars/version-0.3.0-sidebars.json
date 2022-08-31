@@ -1,0 +1,19 @@
+{
+  "mainSidebar": [
+    {
+      "type": "category",
+      "label": "Wallet SDK Android",
+      "items": [
+        "overview",
+        "installation",
+        "quickstart",
+        "additional-info",
+        {
+          "type": "link",
+          "label": "Reference",
+          "href": "https://docs.x.immutable.com/sdk-references/wallet-sdk-android/0-3-0/"
+        }
+      ]
+    }
+  ]
+}

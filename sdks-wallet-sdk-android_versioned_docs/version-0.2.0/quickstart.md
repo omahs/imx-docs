@@ -12,7 +12,7 @@ keywords: [imx-wallets]
 
 ### Connect via WalletConnect
 
-Any wallet that supports [WalletConnect v1.0](https://walletconnect.com/) can be connected
+MetaMask and Rainbow can be connected using this WalletConnect provider.
 
 ```kotlin
 ImmutableXWallet.connect(
