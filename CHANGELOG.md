@@ -1,3 +1,16 @@
+# [1.20.0](https://github.com/immutable/imx-docs/compare/v1.19.4...v1.20.0) (2022-08-31)
+
+
+### Bug Fixes
+
+* sentence casing for section title ([c567755](https://github.com/immutable/imx-docs/commit/c567755364bb7dbf603687c8634479d41c4a3a3e))
+
+
+### Features
+
+* add keyword to wallet sdk android docs ([0664b7d](https://github.com/immutable/imx-docs/commit/0664b7d91a43fdb0eefe88f3f28ffc9b9d897c08))
+* add wallet sdk android v0.3.0 docs ([66aeb17](https://github.com/immutable/imx-docs/commit/66aeb173f067a9622a9d51847e1ed38134779455))
+
 ## [1.19.4](https://github.com/immutable/imx-docs/compare/v1.19.3...v1.19.4) (2022-08-30)
 
 
