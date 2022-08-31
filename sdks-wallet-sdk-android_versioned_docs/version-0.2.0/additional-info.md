@@ -6,7 +6,7 @@ tags: [wallet-sdk-android]
 keywords: [imx-wallets]
 ---
 
-# Additional Info
+# Additional info
 
 ## Usage with the Core SDK
 Wallet SDK Android is designed to be used in tandem with the [Immutable Core SDK for Kotlin/JVM](https://github.com/immutable/imx-core-sdk-kotlin-jvm).
