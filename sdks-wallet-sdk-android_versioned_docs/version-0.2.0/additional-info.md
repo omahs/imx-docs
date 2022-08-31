@@ -3,6 +3,7 @@ description: Additional into about the Wallet SDK Android
 id: additional-info
 slug: /additional-info
 tags: [wallet-sdk-android]
+keywords: [imx-wallets]
 ---
 
 # Additional Info

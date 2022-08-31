@@ -3,6 +3,7 @@ description: Install Wallet SDK Android
 id: installation
 slug: /installation
 tags: [wallet-sdk-android, installation, setup]
+keywords: [imx-wallets]
 ---
 
 # Installation

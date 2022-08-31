@@ -3,6 +3,7 @@ description: How to make a first SDK request
 id: quickstart
 slug: /quickstart
 tags: [wallet-sdk-android, quickstart]
+keywords: [imx-wallets]
 ---
 
 # Quickstart

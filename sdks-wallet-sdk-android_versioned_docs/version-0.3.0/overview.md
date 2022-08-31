@@ -3,6 +3,7 @@ description: Overview of the Wallet SDK Android
 id: overview
 slug: /overview
 tags: [wallet-sdk-android]
+keywords: [imx-wallets]
 ---
 
 # Overview
