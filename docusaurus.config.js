@@ -112,7 +112,7 @@ const configuration = {
         sidebarPath: require.resolve(
           './sidebars/sidebars-wallet-sdk-android.js'
         ),
-        // includeCurrentVersion: false, // enable this when Android docs are versioned
+        includeCurrentVersion: false,
         ...pageOptions,
       },
     ],
