@@ -28,7 +28,6 @@ const configuration = {
   organizationName: 'immutable', // Usually your GitHub org/user name.
   projectName: 'imx-docs', // Usually your repo name.
   staticDirectories: ['api-docs', 'static'],
-  clientModules: [require.resolve('./nps.js')],
   plugins: [
     () => ({
       name: 'custom-webpack-config',
