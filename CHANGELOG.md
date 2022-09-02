@@ -1,3 +1,11 @@
+# [1.22.0](https://github.com/immutable/imx-docs/compare/v1.21.0...v1.22.0) (2022-09-02)
+
+
+### Features
+
+* updated for Korean translation ([d1c21d9](https://github.com/immutable/imx-docs/commit/d1c21d994595b0ef9da6df19b9b392dd59faff4d))
+* updated korean translation ([bb77995](https://github.com/immutable/imx-docs/commit/bb77995016f93631b33eaa594b0c8979322dc274))
+
 # [1.21.0](https://github.com/immutable/imx-docs/compare/v1.20.0...v1.21.0) (2022-09-02)
 
 
