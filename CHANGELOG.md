@@ -1,3 +1,17 @@
+# [1.21.0](https://github.com/immutable/imx-docs/compare/v1.20.0...v1.21.0) (2022-09-02)
+
+
+### Bug Fixes
+
+* **nps:** remove unnecessary changes ([988e529](https://github.com/immutable/imx-docs/commit/988e5293d88a43f443a2bbe2927eaf42d31e2c37))
+* **nps:** update survey ID for test ([9f6862b](https://github.com/immutable/imx-docs/commit/9f6862b86f41eeb116585f02d19ad3be15dea99a))
+
+
+### Features
+
+* **deps:** add cookie dep ([5cc009d](https://github.com/immutable/imx-docs/commit/5cc009decbd481e760f5be0b9ef32ed8463b5877))
+* **nps:** add NPS survey functionality ([a415909](https://github.com/immutable/imx-docs/commit/a415909a13bcf63d69dd3b186bcd37e7f4d46e18))
+
 # [1.20.0](https://github.com/immutable/imx-docs/compare/v1.19.4...v1.20.0) (2022-08-31)
 
 
