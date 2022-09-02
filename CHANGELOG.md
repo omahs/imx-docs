@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/immutable/imx-docs/compare/v1.22.0...v1.23.0) (2022-09-02)
+
+
+### Features
+
+* updated welcome.md korean translation ([feb795f](https://github.com/immutable/imx-docs/commit/feb795f84d55937993f0c57038015324e391d741))
+
 # [1.22.0](https://github.com/immutable/imx-docs/compare/v1.21.0...v1.22.0) (2022-09-02)
 
 
