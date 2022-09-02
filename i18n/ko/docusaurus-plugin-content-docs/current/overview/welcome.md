@@ -6,7 +6,7 @@ excerpt: "The who, why and how of Immutable X"
 sidebar_position: 1
 keywords: [imx-dx]
 ---
-Immutable X awefawefawefawefawefawefawefawefawefawef is a next-generation protocol for trading Ethereum NFTs. It gives users instant trade confirmation, massive scalability, and no gas fees — without compromising user custody.
+Immutable X는 Ethereum NFT 거래를 위한 차세대 프로토콜입니다. 사용자 보호 기능을 손상시키지 않으면서 사용자에게 즉각적인 거래 확인, 대규모 확장성 및 가스 비용 없음을 제공합니다.
 
 [Immutable](https://immutable.com/#build-on-immutable) and [StarkWare](https://starkware.co/about-us/) partnered to create **Immutable X**, combining StarkWare's world-class layer-2 scaling knowledge with Immutable's deep understanding of the NFT space.
 
