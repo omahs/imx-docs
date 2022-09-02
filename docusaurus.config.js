@@ -168,7 +168,7 @@ const configuration = {
           // to be added once we support Korean
           // {
           //   type: 'localeDropdown',
-          //   position: 'left',
+          //   position: 'right',
           // },
           {
             to: '/',
