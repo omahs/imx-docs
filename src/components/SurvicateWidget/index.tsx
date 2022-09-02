@@ -63,7 +63,8 @@ const SurvicateWidget = () => {
     answer: any
   ) => {
     // we only care about the rating question
-    const id = (siteConfig.customFields.survicate as any).starRatingQuestionId;
+    const id = (siteConfig.customFields.survicate as any).dqs
+      .starRatingQuestionId;
     if (questionId === parseInt(id)) {
       const score = parseInt(answer.answer_value);
       setTempRating(score);
@@ -135,7 +136,7 @@ const SurvicateWidget = () => {
     // or re-rating an existing rating
     window._sva.destroyVisitor();
 
-    const surveyId = (siteConfig.customFields.survicate as any).surveyId;
+    const surveyId = (siteConfig.customFields.survicate as any).dqs.surveyId;
     return window._sva.showSurvey(surveyId, {
       forceDisplay: true,
       displayMethod: 'immediately',

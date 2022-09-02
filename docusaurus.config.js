@@ -250,9 +250,14 @@ const configuration = {
   ],
   customFields: {
     survicate: {
-      surveyId: process.env.SURVICATE_DQS_SURVEY_ID,
-      starRatingQuestionId:
-        process.env.SURVICATE_DQS_SURVEY_STAR_RATING_QUESTION_ID,
+      dqs: {
+        surveyId: process.env.SURVICATE_DQS_SURVEY_ID,
+        starRatingQuestionId:
+          process.env.SURVICATE_DQS_SURVEY_STAR_RATING_QUESTION_ID,
+      },
+      nps: {
+        surveyId: process.env.SURVICATE_NPS_SURVEY_ID,
+      },
     },
   },
 };
