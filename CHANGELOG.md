@@ -1,3 +1,10 @@
+## [1.23.1](https://github.com/immutable/imx-docs/compare/v1.23.0...v1.23.1) (2022-09-05)
+
+
+### Bug Fixes
+
+* fix linebreak issue in asset metadata ([585419f](https://github.com/immutable/imx-docs/commit/585419f31e717a7339d20730a83692d64b3b00fa))
+
 # [1.23.0](https://github.com/immutable/imx-docs/compare/v1.22.0...v1.23.0) (2022-09-02)
 
 
