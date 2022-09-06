@@ -25,6 +25,10 @@ Ropsten network is set to be deprecated in the near future.
 - `L1_PROVIDERS.WALLET_CONNECT` To connect using [WalletConnect](https://docs.walletconnect.com).
 - `L1_PROVIDERS.METAMASK` To connect using [MetaMask](https://docs.metamask.io/guide).
 
+:::note
+Immutable X does not recommend the use of hardware wallets, as some of them have non-deterministic signing. Please inform your users to select a soft wallet when connecting.
+:::
+
 ## Supported events
 
 To help keep the application up to date with possible wallet changes externally triggered by the user, the Wallet SDK uses the event system to provide meaningful indications of its current state through the emitter `walletSdkEvents` and the enum `WALLET_SDK_EVENTS`. Check out below the current list of events.
