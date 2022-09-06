@@ -34,7 +34,7 @@ const config = getConfig({
   headers: { 'x-api-custom-header': '...' } // headers are optional unless specified otherwise
 });
 
-// Setup a provider and a signer
+// Set up a provider and a signer
 const privateKey = YOUR_PRIVATE_KEY;
 const provider = new AlchemyProvider(ethNetwork, YOUR_ALCHEMY_API_KEY);
 const signer = new Wallet(privateKey).connect(provider);
