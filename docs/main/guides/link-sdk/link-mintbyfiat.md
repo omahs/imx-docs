@@ -30,10 +30,10 @@ await link.mintByFiat({
 })
 ```
 
-Where 
-`sellerWalletAddress` - address of seller, crypto will be sent to this wallet address
-`contractAddress` - contract address that will be used to mint NFT
-`offerId` - offer ID that present offer that will be minted from partner
+Where
+- `sellerWalletAddress` - address of seller, crypto will be sent to this wallet address
+- `contractAddress` - contract address that will be used to mint NFT
+- `offerId` - offer ID that present offer that will be minted from partner
 
 This displays the Link UI with loaded Moonpay widget:
 
