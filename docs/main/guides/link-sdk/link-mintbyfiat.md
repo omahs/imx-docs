@@ -3,7 +3,7 @@ id: "link-mint-by-fiat"
 title: "Link.mintByFiat"
 slug: "/link-mint-by-fiat"
 sidebar_position: 12
-keywords: [imx-wallets]
+keywords: [imx-payments]
 ---
 
 The mint by fiat functionality is available in SDK v1.XX.XX(Add when experimental will be deleted)+ and is a collaboration between Immutable X and Moonpay.
@@ -13,7 +13,7 @@ The mint by fiat process allows users to mint NFT on the Immutable X platform us
 The mint happens directly on L2.
 
 :::info Registration a contract Address
-A contract address should be registered in IMX Exchange to be able run minting process. For more information read [How to register for Mint By Fiat program](https://#)
+A contract address should be registered in IMX Exchange to be able to run minting process. For more information read [How to register for Mint By Fiat program](./minting-with-moonpay)
 :::
 
 :::danger Exchange requires authenticated user
@@ -37,7 +37,7 @@ Where
 
 This displays the Link UI with loaded Moonpay widget:
 
-![Mint By Fiat](/img/link-sdk-mintbyfiat/mintbyfiat.png 'Offramp without parameters')
+![Mint By Fiat](/img/link-sdk-mintbyfiat/mintbyfiat.png 'Mint by fiat')
 
 ## Errors
 
