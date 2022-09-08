@@ -34,7 +34,7 @@ func main() {
 
 #### Ethereum client
 
-For information about how Ethereum client is setup, see [`examples/workflows/main.go`](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/workflows/main.go)
+For information about how Ethereum client is setup, see [`examples/workflows/main.go`](https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/examples/workflows/main.go)
 
 ### How to generate the required signers
 
@@ -42,9 +42,10 @@ For information about how Ethereum client is setup, see [`examples/workflows/mai
 
 Almost all the POST requests will need signed message. To sign a message as a minimum an L1 signer is required. An Ethereum wallet can be used to implement an L1 signer ([Getting started > Wallet](https://docs.x.immutable.com/docs/getting-started-guide/#wallet)).
 
-When you implement an L1signer, it must satisfy [L1Signer interface](https://github.com/immutable/imx-core-sdk-golang/tree/main/signers/signers.go). See [BaseL1Signer](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/workflows/utils/signer.go) for a sample implementation of L1 Signer.
+When you implement an L1signer, it must satisfy [L1Signer interface](https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/signers/signers.go). See [BaseL1Signer](https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/examples/workflows/utils/signer.go) for a sample implementation of L1 Signer.
 
-Also refer [`examples/publicapi/list_assets/main.go`](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/publicapi/list_assets/main.go) for environment setup examples.
+Also refer [`examples/publicapi/list_assets/main.go`](https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/examples/publicapi/list_assets/main.go) for environment setup examples.
+
 #### L2 Signer
 
 Some of the endpoints like Withdrawal, Orders, Trades, Transfers require an L2 signer. See `signers/stark` for information about generating your own L2 signer and also the following code snippet.
@@ -68,5 +69,4 @@ func main() {
 }
 ```
 
-Also see the examples for a sample l2 signer usage [`examples/workflows/main.go`](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/workflows/main.go#L63)
-
+Also see the examples for a sample l2 signer usage [`examples/workflows/main.go`](https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/examples/workflows/main.go#L63)

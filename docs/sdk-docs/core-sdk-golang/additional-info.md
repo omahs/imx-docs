@@ -63,7 +63,7 @@ The Immutable Solidity contracts can be found in the `contracts` folder. Contrac
 
 The Core contract is Immutable's main interface with the Ethereum blockchain, based on [StarkEx](https://docs.starkware.co/starkex-v4).
 
-[View contract](https://github.com/immutable/imx-core-sdk-golang/tree/main/contracts/Core.sol)
+[View contract](https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/contracts/Core.sol)
 
 #### Registration
 
@@ -71,7 +71,7 @@ The Registration contract is a proxy smart contract for the Core contract that c
 
 For example, instead of making subsequent transaction requests to the Core contract, i.e. `registerUser` and `depositNft`, a single transaction request can be made to the proxy Registration contract - `registerAndWithdrawNft`.
 
-[View contract](https://github.com/immutable/imx-core-sdk-golang/tree/main/contracts/Registration.sol)
+[View contract](https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/contracts/Registration.sol)
 
 #### IERC20
 
