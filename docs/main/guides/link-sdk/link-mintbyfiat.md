@@ -38,3 +38,7 @@ Where
 This displays the Link UI with loaded Moonpay widget:
 
 ![Mint By Fiat](/img/link-sdk-mintbyfiat/mintbyfiat.png 'Offramp without parameters')
+
+## Errors
+
+See error responses [here](./link-errors.md#mint-by-fiat).
