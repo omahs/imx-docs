@@ -7,7 +7,11 @@ sidebar_position: 2
 
 # API changelog
 
+<<<<<<< HEAD
 This page is to provide information on:
+=======
+This page is to convey:
+>>>>>>> e075e7a70890c7e5658f4228495e2c743843b268
 * [Upcoming breaking changes](#upcoming-breaking-changes)
 * [Changelog (breaking and non-breaking changes)](#changelog)
 
