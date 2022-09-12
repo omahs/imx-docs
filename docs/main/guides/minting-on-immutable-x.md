@@ -80,7 +80,9 @@ After an asset from your collection is minted, we store the metadata returned by
 :::info Updating metadata
 Your collection’s metadata schema can be updated by [editing the collection metadata schema.](/docs/metadata-schema-registration#edit-metadata-schema).
 
-In order to update token metadata values, you can [request a metadata refresh.](/docs/asset-metadata-refreshes)
+In order to update asset metadata values based on the changes that you've made, you can [request a metadata refresh.](/docs/asset-metadata-refreshes) You will need to identify the tokens that need to be re-crawled, and the updates that have been made to them via the Metadata API.
+
+We aim to process requests within 2 business days (AEST) but this can take longer depending on demand.
 :::
 
 ## Metadata blueprint
