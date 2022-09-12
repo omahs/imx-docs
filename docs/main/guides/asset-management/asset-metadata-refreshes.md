@@ -161,21 +161,12 @@ which will return a paginated list of tokens within that refresh that could not 
 
 Each item in the results array represents one failed token for that particular refresh.
 
-#### client_token_metadata_url
+- `client_token_metadata_url` - the url which was used to perform the Metadata API request
+- `client_response_status_code` - the response status code that was received from the Metadata API
+- `client_response_body` - any error details that were provided as a response body by the Metadata API
+- `error_code` - describes why the metadata could not be updated
 
-The url which was used to perform the Metadata API request.
-
-#### client_response_status_code
-
-The response status code that was received from the Metadata API.
-
-#### client_response_body
-
-Any error details that were provided as a response body by the Metadata API.
-
-#### error_code
-
-The `error_code` field describes why the metadata could not be updated.
+#### Error codes
 
 <table>
   <thead>
