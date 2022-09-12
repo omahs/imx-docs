@@ -59,7 +59,9 @@ The following headers are required for project owner authentication:
 
 A metadata refresh can be requested by calling:
 
-`POST BASE_URL/v1/metadata-refreshes`
+```json
+POST BASE_URL/v1/metadata-refreshes
+```
 
 and specifying the collection address and ID’s of the tokens requiring a refresh:
 
@@ -88,7 +90,9 @@ There is currently no way to cancel a refresh once requested.
 
 The status of a refresh can be queried by using the `refresh_id` with the following endpoint:
 
-`GET BASE_URL/v1/metadata-refreshes/:refresh_id`
+```json
+GET BASE_URL/v1/metadata-refreshes/:refresh_id
+```
 
 which will return the following response:
 
@@ -131,7 +135,9 @@ Another endpoint is available to [investigate the reason why the metadata for a 
 
 If 2 non-successful attemps have been made to retrieve the updated metadata values from the [Metadata API](/docs/minting-on-immutable-x#metadata-api), that token will be marked as `failed`. A more detailed explanation of why token metadata could not be updated for a particular refresh can be queried with the following endpoint:
 
-`GET BASE_URL/v1/metadata-refreshes/:refresh_id/errors`
+```json
+GET BASE_URL/v1/metadata-refreshes/:refresh_id/errors
+```
 
 which will return a paginated list of tokens within that refresh that could not be updated and their respective error details:
 
@@ -224,7 +230,9 @@ The error_code field describes why the metadata could not be updated.
 
 Users can fetch a list of all metadata refreshes in order to find a particular `refresh_id`, which can then be used to query the status of a particular refresh:
 
-`GET BASE_URL/v1/metadata-refreshes`
+```json
+GET BASE_URL/v1/metadata-refreshes
+```
 
 The above endpoint will return a list of refreshes ordered by `created_at` , showing the most recent refreshes first.
 
@@ -232,7 +240,9 @@ The above endpoint will return a list of refreshes ordered by `created_at` , sho
 
 The endpoint results can also be filtered by using the the query parameter `collection_address`:
 
-`GET BASE_URL/v1/metadata-refreshes?collection_address=COLLECTION_ADDRESS`
+```json
+GET BASE_URL/v1/metadata-refreshes?collection_address=COLLECTION_ADDRESS
+```
 
 The response returns a paginated list of refreshes:
 
