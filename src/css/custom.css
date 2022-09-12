@@ -336,6 +336,8 @@ div.navbar__item.dropdown.dropdown--hoverable {
   font-style: normal;
   font-size: 16px;
   line-height: 24px;
+  margin-right: 32px;
+  padding: 0;
 }
 
 div.navbar__item.dropdown.dropdown--hoverable .navbar__link {
