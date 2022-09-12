@@ -1,10 +1,11 @@
 ---
-id: "asset-deposits"
-title: "Asset Deposits"
-slug: "asset-deposits"
-sidebar_position: 5
+id: 'asset-deposits'
+title: 'Asset Deposits'
+slug: 'asset-deposits'
+sidebar_position: 6
 keywords: [imx-games]
 ---
+
 An alternative to L2 minting assets, assuming you have pre minted assets on Ethereum that you'd like to trade on Immutable X, is to deposit them directly.
 
 As a **pre-requisite**, ensure that both the contract and the user depositing has been registered in our system.
