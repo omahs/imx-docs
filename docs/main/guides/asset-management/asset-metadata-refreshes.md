@@ -41,7 +41,7 @@ In order for a refresh to be successful, partners must ensure:
 
 Endpoints related to metadata refreshes are denoted via the url resource `/metadata-refreshes`.
 
-The expected maximum time (estimated) to complete a refresh is roughly 48 hours.
+The expected maximum time (estimate) to complete a refresh is approximately 48 hours.
 
 ### Authentication
 
