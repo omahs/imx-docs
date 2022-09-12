@@ -16,26 +16,26 @@ A metadata refresh can be requested in order to update the off-chain asset metad
 
 Below are some examples of why developers refresh metadata:
 
-- gameplay mechanics - orchestrate updates to support core gameplay mechanics like levelling up a character, crafting or merging
-- game rebalancing - token properties of specific game are updated to result in a better balanced game
-- improving game content - updating the art/copy of NFTs so that it’s on brand and up to collection standards
-- scheduled delayed reveals - Updating an asset to reveal properties (such as an image url), at a point in time after the community has been informed about when the reveal will be
-- primary sale reveals - selling an unrevealed NFT and refreshing the metadata on purchase so that the buyer views the revealed metadata right away
-- improving search discoverability - by adding more metadata so that players can easily find what they are looking for
-- correcting incorrect metadata values
+- Gameplay mechanics - orchestrate updates to support core gameplay mechanics like levelling up a character, crafting or merging
+- Game rebalancing - token properties of specific game are updated to result in a better balanced game
+- Improving game content - updating the art/copy of NFTs so that it’s on brand and up to collection standards
+- Scheduled delayed reveals - Updating an asset to reveal properties (such as an image url), at a point in time after the community has been informed about when the reveal will be
+- Primary sale reveals - selling an unrevealed NFT and refreshing the metadata on purchase so that the buyer views the revealed metadata right away
+- Improving search discoverability - by adding more metadata so that players can easily find what they are looking for
+- Correcting incorrect metadata values
 
 ## Requirements
 
 In order for a refresh to be successful, partners must ensure:
 
-- they have created and deployed their [Metadata API](/docs/minting-on-immutable-x#metadata-api)
-  - this is the source of truth for asset metadata
-- specific asset metadata is available from the Metadata API
-  - for reveals, we recommend to only update their Metadata API once the asset is ready to be revealed. A typical flow for a reveal would be something like:
-    - mint an asset
-    - once ready to reveal, update the Metadata API with the properties to be revealed
-    - request a metadata refresh for the assets wanting to be revealed
-- ensure the availability of your Metadata API. The metadata refresh service will concurrently request metadata for each asset from your Metadata API and requires a response time of less than 3 seconds per request in order to successfully update the metadata for that asset. If the request to the Metadata API fails it will be retried once more before that particular asset is [marked as failed.](#viewing-metadata-refresh-errors)
+- They have created and deployed their [Metadata API](/docs/minting-on-immutable-x#metadata-api)
+  - This is the source of truth for asset metadata
+- Specific asset metadata is available from the Metadata API
+  - For reveals, we recommend to only update their Metadata API once the asset is ready to be revealed. A typical flow for a reveal would be something like:
+    - Mint an asset
+    - Once ready to reveal, update the Metadata API with the properties to be revealed
+    - Request a metadata refresh for the assets wanting to be revealed
+- Ensure the availability of your Metadata API. The metadata refresh service will concurrently request metadata for each asset from your Metadata API and requires a response time of less than 3 seconds per request in order to successfully update the metadata for that asset. If the request to the Metadata API fails it will be retried once more before that particular asset is [marked as failed.](#viewing-metadata-refresh-errors)
 
 ## API
 
@@ -175,7 +175,7 @@ Any error details that were provided as a response body by the Metadata API.
 
 #### error_code
 
-The error_code field describes why the metadata could not be updated.
+The `error_code` field describes why the metadata could not be updated.
 
 <table>
   <thead>
@@ -262,14 +262,14 @@ The response returns a paginated list of refreshes:
 }
 ```
 
-<!-- INSERT_LINK - View the OpenAPI specification for requesting a metadata refresh -->
+<!-- [View the OpenAPI specification for requesting a metadata refresh]() -->
 
 ## Metadata refresh limits
 
 All projects have set limitations on metadata refresh functionality for the collections that belongs to that project.
 
-- for a particular project, **5** metadata refresh requests can be made per hour
-- up to **1000** tokens can be requested per refresh
+- For a particular project, **5** metadata refresh requests can be made per hour
+- Up to **1000** tokens can be requested per refresh
 
 Whenever a [refresh is requested](#requesting-a-metadata-refresh) or when a refresh limit has been reached, the following headers will be returned:
 
