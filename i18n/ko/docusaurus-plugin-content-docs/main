@@ -1,59 +1,60 @@
 ---
-id: "code-examples"
-title: "Code Examples"
-slug: "/code-examples"
-sidebar_position: 4
-keywords:
-  - imx-dx
+id: "api-changelog"
+title: "API changelog"
+slug: "/api-changelog"
+sidebar_position: 2
 ---
 
-import Button from '@site/src/components/Button';
-import RightArrowIcon from '@site/static/icons/RightArrow';
-import styles from '@site/src/components/Article/styles.module.css';
+# API changelog
 
-## IMX Contracts
+This page is to provide information on:
+* [Upcoming breaking changes](#upcoming-breaking-changes)
+* [Changelog (breaking and non-breaking changes)](#changelog)
 
-The IMX Contracts repository has a sample L1 smart contract that you can deploy along with hardhat based scripts to deploy them.
 
-<a href="https://github.com/immutable/imx-contracts">
-  <Button>
-    IMX Contracts
-    <RightArrowIcon className={styles.ctaIcon} />
-  </Button>
-</a>
+Currently, we use resource versioning (URI-based), i.e. `/v1/<endpoint>`. While we aim to ensure that breaking changes (non-[backwards compatible changes](#backwards-compatible-changes-non-breaking)) are versioned, there are occasions where it is necessary for us to introduce a breaking change to an existing endpoint. This will be communicated to you in advance, and information about this will also be made available on this page.
 
-## IMX Examples
+#### Backwards compatible changes (non-breaking):
+* Adding new API resources.
+* Adding new optional request parameters to existing API methods.
+* Adding new properties to existing API responses.
+* Changing the order of properties in existing API responses.
+* Changing the length or format of opaque strings, such as object IDs, error messages, and other human-readable strings. This includes adding or removing fixed prefixes.
 
-The IMX Examples repository has some scripts that interact with the IMX APIs. This repository specifically has all the code related to [onboarding](./guides/onboarding/index.md) your project on Immutable
+## Upcoming breaking changes
 
-<a href="https://github.com/immutable/imx-examples">
-  <Button>
-    IMX Examples <RightArrowIcon className={styles.ctaIcon} />
-  </Button>
-</a>
+<table>
+  <tbody>
+    <tr>
+      <th>Anticipated date of change</th>
+      <th>Description of change</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
-## IMX Reactjs Integration Example
+## Changelog
 
-This repository contains a skeleton React app for the purpose of providing code examples for building a marketplace on Immutable X. It covers:
-
-* View sell orders and buying NFTs
-* View Immutable X inventory and ETH balance
-* Creating and cancelling sell orders
-* Minting on Immutable X
-* Depositing and withdrawing ETH and NFTs
-
-<a href="https://github.com/immutable/imx-reactjs-integration-example">
-  <Button>
-    IMX Reactjs Integration Example <RightArrowIcon className={styles.ctaIcon} />
-  </Button>
-</a>
-
-## A Guide to IMX (Community Maintained)
-
-This repository is a community maintained guide to IMX.
-
-<a href="https://github.com/8bNFT/incomplete-guide-to-imx">
-  <Button>
-    A Guide to IMX (Community Maintained)<RightArrowIcon className={styles.ctaIcon} />
-  </Button>
-</a>
+<table>
+  <tbody>
+    <tr>
+      <th>Date</th>
+      <th>Non-breaking changes</th>
+      <th>Breaking changes</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <ul>
+        </ul>
+      </td>
+      <td>
+        <ul>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
