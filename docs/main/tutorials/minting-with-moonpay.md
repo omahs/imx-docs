@@ -42,6 +42,7 @@ This endpoint will be used to get information about offer:
 ```
 Request: GET /:contract_address/:offer_id
 
+Status: 200
 Response: {
  "offer_id": "string",
  "contract_address": "string",
@@ -53,6 +54,17 @@ Response: {
  "seller_address": "string",
 }
 ```
+
+:::info Unavailable offer
+If an offer is unavailable anymore a response should return `404 - Not Found`.
+```
+Status: 404
+Response: {
+ "code": "number", // the error code
+ "message": "string" // the error message
+}
+```
+:::
 
 ## Endpoint 2: Trigger mint
 
@@ -83,12 +95,23 @@ data: {
   "external_transaction_id": "string(UUID)",
 }
 
+Status: 200
 Response: {
   "contract_address": "string",
   "token_id": "string",
   "tx_id": 0
 }
 ```
+
+:::info Error on mint
+If mint is failed please add a response with error code and message
+```
+Response: {
+ "code": "number", // the error code
+ "message": "string" // the error message
+}
+```
+:::
 
 IMX will send Signature and Timestamp that should be used to validate that a request was made by IMX to do it:
 
