@@ -20,7 +20,7 @@ A contract address should be registered in IMX Exchange to be able to run mintin
 `Link.mintByFiat` should only be called when user is authenticated and logged in, otherwise it will require user to reconnect
 :::
 
-To initialize the mint by fiat process marketplace needs to call the mintByFiat function:
+To initialize the mint by fiat process dApp needs to call the mintByFiat function:
 
 ```typescript
 await link.mintByFiat({
