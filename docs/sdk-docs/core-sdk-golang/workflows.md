@@ -51,8 +51,8 @@ func Register(signerPrivateKey string, chainID *big.Int) (*api.RegisterUserRespo
 }
 ```
 
-The workflows can be found in the [workflows directory](https://github.com/immutable/imx-core-sdk-golang/tree/main/workflows/).
-Sample usage of workflows can be found in [examples](https://github.com/immutable/imx-core-sdk-golang/tree/main/examples/workflows).
+The workflows can be found in the [workflows directory](https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/workflows/).
+Sample usage of workflows can be found in [examples](https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/examples/workflows).
 
 ## Available workflows
 

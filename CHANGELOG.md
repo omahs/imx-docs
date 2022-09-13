@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/immutable/imx-docs/compare/v1.23.1...v1.24.0) (2022-09-12)
+
+
+### Features
+
+* add api changelog ([dcce165](https://github.com/immutable/imx-docs/commit/dcce1653aeca9f6e4559570eed54ed21628e0514))
+
 ## [1.23.1](https://github.com/immutable/imx-docs/compare/v1.23.0...v1.23.1) (2022-09-05)
 
 
