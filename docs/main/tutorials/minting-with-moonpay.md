@@ -61,7 +61,8 @@ If an offer is unavailable anymore a response should return `404 - Not Found`.
 Status: 404
 Response: {
  "code": "number", // the error code
- "message": "string" // the error message
+ "message": "string", // the error message
+ "details": "string" // the error details
 }
 ```
 :::
@@ -108,7 +109,8 @@ If mint is failed please add a response with error code and message
 ```
 Response: {
  "code": "number", // the error code
- "message": "string" // the error message
+ "message": "string", // the error message
+ "details": "string" // the error details
 }
 ```
 :::
