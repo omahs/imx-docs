@@ -19,7 +19,7 @@ The Link SDK is used for frontend, user-facing interactions.
 import { Link, ETHTokenType } from '@imtbl/imx-sdk'
 
 async function sdkExample() {
-  const link = new Link('https://link.ropsten.x.immutable.com')
+  const link = new Link('https://link.sandbox.x.immutable.com')
 
   // Register user, you can persist address to local storage etc.
   const { address } = await link.setup({})
@@ -73,7 +73,7 @@ import { ImmutableXClient } from '@imtbl/imx-sdk'
 
 async function libExample() {
   const client = await ImmutableXClient.build({
-    publicApiUrl: 'https://api.ropsten.x.immutable.com/v1',
+    publicApiUrl: 'https://api.sandbox.x.immutable.com/v1',
   })
   const address = localStorage.getItem('address')
 

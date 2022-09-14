@@ -79,20 +79,19 @@ To trade cryptocurrencies and NFTs, we need a wallet. For this tutorial, we will
 1. Open [metamask.io](https://metamask.io/download/) to install the browser extension.
 2. Follow the steps in the plugin to create a new wallet, then record and store your seed phrase in a safe location.
 3. Ensure you display test networks
-4. Change the network selection from **Ethereum Mainnet** to **Ropsten Test Network**.
+4. Change the network selection from **Ethereum Mainnet** to **Goerli Test Network**.
 5. Note down your [private key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key) and [public key ](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-)
 
 Changing the network enables us to deploy on a testnet where we can experiment using test Eth. To learn more about transactions on Ethereum work, check out [this page](https://ethereum.org/en/developers/docs/transactions/) from the Ethereum foundation.
 
 
 ## Step 3: Obtain rEth
-To deploy our smart contract to the Ropsten test network, we’ll need some test Eth. To get test Eth you can go to the [Ropsten faucet](https://faucet.metamask.io/) and enter your Ropsten account address, then click “Send Ropsten Eth.” It may take a few minutes for the rEth to arrive. 
+To deploy our smart contract to the Goerli test network, we’ll need some test Eth. To get test Eth you can go to the [Goerli faucet](https://goerlifaucet.com/) and enter your Goerli account address, then click “Send Me ETH.” It may take a few minutes for the goerliETH to arrive.
 
 If this faucet doesn't work, try these alternative faucets:
 
-- [Faucet 1](https://faucet.dimensions.network/)
-- [Faucet 2](https://faucet.egorfine.com/)
-- [Faucet 3 (Request L1Eth)](https://imxfaucet.xyz/)
+- [Faucet 1](https://goerli-faucet.mudit.blog/)
+- [Faucet 2](https://goerli-faucet.pk910.de/)
 
 ## Step 4: Setup Pinata
 Pinata is a service that allows users to host files on the [InterPlanetary File System](https://docs.ipfs.io/concepts/what-is-ipfs/#decentralization) (IPFS) network. We use Pinata to store our NFT metadata as it ensures the authenticity of the file will be verifiable and the file will always be accessible. Follow the steps below to prepare your collection: 
@@ -240,7 +239,7 @@ Next we will need to update the variables for our smart contract.
   </tr>
   <tr>
     <td>
-      <code>DEPLOYER_ROPSTEN_PRIVATE_KEY
+      <code>DEPLOY_TESTNET_PRIVATE_KEY
        DEPLOYER_MAINNET_PRIVATE_KEY</code>
     </td>
     <td>
@@ -286,14 +285,14 @@ Next we will need to install packages needed for deploying our smart contract.
 ## Step 9: Deploy Contract
 Before we can mint on Layer 2, we need to deploy a smart contract on Layer 1 to ensure assets can be withdrawn to Layer 1. Click [here](https://docs.x.immutable.com/docs/ethereum-scalability) to learn more about the differences between Layer 1 and Layer 2. 
 
-1. Run `yarn hardhat run deploy/asset.ts --network ropsten`
-2. It will take ~5 minutes to deploy your contract to Ropsten Etherscan 
+1. Run `yarn hardhat run deploy/asset.ts --network sandbox`
+2. It will take ~5 minutes to deploy your contract to Goerli Etherscan 
 3. Copy the deployed contract address 
 
 ![Step9_Deploying the contract](/img/zero-to-hero/Step9DeployContract.png 'Deploying the contract')
 
 :::info Check your work
-Paste your contract address into [Ropsten Etherscan](https://ropsten.etherscan.io/). It should say **contract** in the upper left. If this says address, ensure you are on the correct network
+Paste your contract address into [Goerli Etherscan](https://goerli.etherscan.io/). It should say **contract** in the upper left. If this says address, ensure you are on the correct network
 :::
 
 
@@ -358,7 +357,7 @@ After deploying your contract to Layer 1, you will need to [register](https://do
 
 Before you can create a project, you will need to register as a user. Registering as a user creates a Layer 2 wallet and enables us to make transactions on Layer 2. 
 
-1. Navigate to the [Ropsten Test Marketplace](https://market.ropsten.immutable.com/)
+1. Navigate to the [Sandbox Test Marketplace](https://market.sandbox.immutable.com/)
 2. Press `Connect Wallet`
 3. Follow the prompts 
 
@@ -559,16 +558,16 @@ Don't forget to press save after updating the values
 
 ## Step 16: List your NFT 
 
-Our assets will now be accessible in our Ropsten Wallet. However, for other users to see them we will need to list them on the marketplace. 
+Our assets will now be accessible in our Goerli Wallet. However, for other users to see them we will need to list them on the marketplace. 
 
-1. Visit the [Ropsten IMX Marketplace](https://market.ropsten.x.immutable.com/) 
+1. Visit the [Sandbox IMX Marketplace](https://market.sandbox.x.immutable.com/) 
 2. Click Connet Wallet and follow the prompts
 3. Click My Assets --> Select an NFT
 4. Press List for Sale
    
 ## Conclusion 
 
-Congratulations on minting and listing an NFT on the Ropsten test network!
+Congratulations on minting and listing an NFT on the Goerli test network!
 
 :::info Feedback
  This tutorial covered the simplest implementation of minting, however we are continuing to build out the workflow. Feel free to leave any feedback [here](https://docs.google.com/forms/d/e/1FAIpQLSdTLIXldLRZQB4i2YTHtQwxmrDbTkHphuxtLoVe7j-YVU7VYw/viewform).
@@ -618,7 +617,7 @@ If you'd like to reuse these steps for a mainnet launch, note the following chan
       Step 10
     </td>
     <td>
-     Remove ropsten from the URL in <code>PUBLIC_API_URL</code> in the .env file
+     Remove `sandbox` from the URL in <code>PUBLIC_API_URL</code> in the .env file
     </td>
   </tr>
   </tbody>

@@ -17,7 +17,7 @@ import { Wallet } from '@ethersproject/wallet';
 import { getConfig, Workflows } from '@imtbl/core-sdk';
 
 const alchemyApiKey = YOUR_ALCHEMY_API_KEY;
-const ethNetwork = 'ropsten';
+const ethNetwork = 'sandbox';
 
 // Setup provider and signer
 const provider = new AlchemyProvider(ethNetwork, alchemyApiKey);
