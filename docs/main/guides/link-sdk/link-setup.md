@@ -77,7 +77,7 @@ result = {
     "address": "0x...",
     "starkPublicKey": "0x...",
     "providerPreference": null,
-    "ethNetwork": "ropsten"
+    "ethNetwork": "goerli"
 }
 
 // `email` field is returned in the response if the magic_link provider is requested
@@ -86,7 +86,7 @@ result = {
     "address": "0x...",
     "starkPublicKey": "0x...",
     "providerPreference": "magic_link",
-    "ethNetwork": "ropsten",
+    "ethNetwork": "goerli",
     "email": "name@domain.com"
 }
 ```

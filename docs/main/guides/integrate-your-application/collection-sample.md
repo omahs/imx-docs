@@ -15,9 +15,9 @@ import { ImmutableXClient, Link, ERC721TokenType, ETHTokenType } from '@imtbl/im
 
 const linkAddress = 'https://link.x.immutable.com';
 const apiAddress = 'https://api.x.immutable.com/v1';
-// Ropsten Testnet
-//const linkAddress = 'https://link.ropsten.x.immutable.com';
-//const apiAddress = 'https://api.ropsten.x.immutable.com/v1';
+// Sandbox/Goerli Testnet
+//const linkAddress = 'https://link.sandbox.x.immutable.com';
+//const apiAddress = 'https://api.sandbox.x.immutable.com/v1';
 
 //The token address for the collection to be monitored. Currently set to Gods Unchained
 const COLLECTION_ADDRESS = '0x0e3a2a1f2146d86a604adc220b4967a898d7fe07';

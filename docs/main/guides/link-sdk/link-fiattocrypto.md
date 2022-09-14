@@ -60,8 +60,8 @@ await link.fiatToCrypto({ cryptoCurrencies: ['ETH', 'USDC'] })
 await link.fiatToCrypto({ cryptoCurrencies: ['IMX', 'GODS'] })
 ```
 
-:::success Testing the flow on Ropsten
-To test the transactions in the Ropsten test environment, please use the following test cards:  
+:::success Testing the flow in Sandbox
+To test the transactions in the Sandbox test environment, please use the following test cards:  
 **CARD**: Visa  
 **NUMBER**: 4000056655665556  
 **DATE**: any date in the future  
