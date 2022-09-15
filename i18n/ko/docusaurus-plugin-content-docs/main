@@ -12,17 +12,16 @@ keywords:
 
 L2에는 이뮤터블 X의 지정 소각 주소로 비제로 스타크 키(0x00...01)와 쌍을 이루는 소각 주소(제로 어드레스 - 0x00...0)가 있습니다. 이 스타크 키는 비제로여야만 하는데, 이는 제로 스타크 키가 스타크 타원 곡선상에 존재하지 않아 유효하지 않기 때문입니다. 그렇기에 그 다음으로 가장 가까운 키를 선택한 것이죠. L1 소각 어카운트와 마찬가지로, 이 특정 퍼블릭 키의 개인 키를 찾는 것은 실제로 불가능하기 때문에 이 스타크 키가 소유한 자산은 스타크 스마트 컨트랙트에 영구히 갇혀 전송하거나 인출할 수 없습니다.
 
-자산을 소각하려면 **자산을 소각 주소로 전송**해야 합니다. We have added burn functions in the SDK for clarity, and these are just wrappers for standard transfer functions to this burn address. Using the transfer functions with the burn address as a recipient will also work just the same.
+자산을 소각하려면 **자산을 소각 주소로 전송**해야 합니다. 이뮤터블 X는 명확성을 위해 SDK에 여러 소각 기능을 추가하였으며, 이 소각 기능들은 이 소각 주소로 연결된 표준 전송 기능의 래퍼에 불과합니다. 소각 주소를 수령인으로 하여 전송 기능을 사용해도 동일하게 소각됩니다.
 
 ```solidity
 BurnEthAddress = 0x0000000000000000000000000000000000000000
 BurnStarkKey   = 0x0000000000000000000000000000000000000000000000000000000000000001
 ```
 ## ImmutableXClient
-Explicit burn functions in the SDK (wrappers for transfer functions):
+SDK의 명시적 소각 기능(전송 기능의 래퍼):
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+'@theme/Tabs'에서 Tabs 가져오기 '@theme/TabItem'에서 TabItem 가져오기
 
 <Tabs>
 <TabItem value="burn" label="Burn an Asset" default>  
@@ -40,7 +39,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-Or using standard transfer function:
+또는 표준 전송 기능 사용하기:
 
 ```typescript title="Burn using client.transfer"
 // import { ImmutableXClient } from '@imtbl/imx-sdk';
@@ -86,7 +85,7 @@ const transferResponsePayload:TransferV2ResultsCodec = await link.transfer([
 ]);
 ```
 
-## Multi-burns
-When burning multiple assets in one go, you will be using the multi-transfer functionality in link.transfer. Keep in mind that this submits separate transfer transactions to the API. Although rare, it is possible to have some transfers fail while others succeed, so multi-burns (just like multi-transfers) are not an entirely atomic operation. We will be looking into adding support for atomic 'multi' transactions across all features in the future.
+## 다중 소각
+한 번에 여러 개의 자산을 소각할 때는 link.transfer에서 다중 전송 기능을 이용합니다. 이것은 별도의 전송 트랜잭션을 API에 제출한다는 점에 유념하세요. 드물기는 하지만, 다른 전송은 성공했는데 일부 전송은 실패하는 경우가 발생할 수도 있습니다. 그렇기 때문에 다중 소각은 다중 전송과 마찬가지로 완전한 원자 조작이 아닙니다. 이뮤터블 X는 앞으로 모든 기능에 원자성의 '다중' 트랜잭션 지원 추가를 검토할 예정입니다.
 
-For use cases such as 'burn x NFTs to receive a new NFT', it is currently recommended to keep track of all successful and failed burns (provided in the `link.transfer` response), and implement a retry mechanism for users to complete their full burn before triggering the next step in the process.
+'새 NFT를 수령하기 위해 x개의 NFT를 소각'하는 식으로 사용하는 경우, 모든 성공한 소각과 실패한 소각을 계속해서 기록하고(`link.transfer` 응답에서 제공), 소각 과정의 다음 단계를 작동시키기 전에 사용자들이 모든 소각을 완료할 수 있도록 재시도 메커니즘을 구현할 것이 현재 권장됩니다.
