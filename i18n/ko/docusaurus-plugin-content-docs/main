@@ -1,18 +1,18 @@
 ---
-id: "asset-burning"
-title: "Asset Burning"
-slug: "/asset-burning"
+id: "자산-소각"
+title: "자산 소각"
+slug: "/자산-소각"
 excerpt: "이뮤터블 X가 이제 자산 소각을 지원합니다 :fire:"
 sidebar_position: 7
 keywords:
   - imx-games
 ---
 
-Burning describes the process of permanently removing tokens from circulation, and on mainnet Ethereum this is often achieved by transferring the asset to a designated burn address (e.g. the [zero account](https://etherscan.io/address/0x0000000000000000000000000000000000000000)). A burn address is not owned by any user and no one can feasibly guess its private key, so any assets owned by a burn address are considered lost forever.
+소각은 토큰을 유통망과 메인넷 이더리움에서 영구적으로 제거하는 절차를 뜻하는 것으로, 지정된 소각 주소로 자산을 이동하여 소각하는 경우가 많습니다(예: [제로 어카운트](https://etherscan.io/address/0x0000000000000000000000000000000000000000)). 어떤 사용자도 소각 주소를 소유하지 않으며 누구도 그 개인 키를 추정할 수 없기에, 소각 주소가 소유한 자산은 영원히 소실된 것으로 간주됩니다.
 
-On L2, we have a burn address (zero address - 0x00...0) paired with a non-zero stark key (0x00...01) as the designated burn address for Immutable X. The stark key must be non-zero because a zero stark key does not lie on the Stark elliptic curve and would therefore be invalid, so we chose the next closest key possible. As with the L1 burn account, finding the stark private key for this specific public key is practically impossible, so assets owned by this stark key will remain locked in the Stark smart contract forever and cannot be transferred or withdrawn.
+L2에는 이뮤터블 X의 지정 소각 주소로 비제로 스타크 키(0x00...01)와 쌍을 이루는 소각 주소(제로 어드레스 - 0x00...0)가 있습니다. 이 스타크 키는 비제로여야만 하는데, 이는 제로 스타크 키가 스타크 타원 곡선상에 존재하지 않아 유효하지 않기 때문입니다. 그렇기에 그 다음으로 가장 가까운 키를 선택한 것이죠. L1 소각 어카운트와 마찬가지로, 이 특정 퍼블릭 키의 개인 키를 찾는 것은 실제로 불가능하기 때문에 이 스타크 키가 소유한 자산은 스타크 스마트 컨트랙트에 영구히 갇혀 전송하거나 인출할 수 없습니다.
 
-To burn an asset, you need to **transfer the asset to the burn address**. We have added burn functions in the SDK for clarity, and these are just wrappers for standard transfer functions to this burn address. Using the transfer functions with the burn address as a recipient will also work just the same.
+자산을 소각하려면 **자산을 소각 주소로 전송**해야 합니다. We have added burn functions in the SDK for clarity, and these are just wrappers for standard transfer functions to this burn address. Using the transfer functions with the burn address as a recipient will also work just the same.
 
 ```solidity
 BurnEthAddress = 0x0000000000000000000000000000000000000000
@@ -60,7 +60,7 @@ await client.transfer({
 });
 ```
 
-Burned assets will still show up in the response of getAssets (`/assets` API) with their status as 'burned'. This is a filterable field, so you can find all burned assets by querying the assets API:
+소각된 자산이라 하더라도 getAssets(`/assets` API)에 응답해 '소각된' 상태로 나타납니다. 이것은 필터링이 가능한 필드이므로 자산 API를 쿼리하여 소각된 자산을 모두 찾을 수 있습니다.
 ```typescript title="Get burned assets"
 // import { ImmutableXClient, ImmutableAssetStatus } from '@imtbl/imx-sdk';
 // client = ImmutableXClient.build({...})
@@ -70,8 +70,8 @@ const burnedAssets = await client.getAssets({
 });
 ```
 
-## Link
-To implement a burn feature for users on your frontend, you should use the `link.transfer` function with the recipient set as the burn address. [Learn more.](../link-sdk/linktransfer.md)
+## 링크
+전위에서 사용자를 위해 소각 기능을 구현하려면, 소각 주소로 설정된 수령인과 함께 `link.transfer` 기능을 사용해야 합니다. [더 알아보기.](../link-sdk/linktransfer.md)
 ```typescript title="Burn with Link"
 // import { Link } from '@imtbl/imx-sdk';
 // link = new Link(<link-url>)
