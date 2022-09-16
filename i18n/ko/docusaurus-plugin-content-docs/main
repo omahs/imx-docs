@@ -12,29 +12,29 @@ keywords:
 이뮤터블 X에서는 다른 스케일링 솔루션과 타협하지 않고 이를 실현할 수 있습니다. 예를 들어 이뮤터블 X에서 민팅된 모든 L2 자산은 L1(이더리움) 수준의 보안을 유지하며 다음 배치에서 이더리움으로 인출할 수 있습니다.
 
 # 민팅 가능한 컨트랙트
-If you have an existing smart contract you'd like to mint assets into, you'll need to set up a proxy contract to implement the `mintFor` action and ensure that this proxy contract has the appropriate permissions to mint on your non-mintable ERC-721 contract. Your main contract must adopt a flexible enough permission structure to allow for new 'minter' proxy contracts.
+사용자가 자산을 민팅해 넣고 싶은 기존 스마트 컨트랙트를 보유하고 있다면, 사용자는 프록시 컨트랙트를 설정하여 `mintFor` 행동을 구현하고, 이 프록시 컨트랙트가 민팅이 불가능한 사용자의 ERC-721 컨트랙트에서 민팅하기 위한 적절한 승인을 확보하도록 만들어야 합니다. 사용자의 메인 컨트랙트는 반드시 충분히 유연한 승인 구조를 채택하여 새로운 '민터' 프록시 컨트랙트를 허용해야 합니다.
 
-To update an existing, non-mintable ERC-721 contract, implement the following action:
+민팅이 불가능한 기존의 ERC-721 컨트랙트를 업데이트하려면, 다음의 행동을 구현하십시오.
 ```solidity
 interface IMintable {
     function mintFor(address to, uint256 quantity, bytes mintingBlob); 
 }
 ```
 
-We suggest that you whitelist access to this action to our contract `0x5FDCCA53617f4d2b9134B29090C87D01058e27e9` to ensure no unauthorized executions.
+이뮤터블 X의 컨트랙트 `0x5FDCCA53617f4d2b9134B29090C87D01058e27e9` 행동으로의 접속을 화이트리스트 처리하여 승인받지 않은 실행이 일어나지 않도록 하십시오.
 
-Example smart contracts are available in our [imx-contracts](https://github.com/immutable/imx-contracts) repo.
+[imx-contracts](https://github.com/immutable/imx-contracts) 레포에서 스마트 컨트랙트의 예시를 확인할 수 있습니다.
 
-For help, [contact support](https://support.immutable.com) to discuss the viability with your existing contract.
+도움이 필요한 경우, [고객 지원 센터에 연락](https://support.immutable.com)하여 사용자의 기존 컨트랙트의 실행 가능성에 대해 의논하십시오.
 
-# Minting assets
-Immutable exposes a minting API. You can mint more than one asset in an API call, and even mint multiple assets to multiple users.
+# 자산 민팅
+이뮤터블 X에서 민팅 API를 공개합니다. 사용자는 API 호출에서 하나 이상의 자산을 민팅할 수 있으며, 다중 사용자에게 다중 자산을 민팅할 수도 있습니다.
 
-Our metadata crawler will access `<project_metadata_endpoint>/<token_id>` at the time of minting a new token. Please be sure that your endpoint returns a JSON response for each token ID that will be minted.
+이뮤터블 X의 메타데이터 크롤러는 새로운 토큰의 민팅 시 `<project_metadata_endpoint><token_id>`에 접속합니다. 사용자의 엔드 포인트가 민팅될 각 토큰 ID의 JSON 응답을 반환하도록 하십시오.
 
-Here is a high-level overview of the L2 asset minting process: ![Asset Minting](/img/AssetMinting.png)
+다음은 L2 자산 민팅 과정의 고급 개요입니다.![Asset Minting](/img/AssetMinting.png)
 
-Here is a [mint tokens](/reference#/operations/mintTokens) example:
+다음은 [mint tokens](/reference#/operations/mintTokens)의 예시입니다.
 ```json
 {
   "mints":
@@ -53,9 +53,9 @@ Here is a [mint tokens](/reference#/operations/mintTokens) example:
 }
 ```
 
-**NOTE:** Above, `token_address` is the contract address.
+**참고:**위의 `token_address`는 컨트랙트 주소입니다.
 
-Every mint request for a user (for one or many assets) will require an `auth_signature` signed by the contract owner. This ensures that only the entity representing the owner / deployer of the contract will be allowed to authorise mints for users i.e. mint supply is bound by the contract owner's key.
+하나 또는 많은 자산에 대한 사용자의 각 민팅 요청은 컨트랙트 소유자가 서명한 `auth-signature`를 요구합니다. 그러면 컨트랙트의 소유자/배치 책임자를 대표하는 개체만이 사용자들의 민팅을 승인할 수 있게 허용됩니다. 즉, 민팅 공급이 컨트랙트 소유자의 키에 의해 제한됩니다.
 
 The message digest for the payload is the keccak 256 hash of the stringified mint body payload (without the `auth_signature` field pre-filled)
 
