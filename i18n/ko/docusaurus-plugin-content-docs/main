@@ -121,7 +121,7 @@ keywords:
 
 ## 속성 유형 매핑
 
-다음은 메타데이터가 이뮤터블 X의 기능을 필터링하는 방식에 대한 true 사양의 소스입니다. 메타데이터 필터는 API 사용자로 하여금 메타데이터 속성에 의해 돌아온 NFT를 필터링할 수 있게 해줍니다. 이 필터는 수많은 엔드포인트에 적용됩니다.
+다음은 메타데이터가 이뮤터블 X의 기능을 필터링하는 방법에 대한 true 사양 소스입니다. 메타데이터 필터는 API 사용자들이 자신들의 메타데이터 속성에 의해 반환된 NFT를 필터링할 수 있게 해줍니다. 이 필터는 수많은 엔드포인트에 적용됩니다.
 
 NFT가 이뮤터블 X 데이터베이스에 아직 존재하지 않는 메타데이터 키를 가지고 있는 경우, 그 새로운 키와 값이 이뮤터블 X 데이터베이스에 추가됩니다.
 
@@ -137,74 +137,74 @@ NFT가 이뮤터블 X 데이터베이스에 아직 존재하지 않는 메타데
   <tbody>
   <tr>
     <td>enum</td>
-    <td>Property with a defined enumeration of possible values (e.g. god = nature or death).</td>
+    <td>가능값의 정의된 에뮬레이션이 있는 속성(예: 신=자연 또는 죽음).</td>
   </tr>
   <tr>
     <td>text</td>
-    <td>Property which contains arbitrary text. Should be searchable. Not filterable.</td>
+    <td>임의의 텍스트를 포함하는 속성. 검색 가능해야 함. 필터링 불가.</td>
   </tr>
   <tr>
     <td>boolean</td>
-    <td>Property which can be either true or false.</td>
+    <td>true 또는 false 중 하나가 될 수 있는 속성.</td>
   </tr>
   <tr>
     <td>discrete</td>
-    <td>Property which will usually be handled as a multi-select e.g. mana.</td>
+    <td>보통 다중 선택(예: 마나)으로 처리되는 속성.</td>
   </tr>
   </tbody>
 </table>
 
-Example mapping in our database
+이뮤터블 X의 매핑 예시
 <table>
   <thead>
   <tr>
-    <th>key</th>
-    <th>data_type</th>
-    <th>filterable</th>
+    <th>키</th>
+    <th>데이터_유형</th>
+    <th>필터링 가능 여부</th>
   </tr>
   </thead>
   <tbody>
   <tr>
-    <td>attack</td>
+    <td>공격</td>
     <td>discrete</td>
     <td>true</td>
   </tr>
   <tr>
-    <td>god</td>
+    <td>신</td>
     <td>enum</td>
     <td>true</td>
   </tr>
   <tr>
-    <td>health</td>
+    <td>체력</td>
     <td>discrete</td>
     <td>false</td>
   </tr>
   <tr>
-    <td>mana</td>
+    <td>마나</td>
     <td>discrete</td>
     <td>false</td>
   </tr>
   <tr>
-    <td>name</td>
+    <td>이름</td>
     <td>text</td>
     <td>false</td>
   </tr>
   <tr>
-    <td>quality</td>
+    <td>품질</td>
     <td>enum</td>
     <td>true</td>
   </tr>
   <tr>
-    <td>rarity</td>
+    <td>희귀도</td>
     <td>enum</td>
     <td>true</td></tr>
   <tr>
-    <td>set</td>
+    <td>세트</td>
     <td>enum</td>
     <td>true</td>
   </tr>
   <tr>
-    <td>type</td>
+    <td>유형</td>
     <td>enum</td>
     <td>true</td>
   </tr>
