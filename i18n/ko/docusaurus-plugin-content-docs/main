@@ -1,286 +1,193 @@
 ---
-id: "자산-메타데이터"
-title: "자산 메타데이터"
-slug: "/자산-메타데이터"
-sidebar_position: 2
+id: "자산-민팅"
+title: "자산 민팅"
+slug: "/자산-민팅"
+sidebar_position: 3
 keywords:
   - imx-games
 ---
 
-이뮤터블 X는 프로젝트가 그 자산의 메타데이터 속성을 지정할 수 있게 해줍니다. 이러한 속성은 시장으로 하여금 사용자들이 원하는 것을 더욱 효과적으로 찾을 수 있게 도와주는 복잡한 필터링 쿼리를 수행할 수 있게 허용해 줍니다. :::success 메타데이터 새로고침  
-사용자는 [지원 센터에 연락](https://support.immutable.com)해 메타데이터를 새로고침할 수 있습니다. 그 후에는 재크롤링되어야 하는 토큰과 그 토큰에 이루어진 업데이트를 확인해야 합니다.
+이뮤터블 X의 핵심적인 장점은 이더리움에서 자산을 민팅한 후 거래소에 입금하는 것이 아니라 애플리케이션이 레이어 2에서 자산을 민팅할 수 있다는 것입니다. 이런 방식으로 민팅을 하게 되면 애플리케이션과 사용자 모두 가스 비용을 지불할 필요가 없어져 현재 코인계의 지형을 크게 개선할 수 있습니다.
 
-본사는 2 영업일(호주 시간) 이내에 요청을 처리하는 것을 목표로 하고 있습니다. 하지만 요청에 따라 더 오랜 시간이 소요될 수도 있습니다.
-:::
+이뮤터블 X에서는 다른 스케일링 솔루션과 타협하지 않고 이를 실현할 수 있습니다. 예를 들어 이뮤터블 X에서 민팅된 모든 L2 자산은 L1(이더리움) 수준의 보안을 유지하며 다음 배치에서 이더리움으로 인출할 수 있습니다.
 
-## 핵심 속성
+# 민팅 가능한 컨트랙트
+If you have an existing smart contract you'd like to mint assets into, you'll need to set up a proxy contract to implement the `mintFor` action and ensure that this proxy contract has the appropriate permissions to mint on your non-mintable ERC-721 contract. Your main contract must adopt a flexible enough permission structure to allow for new 'minter' proxy contracts.
 
-이뮤터블 X에는 여러 핵심 속성이 있습니다.
-<table>
-  <thead>
-  <tr>
-    <th>
-      속성
-    </th>
-    <th>
-      설명
-    </th>
-    <th>
-      필수 입력 필드
-    </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>
-      <code>name</code>
-    </td>
-    <td>
-      이 자산의 표시명   
-    </td>
-    <td>
-      아님
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>description</code>
-    </td>
-    <td>
-      이 자산의 설명 
-    </td>
-    <td>
-      아님
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>image_url</code>
-    </td>
-    <td>
-      이 자산의 표시 이미지의 URL. 이뮤터블 X 마켓플레이스에서 영상 썸네일로 사용됩니다.
-    </td>
-    <td>
-      아님
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>image</code>
-    </td>
-    <td>
-      image_url의 대안 필드.   
-    </td>
-    <td>
-      아님
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>animation_url</code>
-    </td>
-    <td>
-      항목의 멀티미디어 첨부 URL. 이뮤터블 X는 HTTP를 통한 영상 스트리밍에 HLS 포맷을 사용할 것을 적극 권장합니다. 보통 영상 NFT에 사용됩니다.    
-    </td>
-    <td>
-      아님
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>animation_url_mime_type</code>
-    </td>
-    <td>
-      animation_url이 지목하는 MIME 타입 파일. 현재 이뮤터블 X는 3가지 MIME 타입만을 지원합니다. <ul><li>application/vnd.apple.mpegurl,</li> <li>video/mp4,</li> <li>video/webm</li></ul>
-    </td>
-    <td>
-      맞음*
-      <br />
-      <strong>주의:</strong>animation_url이 지정되는 경우, 이 필드는 필수적으로 입력해야 합니다. 지정되지 않으면 다른 필드와 마찬가지로 선택적으로 입력합니다.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <code>youtube_url</code>
-    </td>
-    <td>
-      YouTube 영상 URL. 이 재생 방식은 현재 이뮤터블 X 마켓플레이스에서 지원되지 않습니다. 하지만 제3자 지원 방식으로 빌드할 수 있습니다. 
-    </td>
-    <td>
-      아님
-    </td>
-  </tr>
-  </tbody>
-</table>
-
-상기 핵심 속성은 보통 속성 위에 필터링하기를 원하지 않는다면 유형으로 매핑할 필요 없습니다.
-
-파트너들에게는 `animation_url`를 통해 자신의 영상 자산을 호스트하고 위치를 노출할 것이 요청될 것입니다.
-
-영상 NFT의 경우, 개별 마켓플레이스에서 영상을 루프할 것인지, 자동 재생을 지원할 것인지, 최소 로딩 시 뮤트할 것인지 결정할 수 있습니다. 프로토콜은 특정 마켓플레이스에서의 영상 재상 방식을 정의하지 않습니다.
-
-## 속성 유형 매핑
-
-다음은 메타데이터가 이뮤터블 X의 기능을 필터링하는 방법에 대한 true 사양 소스입니다. 메타데이터 필터는 API 사용자들이 자신들의 메타데이터 속성에 의해 반환된 NFT를 필터링할 수 있게 해줍니다. 이 필터는 수많은 엔드 포인트에 적용됩니다.
-
-NFT가 이뮤터블 X 데이터베이스에 아직 존재하지 않는 메타데이터 키를 가지고 있는 경우, 그 새로운 키와 값이 이뮤터블 X 데이터베이스에 추가됩니다.
-
-이뮤터블 X 데이터베이스에서 메타데이터 속성은 다음의 유형 중 하나로 저장됩니다.
-
-<table>
-  <thead>
-  <tr>
-    <th>유형</th>
-    <th>설명</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>enum</td>
-    <td>가능값의 정의된 에뮬레이션이 있는 속성(예: 신=자연 또는 죽음).</td>
-  </tr>
-  <tr>
-    <td>text</td>
-    <td>임의의 텍스트를 포함하는 속성. 검색 가능해야 함. 필터링 불가.</td>
-  </tr>
-  <tr>
-    <td>boolean</td>
-    <td>true 또는 false 중 하나가 될 수 있는 속성.</td>
-  </tr>
-  <tr>
-    <td>discrete</td>
-    <td>보통 다중 선택(예: 마나)으로 처리되는 속성.</td>
-  </tr>
-  </tbody>
-</table>
-
-이뮤터블 X의 매핑 예시
-<table>
-  <thead>
-  <tr>
-    <th>키</th>
-    <th>데이터_유형</th>
-    <th>필터링 가능 여부</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>공격</td>
-    <td>discrete</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>신</td>
-    <td>enum</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>체력</td>
-    <td>discrete</td>
-    <td>false</td>
-  </tr>
-  <tr>
-    <td>마나</td>
-    <td>discrete</td>
-    <td>false</td>
-  </tr>
-  <tr>
-    <td>이름</td>
-    <td>text</td>
-    <td>false</td>
-  </tr>
-  <tr>
-    <td>품질</td>
-    <td>enum</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>희귀도</td>
-    <td>enum</td>
-    <td>true</td></tr>
-  <tr>
-    <td>세트</td>
-    <td>enum</td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>유형</td>
-    <td>enum</td>
-    <td>true</td>
-  </tr>
-  </tbody>
-</table>
-
-## 필터링 가능 변수
-필터링 가능한 변수는 메타데이터의 속성이 반드시 최종 사용자가 자산을 필터링할 수 있는 무언가여야 한다는 신호를 마켓플레이스로 보내는 불린 조건입니다. 그러면 모든 메타데이터 속성을 여전히 텍스트로 검색할 수 있으면서, 마켓플레이스가 특정한 콜렉션에 맞춰진 마켓플레이스 UI에서 특정 필터를 구현할 수 있습니다.
-
-'필터링 가능한' 변수는 텍스트가 아닌 변수 유형에서만 **true**가 될 수 있다는 점에 유의해 주십시오.
-
-필터는 JSON 메타데이터 객체의 최고 수준의 속성을 위해서만 생산될 수 있습니다.
-## 메타데이터 예시
-```json
-{
-  // core fields:
-  "name": "Rufus",
-  "animation_url": "https://guildofguardians.mypinata.cloud/ipfs/QmQDee8BPDfAH2ykRX375AWJwYZcbbJQa8wHokrSnMLLUC/HLS/Base/CollectionAsset_Hero_Rufus_Base.m3u8",
-  "animation_url_mime_type": "application/vnd.apple.mpegurl",
-  "image_url": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Rufus/Thumbnail_Hero_Rufus_Base.png",
-
-  // Add more (non core) properties as long as it's a flat key/value structure 
-  // and these values match the schema that the contract was registered with
-  "attack": 4,
-  "collectable": true,
-  "god": "Ranged",
-  "element": "Water",
-  "product": 2,
-  "rarity": 2,
-  "type": 3,
+To update an existing, non-mintable ERC-721 contract, implement the following action:
+```solidity
+interface IMintable {
+    function mintFor(address to, uint256 quantity, bytes mintingBlob); 
 }
 ```
 
-## 메타데이터 스키마 예시
-다음에 유의해 주십시오.
-  * '필터링 가능한' 변수는 텍스트가 아닌 변수 유형에서만 **true**가 될 수 있습니다.
-  * enum 유형의 값은 제공하지 않아도 됩니다. 사용자의 메타데이터 엔드 포인트를 통해 이뮤터블 X에 전달되는 내용에 기초하여 값의 목록을 자동으로 생성합니다.
-  * discrete 유형의 값 범위는 필요하지 않습니다. 제공된 값의 리스트에 기초해 범위를 자동으로 생성합니다
+We suggest that you whitelist access to this action to our contract `0x5FDCCA53617f4d2b9134B29090C87D01058e27e9` to ensure no unauthorized executions.
+
+Example smart contracts are available in our [imx-contracts](https://github.com/immutable/imx-contracts) repo.
+
+For help, [contact support](https://support.immutable.com) to discuss the viability with your existing contract.
+
+# Minting assets
+Immutable exposes a minting API. You can mint more than one asset in an API call, and even mint multiple assets to multiple users.
+
+Our metadata crawler will access `<project_metadata_endpoint>/<token_id>` at the time of minting a new token. Please be sure that your endpoint returns a JSON response for each token ID that will be minted.
+
+Here is a high-level overview of the L2 asset minting process: ![Asset Minting](/img/AssetMinting.png)
+
+Here is a [mint tokens](/reference#/operations/mintTokens) example:
+```json
+{
+  "mints":
+  [{
+    "user": "0x...",
+    "tokens": [{
+      "type": "ERC721",
+      "data": {
+        "id": "<asset ID>", // custom asset ID (it's possible to make this the ERC-721 token ID depending on the mintable contract implementation)
+        "blueprint": "<on-chain metadata>", //note special characters like '<' or '>' cannot be part of the blueprint
+        "token_address": "0x..."
+      }
+    }],
+    "auth_signature": "0x..." // signature signed by the contract owner
+  }]    
+}
+```
+
+**NOTE:** Above, `token_address` is the contract address.
+
+Every mint request for a user (for one or many assets) will require an `auth_signature` signed by the contract owner. This ensures that only the entity representing the owner / deployer of the contract will be allowed to authorise mints for users i.e. mint supply is bound by the contract owner's key.
+
+The message digest for the payload is the keccak 256 hash of the stringified mint body payload (without the `auth_signature` field pre-filled)
 
 ```json
 {
-    "metadata": [
-        {
-            "name": "name",
-            "type": "text"
-        },
-                {
-            "name": "attack",
-            "type": "discrete",
-            "filterable": true
-        },
-        {
-            "name": "collectable",
-            "type": "boolean",
-            "filterable": true
-        },
-        {
-            "name": "god",
-            "type": "enum",
-            "filterable": true
-        },
-        {
-            "name": "element",
-            "type": "enum",
-            "filterable": true
-        },
-        {
-            "name": "product",
-            "type": "discrete",
-            "filterable": true
-        },
-        {
-            "name": "type",
-            "type": "discrete",
-            "filterable": true
+  "mintBodyPayload": {
+    "ether_key":"0x5f333ec73a6a851b8cd7a4a450416a966f9bcceb",
+    "tokens": [
+      {
+        "type": "ERC721",
+        "data": {
+          "id": "10",
+          "blueprint": "{onchain-metadata}",
+          "token_address": "0x6De6B04D630A4A41bB223815433b9Ebf0da50F69"
         }
-    ]
+      }
+    ],
+    "auth_signature": ""
+  }
 }
+```
+
+Below is a snippet of JS code to generate the auth signature using [ethers.js](https://docs.ethers.io/v5/).
+
+```typescript
+import * as encUtils from 'enc-utils';
+const hash = keccak256(toUtf8Bytes(JSON.stringify(mintBodyPayload)));
+const sig = deserializeSignature(await this.signer.signMessage(hash));
+return encUtils.addHexPrefix(
+  encUtils.padLeft(sig.r.toString(16), 64) +
+  encUtils.padLeft(sig.s.toString(16), 64) +
+  encUtils.padLeft(sig.recoveryParam?.toString(16) || '', 2),
+);
+```
+Our implementation adopts an all-or-nothing approach, where if any one of our validations fail along the way, we will roll back every previous mint under the scope of a single mint request, to prevent any partial mints.
+
+Once your mint request comes through, you'll be able to trade immediately with your assets.
+
+The withdrawal of a L2-minted asset follows the same process as an on-chain minted asset. See [asset withdrawals](./asset-withdrawals.md) to learn more.
+
+:::caution Minting with Royalties
+NFTs minted using mint v1 will not have royalties. We will only manually add royalties to Ethereum contracts that have implemented mint v1 that are registered before **Thursday 25th of November, 11.59pm AEST**.
+
+Use mint v2 to ensure that royalties are added to your NFTs.
+:::
+
+## Minting throughput
+It is preferable to have more mints per minting request instead of more minting requests with less mints per request. It is also advisable to have as less concurrent minting requests as possible. Follow these practices will help you avoid minting request failures due to concurrency and timeout.
+
+In the case of timeout, please retry with some gap in between.
+
+## Token validation
+Tokens that are minted on our platform (L2) are validated to ensure they can later be successfully withdrawn to the Ethereum (L1) layer. This validation occurs during the minting process.
+
+If the validation fails, a `mint_unwithdrawable` error code will be thrown. [See error description](../../troubleshooting/error-codes.md#mint_unwithdrawable).
+
+## Minting example
+Here's and example script to mint tokens in TypeScript:
+```typescript
+import { AlchemyProvider } from '@ethersproject/providers';
+import { Wallet } from '@ethersproject/wallet';
+import { ImLogger, WinstonLogger } from '@imtbl/imlogging';
+import { ImmutableXClient, MintableERC721TokenType } from '@imtbl/imx-sdk';
+
+import env from './config/client';
+import { loggerConfig } from './config/logging';
+
+const provider = new AlchemyProvider('ropsten', env.alchemyApiKey);
+const log: ImLogger = new WinstonLogger(loggerConfig);
+const component = 'imx-bulk-mint-script';
+
+const waitForTransaction = async (promise: Promise<string>) => {
+    const txId = await promise;
+    log.info(component, 'Waiting for transaction', {
+      txId,
+      etherscanLink: `https://ropsten.etherscan.io/tx/${txId}`,
+      alchemyLink: `https://dashboard.alchemyapi.io/mempool/eth-ropsten/tx/${txId}`,
+    });
+    const receipt = await provider.waitForTransaction(txId);
+    if (receipt.status === 0) {
+      throw new Error('Transaction rejected');
+    }
+    log.info(component, 'Transaction Mined: ' + receipt.blockNumber);
+    return receipt;
+};
+
+(async (): Promise<void> => {
+    const mintToWallet = '0x....'; // eth wallet public address which will receive the token
+    const signer = new Wallet(process.env.PRIVATE_KEY!).connect(provider);
+
+    const minter = await ImmutableXClient.build({
+      publicApiUrl: process.env.PUBLIC_API_URL, // https://api.ropsten.x.immutable.com/v1 for ropsten, https://api.x.immutable.com/v1 for mainnet
+      signer: signer,
+      starkContractAddress: process.env.STARK_CONTRACT_ADDRESS, // 0x4527BE8f31E2ebFbEF4fCADDb5a17447B27d2aef for ropsten, 0x5FDCCA53617f4d2b9134B29090C87D01058e27e9 for mainnet
+      registrationContractAddress: process.env.REGISTRATION_CONTRACT_ADDRESS, // 0x6C21EC8DE44AE44D0992ec3e2d9f1aBb6207D864 for ropsten, 0x72a06bf2a1CE5e39cBA06c0CAb824960B587d64c for mainnet
+      gasLimit: process.env.GAS_LIMIT,
+      gasPrice: process.env.GAS_PRICE,
+    });
+
+    log.info(component, 'MINTER REGISTRATION');
+    const registerImxResult = await minter.registerImx({
+      etherKey: minter.address.toLowerCase(),
+      starkPublicKey: minter.starkPublicKey,
+    });
+
+    if (registerImxResult.tx_hash === '') {
+      log.info(component, 'Minter registered, continuing...');
+    } else {
+      log.info(component, 'Waiting for minter registration...');
+      await waitForTransaction(Promise.resolve(registerImxResult.tx_hash));
+    }
+
+    const result = await minter.mint({
+      mints: [
+        {
+          etherKey: mintToWallet.toLowerCase(),
+          tokens: [{
+            type: MintableERC721TokenType.MINTABLE_ERC721,
+            data: {
+                tokenAddress: env.tokenAddress, // address of token
+                id: '123', // must be a unique uint256 as a string
+                blueprint: 'metadata', // metadata can be anything but your L1 contract must parse it on withdrawal from the blueprint format '{tokenId}:{metadata}'
+            },
+          }],
+          nonce: '1',
+          authSignature: '', // Leave empty
+        },
+      ],
+    });
+    console.log(result);
+})().catch((e) => {
+    log.error(component, e);
+    process.exit(1);
+});
 ```
