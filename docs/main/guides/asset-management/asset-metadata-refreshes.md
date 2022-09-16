@@ -41,7 +41,7 @@ In order for a refresh to be successful, partners must ensure:
 
 Endpoints related to metadata refreshes are denoted via the url resource `/metadata-refreshes`.
 
-The expected maximum time (estimate) to complete a refresh is approximately 48 hours.
+The expected maximum time (estimate) to complete a refresh is approximately 48 hours. Updated metadata values will only be reflected in downstream systems e.g. marketplaces once the refresh for that asset is complete.
 
 ### Authentication
 
@@ -82,7 +82,7 @@ The user will receive the following response with a HTTP status code of **202 Ac
 
 The `refresh_id` acts as a receipt and confirms that the refresh has been initiated and will be processed. It can be used to query the status of a particular refresh.
 
-There is currently no way to cancel a refresh once requested.
+Projects can programmatically call the refresh endpoint at a specific time or based on a specific event in their system. There is currently no way to cancel a refresh once requested.
 
 [View the OpenAPI specification for requesting a metadata refresh.](/reference#/operations/Request%20a%20metadata%20refresh)
 
@@ -276,3 +276,7 @@ If the refresh limit has been reached, the user will receive a response with a H
   "message": "Refresh limit exceeded"
 }
 ```
+
+:::info Additional requests
+If you need to perform additional refresh requests, you can [contact support](https://support.immutable.com).
+:::
