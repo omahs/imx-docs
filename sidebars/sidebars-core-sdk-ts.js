@@ -15,7 +15,7 @@ module.exports = {
         {
           type: 'link',
           label: 'Reference',
-          href: `${url}/sdk-references/core-sdk-ts/0-6-0/`,
+          href: `${url}/sdk-references/core-sdk-ts/0-7-0/`,
         },
       ],
     },
