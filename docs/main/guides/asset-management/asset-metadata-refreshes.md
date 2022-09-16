@@ -8,34 +8,30 @@ keywords: [imx-games]
 
 # Asset metadata refreshes
 
-A metadata refresh can be requested in order to update the off-chain asset metadata for a set of assets belonging to a particular collection.
+Metadata refreshes update off-chain asset metadata.
 
 [Read more about asset metadata.](/docs/asset-metadata)
 
 ## Use cases
 
-Below are some examples of why developers refresh metadata:
+Metadata refreshes help games:
 
-- Gameplay mechanics - orchestrate updates to support core gameplay mechanics like levelling up a character, crafting or merging
-- Game rebalancing - token properties of specific game are updated to result in a better balanced game
-- Improving game content - updating the art/copy of NFTs so that it’s on brand and up to collection standards
-- Scheduled delayed reveals - Updating an asset to reveal properties (such as an image url), at a point in time after the community has been informed about when the reveal will be
-- Primary sale reveals - selling an unrevealed NFT and refreshing the metadata on purchase so that the buyer views the revealed metadata right away
-- Improving search discoverability - by adding more metadata so that players can easily find what they are looking for
-- Correcting incorrect metadata values
+- Support game play mechanics that rely on metadata such as levelling up characters, crafting and merging
+- Refine the game balance
+- Refine and correct game content such art and copy
+- Delay reveals of primary sales
+- Improve search discoverability through metadata
 
 ## Requirements
 
-In order for a refresh to be successful, partners must ensure:
+In order for a refresh to be successful, first:
 
-- They have created and deployed their [Metadata API](/docs/minting-on-immutable-x#metadata-api)
-  - This is the source of truth for asset metadata
-- Specific asset metadata is available from the Metadata API
-  - For reveals, we recommend to only update their Metadata API once the asset is ready to be revealed. A typical flow for a reveal would be something like:
-    - Mint an asset
-    - Once ready to reveal, update the Metadata API with the properties to be revealed
-    - Request a metadata refresh for the assets wanting to be revealed
-- Ensure the availability of your Metadata API. The metadata refresh service will concurrently request metadata for each asset from your Metadata API and requires a response time of less than 3 seconds per request in order to successfully update the metadata for that asset. If the request to the Metadata API fails it will be retried once more before that particular asset is [marked as failed.](#viewing-metadata-refresh-errors)
+- Create and deploy the [Metadata API](/docs/minting-on-immutable-x#metadata-api), as it's the source of truth for asset metadata
+- For reveals, update your Metadata API only once the asset is ready to be revealed. The flow for reveals would be something like:
+  - Mint an asset
+  - Once ready to reveal, update the Metadata API with the properties to be revealed
+  - Refresh metadata for the assets to be revealed
+- Ensure your Metadata API availability is aligned with the requirements. The metadata refresh service will concurrently request metadata for each asset from your Metadata API and requires a response time of less than 3 seconds per request in order to successfully update the metadata for that asset. If the request to the Metadata API fails it will be retried once more before that particular asset is [marked as failed.](#viewing-metadata-refresh-errors)
 
 ## API
 
@@ -257,14 +253,14 @@ The response returns a paginated list of refreshes:
 
 ## Metadata refresh limits
 
-All projects have set limitations on metadata refresh functionality for the collections that belongs to that project.
+There are limits on the number of the number of metadata refresh requests made per project, per hour.
 
 - For a particular project, **5** metadata refresh requests can be made per hour
 - Up to **1000** tokens can be requested per refresh
 
 Whenever a [refresh is requested](#requesting-a-metadata-refresh) or when a refresh limit has been reached, the following headers will be returned:
 
-- `x-imx-refreshes-limit` - the amount of refreshes that can be requested per hour (5)
+- `x-imx-refreshes-limit` - the amount of refreshes that can be requested per hour
 - `x-imx-remaining-refreshes` - the amount of refreshes remaining for the current hour interval
 - `x-imx-refresh-limit-reset` - a UNIX timestamp indicating when the limit resets by rolling over into the next hour interval
 
