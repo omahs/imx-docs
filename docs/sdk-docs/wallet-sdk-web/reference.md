@@ -56,3 +56,4 @@ Refer to the following list for the most common errors raised by the Wallet SDK 
 | Core SDK version | Wallet SDK version |
 | :--------------: | :----------------: |
 | [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.8](https://www.npmjs.com/package/@imtbl/wallet-sdk-web/v/0.1.8)  |
+| [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.9](https://www.npmjs.com/package/@imtbl/wallet-sdk-web/v/0.1.9)  |
