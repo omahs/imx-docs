@@ -121,7 +121,7 @@ keywords:
 
 ## 속성 유형 매핑
 
-다음은 메타데이터가 이뮤터블 X의 기능을 필터링하는 방법에 대한 true 사양 소스입니다. 메타데이터 필터는 API 사용자들이 자신들의 메타데이터 속성에 의해 반환된 NFT를 필터링할 수 있게 해줍니다. 이 필터는 수많은 엔드포인트에 적용됩니다.
+다음은 메타데이터가 이뮤터블 X의 기능을 필터링하는 방법에 대한 true 사양 소스입니다. 메타데이터 필터는 API 사용자들이 자신들의 메타데이터 속성에 의해 반환된 NFT를 필터링할 수 있게 해줍니다. 이 필터는 수많은 엔드 포인트에 적용됩니다.
 
 NFT가 이뮤터블 X 데이터베이스에 아직 존재하지 않는 메타데이터 키를 가지고 있는 경우, 그 새로운 키와 값이 이뮤터블 X 데이터베이스에 추가됩니다.
 
@@ -211,13 +211,13 @@ NFT가 이뮤터블 X 데이터베이스에 아직 존재하지 않는 메타데
   </tbody>
 </table>
 
-## Filterable
-The filterable parameter is a boolean condition that signals to the marketplace that the metadata attribute should be something the end user can filter assets with. All metadata attributes can still be text-searched but the marketplace could implement specific filters in the marketplace UI tailored to the particular collection.
+## 필터링 가능 변수
+필터링 가능한 변수는 메타데이터의 속성이 반드시 최종 사용자가 자산을 필터링할 수 있는 무언가여야 한다는 신호를 마켓플레이스로 보내는 불린 조건입니다. 그러면 모든 메타데이터 속성을 여전히 텍스트로 검색할 수 있으면서, 마켓플레이스가 특정한 콜렉션에 맞춰진 마켓플레이스 UI에서 특정 필터를 구현할 수 있습니다.
 
-Please note, the "filterable" parameter can only be **true** for non-text parameter types.
+'필터링 가능한' 변수는 텍스트가 아닌 변수 유형에서만 **true**가 될 수 있다는 점에 유의해 주십시오.
 
-Filters are only generated for properties at the top-level of the JSON metadata object.
-## Example metadata
+필터는 JSON 메타데이터 객체의 최고 수준의 속성을 위해서만 생산될 수 있습니다.
+## 메타데이터 예시
 ```json
 {
   // core fields:
@@ -238,11 +238,11 @@ Filters are only generated for properties at the top-level of the JSON metadata 
 }
 ```
 
-## Example metadata schema
-Please note:
-  * The "filterable" parameter can only be **true** for non-text parameter types.
-  * We don't need you to provide us the values for an enum type. We auto-generate the list of values based on what is passed to us through your metadata endpoint
-  * We don't need the range of values for a discrete type. We auto-generate the range based on the provided list of values
+## 메타데이터 스키마 예시
+다음에 유의해 주십시오.
+  * '필터링 가능한' 변수는 텍스트가 아닌 변수 유형에서만 **true**가 될 수 있습니다.
+  * enum 유형의 값은 제공하지 않아도 됩니다. 사용자의 메타데이터 엔드 포인트를 통해 이뮤터블 X에 전달되는 내용에 기초하여 값의 목록을 자동으로 생성합니다.
+  * discrete 유형의 값 범위는 필요하지 않습니다. 제공된 값의 리스트에 기초해 범위를 자동으로 생성합니다
 
 ```json
 {
