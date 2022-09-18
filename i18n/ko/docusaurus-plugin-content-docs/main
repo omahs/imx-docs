@@ -1,133 +1,129 @@
 ---
-id: 'trading-assets'
-title: 'Asset Trading'
-slug: '/trading-assets'
-sidebar_position: 7
+id: 'minting-on-immutable-x'
+title: 'Minting on Immutable X'
+slug: '/minting-on-immutable-x'
+sidebar_position: 4
 keywords:
   - imx-games
 ---
 
-To build a marketplace that supports trading of Immutable X assets, you need to:
-
-- Use our Orderbook APIs to display assets that are currently for sale.
-- Use Link SDK to prompt user actions.
-
-If you haven't already, you should also learn about supporting Immutable X assets in your application. See: [Asset Ownership](./asset-ownership.mdx).
-
-## Central Orderbook
-
-To help facilitate liquidity, Immutable maintains a central orderbook which can be immediately accessed by any application via our API. Adding your orders to this book will enable them to be filled by any other client application, improving your likelihood of being able to capture fees from these orders.
-
-The APIs for this orderbook are as follows:
-
-- [Get Orders](/reference#/operations/listOrders)
-- [Get Order](/reference#/operations/getOrder)
-- [Create Order](/reference#/operations/createOrder)
-- [Cancel Order](/reference#/operations/cancelOrder)
-
-Currently, Immutable X doesn't support updating existing orders, only cancellation and replacement. :::info Expiration timestamp format  
-When passing in a expiration_timestamp to the Orders API as part of a Post call you will need to convert the time to a Unix timestamp.
-
-The Unix epoch (or Unix time or POSIX time or Unix timestamp) is the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds (in ISO 8601: 1970-01-01T00:00:00Z). Literally speaking, the epoch is Unix time 0 (midnight 1/1/1970), but 'epoch' is often used as a synonym for Unix time. Some systems store epoch dates as a signed 32-bit integer, which might cause problems on January 19, 2038 (known as the Year 2038 problem or Y2038). The converter on this page converts timestamps in seconds (10-digit), milliseconds (13-digit) and microseconds (16-digit) to readable dates.
+This guide provides context on the steps required to list your game items, collectibles, or other ERC-721 assets (otherwise known as NFTs) on Immutable X. It's a good overview of tasks and concepts if you're new to the space, or if you want to learn more about the benefits of minting on Immutable X. :::info Ready to start?  
+If you're already across the details and ready to get started, see our [onboarding guide](../guides/onboarding/index.md)
 :::
 
-## Submitting Trades
+## Benefits
 
-If you have matched two orders on L2, you can submit those directly to the API using the [Create Trade](/reference#/operations/createTrade) endpoint. Note that these trades must still be signed by the relevant users.
+Immutable X is a “Layer 2” (L2) scaling solution built on top of Ethereum, otherwise known as Layer 1 (L1). Immutable X inherits the network and security of the Ethereum blockchain, and allows customers to mint and trade NFTs at zero gas cost, carbon-neutrally, and at more than 9,000 transactions per second (TPS) — whereas Ethereum currently does 5.
 
-## Immutable Link
+For more detail on how it works, see:
 
-Immutable X allows users to keep their existing Ethereum wallet: no installations, upgrades or changes required.
+- [Architecture overview](../overview/architecture-overview.md)
+- [Ethereum scalability](../overview/ethereum-scalability.md)
 
-To ensure that users are able to sign trades which can be processed by Immutable X, and to ensure that applications display the correct assets to users and provide them with informed consent, Immutable provides a bridging service called **Immutable Link**. This service uses a signed security string to derive a STARK-friendly Immutable X key, which the user will use to sign L2 interactions. This ensures that users can always recover assets as long as they retain access to their Ethereum wallet.
+## Liquidity
 
-Immutable Link is a separate web application, now with iframe support [more information here](../link-sdk/link-iframe-support.md). All StarkEx-specific Immutable X interactions are abstracted away from your marketplace and into Immutable Link.
+Immutable X has a shared assetbook and a shared orderbook. Every asset minted into Immutable X is stored in the shared assetbook. This enables any application on Immutable X to view and display the assets of any other application. In addition, every order submitted to Immutable X is stored by Immutable and made available to all marketplaces, which helps deliver the best liquidity outcome for projects on Immutable X.
 
-Immutable Link will soon be open source and made publicly available.
+Building on Immutable X means that you:
 
-## Link SDK
+- Do not need to build, manage or maintain your own orderbook to facilitate trades.
+- Have access to pools of demand that exist outside of a single marketplace.
 
-Immutable provides a convenient interface for initiating Immutable Link actions in the form of a Typescript SDK. To install the SDK in your project, use:
+Here’s an example:
 
-```bash title="SDK Installation"
-npm install @imtbl/imx-link-sdk
+- Project A (marketplace A) lists an NFT (NFT-A) in marketplace A.
+- Project B (marketplace B) displays NFT-A on marketplace B.
+- Project B users see the NFT and purchase NFT-A on marketplace B.
+- NFT-A sale is complete.
+
+In this example, marketplace A receives their market-maker fee and marketplace B receives their market-taker fee on the sale. To summarize, having orders listed on more than one marketplace means that your orders are more likely to sell faster, or for a greater price if on auction.
+
+**[Learn more about fees](../guides/fees/index.md)**
+
+## Asset metadata
+
+There are two types of metadata:
+
+- **Immutable metadata** — Set at the time of asset creation, enforced by the proof, and available [on-chain](./minting-on-immutable-x.md#on-chain-versus-off-chain) when an L2-minted NFT is withdrawn for the first time. The on-chain metadata is stored in the [blueprint](./minting-on-immutable-x.md#metadata-blueprint) or `mintingBlob`. This is where you should store permanent properties, such as IPFS hashes or values you want to access on L1.
+- **Mutable metadata** — Fully controlled by the application, and not recorded on-chain, mutable metadata is most useful for marketplaces to describe assets accurately to users. To ensure your NFT appears in marketplaces built on Immutable X correctly, it is recommended that every project register a metadata schema for their collection. [Learn more](../guides/asset-management/asset-metadata.mdx).
+
+## On-chain versus off-chain
+
+On-chain metadata refers to properties or characteristics that you set for your assets within the smart contract itself, meaning data that is stored on the blockchain (A.K.A on-chain).
+
+The purpose of on-chain data is to uniquely identify the value of the NFT, for example, rarity or character type, but you should store as little data on-chain as possible. In cases where NFTs represent artworks or other media forms, uploading an entire JPEG to the blockchain will cost a huge amount. This is why it's common for most NFT metadata to be stored off-chain.
+
+NFTs often use a Uniform Resource Identifier (URI) for off-chain metadata, which is a link to an external off-chain resource where the metadata for that particular asset is stored, usually in a JSON format. This URI is stored in the `tokenURI` field as part of the [ERC-721 standard](../overview/introduction-smart-contracts.md#erc721):
+
+```solidity
+function tokenURI(uint256 _tokenId) external view returns (string);
 ```
 
-This SDK allows users to prompt the Immutable Link window using a simple set of Typescript functions (draft interface presented below):
+Because this data is off-chain, whoever controls the storage location has the ability to change it. For example, if their server is shut down the metadata will no longer be accessible. Concerns like this are often why developers choose to use [IPFS](https://docs.ipfs.io/) hashes or links to guarantee the reliability and immutability of this off-chain data.
 
-```typescript title="SDK Interface"
-interface ETH {
-  amount: string;
-}
+## Metadata API
 
-interface ERC20 {
-  contract: string;
-  amount: string;
-}
+Projects are expected to self-host their media assets, including both the endpoints for the metadata of the assets, as well as other media defined by the metadata. When [registering your collection's contract](../guides/onboarding/collection-registration.mdx) with Immutable X, you need to provide a metadata API endpoint for us to retrieve metadata properties for each of your NFTs.
 
-interface ERC721 {
-  contract: string;
-  token_id: string;
-}
+Our metadata crawler will access `<metadata_api_url>/<token_id>` at the time of minting a new token. It appends `/<token_id>` to the metadata_api_url, for example: `https://metadata_api_url.com/1`
 
-type Asset = ETH | ERC20 | ERC721;
+Important:
 
-interface Order {
-  user: string;
-  buy: Asset;
-  sell: Asset;
-}
+- Make sure your endpoint returns a JSON response for each token ID that will be minted.
+- The endpoint URL must be a valid `https` address. If you are using IPFS, you should set up a dedicated (not public) gateway.
+- Your metadata endpoint should be able to handle a large amount of requests depending on the volume of your mints. If it fails to provide a response to the crawler after a few retries, or if it gets rate limited, your assets may be displayed without metadata.
+- Do not include any trailing characters on the metadata API URL that you provide. For example, if you submit `https://metadata_api_url.com/` it will be read as `/<token_id>`, resulting in https://metadata_api_url.com//1
+- Your metadata endpoint does not have to be at the very root of your domain. For example, `https://api.metadata.com/token` is still a valid metadata URL and will result in a crawl of `https://api.metadata.com/token/1`.
 
-interface ETHTxResponse {
-  rejectedSignature: boolean;
-  rejectedLink: boolean;
-  txhash: string;
-}
+After an asset from your collection is minted, we store the metadata returned by this endpoint in our database, and subsequent callers can use these [metadata properties](../guides/asset-management/asset-metadata.mdx#core-properties) in filter queries to the APIs (as defined in your metadata schema).
 
-interface ImXTxResponse {
-  id: string;
-  success: boolean;
-}
+:::info Updating metadata
+Your collection’s metadata schema can be updated by [editing the collection metadata schema.](/docs/metadata-schema-registration#edit-metadata-schema).
 
-class Link {
-  public deposit(user: string, assets: Array<Asset>): Promise<ETHTxResponse>;
-  public withdraw(user: string, assets: Array<Asset>): Promise<ETHTxResponse>;
-  public transfer(
-    user: string,
-    to: string,
-    assets: Array<Asset>
-  ): Promise<ImXTxReponse>;
-  public fill(user: string, orderIDs: Array<string>): Promise<ImXTxReponse>;
-  public order(
-    user: string,
-    orders: Array<Order>,
-    broadcast = true
-  ): Promise<ImXTxReponse>;
-}
-```
+In order to update asset metadata values based on the changes that you've made, you can [request a metadata refresh.](/docs/asset-metadata-refreshes) You will need to identify the tokens that need to be re-crawled, and the updates that have been made to them via the Metadata API.
 
-A high-level overview of the trading process is as follows. ![Trading](/img/Trading.png)
+We aim to process requests within 2 business days (AEST) but this can take longer depending on demand.
+:::
 
-## Example
+## Metadata blueprint
 
-To help understand how this works, consider a marketplace for Axies:
+The blueprint is a required field defined at the time of minting on Immutable X for each NFT. This represents the on-chain immutable metadata of the NFT that will be written to the blockchain when it is withdrawn from Immutable X.
 
-First, the marketplace uses the [get orders](/reference#/operations/listOrders) endpoint to load a list of active orders. Our buyer decides to buy a Mystic Axie for 3 ETH. The marketplace uses the [Link SDK](../link-sdk/index.md) to prompt the Link.
+The blueprint string can be of any format; typically it's a comma delimited string (e.g. "100,water,2,3") or an IPFS hash. This is passed to the `mintFor` function in your smart contract, where you can implement custom logic to decode it on-chain or just save it as it is.
 
-Link will then use the [get order details](/reference#/operations/getOrder) endpoint to get the required parameters for the user to sign. The user will sign the order, and the Link will use the [submit order](/reference#/operations/createOrder) endpoint to send it to Immutable X.
+For a better understanding of how the blueprint is used, take a look at our smart contract templates in the [imx-contracts repo](https://github.com/immutable/imx-contracts). :::info Blueprint data  
+The metadata that appears on Immutable X does not read any data from the blueprint, so there's no reason to define a blueprint as an entire JSON string. Instead, it could be a link, hash, or a few select properties to optionally decode and save in custom mappings in your smart contract
+:::
 
-The exchange then confirms or rejects the trade, and notifies Link, which will send an `ImXTxResponse` back to the marketplace, which can display the success or failure of the trade to the user. The asset will be _immediately_ available for trading or use within Axie Infinity, provided they [support asset ownership](./asset-ownership.mdx).
+# Minting on Layer 2
 
-## Frequently Asked Questions
+For a smart contract to work with Immutable X, we need an implementation of a `mintFor` function, which is what our Stark contract calls at the time of withdrawing a minted token from L2 to L1. Contracts also require an `owner()` function to verify the contract’s owner. There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata.
 
-_1. Is there an auction flow functionality?_
+## Token ID
 
-Currently, the auction flow functionality is not supported yet. It will be coming later.
+When minting on Immutable X, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. As mentioned above, you also have to provide a [blueprint](./minting-on-immutable-x.md#metadata-blueprint) for each token. The blueprint represents the on-chain, immutable metadata of the NFT that will be passed (along with the token ID) to your `mintFor` function.
 
-_2. What happens when a trade happens on Immutable? Is there a callback sent to our servers to adjust our application inventory?_
+In a Layer 1 smart contract, it's common for the ERC-721 token ID to be incremented in the minting function. With Immutable X, the token ID is defined at the time of minting to Immutable X and passed to the `mintFor` function in the minting blob, which then gets decoded into the respective ID and blueprint variables. You will have to keep track of the token ID on your end and increment it off-chain for every mint.
 
-At the moment, we recommend polling our /mints, /transfers and /trades APIs at regular intervals - we'll likely set up webhooks/sockets in future.
+Additionally, token IDs provided when minting on L2 must be unique. Providing a duplicate token ID will result in an API error, with the ID of the duplicate token being returned in the error message. For example, if your mint request contains a token with the ID of `10`, and your collection already has a token with an ID of `10`, you'll get the error message: `Error inserting asset, duplicate ID and token address: [10]`.
 
-_3. How do we ensure the Smart Contract is utilised whenever the NFT is traded?_
+**[Learn more in our introduction to smart contracts](../overview/introduction-smart-contracts.md)**
 
-To ensure this, you will need to ban direct transferring from user to user. Best way to combat this is providing the best place to trade and ensuring it’s within Immutable X.
+## Mintable contracts
+
+If you have an existing smart contract you want to mint assets into, you'll need to set up a proxy contract to implement the `mintFor` action and ensure that this proxy contract has the appropriate permissions to mint on your non-mintable ERC-721 contract. Your main contract must adopt a flexible enough permission structure to allow for new 'minter' proxy contracts.
+
+## Minting assets
+
+You can mint more than one asset in an API call, and even mint multiple assets to multiple users. After your [collection's contract has been registered](../guides/onboarding/collection-registration.mdx), you can begin minting.
+
+Here's a summary of things to be aware of:
+
+- **On-chain properties** — If your contract contains [on-chain properties](./minting-on-immutable-x.md#on-chain-versus-off-chain), ensure they are passed into the mint function's [blueprint metadata](./minting-on-immutable-x.md#metadata-blueprint), as those are the only extra values the `mintFor` receives during withdrawal.
+- **Token URI** — Consider what data will need to be on-chain if the asset is withdrawn. To include a property on-chain, often a base URI will be used pointing to a decentralized file service, like an IPFS. This ensures the rest of the data will never change and can still be retrieved without having it all on-chain.
+- **Token IDs cannot be changed** — When minting, you will [set the IDs](./minting-on-immutable-x.md#token-id) for your assets, but note that they cannot be changed later.
+- **Token IDs must be unique** – When minting, the token ID provided must not have already been used in the same collection, as [explained above](./minting-on-immutable-x.md#token-id).
+- **Minting throughput** — We recommend doing more mints per minting request over multiple minting requests with fewer mints per request. There is no restriction on the volume of concurrent minting requests, however, you should handle http status code `429` (too many requests) with a sensible retry mechanism. For example: Wait a second then try again. If the same error occurs, wait two seconds and try again, and so on.
+- **Length of your asset ID** – Remember that your Asset ID is part of your on-chain mint. If an owner of your collection withdraws the asset to L1, the larger the ID you use, the more gas it will cost buyers to withdraw and transact in L1.
+
+**[Read more about minting assets](../guides/asset-management/asset-minting.md)**
