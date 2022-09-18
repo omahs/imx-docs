@@ -1,207 +1,27 @@
 ---
-id: '자산-민팅'
-title: '자산 민팅'
-slug: '/자산-민팅'
-sidebar_position: 4
+id: 'asset-withdrawals'
+title: 'Asset Withdrawals'
+slug: 'asset-withdrawals'
+sidebar_position: 5
 keywords:
   - imx-games
 ---
 
-이뮤터블 X의 핵심적인 장점은 이더리움에서 자산을 민팅한 후 거래소에 입금하는 것이 아니라 애플리케이션이 레이어 2에서 자산을 민팅할 수 있다는 것입니다. 이런 방식으로 민팅을 하게 되면 애플리케이션과 사용자 모두 가스 비용을 지불할 필요가 없어져 현재 코인계의 지형을 크게 개선할 수 있습니다.
+Withdrawals move assets from the off-chain environment to the on-chain environment. Users submit a withdrawal request, then wait for that withdrawal to be included in a batch and published on-chain. After the batch has been published, the user can send a transaction.
 
-이뮤터블 X에서는 다른 스케일링 솔루션과 타협하지 않고 이를 실현할 수 있습니다. 예를 들어 이뮤터블 X에서 민팅된 모든 L2 자산은 L1(이더리움) 수준의 보안을 유지하며 다음 배치에서 이더리움으로 인출할 수 있습니다.
+The withdrawal process for both on-chain and L2 minted assets are identical. Below is a high-level overview of the asset withdrawal process. ![Asset Withdrawals](/img/Withdrawals.png)
 
-# 민팅 가능한 컨트랙트
+## Withdrawal process
 
-사용자가 자산을 민팅해 넣고 싶은 기존 스마트 컨트랙트를 보유하고 있다면, 사용자는 프록시 컨트랙트를 설정하여 `mintFor` 행동을 구현하고, 이 프록시 컨트랙트가 민팅이 불가능한 사용자의 ERC-721 컨트랙트에서 민팅하기 위한 적절한 승인을 확보하도록 만들어야 합니다. 사용자의 메인 컨트랙트는 반드시 충분히 유연한 승인 구조를 채택하여 새로운 '민터' 프록시 컨트랙트를 허용해야 합니다.
+Withdrawal is a 2-step process:
 
-민팅이 불가능한 기존의 ERC-721 컨트랙트를 업데이트하려면, 다음의 행동을 구현하십시오.
+- The first call to [gets details of a signable withdrawal](/reference#/operations/getSignableWithdrawal) is similar to the get signable details call for an on-chain asset deposit, returning the vault allocated for the asset.
+- The second call to [withdrawal](/reference#/operations/createWithdrawal) will initiate the withdrawal process, post validating the request, submits the withdrawal request to be included in the generation and submission of the next batch.
 
-```solidity
-interface IMintable {
-    function mintFor(address to, uint256 quantity, bytes mintingBlob);
-}
-```
+Upon batch confirmation (on-chain state update), the asset is now available to be withdrawn by the initial owner / originator of the asset.
 
-이뮤터블 X의 컨트랙트 `0x5FDCCA53617f4d2b9134B29090C87D01058e27e9` 행동으로의 접속을 화이트리스트 처리하여 승인받지 않은 실행이 일어나지 않도록 하십시오.
+In the unlikely case something were to happen to the exchange, we provide the option for users to request for a full withdrawal which will kick off a sequence of events known as a mass exit scenario. The exchange is then given a timeframe, known as a freeze grace period (e.g. 7 days), to service the full withdrawal request.
 
-[imx-contracts](https://github.com/immutable/imx-contracts) 레포에서 스마트 컨트랙트의 예시를 확인할 수 있습니다.
+Under normal operations of the exchange service, the exchange submits a STARK proof indicating the fulfilment from the vault. Upon acceptance of the proof, the contract adds the withdrawn amount to an on-vault and the full withdrawal request is cleared. You may then withdraw this amount from the on-chain vault back into your account by executing the normal on-chain withdrawal request.
 
-도움이 필요한 경우, [고객 지원 센터에 연락](https://support.immutable.com)하여 사용자의 기존 컨트랙트의 실행 가능성에 대해 의논하십시오.
-
-# 자산 민팅
-
-이뮤터블 X에서 민팅 API를 공개합니다. 사용자는 API 호출에서 하나 이상의 자산을 민팅할 수 있으며, 다중 사용자에게 다중 자산을 민팅할 수도 있습니다.
-
-이뮤터블 X의 메타데이터 크롤러는 새로운 토큰의 민팅 시 `<project_metadata_endpoint><token_id>`에 접속합니다. 사용자의 엔드 포인트가 민팅될 각 토큰 ID의 JSON 응답을 반환하도록 하십시오.
-
-다음은 L2 자산 민팅 과정의 고급 개요입니다.![Asset Minting](/img/AssetMinting.png)
-
-다음은 [mint tokens](/reference#/operations/mintTokens)의 예시입니다.
-
-```json
-{
-  "mints": [
-    {
-      "user": "0x...",
-      "tokens": [
-        {
-          "type": "ERC721",
-          "data": {
-            "id": "<asset ID>", // custom asset ID (it's possible to make this the ERC-721 token ID depending on the mintable contract implementation)
-            "blueprint": "<on-chain metadata>", //note special characters like '<' or '>' cannot be part of the blueprint
-            "token_address": "0x..."
-          }
-        }
-      ],
-      "auth_signature": "0x..." // signature signed by the contract owner
-    }
-  ]
-}
-```
-
-**참고:**위의 `token_address`는 컨트랙트 주소입니다.
-
-하나 또는 많은 자산에 대한 사용자의 각 민팅 요청은 컨트랙트 소유자가 서명한 `auth-signature`를 요구합니다. 그러면 컨트랙트의 소유자/배치 책임자를 대표하는 개체만이 사용자들의 민팅을 승인할 수 있게 허용됩니다. 즉, 민팅 공급이 컨트랙트 소유자의 키에 의해 제한됩니다.
-
-The message digest for the payload is the keccak 256 hash of the stringified mint body payload (without the `auth_signature` field pre-filled)
-
-```json
-{
-  "mintBodyPayload": {
-    "ether_key": "0x5f333ec73a6a851b8cd7a4a450416a966f9bcceb",
-    "tokens": [
-      {
-        "type": "ERC721",
-        "data": {
-          "id": "10",
-          "blueprint": "{onchain-metadata}",
-          "token_address": "0x6De6B04D630A4A41bB223815433b9Ebf0da50F69"
-        }
-      }
-    ],
-    "auth_signature": ""
-  }
-}
-```
-
-Below is a snippet of JS code to generate the auth signature using [ethers.js](https://docs.ethers.io/v5/).
-
-```typescript
-import * as encUtils from 'enc-utils';
-const hash = keccak256(toUtf8Bytes(JSON.stringify(mintBodyPayload)));
-const sig = deserializeSignature(await this.signer.signMessage(hash));
-return encUtils.addHexPrefix(
-  encUtils.padLeft(sig.r.toString(16), 64) +
-    encUtils.padLeft(sig.s.toString(16), 64) +
-    encUtils.padLeft(sig.recoveryParam?.toString(16) || '', 2)
-);
-```
-
-Our implementation adopts an all-or-nothing approach, where if any one of our validations fail along the way, we will roll back every previous mint under the scope of a single mint request, to prevent any partial mints.
-
-Once your mint request comes through, you'll be able to trade immediately with your assets.
-
-The withdrawal of a L2-minted asset follows the same process as an on-chain minted asset. See [asset withdrawals](./asset-withdrawals.md) to learn more.
-
-:::caution Minting with Royalties
-NFTs minted using mint v1 will not have royalties. We will only manually add royalties to Ethereum contracts that have implemented mint v1 that are registered before **Thursday 25th of November, 11.59pm AEST**.
-
-Use mint v2 to ensure that royalties are added to your NFTs.
-:::
-
-## Minting throughput
-
-It is preferable to have more mints per minting request instead of more minting requests with less mints per request. It is also advisable to have as less concurrent minting requests as possible. Follow these practices will help you avoid minting request failures due to concurrency and timeout.
-
-In the case of timeout, please retry with some gap in between.
-
-## Token validation
-
-Tokens that are minted on our platform (L2) are validated to ensure they can later be successfully withdrawn to the Ethereum (L1) layer. This validation occurs during the minting process.
-
-If the validation fails, a `mint_unwithdrawable` error code will be thrown. [See error description](../../troubleshooting/error-codes.md#mint_unwithdrawable).
-
-## Minting example
-
-Here's and example script to mint tokens in TypeScript:
-
-```typescript
-import { AlchemyProvider } from '@ethersproject/providers';
-import { Wallet } from '@ethersproject/wallet';
-import { ImLogger, WinstonLogger } from '@imtbl/imlogging';
-import { ImmutableXClient, MintableERC721TokenType } from '@imtbl/imx-sdk';
-
-import env from './config/client';
-import { loggerConfig } from './config/logging';
-
-const provider = new AlchemyProvider('ropsten', env.alchemyApiKey);
-const log: ImLogger = new WinstonLogger(loggerConfig);
-const component = 'imx-bulk-mint-script';
-
-const waitForTransaction = async (promise: Promise<string>) => {
-  const txId = await promise;
-  log.info(component, 'Waiting for transaction', {
-    txId,
-    etherscanLink: `https://ropsten.etherscan.io/tx/${txId}`,
-    alchemyLink: `https://dashboard.alchemyapi.io/mempool/eth-ropsten/tx/${txId}`,
-  });
-  const receipt = await provider.waitForTransaction(txId);
-  if (receipt.status === 0) {
-    throw new Error('Transaction rejected');
-  }
-  log.info(component, 'Transaction Mined: ' + receipt.blockNumber);
-  return receipt;
-};
-
-(async (): Promise<void> => {
-  const mintToWallet = '0x....'; // eth wallet public address which will receive the token
-  const signer = new Wallet(process.env.PRIVATE_KEY!).connect(provider);
-
-  const minter = await ImmutableXClient.build({
-    publicApiUrl: process.env.PUBLIC_API_URL, // https://api.ropsten.x.immutable.com/v1 for ropsten, https://api.x.immutable.com/v1 for mainnet
-    signer: signer,
-    starkContractAddress: process.env.STARK_CONTRACT_ADDRESS, // 0x4527BE8f31E2ebFbEF4fCADDb5a17447B27d2aef for ropsten, 0x5FDCCA53617f4d2b9134B29090C87D01058e27e9 for mainnet
-    registrationContractAddress: process.env.REGISTRATION_CONTRACT_ADDRESS, // 0x6C21EC8DE44AE44D0992ec3e2d9f1aBb6207D864 for ropsten, 0x72a06bf2a1CE5e39cBA06c0CAb824960B587d64c for mainnet
-    gasLimit: process.env.GAS_LIMIT,
-    gasPrice: process.env.GAS_PRICE,
-  });
-
-  log.info(component, 'MINTER REGISTRATION');
-  const registerImxResult = await minter.registerImx({
-    etherKey: minter.address.toLowerCase(),
-    starkPublicKey: minter.starkPublicKey,
-  });
-
-  if (registerImxResult.tx_hash === '') {
-    log.info(component, 'Minter registered, continuing...');
-  } else {
-    log.info(component, 'Waiting for minter registration...');
-    await waitForTransaction(Promise.resolve(registerImxResult.tx_hash));
-  }
-
-  const result = await minter.mint({
-    mints: [
-      {
-        etherKey: mintToWallet.toLowerCase(),
-        tokens: [
-          {
-            type: MintableERC721TokenType.MINTABLE_ERC721,
-            data: {
-              tokenAddress: env.tokenAddress, // address of token
-              id: '123', // must be a unique uint256 as a string
-              blueprint: 'metadata', // metadata can be anything but your L1 contract must parse it on withdrawal from the blueprint format '{tokenId}:{metadata}'
-            },
-          },
-        ],
-        nonce: '1',
-        authSignature: '', // Leave empty
-      },
-    ],
-  });
-  console.log(result);
-})().catch((e) => {
-  log.error(component, e);
-  process.exit(1);
-});
-```
+If the exchange fails to service the request (does not submit a valid proof within the given timeframe), the user is entitled to freeze the contract and indicating the vault for which the full withdrawal request has not been serviced. You are then able to obtain a merkle tree path of your vault to be evicted with respect to the frozen vault tree root via our data availability committee (DAC) and submit the proof on-chain. If the proof is valid, the escape is successful and your assets are added to an on-chain vault to be withdrawn only by you.
