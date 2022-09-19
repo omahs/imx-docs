@@ -184,11 +184,15 @@ const configuration = {
           {
             to: '/reference',
             position: 'left',
-            label: 'APIs',
+            label: 'API',
             type: 'dropdown',
             items: [
               {
-                label: 'API Changelog',
+                label: 'Reference',
+                to: '/reference',
+              },
+              {
+                label: 'Changelog',
                 to: '/docs/api-changelog',
               },
             ],
