@@ -31,13 +31,8 @@ const config = getConfig({
   coreContractAddress: '0x7917eDb51ecD6CdB3F9854c3cc593F33de10c623',
   registrationContractAddress: '0x1C97Ada273C9A52253f463042f29117090Cd7D83',
   chainID: 5,
-<<<<<<< HEAD
-  basePath:  'https://api.goerli.x.immutable.com',
-  headers: { 'x-api-custom-header': '...' } // headers are optional unless specified otherwise
-=======
   basePath: 'https://api.sandbox.x.immutable.com',
   headers: { 'x-api-custom-header': '...' }, // headers are optional unless specified otherwise
->>>>>>> 756ad34a6f6ea1439a376fe1de62b4487cd71ab4
 });
 
 // Set up a provider and a signer
