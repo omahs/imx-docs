@@ -1,0 +1,48 @@
+---
+title: "Get started"
+slug: "/guides-new/get-started"
+keywords: [imx-dx]
+---
+
+The following guides are to help you get started building on Immutable X using our developer tools.
+
+They provide guidance on:
+* Core SDK
+* Wallet SDK
+* Link SDK
+* StarkNet
+
+## Getting started with the Core SDK
+
+Our Core SDKs make it easy for you to use Immutable X from within your application. They are a wrapper around our API and provide the bulk of the functionality of the Immutable X platform.
+
+Before you can start using the Core SDK, you must initialize the client:
+* [Typescript Core SDK](#typescript-core-sdk)
+* [Kotlin (JVM) Core SDK](#kotlin-jvm-core-sdk)
+* [Swift Core SDK](#swift-core-sdk)
+* [Golang Core SDK](#golang-core-sdk)
+
+#### Typescript Core SDK
+
+Initialize the Core SDK client with the network on which you want your application to run (see [all networks available](./src/config/config.ts)):
+
+| Param | Description |
+| -- | -- |
+| `Config.SANDBOX` | The default test network (currently, it is Goërli)  |
+| `Config.ROPSTEN` | Ropsten test network (to be deprecated soon) |
+| `Config.PRODUCTION` | Ethereum network  |
+
+```ts
+import { ImmutableX, Config } from '@imtbl/core-sdk';
+const config = Config.ROPSTEN; // Or PRODUCTION or SANDBOX
+const client = new ImmutableX(config);
+```
+
+#### Kotlin (JVM) Core SDK
+[Add info]
+
+#### Swift Core SDK
+[Add info]
+
+#### Golang Core SDK
+[Add info]

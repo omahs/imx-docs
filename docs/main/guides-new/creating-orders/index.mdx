@@ -3,37 +3,84 @@ title: "Creating orders"
 slug: "/guides-new/orders"
 keywords: [imx-wallets, imx-dx]
 ---
-<!-- The description of 'order' is taken from ... -->
-An **order** is a sale listing. It can be created by users who want to sell an asset that they own. It can specify things like price and sale period.
 
-## Guides
-<table>
-  <tbody>
-    <tr>
-      <th>Settlement layer</th>
-      <th>Guides</th>
-    </tr>
-    <tr>
-      <td>StarkEx</td>
-      <td>
-        <ul>
-          <li><a href='/docs/guides-new/orders/api'>API</a></li>
-          <li><a href='/docs/guides-new/orders/typescript'>Typescript</a></li>
-          <li><a href='/docs/guides-new/orders/link'>Typescript (with wallet UI - Link SDK)</a></li>
-          <li><a href='/docs/guides-new/orders/kotlin-jvm'>Kotlin</a></li>
-          <li><a href='/docs/guides-new/orders/swift'>Swift</a></li>
-        </ul>
-      </td>
-    </tr>
-      <tr>
-      <td>StarkNet</td>
-      <td>
-        <ul>
-          <li><a href='/docs/guides-new/orders/starknet'>Guide</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+* [Overview](#overview)
+* How to create orders using:
+  * [Core SDK](#create-orders-using-the-core-sdk)
+  * [Link SDK](#create-orders-using-the-link-sdk)
+  * [StarkNet](#create-orders-on-starknet)
 
+## Overview
 
+An order is a sale listing for an asset. It contains details like price and sale period. Some applications, such as marketplaces, may want to allow users to create orders in order to sell their assets.
+
+### Where is the order created?
+When an order is created, it is added to Immutable X's orderbook smart contract on StarkEx. This shared orderbook is what enables all orders created on Immutable X to be available on every marketplace built on this protocol.
+
+### Fees
+
+## Create orders using the Core SDK
+
+### 1. Initialize the Core SDK
+In order to use the Core SDK, you need to [initialize it](./get-started#getting-started-with-the-core-sdk).
+
+### 2. Obtain the user's signature
+Creating an order for a user requires a user's signature, so your application will need to connect to user wallets. See the guide on [how to obtain user signatures](/docs/guides-new/user-signatures).
+
+### 3. Set the order params
+// Add this info
+
+### 4. Create the order
+
+#### Typescript Core SDK
+
+```ts
+// Add code sample
+```
+
+#### Kotlin (JVM) Core SDK
+
+```kotlin
+// Add code sample
+```
+
+#### Swift Core SDK
+
+```swift
+// Add code sample
+```
+
+#### Golang Core SDK
+```go
+// Add code sample
+```
+
+### 5. Cancel an order
+#### Typescript Core SDK
+
+```ts
+// Add code sample
+```
+
+#### Kotlin (JVM) Core SDK
+
+```kotlin
+// Add code sample
+```
+
+#### Swift Core SDK
+
+```swift
+// Add code sample
+```
+
+#### Golang Core SDK
+```go
+// Add code sample
+```
+
+## Create orders using the Link SDK
+
+See [Link.sell](https://docs.x.immutable.com/docs/linksell-and-erc20-support) guide.
+
+## Create orders on StarkNet

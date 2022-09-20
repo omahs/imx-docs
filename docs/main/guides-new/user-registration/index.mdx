@@ -1,12 +1,19 @@
 ---
-title: "User registration"
+title: "Register users"
 slug: "/guides-new/user-registration"
 keywords: [imx-wallets, imx-dx]
 ---
 
+* [Overview](#overview)
+* How to register users using:
+  * [Core SDK](#how-to-register-users-using-the-core-sdk)
+  * [Link SDK](#how-to-register-users-using-the-link-sdk)
+
+## Overview
+
 Only users on the [StarkEx settlement layer](#) need to be registered.
 
-## What is user registration?
+### What is user registration?
 
 In order for a user to be registered, they first need an existing L1 wallet.
 
@@ -21,39 +28,24 @@ Then it consists of 2 main steps:
 
 By default, Immutable's API and libraries provide for off-chain registration when a user is first registered. Then, when the users performs a transaction that requires an update of the state of the corresponding L1 wallet (ie. withdrawing an NFT from the L2 wallet to the L1 wallet), the user is registered on-chain.
 
-## Why do you need to register users?
+### Why do you need to register users?
 
 The L1-L2 mapping of user wallets needs to occur so that users can transfer assets between their L1 and L2 wallets (also known as "bridging").
 
-## Guides
-Only users on the StarkEx settlement layer need to be registered.
+## How to register users using the Core SDK
+### 1. Initialize the Core SDK
+In order to use the Core SDK, you need to [initialize it](./get-started#getting-started-with-the-core-sdk).
 
-#### Pre-requisites:
-* [User signatures](/docs/guides-new/user-signatures)
+### 2. Obtain the user's signature
+Registering a user requires the user's signature, so your application will need to connect to user wallets. See the guide on [how to obtain user signatures](/docs/guides-new/user-signatures).
 
-<table>
-  <tbody>
-    <tr>
-      <th>Settlement layer</th>
-      <th>Guides</th>
-    </tr>
-    <tr>
-      <td>StarkEx</td>
-      <td>
-        <ul>
-          <li><a href='/docs/guides-new/user-registration/api'>API</a></li>
-          <li><a href='/docs/guides-new/user-registration/typescript'>Typescript</a></li>
-          <li><a href='/docs/guides-new/user-registration/link'>Typescript (with wallet UI - Link SDK)</a></li>
-          <li><a href='/docs/guides-new/user-registration/kotlin-jvm'>Kotlin</a></li>
-          <li><a href='/docs/guides-new/user-registration/swift'>Swift</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+### 3. Register the user
+* [Typescript Core SDK](#typescript-core-sdk)
+* [Kotlin (JVM) Core SDK](#kotlin-jvm-core-sdk)
+* [Swift Core SDK](#swift-core-sdk)
+* [Golang Core SDK](#golang-core-sdk)
 
-## Typescript
-From [here](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/workflows).
+#### Typescript Core SDK
 
 ```ts
 import { Workflows, getConfig } from '@imtbl/core-sdk';
@@ -72,7 +64,7 @@ const coreSdkWorkflows = new Workflows(coreSdkConfig);
 await coreSdkWorkflows.registerOffchain(walletConnection);
 ```
 
-## Kotlin (JVM)
+#### Kotlin (JVM) Core SDK
 
 ```kotlin
 // Get L1 and L2 signers (see 'Obtaining user signatures' step)
@@ -81,7 +73,7 @@ await coreSdkWorkflows.registerOffchain(walletConnection);
 ImmutableXCore.registerOffchain(L1Signer, L2Signer)
 ```
 
-## Swift
+#### Swift Core SDK
 
 ```swift
 // Get L1 and L2 signers (see 'Obtaining user signatures' step)
@@ -90,19 +82,11 @@ ImmutableXCore.registerOffchain(L1Signer, L2Signer)
 ImmutableXCore.registerOffchain(L1Signer, L2Signer)
 ```
 
-## Link
-See [Link.setup](https://docs.x.immutable.com/docs/link-setup) guide.
-
-## API
-```typescript
-// Provide instructions on how to get the params for regiserUser endpoint
-const registerUserParams = {
-  email: 'email',
-  eth_signature: 'eth sig',
-  ether_key: 'ether key string',
-  stark_key: 'stark key',
-  stark_signature: 'stark sig',
-}
-
-// Call registerUser endpoint with params object
+#### Golang Core SDK
+```go
+// Add code sample
 ```
+
+## How to register users using the Link SDK
+
+See [Link.setup](https://docs.x.immutable.com/docs/link-setup) guide.

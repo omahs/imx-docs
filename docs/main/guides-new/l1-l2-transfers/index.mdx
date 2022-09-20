@@ -1,8 +1,16 @@
 ---
-title: "L1 <> L2 asset transfers"
+title: "Assset deposits and withdrawals"
 slug: "/guides-new/l1-l2-transfers"
 keywords: [imx-wallets, imx-dx]
 ---
+
+* [Overview](#overview)
+* How to withdraw and deposit assets using:
+  * [Core SDK](#deposit-and-withdraw-assets-using-the-core-sdk)
+  * [Link SDK](#deposit-and-withdraw-assets-using-the-link-sdk)
+  * [StarkNet](#deposit-and-withdraw-assets-on-starknet)
+
+## Overview
 
 The great thing about Immutable X is that you can transfer your assets between L1 and L2, depending on the layer on which you would like to transact with them. This means that you can take advantage of the cheaper transaction fees on L2 for transactions such as minting, or buying, or selling, NFTs, but you can withdraw them to L1 if you decide that you now want to sell this asset on L1 instead.
 
@@ -29,35 +37,49 @@ Terminology to note:
 * A user has earned ETH from selling their NFT on L2, however, they want to use this ETH on L1 so they transfer it from their L2 to L1 wallet.
 * A user has purchased an NFT on an Immutable marketplace, however, now wants to sell it on an L1 marketplace, so they withdraw it from L2 to L1 in order to do so.
 
-## Guides
-<table>
-  <tbody>
-    <tr>
-      <th>Settlement layer</th>
-      <th>Guides</th>
-    </tr>
-    <tr>
-      <td>StarkEx</td>
-      <td>
-        <ul>
-          <li><a href='/docs/guides-new/l1-l2-transfers/api'>API</a></li>
-          <li><a href='/docs/guides-new/l1-l2-transfers/typescript'>Typescript</a></li>
-          <li><a href='/docs/guides-new/l1-l2-transfers/link'>Typescript (with wallet UI - Link SDK)</a></li>
-          <li><a href='/docs/guides-new/l1-l2-transfers/kotlin-jvm'>Kotlin</a></li>
-          <li><a href='/docs/guides-new/l1-l2-transfers/swift'>Swift</a></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>StarkNet</td>
-      <td>
-        <ul>
-          <li><a href='/docs/guides-new/l1-l2-transfers/starknet'>Using the Arch bridging protocol</a></li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+## Deposit and withdraw assets using the Core SDK
+
+### 1. Initialize the Core SDK
+In order to use the Core SDK, you need to [initialize it](./get-started#getting-started-with-the-core-sdk).
+
+### 2. Obtain the user's signature
+Enabling users to transfer assets requires a user's signature, so your application will need to connect to user wallets. See the guide on [how to obtain user signatures](/docs/guides-new/user-signatures).
+
+### 3. ...
+// Add this info
+
+### 4. ...
+// Add this info
+
+#### Typescript Core SDK
+
+```ts
+// Add code sample
+```
+
+#### Kotlin (JVM) Core SDK
+
+```kotlin
+// Add code sample
+```
+
+#### Swift Core SDK
+
+```swift
+// Add code sample
+```
+
+#### Golang Core SDK
+```go
+// Add code sample
+```
+
+## Deposit and withdraw assets using the Link SDK
+
+See [Link.deposit](https://docs.x.immutable.com/docs/link-deposit-options), [Link.prepareWithdrawal](/docs/linkpreparewithdrawal) and [Link.completeWithdrawal](/docs/linkcompletewithdrawal) guides.
+
+## Deposit and withdraw assets on StarkNet
 
 
 
