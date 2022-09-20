@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/immutable/imx-docs/compare/v1.25.0...v1.26.0) (2022-09-20)
+
+
+### Features
+
+* add API reference in API dropdown ([82cbc65](https://github.com/immutable/imx-docs/commit/82cbc65d5adde07dadabbbd69e4531f4715c6b21))
+
 # [1.25.0](https://github.com/immutable/imx-docs/compare/v1.24.0...v1.25.0) (2022-09-18)
 
 
