@@ -77,7 +77,7 @@ To trade cryptocurrencies and NFTs, we need a wallet. For this tutorial, we will
 
 Changing the network enables us to deploy on a testnet where we can experiment using test Eth. To learn more about transactions on Ethereum work, check out [this page](https://ethereum.org/en/developers/docs/transactions/) from the Ethereum foundation.
 
-## Step 3: Obtain rEth
+## Step 3: Obtain GoerliETH
 To deploy our smart contract to the Goerli test network, we’ll need some test Eth. To get test Eth you can go to the [Goerli faucet](https://goerlifaucet.com/) and enter your Goerli account address, then click “Send Me ETH.” It may take a few minutes for the goerliETH to arrive.
 
 If this faucet doesn't work, try these alternative faucets:
