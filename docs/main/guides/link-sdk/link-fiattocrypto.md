@@ -61,17 +61,16 @@ await link.fiatToCrypto({ cryptoCurrencies: ['IMX', 'GODS'] })
 ```
 
 :::success Testing the flow in Sandbox
-To test the transactions in the Sandbox test environment, please use the following test cards:  
-**CARD**: Visa  
-**NUMBER**: 4000056655665556  
-**DATE**: any date in the future  
-**CVC**: 123  
+To test the transactions in the Sandbox test environment, please use the following test cards:
+**CARD**: Visa
+**NUMBER**: 4444493318246892
+**DATE**: 12/2023
+**CVC**: 123
 
-
-**CARD**: Visa  
-**NUMBER**: 4000020951595032  
-**DATE**: 12/2022  
-**CVC**: 123  
+**CARD**: Mastercard
+**NUMBER**: 2222755234426838
+**DATE**: 01/2024
+**CVC**: 123
 :::
 
 ## Errors
