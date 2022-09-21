@@ -6,7 +6,7 @@ keywords: [imx-dx]
 Below is a high-level overview of the steps required to onboard with Immutable X.
 
 # Before you start
-The Immutable X test environment uses Ropsten. If you haven’t already, get [prepared to test](../getting-started-guide.md#prepare-to-test) with an Ethereum wallet and some test ETH. You also need to [register as a user](../getting-started-guide.md#register-a-user-account) before you can register a project.
+The Immutable X test environment uses Goerli. If you haven’t already, get [prepared to test](../getting-started-guide.md#prepare-to-test) with an Ethereum wallet and some test ETH. You also need to [register as a user](../getting-started-guide.md#register-a-user-account) before you can register a project.
 :::info Common Terms
 The following explains a couple of Immutable X terms used throughout our guides:
 
@@ -15,7 +15,7 @@ When you register a **collection** with Immutable X it creates a **project**. A 
 ## 1. Deploy a smart contract
 All smart contracts on L2 currently require a corresponding contract on L1 Ethereum, to ensure their tokens can be deposited and withdrawn correctly.
 
-To test your assets, minting, and trading flows, you need to deploy an ERC-721 contract on the Ropsten test network, then register it with Immutable X. Similarly, to mint on mainnet Ethereum, you need to deploy an ERC-721 contract on mainnet, then follow the same steps.
+To test your assets, minting, and trading flows, you need to deploy an ERC-721 contract on the Goerli test network, then register it with Immutable X. Similarly, to mint on mainnet Ethereum, you need to deploy an ERC-721 contract on mainnet, then follow the same steps.
 
 Example smart contracts are available in our [imx-contracts](https://github.com/immutable/imx-contracts) repo. 
 
@@ -55,7 +55,7 @@ View the guide: [Metadata schema registration](./metadata-schema-registration.md
 **[Learn more about asset metadata](../asset-management/asset-metadata.mdx)**
 
 :::caution Metadata refreshing requires support
-While you can register your own collections and metadata on Ropsten, you **cannot** execute a metadata refresh yourself. 
+While you can register your own collections and metadata on Goerli, you **cannot** execute a metadata refresh yourself. 
 
 To refresh metadata changes, you need to [contact support](https://support.immutable.com) and identify the tokens that need to be re-crawled, and the updates that have been made to them.
 
