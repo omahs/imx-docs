@@ -1,3 +1,17 @@
+# [1.26.0](https://github.com/immutable/imx-docs/compare/v1.25.0...v1.26.0) (2022-09-20)
+
+
+### Features
+
+* add API reference in API dropdown ([82cbc65](https://github.com/immutable/imx-docs/commit/82cbc65d5adde07dadabbbd69e4531f4715c6b21))
+
+# [1.25.0](https://github.com/immutable/imx-docs/compare/v1.24.0...v1.25.0) (2022-09-18)
+
+
+### Features
+
+* **add page asset-metadata-refreshes:** add page asset-metadata-refreshes ([fea4969](https://github.com/immutable/imx-docs/commit/fea4969debc08118c1adce906eec3caef192b93e))
+
 # [1.24.0](https://github.com/immutable/imx-docs/compare/v1.23.1...v1.24.0) (2022-09-12)
 
 
