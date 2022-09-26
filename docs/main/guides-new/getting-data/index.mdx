@@ -3,24 +3,44 @@ title: "Get data"
 slug: "/guides-new/getting-data"
 ---
 
-* [Overview](#overview)
-* How to get data on:
-    * [Assets](#get-data-on-assets)
-    * [Asset metadata](#get-data-on-asset-metadata)
-    * [Orders](#get-data-on-orders)
-    * [Transfers](#get-data-on-transfers)
-    * [Tokens](#get-data-on-tokens)
-    * [Trades](#get-data-on-trades)
-    * [Users](#get-data-on-users)
+This guide provides information on how to get data about events on Immutable X. Typically, this data is about current state (ie. asset ownership, open orders) or past transactions (ie. trades, asset transfers).
 
-## Overview
+Examples of the types of data typically obtained include:
+* Assets, or details of a particular asset
+* Token balances for a particular user
+* Orders, or details about a particular order
+* Historical trades and asset transfers
 
-### What kinds of data?
+Getting data is read-only, so user authentication or [getting user signatures](./user-signatures) to update blockchain state are not required.
 
-See [here](/docs/what-is-immutable-x#retrieving-data) for examples of the types of data that can be retrieved.
+### Guides:
+<table>
+  <tbody>
+    <tr>
+      <th>Get data on...</th>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li><a href="#get-data-on">Projects</a></li>
+          <li><a href="#get-data-on">Collections</a></li>
+          <li><a href="#get-data-on">Assets</a></li>
+          <li><a href="#get-data-on">Orders</a></li>
+          <li><a href="#get-data-on">Transfers</a></li>
+          <li><a href="#get-data-on">Tokens</a></li>
+          <li><a href="#get-data-on">Trades</a></li>
+          <li><a href="#get-data-on">Users</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## Get data on assets
-### Core SDK
+## Get data on projects
+* [Get list of projects](#get-list-of-projects)
+* [Get details of a project](#get-details-about-a-project)
+
+### Get list of projects
 
 #### Typescript Core SDK
 
@@ -45,8 +65,38 @@ See [here](/docs/what-is-immutable-x#retrieving-data) for examples of the types 
 // Add code sample
 ```
 
-### StarkNet
+#### StarkNet
 [Add info]
+
+### Get details about a project
+
+#### Typescript Core SDK
+
+```ts
+// Add code sample
+```
+
+#### Kotlin (JVM) Core SDK
+
+```kotlin
+// Add code sample
+```
+
+#### Swift Core SDK
+
+```swift
+// Add code sample
+```
+
+#### Golang Core SDK
+```go
+// Add code sample
+```
+
+#### StarkNet
+[Add info]
+
+
 
 ## Get data on asset metadata
 
@@ -75,7 +125,7 @@ See [here](/docs/what-is-immutable-x#retrieving-data) for examples of the types 
 // Add code sample
 ```
 
-### StarkNet
+#### StarkNet
 [Add info]
 
 ## Get data on orders
@@ -105,7 +155,7 @@ See [here](/docs/what-is-immutable-x#retrieving-data) for examples of the types 
 // Add code sample
 ```
 
-### StarkNet
+#### StarkNet
 [Add info]
 
 ## Get data on transfers
@@ -135,7 +185,7 @@ See [here](/docs/what-is-immutable-x#retrieving-data) for examples of the types 
 // Add code sample
 ```
 
-### StarkNet
+#### StarkNet
 [Add info]
 
 ## Get data on tokens
@@ -165,7 +215,7 @@ See [here](/docs/what-is-immutable-x#retrieving-data) for examples of the types 
 // Add code sample
 ```
 
-### StarkNet
+#### StarkNet
 [Add info]
 
 ## Get data on trades
@@ -195,7 +245,7 @@ See [here](/docs/what-is-immutable-x#retrieving-data) for examples of the types 
 // Add code sample
 ```
 
-### StarkNet
+#### StarkNet
 [Add info]
 
 ## Get data on users
@@ -225,5 +275,5 @@ See [here](/docs/what-is-immutable-x#retrieving-data) for examples of the types 
 // Add code sample
 ```
 
-### StarkNet
+#### StarkNet
 [Add info]

@@ -4,33 +4,22 @@ slug: "/guides-new/user-registration"
 keywords: [imx-wallets, imx-dx]
 ---
 
-* [Overview](#overview)
-* How to register users using:
-  * [Core SDK](#how-to-register-users-using-the-core-sdk)
-  * [Link SDK](#how-to-register-users-using-the-link-sdk)
+Registering a user means creating an Immutable X L2 user account for an Ethereum L1 account.
 
-## Overview
+This enables the following:
+* A user with an Ethereum L1 account now has an associated L2 account on Immutable X
+* L1 users can [deposit](#) L1 assets to their L2 account
+* An L2 user can transact on Immutable X (create orders, trade assets, transfer assets, etc.)
+* An L2 user can [withdraw](#) their assets on L2 to their L1 account
 
-Only users on the [StarkEx settlement layer](#) need to be registered.
-
-### What is user registration?
-
-In order for a user to be registered, they first need an existing L1 wallet.
-
-Then it consists of 2 main steps:
+User registration consists of two main steps:
 1. Generating an L2 wallet for the user based on the keys of their L1 wallet
 2. Registering the L1-L2 wallet pair (recording that the L1 and L2 wallets are associated with each other either)
 
-### On-chain vs off-chain registration
-**On-chain** registration means recording the L1-L2 wallet pair on Ethereum (L1).
+### Off-chain, then on-chain registration
+By default, Immutable's [registerUser](https://docs.x.immutable.com/reference#/operations/registerUser) endpoint first registers a user **off-chain**. This means that the L1-L2 wallet pair is recorded in an Immutable database. All transactions that the user performs on L2 are recorded against this registered L2 user, however, L1 is not yet aware of the wallet mapping.
 
-**Off-chain** registration is when the L1-L2 wallet pair is recorded in an Immutable database. All transactions that the user performs on L2 are recorded against this registered L2 user, however, L1 is not yet aware of the wallet mapping.
-
-By default, Immutable's API and libraries provide for off-chain registration when a user is first registered. Then, when the users performs a transaction that requires an update of the state of the corresponding L1 wallet (ie. withdrawing an NFT from the L2 wallet to the L1 wallet), the user is registered on-chain.
-
-### Why do you need to register users?
-
-The L1-L2 mapping of user wallets needs to occur so that users can transfer assets between their L1 and L2 wallets (also known as "bridging").
+Then, when the users performs a transaction that requires an update of the state of the corresponding L1 wallet (ie. withdrawing an NFT from the L2 wallet to the L1 wallet), the user is registered **on-chain**, which means recording the L1-L2 wallet pair on Ethereum (L1).
 
 ## How to register users using the Core SDK
 ### 1. Initialize the Core SDK
@@ -40,6 +29,8 @@ In order to use the Core SDK, you need to [initialize it](./get-started#getting-
 Registering a user requires the user's signature, so your application will need to connect to user wallets. See the guide on [how to obtain user signatures](/docs/guides-new/user-signatures).
 
 ### 3. Register the user
+
+#### Guides for:
 * [Typescript Core SDK](#typescript-core-sdk)
 * [Kotlin (JVM) Core SDK](#kotlin-jvm-core-sdk)
 * [Swift Core SDK](#swift-core-sdk)

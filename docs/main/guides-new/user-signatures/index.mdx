@@ -4,25 +4,21 @@ slug: "/guides-new/user-signatures"
 keywords: [imx-wallets, imx-dx]
 ---
 
-* [Overview](#overview)
-* How to obtain user signatures using:
-  * [Core SDK](#obtain-user-signatures-using-the-core-sdk)
-  * [Wallet SDK](#obtain-user-signatures-using-the-wallet-sdk)
-  * [StarkNet](#obtain-user-signatures-on-starknet)
+User signatures are required for certain types of operations on Immutable X. These are:
+1. Transactions that update blockchain state
+2. Operations that update Immutable X's databases that require user authorization for
 
-## Overview
-
-A user signature simply means getting a user's approval for a transaction. 
-
-### What types of transactions require user signatures?
-These are the ones that require a state update to the blockchain, as opposed to just reading data. Examples of state updates include changes in asset ownership or moving assets between L1 and L2.
-
-#### Examples of Immutable X functions:
+#### Examples:
 <table>
   <tbody>
     <tr>
-      <th>✅ Require user signatures</th>
+      <th colspan="2">✅ Require user signatures</th>
       <th>❌ Do not require user signatures</th>
+    </tr>
+    <tr>
+      <th>Transactions that update<br/>blockchain state</th>
+      <th>Operations requiring user<br/>authorization</th>
+      <th><a href="/docs/guides-new/getting-data">Read-only operations</a></th>
     </tr>
     <tr>
       <td>
@@ -32,6 +28,12 @@ These are the ones that require a state update to the blockchain, as opposed to 
           <li>Transferring assets between users</li>
           <li>Depositing assets on L2 (Immutable X)</li>
           <li>Withdrawing assets to L1 (Layer 1 Ethereum)</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Creating a project</li>
+          <li>Registering a user off-chain</li>
         </ul>
       </td>
       <td>
@@ -46,12 +48,102 @@ These are the ones that require a state update to the blockchain, as opposed to 
   </tbody>
 </table>
 
-### What is involved in getting a user's signature?
-Applications need to establish a connection to the user’s wallet (this is also known as getting a “signer”). This is done by prompting a connection request to the user's wallet application (it can be on a different device e.g. connect a mobile wallet to a web game). Once this connection is established the user will be able to approve your signature requests.
+In order to get user signatures, applications need to [generate "signers"](#how-do-applications-generate-and-use-signers).
 
-Applications can implement this manually, or use our [Wallet SDKs](#platformswallets-currently-supported-by-our-wallet-sdks).
+### How do applications generate and use signers?
 
-#### Wallet SDKs (and the wallets they support):
+Signers are abstractions of user accounts that can be used to sign transactions. A user's private key is required to generate them.
+
+There are two ways to get signers in your application:
+1. [Generate your own by obtaining and using the user's private keys](#generate-your-own-signers)
+2. [Connect to a user's wallet application](#connect-to-users-wallets)
+
+The first option, where an application obtains a user's private key directly, is risky because these keys allow anyone in possession of them full control of an account.
+
+The second option provides an application with an interface to the user's account by prompting the user to connect with their wallet application (ie. mobile or browser wallet). Once connected the app can begin asking the user to sign transactions and messages without having to reveal their private key.
+
+As Immutable X enables applications to execute signed transactions on both Ethereum (layer 1) and StarkEx (layer 2), signers are required for both these layers.
+
+## Generate your own signers
+
+The Core SDK provides functionality that enable applications to generate:
+1. Stark (L2) private keys
+2. Ethereum (L1) and Stark (L2) signers
+
+:::caution
+If you generate your own Stark private key, you will have to persist it. The key is randomly generated so **_cannot_** be deterministically re-generated.
+:::
+
+#### Guide for:
+* [Typescript Core SDK](#typescript-core-sdk)
+* [Kotlin (JVM) Core SDK](#kotlin-jvm-core-sdk)
+* [Swift Core SDK](#swift-core-sdk)
+* [Golang Core SDK](#golang-core-sdk)
+
+#### Typescript Core SDK
+<!-- From [here](https://github.com/immutable/imx-core-sdk/edit/main/README.md). -->
+
+The Typescript Core SDK provides `WalletConnection`, which is a top-level connector which contains all the required resources (eg. L1 and L2 signers) to enable usage of the Core SDK workflows.
+
+```ts
+import { AlchemyProvider } from '@ethersproject/providers';
+import { Wallet } from '@ethersproject/wallet';
+import { WalletConnection, generateStarkWallet, BaseSigner } from '@imtbl/core-sdk';
+
+// Generate your own WalletConnection
+const generateWalletConnection = async (provider: AlchemyProvider) : Promise<WalletConnection> => {
+  // L1 credentials
+  const l1Signer = Wallet.createRandom().connect(provider);
+
+  // L2 credentials
+  const starkWallet = await generateStarkWallet(l1Signer);
+  const l2Signer = new BaseSigner(starkWallet.starkKeyPair);
+
+  return {
+    l1Signer,
+    l2Signer,
+  };
+};
+```
+
+#### Kotlin (JVM) Core SDK
+<!-- From [here](https://docs.x.immutable.com/sdk-docs/core-sdk-kotlin/sdk-functions#wallet-connection). -->
+
+In order to use any workflow functions, you will need to pass in the connected wallet provider. This means you will need to implement your own Wallet L1 Signer.
+
+Once you have created a Signer instance you can generate the user's Stark key pair and use it to create an instance of StandardStarkSigner, an implementation of StarkSigner.
+
+```java
+StarkKey.generate(signer).whenComplete { keyPair, error ->
+    val starkSigner = StandardStarkSigner(keyPair)
+}
+```
+
+#### Swift Core SDK
+<!-- From [here](https://docs.x.immutable.com/sdk-docs/core-sdk-swift/sdk-functions#wallet-connection). -->
+
+In order to use any workflow functions, you will need to pass in the connected wallet provider. This means you will need to implement your own Wallet L1 [Signer](https://github.com/immutable/imx-core-sdk-swift/blob/main/Sources/ImmutableXCore/Signer.swift) and L2 [StarkSigner](https://github.com/immutable/imx-core-sdk-swift/blob/main/Sources/ImmutableXCore/Signer.swift).
+
+Once you have a `Signer` instance you can generate the user's Stark key pair and use the result to instantiate a StarkSigner, for example, by using the default `StandardStarkSigner` provided by the SDK.
+
+```
+let keyPair = try await StarkKey.generateKeyPair(from: signer)
+let starkSigner = StandardStarkSigner(pair: keyPair)
+```
+
+#### Golang Core SDK
+[Add info]
+
+## Connect to users' wallets
+Your application can facilitate signing of user transactions by connecting to users' wallet applications. This ensures that you do not have to handle private keys.
+
+| Settlement layer | How?                           |
+| ---------------- | ------------------------------ |
+| StarkEx          | [Using the Wallet SDK](#using-the-wallet-sdk)           |
+| StarkNet         | [Using the get-starknet library](#using-the-get-starknet-library) |
+
+### Using the Wallet SDK
+The Wallet SDK provides a way for applications to connect to certain user wallets:
 <table>
   <tbody>
     <tr>
@@ -81,70 +173,12 @@ Applications can implement this manually, or use our [Wallet SDKs](#platformswal
   </tbody>
 </table>
 
-## Obtain user signatures using the Core SDK
-* [Typescript Core SDK](#typescript-core-sdk)
-* [Kotlin (JVM) Core SDK](#kotlin-jvm-core-sdk)
-* [Swift Core SDK](#swift-core-sdk)
-* [Golang Core SDK](#golang-core-sdk)
 
-### Typescript Core SDK
-<!-- From [here](https://github.com/immutable/imx-core-sdk/edit/main/README.md). -->
+#### Guide for:
+* [Wallet SDK Web](#)
+* [Wallet SDK Android](#)
 
-The Typescript Core SDK provides `WalletConnection`, which is a top-level connector which contains all the required resources (eg. L1 and L2 signers) to enable usage of the Core SDK workflows.
-
-```ts
-import { AlchemyProvider } from '@ethersproject/providers';
-import { Wallet } from '@ethersproject/wallet';
-import { WalletConnection, generateStarkWallet, BaseSigner } from '@imtbl/core-sdk';
-
-// Generate your own WalletConnection
-const generateWalletConnection = async (provider: AlchemyProvider) : Promise<WalletConnection> => {
-  // L1 credentials
-  const l1Signer = Wallet.createRandom().connect(provider);
-
-  // L2 credentials
-  const starkWallet = await generateStarkWallet(l1Signer);
-  const l2Signer = new BaseSigner(starkWallet.starkKeyPair);
-
-  return {
-    l1Signer,
-    l2Signer,
-  };
-};
-```
-
-### Kotlin (JVM) Core SDK
-<!-- From [here](https://docs.x.immutable.com/sdk-docs/core-sdk-kotlin/sdk-functions#wallet-connection). -->
-
-In order to use any workflow functions, you will need to pass in the connected wallet provider. This means you will need to implement your own Wallet L1 Signer.
-
-Once you have created a Signer instance you can generate the user's Stark key pair and use it to create an instance of StandardStarkSigner, an implementation of StarkSigner.
-
-```java
-StarkKey.generate(signer).whenComplete { keyPair, error ->
-    val starkSigner = StandardStarkSigner(keyPair)
-}
-```
-
-### Swift Core SDK
-<!-- From [here](https://docs.x.immutable.com/sdk-docs/core-sdk-swift/sdk-functions#wallet-connection). -->
-
-In order to use any workflow functions, you will need to pass in the connected wallet provider. This means you will need to implement your own Wallet L1 [Signer](https://github.com/immutable/imx-core-sdk-swift/blob/main/Sources/ImmutableXCore/Signer.swift) and L2 [StarkSigner](https://github.com/immutable/imx-core-sdk-swift/blob/main/Sources/ImmutableXCore/Signer.swift).
-
-Once you have a `Signer` instance you can generate the user's Stark key pair and use the result to instantiate a StarkSigner, for example, by using the default `StandardStarkSigner` provided by the SDK.
-
-```
-let keyPair = try await StarkKey.generateKeyPair(from: signer)
-let starkSigner = StandardStarkSigner(pair: keyPair)
-```
-
-### Golang Core SDK
-
-## Obtain user signatures using the Wallet SDK
-* [Wallet SDK Web](#wallet-sdk-web)
-* [Wallet SDK Android](#wallet-sdk-android)
-
-### Wallet SDK Web
+#### Wallet SDK Web
 <!-- From [here](https://docs.x.immutable.com/sdk-docs/wallet-sdk-web/quickstart). -->
 
 ```ts
@@ -186,7 +220,7 @@ import {
 })();
 ```
 
-### Wallet SDK Android
+#### Wallet SDK Android
 <!-- From [here](https://docs.x.immutable.com/sdk-docs/wallet-sdk-android/quickstart#connect-via-walletconnect). -->
 
 MetaMask and Rainbow can be connected using this WalletConnect provider.
@@ -203,6 +237,5 @@ ImmutableXWallet.connect(
 ```
 If you want to use your own bridge server instead of the default provide it via bridgeServerUrl when connecting. For more info on how WalletConnect and the bridge works [see here](https://docs.walletconnect.com/tech-spec).
 
-## Obtain user signatures on StarkNet
-
+### Using the get-starknet library
 Use the [get-starknet](https://github.com/starknet-community-libs/get-starknet) library to implement user wallet connections.
