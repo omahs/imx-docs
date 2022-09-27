@@ -6,9 +6,9 @@ tags: [core-sdk-ts, installation, setup]
 keywords: [imx-dx]
 ---
 
-## Installation
+# Installation
 
-### Add this NPM package to your project
+## Add this NPM package to your project
 
 ```sh
 npm install @imtbl/core-sdk --save
