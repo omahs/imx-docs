@@ -8,7 +8,7 @@ keywords: [imx-dx]
 
 # Overview
 
-:::danger The Core TypeScript SDK Interface is under active development and hasn't hit v1.0 yet.
+:::caution The Core TypeScript SDK Interface is currently in beta and is expected to in a stable v1.0 release in the near short term.
 
 Its public interface shouldn't be considered final, and we may need to release breaking changes as we push towards v1.0.
 :::
@@ -19,6 +19,6 @@ Currently, our SDK supports interactions with our application-specific rollup ba
 
 ## Documentation
 
-See the [developer guides](https://docs.x.immutable.com) for information on building on Immutable X.
+See our [developer documentation](https://docs.x.immutable.com) for information on building on Immutable X.
 
-See the [API reference documentation](https://docs.x.immutable.com/reference) for more information on our API's.
+See our [API reference](https://docs.x.immutable.com/reference) for more information on our APIs.
