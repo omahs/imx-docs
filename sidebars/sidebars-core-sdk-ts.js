@@ -13,7 +13,7 @@ module.exports = {
         {
           type: 'link',
           label: 'Reference',
-          href: `${url}/sdk-references/core-sdk-ts/1.0.0-beta.1/`,
+          href: `${url}/sdk-references/core-sdk-ts/1.0.0-beta.1/classes/ImmutableX.html`,
         },
       ],
     },
