@@ -8,14 +8,12 @@ module.exports = {
       items: [
         'overview',
         'installation',
-        'authentication',
-        'quickstart',
-        'workflows',
+        'initialization',
         'additional-info',
         {
           type: 'link',
           label: 'Reference',
-          href: `${url}/sdk-references/core-sdk-ts/0-7-0/`,
+          href: `${url}/sdk-references/core-sdk-ts/1.0.0-beta.1/`,
         },
       ],
     },
