@@ -1,3 +1,13 @@
+## [1.27.1](https://github.com/immutable/imx-docs/compare/v1.27.0...v1.27.1) (2022-09-28)
+
+
+### Bug Fixes
+
+* revert unwanted change ([c918201](https://github.com/immutable/imx-docs/commit/c91820150cea6f5ec6af65a0563f87fff1c56346))
+* ts core sdk 1.0.0 beta installation guide ([2f986de](https://github.com/immutable/imx-docs/commit/2f986de93ee3856c6292c67564dadd2c8404489f))
+* **ts core sdk installation guide:** update 1.0.0 beta.2 installation guide ([f14312d](https://github.com/immutable/imx-docs/commit/f14312d0dc59edb7dcdec1d17fcca351522d5bdc))
+* **ts core sdk installation guide:** update installation guide ([54df416](https://github.com/immutable/imx-docs/commit/54df416fb31dc7f628020a7e4caec828fddb00d2))
+
 # [1.27.0](https://github.com/immutable/imx-docs/compare/v1.26.0...v1.27.0) (2022-09-28)
 
 
