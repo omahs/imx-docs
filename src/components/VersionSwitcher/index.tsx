@@ -11,6 +11,7 @@ import { useDocsVersionCandidates } from '@docusaurus/theme-common/internal';
 import { translate } from '@docusaurus/Translate';
 import DefaultNavbarItem from '@theme/NavbarItem/DefaultNavbarItem';
 import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
+import styles from './styles.module.css';
 
 interface VersionSwitcherProps {
   mobile: false;
@@ -79,6 +80,7 @@ const VersionSwitcher = ({
         mobile={mobile}
         label={dropdownLabel}
         to={dropdownTo}
+        className={styles.dropdown}
         // isActive={dropdownActiveClassDisabled ? () => false : undefined}
       />
     );
@@ -90,6 +92,7 @@ const VersionSwitcher = ({
       label={dropdownLabel}
       to={dropdownTo}
       items={items}
+      className={styles.dropdown}
       // isActive={dropdownActiveClassDisabled ? () => false : undefined}
     />
   );
