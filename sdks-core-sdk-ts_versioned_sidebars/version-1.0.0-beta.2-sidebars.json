@@ -1,0 +1,19 @@
+{
+  "mainSidebar": [
+    {
+      "type": "category",
+      "label": "Core SDK TypeScript",
+      "items": [
+        "overview",
+        "installation",
+        "initialization",
+        "additional-info",
+        {
+          "type": "link",
+          "label": "Reference",
+          "href": "https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/classes/ImmutableX.ImmutableX.html"
+        }
+      ]
+    }
+  ]
+}
