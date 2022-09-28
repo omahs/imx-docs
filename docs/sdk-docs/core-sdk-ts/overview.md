@@ -8,7 +8,7 @@ keywords: [imx-dx]
 
 # Overview
 
-:::caution The Core TypeScript SDK Interface is currently in beta and is expected to in a stable v1.0 release in the near short term.
+:::caution The Core TypeScript SDK Interface is currently in beta and is expected to be a stable v1.0 release in the near short term.
 
 Its public interface shouldn't be considered final, and we may need to release breaking changes as we push towards v1.0.
 :::
