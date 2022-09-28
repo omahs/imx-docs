@@ -11,7 +11,7 @@ keywords: [imx-dx]
 ## Add this NPM package to your project
 
 ```sh
-npm install @imtbl/core-sdk --save
+npm install @imtbl/core-sdk@1.0.0-beta.2
 # or
-yarn add @imtbl/core-sdk
+yarn add @imtbl/core-sdk@1.0.0-beta.2
 ```
