@@ -1,10 +1,20 @@
 ---
 id: "generate-imx-signature"
-title: "Generate IMX-Signature"
+title: "Generate IMX signature headers"
 slug: "/generate-imx-signature"
 sidebar_position: 5
 keywords: [imx-games]
 ---
+
+If you are using the [Core SDK](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/overview) or the [SDK JS](https://www.npmjs.com/package/@imtbl/imx-sdk), you will generally not need to provide these headers as long as you upgrade to the following versions:
+* Core SDK: `> 1.0.0-beta.2`
+* SDK JS: `> 1.17`
+
+### How to generate:
+* [IMX-Signature](#imx-signature)
+* [x-imx-eth-signature](#x-imx-eth-signature)
+
+## IMX-Signature
 
 Some of our API endpoints require **IMX-Signature** in the Headers:
 * **collections**
@@ -31,3 +41,10 @@ where:
 * **signer**: Signer from [@ethersproject/abstract-signer](https://www.npmjs.com/package/@ethersproject/abstract-signer)
 * **signRaw**: function in [imx-core-sdk](https://github.com/immutable/imx-core-sdk/blob/main/src/utils/crypto/crypto.ts#L79-L85)
 
+## x-imx-eth-signature
+
+Some API endpoints require an `x-imx-eth-signature`, which takes in:
+* A signable message
+* Eth (L1) signer
+
+See [here](https://github.com/immutable/imx-core-sdk/blob/main/src/workflows/orders.ts#L33) for an example of how this is generated.
