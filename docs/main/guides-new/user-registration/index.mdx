@@ -31,38 +31,35 @@ In order to use the Core SDK, you need to [initialize it](./get-started#getting-
 Registering a user requires the user's signature, so your application will need to create signers. See the guide on [how to generate signers](/docs/guides-new/generate-signers).
 
 ### 3. Register the user
-
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
-    Add description, if required.
-    <br/><br/>
+
+SDK reference: [registerOffchain](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/classes/immutablex.immutablex#registerOffchain)
 
 ```ts
-// Add code
+const walletConnection = { ethSigner, starkSigner }
+
+client.registerOffchain(walletConnection)
 ```
   </TabItem>
   <TabItem value="kotlin" label="Kotlin (JVM) Core SDK">
-    Add description, if required.
-    <br/><br/>
+
+SDK reference: [registerOffChain](https://docs.x.immutable.com/sdk-references/core-sdk-kotlin/0-6-0/imx-core-sdk-kotlin-jvm/com.immutable.sdk/-immutable-x-core/register-off-chain.html?query=fun%20registerOffChain(signer:%20Signer,%20starkSigner:%20StarkSigner):%20CompletableFuture%3CUnit%3E)
 
 ```kotlin
-// Add code
+ImmutableXCore.registerOffchain(signer, starkSigner)
 ``` 
   </TabItem>
   <TabItem value="Swift" label="Swift Core SDK">
-    Add description, if required.
-    <br/><br/>
+
+SDK reference: [registerUser](https://docs.x.immutable.com/sdk-references/core-sdk-swift/0-2-2/documentation/immutablexcore/usersapi/registeruser(registeruserrequest:))
 
 ```swift
-// Add code
+UsersApi.registerUser(ethSignature, etherKey, starkKey, starkSignature)
 ```
   </TabItem>
   <TabItem value="go" label="Golang Core SDK">
-    Add description, if required.
-    <br/><br/>
 
-```go
-// Add code
-```
+See [this example](https://github.com/immutable/imx-core-sdk-golang/blob/main/examples/workflows/onboarding/user_registration.go).
   </TabItem>
 </Tabs>

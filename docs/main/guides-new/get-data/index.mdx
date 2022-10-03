@@ -105,49 +105,133 @@ Getting data is read-only, so user authentication or [getting user signatures](.
 ## Collections
 
 ### Get list of collections
+The list of collections returned can be filtered by passing in parameters to this function.
+
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
-    Add description, if required.
-    <br/><br/>
 
+SDK reference: [listCollections](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.collectionsapilistcollectionsrequest)
+
+### Request
+Get a list of collections with "NFT" in the collection name or description:
 ```ts
-// Add code
+const getListCollections = async (keyword: string) => {
+  const response = await client.listCollections({
+    keyword,
+  });
+
+  return response.result;
+};
+
+getListCollections('NFT')
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
+```
+
+### Example response
+```ts
+{
+  result: [
+     {
+      address: '0x61e506cec264d5b2705f10e5a934dc5313a56a6e', // Contract address of the collection
+      name: 'The ARK NFTs',
+      description: 'Find all the NFTs Created on the ARK Marketplace',
+      icon_url: 'https://cloudflare-ipfs.com/ipfs/bafkreiadl5kmdwy4tum4tgny4avxedlif33x2awux35c75j4exnz5s7xjm',
+      collection_image_url: '',
+      project_id: 92,
+      project_owner_address: '0x59bb6d1b896a9a139380bf2b8d828819f0cf1409',
+      metadata_api_url: 'https://api.thearknft.io/v1/nft',
+      created_at: '2022-09-28T12:01:20.479636Z',
+      updated_at: '2022-09-28T13:35:07.59868Z'
+    },
+    // Other collections returned
+    ...
+  ],
+  cursor: "eyJuYW1lIjoiSnVqdSBNaW50cyIsImFkZHJlc3MiOiIweDIzZGIwZTcyYmQ3NzM4ZGEwZDBhZmU3YmNjYjQxMDlmNWYwNWVkY2YiLCJwcm9qZWN0X2lkIjoyNCwiY3JlYXRlZF9hdCI6IjIwMjItMDktMjJUMjM6MTI6NTcuNjY0NDU2WiIsInVwZGF0ZWRfYXQiOiIyMDIyLTA5LTIyVDIzOjEyOjU3LjY2NDQ1NloifQ",
+  // Remaining results
+  remaining: 1
+}
 ```
   </TabItem>
   <TabItem value="kotlin" label="Kotlin (JVM) Core SDK">
-    Add description, if required.
-    <br/><br/>
+
+SDK reference: [listCollections](https://docs.x.immutable.com/sdk-references/core-sdk-kotlin/0-6-0/imx-core-sdk-kotlin-jvm/com.immutable.sdk.api/-collections-api/list-collections.html)
+
+### Request
+Get a list of collections ordered by name in ascending order:
 
 ```kotlin
-// Add code
+val response = CollectionsApi().listCollections(
+    pageSize = 20,
+    orderBy = "name",
+    direction = "asc"
+)
 ``` 
   </TabItem>
   <TabItem value="Swift" label="Swift Core SDK">
-    Add description, if required.
-    <br/><br/>
 
+SDK reference: [listCollections](https://docs.x.immutable.com/sdk-references/core-sdk-swift/0-2-2/documentation/immutablexcore/collectionsapi/listcollections(pagesize:cursor:orderby:direction:blacklist:whitelist:keyword:))
+
+### Request
+Get a list of collections ordered by name in ascending order:
 ```swift
-// Add code
+let collections = try await CollectionsAPI.listCollections(
+    pageSize: 20,
+    orderBy: .name,
+    direction: "asc"
+)
 ```
   </TabItem>
   <TabItem value="go" label="Golang Core SDK">
-    Add description, if required.
-    <br/><br/>
 
-```go
-// Add code
-```
+See [this example](https://docs.x.immutable.com/sdk-references/core-sdk-golang/0-1-0/apiclient/docs/collectionsapi#listcollections).
   </TabItem>
 </Tabs>
 
 ### Get details about a collection
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
-    Add description, if required.
-    <br/><br/>
 
+SDK reference: [getCollection](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/classes/immutablex.immutablex#getCollection)
+
+### Request
+Get details of a collection at a given contract address:
 ```ts
-// Add code
+const getCollection = async (address: string) => {
+  const response = await client.getCollection({
+    address,
+  });
+
+  return response;
+};
+
+getCollection('0x61e506cec264d5b2705f10e5a934dc5313a56a6e')
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
+```
+
+### Example response
+```ts
+{
+  address: '0x61e506cec264d5b2705f10e5a934dc5313a56a6e', // Contract address of the collection
+  name: 'The ARK NFTs',
+  description: 'Find all the NFTs Created on the ARK Marketplace',
+  icon_url: 'https://cloudflare-ipfs.com/ipfs/bafkreiadl5kmdwy4tum4tgny4avxedlif33x2awux35c75j4exnz5s7xjm',
+  collection_image_url: '',
+  project_id: 92,
+  project_owner_address: '0x59bb6d1b896a9a139380bf2b8d828819f0cf1409',
+  metadata_api_url: 'https://api.thearknft.io/v1/nft',
+  created_at: '2022-09-28T12:01:20.479636Z',
+  updated_at: '2022-09-28T13:35:07.59868Z'
+}
 ```
   </TabItem>
   <TabItem value="kotlin" label="Kotlin (JVM) Core SDK">
