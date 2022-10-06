@@ -59,7 +59,7 @@ A metadata refresh can be requested by calling:
 POST /v1/metadata-refreshes
 ```
 
-and specifying the collection address and ID’s of the tokens requiring a refresh:
+and specifying the collection address and IDs of the tokens requiring a refresh:
 
 ```json
 {
