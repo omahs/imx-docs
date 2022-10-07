@@ -9,12 +9,21 @@ import TabItem from '@theme/TabItem';
 
 Guides provide information on how to execute key functionality of the Immutable X platform.
 
-Each guide will provide information on how to:
-* Use our [Core SDK](/docs/sdks) (sometimes with the [Wallet SDK](/sdk-docs/wallet-sdk-web/overview)) to build on the [StarkEx settlement layer](/docs/overview-new/immutable-layer-2#layer-2s-on-immutable-x)
-* Extend or integrate with our StarkNet contracts to build on the [StarkNet settlement layer](/docs/overview-new/immutable-layer-2#layer-2s-on-immutable-x)
+Each guide will provide information on how to build on:
+* [StarkEx settlement layer](/docs/overview-new/immutable-layer-2#layer-2s-on-immutable-x), using our:
+  * [Core SDK](/docs/sdks#core-sdks) (with [Wallet SDK](/docs/sdks#wallet-sdks) for obtaining user signatures)
+  * [JS SDK](npmjs.com/package/@imtbl/imx-sdk) (with the [Link SDK](/docs/sdks/#link-sdk) for obtaining user signatures)
+    :::caution To be deprecated soon - do not start using!
+    JS and Link SDKs will be deprecated soon. If you have not yet started building, **do not** build on these. If you have already started building with this, please make plans to switch over to the [Core SDK](/docs/sdks).
+    :::
+* [StarkNet settlement layer](/docs/overview-new/immutable-layer-2#layer-2s-on-immutable-x), by extending or integrating wtih our StarkNet contracts.
 
-## Install and initialize the Core SDK
+## Install and initialize
+**Required for:**
+* [Core SDK](#core-sdk)
+* [JS SDK (deprecating soon)](/docs/immutable-x-sdk#setting-up-the-sdk)
 
+## Core SDK
 The [Core SDK](/sdk-docs/core-sdk-ts/overview) is a wrapper around our [API](/reference) and provides the bulk of the functionality of the Immutable X platform. Before you can start using the Core SDK, you must initialize the client.
 
 Initialize the Core SDK client with the network on which you want your application to run:
@@ -24,7 +33,6 @@ Initialize the Core SDK client with the network on which you want your applicati
 | Sandbox | The default test network (currently, it is Goërli)  |
 | Ropsten | Ropsten test network (to be deprecated soon) |
 | Production | Ethereum network  |
-
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 

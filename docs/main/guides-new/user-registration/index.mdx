@@ -17,13 +17,17 @@ This enables the following:
 * An L2 user can transact on Immutable X (create orders, trade assets, transfer assets, etc.)
 * An L2 user can [withdraw](#) their assets on L2 to their L1 account
 
-
 ### Off-chain, then on-chain registration
 By default, Immutable's [registerUser](https://docs.x.immutable.com/reference#/operations/registerUser) endpoint first registers a user **off-chain**. This means that the L1-L2 wallet pair is recorded in an Immutable database. All transactions that the user performs on L2 are recorded against this registered L2 user, however, L1 is not yet aware of the wallet mapping.
 
 Then, when the users performs a transaction that requires an update of the state of the corresponding L1 wallet (ie. withdrawing an NFT from the L2 wallet to the L1 wallet), the user is registered **on-chain**, which means recording the L1-L2 wallet pair on Ethereum (L1).
 
-## How to register users using the Core SDK
+**Available with:**
+* [Core SDK](#core-sdk)
+* [Link SDK](/docs/link-setup)
+
+## Core SDK
+
 ### 1. Initialize the Core SDK
 In order to use the Core SDK, you need to [initialize it](./get-started#getting-started-with-the-core-sdk).
 

@@ -65,6 +65,13 @@ The first option, where an application obtains a user's private key directly, is
 The second option provides an application with an interface to the user's account by prompting the user to connect with their wallet application (ie. mobile or browser wallet). Once connected the app can begin asking the user to sign transactions and messages without having to reveal their private key.
 
 ## Generate your own signers
+
+**Available with:**
+* Core SDK 
+
+<Tabs>
+  <TabItem value="core-sdk" label="Core SDK">
+
 Below are instructions on how to generate:
 * Ethereum (L1) signers
 * Stark (L2) private keys and signers using the Core SDK
@@ -143,16 +150,42 @@ func main() {
 ```
   </TabItem>
 </Tabs>
+</TabItem>
+</Tabs>
 
 ## Connect to users' wallets
 Your application can facilitate signing of user transactions by connecting to users' wallet applications. This ensures that you do not have to handle private keys.
 
-| Settlement layer | How?                           |
-| ---------------- | ------------------------------ |
-| StarkEx          | [Using the Wallet SDK](#using-the-wallet-sdk)           |
-| StarkNet         | [Using the get-starknet library](#using-the-get-starknet-library) |
+**Available with:**
+<table>
+  <tbody>
+    <tr>
+      <th>Settlement layer</th>
+      <th>SDK</th>
+    </tr>
+    <tr>
+      <td>StarkEx</td>
+      <td>
+        <ul>
+          <li>Wallet SDK (with Core SDK)</li>
+          <li>Link SDK (with JS SDK) - deprecating soon</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>StarkNet</td>
+      <td>
+        <ul>
+          <li>Using the <a href="https://github.com/starknet-community-libs/get-starknet">get-starknet</a> library</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-### Using the Wallet SDK
+<Tabs>
+<TabItem value="wallet-sdk" label="Wallet SDK">
+
 The Wallet SDK provides a way for applications to connect to certain user wallets:
 <table>
   <tbody>
@@ -302,9 +335,53 @@ if (signer != null && starkSigner != null) {
     // Handle not connected
 }
 ```
-
-  </TabItem>
+</TabItem>
 </Tabs>
+</TabItem>
 
-### Using the get-starknet library
+<TabItem value="link-sdk" label="Link SDK">
+
+:::caution To be deprecated soon - do not start using!
+JS and Link SDKs will be deprecated soon. If you have not yet started building, **do not** build on these. If you have already started building with this, please make plans to switch over to the [Core SDK](/docs/sdks).
+:::
+
+1. Install the [npm package](npmjs.com/package/@imtbl/imx-sdk):
+```shell
+npm install @imtbl/imx-sdk --save
+# or
+yarn add @imtbl/imx-sdk
+```
+
+2. Import the Link package:
+```ts
+import { Link } from '@imtbl/imx-sdk';
+```
+
+3. Set the correct network URL
+
+Choose from the following:
+
+| Network | Description | URL |
+| --- | --- | --- |
+| Sandbox | The default test network (currently, it is Goërli) | https://link.sandbox.x.immutable.com/v1 |
+| Ropsten | Ropsten test network (to be deprecated soon) | https://link.ropsten.x.immutable.com/v1 |
+| Production | Ethereum network  | https://link.x.immutable.com/v1 |
+
+```ts
+const linkAddress = "https://link.x.immutable.com/v1"; // Or "https://link.sandbox.x.immutable.com/v1"
+```
+
+4. Initialize the client
+```ts
+const link = new Link(linkAddress);
+```
+
+Operations like registering a user (see [guide](/docs/link-setup)) can be executed by the Link client, which uses the JS SDK under the hood.
+</TabItem>
+
+<TabItem value="starknet" label="StarkNet">
+
 Use the [get-starknet](https://github.com/starknet-community-libs/get-starknet) library to implement user wallet connections.
+</TabItem>
+
+</Tabs>
