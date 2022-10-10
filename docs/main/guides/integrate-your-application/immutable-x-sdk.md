@@ -12,7 +12,7 @@ The Immutable X Client is used for most backend operations, and the [Link SDK](.
 
 The IMX Client ('ImmutableXClient') is a module wrapping the REST requests in a method call. Using this package, developers can make sure their calls are up to date with the latest API standards.
 
-The Link SDK provides a clean popup and UI to help users navigate through the final signing process with their wallets. While information about current market state and assets can be derived with web requests, the Link SDK handles the more complicated stark signature signing most developers should not need to code. Using the Link SDK also maintains a unified view for users, allowing them to be more comfortable during signing when using marketplaces powered by Immutable X.
+The Link SDK provides a clean popup and UI to help users navigate through the final signing process with their wallets. While information about current market state and assets can be derived with web requests, the Link SDK handles the more complicated STARK signature signing most developers should not need to code. Using the Link SDK also maintains a unified view for users, allowing them to be more comfortable during signing when using marketplaces powered by Immutable X.
 
 Applications monitoring the status of the assets will use the IMX Client to retrieve data. Marketplace and applications relying on user interaction will use both packages.
 

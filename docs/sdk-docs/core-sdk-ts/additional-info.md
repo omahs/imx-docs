@@ -85,7 +85,7 @@ const ethNetwork = 'goerli'; // Or 'mainnet'
 const provider = new AlchemyProvider(ethNetwork, YOUR_ALCHEMY_API_KEY);
 const ethSigner = new Wallet(YOUR_PRIVATE_ETH_KEY).connect(provider);
 
-// Create Stark signer
+// Create STARK signer
 const starkPrivateKey = generateStarkPrivateKey(); // Or retrieve previously generated key
 const starkSigner = createStarkSigner(starkPrivateKey);
 ```

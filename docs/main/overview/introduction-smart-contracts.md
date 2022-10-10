@@ -103,7 +103,7 @@ Read more about on-chain versus off-chain metadata, and data storage, in our [mi
 
 A crucial part of building on Immutable X is having a Layer 1 (L1) Ethereum smart contract, which is required for minting assets that can be withdrawn from Immutable X on Layer 2 (L2).
 
-For a smart contract to work with Immutable X, we need an implementation of a `mintFor` function, which is what our Stark contract calls at the time of withdrawing a minted token from L2 to L1. StarkEx is the L2 scalability solution used by Immutable X.
+For a smart contract to work with Immutable X, we need an implementation of a `mintFor` function, which is what our STARK contract calls at the time of withdrawing a minted token from L2 to L1. StarkEx is the L2 scalability solution used by Immutable X.
 
 **[Read a high-level overview of the StarkEx service](https://docs.starkware.co/starkex-v3/overview)**
 

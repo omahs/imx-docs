@@ -23,7 +23,7 @@ Utility functions accessed via `ImmutableXCore.shared` that will chain necessary
 
 In order to use any workflow functions, you will need to pass in the connected wallet provider. This means you will need to implement your own Wallet L1 [Signer](https://github.com/immutable/imx-core-sdk-swift/blob/main/Sources/ImmutableXCore/Signer.swift) and L2 [StarkSigner](https://github.com/immutable/imx-core-sdk-swift/blob/main/Sources/ImmutableXCore/Signer.swift).
 
-Once you have a `Signer` instance you can generate the user's Stark key pair and use the result to instantiate a `StarkSigner`, for example, by using the default `StandardStarkSigner` provided by the SDK.
+Once you have a `Signer` instance you can generate the user's STARK key pair and use the result to instantiate a `StarkSigner`, for example, by using the default `StandardStarkSigner` provided by the SDK.
 
 ```swift
 let keyPair = try await StarkKey.generateKeyPair(from: signer)

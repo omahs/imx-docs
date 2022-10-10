@@ -61,7 +61,7 @@ func main() {
    l1signer := YourImplementationOfL1SignerInterface() // See examples/workflows/utils/signer.go
 
    // L2 credentials
-   // Obtain the stark signer associated with this user.
+   // Obtain the STARK signer associated with this user.
    l2signer, err := stark.GenerateStarkSigner(l1signer) // this is the sdk helper function
    if err != nil {
       ...

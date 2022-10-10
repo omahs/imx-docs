@@ -22,7 +22,7 @@ Here's a high-level overview of the user registration process:
 
 ![User Registration](/img/user-registration.png 'User Registration')
 
-The generated private key is then passed through an efficient grinding method to enforce distribution within Stark's elliptic curve domain. The generated key pair is what you'll be using on a day-to-day basis to interact with any Immutable X functionality.
+The generated private key is then passed through an efficient grinding method to enforce distribution within STARK's elliptic curve domain. The generated key pair is what you'll be using on a day-to-day basis to interact with any Immutable X functionality.
 
 :::warning Do not sign on any other platform
 Signing the security string will expose the seed phrase for your Immutable X key so you must ensure that you **do not** sign the string on any other platform

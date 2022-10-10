@@ -98,7 +98,7 @@ The metadata that appears on Immutable X does not read any data from the bluepri
 
 # Minting on Layer 2
 
-For a smart contract to work with Immutable X, we need an implementation of a `mintFor` function, which is what our Stark contract calls at the time of withdrawing a minted token from L2 to L1. Contracts also require an `owner()` function to verify the contract’s owner. There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata.
+For a smart contract to work with Immutable X, we need an implementation of a `mintFor` function, which is what our STARK contract calls at the time of withdrawing a minted token from L2 to L1. Contracts also require an `owner()` function to verify the contract’s owner. There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata.
 
 ## Token ID
 

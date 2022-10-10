@@ -56,7 +56,7 @@ const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPrefe
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "magic_link" })
 ```
 
-`Link.setup` returns the user's signed-in address and Stark public key if the setup or sign in was completed successfully.
+`Link.setup` returns the user's signed-in address and STARK public key if the setup or sign in was completed successfully.
 
 ```typescript
 const SetupResultsCodec = t.intersection([
