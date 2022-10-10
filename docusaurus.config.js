@@ -99,7 +99,7 @@ const configuration = {
         routeBasePath: '/sdk-docs/core-sdk-golang',
         id: 'sdks-core-sdk-golang',
         sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-golang.js'),
-        // includeCurrentVersion: false, // uncomment when golang docs are versioned
+        includeCurrentVersion: false, // uncomment when golang docs are versioned
         ...pageOptions,
       },
     ],

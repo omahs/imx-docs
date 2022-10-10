@@ -172,9 +172,9 @@ if err != nil {
 
 ### Contract requests
 
-ImmutableX is built as a ZK-rollup in partnership with StarkWare. We chose ZK-rollups because it is the only L2 scaling solution that has the same security guarantees as layer 1 Ethereum. The upshot of this is that you can mint or trade NFTs on ImmutableX with zero gas costs whilst not compromising on security -- the first true “layer 2” for NFTs on Ethereum.
+Immutable X is built as a ZK-rollup in partnership with StarkWare. We chose ZK-rollups because it is the only L2 scaling solution that has the same security guarantees as layer 1 Ethereum. The upshot of this is that you can mint or trade NFTs on Immutable X with zero gas costs whilst not compromising on security -- the first true “layer 2” for NFTs on Ethereum.
 
-The Core SDK provides interfaces for all smart contracts required to interact with the ImmutableX platform.
+The Core SDK provides interfaces for all smart contracts required to interact with the Immutable X platform.
 
 [See all smart contracts available in the Core SDK](#smart-contract-autogeneration)
 
