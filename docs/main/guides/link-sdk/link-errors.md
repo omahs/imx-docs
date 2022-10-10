@@ -89,3 +89,10 @@ Find below the list of errors that can be displayed in Link.
 | 11004      | No currencies left after filtering | Currencies not available | Retry operation.If continue to fail, contact Customer Support.                       | Check supported tokens for Crypto to Fiat.      |
 | 11005      | Invalid currency amount            | Invalid currency amount  | Retry operation with different amount.If continue to fail, contact Customer Support. | Check supported tokens for Crypto to Fiat.      |
 | 11006      | Incorrect transaction format       | Something went wrong.    | Retry operation.If continue to fail, contact Customer Support.                       | Try to replicate the issue. Check console logs. |
+
+## Offers
+
+| Error Code | Likely Scenario                    | Displayed Error Message  | Possible User Actions                                                                | Possible Developer Actions                      |
+| ---------- | ---------------------------------- | ------------------------ | ------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| -      | Invalid parameters supplied to link route         | Invalid make offer parameters    | Retry operation. If continue to fail, contact Customer Support.                       | Check that the correct parameters are being passed to the link route and are valid     |
+| -      | API is returning an error        | We have encountered an issue with our APIs while processing this request. Please try again. For further assistance please visit our support page.    | Retry operation. If continue to fail, contact Customer Support.                       | Try to replicate the issue. Check console logs.    |
