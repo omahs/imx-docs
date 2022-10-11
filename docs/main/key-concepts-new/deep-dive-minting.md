@@ -3,7 +3,7 @@ id: "deep-dive-minting"
 title: "Deep dive into minting"
 slug: "/key-concepts-new/minting"
 excerpt: "Deep dive into minting"
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 This article aims to cover the following topics:

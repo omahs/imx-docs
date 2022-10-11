@@ -3,7 +3,7 @@ id: "anatomy-smart-contract"
 title: "Anatomy of a smart contract"
 slug: "/key-concepts-new/anatomy-smart-contract"
 excerpt: "Anatomy of a smart contract"
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Anatomy of a smart contract
