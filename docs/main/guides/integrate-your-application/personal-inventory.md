@@ -100,7 +100,7 @@ Displaying user assets is a common requirement for games and marketplaces using 
 const assetsRequest = await client.getAssets({ user: address })
 ```
 
-This request will retrieve all the user’s assets tracked by Immutable X limited only by the result set page size. If a user has more assets then the current request’s page size limit (currently 100), additional requests can be made with the cursor property to navigate through all the user’s assets.
+This request will retrieve all the user’s assets tracked by Immutable X limited only by the result set page size. If a user has more assets than the current request’s page size limit (currently 100), additional requests can be made with the cursor property to navigate through all the user’s assets.
 
 ```javascript
 let assetCursor
