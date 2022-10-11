@@ -70,10 +70,10 @@ As Immutable X enables applications to execute signed transactions on both Ether
 
 ### 1. Generate your own signers
 
-The Core SDK provides functionality for applications to generate Stark (L2) [private keys](https://github.com/immutable/imx-core-sdk/blob/v1.0.0-beta.1/src/utils/stark/starkCurve.ts#L99) and [signers](https://github.com/immutable/imx-core-sdk/blob/v1.0.0-beta.1/src/utils/stark/starkSigner.ts#L60).
+The Core SDK provides functionality for applications to generate STARK (L2) [private keys](https://github.com/immutable/imx-core-sdk/blob/v1.0.0-beta.1/src/utils/stark/starkCurve.ts#L99) and [signers](https://github.com/immutable/imx-core-sdk/blob/v1.0.0-beta.1/src/utils/stark/starkSigner.ts#L60).
 
 #### 🚨🚨🚨 Warning 🚨🚨🚨
-> If you generate your own Stark private key, you will have to persist it. The key is [randomly generated](https://github.com/immutable/imx-core-sdk/blob/v1.0.0-beta.1/src/utils/stark/starkCurve.ts#L99) so **_cannot_** be deterministically re-generated.
+> If you generate your own STARK private key, you will have to persist it. The key is [randomly generated](https://github.com/immutable/imx-core-sdk/blob/v1.0.0-beta.1/src/utils/stark/starkCurve.ts#L99) so **_cannot_** be deterministically re-generated.
 
 ```ts
 import { AlchemyProvider } from '@ethersproject/providers';
