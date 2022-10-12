@@ -37,7 +37,7 @@ To initialize the offramp process with an option to choose any available currenc
 await link.cryptoToFiat({})
 ```
 
-This displays the Link UI with a screen when a user need to choose currency and anter amount:
+This displays the Link UI with a screen when a user need to choose currency and enter amount:
 
 ![Offramp without parameters](/img/link-sdk-cryptotofiat/offramp-without-params.png 'Offramp without parameters')
 
