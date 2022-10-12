@@ -17,7 +17,7 @@ const configuration = {
     defaultLocale: 'en',
     locales: ['en', 'ko'],
   },
-  title: 'Immutable X Documentation',
+  title: 'ImmutableX Documentation',
   tagline:
     'Experience zero gas fees, instant trades, and carbon neutral NFTs for marketplaces, games, and applications without compromise. Build your NFT business in hours with our APIs.',
   url: 'https://docs.x.immutable.com',
