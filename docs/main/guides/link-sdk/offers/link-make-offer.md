@@ -39,7 +39,7 @@ Input parameters:
   tokenAddress: string, // contract address of the collection
   amount: string,  // offer amount, must be greater than 0
   currencyAddress?: string, // contract address of the currency token, default is ETH
-  expirationTimestamp?: string, // unix timestamp as a string
+  expirationTimestamp?: string, // unix timestamp seconds as a string. Must be at least 1 week into the future, defaults to 99 years into the future
 }
 ```
 
