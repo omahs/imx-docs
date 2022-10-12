@@ -1,0 +1,155 @@
+---
+title: "Mint assets"
+slug: "/guides-new/mint-assets"
+keywords: [imx-wallets, imx-dx]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Minting assets on Immutable X means to bring into existence tokens from a smart contract. For more information on this concept, please see [Deep dive into minting](/docs/key-concepts-new/minting).
+
+In order for a user to mint tokens, they need:
+1. A smart contract deployed on L1 (Ethereum)
+2. To be the owner of the smart contract (as returned when calling the contract's `owner()` function)
+3. To be registered as a user on Immutable X
+4. To have registered an administrative entity, a project, on Immutable X
+5. To have registered their collection (as represented by their smart contract) on Immutable X
+
+**Available with:**
+* [Core SDK](#core-sdk)
+* [JS SDK (deprecating soon)](/docs/asset-minting)
+* [StarkNet](#starknet)
+
+## Core SDK
+
+Once you have verified that a user has a smart contract deployed on L1 and that they are the owner, then your application can start the process of enabling them to mint tokens on L2 from this contract.
+
+### 1. Register user
+Before a user can register a project or collection and mint tokens on Immutable X, they must be registered as a user on Immutable X. Follow [this guide](/docs/guides-new/user-registration) to do this.
+
+### 2. Register a project
+A project is an administrative-level entity that is associated with an user. A project can have many collections, which are represented by smart contracts.
+
+<Tabs>
+  <TabItem value="typescript" label="Typescript Core SDK">
+
+:::info SDK reference
+[createProject](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/classes/immutablex.immutablex#createProject)
+:::
+
+The `createProject` endpoint requires a signer (obtained in the [previous step](#1-register-user)) and [createProjectRequest](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.createprojectrequest) object:
+```ts
+const createProjectRequest = {
+  company_name: "company",
+  contract_email: "email",
+  name: "name"
+}
+```
+
+Then, create a project:
+```ts
+// Add code
+```
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin (JVM) Core SDK">
+
+```kotlin
+// Add code
+``` 
+  </TabItem>
+  <TabItem value="Swift" label="Swift Core SDK">
+
+```swift
+// Add code
+```
+  </TabItem>
+  <TabItem value="go" label="Golang Core SDK">
+
+```go
+// Add code
+```
+  </TabItem>
+</Tabs>
+
+### 3. Register a collection
+A collection refers to a deployed [token smart contract](https://docs.openzeppelin.com/contracts/4.x/tokens) that has been registered on Immutable. Once this has occured, its tokens can be transacted (ie. minted, traded, bought and sold) on Immutable X.
+
+Each collection belongs to a project.
+
+<Tabs>
+  <TabItem value="typescript" label="Typescript Core SDK">
+
+:::info SDK reference
+[createCollection](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/classes/immutablex.immutablex#createCollection)
+:::
+
+Get the project ID returned from [registering a project](#2-register-a-project) to use in the request body of this section.
+
+The `createCollection` endpoint requires a signer (obtained in the [first step](#1-register-user)) and [createCollectionRequest](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.createcollectionrequest) object:
+```ts
+const createCollectionRequest = {
+  name: "name",
+  contract_address: "address",
+  project_id: "name",
+  owner_public_key: "owner public key"
+}
+```
+
+Then, create a collection:
+```ts
+// Add code
+```
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin (JVM) Core SDK">
+
+```kotlin
+// Add code
+``` 
+  </TabItem>
+  <TabItem value="Swift" label="Swift Core SDK">
+
+```swift
+// Add code
+```
+  </TabItem>
+  <TabItem value="go" label="Golang Core SDK">
+
+```go
+// Add code
+```
+  </TabItem>
+</Tabs>
+
+### 4. Mint tokens
+
+<Tabs>
+  <TabItem value="typescript" label="Typescript Core SDK">
+
+```ts
+// Add code
+```
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin (JVM) Core SDK">
+
+```kotlin
+// Add code
+``` 
+  </TabItem>
+  <TabItem value="Swift" label="Swift Core SDK">
+
+```swift
+// Add code
+```
+  </TabItem>
+  <TabItem value="go" label="Golang Core SDK">
+
+```go
+// Add code
+```
+  </TabItem>
+</Tabs>
+
+
+## StarkNet
+// Add info
