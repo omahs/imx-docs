@@ -12,7 +12,7 @@ keywords: [imx-wallets]
 
 Utility functions that will chain necessary API calls to complete a process or perform a transaction.
 
-* Register a user with Immutable X
+* Register a user with ImmutableX
 * Buy cryptocurrency via Moonpay
 * Buy ERC721
 * Sell ERC721

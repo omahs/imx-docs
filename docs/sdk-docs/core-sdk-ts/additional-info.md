@@ -10,7 +10,7 @@ keywords: [imx-dx]
 
 ## Get data (on assets, orders, past transactions, etc.)
 
-These methods allow you to read data about events, transactions or current state on Immutable X (layer 2). They do not require any user authentication because no state is being changed.
+These methods allow you to read data about events, transactions or current state on ImmutableX (layer 2). They do not require any user authentication because no state is being changed.
 
 Examples of the types of data that are typically retrieved include:
 
@@ -41,7 +41,7 @@ const collectionAssetsResponse = await client.listAssets({
 There are two types of operations requiring user signatures:
 
 1. Transactions that update blockchain state
-2. Operations that Immutable X require authorization for
+2. Operations that ImmutableX require authorization for
 
 In order to get user signatures, applications need to [generate "signers"](#how-do-applications-generate-and-use-signers).
 
@@ -51,7 +51,7 @@ A common transaction type is the transfer of asset ownership from one user to an
 
 #### What are operations that require authorization?
 
-These operations add to or update data in Immutable's databases and typically require the authorization of an object's owner (ie. a user creating a project on Immutable X).
+These operations add to or update data in Immutable's databases and typically require the authorization of an object's owner (ie. a user creating a project on ImmutableX).
 
 ### How do applications generate and use signers?
 
@@ -66,7 +66,7 @@ The first option, where an application obtains a user's private key directly, is
 
 The second option provides an application with an interface to the user's account by prompting the user to connect with their wallet application (ie. mobile or browser wallet). Once connected the app can begin asking the user to sign transactions and messages without having to reveal their private key.
 
-As Immutable X enables applications to execute signed transactions on both Ethereum (layer 1) and StarkEx (layer 2), signers are required for both these layers.
+As ImmutableX enables applications to execute signed transactions on both Ethereum (layer 1) and StarkEx (layer 2), signers are required for both these layers.
 
 ### 1. Generate your own signers
 
@@ -141,9 +141,9 @@ const orderResponse = await client.createOrder(signers, {
 
 ## Contract requests
 
-Immutable X is built as a ZK-rollup in partnership with StarkWare. We chose the ZK-rollups because it is the only solution capable of scale without compromise. This means whenever you mint or trade an NFT on Immutable X, you pay zero gas, and the validity of all transactions are directly enforced by Ethereum’s security using zero-knowledge proofs -- the first “layer 2” for NFTs on Ethereum.
+ImmutableX is built as a ZK-rollup in partnership with StarkWare. We chose the ZK-rollups because it is the only solution capable of scale without compromise. This means whenever you mint or trade an NFT on ImmutableX, you pay zero gas, and the validity of all transactions are directly enforced by Ethereum’s security using zero-knowledge proofs -- the first “layer 2” for NFTs on Ethereum.
 
-The Core SDK provides interfaces for all smart contracts required to interact with the Immutable X platform.
+The Core SDK provides interfaces for all smart contracts required to interact with the ImmutableX platform.
 
 [See all smart contracts available in the Core SDK](#smart-contract-autogeneration).
 

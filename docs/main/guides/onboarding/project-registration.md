@@ -4,7 +4,7 @@ slug: "./project-registration"
 sidebar_position: 1
 keywords: [imx-dx]
 ---
-For project registration, you first need to [register as a user with Immutable X](../getting-started-guide.md#register-a-user-account).
+For project registration, you first need to [register as a user with ImmutableX](../getting-started-guide.md#register-a-user-account).
 
 A project is an administrative-level entity that is associated with an owner address, which is your [wallet address](../getting-started-guide.md#wallet). One project can have many associated collections. 
 :::caution Project ownership cannot be transferred

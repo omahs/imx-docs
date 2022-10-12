@@ -14,7 +14,7 @@ keywords: [imx-dx]
 
 A configuration object is provided with preset configurations for both Test and Production networks to simplify the environment setup required for which the Core SDK requests are made. This can be obtained by using the `GetConfig` function available within the `config` package of Core SDK. 
 
-Select one of the following Ethereum networks Immutable X platform currently supports.
+Select one of the following Ethereum networks ImmutableX platform currently supports.
 
 | Environment | Description   |
 |-------------|---------------|

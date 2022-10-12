@@ -22,7 +22,7 @@ let url = try await ImmutableXCore.shared.buyCryptoURL(signer: signer)
 
 ## Standard API Requests
 
-The Core SDK includes classes that interact with the Immutable X APIs.
+The Core SDK includes classes that interact with the ImmutableX APIs.
 
 e.g. Get a list of collections ordered by name in ascending order
 

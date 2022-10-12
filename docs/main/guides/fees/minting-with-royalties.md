@@ -5,7 +5,7 @@ slug: "/minting-with-royalties"
 sidebar_position: 1
 keywords: [imx-traders]
 ---
-Royalties for a given asset are defined at the point of minting a new asset to the Immutable X protocol. Please ensure your [recipients are registered](../user-registration.md) before minting.
+Royalties for a given asset are defined at the point of minting a new asset to the ImmutableX protocol. Please ensure your [recipients are registered](../user-registration.md) before minting.
 
 ## Royalty fees for newly minted assets
 Minting with royalties requires `@imtbl/imx-sdk` version that is `>= 1.1.3`.
@@ -81,7 +81,7 @@ Response:
 
 `id` The id for the asset on your system. This id is used in conjunction with the metadata endpoint provided during contract registration to fetch metadata associated with that asset.
 
-`blueprint` is on chain metadata that will be included as part of the Layer 1 mint if the minted ERC-721 token is withdrawn from Immutable X onto Layer 1 Ethereum. Right now this can be any string as long as it is not empty.
+`blueprint` is on chain metadata that will be included as part of the Layer 1 mint if the minted ERC-721 token is withdrawn from ImmutableX onto Layer 1 Ethereum. Right now this can be any string as long as it is not empty.
 
 You can specify the percentage up to 2 decimal places. Anything beyond that will be truncated to 2 d.p. This is to ensure that rounding up doesn't cause the sum of all constituent percentages to exceed 100%.
 

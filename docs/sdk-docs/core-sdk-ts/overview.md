@@ -14,6 +14,6 @@ Currently, our SDK supports interactions with our application-specific rollup ba
 
 ## Documentation
 
-See our [developer documentation](https://docs.x.immutable.com) for information on building on Immutable X.
+See our [developer documentation](https://docs.x.immutable.com) for information on building on ImmutableX.
 
 See our [API reference](https://docs.x.immutable.com/reference) for more information on our APIs.

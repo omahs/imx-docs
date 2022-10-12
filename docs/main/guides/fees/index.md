@@ -12,7 +12,7 @@ To start, here are some explanations of common terms:
 - **Taker marketplace:** The marketplace that completes the purchase for an asset. It is possible for a marketplace to be both the maker and the taker marketplace.
 - **Asset originator:** The entity who will receive royalty fees. The asset originator does not necessarily have to be the minter themselves.
 - **Royalties:** A royalty fee represents a percentage of secondary sales that will go to the original asset creator.
-- **Secondary sale fees:** Refers to fees collected when assets are traded on the Immutable X protocol.
+- **Secondary sale fees:** Refers to fees collected when assets are traded on the ImmutableX protocol.
 
 ## Trading fees
 
@@ -32,7 +32,7 @@ Base price: 100 ETH
 Sale / listing price: 100 + 0.5 + 2 + 2 = 104.5 ETH (what’s shown on the marketplace)
 
 - Royalty: .5% = 0.5 ETH
-- Marketplace: 2% = 2 ETH on Immutable X’s marketplace
+- Marketplace: 2% = 2 ETH on ImmutableX’s marketplace
   - Maker MP: 1
   - Taker MP: 1
 - Protocol: 2% = 2 ETH
@@ -41,13 +41,13 @@ Sale / listing price: 100 + 0.5 + 2 + 2 = 104.5 ETH (what’s shown on the marke
 
 ## Distributions
 
-Immutable X will pay out these fees immediately after each transaction is confirmed. Each party wanting to collect fees must have [registered an Immutable X account](../getting-started-guide.md#register-a-user-account) to allow the settlement of gas-less fees.
+ImmutableX will pay out these fees immediately after each transaction is confirmed. Each party wanting to collect fees must have [registered an ImmutableX account](../getting-started-guide.md#register-a-user-account) to allow the settlement of gas-less fees.
 
 ## Royalties
 
-Royalty percentages for one or more recipients can be set at the time an asset is minted. Royalties will be distributed to [the recipients' Immutable X wallet](../getting-started-guide.md#wallet).
+Royalty percentages for one or more recipients can be set at the time an asset is minted. Royalties will be distributed to [the recipients' ImmutableX wallet](../getting-started-guide.md#wallet).
 
-At this stage, royalties for assets minted on Immutable X are only enforced on layer 2. If withdrawn assets are re-deposited onto Immutable X at a later date, royalties will continue to work alongside gas-free trading. Read more about [minting with royalties](./minting-with-royalties.md).
+At this stage, royalties for assets minted on ImmutableX are only enforced on layer 2. If withdrawn assets are re-deposited onto ImmutableX at a later date, royalties will continue to work alongside gas-free trading. Read more about [minting with royalties](./minting-with-royalties.md).
 
 ## Maker fees
 

@@ -7,7 +7,7 @@ keywords: [imx-growth]
 ---
 *Estimated completion time: 20 mins*
 
-This tutorial provides a step by step guide on how to mint an NFT on Immutable X. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. 
+This tutorial provides a step by step guide on how to mint an NFT on ImmutableX. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. 
 
 By the end of this tutorial you will have:
 
@@ -277,9 +277,9 @@ Before we can mint on Layer 2, we need to deploy a smart contract on Layer 1 to 
 Paste your contract address into [Goerli Etherscan](https://goerli.etherscan.io/). It should say **contract** in the upper left. If this says address, ensure you are on the correct network
 :::
 
-## Step 10: Add your NFT Collection to Immutable X
+## Step 10: Add your NFT Collection to ImmutableX
 
-After deploying your contract to Layer 1, you will need to [register](https://docs.x.immutable.com/docs/onboarding) it with Immutable X by creating a project and a collection. 
+After deploying your contract to Layer 1, you will need to [register](https://docs.x.immutable.com/docs/onboarding) it with ImmutableX by creating a project and a collection. 
 
 1. Download the [imx-examples repo](https://github.com/immutable/imx-examples)
 2. Open the folder in Visual Studio Code
@@ -469,7 +469,7 @@ To add metadata schema to the collection, run the command `npm run onboarding:ad
 
 ## Step 15: Mint NFT
 
-Now that we have added our contract to Immutable X, the final step is to add our assets to the blockchain by minting them. 
+Now that we have added our contract to ImmutableX, the final step is to add our assets to the blockchain by minting them. 
 
 1. Navigate to the .env file 
 2. Fill in the follow under the 'Bulk Minting' section 

@@ -17,5 +17,5 @@ The [Immutable Wallet SDK Web](https://www.npmjs.com/package/@imtbl/wallet-sdk-w
 ## Documentation
 
 - [Core SDK reference](/sdk-docs/core-sdk-ts)
-- [Immutable X developer docs](/)
+- [ImmutableX developer docs](/)
 - [UI guide for implementing user wallet interactions](/docs/wallet-sdk-ui-guide)

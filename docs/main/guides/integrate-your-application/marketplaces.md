@@ -7,11 +7,11 @@ sidebar_position: 4
 keywords: [imx-traders]
 ---
 
-As an exchange platform, Immutable X provides all the features needed to create a marketplace for the assets created and stored on the platform. Once listings are created from user accounts, it is often common to have a separate marketplace section to show all the current orders.
+As an exchange platform, ImmutableX provides all the features needed to create a marketplace for the assets created and stored on the platform. Once listings are created from user accounts, it is often common to have a separate marketplace section to show all the current orders.
 
 ## Orders
 
-Orders on Immutable X all include a buy and sell side. To fill or partially fill an order, an order with the opposite buy and sell tokens is created and sent to Immutable X. It is important to note there are different _statuses_ an Immutable X order can have:
+Orders on ImmutableX all include a buy and sell side. To fill or partially fill an order, an order with the opposite buy and sell tokens is created and sent to ImmutableX. It is important to note there are different _statuses_ an ImmutableX order can have:
 
 - **Active** - Order is valid and can be filled or partial filled.
 - **Filled** - Order is completed and the asset(s) have been transferred.

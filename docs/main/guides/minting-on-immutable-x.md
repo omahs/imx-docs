@@ -1,19 +1,19 @@
 ---
 id: 'minting-on-immutable-x'
-title: 'Minting on Immutable X'
+title: 'Minting on ImmutableX'
 slug: '/minting-on-immutable-x'
 sidebar_position: 4
 keywords: [imx-games]
 ---
 
-This guide provides context on the steps required to list your game items, collectibles, or other ERC-721 assets (otherwise known as NFTs) on Immutable X. It's a good overview of tasks and concepts if you're new to the space, or if you want to learn more about the benefits of minting on Immutable X.
+This guide provides context on the steps required to list your game items, collectibles, or other ERC-721 assets (otherwise known as NFTs) on ImmutableX. It's a good overview of tasks and concepts if you're new to the space, or if you want to learn more about the benefits of minting on ImmutableX.
 :::info Ready to start?
 If you're already across the details and ready to get started, see our [onboarding guide](../guides/onboarding/index.md)
 :::
 
 ## Benefits
 
-Immutable X is a “Layer 2” (L2) scaling solution built on top of Ethereum, otherwise known as Layer 1 (L1). Immutable X inherits the network and security of the Ethereum blockchain, and allows customers to mint and trade NFTs at zero gas cost, carbon-neutrally, and at more than 9,000 transactions per second (TPS) — whereas Ethereum currently does 5.
+ImmutableX is a “Layer 2” (L2) scaling solution built on top of Ethereum, otherwise known as Layer 1 (L1). ImmutableX inherits the network and security of the Ethereum blockchain, and allows customers to mint and trade NFTs at zero gas cost, carbon-neutrally, and at more than 9,000 transactions per second (TPS) — whereas Ethereum currently does 5.
 
 For more detail on how it works, see:
 
@@ -22,9 +22,9 @@ For more detail on how it works, see:
 
 ## Liquidity
 
-Immutable X has a shared assetbook and a shared orderbook. Every asset minted into Immutable X is stored in the shared assetbook. This enables any application on Immutable X to view and display the assets of any other application. In addition, every order submitted to Immutable X is stored by Immutable and made available to all marketplaces, which helps deliver the best liquidity outcome for projects on Immutable X.
+ImmutableX has a shared assetbook and a shared orderbook. Every asset minted into ImmutableX is stored in the shared assetbook. This enables any application on ImmutableX to view and display the assets of any other application. In addition, every order submitted to ImmutableX is stored by Immutable and made available to all marketplaces, which helps deliver the best liquidity outcome for projects on ImmutableX.
 
-Building on Immutable X means that you:
+Building on ImmutableX means that you:
 
 - Do not need to build, manage or maintain your own orderbook to facilitate trades.
 - Have access to pools of demand that exist outside of a single marketplace.
@@ -45,7 +45,7 @@ In this example, marketplace A receives their market-maker fee and marketplace B
 There are two types of metadata:
 
 - **Immutable metadata** — Set at the time of asset creation, enforced by the proof, and available [on-chain](./minting-on-immutable-x.md#on-chain-versus-off-chain) when an L2-minted NFT is withdrawn for the first time. The on-chain metadata is stored in the [blueprint](./minting-on-immutable-x.md#metadata-blueprint) or `mintingBlob`. This is where you should store permanent properties, such as IPFS hashes or values you want to access on L1.
-- **Mutable metadata** — Fully controlled by the application, and not recorded on-chain, mutable metadata is most useful for marketplaces to describe assets accurately to users. To ensure your NFT appears in marketplaces built on Immutable X correctly, it is recommended that every project register a metadata schema for their collection. [Learn more](../guides/asset-management/asset-metadata.mdx).
+- **Mutable metadata** — Fully controlled by the application, and not recorded on-chain, mutable metadata is most useful for marketplaces to describe assets accurately to users. To ensure your NFT appears in marketplaces built on ImmutableX correctly, it is recommended that every project register a metadata schema for their collection. [Learn more](../guides/asset-management/asset-metadata.mdx).
 
 ## On-chain versus off-chain
 
@@ -63,7 +63,7 @@ Because this data is off-chain, whoever controls the storage location has the ab
 
 ## Metadata API
 
-Projects are expected to self-host their media assets, including both the endpoints for the metadata of the assets, as well as other media defined by the metadata. When [registering your collection's contract](../guides/onboarding/collection-registration.mdx) with Immutable X, you need to provide a metadata API endpoint for us to retrieve metadata properties for each of your NFTs.
+Projects are expected to self-host their media assets, including both the endpoints for the metadata of the assets, as well as other media defined by the metadata. When [registering your collection's contract](../guides/onboarding/collection-registration.mdx) with ImmutableX, you need to provide a metadata API endpoint for us to retrieve metadata properties for each of your NFTs.
 
 Our metadata crawler will access `<metadata_api_url>/<token_id>` at the time of minting a new token. It appends `/<token_id>` to the metadata_api_url, for example: `https://metadata_api_url.com/1`
 
@@ -87,24 +87,24 @@ We aim to process requests within 2 business days (AEST) but this can take longe
 
 ## Metadata blueprint
 
-The blueprint is a required field defined at the time of minting on Immutable X for each NFT. This represents the on-chain immutable metadata of the NFT that will be written to the blockchain when it is withdrawn from Immutable X.
+The blueprint is a required field defined at the time of minting on ImmutableX for each NFT. This represents the on-chain immutable metadata of the NFT that will be written to the blockchain when it is withdrawn from ImmutableX.
 
 The blueprint string can be of any format; typically it's a comma delimited string (e.g. "100,water,2,3") or an IPFS hash. This is passed to the `mintFor` function in your smart contract, where you can implement custom logic to decode it on-chain or just save it as it is.
 
 For a better understanding of how the blueprint is used, take a look at our smart contract templates in the [imx-contracts repo](https://github.com/immutable/imx-contracts).
 :::info Blueprint data
-The metadata that appears on Immutable X does not read any data from the blueprint, so there's no reason to define a blueprint as an entire JSON string. Instead, it could be a link, hash, or a few select properties to optionally decode and save in custom mappings in your smart contract
+The metadata that appears on ImmutableX does not read any data from the blueprint, so there's no reason to define a blueprint as an entire JSON string. Instead, it could be a link, hash, or a few select properties to optionally decode and save in custom mappings in your smart contract
 :::
 
 # Minting on Layer 2
 
-For a smart contract to work with Immutable X, we need an implementation of a `mintFor` function, which is what our STARK contract calls at the time of withdrawing a minted token from L2 to L1. Contracts also require an `owner()` function to verify the contract’s owner. There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata.
+For a smart contract to work with ImmutableX, we need an implementation of a `mintFor` function, which is what our STARK contract calls at the time of withdrawing a minted token from L2 to L1. Contracts also require an `owner()` function to verify the contract’s owner. There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata.
 
 ## Token ID
 
-When minting on Immutable X, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. As mentioned above, you also have to provide a [blueprint](./minting-on-immutable-x.md#metadata-blueprint) for each token. The blueprint represents the on-chain, immutable metadata of the NFT that will be passed (along with the token ID) to your `mintFor` function.
+When minting on ImmutableX, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. As mentioned above, you also have to provide a [blueprint](./minting-on-immutable-x.md#metadata-blueprint) for each token. The blueprint represents the on-chain, immutable metadata of the NFT that will be passed (along with the token ID) to your `mintFor` function.
 
-In a Layer 1 smart contract, it's common for the ERC-721 token ID to be incremented in the minting function. With Immutable X, the token ID is defined at the time of minting to Immutable X and passed to the `mintFor` function in the minting blob, which then gets decoded into the respective ID and blueprint variables. You will have to keep track of the token ID on your end and increment it off-chain for every mint.
+In a Layer 1 smart contract, it's common for the ERC-721 token ID to be incremented in the minting function. With ImmutableX, the token ID is defined at the time of minting to ImmutableX and passed to the `mintFor` function in the minting blob, which then gets decoded into the respective ID and blueprint variables. You will have to keep track of the token ID on your end and increment it off-chain for every mint.
 
 Additionally, token IDs provided when minting on L2 must be unique. Providing a duplicate token ID will result in an API error, with the ID of the duplicate token being returned in the error message. For example, if your mint request contains a token with the ID of `10`, and your collection already has a token with an ID of `10`, you'll get the error message: `Error inserting asset, duplicate ID and token address: [10]`.
 

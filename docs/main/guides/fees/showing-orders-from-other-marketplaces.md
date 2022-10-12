@@ -5,7 +5,7 @@ slug: "/showing-orders-from-other-marketplaces"
 sidebar_position: 2
 keywords: [imx-traders]
 ---
-Immutable X has a shared orderbook. This means the response returned from `client.getOrders()` or the  `/v1/orders` [API](/reference#/operations/listOrders) can come from any marketplace on the Immutable X protocol. This helps promote liquidity. 
+ImmutableX has a shared orderbook. This means the response returned from `client.getOrders()` or the  `/v1/orders` [API](/reference#/operations/listOrders) can come from any marketplace on the ImmutableX protocol. This helps promote liquidity. 
 
 For backwards compatibility, the amount in `buy.data.quantity` is now fee-inclusive for orders with fees. 
 

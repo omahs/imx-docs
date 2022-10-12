@@ -15,10 +15,10 @@ import { ERC721TokenType, ETHTokenType } from '@imtbl/imx-sdk'
 
 ## ERC20 and IMX balances
 
-Immutable X’s base token is Ethereum. Once deposited onto the platform it exists in three different states:
+ImmutableX’s base token is Ethereum. Once deposited onto the platform it exists in three different states:
 
-- **imx** - ETH deposited on Immutable X and is ready to be used to fill orders, trade, etc.
-- **Preparing withdrawal** - ETH that has started the withdrawal process from Immutable X. It must wait until the next published signature to the main chain before moving to the withdrawable state.
+- **imx** - ETH deposited on ImmutableX and is ready to be used to fill orders, trade, etc.
+- **Preparing withdrawal** - ETH that has started the withdrawal process from ImmutableX. It must wait until the next published signature to the main chain before moving to the withdrawable state.
 - **Withdrawable** - ETH that is now withdrawable to another address on the main chain.
 
 To retrieve a user’s balances use the following IMX client function:
@@ -45,7 +45,7 @@ let amountInEth = ethers.utils.formatEther(amountInWei)
 
 ## Deposits
 
-In order to deposit into Immutable X, a user sends ETH from their wallet to the Immutable X contract. This ETH is now on the Layer 2 (L2) solution built by Immutable and stays in the contract until later withdrawn by the user. A Link SDK call provides an easy interface for the deposit process:
+In order to deposit into ImmutableX, a user sends ETH from their wallet to the ImmutableX contract. This ETH is now on the Layer 2 (L2) solution built by Immutable and stays in the contract until later withdrawn by the user. A Link SDK call provides an easy interface for the deposit process:
 
 ```javascript
 // Deposit ETH into IMX
@@ -57,9 +57,9 @@ link.deposit({
 
 ## Withdrawals
 
-Withdrawing ETH from Immutable X is a two step process. As noted before, the ETH on the mainchain technically resides in the Immutable X contract.
+Withdrawing ETH from ImmutableX is a two step process. As noted before, the ETH on the mainchain technically resides in the ImmutableX contract.
 
-A signed transaction needs to be sent on the L2 (Immutable X), preparing the ETH to be withdrawn from the contract. To prepare the withdraw, use the following Link SDK function:
+A signed transaction needs to be sent on the L2 (ImmutableX), preparing the ETH to be withdrawn from the contract. To prepare the withdraw, use the following Link SDK function:
 
 ```javascript
 link.prepareWithdrawal({
@@ -69,7 +69,7 @@ link.prepareWithdrawal({
 ```
 
 :::caution Avoiding gas price complaints
-Withdrawing from Immutable X will cost the user a gas fee, so encouraging users to wait and group their withdrawals with larger amounts is recommended to avoid gas price complaints.
+Withdrawing from ImmutableX will cost the user a gas fee, so encouraging users to wait and group their withdrawals with larger amounts is recommended to avoid gas price complaints.
 :::
 
 There will be a time period between preparing the withdrawal, and the user being able to complete the withdrawal into their mainchain (L1) account. A simple way to monitor the withdrawal process is monitoring the user’s different account balances as shown in [Balances](#erc20imx-balances).
@@ -93,14 +93,14 @@ link.history({})
 
 ## User NFT assets
 
-Displaying user assets is a common requirement for games and marketplaces using Immutable X. The IMX Client provides a quick way to get all the user’s assets:
+Displaying user assets is a common requirement for games and marketplaces using ImmutableX. The IMX Client provides a quick way to get all the user’s assets:
 [block:code]
 
 ```javascript
 const assetsRequest = await client.getAssets({ user: address })
 ```
 
-This request will retrieve all the user’s assets tracked by Immutable X limited only by the result set page size. If a user has more assets than the current request’s page size limit (currently 100), additional requests can be made with the cursor property to navigate through all the user’s assets.
+This request will retrieve all the user’s assets tracked by ImmutableX limited only by the result set page size. If a user has more assets than the current request’s page size limit (currently 100), additional requests can be made with the cursor property to navigate through all the user’s assets.
 
 ```javascript
 let assetCursor
@@ -116,7 +116,7 @@ This technique will get you all the user’s assets at one time, but could be sl
 
 ## Filter owned assets
 
-Most applications will want to filter the user’s assets in some way. Oftentimes only one collection’s assets are needed, or maybe only the assets on Immutable X (L2) are required to be shown. There are many ways the assets request can be filtered to minimize the data returned. Here is an example filtering on collection and layer 2 assets only:
+Most applications will want to filter the user’s assets in some way. Oftentimes only one collection’s assets are needed, or maybe only the assets on ImmutableX (L2) are required to be shown. There are many ways the assets request can be filtered to minimize the data returned. Here is an example filtering on collection and layer 2 assets only:
 
 ```javascript
 let assetsRequest = await client.getAssets({
@@ -170,7 +170,7 @@ async function sellAsset(asset, priceInEth) {
 
 ## Transfer assets
 
-Another common use case, user transfers, is available through the Link SDK. If a user wants to send a token to another Immutable X address, an order is not required. Instead, use the following code:
+Another common use case, user transfers, is available through the Link SDK. If a user wants to send a token to another ImmutableX address, an order is not required. Instead, use the following code:
 
 ```javascript
 async function transferERC721(asset) {

@@ -12,10 +12,10 @@ Check out our **[Link reference tool](https://tools.immutable.com/link-reference
 
 **SDK v1.3.30+** used with Link UI supports different ways to deposit ETH and whitelisted ERC20 tokens, for example, USDC, GODS or IMX tokens.
 :::info Currency support
-Right now, Immutable X _only_ supports ETH and whitelisted ERC20 tokens.
+Right now, ImmutableX _only_ supports ETH and whitelisted ERC20 tokens.
 :::
 
-Immutable X is not prescriptive in how marketplaces handle the deposit process. There are several optional parameters you can use for your marketplace, to influence the user journey for the deposit.
+ImmutableX is not prescriptive in how marketplaces handle the deposit process. There are several optional parameters you can use for your marketplace, to influence the user journey for the deposit.
 
 Available parameters:
 
