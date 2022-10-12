@@ -7,6 +7,10 @@ sidebar_position: 2
 keywords: [trading, orderbook, offers, buy-order]
 ---
 
+:::danger OFFERS IS ONLY AVAILABLE IN THE SANDBOX ENVIRONMENT
+Please only use these features for testing / integration in the sandbox environment. This is not supported in Production yet.
+:::
+
 :::note Link reference tool
 Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
 :::
@@ -30,6 +34,10 @@ Input parameters:
   orderId: string // id of the order to cancel
 }
 ```
+
+![Cancel an offer](/img/link-offers/cancel-offer-prompt.png 'Cancel an offer')
+
+![Cancel an offer confirmation](/img/link-offers/cancel-offer-success.png 'Cancel an offer confirmation')
 
 ## Errors
 

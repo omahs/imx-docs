@@ -7,6 +7,10 @@ sidebar_position: 1
 keywords: [trading, orderbook, offers, buy-order]
 ---
 
+:::danger OFFERS IS ONLY AVAILABLE IN THE SANDBOX ENVIRONMENT
+Please only use these features for testing / integration in the sandbox environment. This is not supported in Production yet.
+:::
+
 :::note Link reference tool
 Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
 :::
@@ -35,6 +39,7 @@ Input parameters:
   tokenAddress: string, // contract address of the collection
   amount: string,  // offer amount, must be greater than 0
   currencyAddress?: string, // contract address of the currency token, default is ETH
+  expirationTimestamp?: string, // unix timestamp as a string
 }
 ```
 
@@ -52,6 +57,9 @@ Make offer response:
 */
 
 ```
+![Make an offer](/img/link-offers/make-offer-prompt.png 'Make an offer')
+
+![Make an offer confirmation](/img/link-offers/make-offer-success.png 'Make an offer confirmation')
 
 ## Errors
 
