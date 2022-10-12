@@ -61,7 +61,7 @@ const Homepage = () => {
       subtitle: (
         <>
           <Translate>
-            Immutable X offers grants to help you fund your next web3 project.
+            ImmutableX offers grants to help you fund your next web3 project.
           </Translate>
         </>
       ),
@@ -103,7 +103,7 @@ const Homepage = () => {
       title: translate({ message: 'Discord' }),
       subtitle: translate({
         message:
-          'Join the conversation! Interact with the Immutable X developer community on Discord.',
+          'Join the conversation! Interact with the ImmutableX developer community on Discord.',
       }),
       buttonText: translate({ message: 'Join the Discord' }),
       isLongCard: false,
