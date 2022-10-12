@@ -8,7 +8,7 @@ keywords: [trading, orderbook, offers, buy-order]
 ---
 
 :::danger OFFERS IS ONLY AVAILABLE IN THE SANDBOX ENVIRONMENT
-Please only use these features for testing / integration in the sandbox environment. This is not supported in Production yet.
+Please only use these features for testing / integration in the sandbox environment. Offers are not supported in production yet.
 :::
 
 :::note Link reference tool

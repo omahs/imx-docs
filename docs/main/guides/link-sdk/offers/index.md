@@ -6,7 +6,7 @@ keywords: [trading, orderbook, offer, buy-order]
 ---
 
 :::danger OFFERS IS ONLY AVAILABLE IN THE SANDBOX ENVIRONMENT
-Please only use these features for testing / integration in the sandbox environment. This is not supported in Production yet.
+Please only use these features for testing / integration in the sandbox environment. Offers are not supported in production yet.
 :::
 
 The following sections describe the offer functionality. These functions allow a user to place an offer on an asset which can then be accepted by the owner to create a trade.
