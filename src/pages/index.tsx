@@ -28,7 +28,7 @@ const Homepage = () => {
       title: translate({ message: 'IMX SDKs' }),
       subtitle: translate({
         message:
-          'View all the SDKs on offer to easily integrate with Immutable X.',
+          'View all the SDKs on offer to easily integrate with ImmutableX.',
       }),
       buttonText: translate({ message: 'Learn More' }),
       link: '/docs/sdks',
@@ -139,7 +139,7 @@ const Homepage = () => {
             title={
               <div className={clsx('grad', styles.title)}>
                 <Translate>Build with</Translate>
-                <br className={styles.displayForExtraSmall} /> Immutable X
+                <br className={styles.displayForExtraSmall} /> ImmutableX
               </div>
             }
             subtitle={
