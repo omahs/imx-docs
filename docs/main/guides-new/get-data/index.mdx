@@ -43,7 +43,9 @@ This is the only section that requires user signatures - specifically, project o
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [getProjects](../../../../api-docs/sdk-references/core-sdk-ts/0-6-0/interfaces/ProjectsApiGetProjectsRequest.html)
+:::info SDK reference
+[getProjects](../../../../api-docs/sdk-references/core-sdk-ts/0-6-0/interfaces/ProjectsApiGetProjectsRequest.html)
+:::
 
 ### Request
 
@@ -106,12 +108,10 @@ getProjects(ethSigner)
 ```
   </TabItem>
   <TabItem value="go" label="Golang Core SDK">
-    Add description, if required.
-    <br/><br/>
 
-```go
-// Add code
-```
+:::info SDK reference
+[GetProjects](https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.0/imx#Client.GetProjects)
+:::
   </TabItem>
 </Tabs>
 
@@ -172,12 +172,12 @@ getProject(ethSigner, '145')
 ```
   </TabItem>
   <TabItem value="go" label="Golang Core SDK">
-    Add description, if required.
-    <br/><br/>
 
-```go
-// Add code
-```
+:::info SDK reference
+[GetProject](https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.0/imx#Client.GetProject)
+:::
+
+See [GetProject example](https://github.com/immutable/imx-core-sdk-golang/blob/main/imx/examples/project/main.go) from our SDK repo.
   </TabItem>
 </Tabs>
 
@@ -189,7 +189,9 @@ The list of collections returned can be filtered by passing in parameters to thi
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [listCollections](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.collectionsapilistcollectionsrequest)
+:::info SDK reference
+[listCollections](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.collectionsapilistcollectionsrequest)
+:::
 
 ### Request
 Get a list of collections with "NFT" in the collection name or description:
@@ -238,7 +240,9 @@ getListCollections('NFT')
   </TabItem>
   <TabItem value="kotlin" label="Kotlin (JVM) Core SDK">
 
-SDK reference: [listCollections](https://docs.x.immutable.com/sdk-references/core-sdk-kotlin/0-6-0/imx-core-sdk-kotlin-jvm/com.immutable.sdk.api/-collections-api/list-collections.html)
+:::info SDK reference
+[listCollections](https://docs.x.immutable.com/sdk-references/core-sdk-kotlin/0-6-0/imx-core-sdk-kotlin-jvm/com.immutable.sdk.api/-collections-api/list-collections.html)
+:::
 
 ### Request
 Get a list of collections ordered by name in ascending order:
@@ -253,7 +257,9 @@ val response = CollectionsApi().listCollections(
   </TabItem>
   <TabItem value="Swift" label="Swift Core SDK">
 
-SDK reference: [listCollections](https://docs.x.immutable.com/sdk-references/core-sdk-swift/0-2-2/documentation/immutablexcore/collectionsapi/listcollections(pagesize:cursor:orderby:direction:blacklist:whitelist:keyword:))
+:::info SDK reference
+[listCollections](https://docs.x.immutable.com/sdk-references/core-sdk-swift/0-2-2/documentation/immutablexcore/collectionsapi/listcollections(pagesize:cursor:orderby:direction:blacklist:whitelist:keyword:))
+:::
 
 ### Request
 Get a list of collections ordered by name in ascending order:
@@ -267,7 +273,9 @@ let collections = try await CollectionsAPI.listCollections(
   </TabItem>
   <TabItem value="go" label="Golang Core SDK">
 
-See [this example](https://docs.x.immutable.com/sdk-references/core-sdk-golang/0-1-0/apiclient/docs/collectionsapi#listcollections).
+:::info SDK reference
+[ListCollections](https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.0/imx#Client.ListCollections)
+:::
   </TabItem>
 </Tabs>
 
@@ -275,7 +283,9 @@ See [this example](https://docs.x.immutable.com/sdk-references/core-sdk-golang/0
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [getCollection](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/classes/immutablex.immutablex#getCollection)
+:::info SDK reference
+[getCollection](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/classes/immutablex.immutablex#getCollection)
+:::
 
 ### Request
 Get details of a collection at a given contract address:
@@ -314,12 +324,10 @@ getCollection('0x61e506cec264d5b2705f10e5a934dc5313a56a6e')
 ```
   </TabItem>
   <TabItem value="kotlin" label="Kotlin (JVM) Core SDK">
-    Add description, if required.
-    <br/><br/>
 
 ```kotlin
-// Add code
-``` 
+// Add info
+```
   </TabItem>
   <TabItem value="Swift" label="Swift Core SDK">
     Add description, if required.
@@ -330,12 +338,12 @@ getCollection('0x61e506cec264d5b2705f10e5a934dc5313a56a6e')
 ```
   </TabItem>
   <TabItem value="go" label="Golang Core SDK">
-    Add description, if required.
-    <br/><br/>
 
-```go
-// Add code
-```
+:::info SDK reference
+[GetCollection](https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.0/imx#Client.GetCollection)
+:::
+
+See [GetCollection example](https://github.com/immutable/imx-core-sdk-golang/blob/main/imx/examples/collection/main.go) in our SDK repo.
   </TabItem>
 </Tabs>
 
@@ -345,7 +353,9 @@ getCollection('0x61e506cec264d5b2705f10e5a934dc5313a56a6e')
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
+:::info
 SDK reference: [listAssets](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.assetsapilistassetsrequest)
+:::
 
 ### Request
 Get a list of assets at a particular collection address ordered by `name`:
@@ -439,7 +449,9 @@ getListAssets('0x23db0e72bd7738da0d0afe7bccb4109f5f05edcf', 'name')
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [getAsset](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.assetsapigetassetrequest)
+:::info SDK reference
+[getAsset](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.assetsapigetassetrequest)
+:::
 
 ### Request
 Get details of an asset from a particular collection with ID of `1`:
@@ -534,7 +546,9 @@ getAsset('0x23db0e72bd7738da0d0afe7bccb4109f5f05edcf', '1', true)
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [listOrders](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.ordersapilistordersrequest)
+:::info SDK reference
+[listOrders](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.ordersapilistordersrequest)
+:::
 
 ### Request
 Get a list of active orders from a particular collection that are listed in `ETH` and sorted by `name`:
@@ -650,7 +664,9 @@ getListOrders(
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [getOrder](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.ordersapigetorderrequest)
+:::info SDK reference
+[getOrder](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.ordersapigetorderrequest)
+:::
 
 ### Request
 
@@ -762,7 +778,9 @@ getOrder('1506', true)
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [listTransfersRequest](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.transfersapilisttransfersrequest)
+:::info SDK reference
+[listTransfersRequest](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.transfersapilisttransfersrequest)
+:::
 
 ### Request
 
@@ -855,7 +873,9 @@ getListTransfers('updated_at', 5)
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [getTransfer](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.transfersapigettransferrequest)
+:::info SDK reference
+[getTransfer](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.transfersapigettransferrequest)
+:::
 
 ### Request
 
@@ -932,7 +952,9 @@ getTransfer('56775')
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [listTokens](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.tokensapilisttokensrequest)
+:::info SDK reference
+[listTokens](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.tokensapilisttokensrequest)
+:::
 
 Get a list of tokens ordered by `contract_address`:
 
@@ -1006,7 +1028,9 @@ getListTokens('contract_address')
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [getToken](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.tokensapigettokenrequest)
+:::info SDK reference
+[getToken](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.tokensapigettokenrequest)
+:::
 
 ### Request
 
@@ -1073,7 +1097,9 @@ getToken('0x1facdd0165489f373255a90304650e15481b2c85')
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [listTrades](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.tradesapilisttradesrequest)
+:::info SDK reference
+[listTrades](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.tradesapilisttradesrequest)
+:::
 
 ### Request
 
@@ -1157,7 +1183,9 @@ getListTrades('ETH', 5)
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [getTrade](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.tradesapigettraderequest)
+:::info SDK reference
+[getTrade](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.tradesapigettraderequest)
+:::
 
 ### Request
 
@@ -1233,7 +1261,9 @@ getTrade('56715')
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [getUsers](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.getusersapiresponse)
+:::info SDK reference
+[getUsers](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.getusersapiresponse)
+:::
 
 ### Request
 
@@ -1294,7 +1324,9 @@ getUserStarkKeys('0x5D680Fbb3e60deCAbF62DfcACc56DB7d5964736a')
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [listBalancesRequest](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.balancesapilistbalancesrequest)
+:::info SDK reference
+[listBalancesRequest](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.balancesapilistbalancesrequest)
+:::
 
 ### Request 
 
@@ -1363,7 +1395,9 @@ getListBalances('0x5D680Fbb3e60deCAbF62DfcACc56DB7d5964736a')
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-SDK reference: [getBalance](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.balancesapigetbalancerequest)
+:::info SDK reference
+[getBalance](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.2/interfaces/index.balancesapigetbalancerequest)
+:::
 
 ### Request
 
