@@ -11,17 +11,17 @@
         {
           "type": "link",
           "label": "Examples",
-          "href": "https://github.com/immutable/imx-core-sdk-golang/tree/v0.2.0/imx/examples"
+          "href": "https://github.com/immutable/imx-core-sdk-golang/tree/v0.2.1/imx/examples"
         },
         {
           "type": "link",
           "label": "API client reference",
-          "href": "https://docs.x.immutable.com/sdk-references/core-sdk-golang/0-2-0/apiclient/"
+          "href": "https://docs.x.immutable.com/sdk-references/core-sdk-golang/0-2-1/apiclient/"
         },
         {
           "type": "link",
           "label": "Package reference",
-          "href": "https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.0"
+          "href": "https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.1"
         }
       ]
     }

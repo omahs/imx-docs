@@ -13,17 +13,17 @@ module.exports = {
         {
           type: 'link',
           label: 'Examples',
-          href: `https://github.com/immutable/imx-core-sdk-golang/tree/v0.2.0/examples`,
+          href: `https://github.com/immutable/imx-core-sdk-golang/tree/v0.2.1/examples`,
         },
         {
           type: 'link',
           label: 'API client reference',
-          href: `${url}/sdk-references/core-sdk-golang/0-2-0/apiclient/`,
+          href: `${url}/sdk-references/core-sdk-golang/0-2-1/apiclient/`,
         },
         {
           type: 'link',
           label: 'Package reference',
-          href: `https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.0`,
+          href: `https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.1`,
         },
       ],
     },
