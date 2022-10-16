@@ -113,6 +113,94 @@ As you might expected, non-fungible token contracts produce non-fungible tokens 
 * [Fungible (ERC-20) token standard](https://eips.ethereum.org/EIPS/eip-20)
 * [Non-fungible (ERC-721) token standard](https://eips.ethereum.org/EIPS/eip-721)
 
+### Example contract
+Our [imx-contracts](https://github.com/immutable/imx-contracts/tree/main/contracts) repo on Github contains some templates for smart contracts that are compatible with Immutable X.
+
+#### _Asset.sol_
+[Asset.sol](https://github.com/immutable/imx-contracts/blob/main/contracts/Asset.sol) is an example of a non-fungible (ERC-721 standard) contract that contains the [functions required](/docs/key-concepts-new/minting#l1-contract-requirements) so that tokens can be minted from it on Immutable X.
+
+It implements the `_mintFor` function which is called when the asset is minted on L1 when it is withdrawn from Immutable X to Ethereum (see step 4 [here](/docs/key-concepts-new/minting#process-of-minting-on-immutable-x)). This function calls `_safeMint`, which is an inherited function from the [ERC-721 contract](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721) that [mints the NFT in a safe way](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721-_safeMint-address-uint256-).
+
+```ts title="Asset.sol"
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.4;
+​
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "./Mintable.sol";
+​
+contract Asset is ERC721, Mintable {
+    constructor(
+        address _owner,
+        string memory _name,
+        string memory _symbol,
+        address _imx
+    ) ERC721(_name, _symbol) Mintable(_owner, _imx) {}
+​
+    function _mintFor(
+        address user,
+        uint256 id,
+        bytes memory
+    ) internal override {
+        _safeMint(user, id);
+    }
+}
+```
+
+The [Mintable.sol](https://github.com/immutable/imx-contracts/blob/main/contracts/Mintable.sol) contract that Asset.sol inherits from provides the token-minting functionality:
+
+```ts title="Mintable.sol"
+/ SPDX-License-Identifier: MIT
+pragma solidity ^0.8.4;
+​
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "./IMintable.sol";
+import "./utils/Minting.sol";
+​
+abstract contract Mintable is Ownable, IMintable {
+    address public imx;
+    mapping(uint256 => bytes) public blueprints;
+​
+    event AssetMinted(address to, uint256 id, bytes blueprint);
+​
+    constructor(address _owner, address _imx) {
+        imx = _imx;
+        require(_owner != address(0), "Owner must not be empty");
+        transferOwnership(_owner);
+    }
+​
+    modifier onlyIMX() {
+        require(msg.sender == imx, "Function can only be called by IMX");
+        _;
+    }
+​
+    function mintFor(
+        address user,
+        uint256 quantity,
+        bytes calldata mintingBlob
+    ) external override onlyIMX {
+        require(quantity == 1, "Mintable: invalid quantity");
+        (uint256 id, bytes memory blueprint) = Minting.split(mintingBlob);
+        _mintFor(user, id, blueprint);
+        blueprints[id] = blueprint;
+        emit AssetMinted(user, id, blueprint);
+    }
+​
+    function _mintFor(
+        address to,
+        uint256 id,
+        bytes memory blueprint
+    ) internal virtual;
+}
+```
+
+Things to note about the examples above:
+* `owner` is the wallet address you choose to be the minter of the contract, so it should be a very safe, secure wallet.
+* `transferOwnership(_owner)` does exactly as described, and transfers the ownership of the contract from the contract deployer to the specific wallet address.
+* The address named `imx` refers to the Immutable X contract address that is interacting with your smart contract to perform minting operations. You can find the address for each environment in the [README of the imx-contracts repository](https://github.com/immutable/imx-contracts#immutable-contract-addresses). This address is used in the `onlyIMX` modifier, which checks if the sender of the transaction is our contract or not. This is a way of whitelisting our contract and ensuring that no one else can mint assets through your smart contract.
+* The `mintFor` function is called by the Immutable X smart contract at the time of withdrawing the NFT to Ethereum. The function has the `onlyIMX` modifier, as explained above. Because you’re minting NFTs, which are unique, ensure that quantity = 1.
+* The blueprint is saved as on-chain, immutable metadata in the mapping blueprints. For custom blueprint decoding, you can override the mintFor function in Asset.sol to save it in something like tokenURI, or split the string into different components.
+* The function emits an event `AssetMinted` when the mintFor completes successfully, and this can be listened on by applications.
+
 ## Fungible tokens
 ### Use cases
 * **Staking:** This process allows individuals to lock specified amounts of their tokens to earn a yield. This is not available to all cryptocurrencies, and those who offer this operate under a Proof of Stake (PoS) consensus mechanism that requires specified amounts of a token to validate transactions.

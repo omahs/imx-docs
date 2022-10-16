@@ -64,7 +64,7 @@ In addition to the general requirements [here](#there-are-two-main-components-of
 ### Can't a token be minted simultaneously on L1 and L2?
 This describes the scenario where a token is minted on L2 but it has not yet been minted on L1 (so the L1 contract knows nothing about it). It is possible for an authorized minter to mint the same token on L1, thus, when the L2 token is withdrawn (ie. minted on L1), it will fail because the token ID already exists on L1.
 
-**Preventative steps:**
+**Steps to prevent this:**
 * At the time of L2 minting, Immutable X makes a nominal call is made to the L1 contract's `mintFor` function for a small % of minted tokens to check whether the ID already exists
 * Only the contract owner can mint on L2 so it is up to them to keep track of token IDs and ensure duplicates are not made
 * Because smart contracts are public on the blockchain, before purchasing an L2 token, users can always check its contract address on L1 to ensure that they are not buying a duplicate token

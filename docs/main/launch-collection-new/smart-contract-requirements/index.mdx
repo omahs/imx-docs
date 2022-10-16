@@ -1,0 +1,9 @@
+---
+title: "Smart contract requirements for minting on layer 2"
+slug: "/launch-collection-new/smart-contract-requirements"
+keywords: [imx-dx]
+---
+
+In order to mint tokens from a smart contract on Immutable X's layer 2, there needs to be a deployed token smart contract on L1 with certain properties. These are:
+* Must be a non-fungible token contract (read more [here](/docs/key-concepts-new/anatomy-smart-contract#token-smart-contracts))
+* Must have a `mintFor()` function that allows other contracts to mint on its behalf (see [how to implement this](/docs/key-concepts-new/anatomy-smart-contract#example-contract))

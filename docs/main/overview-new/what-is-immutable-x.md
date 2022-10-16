@@ -12,6 +12,12 @@ Immutable X provides APIs and developer tools to make it easy for developers to 
 
 It does this whilst maintaining the same level of security and decentralization as Ethereum.
 
+### Why Ethereum?
+
+Immutable chose to build on Ethereum because it is the most decentralized, secure and widely-used blockchain, giving rise to the greatest network effects.
+
+It is a technology that enables smart contracts and decentralized applications to be built and run without any downtime, fraud, control or interference from a third party.
+
 ## Why can't we just build on layer 1?
 
 ### Too slow

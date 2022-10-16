@@ -39,7 +39,6 @@ Getting most forms of data is read-only, so user authentication or [getting user
 This is the only section that requires user signatures - specifically, project owner signatures. This is because only project owners can list projects they own, or get details about each one. Follow [this guide](/guides-new/generate-signers) to generate the signers required to obtain user signatures.
 
 ### Get list of projects
-
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
@@ -348,6 +347,17 @@ See [GetCollection example](https://github.com/immutable/imx-core-sdk-golang/blo
 </Tabs>
 
 ## Assets
+
+When details about assets are returned, there is a `status` property that indicates its current location (L1 or L2) or state (depositing, withdrawable, etc.). Assets can have one of the following statuses:
+
+| Status | Description |
+| --- | --- |
+| `imx` | The asset is in the Immutable X L2 environment. |
+| `eth` | The asset is on the main Ethereum blockchain. |
+| `depositing` | The asset is still on the main Ethereum blockchain, but is part of a currently ongoing transaction. |
+| `pendingWithdrawal` | A withdrawal has been requested for this asset, and it will be included in an upcoming batch. |
+| `withdrawable` | The asset has been included in a published batch, and can now be withdrawn from the Immutable X smart contract. |
+| `withdrawing` | The asset is on the main Ethereum blockchain, and is being pulled from the Immutable X smart contracts to a user's account. |
 
 ### Get list of assets
 <Tabs>
