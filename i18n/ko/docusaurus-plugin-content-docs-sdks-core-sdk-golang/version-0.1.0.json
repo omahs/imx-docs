@@ -1,7 +1,7 @@
 {
   "version.label": {
-    "message": "Next",
-    "description": "The label for version current"
+    "message": "0.1.0",
+    "description": "The label for version 0.1.0"
   },
   "sidebar.mainSidebar.category.Core SDK Golang": {
     "message": "Core SDK Golang",
@@ -9,7 +9,7 @@
   },
   "sidebar.mainSidebar.link.Examples": {
     "message": "Examples",
-    "description": "The label for link Examples in sidebar mainSidebar, linking to https://github.com/immutable/imx-core-sdk-golang/tree/main/examples"
+    "description": "The label for link Examples in sidebar mainSidebar, linking to https://github.com/immutable/imx-core-sdk-golang/tree/v0.1.0/examples"
   },
   "sidebar.mainSidebar.link.API client reference": {
     "message": "API client reference",
@@ -17,6 +17,6 @@
   },
   "sidebar.mainSidebar.link.Package reference": {
     "message": "Package reference",
-    "description": "The label for link Package reference in sidebar mainSidebar, linking to https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang/"
+    "description": "The label for link Package reference in sidebar mainSidebar, linking to https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.1.0"
   }
 }

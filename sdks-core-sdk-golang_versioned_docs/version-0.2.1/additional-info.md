@@ -172,9 +172,9 @@ if err != nil {
 
 ### Contract requests
 
-ImmutableX is built as a ZK-rollup in partnership with StarkWare. We chose ZK-rollups because it is the only L2 scaling solution that has the same security guarantees as layer 1 Ethereum. The upshot of this is that you can mint or trade NFTs on ImmutableX with zero gas costs whilst not compromising on security -- the first true “layer 2” for NFTs on Ethereum.
+Immutable X is built as a ZK-rollup in partnership with StarkWare. We chose ZK-rollups because it is the only L2 scaling solution that has the same security guarantees as layer 1 Ethereum. The upshot of this is that you can mint or trade NFTs on Immutable X with zero gas costs whilst not compromising on security -- the first true “layer 2” for NFTs on Ethereum.
 
-The Core SDK provides interfaces for all smart contracts required to interact with the ImmutableX platform.
+The Core SDK provides interfaces for all smart contracts required to interact with the Immutable X platform.
 
 [See all smart contracts available in the Core SDK](#smart-contract-autogeneration)
 
@@ -212,7 +212,7 @@ The Immutable Solidity contracts can be found in the `contracts` folder. Contrac
 
 The Core contract is Immutable's main interface with the Ethereum blockchain, based on [StarkEx](https://docs.starkware.co/starkex-v4).
 
-[View contract](https://github.com/immutable/imx-core-sdk-golang/blob/632e4ed6975cf8da03e2dcb36291333391fe9f96/solidity/Core.sol)
+[View contract](./solidity/Core.sol)
 
 #### Registration
 
@@ -220,7 +220,7 @@ The Registration contract is a proxy smart contract for the Core contract that c
 
 For example, instead of making subsequent transaction requests to the Core contract, i.e. `registerUser` and `depositNft`, a single transaction request can be made to the proxy Registration contract - `registerAndWithdrawNft`.
 
-[View contract](https://github.com/immutable/imx-core-sdk-golang/blob/632e4ed6975cf8da03e2dcb36291333391fe9f96/solidity/Registration.sol)
+[View contract](./solidity/Registration.sol)
 
 #### IERC20
 
