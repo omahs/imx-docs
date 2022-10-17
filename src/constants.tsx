@@ -14,7 +14,7 @@ export const coreSDKs = [
     id: 0,
     sdkId: 'sdks-core-sdk-ts',
     name: 'Core SDK TypeScript',
-    displayName: 'Core SDK Typescript',
+    displayName: 'Core SDK TypeScript',
     url: '/sdk-docs/core-sdk-ts/overview',
   },
   {
