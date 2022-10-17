@@ -1,22 +1,22 @@
 ---
-id: "minting-with-moonpay"
-title: "Minting with Moonpay"
-slug: "/minting-with-moonpay"
+id: "nft-checkout-primary-with-moonpay"
+title: "NFT Checkout Primary Moonpay"
+slug: "/nft-checkout-primary-with-moonpay"
 sidebar_position: 1
 keywords: [imx-payments]
 ---
 
-This tutorial provides a guide on what a partner should implement to register for mint by fiat feature.
+This tutorial provides a guide on what a partner should implement to register for NFT checkout Primary by fiat feature.
 
 If you get stuck at any point, reach out on the dev-faq and dev-discussion channels in our [Discord](https://discord.gg/TkVumkJ9D6). Click [here](https://docs.google.com/forms/d/e/1FAIpQLSdTLIXldLRZQB4i2YTHtQwxmrDbTkHphuxtLoVe7j-YVU7VYw/viewform) to provide feedback on the tutorial or let us know what topics you'd like to see in our documentation.
 
 # Main flow
 
-![Mint By Fiat Main flow](/img/tutorial/mintbyfiat-main-flow.png 'Mint by fiat main flow')
+![NFT Checkout Primary Main flow](/img/tutorial/nft-checkout-primary-main-flow.png 'NFT Checkout Primary by fiat main flow')
 
 # Technical flow
 
-![Mint By Fiat Technical flow](/img/tutorial/mintbyfiat-technical-flow.png 'Mint by fiat technical flow')
+![NFT Checkout Primary By Fiat Technical flow](/img/tutorial/nft-checkout-primary-technical-flow.png 'NFT Checkout Primary by fiat technical flow')
 
 # Requirements
 
