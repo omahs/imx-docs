@@ -25,5 +25,6 @@ Offers are the equivalent of active buy orders from the v3 orders API. The buy s
   status: 'active',
   buy_token_id: '2002',
   buy_token_address: '0x2ca7e3fa937cae708c32bc2713c20740f3c4fc3b',
+  buy_token_type: 'ERC721'
 }
 ```
