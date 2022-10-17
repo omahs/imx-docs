@@ -51,4 +51,4 @@ ImmutableX partners can embed the Link directly into their site’s transaction 
 **[Learn more about Link SDK](../guides/link-sdk/index.md)**
 
 ## ImmutableX SDK
-The ImmutableX SDK, combined with the APIs, will allow partners to build NFT projects in hours rather than weeks. Currently, a Typescript SDK implementation is available, designed to make it easy to integrate the protocol into websites. The SDK allows for types access to the ImmutableX APIs and wallet.
+The ImmutableX SDK, combined with the APIs, will allow partners to build NFT projects in hours rather than weeks. Currently, a Typescript SDK implementation is available, designed to make it easy to integrate the protocol into websites.
