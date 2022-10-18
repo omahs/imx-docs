@@ -2,7 +2,7 @@
 id: "wallet-sdk-ui-guide"
 title: "UI guide for implementing user wallet interactions"
 slug: "/wallet-sdk-ui-guide"
-sidebar_position: 10
+sidebar_position: 1
 keywords: [imx-wallets]
 ---
 

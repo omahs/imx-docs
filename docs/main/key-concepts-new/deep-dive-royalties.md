@@ -82,6 +82,12 @@ In order for royalties to be enforced trustlessly, it requires two components:
 2. When the token is sold, the royalty amount is automatically sent to the specified recipient. This requires the mechanism by which a token is sold to perform this.
 
 ## Royalties on Immutable X
+:::info Note:
+* Royalties can only be set for tokens that are [minted on Immutable X](/docs/key-concepts-new/minting#what-is-minting-on-immutable-x).
+* When minting, if a royalty recipient is specified that is not a registered user on Immutable X, then minting will fail.
+* Once tokens have been minted and royalty information set, Immutable X currently does not support changing this information. This includes either changing the royalty amount or the recipient.
+:::
+
 * **Royalty information is stored for all tokens minted on Immutable X** - royalties can be specified contract-wide, or for specific tokens.
 * **Immutable X's settlement (sale) contracts will automatically pay out royalties when a sale occurs** - this is enforced across the Immutable X protocol because all applications built using Immutable X's APIs (giving them access to Immutable's Global Orderbook) use these settlement contracts.
 
@@ -145,9 +151,3 @@ On Immutable X, royalties are calculated by adding the royalty rate (as a propor
 * There is a royalty fee of 5% to one recipient
 * A buyer will see the NFT listed at 1 ETH * 1.09 (100% + all the fees) = 1.09 ETH.
 * When the buyer purchases the NFT for 1.09 ETH, the seller will receive the full 1 ETH and the royalty recipient will receive 5% of the selling price, i.e. 0.05 ETH.
-
-### Changing royalty information after minting
-
-:::caution No support for changing royalty details after minting
-Currently, on Immutable X, we do not support updating royalty information once tokens have been minted. This includes changing the royalty amount, or the recipient.
-:::

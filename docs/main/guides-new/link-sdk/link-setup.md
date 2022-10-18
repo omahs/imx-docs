@@ -138,7 +138,7 @@ For more information see [How to manage multiple wallet extensions for Immutable
 
 ![multiple-wallets](/img/link-setup/multiple-wallets.png 'multiple-wallets')
 
-For more information about user wallet registration, see [User Registration](../user-registration.md) and [Account Management](../integrate-your-application/account-management.md).
+For more information about user wallet registration, see [User Registration](../user-registration.md) and [Account Management](../js-sdk/account-management.md).
 
 ## Errors
 

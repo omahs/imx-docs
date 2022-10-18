@@ -1,6 +1,6 @@
 ---
 id: "integrate-your-application"
-title: "Integrate your application"
+title: "JS SDK"
 slug: "/integrate-your-application"
 keywords: [imx-dx]
 ---

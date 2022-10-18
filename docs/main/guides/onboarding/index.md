@@ -69,4 +69,4 @@ See the following guides to learn more:
 - [Asset minting](../asset-management/asset-minting.md) 
 
 ## 6. Integrate your application
-To start building an application on Immutable X, see our [integrate your application](../integrate-your-application/index.md) guides.
+To start building an application on Immutable X, see our [integrate your application](/docs/integrate-your-application) guides.

@@ -8,6 +8,11 @@ sidebar_position: 1
 
 # What is Immutable X?
 
+On this page:
+* [Why not build on layer 1?](#why-cant-we-just-build-on-layer-1)
+* [Benefits of building on layer 2 vs. layer 1](#benefits-of-building-on-layer-2-vs-layer-1)
+* [What can you build on Immutable X?](#what-can-you-build-on-immutable-x)
+
 Immutable X provides APIs and developer tools to make it easy for developers to build the next generation of web3 games and applications on faster and cheaper layer ("layer 2") on top of Ethereum ("layer 1").
 
 It does this whilst maintaining the same level of security and decentralization as Ethereum.
