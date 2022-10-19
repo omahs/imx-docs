@@ -1,8 +1,8 @@
 ---
 id: "api-changelog"
-title: "API changelog"
+title: "Changelog"
 slug: "/api-changelog"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # API changelog

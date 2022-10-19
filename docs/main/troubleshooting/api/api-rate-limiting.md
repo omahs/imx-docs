@@ -1,10 +1,13 @@
 ---
 id: "api-rate-limiting"
-title: "API rate limiting"
+title: "Rate limiting"
 slug: "/api-rate-limiting"
-sidebar_position: 9
+sidebar_position: 1
 keywords: [imx-core]
 ---
+
+# API rate limiting
+
 All calls to the API are allotted a specific number of requests per refresh period. Our rate limits depend on if you're an individual or project, as well as what environment of ours you are targeting. If you're a partner, your limit is determined by your project. Otherwise, your limit is determined on a per-IP-address basis.
 
 We set the limits based on an analysis of the last quarter's traffic and review and update this quarterly. Once this threshold has been reached, we will return a status code `429` response.

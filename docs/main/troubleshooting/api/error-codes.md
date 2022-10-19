@@ -1,9 +1,11 @@
 ---
 id: "error-codes"
-title: "API error codes"
+title: "Error codes"
 slug: "/error-codes"
 sidebar_position: 1
 ---
+
+# API error codes
 
 ## contract_already_exists
 
