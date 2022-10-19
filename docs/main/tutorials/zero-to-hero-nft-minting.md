@@ -28,15 +28,15 @@ Homebrew is only needed for Mac OS.
 
 Homebrew installs the packages needed for this tutorial. Copy the command on the [Homebrew website](https://brew.sh/), then run in the terminal. 
 
-**  [NodeJS](https://nodejs.org/)**
+**  [Node.js](https://nodejs.org/)**
 
-NodeJS allows us to use JavaScript to build and run applications. 
+Node.js allows us to use JavaScript to build and run applications. 
 
-:::danger Nodejs Version
+:::danger Node.js Version
 Ensure that you get the latest LTS version or you may experience issues following the turorial.
 :::
 
-For PC users, check that NodeJS is working by opening powershell or command line and executing the command:
+For PC users, check that Node.js is working by opening powershell or command line and executing the command:
 
 ```shell
 npm -v

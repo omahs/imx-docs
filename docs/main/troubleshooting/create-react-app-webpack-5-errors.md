@@ -15,7 +15,7 @@ This is no longer the case. Verify if you need this module and configure a polyf
 ```
 
 ### Why is this happening?
-The reason for this error is that create-react-app uses a version of webpack greater than 5, which, unlike versions < 5, does not include NodeJS polyfills by default. This means that they need to be configured manually for each module that requires them.
+The reason for this error is that create-react-app uses a version of webpack greater than 5, which, unlike versions < 5, does not include Node.js polyfills by default. This means that they need to be configured manually for each module that requires them.
 
 Normally, this involves updating the webpack config file inside a project, however, create-react-app uses another package called [react-scripts](https://www.npmjs.com/package/react-scripts) to manage webpack (and other build dependencies). As we cannot update the webpack config within react-scripts, we will need to override it.
 
