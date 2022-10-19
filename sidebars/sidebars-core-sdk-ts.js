@@ -10,6 +10,7 @@ module.exports = {
         'installation',
         'initialization',
         'additional-info',
+        'changelog',
         {
           type: 'link',
           label: 'Reference',
