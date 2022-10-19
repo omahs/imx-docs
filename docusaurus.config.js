@@ -140,7 +140,8 @@ const configuration = {
           sidebarPath: require.resolve('./sidebars/sidebars-docs.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/immutable/imx-docs/tree/main/',
-          includeCurrentVersion: false,
+          includeCurrentVersion: true,
+          lastVersion: 'current',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
