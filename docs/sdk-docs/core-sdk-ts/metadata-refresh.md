@@ -3,7 +3,7 @@ description: Metadata refresh walkthrough
 id: metadata-refresh
 slug: /metadata-refresh
 tags: [core-sdk-ts]
-keywords: [imx-dx]
+keywords: [imx-games]
 ---
 
 # Metadata Refresh
@@ -62,7 +62,7 @@ const createRefreshRequestParams = {
 };
 ```
 
-:::success Customising List Assets
+:::info Customising List Assets
 
 You can narrow down the results returned by listAssets. Please refer to the [listAssets request SDK reference](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.3/interfaces/index.assetsapilistassetsrequest).
 :::
