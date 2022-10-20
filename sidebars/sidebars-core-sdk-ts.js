@@ -9,6 +9,7 @@ module.exports = {
         'overview',
         'installation',
         'initialization',
+        'metadata-refresh',
         'additional-info',
         'changelog',
         {
