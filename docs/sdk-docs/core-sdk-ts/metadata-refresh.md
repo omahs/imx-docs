@@ -21,7 +21,7 @@ Immutable allows developers to request [asset metadata refreshes](/docs/asset-me
 
 ### Create Ethereum Signer
 
-First, we need to create an `Ethereum Signer` to tell Immutable that you're the right person to request the refresh:
+First, we need to create an `Ethereum Signer` to tell Immutable that you are the `project_owner` of the [project](https://docs.x.immutable.com/docs/guides/onboarding/project-registration/) containing the collection of your assets:
 
 ```ts
 import { ImmutableX, Config } from '@imtbl/core-sdk';
@@ -139,6 +139,8 @@ const getMetadataRefreshResultsResponse = await client.getMetadataRefreshResults
 :::info Metadata Refresh Statuses
 
 For more information regarding refresh and summary statuses, please refer to [viewing status of a metadata refresh](https://docs.x.immutable.com/docs/asset-metadata-refreshes#viewing-the-status-of-a-metadata-refresh).
+
+Please note, currently there's no webhook or push notification that can notify you about the status of your request, hence, it's up to the developers to keep polling for any updates. The expected maximum time (estimate) to complete a refresh is approximately 48 hours. Updated metadata values will only be reflected in downstream systems e.g. marketplaces once the refresh for that asset is complete.
 :::
 
 ### Checking the status of failed requests
