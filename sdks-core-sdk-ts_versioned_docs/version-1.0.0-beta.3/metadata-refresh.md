@@ -8,7 +8,7 @@ keywords: [imx-games]
 
 # Metadata Refresh
 
-Immutable allows developers to request [asset metadata refreshes](/docs/asset-metadata-refreshes) on-demand. This introductory guide shows you how to use the [Core Typescript SDK](/sdk-docs/core-sdk-ts/overview) to request and check for updates on your metadata refreshes.
+Immutable allows developers to request [asset metadata refreshes](/docs/asset-metadata-refreshes) on-demand. This introductory guide shows you how to use the [Core Typescript SDK](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.3/classes/immutablex.immutablex) to request and check for updates on your metadata refreshes.
 
 ## Pre-requisites
 
