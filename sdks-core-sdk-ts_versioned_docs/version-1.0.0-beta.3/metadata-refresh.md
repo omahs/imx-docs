@@ -49,22 +49,26 @@ In order to construct the refresh request, we need to grab the token ids for the
 ```ts
 // Fetch token ids for refresh
 const listAssetsResponse  = await client.listAssets({
+    pageSize: 5,
     collection: collectionAddress,
 });
 
 const token_ids: string[] = listAssetsResponse.result.map((asset) => asset.token_id);
 // Example response
-// ['1', '2', '3', '4']
+// ['1', '2', '3', '4', '5']
 
 const createRefreshRequestParams = {
   collection_address: collectionAddress,
-  token_ids: token_ids // Token ids which require metadata refresh
+  token_ids: token_ids // Token ids which require metadata refresh, limit to 1000 per request
 };
 ```
+
 
 :::info Customising List Assets
 
 You can narrow down the results returned by listAssets. Please refer to the [listAssets request SDK reference](https://docs.x.immutable.com/sdk-references/core-sdk-ts/1.0.0-beta.3/interfaces/index.assetsapilistassetsrequest).
+
+For more information regarding limits on metadata refreshes, please refer to [metadata refresh limits](https://docs.x.immutable.com/docs/asset-metadata-refreshes#metadata-refresh-limits).
 :::
 
 ### Request the refresh
@@ -92,7 +96,7 @@ const getMetadataRefreshResultsResponse = await client.getMetadataRefreshResults
   summary: { succeeded: 3, failed: 0, pending: 2 }
 }
 
-// Once the request is complete
+// Once the metadata refresh request has been completed
 {
   refresh_id: '8cc5552-6276-4af7-9099-ce4135350e2d',
   status: 'completed',
@@ -102,6 +106,11 @@ const getMetadataRefreshResultsResponse = await client.getMetadataRefreshResults
   summary: { succeeded: 5, failed: 0, pending: 0 }
 }
 ```
+
+:::info Metadata Refresh Statuses
+
+For more information regarding refresh and summary statuses, please refer to [viewing status of a metadata refresh](https://docs.x.immutable.com/docs/asset-metadata-refreshes#viewing-the-status-of-a-metadata-refresh).
+:::
 
 ### Checking the status of failed requests
 
@@ -140,6 +149,11 @@ const getMetadataRefreshErrors = await client.getMetadataRefreshErrors(ethSigner
   remaining: 0
 }
 ```
+
+:::info Metadata Refresh Errors
+
+For more information regarding metadata refresh errors and various error codes, please refer to [viewing metadata refresh errors](https://docs.x.immutable.com/docs/asset-metadata-refreshes#viewing-metadata-refresh-errors).
+:::
 
 ### Viewing all your current and previous refreshes
 
