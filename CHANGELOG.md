@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/immutable/imx-docs/compare/v1.28.0...v1.29.0) (2022-10-21)
+
+
+### Features
+
+* **metadata-refreshes:** add examples for using the ts sdk for requesting metadata refreshes ([1b54597](https://github.com/immutable/imx-docs/commit/1b54597270633532740d9ef8f31dcae285ad9d67))
+
 # [1.28.0](https://github.com/immutable/imx-docs/compare/v1.27.1...v1.28.0) (2022-10-20)
 
 
