@@ -12,8 +12,8 @@ Immutable allows developers to request [asset metadata refreshes](/docs/asset-me
 
 ## Pre-requisites
 
-1. [Installed](sdk-docs/core-sdk-ts/installation) the Core Typescript SDK
-1. [Initialized](sdk-docs/core-sdk-ts/initialization) the Core Typescript SDK
+1. [Installed](/sdk-docs/core-sdk-ts/installation) the Core Typescript SDK
+1. [Initialized](/sdk-docs/core-sdk-ts/initialization) the Core Typescript SDK
 1. Have satisified all the metadata refresh [requirements](/docs/asset-metadata-refreshes#requirements)
 
 
@@ -53,13 +53,41 @@ const listAssetsResponse  = await client.listAssets({
     collection: collectionAddress,
 });
 
-const token_ids: string[] = listAssetsResponse.result.map((asset) => asset.token_id);
 // Example response
-// ['1', '2', '3', '4', '5']
+{
+  result: [
+    {
+      token_address: '0x94742ebb6279a3ddb70a1bec53ecd75',
+      token_id: '5',
+      id: '0x1111114971ed8cf199c019028dea827bd5f05735111111111',
+      user: '0xa257d2c65c91d1e111181da9fbafac8a3111111',
+      status: 'imx',
+      uri: null,
+      name: 'Sample NFT',
+      description: null,
+      image_url: 'https://www.example.com/some-image/5',
+      metadata: {
+        name: 'Some image',
+        image_url: 'https://www.example.com/some-image/5'
+      },
+      collection: {
+        name: '0x111111bb6279a3bc3e44da9ddb70a1bec111111',
+        icon_url: 'https://www.example.com/some-icon/5'
+      },
+      created_at: '2022-09-30T10:58:32.04664Z',
+      updated_at: '2022-09-30T11:58:13.85627Z'
+    },
+    ......
+  ],
+  cursor: 'eyJpZCI6IjB4NjczZWY3MDI2NDk0NzAzNjA4OTFiZDZiZTdlN2FiZTdkYTgyNzY0MTIyYzVjNTczMTllNTUyMWVkMGRjN2E5YSIsIm5hbWUiOiJMaW5hIiwidXBkYXRlWUiOiJMaW5hIiwidXBkYXR',
+  remaining: 0
+}
+
+const tokenIds: string[] = listAssetsResponse.result.map((asset) => asset.token_id);
 
 const createRefreshRequestParams = {
   collection_address: collectionAddress,
-  token_ids: token_ids // Token ids which require metadata refresh, limit to 1000 per request
+  token_ids: tokenIds // Token ids for metadata refresh, limit to 1000 per request
 };
 ```
 
@@ -76,7 +104,8 @@ For more information regarding limits on metadata refreshes, please refer to [me
 ```ts
 const createMetadataRefreshResponse = await client.createMetadataRefresh(ethSigner, createRefreshRequestParams);
 // Example response
-// { refresh_id: '8cc5552-6276-4af7-9099-ce4135350e2d' }
+
+{ refresh_id: '8cc5552-6276-4af7-9099-ce4135350e2d' }
 ```
 
 ### Checking the status of your request
@@ -139,7 +168,7 @@ const getMetadataRefreshErrors = await client.getMetadataRefreshErrors(ethSigner
       collection_address: '0x6e7eaa111119b876b964f24ae4a9d36bf8228dff',
       client_token_metadata_url: 'https://your-metadata-url.com/12',
       client_response_status_code: 400,
-      client_response_body: "{message: 'Bad request'},
+      client_response_body: "{message: 'Bad request'}",
       error_code: 'unable_to_retrieve_metadata',
       created_at: '2022-10-20T04:25:26.354327Z'
     },
@@ -158,6 +187,9 @@ For more information regarding metadata refresh errors and various error codes, 
 ### Viewing all your current and previous refreshes
 
 ```ts
+const listMetadataRefreshesRespose = await client.listMetadataRefreshes(ethSigner, collectionAddress);
+
+// Example response
 {
   result: [
     {
