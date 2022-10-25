@@ -2,7 +2,7 @@
 id: "ethereum-scalability"
 title: "Ethereum scalability"
 slug: "/ethereum-scalability"
-excerpt: "Immutable X's solution for Ethereum scalability issues"
+excerpt: "ImmutableX's solution for Ethereum scalability issues"
 sidebar_position: 3
 keywords: [imx-dx]
 ---
@@ -69,14 +69,14 @@ In an NFT context, this solves both the problems identified with optimistic roll
 
 The current disadvantage of ZK-rollups is general computation. This is because it is more challenging to port smart contract logic directly into the rollup, meaning there is only limited functionality available e.g. transfers and trades. This challenge is rapidly being addressed. 
 
-# The Immutable X solution 
-The NFT ecosystem desperately needs liquidity and scalability. With Immutable X, we’re offering that scalability to everyone without forcing applications or users to compromise on the security of their assets. When comparing scaling solutions, the key things we wanted were:
+# The ImmutableX solution 
+The NFT ecosystem desperately needs liquidity and scalability. With ImmutableX, we’re offering that scalability to everyone without forcing applications or users to compromise on the security of their assets. When comparing scaling solutions, the key things we wanted were:
 * Unlimited scalability
 * Instant transaction confirmation and mainstream-quality UX
 * No compromise on user security
 * Retaining access to Ethereum’s ecosystem and network effects
 
-This is why Immutable X is built as a ZK-rollup in partnership with [StarkWare](https://starkware.co/). We chose the ZK-rollups because it is the only solution capable of scale without compromise. This means whenever you mint or trade an NFT on Immutable X, you pay zero gas, and the validity of all transactions are directly enforced by Ethereum’s security using zero-knowledge proofs -- the first “layer 2” for NFTs on Ethereum. 
+This is why ImmutableX is built as a ZK-rollup in partnership with [StarkWare](https://starkware.co/). We chose the ZK-rollups because it is the only solution capable of scale without compromise. This means whenever you mint or trade an NFT on ImmutableX, you pay zero gas, and the validity of all transactions are directly enforced by Ethereum’s security using zero-knowledge proofs -- the first “layer 2” for NFTs on Ethereum. 
 
 
 **References**

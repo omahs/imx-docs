@@ -1,11 +1,11 @@
 ---
 title: "Contributing to these docs"
 slug: "/contributing"
-excerpt: "How to contribute to Immutable X's open source documentation"
+excerpt: "How to contribute to ImmutableX's open source documentation"
 sidebar_position: 6
 ---
 
-# Contributing to Immutable X Documentation 🙌
+# Contributing to ImmutableX Documentation 🙌
 
 ## Github Repository
 
@@ -23,11 +23,11 @@ We want to enable builders like you to contribute your knowledge to others who m
 
 We have a generic list of topics for you to get started with a contribution. This list is not exhaustive, but just a few ideas to get you started.
 
-* **Immutable X Developer Assistance**
+* **ImmutableX Developer Assistance**
   * How To guides
     * eg: How to withdraw an asset to L1?
   * Tutorials
-    * eg: Building a marketplace with Immutable X
+    * eg: Building a marketplace with ImmutableX
 * **Maintenance of existing content**
   * Maintain documentation, tutorials and how-to guides to keep them up-to-date
     * Update outdated commands
@@ -40,9 +40,9 @@ We have a generic list of topics for you to get started with a contribution. Thi
 
 If your contribution is a massive effort or if you're doing a major restructure or revamp of the docs, please [open an issue on GitHub](https://github.com/immutable/imx-docs/issues/new) and discuss your idea with the maintainers *before* beginning your work. Doing so ensures that you will have all the context required and have maximum impact while reducing rework. 
 
-## Contribute Immutable X Docs:
+## Contribute ImmutableX Docs:
 
-There are a couple of ways to contribute to the [Immutable X Docs:](https://github.com/immmutable/imx-docs)
+There are a couple of ways to contribute to the [ImmutableX Docs:](https://github.com/immmutable/imx-docs)
 
 1. [Send a pull request (PR) with changes](contributing.md)
 2. [Reporting an issue](contributing.md)
@@ -51,7 +51,7 @@ There are a couple of ways to contribute to the [Immutable X Docs:](https://gith
 
 Github Repository: [https://github.com/immutable/imx-docs](https://github.com/immutable/imx-docs)
 
-#### 1. Fork the [Immutable X Docs repository](https://github.com/immutable/imx-docs)
+#### 1. Fork the [ImmutableX Docs repository](https://github.com/immutable/imx-docs)
 
 > To learn how to fork a repository, check out [GitHub's documentation on forking a repository](https://help.github.com/en/articles/fork-a-repo)
 

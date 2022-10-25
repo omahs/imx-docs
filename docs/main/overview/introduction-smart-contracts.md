@@ -7,9 +7,9 @@ sidebar_position: 4
 keywords: [imx-dx]
 ---
 
-If you're new to smart contract development, this is the place to start. We have smart contract templates on GitHub and this article covers the basics, as well as smart contract requirements for integrating with Immutable X.
+If you're new to smart contract development, this is the place to start. We have smart contract templates on GitHub and this article covers the basics, as well as smart contract requirements for integrating with ImmutableX.
 
-If you are planning to mint assets or launch a collection of NFTs on Immutable X Marketplace, you need a smart contract. You don’t need a smart contract for building a marketplace or block explorer.
+If you are planning to mint assets or launch a collection of NFTs on ImmutableX Marketplace, you need a smart contract. You don’t need a smart contract for building a marketplace or block explorer.
 
 # The basics
 
@@ -101,23 +101,23 @@ Read more about on-chain versus off-chain metadata, and data storage, in our [mi
 
 # Integration requirements
 
-A crucial part of building on Immutable X is having a Layer 1 (L1) Ethereum smart contract, which is required for minting assets that can be withdrawn from Immutable X on Layer 2 (L2).
+A crucial part of building on ImmutableX is having a Layer 1 (L1) Ethereum smart contract, which is required for minting assets that can be withdrawn from ImmutableX on Layer 2 (L2).
 
-For a smart contract to work with Immutable X, we need an implementation of a `mintFor` function, which is what our STARK contract calls at the time of withdrawing a minted token from L2 to L1. StarkEx is the L2 scalability solution used by Immutable X.
+For a smart contract to work with ImmutableX, we need an implementation of a `mintFor` function, which is what our STARK contract calls at the time of withdrawing a minted token from L2 to L1. StarkEx is the L2 scalability solution used by ImmutableX.
 
 **[Read a high-level overview of the StarkEx service](https://docs.starkware.co/starkex-v3/overview)**
 
-There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata. When minting on Immutable X, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. You also have to provide a [blueprint for each token](../guides/minting-on-immutable-x.md#metadata-blueprint). The blueprint represents the immutable, [on-chain metadata](../guides/minting-on-immutable-x.md#on-chain-versus-off-chain) of the NFT that will be passed (along with the token ID) to your `mintFor` function.
+There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata. When minting on ImmutableX, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. You also have to provide a [blueprint for each token](../guides/minting-on-immutable-x.md#metadata-blueprint). The blueprint represents the immutable, [on-chain metadata](../guides/minting-on-immutable-x.md#on-chain-versus-off-chain) of the NFT that will be passed (along with the token ID) to your `mintFor` function.
 
 ## Example contracts
 
-In our smart contract templates on Github (visit [imx-contracts](https://github.com/immutable/imx-contracts)) you can find a simple implementation of an ERC-721 token with the `mintFor` function implemented correctly to work with Immutable X.
+In our smart contract templates on Github (visit [imx-contracts](https://github.com/immutable/imx-contracts)) you can find a simple implementation of an ERC-721 token with the `mintFor` function implemented correctly to work with ImmutableX.
 
 ### Asset contract
 
 The Asset.sol contract in our repo inherits from the ERC-721 standard, as well as our custom Mintable contract, explained further down.
 
-This contract implements the `_mintFor` function which is called by a function in Mintable.sol when the asset is minted to L1, mainnet Ethereum at the time of withdrawal from Immutable X on L2.
+This contract implements the `_mintFor` function which is called by a function in Mintable.sol when the asset is minted to L1, mainnet Ethereum at the time of withdrawal from ImmutableX on L2.
 
 ```solidity title="Asset.sol"
 // SPDX-License-Identifier: MIT
@@ -144,7 +144,7 @@ contract Asset is ERC721, Mintable {
 }
 ```
 
-In the `_mintFor` function we call `_safeMint` which is an inherited function from the ERC-721 contract that mints the NFT [in a safe way](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#ERC721-_safeMint-address-uint256-). You can use this contract for your NFT as is. The name, symbol, owner, and Immutable X contract address is passed in the constructor.
+In the `_mintFor` function we call `_safeMint` which is an inherited function from the ERC-721 contract that mints the NFT [in a safe way](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#ERC721-_safeMint-address-uint256-). You can use this contract for your NFT as is. The name, symbol, owner, and ImmutableX contract address is passed in the constructor.
 :::info Solidity naming standard
 The use of an underscore before a function name or variable (e.g. `_mintFor`) is a naming standard in Solidity to indicate that it is an internal function or variable.
 :::
@@ -202,8 +202,8 @@ More information about these smart contract examples:
 
 - Owner is the wallet address you choose to be the minter of the contract, so it should be a very safe, secure wallet.
 - `transferOwnership(_owner)` does exactly as described, and transfers the ownership of the contract from the contract deployer to the specific wallet address.
-- The imx address refers to the Immutable X contract address that is interacting with your smart contract to perform minting operations. You can find this address for each environment in the readme of the imx-contracts repository (see the table at the top). This address is used in the `onlyIMX` modifier, which checks if the sender of the transaction is our contract or not. This is a way of whitelisting our contract and ensuring that no one else can mint assets through your smart contract.
-- The `mintFor` function is called by the Immutable X smart contract at the time of withdrawing the NFT to mainnet. The function has the `onlyIMX` modifier, explained above. Because you’re minting NFTs, which are unique, ensure that quantity = 1.
+- The imx address refers to the ImmutableX contract address that is interacting with your smart contract to perform minting operations. You can find this address for each environment in the readme of the imx-contracts repository (see the table at the top). This address is used in the `onlyIMX` modifier, which checks if the sender of the transaction is our contract or not. This is a way of whitelisting our contract and ensuring that no one else can mint assets through your smart contract.
+- The `mintFor` function is called by the ImmutableX smart contract at the time of withdrawing the NFT to mainnet. The function has the `onlyIMX` modifier, explained above. Because you’re minting NFTs, which are unique, ensure that quantity = 1.
 - The [blueprint](../guides/minting-on-immutable-x.md#metadata-blueprint) is saved as on-chain, immutable metadata in the mapping blueprints. For custom blueprint decoding, you can override the mintFor function in Asset.sol to save it in something like tokenURI, or split the string into different components.
 - The function emits an event `AssetMinted` when the mintFor completes successfully, and this can be listened on by applications.
 
@@ -220,21 +220,21 @@ A general tip is to keep your smart contract simple and make use of open source 
 ### Tools and test environments
 You can use tools like [Remix IDE](https://remix.ethereum.org/) to quickly experiment and iterate your code, and set up local testing environments by using local blockchains like [Ganache](https://trufflesuite.com/ganache/). There’s also Ethereum testnets like Goerli, Sepolia, etc. to use as staging environments, allowing you to test contract deployment and make sure everything works as intended. 
 
-The Immutable X test environment uses Goerli, so you should be deploying your contract there first to integrate and play around with the functions on-chain, and test the integration with Immutable X. It’s also important to write unit tests and integration tests for your smart contracts. We have some [example unit tests in Gitbhub](https://github.com/immutable/imx-contracts/blob/main/test/Asset.test.ts) to give you an idea of what these can look like.
+The ImmutableX test environment uses Goerli, so you should be deploying your contract there first to integrate and play around with the functions on-chain, and test the integration with ImmutableX. It’s also important to write unit tests and integration tests for your smart contracts. We have some [example unit tests in Gitbhub](https://github.com/immutable/imx-contracts/blob/main/test/Asset.test.ts) to give you an idea of what these can look like.
 
 ## Gas fees and metadata
 
-A gas fee is required to successfully conduct a transaction or execute a smart contract on a blockchain platform. The fee is determined by the gas used, multiplied by the gas price. While Immutable X is completely gas free within the L2 ecosystem, it’s still useful to know about the implications of fees for smart contract development.
+A gas fee is required to successfully conduct a transaction or execute a smart contract on a blockchain platform. The fee is determined by the gas used, multiplied by the gas price. While ImmutableX is completely gas free within the L2 ecosystem, it’s still useful to know about the implications of fees for smart contract development.
 
 Reading data from the blockchain is free, unless executed in a transaction, but writing data to the blockchain costs gas and can be quite expensive, especially when minting tokens because all of the information about that token is being written to the blockchain and verified by nodes all across the network. This is why you’ll see some very large gas costs for minting certain NFTs on L1.
 
-Your code should therefore try to be as efficient as possible with fewer operations and writes to the blockchain, without compromising security. Where possible, most computations required in the minting process should be moved off-chain. While minting on Immutable X is gas-free, withdrawing the token to mainnet will incur a gas fee which has to be paid by the user to mint the token.
+Your code should therefore try to be as efficient as possible with fewer operations and writes to the blockchain, without compromising security. Where possible, most computations required in the minting process should be moved off-chain. While minting on ImmutableX is gas-free, withdrawing the token to mainnet will incur a gas fee which has to be paid by the user to mint the token.
 
 ### Usage example
 
 Let’s look at [Gods Unchained](https://godsunchained.com/) (GU) as an example:
 
-GU cards pass only the proto (the card ID) and the quality in the blueprint to save on-chain, and these two properties alone can uniquely determine the value of the card. All other properties for the cards — such as attack, defense, image_url, etc. — are stored in the off-chain metadata (which is accessed via a [metadata API endpoint](https://docs.x.immutable.com/docs/minting-on-immutable-x#metadata-api)). This makes it cheaper for a user (player) to withdraw a card from Immutable X as they are writing less data to the blockchain.
+GU cards pass only the proto (the card ID) and the quality in the blueprint to save on-chain, and these two properties alone can uniquely determine the value of the card. All other properties for the cards — such as attack, defense, image_url, etc. — are stored in the off-chain metadata (which is accessed via a [metadata API endpoint](https://docs.x.immutable.com/docs/minting-on-immutable-x#metadata-api)). This makes it cheaper for a user (player) to withdraw a card from ImmutableX as they are writing less data to the blockchain.
 
 Having the metadata stored at a separately hosted (off-chain) endpoint is useful for the Gods Unchained engineering team to be able to make changes to it, for example, increasing the attack of a particular card as part of a balance patch.
 

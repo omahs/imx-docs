@@ -88,38 +88,46 @@ To display assets which are currently in Immutable X, you will need to use the [
 GET https://api.x.immutable.com/v1/assets?collection=0x...&user=0x...&status=imx
 ```
 
-Setting `status=imx` helps protect against displaying the same asset twice (if you already use Ethereum to track your application's assets). This endpoint will return assets in the following format (note the pagination properties):
+Setting `status=imx` helps protect against displaying the same asset twice (if you already use Ethereum to track your application's assets). This endpoint will return assets in the following format (note the cursor&remaining properties):
 ```json
 {
-  "page": 1,
-  "perPage": 20,
-  "total": 500,
-  "records": [
+  "result": [
     {
-      "name": "Ratify",
-      "description": "",
-      "image_url": "",
-      "cache_for": 100,
-      "tradable": true,
-      "external_url": "",
-      "background_color": "",
+      "token_address": "0x...",
+      "token_id": "40710",
+      "id": "0x...",
+      "user": "0x...",
       "status": "imx",
-      "properties": {
-        "proto": {
-          "value": "300",
-          "type": "number"
-        },
-        "created": {
-          "value": "2020-09-04",
-          "type": "date"
-        },
-        "type": {
-          "value": "spell",
-          "type": "enum"
-        }
-      }
-        }
-  ]
+      "uri": null,
+      "name": "Strider",
+      "description": null,
+      "image_url": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Strider/Thumbnail_Hero_Strider_Base.png",
+      "metadata": {
+        "name": "Strider",
+        "type": 20,
+        "class": "Ranged",
+        "series": "Founder",
+        "assetId": "6151dc9d6e34330016119912",
+        "element": "Earth",
+        "faction": "Glade",
+        "tagline": "Untamed Huntress",
+        "image_url": "https://gog-art-assets.s3-ap-southeast-2.amazonaws.com/Content/Thumbnails/Heroes/Strider/Thumbnail_Hero_Strider_Base.png",
+        "rarityStr": "Rare",
+        "serialNumber": "9565",
+        "animation_url": "https://guildofguardians.mypinata.cloud/ipfs/QmYdcnb6b2LTbtzWce8yw5acXxauSFvxK9zo9MPLhAwR2w/HLS/Base/CollectionAsset_Hero_Strider_Base.m3u8",
+        "specialEditionStr": "Normal",
+        "animation_url_mime_type": "application/vnd.apple.mpegurl"
+      },
+      "collection": {
+        "name": "Guild of Guardians - Row 18",
+        "icon_url": null
+      },
+      "created_at": "2021-09-27T16:33:19.409997Z",
+      "updated_at": "2021-10-11T14:37:36.368061Z"
+    }
+  ],
+  "cursor": "....",
+  "remaining": 1
 }
 ```
 

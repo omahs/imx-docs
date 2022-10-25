@@ -3,19 +3,19 @@ title: "Onboarding"
 slug: "/onboarding"
 keywords: [imx-dx]
 ---
-Below is a high-level overview of the steps required to onboard with Immutable X.
+Below is a high-level overview of the steps required to onboard with ImmutableX.
 
 # Before you start
-The Immutable X test environment uses Goerli. If you haven’t already, get [prepared to test](../getting-started-guide.md#prepare-to-test) with an Ethereum wallet and some test ETH. You also need to [register as a user](../getting-started-guide.md#register-a-user-account) before you can register a project.
+The ImmutableX test environment uses Goerli. If you haven’t already, get [prepared to test](../getting-started-guide.md#prepare-to-test) with an Ethereum wallet and some test ETH. You also need to [register as a user](../getting-started-guide.md#register-a-user-account) before you can register a project.
 :::info Common Terms
-The following explains a couple of Immutable X terms used throughout our guides:
+The following explains a couple of ImmutableX terms used throughout our guides:
 
-When you register a **collection** with Immutable X it creates a **project**. A project is an administrative-level entity that is associated with a [crypto-wallet address](../getting-started-guide.md#wallet), also referred to as an **owner address**. One project can have many associated **collections**.
+When you register a **collection** with ImmutableX it creates a **project**. A project is an administrative-level entity that is associated with a [crypto-wallet address](../getting-started-guide.md#wallet), also referred to as an **owner address**. One project can have many associated **collections**.
 :::
 ## 1. Deploy a smart contract
 All smart contracts on L2 currently require a corresponding contract on L1 Ethereum, to ensure their tokens can be deposited and withdrawn correctly.
 
-To test your assets, minting, and trading flows, you need to deploy an ERC-721 contract on the Goerli test network, then register it with Immutable X. Similarly, to mint on mainnet Ethereum, you need to deploy an ERC-721 contract on mainnet, then follow the same steps.
+To test your assets, minting, and trading flows, you need to deploy an ERC-721 contract on the Goerli test network, then register it with ImmutableX. Similarly, to mint on mainnet Ethereum, you need to deploy an ERC-721 contract on mainnet, then follow the same steps.
 
 Example smart contracts are available in our [imx-contracts](https://github.com/immutable/imx-contracts) repo. 
 
@@ -35,7 +35,7 @@ View the guide: [Project registration](./project-registration.md))
 ## 3. Register a collection
 A collection refers to a series of NFTs, minted under a project, and corresponds to a specific deployed smart contract.
 
-All minted assets belong to a collection, and in order to mint assets on L2 you must first register your collection (smart contract) with Immutable X.
+All minted assets belong to a collection, and in order to mint assets on L2 you must first register your collection (smart contract) with ImmutableX.
 
 - Each collection belongs to a project.
 - Each collection may contain many similar or different NFTs.
@@ -62,11 +62,11 @@ To refresh metadata changes, you need to [contact support](https://support.immut
 Requests may take up to 2 business days (AEST).
 :::
 ## 5. Mint assets
-Once your contract has been registered, you can mint gas-free on Immutable X. 
+Once your contract has been registered, you can mint gas-free on ImmutableX. 
 
 See the following guides to learn more:
-- [Minting on Immutable X](../minting-on-immutable-x.md)
+- [Minting on ImmutableX](../minting-on-immutable-x.md)
 - [Asset minting](../asset-management/asset-minting.md) 
 
 ## 6. Integrate your application
-To start building an application on Immutable X, see our [integrate your application](../integrate-your-application/index.md) guides.
+To start building an application on ImmutableX, see our [integrate your application](../integrate-your-application/index.md) guides.

@@ -1,3 +1,20 @@
+# [1.29.0](https://github.com/immutable/imx-docs/compare/v1.28.0...v1.29.0) (2022-10-21)
+
+
+### Features
+
+* **metadata-refreshes:** add examples for using the ts sdk for requesting metadata refreshes ([1b54597](https://github.com/immutable/imx-docs/commit/1b54597270633532740d9ef8f31dcae285ad9d67))
+
+# [1.28.0](https://github.com/immutable/imx-docs/compare/v1.27.1...v1.28.0) (2022-10-20)
+
+
+### Features
+
+* add images and warning to offers ([f043e2a](https://github.com/immutable/imx-docs/commit/f043e2a595543e9194f4817ed8268f9b61485ee4))
+* **add link sdk docs for offers functionality:** adding documentation for Offers in Link SDK ([3507c62](https://github.com/immutable/imx-docs/commit/3507c62c9522e976cc124526e2c1621a32e38bbb))
+* rebase ([e71607b](https://github.com/immutable/imx-docs/commit/e71607bca019280d197c5e4fd94fe5c49f6d1d3f))
+* update make offer comments ([17c5bb1](https://github.com/immutable/imx-docs/commit/17c5bb1f2bf706184db3316de147825ae650e0b2))
+
 ## [1.27.1](https://github.com/immutable/imx-docs/compare/v1.27.0...v1.27.1) (2022-09-28)
 
 

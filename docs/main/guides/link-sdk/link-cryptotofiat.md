@@ -6,9 +6,9 @@ sidebar_position: 12
 keywords: [imx-wallets]
 ---
 
-The crypto to fiat functionality is available in SDK v1.21.3+ and is a collaboration between Immutable X and Moonpay.
+The crypto to fiat functionality is available in SDK v1.21.3+ and is a collaboration between ImmutableX and Moonpay.
 
-The exchange process allows users to sell crypto held on L2 on the Immutable X platform directly for fiat funds. These funds will be deposited directly into the users nominated bank account. There is no gas fee for this exchange, only a [Moonpay transaction fee](https://support.moonpay.com/hc/en-gb/articles/360011930117-What-fees-do-you-charge-).
+The exchange process allows users to sell crypto held on L2 on the ImmutableX platform directly for fiat funds. These funds will be deposited directly into the users nominated bank account. There is no gas fee for this exchange, only a [Moonpay transaction fee](https://support.moonpay.com/hc/en-gb/articles/360011930117-What-fees-do-you-charge-).
 
 The withdraw happens directly on L2 via the transfer to Moonpay accounts.
 
@@ -37,7 +37,7 @@ To initialize the offramp process with an option to choose any available currenc
 await link.cryptoToFiat({})
 ```
 
-This displays the Link UI with a screen when a user need to choose currency and anter amount:
+This displays the Link UI with a screen when a user need to choose currency and enter amount:
 
 ![Offramp without parameters](/img/link-sdk-cryptotofiat/offramp-without-params.png 'Offramp without parameters')
 

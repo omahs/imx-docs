@@ -46,7 +46,7 @@ The OpenAPI spec is retrieved from https://api.x.immutable.com/openapi and also 
 
 ### Smart contract autogeneration
 
-The Immutable solidity contracts can be found under `contracts` folder. Contract bindings in typescript is generated using [hardhat](https://hardhat.org/guides/compile-contracts.html).
+The Immutable solidity contracts can be found under `contracts` folder. Contract bindings in TypeScript is generated using [hardhat](https://hardhat.org/guides/compile-contracts.html).
 
 #### Core
 

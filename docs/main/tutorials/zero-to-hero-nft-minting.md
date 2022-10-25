@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 *Estimated completion time: 20 mins*
 
-This tutorial provides a step by step guide on how to mint an NFT on Immutable X. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. 
+This tutorial provides a step by step guide on how to mint an NFT on ImmutableX. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. 
 
 By the end of this tutorial you will have:
 
@@ -32,11 +32,11 @@ Homebrew is only needed for Mac OS.
 
 Homebrew installs the packages needed for this tutorial. Copy the command on the [Homebrew website](https://brew.sh/), then run in the terminal. 
 
-**  [NodeJS](https://nodejs.org/)**
+**  [Node.js](https://nodejs.org/)**
 
-NodeJS allows us to use JavaScript to build and run applications. 
+Node.js allows us to use JavaScript to build and run applications. 
 
-:::danger Nodejs Version
+:::danger Node.js Version
 Ensure that you get the latest LTS version or you may experience issues following the turorial.
 :::
 
@@ -83,10 +83,10 @@ Visual Studio Code is the code editor we will be using for this tutorial.
 ## Step 2: Setup MetaMask 
 To trade cryptocurrencies and NFTs, we need a wallet. For this tutorial, we will use Metamask. 
 
-1. Open [metamask.io](https://metamask.io/download/) to install the browser extension.
-2. Follow the steps in the plugin to create a new wallet, then record and store your seed phrase in a safe location.
+1. Open [metamask.io](https://metamask.io/download/) to install the browser extension
+2. Follow the steps in the plugin to create a new wallet, then record and store your seed phrase in a safe location
 3. Ensure you display test networks
-4. Change the network selection from **Ethereum Mainnet** to **Goerli Test Network**.
+4. Change the network selection from **Ethereum Mainnet** to **Goerli Test Network**
 5. Note down your [private key](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key) and [public key ](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-)
 
 Changing the network enables us to deploy on a testnet where we can experiment using test Eth. To learn more about transactions on Ethereum work, check out [this page](https://ethereum.org/en/developers/docs/transactions/) from the Ethereum foundation.
@@ -126,7 +126,7 @@ Your URLs should have the format `https://gateway.pinata.cloud/ipfs/QmWfjs6CVu4E
 1. Open Visual Studio Code
 2. Create New Folder (Open Folder --> New Folder)
 3. Press the page icon 3x to create 3 files
-4. Name the files **1,2 & 3**. These are our Token IDs. 
+4. Name the files **1,2 & 3**. These are our Token IDs.
 
 ![FileCreation](/img/zero-to-hero/step5_filecreation.png 'FileCreation')
    
@@ -190,7 +190,7 @@ An Etherscan API Key is necessary to verify that you're the owner of the smart c
 1. Navigate to [Etherscan](https://etherscan.io/)
 2. Sign in (or create a new account) 
 3. Navigate to `API-KEYS` and add a new key
-4. Note down the generated API key. 
+4. Note down the generated API key
 
 ![Etherscan API Key](/img/zero-to-hero/Etherscan1-no-arrow.png 'Etherscan API Key')
 ![Etherscan API Key2](/img/zero-to-hero/Etherscan2.png 'Etherscan API Key')
@@ -275,7 +275,7 @@ Next we will need to install packages needed for deploying our smart contract.
 
 ![Open the integrated terminal](/img/zero-to-hero/Integrated-Terminal.png 'Open the integrated terminal')
 
-3. Run `npm install --include=dev` and wait until the installation is completed. 
+3. Run `npm install --include=dev` and wait until the installation is completed
 4. Save your work
 
 ## Step 9: Deploy Contract
@@ -291,9 +291,9 @@ Before we can mint on Layer 2, we need to deploy a smart contract on Layer 1 to 
 Paste your contract address into [Goerli Etherscan](https://goerli.etherscan.io/). It should say **contract** in the upper left. If this says address, ensure you are on the correct network
 :::
 
-## Step 10: Add your NFT Collection to Immutable X
+## Step 10: Add your NFT Collection to ImmutableX
 
-After deploying your contract to Layer 1, you will need to [register](https://docs.x.immutable.com/docs/onboarding) it with Immutable X by creating a project and a collection. 
+After deploying your contract to Layer 1, you will need to [register](https://docs.x.immutable.com/docs/onboarding) it with ImmutableX by creating a project and a collection. 
 
 1. Download the [imx-examples repo](https://github.com/immutable/imx-examples)
 2. Open the folder in Visual Studio Code
@@ -483,7 +483,7 @@ To add metadata schema to the collection, run the command `npm run onboarding:ad
 
 ## Step 15: Mint NFT
 
-Now that we have added our contract to Immutable X, the final step is to add our assets to the blockchain by minting them. 
+Now that we have added our contract to ImmutableX, the final step is to add our assets to the blockchain by minting them. 
 
 1. Navigate to the .env file 
 2. Fill in the follow under the 'Bulk Minting' section 
@@ -611,6 +611,14 @@ If you'd like to reuse these steps for a mainnet launch, note the following chan
     </td>
     <td>
      Remove `sandbox` from the URL in <code>PUBLIC_API_URL</code> in the .env file
+    </td>
+  </tr>
+    <tr>
+    <td>
+      N/A
+    </td>
+    <td>
+     Set `STARK_CONTRACT_ADDRESS` and `REGISTRATION_ADDRESS` to the [mainnet addresses](https://github.com/immutable/imx-contracts#immutable-contract-addresses) in the .env file
     </td>
   </tr>
   </tbody>

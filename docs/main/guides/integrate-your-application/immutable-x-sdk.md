@@ -1,18 +1,18 @@
 ---
 id: "immutable-x-sdk"
-title: "Immutable X SDK"
+title: "ImmutableX SDK"
 slug: "/immutable-x-sdk"
 excerpt: "Install and configure the SDK"
 sidebar_position: 1
 keywords: [imx-games]
 ---
-The Immutable X SDK is a Javascript package created by Immutable to allow simple interfacing with Immutable X’s API. The primarily used packages are Link SDK and the Immutable X Client.
+The ImmutableX SDK is a Javascript package created by Immutable to allow simple interfacing with ImmutableX’s API. The primarily used packages are Link SDK and the ImmutableX Client.
 
-The Immutable X Client is used for most backend operations, and the [Link SDK](../link-sdk/index.md) is used for frontend, user-facing interactions.
+The ImmutableX Client is used for most backend operations, and the [Link SDK](../link-sdk/index.md) is used for frontend, user-facing interactions.
 
 The IMX Client ('ImmutableXClient') is a module wrapping the REST requests in a method call. Using this package, developers can make sure their calls are up to date with the latest API standards.
 
-The Link SDK provides a clean popup and UI to help users navigate through the final signing process with their wallets. While information about current market state and assets can be derived with web requests, the Link SDK handles the more complicated STARK signature signing most developers should not need to code. Using the Link SDK also maintains a unified view for users, allowing them to be more comfortable during signing when using marketplaces powered by Immutable X.
+The Link SDK provides a clean popup and UI to help users navigate through the final signing process with their wallets. While information about current market state and assets can be derived with web requests, the Link SDK handles the more complicated STARK signing so developers don't need to code it themselves. Using the Link SDK also maintains a unified view for users, allowing them to be more comfortable during signing when using marketplaces powered by ImmutableX.
 
 Applications monitoring the status of the assets will use the IMX Client to retrieve data. Marketplace and applications relying on user interaction will use both packages.
 
@@ -34,7 +34,7 @@ import { ImmutableXClient, Link } from '@imtbl/imx-sdk';
 ```
 
 ## Setting the connection urls
-Immutable X provides connection addresses for both the mainnet and testnet.
+ImmutableX provides connection addresses for both the mainnet and testnet.
 Here we will default to the mainnet for the examples, but show the testnet connection strings as well.
 ```javascript
 const linkAddress = 'https://link.x.immutable.com';

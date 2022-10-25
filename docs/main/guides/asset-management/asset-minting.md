@@ -6,9 +6,9 @@ sidebar_position: 4
 keywords: [imx-games]
 ---
 
-A key advantage of Immutable X is that applications are able to mint assets on Layer 2, rather than minting on Ethereum and then depositing into the exchange. This makes minting gas-free for both applications and users, a massive improvement over the current landscape.
+A key advantage of ImmutableX is that applications are able to mint assets on Layer 2, rather than minting on Ethereum and then depositing into the exchange. This makes minting gas-free for both applications and users, a massive improvement over the current landscape.
 
-We are able to do this without the compromises made by other scaling solutions i.e. any assets L2 minted on Immutable X retain L1 (Ethereum)-level security, and can be withdrawn to Ethereum in the next batch.
+We are able to do this without the compromises made by other scaling solutions i.e. any assets L2 minted on ImmutableX retain L1 (Ethereum)-level security, and can be withdrawn to Ethereum in the next batch.
 
 # Mintable contracts
 
