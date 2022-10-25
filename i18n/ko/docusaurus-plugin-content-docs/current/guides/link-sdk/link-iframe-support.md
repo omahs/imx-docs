@@ -8,10 +8,6 @@ keywords: [imx-wallets]
 
 ## How to trigger link inside an iframe
 
-:::caution Action Required
-This functionality requires your application to be whitelisted. ImmutableX Partner Success will whitelist your application at the same time they register your minting contract.
-:::
-
 The link supports iframe embedding.
 
 Simply supply an additional options object when you construct Link:
