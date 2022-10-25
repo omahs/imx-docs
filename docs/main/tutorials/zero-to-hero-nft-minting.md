@@ -599,5 +599,13 @@ If you'd like to reuse these steps for a mainnet launch, note the following chan
      Remove `sandbox` from the URL in <code>PUBLIC_API_URL</code> in the .env file
     </td>
   </tr>
+    <tr>
+    <td>
+      N/A
+    </td>
+    <td>
+     Set `STARK_CONTRACT_ADDRESS` and `REGISTRATION_ADDRESS` to the [mainnet addresses](https://github.com/immutable/imx-contracts#immutable-contract-addresses) in the .env file
+    </td>
+  </tr>
   </tbody>
 </table>
