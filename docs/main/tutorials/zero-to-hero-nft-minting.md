@@ -604,8 +604,7 @@ If you'd like to reuse these steps for a mainnet launch, note the following chan
       N/A
     </td>
     <td>
-     Set <code>STARK_CONTRACT_ADDRESS</code> and <code>REGISTRATION_ADDRESS</code> to the <a href='https://github.com/immutable/imx-contracts#immutable-contract-addresses'>mainnet addresses</a>
-       in the .env file
+     Set <code>STARK_CONTRACT_ADDRESS</code> and <code>REGISTRATION_ADDRESS</code> to the <a href='https://github.com/immutable/imx-contracts#immutable-contract-addresses'>mainnet addresses</a> in the .env file
        </td>
   </tr>
   </tbody>
