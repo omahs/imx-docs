@@ -107,7 +107,7 @@ For a smart contract to work with ImmutableX, we need an implementation of a `mi
 
 **[Read a high-level overview of the StarkEx service](https://docs.starkware.co/starkex-v3/overview)**
 
-There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata. When minting on ImmutableX, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. You also have to provide a [blueprint for each token](../guides/minting-on-immutable-x.md#metadata-blueprint). The blueprint represents the immutable, [on-chain metadata](../guides/minting-on-immutable-x.md#on-chain-versus-off-chain) of the NFT that will be passed (along with the token ID) to your `mintFor` function.
+There is no smart contract interaction at the time of minting on L2, although the minted token will have a L1 representation, token ID, and immutable metadata. When minting on ImmutableX, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. Please note, while the token ID is typed as string, it still needs to be a valid uint256 as per the ERC-721 token standard. You also have to provide a [blueprint for each token](../guides/minting-on-immutable-x.md#metadata-blueprint). The blueprint represents the immutable, [on-chain metadata](../guides/minting-on-immutable-x.md#on-chain-versus-off-chain) of the NFT that will be passed (along with the token ID) to your `mintFor` function.
 
 ## Example contracts
 
