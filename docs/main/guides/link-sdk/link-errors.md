@@ -15,9 +15,9 @@ Find below the list of errors that can be displayed in Link.
 | 1000       | Failed to instantiate SDK IMX Client when connecting wallet | Something went wrong.                                                                      | Contact the Customer Support team.                                               | Check SDK Settings.                             |
 | 1001       | Unable to retrieve tokens list                              | Something went wrong retrieving your tokens list: ${apiError}                              | Retry the operation/Refresh the page or Contact support team                     | Try to replicate the issue.                     |
 | 1002       | Failed to retrieve the wallet address                       | Something went wrong when retrieving your wallet address. Check with your wallet provider. | Check wallet connection with IMX.Check wallet provider.Contact Customer Support. | Try to replicate the issue. Check console logs. |
-| 1003       | Link forcibly closed by the user | Link window closed. | | Give feedback on the Link closed to the user. |
+| 1003       | Link forcibly closed by the user | Link window closed. | - | Give feedback on the Link closed to the user. |
 | 1004       | Failed to open Link as iFrame due to 3rd party cookies blocked | There is no storage available. This is usually related to a 3rd party cookie-blocking policy. | Unblock the 3rd party cookies on the browser. | Give a feedback regarding 3rd party cookies to the user or change Link mode to be opened as popup. |
-| 1005       | Failed to open Link as iFrame due to application's domain not be whitelisted | Only whitelisted partners can currently embed link using an iframe. Please contact support@immutable.com and quote referrer ${address} for information. | Contact the Customer Support team. | Contact the Customer Support team. |
+| :no_entry: ~~1005~~ <small><br/>`Obsolete`</small> | ~~Failed to open Link as iFrame due to application's domain not be whitelisted~~ | ~~Only whitelisted partners can currently embed link using an iframe. Please contact support@immutable.com and quote referrer ${address} for information.~~ | ~~Contact the Customer Support team.~~ | ~~Contact the Customer Support team.~~ |
 
 ## Deposits
 
