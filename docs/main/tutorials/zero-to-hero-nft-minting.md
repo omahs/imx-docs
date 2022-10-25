@@ -5,6 +5,10 @@ slug: "/zero-to-hero-nft-minting"
 sidebar_position: 1
 keywords: [imx-growth]
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 *Estimated completion time: 20 mins*
 
 This tutorial provides a step by step guide on how to mint an NFT on ImmutableX. It is designed for developers building on Web3 for the first time, so anyone can follow along regardless of prior experience. This has been simplified for educational purposes and we are working on expanding the content. 
@@ -36,30 +40,40 @@ Node.js allows us to use JavaScript to build and run applications.
 Ensure that you get the latest LTS version or you may experience issues following the turorial.
 :::
 
-For PC users, check that Node.js is working by opening powershell or command line and executing the command:
+<Tabs>
+  <TabItem value="Windows" label="Windows" default>
+
+For **Windows** users, check that NodeJS is working by opening powershell or command line and executing the command:
 
 ```shell
 npm -v
 ```
 
-For Mac users, open up the terminal and run 
-```shell
-brew install node@16
-``` 
-
 ** Yarn**
 
 Yarn is an open source package manager. Follow the steps below to install: 
 
-For **PC** users, run the following command in powershell.
+Run the following command in powershell.
 ```shell
 npm install yarn -g
 ```
 
-For **Mac** users, run the following command in the terminal.
+
+  </TabItem>
+  <TabItem value="macOS" label="macOS">
+
+For **Mac** users, open up the terminal and run 
+```shell
+brew install node@16
+``` 
+
+Run the following command in the terminal.
 ```shell
 brew install yarn
 ```
+  </TabItem>
+</Tabs>
+
 
 **[Visual Studio Code](https://code.visualstudio.com/)
 **
