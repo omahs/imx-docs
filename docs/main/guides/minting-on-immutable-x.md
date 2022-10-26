@@ -102,7 +102,7 @@ For a smart contract to work with ImmutableX, we need an implementation of a `mi
 
 ## Token ID
 
-When minting on ImmutableX, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. As mentioned above, you also have to provide a [blueprint](./minting-on-immutable-x.md#metadata-blueprint) for each token. The blueprint represents the on-chain, immutable metadata of the NFT that will be passed (along with the token ID) to your `mintFor` function.
+When minting on ImmutableX, you will give us the token ID, which is the L1 token ID representing the token in your smart contract. Please note, while the token ID is typed as string, it still needs to be a valid uint256 as per the ERC-721 token standard. As mentioned above, you also have to provide a [blueprint](./minting-on-immutable-x.md#metadata-blueprint) for each token. The blueprint represents the on-chain, immutable metadata of the NFT that will be passed (along with the token ID) to your `mintFor` function.
 
 In a Layer 1 smart contract, it's common for the ERC-721 token ID to be incremented in the minting function. With ImmutableX, the token ID is defined at the time of minting to ImmutableX and passed to the `mintFor` function in the minting blob, which then gets decoded into the respective ID and blueprint variables. You will have to keep track of the token ID on your end and increment it off-chain for every mint.
 

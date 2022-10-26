@@ -52,7 +52,7 @@ Here is a [mint tokens](/reference#/operations/mintTokens) example:
 }
 ```
 
-**NOTE:** Above, `token_address` is the contract address.
+**NOTE:** Above, `token_address` is the contract address. The type of `data.id` (`<asset ID>`) is string, however it still needs to be a valid uint256 as per the ERC-721 token standard.
 
 Every mint request for a user (for one or many assets) will require an `auth_signature` signed by the contract owner. This ensures that only the entity representing the owner / deployer of the contract will be allowed to authorise mints for users i.e. mint supply is bound by the contract owner's key.
 
