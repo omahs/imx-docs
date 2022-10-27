@@ -21,13 +21,16 @@ ImmutableX’s base token is Ethereum. Once deposited onto the platform it exist
 - **Preparing withdrawal** - ETH that has started the withdrawal process from ImmutableX. It must wait until the next published signature to the main chain before moving to the withdrawable state.
 - **Withdrawable** - ETH that is now withdrawable to another address on the main chain.
 
-To retrieve a user’s balances use the following IMX client function:
+To retrieve a user’s balance, use the following IMX client function:
 
 ```javascript
-const balances = await client.getBalances({ user: address })
+// The address is the value returned by the link.setup({}) call i.e
+// const { address, starkPublicKey } = await link.setup({});
+const listBalancesResponse = await client.listBalances({ user: address })
+const balances = listBalancesResponse.result[0];
 ```
 
-The _balances_ object will contain the amounts of all three states: imx, preparing_withdrawal, and withdrawable. Each value is returned as a BigNumber, a structure used to hold the many decimal places an ETH amount needs for display. The value is denominated in Wei, so a conversion may be necessary if trying to display the value as ETH. 1 ETH = 10^18 Wei.
+The _balances_ object will contain the amounts of all three states: balance(respresenting your balance in eth on the imx protocol), preparing_withdrawal, and withdrawable. Each value is returned as a BigNumber, a structure used to hold the many decimal places an ETH amount needs for display. The value is denominated in Wei, so a conversion may be necessary if trying to display the value as ETH. 1 ETH = 10^18 Wei.
 
 :::info Ether to Wei
 1 Ether = 1,000,000,000,000,000,000 Wei
@@ -40,7 +43,8 @@ import { ethers } from 'ethers'
 
 // ...
 
-let amountInEth = ethers.utils.formatEther(amountInWei)
+const amountInWei = listBalancesResponse.result[0].balance;
+const amountInEth = ethers.utils.formatEther(amountInWei)
 ```
 
 ## Deposits

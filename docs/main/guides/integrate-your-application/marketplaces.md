@@ -20,12 +20,14 @@ Orders on ImmutableX all include a buy and sell side. To fill or partially fill 
 
 ## Listing orders
 
-Showing orders, like assets, is best accessed by IMX Client. Usually when making a request for orders you filter on status. The following call will retrieve all the active orders for assets from a specific collection (paged):
+Showing orders, like assets, is best accessed by IMX Client. Usually when making a request for orders you filter on status. The following call will retrieve all the active orders for assets from the Gods Unchained collection (paged):
 
 ```javascript
+// Gods Unchained collection adresss
+const collectionAddress = '0xacb3c6a43d15b907e8433077b6d38ae40936fe2c'
 const ordersRequest = await client.getOrders({
   status: 'active',
-  sell_token_address: collectionAddress,
+  sell_token_address: collectionAddress
 })
 ```
 
@@ -66,7 +68,7 @@ The following example shows how to filter Gods Unchained Card orders for a Boost
 ```javascript
 const ordersRequest = await client.getOrders({
   status: 'active',
-  sell_token_address: '0xacb3c6a43d15b907e8433077b6d38ae40936fe2c',
+  sell_token_address: collectionAddress,
   sell_metadata: '{"proto":["55"],"quality":["Shadow","Gold"]}',
 })
 ```
