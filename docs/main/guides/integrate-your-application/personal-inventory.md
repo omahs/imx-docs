@@ -30,7 +30,7 @@ const listBalancesResponse = await client.listBalances({ user: address })
 const balances = listBalancesResponse.result[0];
 ```
 
-The _balances_ object will contain the amounts of all three states: balance(respresenting your balance on the imx protocol), preparing_withdrawal, and withdrawable. Each value is returned as a BigNumber, a structure used to hold the many decimal places an ETH amount needs for display. The value is denominated in Wei, so a conversion may be necessary if trying to display the value as ETH. 1 ETH = 10^18 Wei.
+The _balances_ object will contain the amounts of all three states: balance(representing your balance on the imx protocol), preparing_withdrawal, and withdrawable. Each value is returned as a BigNumber, a structure used to hold the many decimal places an ETH amount needs for display. The value is denominated in Wei, so a conversion may be necessary if trying to display the value as ETH. 1 ETH = 10^18 Wei.
 
 :::info Ether to Wei
 1 Ether = 1,000,000,000,000,000,000 Wei
