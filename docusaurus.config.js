@@ -177,7 +177,7 @@ const configuration = {
           },
           {
             type: 'doc',
-            docId: 'overview/what-is-immutablex',
+            docId: 'overview/start-here',
             position: 'left',
             label: 'Docs',
           },

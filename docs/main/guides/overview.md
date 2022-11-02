@@ -11,7 +11,7 @@ Guides provide instructions on how to perform specific functionality that the Im
 Set up our SDKs and learn how to perform key functionality of the ImmutableX platform.
 
 ## Learn more
-### [Advanced guides](./advanced-guides/)
+### [Advanced guides](./asset-burning)
 Implement more advanced functionality in your ImmutableX application or manage an existing asset collection.
 
 ## Enhance

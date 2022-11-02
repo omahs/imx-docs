@@ -6,7 +6,7 @@ sidebar_position: 3
 
 import Admonition from '@theme/Admonition';
 
-ImmutableX allows you to create applications on layer 2 by interacting with its [API](../../reference) and [developer tools](../sdks). It provides the key functionality you'll need to build web3 games or NFT applications without having to deploy your own complicated smart contracts.
+ImmutableX allows you to create applications on layer 2 by interacting with its [API](../../reference) and [developer tools](./sdks). It provides the key functionality you'll need to build web3 games or NFT applications without having to deploy your own complicated smart contracts.
 
 Before starting to build on ImmutableX, it's important to understand:
 * [What functionality does your application need?](#what-functionality-do-web3-games-and-applications-typically-need)

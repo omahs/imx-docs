@@ -114,7 +114,7 @@ const transferResponsePayload: TransferV2ResultsCodec = await link.transfer([
 
 Burned assets will still show up in the [listAssets](/reference#/operations/listAssets) API endpoint with a "burned" status. This is a filterable field.
 
-This is an example of getting burned assets using the JS SDK (deprecated soon):
+This is an example of getting burned assets using the JS SDK:
 
 ```typescript 
 import { ImmutableXClient, ImmutableAssetStatus } from '@imtbl/imx-sdk';
