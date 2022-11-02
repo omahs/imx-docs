@@ -1,6 +1,6 @@
 ---
 id: "create-react-app-webpack-5-errors"
-title: "Webpack 5 Errors"
+title: "Webpack 5 errors"
 slug: "/create-react-app-webpack-5-errors"
 sidebar_position: 3
 keywords: [imx-dx]

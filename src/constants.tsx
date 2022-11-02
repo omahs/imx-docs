@@ -59,6 +59,15 @@ export const walletSDKs = [
   },
 ];
 
+export const jsSDK = [
+  {
+    id: 0,
+    name: 'JS SDK',
+    displayName: 'JS SDK reference',
+    url: '/docs/integrate-your-application',
+  },
+];
+
 export const linkSDK = [
   {
     id: 0,
@@ -67,3 +76,12 @@ export const linkSDK = [
     url: '/docs/sdk-api',
   },
 ];
+
+export const sdkIds = {
+  coreTypescript: coreSDKs.find((sdk) => sdk.id === 0).sdkId,
+  coreKotlin: coreSDKs.find((sdk) => sdk.id === 1).sdkId,
+  coreSwift: coreSDKs.find((sdk) => sdk.id === 2).sdkId,
+  coreGolang: coreSDKs.find((sdk) => sdk.id === 3).sdkId,
+  walletWeb: walletSDKs.find((sdk) => sdk.id === 3).sdkId,
+  walletAndroid: walletSDKs.find((sdk) => sdk.id === 4).sdkId,
+};

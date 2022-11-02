@@ -9,7 +9,7 @@ keywords: [imx-wallets]
 Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
 :::
 
-For context, read our [overview of the ImmutableX SDK](../integrate-your-application/immutable-x-sdk.md).
+For context, read our [overview of the ImmutableX JS SDK](./integrate-your-application).
 
 ## Link usage
 

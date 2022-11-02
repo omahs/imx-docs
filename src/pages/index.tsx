@@ -153,7 +153,7 @@ const Homepage = () => {
             className={styles.heroTitle}
           />
           <div className={styles.heroButtonSection}>
-            <a href="/docs/welcome">
+            <a href="/docs/what-is-immutablex">
               <Button onClick={() => console.log('')}>
                 <Translate>Explore</Translate>{' '}
                 <span className={styles.displayFromExtraSmall}>
