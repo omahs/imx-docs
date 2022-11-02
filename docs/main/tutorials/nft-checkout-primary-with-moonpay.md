@@ -6,7 +6,7 @@ sidebar_position: 1
 keywords: [imx-payments]
 ---
 
-This tutorial provides a guide on what a partner should implement to register for NFT checkout Primary by fiat feature.
+This tutorial provides a guide on what a partner should implement to register for NFT Checkout Primary by fiat feature.
 
 If you get stuck at any point, reach out on the dev-faq and dev-discussion channels in our [Discord](https://discord.gg/TkVumkJ9D6). Click [here](https://docs.google.com/forms/d/e/1FAIpQLSdTLIXldLRZQB4i2YTHtQwxmrDbTkHphuxtLoVe7j-YVU7VYw/viewform) to provide feedback on the tutorial or let us know what topics you'd like to see in our documentation.
 
@@ -24,7 +24,7 @@ If you get stuck at any point, reach out on the dev-faq and dev-discussion chann
 A partner should contact Moonpay and sign a contract with them before registering for this feature on mainnet
 :::
 
-A partner should implement two endpoints for the mint by fiat feature.
+A partner should implement two endpoints for the NFT Checkout Primary feature.
 
 ## Endpoint 1: Get asset info
 
