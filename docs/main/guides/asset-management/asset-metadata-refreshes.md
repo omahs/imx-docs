@@ -12,6 +12,8 @@ Metadata refreshes update off-chain asset metadata.
 
 [Read more about asset metadata.](/docs/asset-metadata)
 
+This [page](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/metadata-refresh/) contains code samples that explain how to use the metadata refresh API.
+
 ## Use cases
 
 Metadata refreshes help games:
