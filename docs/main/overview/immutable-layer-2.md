@@ -7,9 +7,9 @@ sidebar_position: 2
 # ImmutableX's layer 2 solutions
 
 ## What is layer 2?
-"Layer 2" is a term used to describe mechanisms that process batches of transactions independently of layer 1 and only periodically reports them to the main chain. This decreases the total number of transactions that have to be validated on layer 1. Layer 2s are also known as "settlement layers" or "rollups".
+"Layer 2" is a term used to describe mechanisms that process batches of transactions independently of layer 1 and only periodically reports them to the main chain. This decreases the total number of transactions that have to be validated on layer 1. Layer 2s are also known as "execution layers" or "rollups".
 
-ImmutableX offer [two settlement layers](#layer-2s-on-immutablex), both of which use the [ZK rollup](#how-do-zk-rollups-work) batching mechanism.
+ImmutableX offer [two execution layers](#layer-2s-on-immutablex), both of which use the [ZK rollup](#how-do-zk-rollups-work) batching mechanism.
 
 ### How do ZK rollups work?
 ZK rollups consist of two main components:

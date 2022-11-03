@@ -66,7 +66,7 @@ Here's what happens under the hood when a withdrawal is made on ImmutableX:
 ![Asset Withdrawals](/img/Withdrawals.png)
 
 ### Mass exit scenario
-This occurs when a user decides to request for a full withdrawal of their assets from an exchange. This kicks off a sequence of events known as a "mass exit scenario" where the exhcnage is given a timeframe (known as a "freeze grace period", ie. 7 days), to service the withdrawal request.
+This occurs when a user decides to request for a full withdrawal of their assets from an exchange. This kicks off a sequence of events known as a "mass exit scenario" where the exchange is given a timeframe (known as a "freeze grace period", ie. 7 days), to service the withdrawal request.
 
 #### How does an exchange fulfil this request?
 It submits a STARK proof indicating that the asset has been released from the L2 vault. Upon acceptance of the proof, the contract adds the withdrawn amount/tokens to the L1 (on-chain) vault. The user can then withdraw this amount from the on-chain vault into their account via a normal on-chain withdrawal request.
