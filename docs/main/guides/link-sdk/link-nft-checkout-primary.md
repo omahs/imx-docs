@@ -6,7 +6,7 @@ sidebar_position: 12
 keywords: [imx-payments]
 ---
 
-The NFT Checkout Primary by fiat functionality is available in SDK v1.XX.XX(Add when experimental will be deleted)+ and is a collaboration between Immutable X and Moonpay.
+The NFT Checkout Primary by fiat functionality is available in SDK v1.35.7+ and is a collaboration between Immutable X and Moonpay.
 
 The NFT Checkout Primary process allows users to mint NFT on the Immutable X platform using a credit card. There's no gas price for minting, only a [Moonpay transaction fee](https://support.moonpay.com/hc/en-gb/articles/360011930117-What-fees-do-you-charge-).
 
