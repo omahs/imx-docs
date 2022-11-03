@@ -43,12 +43,12 @@ Immutable Link is a separate web application, now with iframe support [more info
 Immutable Link will soon be open source and made publicly available.
 
 ## Link SDK
-Immutable provides a convenient interface for initiating Immutable Link actions in the form of a Typescript SDK. To install the SDK in your project, use:
+Immutable provides a convenient interface for initiating Immutable Link actions in the form of a TypeScript SDK. To install the SDK in your project, use:
 ```bash title="SDK Installation"
 npm install @imtbl/imx-link-sdk
 ```
 
-This SDK allows users to prompt the Immutable Link window using a simple set of Typescript functions (draft interface presented below):
+This SDK allows users to prompt the Immutable Link window using a simple set of TypeScript functions (draft interface presented below):
 ```typescript title="SDK Interface"
 interface ETH {
     amount: string; 

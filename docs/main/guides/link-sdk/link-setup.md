@@ -10,7 +10,7 @@ keywords: [imx-wallets]
 Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
 :::
 
-A user's web3 wallet (e.g. Metamask) is used to create, connect, and sign transactions on Immutable X. Before a user can do this, they need to be registered on Immutable and signed into their wallet. Both these steps can be done with a single call to `Link.setup`. If a user is already registered, this function can also be called to sign them in.
+A user's web3 wallet (e.g. Metamask) is used to create, connect, and sign transactions on ImmutableX. Before a user can do this, they need to be registered on Immutable and signed into their wallet. Both these steps can be done with a single call to `Link.setup`. If a user is already registered, this function can also be called to sign them in.
 
 ## Supported wallets
 
@@ -56,7 +56,7 @@ const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPrefe
 const setupResponsePayload: SetupResultsCodec = await link.setup({ providerPreference: "magic_link" })
 ```
 
-`Link.setup` returns the user's signed-in address and Stark public key if the setup or sign in was completed successfully.
+`Link.setup` returns the user's signed-in address and STARK public key if the setup or sign in was completed successfully.
 
 ```typescript
 const SetupResultsCodec = t.intersection([
@@ -77,7 +77,7 @@ result = {
     "address": "0x...",
     "starkPublicKey": "0x...",
     "providerPreference": null,
-    "ethNetwork": "ropsten"
+    "ethNetwork": "goerli"
 }
 
 // `email` field is returned in the response if the magic_link provider is requested
@@ -86,7 +86,7 @@ result = {
     "address": "0x...",
     "starkPublicKey": "0x...",
     "providerPreference": "magic_link",
-    "ethNetwork": "ropsten",
+    "ethNetwork": "goerli",
     "email": "name@domain.com"
 }
 ```

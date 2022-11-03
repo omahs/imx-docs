@@ -15,7 +15,7 @@ Here's how you can initiate a buy order:
 
 ```typescript
 import { Link, ImmutableXClient, ImmutableOrderStatus} from ‘@imtbl/imx-sdk’;
-const link = new Link("https://link.ropsten.x.immutable.com")
+const link = new Link("https://link.sandbox.x.immutable.com")
 buyResults: BuyResponse = await link.buy({ orderIds: ['1', '2', '3'] });
 ```
 

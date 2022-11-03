@@ -6,9 +6,9 @@ sidebar_position: 11
 keywords: [imx-wallets]
 ---
 
-The exchange functionality is available in SDK v1.3.33+ and is a collaboration between Immutable X and Moonpay. `cryptoCurrencies` param is available in SDK v1.3.38+
+The exchange functionality is available in SDK v1.3.33+ and is a collaboration between ImmutableX and Moonpay. `cryptoCurrencies` param is available in SDK v1.3.38+
 
-The exchange process allows users to buy crypto from the Immutable X platform using a credit card. There's no gas price for purchases, only a [Moonpay transaction fee](https://support.moonpay.com/hc/en-gb/articles/360011930117-What-fees-do-you-charge-).
+The exchange process allows users to buy crypto from the ImmutableX platform using a credit card. There's no gas price for purchases, only a [Moonpay transaction fee](https://support.moonpay.com/hc/en-gb/articles/360011930117-What-fees-do-you-charge-).
 
 The deposit happens directly on L2 via the transfer from Moonpay accounts.
 
@@ -60,18 +60,17 @@ await link.fiatToCrypto({ cryptoCurrencies: ['ETH', 'USDC'] })
 await link.fiatToCrypto({ cryptoCurrencies: ['IMX', 'GODS'] })
 ```
 
-:::success Testing the flow on Ropsten
-To test the transactions in the Ropsten test environment, please use the following test cards:  
-**CARD**: Visa  
-**NUMBER**: 4000056655665556  
-**DATE**: any date in the future  
-**CVC**: 123  
+:::success Testing the flow in Sandbox
+To test the transactions in the Sandbox test environment, please use the following test cards:
+**CARD**: Visa
+**NUMBER**: 4444493318246892
+**DATE**: 12/2023
+**CVC**: 123
 
-
-**CARD**: Visa  
-**NUMBER**: 4000020951595032  
-**DATE**: 12/2022  
-**CVC**: 123  
+**CARD**: Mastercard
+**NUMBER**: 2222755234426838
+**DATE**: 01/2024
+**CVC**: 123
 :::
 
 ## Errors

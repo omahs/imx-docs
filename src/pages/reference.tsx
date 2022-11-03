@@ -32,7 +32,7 @@ export default function APIPage() {
           return (
             <div className="elements-container">
               <API
-                apiDescriptionUrl="https://api.ropsten.x.immutable.com/openapi-docs"
+                apiDescriptionUrl="https://api.sandbox.x.immutable.com/openapi-docs"
                 router="hash"
                 basePath="/"
                 layout="sidebar"

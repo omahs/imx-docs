@@ -52,7 +52,7 @@ Here is a [mint tokens](/reference#/operations/mintTokens) example:
 }
 ```
 
-**NOTE:** Above, `token_address` is the contract address.
+**NOTE:** Above, `token_address` is the contract address. The type of `data.id` (`<asset ID>`) is string, however it still needs to be a valid uint256 as per the ERC-721 token standard.
 
 Every mint request for a user (for one or many assets) will require an `auth_signature` signed by the contract owner. This ensures that only the entity representing the owner / deployer of the contract will be allowed to authorise mints for users i.e. mint supply is bound by the contract owner's key.
 
@@ -122,7 +122,7 @@ import { ImmutableXClient, MintableERC721TokenType } from '@imtbl/imx-sdk';
 import env from './config/client';
 import { loggerConfig } from './config/logging';
 
-const provider = new AlchemyProvider('ropsten', env.alchemyApiKey);
+const provider = new AlchemyProvider('goerli', env.alchemyApiKey);
 const log: ImLogger = new WinstonLogger(loggerConfig);
 const component = 'imx-bulk-mint-script';
 
@@ -130,8 +130,8 @@ const waitForTransaction = async (promise: Promise<string>) => {
     const txId = await promise;
     log.info(component, 'Waiting for transaction', {
       txId,
-      etherscanLink: `https://ropsten.etherscan.io/tx/${txId}`,
-      alchemyLink: `https://dashboard.alchemyapi.io/mempool/eth-ropsten/tx/${txId}`,
+      etherscanLink: `https://goerli.etherscan.io/tx/${txId}`,
+      alchemyLink: `https://dashboard.alchemyapi.io/mempool/eth-goerli/tx/${txId}`,
     });
     const receipt = await provider.waitForTransaction(txId);
     if (receipt.status === 0) {
@@ -146,10 +146,10 @@ const waitForTransaction = async (promise: Promise<string>) => {
     const signer = new Wallet(process.env.PRIVATE_KEY!).connect(provider);
 
     const minter = await ImmutableXClient.build({
-      publicApiUrl: process.env.PUBLIC_API_URL, // https://api.ropsten.x.immutable.com/v1 for ropsten, https://api.x.immutable.com/v1 for mainnet
+      publicApiUrl: process.env.PUBLIC_API_URL, // https://api.sandbox.x.immutable.com/v1 for goerli, https://api.x.immutable.com/v1 for mainnet
       signer: signer,
-      starkContractAddress: process.env.STARK_CONTRACT_ADDRESS, // 0x4527BE8f31E2ebFbEF4fCADDb5a17447B27d2aef for ropsten, 0x5FDCCA53617f4d2b9134B29090C87D01058e27e9 for mainnet
-      registrationContractAddress: process.env.REGISTRATION_CONTRACT_ADDRESS, // 0x6C21EC8DE44AE44D0992ec3e2d9f1aBb6207D864 for ropsten, 0x72a06bf2a1CE5e39cBA06c0CAb824960B587d64c for mainnet
+      starkContractAddress: process.env.STARK_CONTRACT_ADDRESS, // 0x7917eDb51ecD6CdB3F9854c3cc593F33de10c623 for goerli, 0x5FDCCA53617f4d2b9134B29090C87D01058e27e9 for mainnet
+      registrationContractAddress: process.env.REGISTRATION_CONTRACT_ADDRESS, // 0x1C97Ada273C9A52253f463042f29117090Cd7D83 for goerli, 0x72a06bf2a1CE5e39cBA06c0CAb824960B587d64c for mainnet
       gasLimit: process.env.GAS_LIMIT,
       gasPrice: process.env.GAS_PRICE,
     });

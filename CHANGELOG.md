@@ -1,3 +1,66 @@
+# [1.29.0](https://github.com/immutable/imx-docs/compare/v1.28.0...v1.29.0) (2022-10-21)
+
+
+### Features
+
+* **metadata-refreshes:** add examples for using the ts sdk for requesting metadata refreshes ([1b54597](https://github.com/immutable/imx-docs/commit/1b54597270633532740d9ef8f31dcae285ad9d67))
+
+# [1.28.0](https://github.com/immutable/imx-docs/compare/v1.27.1...v1.28.0) (2022-10-20)
+
+
+### Features
+
+* add images and warning to offers ([f043e2a](https://github.com/immutable/imx-docs/commit/f043e2a595543e9194f4817ed8268f9b61485ee4))
+* **add link sdk docs for offers functionality:** adding documentation for Offers in Link SDK ([3507c62](https://github.com/immutable/imx-docs/commit/3507c62c9522e976cc124526e2c1621a32e38bbb))
+* rebase ([e71607b](https://github.com/immutable/imx-docs/commit/e71607bca019280d197c5e4fd94fe5c49f6d1d3f))
+* update make offer comments ([17c5bb1](https://github.com/immutable/imx-docs/commit/17c5bb1f2bf706184db3316de147825ae650e0b2))
+
+## [1.27.1](https://github.com/immutable/imx-docs/compare/v1.27.0...v1.27.1) (2022-09-28)
+
+
+### Bug Fixes
+
+* revert unwanted change ([c918201](https://github.com/immutable/imx-docs/commit/c91820150cea6f5ec6af65a0563f87fff1c56346))
+* ts core sdk 1.0.0 beta installation guide ([2f986de](https://github.com/immutable/imx-docs/commit/2f986de93ee3856c6292c67564dadd2c8404489f))
+* **ts core sdk installation guide:** update 1.0.0 beta.2 installation guide ([f14312d](https://github.com/immutable/imx-docs/commit/f14312d0dc59edb7dcdec1d17fcca351522d5bdc))
+* **ts core sdk installation guide:** update installation guide ([54df416](https://github.com/immutable/imx-docs/commit/54df416fb31dc7f628020a7e4caec828fddb00d2))
+
+# [1.27.0](https://github.com/immutable/imx-docs/compare/v1.26.0...v1.27.0) (2022-09-28)
+
+
+### Bug Fixes
+
+* **beta.2:** remove caution beta banner ([eb2bd07](https://github.com/immutable/imx-docs/commit/eb2bd076328468dfeaa1ed2e3a2a9af945b2baea))
+* CR ([b2426f1](https://github.com/immutable/imx-docs/commit/b2426f1aa22a41d9aaf3f1298608309fdccbfac4))
+* **docs:** fix headings ([3d162c9](https://github.com/immutable/imx-docs/commit/3d162c9f31eeb1dc03ff9157af845a386f72d3c5))
+* **docs:** fix path to better url ([54772c5](https://github.com/immutable/imx-docs/commit/54772c5ff935d05ac0268cf9de2155af65a61d03))
+* **reference:** fix reference path to ImmutableX class ([37db8ee](https://github.com/immutable/imx-docs/commit/37db8eeccd43a00fd6cfc4977e3a7333a710510d))
+* **sidebar:** correct path for reference ([a812827](https://github.com/immutable/imx-docs/commit/a8128270cc8a62f4c599a07d5e45f63dc5939344))
+* styling on version switcher ([27a09e4](https://github.com/immutable/imx-docs/commit/27a09e4e150c5c5e1e7db5eba75ed45ef960af57))
+
+
+### Features
+
+* **beta:** add v1.0.0-beta.1 version config ([e6b7264](https://github.com/immutable/imx-docs/commit/e6b72644f53bf8e9da78bfadab703943669028cb))
+* **docs:** add autogen mdx ([4f18045](https://github.com/immutable/imx-docs/commit/4f180450ec36ccd520caf7dde6d0f78784222067))
+* **docs:** document mdx for v1.0.0-beta.1 version ([0f611f2](https://github.com/immutable/imx-docs/commit/0f611f29c7997bee34ecc28fd1775199f0527fcb))
+* **docs:** update docs to have updates ([d02c848](https://github.com/immutable/imx-docs/commit/d02c848fabf60a7769885c5925336ee616f2a7ba))
+* **typedoc:** add typedoc reference for v1.0.0-beta.1 ([77e3cce](https://github.com/immutable/imx-docs/commit/77e3ccef41e251cb2f4af9b974c47f42a70b5476))
+
+# [1.26.0](https://github.com/immutable/imx-docs/compare/v1.25.0...v1.26.0) (2022-09-20)
+
+
+### Features
+
+* add API reference in API dropdown ([82cbc65](https://github.com/immutable/imx-docs/commit/82cbc65d5adde07dadabbbd69e4531f4715c6b21))
+
+# [1.25.0](https://github.com/immutable/imx-docs/compare/v1.24.0...v1.25.0) (2022-09-18)
+
+
+### Features
+
+* **add page asset-metadata-refreshes:** add page asset-metadata-refreshes ([fea4969](https://github.com/immutable/imx-docs/commit/fea4969debc08118c1adce906eec3caef192b93e))
+
 # [1.24.0](https://github.com/immutable/imx-docs/compare/v1.23.1...v1.24.0) (2022-09-12)
 
 

@@ -9,7 +9,7 @@ keywords: [imx-wallets]
 Check out our **[Link reference tool](https://tools.immutable.com/link-reference/)** to understand how `Link` methods work without having to write any code.
 :::
 
-For context, read our [overview of the Immutable X SDK](../integrate-your-application/immutable-x-sdk.md).
+For context, read our [overview of the ImmutableX SDK](../integrate-your-application/immutable-x-sdk.md).
 
 ## Link usage
 
@@ -19,7 +19,7 @@ The Link SDK is used for frontend, user-facing interactions.
 import { Link, ETHTokenType } from '@imtbl/imx-sdk'
 
 async function sdkExample() {
-  const link = new Link('https://link.ropsten.x.immutable.com')
+  const link = new Link('https://link.sandbox.x.immutable.com')
 
   // Register user, you can persist address to local storage etc.
   const { address } = await link.setup({})
@@ -73,7 +73,7 @@ import { ImmutableXClient } from '@imtbl/imx-sdk'
 
 async function libExample() {
   const client = await ImmutableXClient.build({
-    publicApiUrl: 'https://api.ropsten.x.immutable.com/v1',
+    publicApiUrl: 'https://api.sandbox.x.immutable.com/v1',
   })
   const address = localStorage.getItem('address')
 

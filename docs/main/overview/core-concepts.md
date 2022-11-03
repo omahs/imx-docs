@@ -2,11 +2,11 @@
 id: "core-concepts"
 title: "Core Concepts"
 slug: "/core-concepts"
-excerpt: "Ethereum blockchain and Immutable X key concepts"
+excerpt: "Ethereum blockchain and ImmutableX key concepts"
 sidebar_position: 2
 keywords: [imx-dx]
 ---
-This page is a work-in-progress overview of some key concepts related to the Ethereum blockchain and Immutable X. 
+This page is a work-in-progress overview of some key concepts related to the Ethereum blockchain and ImmutableX. 
 
 We’re actively working on new explanations to help newcomers understand the technology. If there’s something you’re wondering about that we haven’t covered yet, scroll to the bottom of this page where you can submit feedback on the helpfulness of this article. 
 :::info Rate the docs
@@ -35,7 +35,7 @@ Smart contracts also allow for the creation of digital assets (NFTs) that are pr
 dApp is the abbreviated term for decentralized application. DApps are programs that perform different activities via smart contracts, independent of any central network or platform. Just like the apps on your smart device, there are dApps for many different uses, for example: decentralized cryptocurrency exchanges; social media networks; marketplaces for digital artwork, and much more.
 
 ## Non-fungible tokens
-Non-fungible tokens (NFTs) use the ERC-721 [token standard](#token-standards), designed to help developers tokenize the ownership of any type of arbitrary data. While NFTs can be linked with physical items, NFTs as they relate to Immutable X can be thought of as a certificate of ownership of a digital asset that is identifiably unique and limited in quantity. 
+Non-fungible tokens (NFTs) use the ERC-721 [token standard](#token-standards), designed to help developers tokenize the ownership of any type of arbitrary data. While NFTs can be linked with physical items, NFTs as they relate to ImmutableX can be thought of as a certificate of ownership of a digital asset that is identifiably unique and limited in quantity. 
 
 The true value of an NFT is it allows the buyer to own the original item, with a smart contract transaction serving as proof-of-ownership. In recent years, non-fungible tokens have spawned new types of collectible, digital assets associated with blockchain-based games. A fascinating, early example of this is [CryptoKitties](https://www.cryptokitties.co/), launched on Ethereum in 2017. 
 
@@ -47,7 +47,7 @@ A cryptocurrency wallet enables the storage of public and private keys. The use 
 ## Token standards
 Tokens on the blockchain are very similar to tokens in the physical world. Travel tickets, membership cards, gift vouchers and paper money or coins are all examples of tokens. On the Ethereum blockchain, a token that represents currency is created by writing a smart contract that complies with the ERC-20 token standard. 
 
-ERC stands for *Ethereum Request for Comment* and is an official protocol for proposing improvements to the Ethereum network. The two Ethereum token standards applicable to Immutable X are ERC-20 and ERC-721:
+ERC stands for *Ethereum Request for Comment* and is an official protocol for proposing improvements to the Ethereum network. The two Ethereum token standards applicable to ImmutableX are ERC-20 and ERC-721:
 
 **ERC-20**
 - ERC-20 tokens are fungible (interchangeable). A good example is to think of two one-dollar bills. Each dollar bill is different but their value is exactly the same, so it doesn’t matter which one you have ownership of.

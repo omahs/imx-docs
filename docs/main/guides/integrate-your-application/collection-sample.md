@@ -9,15 +9,15 @@ keywords: [imx-games, imx-wallets]
 ## Code samples to work with a sample Collection
 ```javascript
 //ImmutableXConnection.js
-//Sample Immutable X functions for collection interaction
+//Sample ImmutableX functions for collection interaction
 
 import { ImmutableXClient, Link, ERC721TokenType, ETHTokenType } from '@imtbl/imx-sdk';
 
 const linkAddress = 'https://link.x.immutable.com';
 const apiAddress = 'https://api.x.immutable.com/v1';
-// Ropsten Testnet
-//const linkAddress = 'https://link.ropsten.x.immutable.com';
-//const apiAddress = 'https://api.ropsten.x.immutable.com/v1';
+// Sandbox/Goerli Testnet
+//const linkAddress = 'https://link.sandbox.x.immutable.com';
+//const apiAddress = 'https://api.sandbox.x.immutable.com/v1';
 
 //The token address for the collection to be monitored. Currently set to Gods Unchained
 const COLLECTION_ADDRESS = '0x0e3a2a1f2146d86a604adc220b4967a898d7fe07';
@@ -32,7 +32,7 @@ const STARK_PUBLIC_KEY = 'STARK_PUBLIC_KEY';
 //////////////////////// User Account Management /////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-//Creates or logs a user into their Immutable X account via web3 wallet
+//Creates or logs a user into their ImmutableX account via web3 wallet
 export async function setupAndLogin() {
    const { address, starkPublicKey } = await link.setup({});
    localStorage.setItem(WALLET_ADDRESS, address);
@@ -50,7 +50,7 @@ export async function getUserBalances() {
    return await client.getBalances({ user: address });
 }
 
-//Deposits ETH into Immutable X
+//Deposits ETH into ImmutableX
 export async function depositEth(amountInEth) {
    await link.deposit({
       type: ETHTokenType.ETH,
@@ -58,7 +58,7 @@ export async function depositEth(amountInEth) {
    });
 }
 
-//Starts the withdrawal process from Immutable X
+//Starts the withdrawal process from ImmutableX
 export async function prepareWithdrawal(amountInEth) {
    await link.prepareWithdrawal({
       type: ETHTokenType.ETH,
@@ -66,7 +66,7 @@ export async function prepareWithdrawal(amountInEth) {
    });
 }
 
-//Finishes the withdrawal process from Immutable X
+//Finishes the withdrawal process from ImmutableX
 //Must wait for user balance to have ETH in the withdrawable state 
 export async function completeWithdrawal() {
    await link.prepareWithdrawal({

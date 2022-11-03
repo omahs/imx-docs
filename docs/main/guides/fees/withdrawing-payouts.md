@@ -5,10 +5,10 @@ slug: "/withdrawing-payouts"
 sidebar_position: 3
 keywords: [imx-traders]
 ---
-To withdraw your funds from Immutable X (Layer 2), you can do so via the API or Immutable X Marketplace.
+To withdraw your funds from ImmutableX (Layer 2), you can do so via the API or ImmutableX Marketplace.
 
-## Steps to Withdraw via Immutable X Marketplace
-1. Go to the [Immutable X Marketplace](https://market.x.immutable.com).
+## Steps to Withdraw via ImmutableX Marketplace
+1. Go to the [ImmutableX Marketplace](https://market.x.immutable.com).
 2. Connect wallet on Ethereum mainnet.
 
 ![Connect to Ethereum Mainnet](/img/withdrawing-payouts/connect-to-ethereum.png)
@@ -19,9 +19,9 @@ To withdraw your funds from Immutable X (Layer 2), you can do so via the API or 
 
 ![Inventory](/img/withdrawing-payouts/inventory.jpg)
 
-4. Click on "Immutable X" balance next to the deposit button on the far right.
+4. Click on "ImmutableX" balance next to the deposit button on the far right.
 
-![Click on Immutable X](/img/withdrawing-payouts/click-on-immutable-x.jpg)
+![Click on ImmutableX](/img/withdrawing-payouts/click-on-immutable-x.jpg)
 
 5. Select either ETH or the ERC-20 token you would like to withdraw.
 6. Specify the amount and hit continue to follow the link process to sign the transaction. This will prepare your withdrawal from Layer 2 to Layer 1.
@@ -32,7 +32,7 @@ To withdraw your funds from Immutable X (Layer 2), you can do so via the API or 
 
 ![Preparing Withdrawal](/img/withdrawing-payouts/preparing-withdrawal.jpg)
 
-7. After some time (currently around 12 hours), your withdrawal should be ready to be taken onto Layer 1. At this point if you go back into the Immutable X Marketplace, you should see "preparing withdrawal" change to "withdrawal ready".
+7. After some time (currently around 12 hours), your withdrawal should be ready to be taken onto Layer 1. At this point if you go back into the ImmutableX Marketplace, you should see "preparing withdrawal" change to "withdrawal ready".
 
 ![Withdrawal Ready](/img/withdrawing-payouts/withdrawal-ready.jpg)
 

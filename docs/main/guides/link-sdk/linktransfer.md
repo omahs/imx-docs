@@ -8,9 +8,9 @@ keywords: [imx-wallets]
 ---
 
 :::caution Registration is required for Receiver Wallet
-`link.transfer` will only work if the receiver wallet was previously registered with Immutable X.
+`link.transfer` will only work if the receiver wallet was previously registered with ImmutableX.
 
-To register the wallet, simply do `Connect Wallet` in the Immutable X Marketplace and follow through all the steps until the wallet is fully connected to Immutable X Marketplace
+To register the wallet, simply do `Connect Wallet` in the ImmutableX Marketplace and follow through all the steps until the wallet is fully connected to ImmutableX Marketplace
 :::
 
 :::note Link reference tool

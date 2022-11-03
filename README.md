@@ -3,10 +3,10 @@
     <img src="https://cdn.dribbble.com/users/1299339/screenshots/7133657/media/837237d447d36581ebd59ec36d30daea.gif" width="280"/>
   </a>
 
-  <h2 align="center">Immutable X Docs</h3>
+  <h2 align="center">ImmutableX Docs</h3>
 
   <p align="center">
-    Immutable X's documentation portal, built with Docusaurus.
+    ImmutableX's documentation portal, built with Docusaurus.
     <br />
     <a href="https://docs.x.immutable.com"><strong>Explore the docs »</strong></a>
     <br />
@@ -33,9 +33,9 @@
 
 ## Introduction
 
-The [Immutable X documentation website](https://docs.x.immutable.com) is built using [Docusaurus](https://docusaurus.io/). Docusaurus is a static-site generator built with [React](https://reactjs.org/) and [MDX](https://mdxjs.com). It builds a single-page application (SPA) that's SEO friendly. But you don't need to learn React to be able to write documentation or contribute to it! All docs are written in [Markdown](https://docusaurus.io/docs/markdown-features).
+The [ImmutableX documentation website](https://docs.x.immutable.com) is built using [Docusaurus](https://docusaurus.io/). Docusaurus is a static-site generator built with [React](https://reactjs.org/) and [MDX](https://mdxjs.com). It builds a single-page application (SPA) that's SEO friendly. But you don't need to learn React to be able to write documentation or contribute to it! All docs are written in [Markdown](https://docusaurus.io/docs/markdown-features).
 
-> **Internal Immutable X Developers**: Please read over the [SDK Documentation Guide](https://immutable.atlassian.net/wiki/spaces/PPS/pages/1916994017/SDK+documentation+guide#How-to-add-your-SDK-documentation-to-imx-docs?) on Confluence too.
+> **Internal ImmutableX Developers**: Please read over the [SDK Documentation Guide](https://immutable.atlassian.net/wiki/spaces/PPS/pages/1916994017/SDK+documentation+guide#How-to-add-your-SDK-documentation-to-imx-docs?) on Confluence too.
 
 ### Tech Stack
 
@@ -219,7 +219,7 @@ We're excited to enable you to contribute! Before you start contributing, please
 
 ## Community Support
 
-Need help with something that's not covered in the docs? Ask questions on the [Immutable X Discord server](https://discord.gg/6GjgPkp464) or the [Immutable Forum](https://forum.immutable.com/).
+Need help with something that's not covered in the docs? Ask questions on the [ImmutableX Discord server](https://discord.gg/6GjgPkp464) or the [Immutable Forum](https://forum.immutable.com/).
 
 ## License
 

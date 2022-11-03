@@ -12,10 +12,10 @@ keywords: [imx-wallets]
 Since it has not hit the version 1.0 yet, its public interface should not be considered final. Future releases may include breaking changes without further notice. We will do our best to keep this documentation updated providing visibility on breaking changes planned.
 :::
 
-The [Immutable Wallet SDK Web](https://github.com/immutable/imx-wallet-sdk-web) (Wallet SDK) connects with users' L1 and L2 wallets and returns "signers". Signers are abstractions of blockchain user accounts (also known as "wallets") that can be used to sign messages and transactions that execute blockchain state-changing operations. The Wallet SDK is used in conjunction with the [Immutable Core SDK Typescript](https://github.com/immutable/imx-core-sdk) (Core SDK), to which the Wallet SDK passes the signers to the Core SDK to execute its functionality.
+The [Immutable Wallet SDK Web](https://www.npmjs.com/package/@imtbl/wallet-sdk-web) (Wallet SDK) connects with users' L1 and L2 wallets and returns "signers". Signers are abstractions of blockchain user accounts (also known as "wallets") that can be used to sign messages and transactions that execute blockchain state-changing operations. The Wallet SDK is used in conjunction with the [Immutable Core SDK TypeScript](https://www.npmjs.com/package/@imtbl/core-sdk) (Core SDK), to which the Wallet SDK passes the signers to the Core SDK to execute its functionality.
 
 ## Documentation
 
 - [Core SDK reference](/sdk-docs/core-sdk-ts)
-- [Immutable X developer docs](/)
+- [ImmutableX developer docs](/)
 - [UI guide for implementing user wallet interactions](/docs/wallet-sdk-ui-guide)

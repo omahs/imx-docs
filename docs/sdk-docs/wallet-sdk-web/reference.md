@@ -26,7 +26,7 @@ Ropsten network is set to be deprecated in the near future.
 - `L1_PROVIDERS.METAMASK` To connect using [MetaMask](https://docs.metamask.io/guide).
 
 :::note
-Immutable X does not recommend the use of hardware wallets, as some of them have non-deterministic signing. Please inform your users to select a soft wallet when connecting.
+ImmutableX does not recommend the use of hardware wallets, as some of them have non-deterministic signing. Please inform your users to select a soft wallet when connecting.
 :::
 
 ## Supported events
@@ -56,3 +56,4 @@ Refer to the following list for the most common errors raised by the Wallet SDK 
 | Core SDK version | Wallet SDK version |
 | :--------------: | :----------------: |
 | [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.8](https://www.npmjs.com/package/@imtbl/wallet-sdk-web/v/0.1.8)  |
+| [0.7.0](https://www.npmjs.com/package/@imtbl/core-sdk/v/0.7.0) | [0.1.9](https://www.npmjs.com/package/@imtbl/wallet-sdk-web/v/0.1.9)  |

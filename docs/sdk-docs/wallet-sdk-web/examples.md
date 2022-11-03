@@ -156,10 +156,10 @@ async function setupWalletSDK(): Promise<WalletConnection> {
 // Provides a function to build the Core SDK workflows
 function setupCoreSDKWorkflows(): Workflows {
   const coreSdkConfig = getConfig({
-    coreContractAddress: '0x4527BE8f31E2ebFbEF4fCADDb5a17447B27d2aef',
-    registrationContractAddress: '0x6C21EC8DE44AE44D0992ec3e2d9f1aBb6207D864',
-    chainID: 3, // Ropsten
-    basePath: 'https://api.ropsten.x.immutable.com',
+    coreContractAddress: '0x7917eDb51ecD6CdB3F9854c3cc593F33de10c623',
+    registrationContractAddress: '0x1C97Ada273C9A52253f463042f29117090Cd7D83',
+    chainID: 5, // Goerli
+    basePath: 'https://api.sandbox.x.immutable.com',
   });
 
   return new Workflows(coreSdkConfig);

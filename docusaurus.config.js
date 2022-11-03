@@ -17,7 +17,7 @@ const configuration = {
     defaultLocale: 'en',
     locales: ['en', 'ko'],
   },
-  title: 'Immutable X Documentation',
+  title: 'ImmutableX Documentation',
   tagline:
     'Experience zero gas fees, instant trades, and carbon neutral NFTs for marketplaces, games, and applications without compromise. Build your NFT business in hours with our APIs.',
   url: 'https://docs.x.immutable.com',
@@ -99,7 +99,7 @@ const configuration = {
         routeBasePath: '/sdk-docs/core-sdk-golang',
         id: 'sdks-core-sdk-golang',
         sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-golang.js'),
-        // includeCurrentVersion: false, // uncomment when golang docs are versioned
+        includeCurrentVersion: false, // uncomment when golang docs are versioned
         ...pageOptions,
       },
     ],
@@ -184,11 +184,15 @@ const configuration = {
           {
             to: '/reference',
             position: 'left',
-            label: 'APIs',
+            label: 'API',
             type: 'dropdown',
             items: [
               {
-                label: 'API Changelog',
+                label: 'Reference',
+                to: '/reference',
+              },
+              {
+                label: 'Changelog',
                 to: '/docs/api-changelog',
               },
             ],

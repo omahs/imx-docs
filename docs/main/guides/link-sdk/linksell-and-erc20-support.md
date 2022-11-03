@@ -16,7 +16,7 @@ Check out our **[Link reference tool](https://tools.immutable.com/link-reference
 We only support USDC, GODS or IMX token
 :::
 
-Immutable X is not prescriptive in how marketplaces handle the sell process. There are several optional parameters you can use for your marketplace, to influence the user journey for the listing and the listing order itself.
+ImmutableX is not prescriptive in how marketplaces handle the sell process. There are several optional parameters you can use for your marketplace, to influence the user journey for the listing and the listing order itself.
 
 Available parameters:
 
