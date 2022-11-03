@@ -76,7 +76,7 @@ Typically, the handling of secondary sales royalties are implemented by the mark
 ### How are royalties paid and why are they hard to enforce?
 As stated in the description of `Secondary sale of an asset` in the [table](#types-of-blockchain-royalties) above, whilst the smart contract can provide information about the royalty amount and recipient, it relies on the application/smart contract that is facilitating the sale of the asset to pay out the royalty, not on the original smart contract. 
 
-There is no function in the smart contract that automatically pays out the royalty when a sale goes through. Typically, sales of NFTs are handled by **orderbook contracts**, which allow users to list their items, and **settlement contracts**, which handle the payments and transfer of asset from seller to buyer. The settlement contract uses the token contract's `transfer()` mechanism as part of the process of facilitating a sale. This is a generic function that is called whenever a token changes hands, which could be for many different reasons: A token being sent as a gift, or transferred by the owner from one wallet that they own to another, or it could be a sale. It does not know anything about the reason for a transfer.
+There is no function in the smart contract that automatically pays out the royalty when a sale goes through. Typically, sales of NFTs are handled by orderbook services, which allow users to list their items, and **settlement contracts**, which handle the payments and transfer of asset from seller to buyer. The settlement contract uses the token contract's `transfer()` mechanism as part of the process of facilitating a sale. This is a generic function that is called whenever a token changes hands, which could be for many different reasons: A token being sent as a gift, or transferred by the owner from one wallet that they own to another, or it could be a sale. It does not know anything about the reason for a transfer.
 
 As such, if the settlement contract does not implement a mechanism that pays out a portion of the sale price to the royalty recipient, then it will just not happen.
 
@@ -90,6 +90,7 @@ In order for royalties to be enforced trustlessly, it requires two components:
 * Royalties can only be set for tokens that are [minted on ImmutableX](./deep-dive-minting#what-is-minting-on-immutablex).
 * When minting, if a royalty recipient is specified that is not a registered user on ImmutableX, then minting will fail.
 * Once tokens have been minted and royalty information set, ImmutableX currently does not support changing this information. This includes either changing the royalty amount or the recipient.
+* See also [Rules for setting royalties](./fees#rules-for-setting-royalties).
 :::
 
 * **Royalty information is stored for all tokens minted on ImmutableX** - royalties can be specified contract-wide, or for specific tokens.

@@ -1,5 +1,5 @@
 ---
-title: "Guides"
+title: "Basic guides"
 slug: "/basic-guides"
 keywords: [imx-dx]
 ---

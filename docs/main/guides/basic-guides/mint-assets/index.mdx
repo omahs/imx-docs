@@ -161,6 +161,13 @@ const createCollectionResponse = await client.createCollection(ethSigner, create
 
 ### 4. Mint tokens
 
+:::note When setting [royalties](./fees) in the order params
+* You can set up to 50 royalty recipients
+* You cannot set the same recipient more than once
+* The royalty percentage for a single user cannot exceed 100% (however, the combined percentage for all recipients may exceed 100% - as this amount is calculated on top of the sale price)
+* Individual percentage fees can’t be < 0%
+:::
+
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 

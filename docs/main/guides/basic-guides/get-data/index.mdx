@@ -397,10 +397,9 @@ When details about assets are returned, there is a `status` property that indica
 | --- | --- |
 | `imx` | The asset is in the ImmutableX L2 environment. |
 | `eth` | The asset is on the main Ethereum blockchain. |
-| `depositing` | The asset is still on the main Ethereum blockchain, but is part of a currently ongoing transaction. |
 | `pendingWithdrawal` | A withdrawal has been requested for this asset, and it will be included in an upcoming batch. |
 | `withdrawable` | The asset has been included in a published batch, and can now be withdrawn from the ImmutableX smart contract. |
-| `withdrawing` | The asset is on the main Ethereum blockchain, and is being pulled from the ImmutableX smart contracts to a user's account. |
+| `burned` | The asset has been [permanently removed from circulation.](./asset-burning) |
 
 ### Get list of assets
 <Tabs>

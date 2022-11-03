@@ -23,7 +23,7 @@ These enable users to _do things_ that update state on the blockchain. These tra
 * Buying and selling assets
 * Minting NFTs
 * Transferring assets to other users
-* Depositing assets from L1 to L2, or withdrawing assets from L2 to L1
+* Depositing assets to L2 (ie. ERC20 tokens)
 
 These transactions require user signatures to authorize because they update state on the blockchain (as opposed to simply reading data).
 
@@ -81,10 +81,9 @@ These transactions require user signatures to authorize because they update stat
       </td>
     </tr>
     <tr>
-      <td>L1 to L2 asset tranfers (deposits and withdrawals)</td>
+      <td>Deposit assets from L1 to L2</td>
       <td>
-        Deposits are when users transfer assets that they own on layer 1 to layer 2. <br/><br/>
-        Withdrawals are when users transfer assets that they own from layer 2 to layer 1. 
+        Deposits are when users transfer assets that they own on layer 1 to layer 2 (ie. ETH or ERC20 tokens)<br/>
       </td>
       <td>
         <ul>
@@ -110,7 +109,7 @@ Applications often need to provide information about the current state (ie. who 
   <tbody>
     <tr>
       <td>Asset data</td>
-      <td>Details about fungible or non-fungible tokens, like metadata, image URL, current owner, etc.</td>
+      <td>Details about non-fungible tokens on ImmutableX, like metadata, image URL, current owner, etc.</td>
       <td>
         <ul>
           <li>NFT marketplaces display the details of an asset that is listed for sale so that buyers know what they are purchasing</li>

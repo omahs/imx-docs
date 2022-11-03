@@ -2,6 +2,7 @@
 title: "Overview"
 slug: "/integrate-your-application"
 keywords: [imx-dx]
+pagination_next: "guides/js-sdk/immutable-x-sdk"
 sidebar_position: 0
 ---
 

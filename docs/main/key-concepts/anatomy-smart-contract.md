@@ -24,8 +24,7 @@ import ListAdmonition from '@site/src/components/ListAdmonition';
 A smart contract is a class of code that is deployed to and runs on the blockchain. They can be made up of any arrangement of code and perform a wide range of functionality.
 
 Examples of some common smart contracts:
-* **Orderbook contract:** Enables asset owners to post information about assets that they want to sell (ie. asset ID, selling price, sale period). Typically used by marketplace applications to enable users to list assets for sale.
-* **Settlement contracts:** Facilitates the sale of assets from one user (seller) to another (buyer) by handling the filling of an order, payment and transfer of assets. Typically used by marketplaces in conjunction with an orderbook contract.
+* **Settlement contracts:** Facilitates the sale of assets from one user (seller) to another (buyer) by handling the filling of an order, payment and transfer of assets. Typically used by marketplaces in conjunction with an orderbook service.
 * **Token contracts:** Facilitates the creation ([minting](/docs/key-concepts-new/minting)) of tokens that can be used and transferred between users in the open market.
 
 The main type of smart contract that we are mostly concerned about as developers of blockchain games and NFT applications are [token smart contracts](#token-smart-contracts).
@@ -62,7 +61,7 @@ As you might expected, non-fungible token contracts produce non-fungible tokens 
       </td>
       <td>
         <em>How many tokens in total can this contract create?</em>
-        <br/><br/><strong>Contract function:</strong><br/><code>totalSupply()</code> returns total tokens in the contract
+        <br/><br/><strong>Contract function (in <a href="https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721Enumerable">ERC-721 enumerable</a>, which is an extension of the ERC-721 standard):</strong><br/><code>totalSupply()</code> returns total tokens in the contract
         <hr/>
         <em>Metadata containing each token's characteristics</em>
         <br/><br/><strong>Contract function:</strong><br/><code>tokenURI()</code> returns the URL with the metadata JSON containing the details of each token

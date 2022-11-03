@@ -1,6 +1,7 @@
 ---
 title: "Overview"
 slug: "/launch-collection"
+pagination_next: "launch-collection/smart-contract-requirements/index"
 keywords: [imx-dx]
 ---
 

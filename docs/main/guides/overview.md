@@ -1,6 +1,7 @@
 ---
 title: "Overview"
 slug: "/guides"
+pagination_next: "guides/basic-guides/overview/index"
 keywords: [imx-dx]
 ---
 

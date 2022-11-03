@@ -13,10 +13,11 @@ As an exchange platform, ImmutableX provides all the features needed to create a
 
 Orders on ImmutableX all include a buy and sell side. To fill or partially fill an order, an order with the opposite buy and sell tokens is created and sent to ImmutableX. It is important to note there are different _statuses_ an ImmutableX order can have:
 
-- **Active** - Order is valid and can be filled or partial filled.
+- **Active** - Order is valid and can be filled.
 - **Filled** - Order is completed and the asset(s) have been transferred.
 - **Cancelled** - Order has been cancelled and no longer available to fill.
 - **Inactive** - Order is rejected, and is in that state while the system waits to receive a corrective transaction(s) to the original one. This can occur if either side no longer has the tokens available to trade.
+- **Expired** - It is past the expiration timestamp and the order was not filled before then.
 
 ## Listing orders
 
@@ -59,7 +60,10 @@ const ordersRequest = await client.getOrders({
 })
 ```
 
-Filtering by metadata is more complicated. The metadata filter accepts a JSON string defining an object containing the property filters. Each filter property is an array containing the value of the property to filter on. Each property name must match exactly.
+Filtering by metadata is more complicated. The metadata filter accepts a JSON string defining an object containing the property filters. Each filter property is an array containing the value of the property to filter on.
+
+Each property name must match exactly and each property value must be stringified, no matter what its original type. For example, if the metadata is a number or boolean then the filter should be given as `'{"quality":["100", "90"]}'`, not `'{"quality":[100, 90]}'`.
+
 
 The following example shows how to filter Gods Unchained Card orders for a Boost Walker card (proto 55) with a quality of Shadow or Gold:
 

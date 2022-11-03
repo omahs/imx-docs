@@ -1,7 +1,9 @@
 ---
 id: "sdk-api"
-title: "Link SDK"
+title: "Overview"
 slug: "/sdk-api"
+sidebar_position: 1
+pagination_next: "guides/link-sdk/link-setup"
 keywords: [imx-wallets]
 ---
 
