@@ -169,6 +169,13 @@
     width: 60%;
   }
 
+  .articlesSection1 {
+    display: grid !important;
+    gap: 21px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 60%;
+  }
+
   /* Article Stack Section */
   .articleStackSection {
     grid-template-columns: repeat(3, minmax(0, 1fr));
