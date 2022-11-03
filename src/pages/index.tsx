@@ -89,7 +89,7 @@ const Homepage = () => {
     {
       LightIcon: DevelopersLightIcon,
       DarkIcon: DevelopersDarkIcon,
-      title: translate({ message: 'Launch an asset collection' }),
+      title: translate({ message: 'Launch a web3 game' }),
       subtitle: (
         <>
           <Translate>
