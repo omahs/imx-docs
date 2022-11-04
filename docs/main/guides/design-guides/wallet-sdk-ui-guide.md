@@ -10,7 +10,7 @@ keywords: [imx-wallets]
 
 This guide is aimed at providing clarity on the minimum requirements when implementing user wallet connections and interactions. 
 
-Previously, applications using the [Link SDK](/docs/sdk-api) did not have to worry about this because the Link SDK provided an opinionated UI that implemented our best practices. Now, when using the [Core SDK with the Wallet SDK](/docs/sdks#how-do-the-sdks-work-together), applications may need to implement their own design. Other than the must-haves outlined in this guide, the rest is up the application.
+Previously, applications using the [Link SDK](../link-sdk/index.md) did not have to worry about this because the Link SDK provided an opinionated UI that implemented our best practices. Now, when using the [Core SDK with the Wallet SDK](../../sdks.mdx#how-do-the-sdks-work-together), applications may need to implement their own design. Other than the must-haves outlined in this guide, the rest is up the application.
 
 ### Interactions:
 * [Connect wallet](#connect-wallet)

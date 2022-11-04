@@ -102,7 +102,7 @@ We will explain the `blueprint` and `metadata_api_url` terms later in this artic
 
 # Where is metadata specified in a smart contract? 
 
-NFTs often use a Uniform Resource Identifier (URI) for **off-chain** metadata, which is a link to an external off-chain resource where the metadata for that particular asset is stored, usually in a JSON format. This URI is stored in the tokenURI field as part of the [ERC721 standard](/docs/anatomy-smart-contract). 
+NFTs often use a Uniform Resource Identifier (URI) for **off-chain** metadata, which is a link to an external off-chain resource where the metadata for that particular asset is stored, usually in a JSON format. This URI is stored in the tokenURI field as part of the [ERC721 standard](../key-concepts/anatomy-smart-contract.md). 
 
 ```typescript 
 function tokenURI(uint256 _tokenId) external view returns (string);
@@ -151,7 +151,7 @@ While IPFS is the most popular method of storing NFT data, there are alternative
 
 # Off chain metadata on ImmutableX 
 
-After a user has uploaded their off chain metadata to a provider, they will need to provide ImmutableX with an API endpoint for us to retrieve the metadata. This is the value for `metadata_api_url` when [registering a collection](docs/main/launch-collection-new/register-collection). This endpoint must be accessible via HTTPs and need to return JSON. The IPFS gateway in the previous section is an example of this: 
+After a user has uploaded their off chain metadata to a provider, they will need to provide ImmutableX with an API endpoint for us to retrieve the metadata. This is the value for `metadata_api_url` when [registering a collection](../launch-collection/register-collection/index.mdx). This endpoint must be accessible via HTTPs and need to return JSON. The IPFS gateway in the previous section is an example of this: 
 
 ```json 
 https://bafybeiaujofuzawix6cgwawua6rkil2j4gurhp3jzwux7gdf5iwx4onmy4.ipfs.nftstorage.link
@@ -164,14 +164,14 @@ Tips
 * Avoid trailing characters in your `metadata_api_url` eg https://metadata_api_url.com/ will throw an error. 
 
 :::info How can I modify off chain data?
-Users can modify off chain data via an [asset metadata refresh](/docs/asset-metadata-refreshes).
+Users can modify off chain data via an [asset metadata refresh](../guides/advanced-guides/asset-metadata-refreshes.md).
 :::
 
 ## On chain metadata on ImmutableX
 
 The **blueprint** is a required field defined at the time of minting on ImmutableX for each NFT. This represents the on-chain immutable metadata of the NFT that will be written to the blockchain when it is withdrawn from ImmutableX L2 to L1. 
 
-The blueprint can be a string of any format - examples include values like attack, an identifier, or an IPFS hash. This is passed to the `mintFor()` function in your smart contract where you could add some logic to decode it on-chain, or just save it unchanged. Check out our [minting assets guide](/docs/how-to-mint-assets) to see an example of this. 
+The blueprint can be a string of any format - examples include values like attack, an identifier, or an IPFS hash. This is passed to the `mintFor()` function in your smart contract where you could add some logic to decode it on-chain, or just save it unchanged. Check out our [minting assets guide](../guides/basic-guides/mint-assets/index.md) to see an example of this. 
 
 
 # Metadata compatibility 
@@ -203,4 +203,4 @@ whereas in a marketplace like OpenSea, fields like attack, collectable and eleme
     { "trait_type": "Example 3", "value": "Yellow" } ], 
 }
 ```
-Read more about our metadata schema [here](/docs/launch-collection/register-metadata-schema).
+Read more about our metadata schema [here](../launch-collection/register-metadata-schema/index.md).

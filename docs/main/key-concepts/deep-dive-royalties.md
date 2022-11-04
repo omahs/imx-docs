@@ -59,7 +59,7 @@ Secondary sale royalty payments consist of the following components:
 1. Specification of the royalty amount and recipient
 2. Facilitating the payment of the royalty when the sale occurs
 
-The royalty recipient can be the contract owner, or the original artist, or a smart contract that distributes the royalty payments to multiple recipients. A secondary sale of an asset is any sale after the asset has been minted (see [Deep dive into minting](/docs/deep-dive-minting)) and is now circulating in the open market. Typically, these assets are re-sold on NFT marketplaces like OpenSea or Rarible on layer 1, or [Token Trove](https://tokentrove.com/) or the [Immutable Marketplace](https://market.immutable.com/) on layer 2.
+The royalty recipient can be the contract owner, or the original artist, or a smart contract that distributes the royalty payments to multiple recipients. A secondary sale of an asset is any sale after the asset has been minted (see [Deep dive into minting](../key-concepts/deep-dive-minting.md)) and is now circulating in the open market. Typically, these assets are re-sold on NFT marketplaces like OpenSea or Rarible on layer 1, or [Token Trove](https://tokentrove.com/) or the [Immutable Marketplace](https://market.immutable.com/) on layer 2.
 
 There are multiple ways that token collections can specify royalty amounts and recipients:
 
@@ -87,10 +87,10 @@ In order for royalties to be enforced trustlessly, it requires two components:
 
 ## Royalties on ImmutableX
 :::info Note:
-* Royalties can only be set for tokens that are [minted on ImmutableX](/docs/deep-dive-minting#what-is-minting-on-immutablex).
+* Royalties can only be set for tokens that are [minted on ImmutableX](../key-concepts/deep-dive-minting.md#what-is-minting-on-immutablex).
 * When minting, if a royalty recipient is specified that is not a registered user on ImmutableX, then minting will fail.
 * Once tokens have been minted and royalty information set, ImmutableX currently does not support changing this information. This includes either changing the royalty amount or the recipient.
-* See also [Rules for setting royalties](/docs/fees#rules-for-setting-royalties).
+* See also [Rules for setting royalties](../overview/fees.md#rules-for-setting-royalties).
 :::
 
 * **Royalty information is stored for all tokens minted on ImmutableX** - royalties can be specified contract-wide, or for specific tokens.

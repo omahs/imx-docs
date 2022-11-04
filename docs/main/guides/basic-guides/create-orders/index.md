@@ -25,14 +25,14 @@ This means that transations aren't siloed within certain applications, and has m
 ## Core SDK
 
 ### 1. Initialize the Core SDK
-In order to use the Core SDK, you need to [initialize it](/docs/how-to-install-initialize#core-sdk).
+In order to use the Core SDK, you need to [initialize it](../install-initialize/index.md#core-sdk).
 
 ### 2. Generate signers
-Creating an order for a user requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](/docs/how-to-generate-signers).
+Creating an order for a user requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](../generate-signers/index.md).
 
 ### 3. Set the order params
 
-:::note When setting [maker fees](/docs/fees) in the order params
+:::note When setting [maker fees](../../../overview/fees.md) in the order params
 * You cannot set more than 3 recipients
 * You cannot set the same recipient more than once
 * The combined fee percentage can’t exceed 100%

@@ -23,7 +23,7 @@ Tokens are created by, and information about who owns them are stored in, **smar
 
 A smart contract is a class of code that deployed to and runs on the blockchain. There are standards for smart contracts for different purposes, including smart contracts that govern the issuance of tokens. The two most common standards for these token smart contracts are [ERC-721](https://eips.ethereum.org/EIPS/eip-721) (for non-fungible tokens) and [ERC-20](https://eips.ethereum.org/EIPS/eip-20) (for fungible tokens).
 
-_For more information about these contract types, see: [Anatomy of smart contract](/docs/anatomy-smart-contract)._
+_For more information about these contract types, see: [Anatomy of smart contract](../key-concepts/anatomy-smart-contract.md)._
 
 #### There are two main components of token smart contracts that enable minting:
 1. The ability to store information about token ownership:
@@ -56,9 +56,9 @@ In addition to the general requirements [here](#there-are-two-main-components-of
 
 ### Process of minting on ImmutableX:
 1. **Deploy smart contract on L1:** There must be a existing mintable token smart contract (see requirements [here](#there-are-two-main-components-of-token-smart-contracts-that-enable-minting) and [here](#l1-contract-requirements)) deployed on Ethereum L1
-2. **Register smart contract as a collection on L2:** The smart contract is registered as a collection (see [API reference](/reference#/operations/createCollection) or [do this from the command line](/docs/launch-collection/register-collection)) with Immutable. This simply stores information about the contract (ie. its name, description, metadata, etc.) on Immutable's databases so that it can be used and displayed by marketplaces and other applications on ImmutableX
+2. **Register smart contract as a collection on L2:** The smart contract is registered as a collection (see [API reference](/reference#/operations/createCollection) or [do this from the command line](../launch-collection/register-collection/index.mdx)) with Immutable. This simply stores information about the contract (ie. its name, description, metadata, etc.) on Immutable's databases so that it can be used and displayed by marketplaces and other applications on ImmutableX
 3. **Minting on L2:** Minting on ImmutableX means that an [asset](/reference#/operations/listAssets), which contains information about the contract to which it belongs, its ID and other data, is created in the Immutable databases to represent a token on the L1 contract. At this point, the L1 contract still has no knowledge of the asset on L2. To ensure that an asset is not minted on L2 with the same token ID as an existing L1 token, a nominal call is made to the L1 contract's `mintFor` function for a small % of minted tokens to check whether the ID already exists. If it does, the minting will fail on L2.
-4. **Withdraw minted L2 token to L1:** When the owner of a minted L2 asset decides that they want to [withdraw](/docs/how-to-enable-deposits-withdrawals) this token to L1, this is the point at which the L1 contract needs to know about this token. Remember, at this point, the L1 contract does not yet know that this token exists. This is when the `mintFor` function on the L1 contract is called, which actually mints the token on L1.
+4. **Withdraw minted L2 token to L1:** When the owner of a minted L2 asset decides that they want to [withdraw](../guides/basic-guides/deposits-withdrawals/index.md) this token to L1, this is the point at which the L1 contract needs to know about this token. Remember, at this point, the L1 contract does not yet know that this token exists. This is when the `mintFor` function on the L1 contract is called, which actually mints the token on L1.
 
 ### Key things to note:
 * Minting on L2 only stores information about a minted token in Immutable's databases
@@ -72,4 +72,4 @@ This describes the scenario where a token is minted on L2 but it has not yet bee
 * Only the contract owner can mint on L2 so it is up to them to keep track of token IDs and ensure duplicates are not made
 * Because smart contracts are public on the blockchain, before purchasing an L2 token, users can always check its contract address on L1 to ensure that they are not buying a duplicate token
 
-For more information on how to mint on L2, see our [asset minting guide](/docs/how-to-mint-assets).
+For more information on how to mint on L2, see our [asset minting guide](../guides/basic-guides/mint-assets/index.md).

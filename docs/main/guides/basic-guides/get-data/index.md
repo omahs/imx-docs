@@ -21,7 +21,7 @@ This guide provides information on how to get data about events on ImmutableX. T
 * Orders, or details about a particular order
 * Historical trades and asset transfers
 
-Getting most forms of data is read-only, so [user authentication or getting user signatures](/docs/generate-signers) to update blockchain state are not required.
+Getting most forms of data is read-only, so [user authentication or getting user signatures](../generate-signers/index.md) to update blockchain state are not required.
 
 <ListAdmonition label="Guides">
     <ul>
@@ -45,7 +45,7 @@ Getting most forms of data is read-only, so [user authentication or getting user
 </ListAdmonition>
 
 ## Projects
-This is the only section that requires user signatures - specifically, project owner signatures. This is because only project owners can list projects they own, or get details about each one. Follow [this guide](/guides-new/generate-signers) to generate the signers required to obtain user signatures.
+This is the only section that requires user signatures - specifically, project owner signatures. This is because only project owners can list projects they own, or get details about each one. Follow [this guide](../generate-signers/index.md) to generate the signers required to obtain user signatures.
 
 ### Get list of projects
 <Tabs>
@@ -368,14 +368,13 @@ getCollection('0x61e506cec264d5b2705f10e5a934dc5313a56a6e')
 
   </TabItem>
   <TabItem value="Swift" label="Swift Core SDK">
-    Add description, if required.
-    <br/><br/>
 
   <ListAdmonition label="SDK reference">
       <ul>
         <li><a href="https://docs.x.immutable.com/sdk-references/core-sdk-swift/0-4-0/documentation/immutablexcore/collectionsapi/getcollection(address:)">getCollection</a></li>
       </ul>
   </ListAdmonition>
+
   </TabItem>
   <TabItem value="go" label="Golang Core SDK">
 
@@ -399,7 +398,7 @@ When details about assets are returned, there is a `status` property that indica
 | `eth` | The asset is on the main Ethereum blockchain. |
 | `pendingWithdrawal` | A withdrawal has been requested for this asset, and it will be included in an upcoming batch. |
 | `withdrawable` | The asset has been included in a published batch, and can now be withdrawn from the ImmutableX smart contract. |
-| `burned` | The asset has been [permanently removed from circulation.](/docs/asset-burning) |
+| `burned` | The asset has been [permanently removed from circulation.](../../advanced-guides/asset-burning.md) |
 
 ### Get list of assets
 <Tabs>

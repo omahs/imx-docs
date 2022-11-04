@@ -25,7 +25,7 @@ A smart contract is a class of code that is deployed to and runs on the blockcha
 
 Examples of some common smart contracts:
 * **Settlement contracts:** Facilitates the sale of assets from one user (seller) to another (buyer) by handling the filling of an order, payment and transfer of assets. Typically used by marketplaces in conjunction with an orderbook service.
-* **Token contracts:** Facilitates the creation ([minting](/docs/key-concepts-new/minting)) of tokens that can be used and transferred between users in the open market.
+* **Token contracts:** Facilitates the creation ([minting](../key-concepts/deep-dive-minting.md)) of tokens that can be used and transferred between users in the open market.
 
 The main type of smart contract that we are mostly concerned about as developers of blockchain games and NFT applications are [token smart contracts](#token-smart-contracts).
 
@@ -120,9 +120,9 @@ As you might expected, non-fungible token contracts produce non-fungible tokens 
 Our [imx-contracts](https://github.com/immutable/imx-contracts/tree/main/contracts) repo on Github contains some templates for smart contracts that are compatible with ImmutableX.
 
 #### _Asset.sol_
-[Asset.sol](https://github.com/immutable/imx-contracts/blob/main/contracts/Asset.sol) is an example of a non-fungible (ERC-721 standard) contract that contains the [functions required](/docs/deep-dive-minting#l1-contract-requirements) so that tokens can be minted from it on ImmutableX.
+[Asset.sol](https://github.com/immutable/imx-contracts/blob/main/contracts/Asset.sol) is an example of a non-fungible (ERC-721 standard) contract that contains the [functions required](../key-concepts/deep-dive-minting.md#l1-contract-requirements) so that tokens can be minted from it on ImmutableX.
 
-It implements the `_mintFor` function which is called when the asset is minted on L1 when it is withdrawn from ImmutableX to Ethereum (see step 4 [here](deep-dive-minting#process-of-minting-on-immutablex)). This function calls `_safeMint`, which is an inherited function from the [ERC-721 contract](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721) that [mints the NFT in a safe way](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721-_safeMint-address-uint256-).
+It implements the `_mintFor` function which is called when the asset is minted on L1 when it is withdrawn from ImmutableX to Ethereum (see step 4 [here](../key-concepts/deep-dive-minting.md#process-of-minting-on-immutablex)). This function calls `_safeMint`, which is an inherited function from the [ERC-721 contract](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#IERC721) that [mints the NFT in a safe way](https://docs.openzeppelin.com/contracts/4.x/api/token/erc721#ERC721-_safeMint-address-uint256-).
 
 ```ts title="Asset.sol"
 // SPDX-License-Identifier: MIT
@@ -214,7 +214,7 @@ Things to note about the examples above:
 Consider the IMX token: It has the potential to be [staked](https://www.immutable.com/imx-token), used for [governance](https://www.immutable.com/imx-token), [trading rewards](https://www.immutable.com/trading-rewards), [developer incentivization](https://www.immutable.com/fund), and in-game rewards as seen in its native projects such as [Gods Unchained](https://godsunchained.com/) and [Guild of Guardians](https://www.guildofguardians.com/).
 
 ### Minting on ImmutableX
-Currently, L2 minting of fungible tokens are not supported by ImmutableX. To transact with these tokens on L2, they must be minted first on L1 then [deposited](/docs/how-to-enable-deposits-withdrawals) to L2 to be used.
+Currently, L2 minting of fungible tokens are not supported by ImmutableX. To transact with these tokens on L2, they must be minted first on L1 then [deposited](../guides/basic-guides/deposits-withdrawals/index.md) to L2 to be used.
 
 ## Non-fungible tokens
 ### Use cases
@@ -228,6 +228,6 @@ Currently, L2 minting of fungible tokens are not supported by ImmutableX. To tra
 You can mint NFTs on ImmutableX.
 
 More information:
-* For a conceptual overview, see [Deep dive into minting](/docs/deep-dive-minting)
-* [Guide on how to use our API/SDKs to mint](/docs/how-to-mint-assets)
+* For a conceptual overview, see [Deep dive into minting](../key-concepts/deep-dive-minting.md)
+* [Guide on how to use our API/SDKs to mint](../guides/basic-guides/mint-assets/index.md)
 * [Guide to how to use the command line to mint tokens from your own collection](https://github.com/immutable/imx-examples/blob/main/docs/minting-assets.md)

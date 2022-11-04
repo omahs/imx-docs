@@ -20,10 +20,10 @@ A user might want to transfer their asset from one wallet to another for various
 ## Core SDK
 
 ### 1. Initialize the Core SDK
-In order to use the Core SDK, you need to [initialize it](/docs/get-started#getting-started-with-the-core-sdk).
+In order to use the Core SDK, you need to [initialize it](../install-initialize/index.md#core-sdk).
 
 ### 2. Generate signers
-Transferring an asset requires a user's signature, so your application will need to [generate signers](/docs/guides-new/generate-signers).
+Transferring an asset requires a user's signature, so your application will need to [generate signers](../generate-signers/index.md).
 
 ### 3. Set the transfer params
 The transfer request requires:

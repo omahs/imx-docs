@@ -10,7 +10,7 @@ import ListAdmonition from '@site/src/components/ListAdmonition';
 # What is ImmutableX?
 
 ImmutableX is a platform that provides:
-1. [Layer 2 solutions](/docs/immutable-layer-2) on the most secure and decentralized layer 1 - [Ethereum](#why-ethereum)
+1. [Layer 2 solutions](../overview/immutable-layer-2.md) on the most secure and decentralized layer 1 - [Ethereum](#why-ethereum)
 2. APIs and developer tools that make it easy to build on layer 2
 
 <ListAdmonition title="On this page:">
@@ -33,7 +33,7 @@ ImmutableX is aimed at enabling developers to build fast, scalable and secure ap
 | Token and asset trading platforms | <ul><li>Fast, cheap and secure trades between users</li><li>Global orderbook enabling maximum liquidity</li></ul> |
 | Blockchain transaction analysis tools | <ul><li>Easily accessible data on past transactions, trades and other user behaviors via APIs</li></ul> |
 
-#### [Read more information about what you can build >](/docs/what-can-you-build)
+#### [Read more information about what you can build >](../overview/what-can-you-build.md)
 
 
 ## Why Ethereum?
@@ -66,4 +66,4 @@ ImmutableX makes it easy for developers to build on its layer 2 solutions. The b
 * **Ethereum-level security** - because all layer 2 transactions are batched and settled on layer 1, they maintain the same security properties.
 * **Network effects of Ethereum** - by building on top of the Ethereum network, applications and assets on layer 2 can easily access layer 1 and interact with other layer 1 users and applications.
 
-#### [Read more about ImmutableX's layer 2 solutions >](/docs/immutable-layer-2)
+#### [Read more about ImmutableX's layer 2 solutions >](../overview/what-can-you-build.md)
