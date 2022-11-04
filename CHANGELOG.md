@@ -1,3 +1,10 @@
+## [1.30.1](https://github.com/immutable/imx-docs/compare/v1.30.0...v1.30.1) (2022-11-04)
+
+
+### Bug Fixes
+
+* change relative paths to absolute ([72eb5e5](https://github.com/immutable/imx-docs/commit/72eb5e52b5fef847fe6b0dcd21f512177c958984))
+
 # [1.30.0](https://github.com/immutable/imx-docs/compare/v1.29.0...v1.30.0) (2022-11-04)
 
 
