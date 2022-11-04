@@ -24,7 +24,7 @@ ImmutableXWallet.connect(
     )
 )
 ```
-If you want to use your own bridge server instead of the default provide it via `bridgeServerUrl` when connecting. For more info on how WalletConnect and the bridge works [see here](https://docs.walletconnect.com/tech-spec).
+If you want to use your own bridge server instead of the default provide it via `bridgeServerUrl` when connecting. For more info on how WalletConnect and the bridge works [see here](https://docs.walletconnect.com/1.0/bridge-server).
 
 ### Handle callbacks
 All the `ImmutableXWallet` methods (connect, disconnect, etc.) are asynchronous, and changes to the status are communicated via the callback.

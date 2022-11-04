@@ -191,7 +191,16 @@ The Wallet SDK provides a way for applications to connect to certain user wallet
       <td>Android</td>
       <td>
         <ul>
-          <li>Metamask and Rainbow via Wallet Connect</li>
+          <li>Any wallet that supports WalletConnect v1.0</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><a href='/docs/sdk-docs/wallet-sdk-ios/overview'>Wallet SDK iOS</a></td>
+      <td>iOS</td>
+      <td>
+        <ul>
+          <li>Any wallet that supports WalletConnect v1.0</li>
         </ul>
       </td>
     </tr>
@@ -303,7 +312,7 @@ ImmutableXWallet.connect(
     )
 )
 ```
-If you want to use your own bridge server instead of the default provide it via bridgeServerUrl when connecting. For more info on how WalletConnect and the bridge works [see here](https://docs.walletconnect.com/tech-spec).
+If you want to use your own bridge server instead of the default provide it via bridgeServerUrl when connecting. For more info on how WalletConnect and the bridge works [see here](https://docs.walletconnect.com/1.0/bridge-server).
 
 5. Use with the [Core SDK for Kotlin/JVM](https://github.com/immutable/imx-core-sdk-kotlin-jvm)
 
@@ -316,6 +325,54 @@ if (signer != null && starkSigner != null) {
 } else {
     // Handle not connected
 }
+```
+</TabItem>
+  <TabItem value="ios" label="Wallet SDK iOS">
+
+1. Add `pod ImmutableXWallet` to your Podfile
+
+```ruby
+platform :ios, '13.0'
+use_frameworks!
+
+target 'MyApp' do
+  pod 'ImmutableXWallet'
+end
+```
+
+2. Connect to the user's wallet
+
+```swift
+try await ImmutableXWallet.shared.connect(
+    to: .walletConnect(
+        config: .init(
+            appURL: URL(string: "https://immutable.com")!,
+            appName: "ImmutableX Sample",
+            // The Universal Link or URL Scheme of the chosen wallet to be connected.
+            walletDeeplink: "https://metamask.app.link"
+        )
+    )
+)
+```
+
+If you want to use your own bridge server instead of the default provide it via bridgeServerUrl when connecting. For more info on how WalletConnect and the bridge works [see here](https://docs.walletconnect.com/1.0/bridge-server).
+
+3. Use with the [Core SDK for Swift](https://github.com/immutable/imx-core-sdk-swift)
+
+Once you connect a user's wallet with the Wallet SDK you can provide the `Signer` and `StarkSigner` instances to Core SDK workflows:
+
+```swift
+guard let signer = ImmutableXWallet.shared.signer, 
+    let starkSigner = ImmutableXWallet.shared.starkSigner else {
+    // handle not connected
+    return
+}
+
+let result = try await ImmutableXCore.shared.buy(
+    orderId: orderId, 
+    signer: signer, 
+    starkSigner: starkSigner
+)
 ```
 </TabItem>
 </Tabs>

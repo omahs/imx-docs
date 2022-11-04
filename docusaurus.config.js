@@ -119,6 +119,17 @@ const configuration = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        path: 'docs/sdk-docs/wallet-sdk-ios/',
+        routeBasePath: '/sdk-docs/wallet-sdk-ios',
+        id: 'sdks-wallet-sdk-ios',
+        sidebarPath: require.resolve('./sidebars/sidebars-wallet-sdk-ios.js'),
+        // includeCurrentVersion: false, // uncomment when docs are versioned
+        ...pageOptions,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         path: 'docs/sdk-docs/wallet-sdk-web/',
         routeBasePath: '/sdk-docs/wallet-sdk-web',
         id: 'sdks-wallet-sdk-web',

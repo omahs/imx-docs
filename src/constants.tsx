@@ -44,18 +44,25 @@ export const walletSDKs = [
   {
     // Starting from the end of coreSDK IDs because both
     // arrays will be concatenated as Switcher input
-    id: 3,
+    id: 4,
     sdkId: 'sdks-wallet-sdk-web',
     name: 'Wallet SDK Web',
     displayName: 'Wallet SDK Web',
     url: '/sdk-docs/wallet-sdk-web/overview',
   },
   {
-    id: 4,
+    id: 5,
     sdkId: 'sdks-wallet-sdk-android',
     name: 'Wallet SDK Android',
     displayName: 'Wallet SDK Android',
     url: '/sdk-docs/wallet-sdk-android/overview',
+  },
+  {
+    id: 6,
+    sdkId: 'sdks-wallet-sdk-ios',
+    name: 'Wallet SDK iOS',
+    displayName: 'Wallet SDK iOS',
+    url: '/sdk-docs/wallet-sdk-ios/overview',
   },
 ];
 
@@ -82,6 +89,7 @@ export const sdkIds = {
   coreKotlin: coreSDKs.find((sdk) => sdk.id === 1).sdkId,
   coreSwift: coreSDKs.find((sdk) => sdk.id === 2).sdkId,
   coreGolang: coreSDKs.find((sdk) => sdk.id === 3).sdkId,
-  walletWeb: walletSDKs.find((sdk) => sdk.id === 3).sdkId,
-  walletAndroid: walletSDKs.find((sdk) => sdk.id === 4).sdkId,
+  walletWeb: walletSDKs.find((sdk) => sdk.id === 4).sdkId,
+  walletAndroid: walletSDKs.find((sdk) => sdk.id === 5).sdkId,
+  walletIOS: walletSDKs.find((sdk) => sdk.id === 6).sdkId,
 };
