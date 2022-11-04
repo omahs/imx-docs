@@ -25,31 +25,122 @@ const Homepage = () => {
     {
       LightIcon: SdkLightIcon,
       DarkIcon: SdkDarkIcon,
-      title: translate({ message: 'IMX SDKs' }),
+      title: translate({ message: 'Why build on ImmutableX?' }),
       subtitle: translate({
         message:
-          'View all the SDKs on offer to easily integrate with ImmutableX.',
+          'ImmutableX is the premier layer 2 solution, with low fees and easy-to-use APIs and SDKs whilst maintaining the security of Ethereum',
       }),
-      buttonText: translate({ message: 'Learn More' }),
-      link: '/docs/sdks',
+      buttonText: translate({ message: 'Learn more' }),
+      link: '/docs/what-is-immutablex',
     },
     {
       LightIcon: ContractLightIcon,
       DarkIcon: ContractDarkIcon,
-      title: translate({ message: 'Code Examples' }),
+      title: translate({ message: "Immutable's layer 2 solutions" }),
       subtitle: translate({
-        message: 'Accelerate your build with code snippets and samples.',
+        message:
+          'Learn about the different layer 2 solutions and how they work.',
       }),
-      buttonText: translate({ message: 'Learn More' }),
-      link: '/docs/code-examples',
+      buttonText: translate({ message: 'Learn more' }),
+      link: '/docs/immutable-layer-2',
     },
     {
       LightIcon: ExplorerLightIcon,
       DarkIcon: ExplorerDarkIcon,
-      title: 'Immutascan',
-      subtitle: 'Explore live transactions and trade events in real time.',
-      buttonText: 'Visit Immutascan',
-      link: 'https://immutascan.io',
+      title: 'Fees',
+      subtitle: 'What are they for the different functionlities?',
+      buttonText: 'See fees table',
+      link: '/docs/fees',
+    },
+    {
+      LightIcon: SdkLightIcon,
+      DarkIcon: SdkDarkIcon,
+      title: translate({ message: 'Deep dive into smart contracts' }),
+      subtitle: translate({
+        message:
+          'Everything you need to know about smart contracts types, functions and standards.',
+      }),
+      buttonText: translate({ message: 'Learn more' }),
+      link: '/docs/anatomy-smart-contract',
+    },
+    {
+      LightIcon: ContractLightIcon,
+      DarkIcon: ContractDarkIcon,
+      title: translate({ message: 'Deep dive into minting' }),
+      subtitle: translate({
+        message:
+          'Everything you need to know about creating new tokens on L1 and L2.',
+      }),
+      buttonText: translate({ message: 'Learn more' }),
+      link: '/docs/deep-dive-minting',
+    },
+    {
+      LightIcon: ExplorerLightIcon,
+      DarkIcon: ExplorerDarkIcon,
+      title: 'Asset royalties',
+      subtitle:
+        "What they are, how they work, how they're enforced and how to implement them on ImmutableX",
+      buttonText: 'Learn more',
+      link: '/docs/deep-dive-royalties',
+    },
+  ];
+
+  const articleSection1Data = [
+    {
+      LightIcon: DevelopersLightIcon,
+      DarkIcon: DevelopersDarkIcon,
+      title: translate({ message: 'Launch a web3 game' }),
+      subtitle: (
+        <>
+          <Translate>
+            Step by step guide to deploying your own NFT smart contract and
+            minting assets for your game or collection.
+          </Translate>
+        </>
+      ),
+      cta: [
+        {
+          link: '/docs/zero-to-hero-nft-minting',
+          text: translate({ message: 'NFT minting tutorial' }),
+        },
+        {
+          link: '/docs/how-to-mint-assets',
+          text: translate({ message: 'Integrate minting in your application' }),
+        },
+      ],
+    },
+    {
+      LightIcon: ContributorsLightIcon,
+      DarkIcon: ContributorsDarkIcon,
+      title: translate({ message: 'Build an NFT marketplace' }),
+      subtitle: translate({
+        message:
+          'Guides to help you display assets, manage users and enable trading on your very own application.',
+      }),
+      cta: [
+        {
+          link: '/docs/how-to-install-initialize',
+          text: translate({ message: 'Get started with our SDKs' }),
+        },
+        {
+          link: '/docs/how-to-get-data',
+          text: translate({ message: 'Display NFTs in your marketplace' }),
+        },
+      ],
+    },
+    {
+      LightIcon: ContributorsLightIcon,
+      DarkIcon: ContributorsDarkIcon,
+      title: translate({ message: 'Check out our developer tools' }),
+      subtitle: translate({
+        message: 'Find out what SDKs we have and how they go together.',
+      }),
+      cta: [
+        {
+          link: '/docs/sdks',
+          text: translate({ message: 'SDKs overview' }),
+        },
+      ],
     },
   ];
 
@@ -57,32 +148,34 @@ const Homepage = () => {
     {
       LightIcon: DevelopersLightIcon,
       DarkIcon: DevelopersDarkIcon,
-      title: translate({ message: 'Developer Grants' }),
+      title: translate({ message: 'Developer grants' }),
       subtitle: (
         <>
           <Translate>
-            ImmutableX offers grants to help you fund your next web3 project.
+            Early BUIDL grants, marketing support, technical guidance and much
+            more.
           </Translate>
         </>
       ),
       cta: [
         {
           link: '/docs/contact#building-on-immutable-x',
-          text: translate({ message: 'Learn More' }),
+          text: translate({ message: 'Find out more' }),
         },
       ],
     },
     {
       LightIcon: ContributorsLightIcon,
       DarkIcon: ContributorsDarkIcon,
-      title: translate({ message: 'Help Contribute' }),
+      title: translate({ message: 'Help contribute' }),
       subtitle: translate({
-        message: 'Help us improve our documentation by contributing!',
+        message:
+          'Improve our documentation by contributing and help build the ImmutableX developer ecosystem!',
       }),
       cta: [
         {
           link: '/docs/contributing',
-          text: translate({ message: 'Contributor Guidelines' }),
+          text: translate({ message: 'Contributor guidelines' }),
         },
       ],
     },
@@ -95,7 +188,7 @@ const Homepage = () => {
         message:
           'Review past questions & get answers to your queries over on the forum.',
       }),
-      buttonText: translate({ message: 'Visit the Forum' }),
+      buttonText: translate({ message: 'Visit the forum' }),
       isLongCard: true,
       url: 'https://forum.immutable.com',
     },
@@ -105,7 +198,7 @@ const Homepage = () => {
         message:
           'Join the conversation! Interact with the ImmutableX developer community on Discord.',
       }),
-      buttonText: translate({ message: 'Join the Discord' }),
+      buttonText: translate({ message: 'Join us' }),
       isLongCard: false,
       url: 'https://discord.com/invite/Dmhp398dna',
     },
@@ -115,7 +208,7 @@ const Homepage = () => {
         message:
           'Follow us on Twitter for the latest product updates & company news.',
       }),
-      buttonText: translate({ message: 'Follow Us' }),
+      buttonText: translate({ message: 'Follow us' }),
       isLongCard: false,
       url: 'https://twitter.com/Immutable',
     },
@@ -124,7 +217,7 @@ const Homepage = () => {
       subtitle: translate({
         message: 'Join our subreddit for community memes, updates and more.',
       }),
-      buttonText: translate({ message: 'Join Subreddit' }),
+      buttonText: translate({ message: 'Join subreddit' }),
       isLongCard: true,
       url: 'https://www.reddit.com/r/ImmutableX/',
     },
@@ -138,28 +231,36 @@ const Homepage = () => {
           <Title
             title={
               <div className={clsx('grad', styles.title)}>
-                <Translate>Build with</Translate>
-                <br className={styles.displayForExtraSmall} /> ImmutableX
+                <Translate>Build, launch & grow on</Translate>
+                <br className={styles.displayForExtraSmall} /> IMX
               </div>
             }
             subtitle={
               <>
                 <Translate>
-                  Everything you need to superpower your next web3 project,
-                  without comprising security or scalability.
+                  SDKs, APIs, access to funding, and real-time support to make
+                  building web3 applications simple
                 </Translate>
               </>
             }
             className={styles.heroTitle}
           />
           <div className={styles.heroButtonSection}>
-            <a href="/docs/welcome">
+            <a href="/docs/start-here">
               <Button onClick={() => console.log('')}>
                 <Translate>Explore</Translate>{' '}
                 <span className={styles.displayFromExtraSmall}>
-                  <Translate>Developer</Translate>
+                  <Translate>developer</Translate>
                 </span>{' '}
-                <Translate>Docs</Translate>
+                <Translate>docs</Translate>
+              </Button>
+            </a>
+            <a href="/docs/guides">
+              <Button onClick={() => console.log('')}>
+                <Translate>See</Translate>{' '}
+                <span className={styles.displayFromExtraSmall}>
+                  <Translate>guides</Translate>
+                </span>
               </Button>
             </a>
           </div>
@@ -167,12 +268,29 @@ const Homepage = () => {
           <br />
           <br />
 
+          <div
+            className={clsx(
+              styles.articlesSection1,
+              styles.displayFromSmall,
+              styles.articlesSection2
+            )}
+            style={{ alignItems: 'center' }}
+          >
+            {articleSection1Data.map((article, index) => (
+              <Article {...article} key={index} />
+            ))}
+          </div>
+          <br />
+          <br />
+          <br />
+
           <Title
-            title={translate({ message: 'Developer Tools' })}
+            title={translate({ message: 'Learn more' })}
             subtitle={
               <>
                 <Translate>
-                  Everything you need to start building today.
+                  Deep dive into web3 concepts to supercharge your blockchain
+                  development.
                 </Translate>
               </>
             }
@@ -197,7 +315,7 @@ const Homepage = () => {
           </div>
 
           <Title
-            title={translate({ message: 'Join The Community' })}
+            title={translate({ message: 'Join the community' })}
             subtitle={
               <>
                 <Translate>Be a part of our community!</Translate>

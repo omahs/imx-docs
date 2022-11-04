@@ -1,6 +1,6 @@
 ---
 id: "zero-to-hero-nft-minting"
-title: "NFT Minting Tutorial"
+title: "NFT minting tutorial"
 slug: "/zero-to-hero-nft-minting"
 sidebar_position: 1
 keywords: [imx-growth]

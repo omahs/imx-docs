@@ -177,7 +177,7 @@ const configuration = {
           },
           {
             type: 'doc',
-            docId: 'overview/welcome',
+            docId: 'overview/start-here',
             position: 'left',
             label: 'Docs',
           },
@@ -195,6 +195,14 @@ const configuration = {
                 label: 'Changelog',
                 to: '/docs/api-changelog',
               },
+              {
+                label: 'Rate limits',
+                to: '/docs/api-rate-limiting',
+              },
+              {
+                label: 'Error codes',
+                to: '/docs/error-codes',
+              },
             ],
           },
           {
@@ -204,8 +212,9 @@ const configuration = {
             type: 'dropdown',
             items: [
               { label: 'Overview', to: '/docs/sdks' },
-              { label: 'Core SDKs', to: '/sdk-docs/core-sdk-ts/overview' },
-              { label: 'Wallet SDKs', to: '/sdk-docs/wallet-sdk-web/overview' },
+              { label: 'Core SDK', to: '/sdk-docs/core-sdk-ts/overview' },
+              { label: 'Wallet SDK', to: '/sdk-docs/wallet-sdk-web/overview' },
+              { label: 'JS SDK', to: '/docs/integrate-your-application' },
               { label: 'Link SDK', to: '/docs/sdk-api' },
             ],
           },
@@ -249,7 +258,7 @@ const configuration = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['solidity'],
+        additionalLanguages: ['solidity', 'kotlin', 'java', 'swift', 'csharp'],
       },
       algolia: {
         appId: '9WZROGGS1R',

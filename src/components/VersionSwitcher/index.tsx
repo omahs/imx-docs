@@ -30,6 +30,7 @@ const VersionSwitcher = ({
   ...props
 }: VersionSwitcherProps) => {
   const activeDocContext = useActiveDocContext(docsPluginId);
+  console.log(activeDocContext);
   const versions = useVersions(docsPluginId);
   const { savePreferredVersionName } = useDocsPreferredVersion(docsPluginId);
   const versionLinks = versions.map((version) => {
