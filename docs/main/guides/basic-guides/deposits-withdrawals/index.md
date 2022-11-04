@@ -12,12 +12,12 @@ Applications may want to enable users to:
 * Deposit assets on L1 to L2 (note these [pre-requisites](#deposit-pre-requisites))
 * Withdraw assets from L2 to L1
 
-For more information and use cases, see our explanatory article, [Deep dive into deposits and withdrawals](/docs/key-concepts-new/deposits-withdrawals).
+For more information and use cases, see our explanatory article, [Deep dive into deposits and withdrawals](../../../key-concepts/deep-dive-deposits-withdrawals.md).
 
 #### Deposit pre-requisites:
-* The user depositing the asset must be [registered with ImmutableX](/docs/guides-new/user-registration)
+* The user depositing the asset must be [registered with ImmutableX](../register-users/index.md)
 * The user must own the asset on L1
-* The L1 smart contract holding the asset must be [registered as a collection](/docs/guides-new/mint-assets#3-register-a-collection)
+* The L1 smart contract holding the asset must be [registered as a collection](../mint-assets/index.md#3-register-a-collection)
 
 <ListAdmonition label="Guides">
     <ul>
@@ -33,10 +33,10 @@ For more information and use cases, see our explanatory article, [Deep dive into
 ## Core SDK
 
 ### 1. Initialize the Core SDK
-In order to use the Core SDK, you need to [initialize it](./get-started#getting-started-with-the-core-sdk).
+In order to use the Core SDK, you need to [initialize it](../install-initialize/index.md#core-sdk).
 
 ### 2. Generate signers
-Enabling users to transfer assets requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](/docs/guides-new/generate-signers).
+Enabling users to transfer assets requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](../generate-signers/index.md).
 
 ### 3. Deposit assets onto L2
 <Tabs>

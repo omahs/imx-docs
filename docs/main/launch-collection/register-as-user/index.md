@@ -6,7 +6,7 @@ keywords: [imx-dx]
 
 Registering as a user on ImmutableX means to generate an ImmutableX L2 wallet for an Ethereum L1 wallet so that you can transact on L2. 
 
-Please read [here](../how-to-register-users) for more information on this process.
+Please read [here](../../guides/basic-guides/register-users/index.md) for more information on this process.
 
 ### Steps:
 1. [Get an Ethereum (L1) wallet](#1-get-an-ethereum-l1-wallet)

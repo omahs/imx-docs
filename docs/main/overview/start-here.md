@@ -9,28 +9,28 @@ pagination_next: "overview/what-is-immutablex"
 
 ## 👷 I want to start building!
 
-Find out about [**our SDKs and how they work together**](./sdks)
+Find out about [**our SDKs and how they work together**](../sdks.mdx)
 
 ### Launch an NFT collection
-* Get your hands dirty quickly with our [**NFT minting tutorial**](./zero-to-hero-nft-minting)
-* Already have a deployed token smart contract on L1? Learn how to [**register with ImmutableX**](./launch-collection) to mint tokens and transact on L2
+* Get your hands dirty quickly with our [**NFT minting tutorial**](../tutorials/zero-to-hero-nft-minting.md)
+* Already have a deployed token smart contract on L1? Learn how to [**register with ImmutableX**](../launch-collection/overview/index.md) to mint tokens and transact on L2
 
 ### Build a marketplace
-* Set up [**our SDK**](./how-to-install-initialize)
-* Learn how to [**display data about users and assets**](./how-to-get-data)
-* Learn how to [**get user signatures**](./how-to-generate-signers) to facilitate [**creating orders**](./how-to-create-orders) and [**trades**](./how-to-create-trades)
+* Set up [**our SDK**](../guides/basic-guides/install-initialize/index.md)
+* Learn how to [**display data about users and assets**](../guides/basic-guides/get-data/index.mdx)
+* Learn how to [**get user signatures**](../guides/basic-guides/generate-signers/index.mdx) to facilitate [**creating orders**](../guides/basic-guides/create-orders/index.mdx) and [**trades**](../guides/basic-guides/create-trades/index.mdx)
 
 ### Something else?
-* Get started with our [**guides**](./basic-guides)
+* Get started with our [**guides**](../guides/basic-guides/overview/index.md)
 
 ## 🧑‍💻 I have an existing ImmutableX application
-* Use our [**SDK documentation**](./sdks)
+* Use our [**SDK documentation**](../sdks.mdx)
 * Check out our [**API reference**](../reference)
 
 ## 🤷 Not sure what ImmutableX can do for you?
-* Learn about [**what ImmutableX is**](./what-is-immutablex.md)
-* Find out [**what you can build on it**](./what-can-you-build.md)
-* Level up your understanding with these [**key web3 development concepts**](./key-concepts)
+* Learn about [**what ImmutableX is**](../overview/what-is-immutablex.md)
+* Find out [**what you can build on it**](../overview/what-can-you-build.md)
+* Level up your understanding with these [**key web3 development concepts**](../key-concepts/overview.md)
 
 ## 💁 Contribute to our docs
-* Check out our [**contribution guide**](./contributing)
+* Check out our [**contribution guide**](../contributing.md)

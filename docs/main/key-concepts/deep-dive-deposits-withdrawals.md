@@ -47,7 +47,7 @@ Only ERC-721 assets **minted on ImmutableX L2** can be deposited and withdrawn o
 </Admonition>
 
 ### Deposits
-Before a user can deposit an asset from L1 onto L2, [these pre-requisites](./how-to-enable-deposits-withdrawals#deposit-pre-requisites) must be met.
+Before a user can deposit an asset from L1 onto L2, [these pre-requisites](../guides/basic-guides/deposits-withdrawals/index.md#deposit-pre-requisites) must be met.
 
 Here's what happens under the hood when a deposit is made on ImmutableX:
 * Immutable allocates a vault to hold the user's asset on L1

@@ -16,7 +16,7 @@ import ListAdmonition from '@site/src/components/ListAdmonition';
 </ListAdmonition>
 
 ## Core SDK
-The [Core SDK](../sdk-docs/core-sdk-ts/overview) is a wrapper around our [API](../reference) and provides the bulk of the functionality of the ImmutableX platform. Before you can start using the Core SDK, you must initialize the client.
+The [Core SDK](/sdk-docs/core-sdk-ts/overview) is a wrapper around our [API](/reference) and provides the bulk of the functionality of the ImmutableX platform. Before you can start using the Core SDK, you must initialize the client.
 
 Initialize the Core SDK client with the network on which you want your application to run:
 

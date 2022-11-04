@@ -22,7 +22,7 @@ User signatures are required for certain types of operations on ImmutableX. Thes
     <tr>
       <th>Transactions that update<br/>blockchain state</th>
       <th>Operations requiring user<br/>authorization</th>
-      <th><a href="/docs/guides-new/get-data">Read-only operations</a></th>
+      <th><a href="/docs/how-to-get-data">Read-only operations</a></th>
     </tr>
     <tr>
       <td>
@@ -87,7 +87,7 @@ If you generate your own Stark private key, you will have to persist it. The key
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
 
-The Core SDK provides functionality for applications to generate Stark (L2) [private keys](https://github.com/immutable/imx-core-sdk/blob/coresdk-interface-class/src/utils/stark/starkCurve.ts#L99) and [signers](https://github.com/immutable/imx-core-sdk/blob/coresdk-interface-class/src/utils/stark/starkSigner.ts#L60):
+The Core SDK provides functionality for applications to generate Stark (L2) [private keys](https://github.com/immutable/imx-core-sdk/blob/main/src/utils/stark/starkCurve.ts#L99) and [signers](https://github.com/immutable/imx-core-sdk/blob/main/src/utils/stark/starkSigner.ts#L60):
 ```ts
 import { AlchemyProvider } from '@ethersproject/providers';
 import { Wallet } from '@ethersproject/wallet';
@@ -354,6 +354,6 @@ const linkAddress = "https://link.x.immutable.com/v1"; // Or "https://link.sandb
 const link = new Link(linkAddress);
 ```
 
-Operations like registering a user (see [guide](/docs/link-setup)) can be executed by the Link client, which uses the JS SDK under the hood.
+Operations like registering a user (see [guide](../../link-sdk/link-setup.md)) can be executed by the Link client, which uses the JS SDK under the hood.
 </TabItem>
 </Tabs>

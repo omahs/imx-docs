@@ -6,7 +6,7 @@ sidebar_position: 3
 
 import Admonition from '@theme/Admonition';
 
-ImmutableX allows you to create applications on layer 2 by interacting with its [API](../../reference) and [developer tools](./sdks). It provides the key functionality you'll need to build web3 games or NFT applications without having to deploy your own complicated smart contracts.
+ImmutableX allows you to create applications on layer 2 by interacting with its [API](../reference) and [developer tools](../sdks.mdx). It provides the key functionality you'll need to build web3 games or NFT applications without having to deploy your own complicated smart contracts.
 
 Before starting to build on ImmutableX, it's important to understand:
 * [What functionality does your application need?](#what-functionality-do-web3-games-and-applications-typically-need)
@@ -140,17 +140,17 @@ Applications often need to provide information about the current state (ie. who 
 </table>
 
 ## What functionality does ImmutableX provide?
-Our [basic guides](./basic-guides) cover the key functionality provided for by the ImmutableX platform.
+Our [basic guides](../guides/basic-guides/overview/index.md) cover the key functionality provided for by the ImmutableX platform.
 
 For the full list of functionality, please see our [API reference](../reference).
 
 ### ⚒️ Get started building
 Immutable provide SDKs which are a wrapper around the API functions and make it easy for developers to integrate ImmutableX with their application's particular language or framework.
 
-For more information on the SDKs that we have and how they work together, please see [here](/docs/sdks/).
+For more information on the SDKs that we have and how they work together, please see [here](../sdks.mdx).
 
 <Admonition type="info" title="Guides:" icon="">
-    📘 <a href="./launch-collection">Launch a collection</a>
+    📘 <a href="/docs/launch-collection">Launch a collection</a>
     <br/>
-    📘 <a href="./basic-guides">Basic guides</a>
+    📘 <a href="/docs/basic-guides">Basic guides</a>
 </Admonition>

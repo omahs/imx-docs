@@ -8,10 +8,10 @@ import ListAdmonition from '@site/src/components/ListAdmonition';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Minting assets on ImmutableX means to bring into existence tokens from a smart contract. For more information on this concept, please see [Deep dive into minting](./deep-dive-minting).
+Minting assets on ImmutableX means to bring into existence tokens from a smart contract. For more information on this concept, please see [Deep dive into minting](../../../key-concepts/deep-dive-minting.md).
 
 In order for a user to mint tokens, they need:
-1. A smart contract deployed on L1 (Ethereum) with [certain requirements](./launch-collection/smart-contract-requirements)
+1. A smart contract deployed on L1 (Ethereum) with [certain requirements](../../../launch-collection/smart-contract-requirements/index.md)
 2. [To be registered as a user on ImmutableX](#1-register-user)
 3. [To have registered an administrative entity, a project, on ImmutableX](#2-register-a-project)
 4. [To have registered their collection (as represented by their smart contract) on ImmutableX](#3-register-a-collection)
@@ -28,7 +28,7 @@ In order for a user to mint tokens, they need:
 Once you have verified that a user has a smart contract deployed on L1 and that they are the owner, then your application can start the process of enabling them to mint tokens on L2 from this contract.
 
 ### 1. Register user
-Before a user can register a project or collection and mint tokens on ImmutableX, they must be registered as a user on ImmutableX. Follow [this guide](./how-to-register-users) to do this.
+Before a user can register a project or collection and mint tokens on ImmutableX, they must be registered as a user on ImmutableX. Follow [this guide](../register-users/index.md) to do this.
 
 ### 2. Register a project
 A project is an administrative-level entity that is associated with an user. A project can have many collections, which are represented by smart contracts.
@@ -161,7 +161,7 @@ const createCollectionResponse = await client.createCollection(ethSigner, create
 
 ### 4. Mint tokens
 
-:::note When setting [royalties](./fees) in the order params
+:::note When setting [royalties](../../../overview/fees.md) in the order params
 * You can set up to 50 royalty recipients
 * You cannot set the same recipient more than once
 * The royalty percentage for a single user cannot exceed 100% (however, the combined percentage for all recipients may exceed 100% - as this amount is calculated on top of the sale price)
