@@ -1,3 +1,10 @@
+# [1.30.0](https://github.com/immutable/imx-docs/compare/v1.29.0...v1.30.0) (2022-11-04)
+
+
+### Features
+
+* update landing page copy ([8cde13c](https://github.com/immutable/imx-docs/commit/8cde13cbfac2671d9a16e211113c0aa1562f7e43))
+
 # [1.29.0](https://github.com/immutable/imx-docs/compare/v1.28.0...v1.29.0) (2022-10-21)
 
 
