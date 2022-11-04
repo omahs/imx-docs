@@ -102,7 +102,7 @@ We will explain the `blueprint` and `metadata_api_url` terms later in this artic
 
 # Where is metadata specified in a smart contract? 
 
-NFTs often use a Uniform Resource Identifier (URI) for **off-chain** metadata, which is a link to an external off-chain resource where the metadata for that particular asset is stored, usually in a JSON format. This URI is stored in the tokenURI field as part of the [ERC721 standard](./anatomy-smart-contract). 
+NFTs often use a Uniform Resource Identifier (URI) for **off-chain** metadata, which is a link to an external off-chain resource where the metadata for that particular asset is stored, usually in a JSON format. This URI is stored in the tokenURI field as part of the [ERC721 standard](/docs/anatomy-smart-contract). 
 
 ```typescript 
 function tokenURI(uint256 _tokenId) external view returns (string);
@@ -164,14 +164,14 @@ Tips
 * Avoid trailing characters in your `metadata_api_url` eg https://metadata_api_url.com/ will throw an error. 
 
 :::info How can I modify off chain data?
-Users can modify off chain data via an [asset metadata refresh](./asset-metadata-refreshes).
+Users can modify off chain data via an [asset metadata refresh](/docs/asset-metadata-refreshes).
 :::
 
 ## On chain metadata on ImmutableX
 
 The **blueprint** is a required field defined at the time of minting on ImmutableX for each NFT. This represents the on-chain immutable metadata of the NFT that will be written to the blockchain when it is withdrawn from ImmutableX L2 to L1. 
 
-The blueprint can be a string of any format - examples include values like attack, an identifier, or an IPFS hash. This is passed to the `mintFor()` function in your smart contract where you could add some logic to decode it on-chain, or just save it unchanged. Check out our [minting assets guide](./how-to-mint-assets) to see an example of this. 
+The blueprint can be a string of any format - examples include values like attack, an identifier, or an IPFS hash. This is passed to the `mintFor()` function in your smart contract where you could add some logic to decode it on-chain, or just save it unchanged. Check out our [minting assets guide](/docs/how-to-mint-assets) to see an example of this. 
 
 
 # Metadata compatibility 
@@ -203,4 +203,4 @@ whereas in a marketplace like OpenSea, fields like attack, collectable and eleme
     { "trait_type": "Example 3", "value": "Yellow" } ], 
 }
 ```
-Read more about our metadata schema [here](./launch-collection/register-metadata-schema).
+Read more about our metadata schema [here](/docs/launch-collection/register-metadata-schema).

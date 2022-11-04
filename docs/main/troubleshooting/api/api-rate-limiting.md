@@ -16,7 +16,7 @@ Integrations with the API that do not contain an api-key (see below for an examp
 ## Integration
 To have a higher rate limit, you will need to obtain an API key to use with all of your calls to our API. It also uniquely identifies your company project and should not be shared.
 
-If you haven’t already, [register your project with us](./launch-collection/register-project). This will provide you with a numeric project ID. To obtain an API key, [please contact support](./contact) and quote your project ID. We'll evaluate if a higher rate limit with an API key can be granted.
+If you haven’t already, [register your project with us](/docs/launch-collection/register-project). This will provide you with a numeric project ID. To obtain an API key, [please contact support](/docs/contact) and quote your project ID. We'll evaluate if a higher rate limit with an API key can be granted.
 
 :::info Increasing your rate limit
 In the majority of applications a higher rate limit does not improve the usability of your application. Consider how frequently trades or mints are happening and how that impacts the user experience. Caching of data can be a great way to help you manage bursts of high traffic on your application and minimise your network load. This can also create a better user experience.
