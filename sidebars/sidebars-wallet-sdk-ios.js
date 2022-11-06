@@ -15,6 +15,11 @@ module.exports = {
           label: 'Reference',
           href: `${url}/sdk-references/wallet-sdk-ios/0-1-0/`,
         },
+        {
+          type: 'link',
+          label: 'Github',
+          href: `https://github.com/immutable/imx-wallet-sdk-ios/tree/v0.1.0`,
+        },
       ],
     },
   ],
