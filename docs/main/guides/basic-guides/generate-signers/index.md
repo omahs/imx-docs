@@ -52,6 +52,8 @@ User signatures are required for certain types of operations on ImmutableX. Thes
   </tbody>
 </table>
 
+### Using "signers" to get user signatures
+
 In order to get user signatures, applications can use "signers". These are abstractions of user accounts that can be used to sign transactions. A user's private key is required to generate them.
 
 Ethereum (L1) signers are required to sign transactions on L1 (ie. depositing assets from the L1 wallet to the L2 one) and Stark (L2) signers are required to sign transactions on L2 (ie. creating an order on an L2 marketplace, transferring an asset to another user on L2).
