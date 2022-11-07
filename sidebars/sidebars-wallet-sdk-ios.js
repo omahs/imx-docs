@@ -13,7 +13,7 @@ module.exports = {
         {
           type: 'link',
           label: 'Reference',
-          href: `${url}/sdk-references/wallet-sdk-ios/0-1-0/`,
+          href: `${url}/sdk-references/wallet-sdk-ios/0-1-0/documentation/immutablexwalletsdk/`,
         },
         {
           type: 'link',
