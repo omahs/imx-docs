@@ -6,7 +6,7 @@ tags: [core-sdk-ts]
 keywords: [imx-dx]
 ---
 
-# Core SDK Migration Guide
+# Core SDK migration guide
 
 ## Learn how to migrate to the Core Typescript SDK
 
@@ -18,11 +18,11 @@ Our old [imx-sdk-js](https://www.npmjs.com/package/@imtbl/imx-sdk) is bloated, u
 
 The new Core SDK is vastly improved when working with the ImmutableX API. It's easy to understand and use. The new Core SDK’s improvement statistics speak for themselves:
 
-* Hand-written code reduced from 10,589 lines to 2,365 lines (down 78% 📉)
-* Package size reduced from 1.9MB to 668kB (down 65% 📉)
-* Minified package size reduced from 575kB to 195kB (down 67% 📉)
-* External dependencies reduced from 42 to 9 (down 79% 📉)
-* The number of publicly-exposed functions was reduced from hundreds to just 45 via one ImmutableX class, making it easy to understand all the functionality on offer.
+* Hand-written code reduced from **10,589** lines to **2,365** lines (down **78%** 📉)
+* Package size reduced from **1.9MB** to **668kB** (down **65%** 📉)
+* Minified package size reduced from **575kB** to **195kB** (down **67%** 📉)
+* External dependencies reduced from **42** to **9** (down **79%** 📉)
+* The number of publicly-exposed functions was reduced from hundreds to just **45** via one ImmutableX class, making it easy to understand all the functionality on offer.
 * The confusing fp-ts library has been completely eradicated.
 
 ## When should you migrate?
@@ -39,7 +39,7 @@ The Core SDK supports newer features like metadata refresh. If you’d like to t
 
 ### Changed:
 
-* ***The Core SDK no longer performs deterministic stark key generation. You will need to persist your stark key as a secret along with your ETH private key to sign for API calls.*** We removed the deterministic key generation feature from the Core SDK to ensure it's lean and only has features that pertain to its domain. The Wallet SDK will provide the deterministic key generation shortly. In the interim, using this tool, [generate-stark-key](https://github.com/immutable/generate-stark-key/), you can generate your stark key from your Ethereum private key.
+* ***The Core SDK no longer performs deterministic stark key generation. You will need to persist your stark key as a secret along with your ETH private key to sign for API calls.*** We removed the deterministic key generation feature from the Core SDK to ensure it's lean and only has features that pertain to its domain. The Wallet SDK will provide the deterministic key generation shortly. In the interim, using the [generate-stark-key](https://github.com/immutable/generate-stark-key/) tool, you can generate your stark key from your Ethereum private key.
 * Expose fewer public methods to make it easier for us to maintain the SDK.
 * Introduced a single entry point for the SDK to improve discoverability
 * Clear response and error types
@@ -55,7 +55,7 @@ The Core SDK supports newer features like metadata refresh. If you’d like to t
 
 * Added methods from MetadataRefreshesApi
 
-## Migration Path from imx-sdk to Core SDK v1.0.0-beta3 for use in the backend
+## Migration path from imx-sdk to Core SDK v1.0.0-beta3 for use in the backend
 
 1. Retrieve and persist your stark key using the [generate-stark-key](https://github.com/immutable/generate-stark-key/) tool. Add an entry for your stark key in your secrets manager or .env file like the one below.
 ```sh
@@ -72,7 +72,7 @@ npm i @imtbl/core-sdk
 ```
 4. Call the method of choice. Check out the [examples](https://github.com/immutable/imx-core-sdk/tree/main/examples) to see how to call individual endpoints.
 
-### Migration Path from Core SDK v0.7.0 to Core SDK v1.0.0-beta3
+## Migration path from Core SDK v0.7.0 to Core SDK v1.0.0-beta3
 
 1. Retrieve and persist your stark key using the [generate-stark-key](https://github.com/immutable/generate-stark-key/) tool. Add an entry for your stark key in your secrets manager or .env file like the one below.
 ```sh
