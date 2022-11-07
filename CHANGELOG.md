@@ -1,3 +1,10 @@
+## [1.31.1](https://github.com/immutable/imx-docs/compare/v1.31.0...v1.31.1) (2022-11-07)
+
+
+### Bug Fixes
+
+* fixes broken links in the start-here page ([9b4d31c](https://github.com/immutable/imx-docs/commit/9b4d31c4ac547d3b2c46a27c6e79841a74f9948b))
+
 # [1.31.0](https://github.com/immutable/imx-docs/compare/v1.30.1...v1.31.0) (2022-11-07)
 
 
