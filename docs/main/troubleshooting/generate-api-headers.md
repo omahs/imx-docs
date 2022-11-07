@@ -86,6 +86,23 @@ export async function signRaw(
 
 Where `deserializeSignature()` looks like:
 ```ts title="Typescript"
+import BN from 'bn.js'; // https://www.npmjs.com/package/bn.js
+import * as encUtils from 'enc-utils'; // https://www.npmjs.com/package/enc-utils
+
+type SignatureOptions = {
+  r: BN;
+  s: BN;
+  recoveryParam: number | null | undefined;
+};
+
+function importRecoveryParam(v: string): number | undefined {
+  return v.trim()
+    ? new BN(v, 16).cmp(new BN(27)) !== -1
+      ? new BN(v, 16).sub(new BN(27)).toNumber()
+      : new BN(v, 16).toNumber()
+    : undefined;
+}
+
 function deserializeSignature(sig: string, size = 64): SignatureOptions {
   sig = encUtils.removeHexPrefix(sig);
   return {
