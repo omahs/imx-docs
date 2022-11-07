@@ -17,8 +17,8 @@ Find out about [**our SDKs and how they work together**](../sdks.mdx)
 
 ### Build a marketplace
 * Set up [**our SDK**](../guides/basic-guides/install-initialize/index.md)
-* Learn how to [**display data about users and assets**](../guides/basic-guides/get-data/index.mdx)
-* Learn how to [**get user signatures**](../guides/basic-guides/generate-signers/index.mdx) to facilitate [**creating orders**](../guides/basic-guides/create-orders/index.mdx) and [**trades**](../guides/basic-guides/create-trades/index.mdx)
+* Learn how to [**display data about users and assets**](../guides/basic-guides/get-data/index.md)
+* Learn how to [**get user signatures**](../guides/basic-guides/generate-signers/index.md) to facilitate [**creating orders**](../guides/basic-guides/create-orders/index.md) and [**trades**](../guides/basic-guides/create-trades/index.md)
 
 ### Something else?
 * Get started with our [**guides**](../guides/basic-guides/overview/index.md)
