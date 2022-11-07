@@ -8,7 +8,7 @@ keywords: [imx-dx]
 
 # Core SDK Migration Guide
 
-## Learn how to migrate to v1.0.0-beta3 of the Core Typescript SDK
+## Learn how to migrate to the Core Typescript SDK
 
 The Core TypeScript SDK was released recently to make integrating with ImmutableX more straightforward and intuitive. We have iterated on the interface design for a while and have landed on a new interface that we’re excited to unveil and maintain over a long time. 
 
@@ -83,7 +83,7 @@ STARK_PRIVATE_KEY=<your-stark-key-here>
 ```
 2. Remove imx-core-sdk v0.7.0 from the list of dependencies
 ```sh
-npm remove @imtbl/imx-sdk
+npm remove @imtbl/core-sdk
 ```
 3. Add @imtbl/core-sdk v1.0.0-beta3 as a dependency. 
 ```sh
