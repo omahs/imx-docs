@@ -22,7 +22,7 @@ The new Core SDK is vastly improved when working with the ImmutableX API from th
 * Package size reduced from 1.9MB to 668kB (65% 📉)
 * Minified package size reduced from 575kB to 195kB (67% 📉)
 * External dependencies reduced from 42 to 9 (79% 📉)
-* The number of publicly-exposed functions reduced from hundreds to just 45, all on one ImmutableX class, making it easy to understand all the functionality on offer.
+* The number of publicly-exposed functions wasreduced from hundreds to just 45 via one ImmutableX class, making it easy to understand all the functionality on offer.
 * The confusing fp-ts library has been completely eradicated.
 
 ## When should you migrate?
