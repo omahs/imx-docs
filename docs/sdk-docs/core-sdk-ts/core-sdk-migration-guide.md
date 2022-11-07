@@ -10,19 +10,19 @@ keywords: [imx-dx]
 
 ## Learn how to migrate to the Core Typescript SDK
 
-The Core TypeScript SDK was released recently to make integrating with ImmutableX more straightforward and intuitive. We have iterated on the interface design for a while and have landed on a new interface that we’re excited to unveil and maintain over a long time. 
+The Core TypeScript SDK was released recently to make integrating with ImmutableX more straightforward and intuitive. We listened to a lot of your feedback, spent much time iterating on the interface of the Core SDK and have landed on a new interface that we’re excited to unveil and maintain over a long time. 
 
 Our old [imx-sdk-js](https://www.npmjs.com/package/@imtbl/imx-sdk) is bloated, unintuitive and hard to grok. It’s worth investing the time to migrate from the imx-sdk-js over to the new Core SDK. 
 
 ## Why should you migrate?
 
-The new Core SDK is vastly improved when working with the ImmutableX API from the backend. It's easy to understand and use. The new Core SDK’s improvement statistics speak for themselves:
+The new Core SDK is vastly improved when working with the ImmutableX API. It's easy to understand and use. The new Core SDK’s improvement statistics speak for themselves:
 
-* Hand-written code reduced from 10,589 lines to 2,365 lines (78% 📉)
-* Package size reduced from 1.9MB to 668kB (65% 📉)
-* Minified package size reduced from 575kB to 195kB (67% 📉)
-* External dependencies reduced from 42 to 9 (79% 📉)
-* The number of publicly-exposed functions wasreduced from hundreds to just 45 via one ImmutableX class, making it easy to understand all the functionality on offer.
+* Hand-written code reduced from 10,589 lines to 2,365 lines (down 78% 📉)
+* Package size reduced from 1.9MB to 668kB (down 65% 📉)
+* Minified package size reduced from 575kB to 195kB (down 67% 📉)
+* External dependencies reduced from 42 to 9 (down 79% 📉)
+* The number of publicly-exposed functions was reduced from hundreds to just 45 via one ImmutableX class, making it easy to understand all the functionality on offer.
 * The confusing fp-ts library has been completely eradicated.
 
 ## When should you migrate?
@@ -37,6 +37,16 @@ The Core SDK supports newer features like metadata refresh. If you’d like to t
 
 ## What has changed in Core SDK v1.0.0-beta3? 
 
+### Changed:
+
+* ***The Core SDK no longer performs deterministic stark key generation. You will need to persist your stark key as a secret along with your ETH private key to sign for API calls.*** We removed the deterministic key generation feature from the Core SDK to ensure it's lean and only has features that pertain to its domain. The Wallet SDK will provide the deterministic key generation shortly. In the interim, using this tool, [generate-stark-key](https://github.com/immutable/generate-stark-key/), you can generate your stark key from your Ethereum private key.
+* Expose fewer public methods to make it easier for us to maintain the SDK.
+* Introduced a single entry point for the SDK to improve discoverability
+* Clear response and error types
+* Simplified complex types required for creating trades, orders and transfers
+* Make the deposit method on SDK consistent with the API and industry norms.
+* SDK now handles L1 signature-protected APIs; no need to generate imx-signature separately for authentication headers
+
 ### Fixed
 
 * Correct the x-sdk-version header value
@@ -44,18 +54,6 @@ The Core SDK supports newer features like metadata refresh. If you’d like to t
 ### Added:
 
 * Added methods from MetadataRefreshesApi
-
-### Changed:
-
-* ***The Core SDK no longer performs deterministic stark key generation. You will need to persist your stark key as a secret along with your ETH private key to sign for API calls.*** You can generate your stark key from your ethereum private key using this tool - [generate-stark-key](https://github.com/immutable/generate-stark-key/)
-* Expose fewer public methods to make it easier for us to maintain the SDK.
-* Introduced a single entry point for the SDK to improve discoverability
-* Clear response and error types, no more Axios wrappers
-* Simplified complex types required for creating trades, orders and transfers, no more SignableToken in the interface
-* Make the deposit method on SDK consistent with the API and industry norms.
-* SDK now handles L1 signature-protected APIs; no need to generate imx-signature separately for authentication headers
-* Removed wallet-specific logic
-* Removed the ethereumjs-wallet dependency.
 
 ## Migration Path from imx-sdk to Core SDK v1.0.0-beta3 for use in the backend
 
