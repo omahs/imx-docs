@@ -1,3 +1,11 @@
+# [1.31.0](https://github.com/immutable/imx-docs/compare/v1.30.1...v1.31.0) (2022-11-07)
+
+
+### Features
+
+* include docc swift external reference ([0c55c87](https://github.com/immutable/imx-docs/commit/0c55c8787db9c50d4d80762408fffe56a37a4888))
+* include ImmutableX Wallet SDK iOS docs ([66f2f89](https://github.com/immutable/imx-docs/commit/66f2f8993228684edd42ff2af2e974d2231e4838))
+
 ## [1.30.1](https://github.com/immutable/imx-docs/compare/v1.30.0...v1.30.1) (2022-11-04)
 
 
