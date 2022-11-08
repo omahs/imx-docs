@@ -11,6 +11,7 @@ module.exports = {
         'initialization',
         'metadata-refresh',
         'additional-info',
+        'core-sdk-migration-guide',
         'changelog',
         {
           type: 'link',
