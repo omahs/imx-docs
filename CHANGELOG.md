@@ -1,3 +1,20 @@
+# [1.32.0](https://github.com/immutable/imx-docs/compare/v1.31.1...v1.32.0) (2022-11-08)
+
+
+### Bug Fixes
+
+* adds correct links to tools and introduces the sidebar link ([d66b9cf](https://github.com/immutable/imx-docs/commit/d66b9cfcc57b98fe9a1d8580be71fc9a476bef1e))
+* adds migration guide to v1.0.0-beta2 ([cf6cf10](https://github.com/immutable/imx-docs/commit/cf6cf1033b1831834c2640417df5c78ebf753a90))
+* adopts style guide ([37d9447](https://github.com/immutable/imx-docs/commit/37d9447e2498490bc9c76bc6108ba0beaf03e9b9))
+* changes copy ([d5bf1b9](https://github.com/immutable/imx-docs/commit/d5bf1b980bbd0b07e6dbdcceadddeb6904da9fb0))
+* fixes grammar ([00acb46](https://github.com/immutable/imx-docs/commit/00acb4652b49879085d59d2d62c2f885e34676e7))
+* title and code sample ([adb5015](https://github.com/immutable/imx-docs/commit/adb5015b5ef6d641d88e58bc6af5188ac014aa3e))
+
+
+### Features
+
+* adds a Core SDK Migration Guide ([2739ae0](https://github.com/immutable/imx-docs/commit/2739ae093c7c4943f1baf0cc71a07aa8255ace21))
+
 ## [1.31.1](https://github.com/immutable/imx-docs/compare/v1.31.0...v1.31.1) (2022-11-07)
 
 
