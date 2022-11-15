@@ -10,7 +10,7 @@ keywords: [imx-dx]
 Launching a collection with ImmutableX means having a [token smart contract](https://docs.openzeppelin.com/contracts/4.x/tokens) deployed where tokens can be freely transacted (ie. minted, traded, bought and sold) on ImmutableX's layer 2.
 
 :::info Minting tokens on layer 2
-If you want to be able to mint tokens on layer 2 from your smart contract, see [these requirements](../smart-contract-requirements/index.mdx).
+If you want to be able to mint tokens on layer 2 from your smart contract, see [these requirements](../smart-contract-requirements/index.md).
 :::
 
 #### You must do the following:
