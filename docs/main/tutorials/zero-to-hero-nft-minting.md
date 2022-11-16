@@ -183,7 +183,7 @@ The resulting URL should have the format `https://gateway.pinata.cloud/ipfs/QmWf
 Click on your metadata API URL and ensure that there are 3 files named 1,2 & 3. Click into each file and confirm the data is correct. If any of them are empty, you will need to reupload your folder.
 :::
 
-## Step 6: Create Etherscan API
+## Step 6: Create Etherscan API Key
 
 An Etherscan API Key is necessary to verify that you're the owner of the smart contract that you're trying to publish. Follow the steps below: 
 
@@ -553,7 +553,7 @@ Don't forget to press save after updating the values
 
 Our assets will now be accessible in our Goerli Wallet. However, for other users to see them we will need to list them on the marketplace. 
 
-1. Visit the [Sandbox IMX Marketplace](https://market.sandbox.x.immutable.com/) 
+1. Visit the [Sandbox IMX Marketplace](https://market.sandbox.immutable.com/) 
 2. Click Connet Wallet and follow the prompts
 3. Click My Assets --> Select an NFT
 4. Press List for Sale

@@ -1,3 +1,10 @@
+## [1.32.1](https://github.com/immutable/imx-docs/compare/v1.32.0...v1.32.1) (2022-11-15)
+
+
+### Bug Fixes
+
+* broken link for minting tokens on layer 2 requirements ([16e0940](https://github.com/immutable/imx-docs/commit/16e094005bf01e30ed7cf8b9e36ba8e24dc6e917))
+
 # [1.32.0](https://github.com/immutable/imx-docs/compare/v1.31.1...v1.32.0) (2022-11-08)
 
 
