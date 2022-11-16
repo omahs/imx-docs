@@ -6,34 +6,34 @@ sidebar_position: 12
 keywords: [imx-payments]
 ---
 
-The NFT Checkout Primary by fiat functionality is available in SDK v1.35.7+ and is a collaboration between Immutable X and Moonpay.
+Working alongside Moonpay, we have integrated their [NFT Checkout product](https://www.moonpay.com/business/nfts) which allows users to purchase an asset directly via a fiat credit card transaction (with no intermediary purchase of ETH or an ERC20)
 
-The NFT Checkout Primary process allows users to mint NFT on the Immutable X platform using a credit card. There's no gas price for minting, only a [Moonpay transaction fee](https://support.moonpay.com/hc/en-gb/articles/360011930117-What-fees-do-you-charge-).
+This primary sales flow is available in SDK v1.35.7+ and is a collaboration between Immutable X and Moonpay. It requires you to register your intent to use the service with us, and to have commercial agreement between you & moonpay.
 
-The mint happens directly on L2.
-
-:::info Registration a contract Address
-A contract address should be registered in IMX Exchange to be able to run minting process. For more information read [How to register for NFT Checkout Primary program](./minting-with-nft-checkout-primary)
+:::info Registering to use this service
+This is an opt-in service that needs to be enabled for your account. As such you will need to be registered to be able to use this method. For more information reach out to your Partner Success Manager, or the [#dev-discussion channel in discord](https://discord.gg/7URHuYFCN4).
 :::
 
-:::danger Exchange requires authenticated user
-`Link.nftCheckoutPrimary` should only be called when user is authenticated and logged in, otherwise it will require user to reconnect
-:::
-
-To initialize the NFT Checkout Primary process dApp needs to call the mintByFiat function:
+Once you have been approved, to initialize the NFT Checkout process you need to call the mintByFiat function:
 
 ```typescript
 await link.nftCheckoutPrimary({
-    sellerWalletAddress: "0x001",
-    contractAddress: "0x002",
-    offerId: "new_offer"
+    sellerWalletAddress: "0x001", // the wallet address of the seller 
+    contractAddress: "0x002", // the collection address
+    offerId: "new_offer" // the identifier for the "offer"
 })
 ```
 
 Where
-- `sellerWalletAddress` - address of seller, crypto will be sent to this wallet address
-- `contractAddress` - contract address that will be used to mint NFT
-- `offerId` - ID that represent offer that will be minted from partner, it can be tokenId, name of card, lottery and so on
+- `sellerWalletAddress` - Is the address of seller, funds will be sent to this wallet address
+- `contractAddress` - Is the collection address of the NFT
+- `offerId` - An identifier that represents what will be minted. 
+  
+In the cases where purchasers know what they're purchasing (such as a specific pfp) `offerId` could be the tokenId (i.e. `420`) and in other cases where they dont know what they're purchasing (such as a loot box) it could be something like `silver-chest`. This is simply a way to render an item in the cart, and doesnt need to tie to the actual NFT asset directly.
+
+:::info Handling the offerID
+Note that primary sales involve taking a payment before the mint occurs. Because the asset doesnt exist yet, we've included an `offerId` instead of an `assetID`. Therefore in order to successfully render the checkout with the information seen below (Offer title, and image) - you will need to set up 2 new endpoints described [here](/docs/nft-checkout-primary-with-moonpay/)
+:::
 
 This displays the Link UI with loaded Moonpay widget:
 
