@@ -233,7 +233,7 @@ import {
       https://docs.walletconnect.com/quick-start/dapps/web3-provider#provider-options
     */
     rpc: {
-      3: 'https://ropsten.mycustomnode.com',
+      5: 'https://goerli.mycustomnode.com',
     },
     /*
       Will switch the chain based on this configured chainID when connecting to the wallet.(Optional)
@@ -242,10 +242,9 @@ import {
       ChainId	| Network
       --- --- | --- --- 
       1	      | Ethereum Main Network (Mainnet)
-      3	      | Ropsten Test Network
       5	      | Goerli Test Network
     */
-    chainID: 3,
+    chainID: 5,
   });
 
   // Connects on the chosen provider - WalletConnect
@@ -399,7 +398,6 @@ Choose from the following:
 | Network | Description | URL |
 | --- | --- | --- |
 | Sandbox | The default test network (currently, it is Goërli) | https://link.sandbox.x.immutable.com/v1 |
-| Ropsten | Ropsten test network (to be deprecated soon) | https://link.ropsten.x.immutable.com/v1 |
 | Production | Ethereum network  | https://link.x.immutable.com/v1 |
 
 ```ts

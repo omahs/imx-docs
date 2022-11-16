@@ -23,7 +23,6 @@ Initialize the Core SDK client with the network on which you want your applicati
 | Network | Description |
 | -- | -- |
 | `Sandbox` | The default test network (currently, it is Goërli)  |
-| `Ropsten` | Ropsten test network (to be deprecated soon) |
 | `Production` | Ethereum network  |
 <Tabs>
   <TabItem value="typescript" label="Typescript Core SDK">
@@ -39,7 +38,7 @@ yarn add @imtbl/core-sdk
 ```ts
 import { ImmutableX, Config } from '@imtbl/core-sdk';
 
-const config = Config.SANDBOX; // Or Config.PRODUCTION or Config.ROPSTEN
+const config = Config.SANDBOX; // Or Config.PRODUCTION
 const client = new ImmutableX(config);
 ```
   </TabItem>
@@ -62,7 +61,7 @@ dependencies {
 
 3. Initialize the SDK with the correct environment:
 ```kotlin
-ImmutableXCore.setBase(ImmutableXBase.Ropsten) // Or ImmutableXBase.Production (default)
+ImmutableXCore.setBase(ImmutableXBase.Sandbox) // Or ImmutableXBase.Production (default)
 ```
 
   </TabItem>
@@ -93,7 +92,7 @@ end
 
 3. Initialize the SDK with the correct environment:
 ```swift
-ImmutableXCore.initialize(base: .ropsten) // Or .production
+ImmutableXCore.initialize(base: .sandbox) // Or .production
 ```
   </TabItem>
   <TabItem value="go" label="Golang Core SDK">
