@@ -26,6 +26,7 @@ Find below the list of errors that can be displayed in Link.
 | 2000       | Failed to retrieve the wallet address | Something went wrong when retrieving your wallet address. Check with your wallet provider. | Check wallet connection with IMX.Contact Customer Support.              | Try to replicate the issue. Check console logs. |
 | 2001       | Provided invalid ERC20 token          | Token not available in IMX.                                                                | Retry the transaction.Contact support team to report the invalid token. | Try to replicate the issue. Check console logs. |
 | 2002       | Insufficient funds                    | Insufficient funds.                                                                        | Add funds to L1 wallet.                                                 | N/A                                             |
+| 2003 | API rejected deposits | The API rejected the deposit: ${details} | Retry the operation. If it continues failing, contact the Customer Support team. | Try to replicate the issue. Check the error details. |
 
 ## Complete Withdrawal
 
@@ -40,6 +41,7 @@ Find below the list of errors that can be displayed in Link.
 | 5000       | Failed to retrieve order details | Something went wrong.-Additional error message provided by the API. | Check wallet connection with IMX.Retry operation.If continue to fail, contact Customer Support. | Try to replicate the issue. Check console logs. |
 | 5001       | Failed to retrieve asset details | Something went wrong.-Additional error message provided by the API. | Check wallet connection with IMX.Retry operation.If continue to fail, contact Customer Support. | Try to replicate the issue. Check console logs. |
 | 5002       | Failed trade request             | Something went wrong.-Additional error message provided by the API. | Check wallet connection with IMX.Retry operation.If continue to fail, contact Customer Support. | Try to replicate the issue. Check console logs. |
+| 5003 | API rejected trades | The API rejected the purchase: ${details} | Retry the operation. If it continues failing, contact the Customer Support team. | Try to replicate the issue. Check the error details. |
 
 ## Sell
 
@@ -50,6 +52,7 @@ Find below the list of errors that can be displayed in Link.
 | 6002       | Asset is already listed for sale            | Asset is unavailable.                                                       | Retry operation.Confirm if asset is already listed.If continue to fail, contact Customer Support. | Try to replicate the issue. Check console logs.                                 |
 | 6003       | Invalid currency provided as query param    | Unknown currency.                                                           | Retry operation.If continue to fail, contact Customer Support.                                    | Confirm tokens available in IMX.Try to replicate the issue. Check console logs. |
 | 6004       | Invalid asset price provided as query param | Price should be at least ${minPrice}                                        | Retry operation with different price.If continue to fail, contact Customer Support.               | N/A                                                                             |
+| 6005 | API rejected listings | The API rejected the listing: ${details} | Retry the operation. If it continues failing, contact the Customer Support team. | Try to replicate the issue. Check the error details. |
 
 ## Transfer
 
@@ -58,7 +61,7 @@ Find below the list of errors that can be displayed in Link.
 | 7000       | Failed to retrieve transfer token details   | Something went wrong retrieving token details.                                                              | Retry operation.If continue to fail, contact Customer Support. | Confirm tokens available in IMX.Try to replicate the issue. Check console logs. |
 | 7001       | Failed to retrieve user token balance       | Something went wrong retrieving your ${tokenType} token balance                                             | Retry operation.If continue to fail, contact Customer Support. | Confirm tokens available in IMX.Try to replicate the issue. Check console logs. |
 | 7002       | Invalid data found before starting transfer | Transfers have failed validation.The following validation errors were identified:${listOfFailedValidations} | Retry operation.If continue to fail, contact Customer Support. | Try to repliace the issue.Check error details.                                  |
-| 7003       | API rejected transfers                      | The API rejected the transfer: ${details}                                                                   | Retry operation.If continue to fail, contact Customer Support. | Try to repliace the issue.Check error details.                                  |
+| 7003 | API rejected transfers | The API rejected the transfer: ${details} | Retry the operation. If it continues failing, contact the Customer Support team. | Try to replicate the issue. Check the error details. |
 
 ## History
 
@@ -110,4 +113,3 @@ Find below the list of errors that can be displayed in Link.
 | ---------- | ---------------------------------- | ------------------------ | ------------------------------------------------------------------------------------ | ----------------------------------------------- |
 | -      | Invalid parameters supplied to link route         | Invalid make offer parameters    | Retry operation. If continue to fail, contact Customer Support.                       | Check that the correct parameters are being passed to the link route and are valid     |
 | -      | API is returning an error        | We have encountered an issue with our APIs while processing this request. Please try again. For further assistance please visit our support page.    | Retry operation. If continue to fail, contact Customer Support.                       | Try to replicate the issue. Check console logs.    |
-
