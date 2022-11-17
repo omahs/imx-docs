@@ -20,7 +20,7 @@ const apiAddress = 'https://api.x.immutable.com/v1';
 //const apiAddress = 'https://api.sandbox.x.immutable.com/v1';
 
 //The token address for the collection to be monitored. Currently set to Gods Unchained
-const COLLECTION_ADDRESS = '0xe3f9fe2654b82e14db024623b1cc8ea3d66832db';
+const COLLECTION_ADDRESS = '0xacb3c6a43d15b907e8433077b6d38ae40936fe2c';
 
 const link = new Link(linkAddress);
 const client = await ImmutableXClient.build({ publicApiUrl: apiAddress });
