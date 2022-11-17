@@ -40,9 +40,9 @@ Here we will default to the mainnet for the examples, but show the testnet conne
 const linkAddress = 'https://link.x.immutable.com';
 const apiAddress = 'https://api.x.immutable.com/v1';
 
-// Ropsten Testnet
-//const linkAddress = 'https://link.ropsten.x.immutable.com';
-//const apiAddress = 'https://api.ropsten.x.immutable.com/v1';
+// Goerli Testnet
+//const linkAddress = 'https://link.sandbox.x.immutable.com';
+//const apiAddress = 'https://api.sandbox.x.immutable.com/v1';
 ```
 ## Creating the link objects
 Once the Link SDK and IMX Client are imported, they can be initialized. Note that the client library initialization is asynchronous.
