@@ -5,12 +5,10 @@ slug: "/minting-with-royalties"
 sidebar_position: 6
 keywords: [imx-traders]
 ---
-Royalties for a given asset are defined at the point of minting a new asset to the ImmutableX protocol. Please ensure your [recipients are registered](../user-registration.md) before minting.
+Royalties for a given asset are defined at the point of minting a new asset to the ImmutableX protocol. Please ensure your [recipients are registered](./account-management.md#security-for-your-users) before minting.
 
 ## Royalty fees for newly minted assets
 Minting with royalties requires `@imtbl/imx-sdk` version that is `>= 1.1.3`.
-
-To set up your `minter`, refer to this [minting example](../asset-management/asset-minting.md#minting-example).
 
 The main difference between the example above and the one below is the object structure of the `mints`. The previous example does not support fees and will be deprecated and replaced with the example below.
 ```typescript
