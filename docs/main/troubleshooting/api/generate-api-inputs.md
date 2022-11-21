@@ -39,7 +39,7 @@ This is the public Ethereum address of the user executing the transaction.
 </ListAdmonition>
 
 ### 1. Get Ethereum signer
-Signers are abstractions of user accounts that can be used to sign transactions. A user's private key is required to generate them. Read more [here](../guides/basic-guides/generate-signers/index.md#using-signers-to-get-user-signatures).
+Signers are abstractions of user accounts that can be used to sign transactions. A user's private key is required to generate them. Read more [here](../../guides/basic-guides/generate-signers/index.md#using-signers-to-get-user-signatures).
 
 In order to generate the `IMX-Signature` and `x-imx-eth-signature` headers, we need an Ethereum signer for the user.
 
@@ -203,7 +203,7 @@ Call the corresponding endpoint to the one requiring the `stark_signature` that 
 
 ### 2. Generate Stark signer and sign the message
 
-Use the Core SDK to generate the Stark signers. See instructions [here](../guides/basic-guides/generate-signers/index.md#core-sdk).
+Use the Core SDK to generate the Stark signers. See instructions [here](../../guides/basic-guides/generate-signers/index.md#core-sdk).
 
 Use the Stark signer to sign the `payload_hash` in [Step 1](#1-get-message-to-be-signed):
 
@@ -218,7 +218,7 @@ const starkSignature = await starkSigner.signMessage(payloadHash);
 
 ```kotlin
 val starkSignature = starkSigner.signMessage(response.payloadHash)
-``` 
+```
   </TabItem>
   <TabItem value="Swift" label="Swift Core SDK">
 
