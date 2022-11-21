@@ -11,13 +11,20 @@ import TabItem from '@theme/TabItem';
 # How to generate API inputs
 
 This page provides information on how to generate the following API inputs:
-* Headers:
-  * [`IMX-Timestamp`](#imx-timestamp-string)
-  * [`x-imx-eth-address`](#x-imx-eth-address-string)
-  * [`IMX-Signature`, `x-imx-eth-signature`](#imx-signature-string-x-imx-eth-signature-string-auth_signature-string)
-* Request body params:
-  * [`stark_signature`](#stark_signature-string)
-  * [`auth_signature`](#imx-signature-string-x-imx-eth-signature-string-auth_signature-string)
+#### Headers:
+* [`IMX-Timestamp`](#imx-timestamp-string)
+* [`x-imx-eth-address`](#x-imx-eth-address-string)
+* [`IMX-Signature`, `x-imx-eth-signature`](#imx-signature-string-x-imx-eth-signature-string-auth_signature-string)
+
+:::tip Upgrade your SDK to avoid generating these headers
+If you are using the [Core SDK](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/overview) or the [SDK JS](https://www.npmjs.com/package/@imtbl/imx-sdk), you will generally not need to provide these headers as long as you upgrade to the following versions:
+* Core SDK: `>= 1.0.0-beta.2`
+* SDK JS: `>= 1.17`
+:::
+
+#### Request body params:
+* [`stark_signature`](#stark_signature-string)
+* [`auth_signature`](#imx-signature-string-x-imx-eth-signature-string-auth_signature-string)
 
 ## `IMX-Timestamp` (string)
 
