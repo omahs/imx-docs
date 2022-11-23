@@ -1,4 +1,5 @@
 const { url } = require('../docusaurus.config');
+const { coreSDKs } = require('../src/constants.tsx');
 
 module.exports = {
   mainSidebar: [
@@ -22,6 +23,11 @@ module.exports = {
           type: 'link',
           label: 'Reference',
           href: `${url}/sdk-references/core-sdk-ts/1.0.0-beta.3/classes/ImmutableX.ImmutableX.html`,
+        },
+        {
+          type: 'link',
+          label: 'Github',
+          href: 'https://github.com/immutable/imx-core-sdk/tree/v1.0.0-beta.3'
         },
       ],
     },

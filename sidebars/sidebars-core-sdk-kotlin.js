@@ -17,6 +17,11 @@ module.exports = {
           label: 'Reference',
           href: `${url}/sdk-references/core-sdk-kotlin/0-6-0/`,
         },
+        {
+          type: 'link',
+          label: 'Github',
+          href: 'https://github.com/immutable/imx-core-sdk-kotlin-jvm/tree/0.6.0'
+        },
       ],
     },
   ],
