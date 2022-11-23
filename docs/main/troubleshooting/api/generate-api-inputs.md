@@ -1,6 +1,6 @@
 ---
-title: "Generate API inputs"
-slug: "/generate-api-inputs"
+title: "Deep dive into API headers and params"
+slug: "/deep-dive-api-headers-params"
 sidebar_position: 5
 ---
 
@@ -8,9 +8,7 @@ import ListAdmonition from '@site/src/components/ListAdmonition';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# How to generate API inputs
-
-This page provides information on how to generate the following API inputs:
+This page provides information on how to generate the following API headers and params:
 #### Headers:
 * [`IMX-Timestamp`](#imx-timestamp-string)
 * [`x-imx-eth-address`](#x-imx-eth-address-string)
