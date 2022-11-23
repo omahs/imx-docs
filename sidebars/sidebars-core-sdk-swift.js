@@ -17,6 +17,11 @@ module.exports = {
           label: 'Reference',
           href: `${url}/sdk-references/core-sdk-swift/0-1-0/documentation/immutablexcore`,
         },
+        {
+          type: 'link',
+          label: 'Github',
+          href: 'https://github.com/immutable/imx-core-sdk-swift/tree/v0.4.0'
+        },
       ],
     },
   ],

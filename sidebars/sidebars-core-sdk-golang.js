@@ -25,6 +25,11 @@ module.exports = {
           label: 'Package reference',
           href: `https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.1`,
         },
+        {
+          type: 'link',
+          label: 'Github',
+          href: `https://github.com/immutable/imx-core-sdk-golang/tree/v0.2.1`,
+        },
       ],
     },
   ],
