@@ -1,6 +1,6 @@
 ---
-title: "Deep dive into API headers and params"
-slug: "/deep-dive-api-headers-params"
+title: "Deep dive into API concepts"
+slug: "/deep-dive-api-concepts"
 sidebar_position: 5
 ---
 
@@ -9,20 +9,93 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 This page provides information on how to generate the following API headers and params:
-#### Headers:
-* [`IMX-Timestamp`](#imx-timestamp-string)
-* [`x-imx-eth-address`](#x-imx-eth-address-string)
-* [`IMX-Signature`, `x-imx-eth-signature`](#imx-signature-string-x-imx-eth-signature-string-auth_signature-string)
+
+<table>
+  <thead>
+    <tr>
+      <th>Header / Param</th>
+      <th>Used in:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li><a href="#imx-timestamp-string">IMX-Timestamp</a></li>
+          <li><a href="#imx-signature-string-x-imx-eth-signature-string-auth_signature-string">IMX-Signature</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createCollection">createCollection</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/updateCollection">updateCollection</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/addMetadataSchemaToCollection">addMetadataSchemaToCollection</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/updateMetadataSchemaByName">updateMetadataSchemaByName</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createProject">createProject</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li><a href="#imx-timestamp-string">x-imx-eth-timestamp</a></li>
+          <li><a href="#imx-signature-string-x-imx-eth-signature-string-auth_signature-string">x-imx-eth-signature</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/Get%20a%20list%20of%20metadata%20refreshes">Get a list of metadata refreshes</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/Request%20a%20metadata%20refresh">Requesting a metadata refresh</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/Get%20metadata%20refresh%20results">Get metadata refresh results</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/Get%20metadata%20refresh%20errors">Get metadata refresh errors</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createOrder">createOrder</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/cancelOrder">cancelOrder</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createTransferV1">createTransferV1</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createTransfer">createTransfer</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createWithdrawal">createWithdrawal</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createTrade">createTrade</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createExchangeTransfer">createExchangeTransfer</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li><a href="#imx-signature-string-x-imx-eth-signature-string-auth_signature-string">stark_signature</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createOrder">createOrder</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/cancelOrder">cancelOrder</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createTransferV1">createTransferV1</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createTransfer">createTransfer</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createWithdrawal">createWithdrawal</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createTrade">createTrade</a></li>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/createExchangeTransfer">createExchangeTransfer</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul>
+          <li><a href="#imx-signature-string-x-imx-eth-signature-string-auth_signature-string">auth_signature</a></li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="https://docs.x.immutable.com/reference#/operations/mintTokens">mintTokens</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 :::tip Upgrade your SDK to avoid generating these headers
 If you are using the [Core SDK](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/overview) or the [SDK JS](https://www.npmjs.com/package/@imtbl/imx-sdk), you will generally not need to provide these headers as long as you upgrade to the following versions:
 * Core SDK: `>= 1.0.0-beta.2`
 * SDK JS: `>= 1.17`
 :::
-
-#### Request body params:
-* [`stark_signature`](#stark_signature-string)
-* [`auth_signature`](#imx-signature-string-x-imx-eth-signature-string-auth_signature-string)
 
 ## `IMX-Timestamp` (string)
 
@@ -44,7 +117,7 @@ This is the public Ethereum address of the user executing the transaction.
 </ListAdmonition>
 
 ### 1. Get Ethereum signer
-Signers are abstractions of user accounts that can be used to sign transactions. A user's private key is required to generate them. Read more [here](../../guides/basic-guides/generate-signers/index.md#using-signers-to-get-user-signatures).
+Signers are abstractions of user accounts that can be used to sign transactions. A user's private key is required to generate them. Read more [here](../guides/basic-guides/generate-signers/index.md#using-signers-to-get-user-signatures).
 
 In order to generate the `IMX-Signature` and `x-imx-eth-signature` headers, we need an Ethereum signer for the user.
 
@@ -208,7 +281,7 @@ Call the corresponding endpoint to the one requiring the `stark_signature` that 
 
 ### 2. Generate Stark signer and sign the message
 
-Use the Core SDK to generate the Stark signers. See instructions [here](../../guides/basic-guides/generate-signers/index.md#core-sdk).
+Use the Core SDK to generate the Stark signers. See instructions [here](../guides/basic-guides/generate-signers/index.md#core-sdk).
 
 Use the Stark signer to sign the `payload_hash` in [Step 1](#1-get-message-to-be-signed):
 

@@ -20,7 +20,8 @@ module.exports = {
         'key-concepts/deep-dive-minting',
         'key-concepts/deep-dive-metadata',
         'key-concepts/deep-dive-royalties',
-        'key-concepts/deep-dive-deposits-withdrawals'
+        'key-concepts/deep-dive-deposits-withdrawals',
+        'key-concepts/deep-dive-api-concepts'
       ],
     },
     {
