@@ -38,7 +38,6 @@ This page provides information on how to generate the following API headers and 
     <tr>
       <td>
         <ul>
-          <li><a href="#imx-timestamp-string">x-imx-eth-timestamp</a></li>
           <li><a href="#imx-signature-string-x-imx-eth-signature-string-auth_signature-string">x-imx-eth-signature</a></li>
         </ul>
       </td>
@@ -61,7 +60,7 @@ This page provides information on how to generate the following API headers and 
     <tr>
       <td>
         <ul>
-          <li><a href="#imx-signature-string-x-imx-eth-signature-string-auth_signature-string">stark_signature</a></li>
+          <li><a href="#stark_signature-string">stark_signature</a></li>
         </ul>
       </td>
       <td>
@@ -92,9 +91,9 @@ This page provides information on how to generate the following API headers and 
 </table>
 
 :::tip Upgrade your SDK to avoid generating these headers
-If you are using the [Core SDK](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/overview) or the [SDK JS](https://www.npmjs.com/package/@imtbl/imx-sdk), you will generally not need to provide these headers as long as you upgrade to the following versions:
+If you are using the [Core SDK](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/overview) or the [JS SDK](https://www.npmjs.com/package/@imtbl/imx-sdk), you will generally not need to provide these headers as long as you upgrade to the following versions:
 * Core SDK: `>= 1.0.0-beta.2`
-* SDK JS: `>= 1.17`
+* JS SDK: `>= 1.17`
 :::
 
 ## `IMX-Timestamp` (string)
