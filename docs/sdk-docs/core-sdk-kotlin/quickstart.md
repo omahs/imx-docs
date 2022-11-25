@@ -16,6 +16,14 @@ e.g. Get a list of collections ordered by name in ascending order
 
 ```kt
 val response = immutableX.listCollections(
+        pageSize = 20,
+        orderBy = "name",
+        direction = "asc"
+)
+```
+OR
+```kt
+val response = immutableX.collectionsApi.listCollections(
     pageSize = 20,
     orderBy = "name",
     direction = "asc"
