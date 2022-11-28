@@ -19,7 +19,7 @@ module.exports = {
         {
           type: 'link',
           label: 'Github',
-          href: 'https://github.com/immutable/imx-core-sdk-kotlin-jvm/tree/1.0.0-beta.1'
+          href: 'https://github.com/immutable/imx-core-sdk-kotlin-jvm/tree/v1.0.0-beta.1'
         },
       ],
     },
