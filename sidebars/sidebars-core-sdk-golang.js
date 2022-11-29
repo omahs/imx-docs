@@ -13,7 +13,7 @@ module.exports = {
         {
           type: 'link',
           label: 'Examples',
-          href: `https://github.com/immutable/imx-core-sdk-golang/tree/v0.2.1/imx/examples`,
+          href: `https://github.com/immutable/imx-core-sdk-golang/tree/v0.2.2/imx/examples`,
         },
         {
           type: 'link',
@@ -23,7 +23,7 @@ module.exports = {
         {
           type: 'link',
           label: 'Package reference',
-          href: `https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.1`,
+          href: `https://pkg.go.dev/github.com/immutable/imx-core-sdk-golang@v0.2.2`,
         },
         {
           type: 'link',
