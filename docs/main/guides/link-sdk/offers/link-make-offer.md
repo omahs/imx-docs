@@ -7,8 +7,8 @@ sidebar_position: 1
 keywords: [trading, orderbook, offers, buy-order]
 ---
 
-:::danger OFFERS IS ONLY AVAILABLE IN THE SANDBOX ENVIRONMENT
-Please only use these features for testing / integration in the sandbox environment. Offers are not supported in production yet.
+:::danger OFFERS IS IN BETA
+This feature is currently in beta. Some functionality might be restricted or changed without notice. Please contact IMX if you have questions about integrating this feature.
 :::
 
 :::note Link reference tool
