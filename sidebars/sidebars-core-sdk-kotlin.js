@@ -14,12 +14,12 @@ module.exports = {
         {
           type: 'link',
           label: 'Reference',
-          href: `${url}/sdk-references/core-sdk-kotlin/1.0.0-beta.1/`,
+          href: `${url}/sdk-references/core-sdk-kotlin/1.0.0-beta.2/`,
         },
         {
           type: 'link',
           label: 'Github',
-          href: 'https://github.com/immutable/imx-core-sdk-kotlin-jvm/tree/v1.0.0-beta.1'
+          href: 'https://github.com/immutable/imx-core-sdk-kotlin-jvm/tree/v1.0.0-beta.2'
         },
       ],
     },
