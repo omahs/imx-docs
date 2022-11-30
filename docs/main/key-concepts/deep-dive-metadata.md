@@ -1,6 +1,7 @@
 ---
 title: "Deep dive into metadata"
 slug: "/deep-dive-metadata"
+keywords: [imx-dx]
 ---
 
 import ListAdmonition from '@site/src/components/ListAdmonition';
