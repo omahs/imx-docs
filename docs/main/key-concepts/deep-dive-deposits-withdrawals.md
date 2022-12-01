@@ -1,6 +1,7 @@
 ---
 title: "Deep dive into deposits and withdrawals"
 slug: "/deep-dive-deposits-withdrawals"
+keywords: [imx-dx]
 ---
 
 import ListAdmonition from '@site/src/components/ListAdmonition';

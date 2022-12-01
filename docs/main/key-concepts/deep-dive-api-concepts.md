@@ -2,6 +2,7 @@
 title: "Deep dive into API concepts"
 slug: "/deep-dive-api-concepts"
 sidebar_position: 5
+keywords: [imx-dx]
 ---
 
 import ListAdmonition from '@site/src/components/ListAdmonition';

@@ -1,7 +1,6 @@
 ---
-id: "nft-checkout-primary-with-moonpay"
-title: "Set up endpoints required for Moonpay NFT primary sale checkout"
-slug: "/nft-checkout-primary-with-moonpay"
+title: "Set up primary sale checkout endpoints"
+slug: "/primary-sale-checkout-endpoints"
 sidebar_position: 4
 keywords: [imx-payments]
 ---
