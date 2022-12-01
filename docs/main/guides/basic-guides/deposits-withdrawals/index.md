@@ -285,7 +285,8 @@ To understand what is going on under the hood with asset withdrawals, please see
 #### Steps:
 1. [Get details of the withdrawal](#1-get-details-of-the-withdrawal)
 2. [Generate signers](#2-generate-signers-2)
-3. [Withdraw token](#3-withdraw-token)
+3. [Create withdrawal](#3-create-withdrawal)
+4. Call contract to complete withdrawal
 
 #### 1. Get details of the withdrawal
 <ListAdmonition title="Endpoint:">
@@ -350,7 +351,7 @@ Explanation:
 #### 2. Generate signers
 Enabling users to withdraw assets requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](../generate-signers/index.md).
 
-#### 3. Withdraw token
+#### 3. Create withdrawal
 <ListAdmonition title="Endpoint:">
     <ul>
         <li><a href="https://docs.x.immutable.com/reference#/operations/createWithdrawal">createWithdrawal</a></li>
@@ -387,4 +388,26 @@ fetch("https://api.sandbox.x.immutable.com/v1/withdrawals", {
 }).catch(err => {
     console.error(err);
 })
+```
+
+#### 4. Call contract to complete withdrawal
+
+```js
+import { Contracts, Config } from '@imtbl/core-sdk';
+
+const config = Config.SANDBOX;
+
+// Get instance of core contract
+const contract = Contracts.Core.connect(
+  config.ethConfiguration.coreContractAddress,
+  ethSigner,
+);
+
+// Populate and send transaction
+const populatedTransaction = await contract.populateTransaction.withdraw(
+  starkPublicKey, // Use `stark_key` obtained in previous step
+  assetType, // "ETH", "ERC20" or "ERC721"
+);
+
+const transactionResponse = await ethSigner.sendTransaction(populatedTransaction);
 ```
