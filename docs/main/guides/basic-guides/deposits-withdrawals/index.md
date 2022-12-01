@@ -390,7 +390,48 @@ fetch("https://api.sandbox.x.immutable.com/v1/withdrawals", {
 })
 ```
 
-#### 4. Call contract to complete withdrawal
+#### 4. Get the `assetType` value
+This value is required in the next step to complete the withdrawal.
+
+```js
+import fetch from "node-fetch";
+
+const assetType = "asset" // "mintable-asset" if you are withdrawing an ERC721 token that was minted on L2 to L1 for the first time
+
+const encodeAssetBody = {
+  token: {
+    data: {
+      blueprint: "string",
+      id: "string",
+      token_address: "string",
+      token_id: "string"
+    },
+    type: "ETH"
+  }
+}
+
+fetch(`https://api.sandbox.x.immutable.com/v1/encode/${assetType}`, {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "x-imx-eth-address": "0x..", // Public Ethereum address of the withdrawing user
+        "x-imx-eth-signature": ethSignature
+    },
+    "body": JSON.stringify(encodeAssetBody)
+}).then(response => {
+    console.log(response);
+
+    // Example response
+    // {
+    //     "asset_id": "string",
+    //     "asset_type": "string"
+    // }
+}).catch(err => {
+    console.error(err);
+})
+```
+
+#### 5. Call contract to complete withdrawal
 
 ```js
 import { Contracts, Config } from '@imtbl/core-sdk';
@@ -406,7 +447,7 @@ const contract = Contracts.Core.connect(
 // Populate and send transaction
 const populatedTransaction = await contract.populateTransaction.withdraw(
   starkPublicKey, // Use `stark_key` obtained in previous step
-  assetType, // "ETH", "ERC20" or "ERC721"
+  assetType, // Use the `asset_type` value returned in the response object in step 4
 );
 
 const transactionResponse = await ethSigner.sendTransaction(populatedTransaction);
