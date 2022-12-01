@@ -406,7 +406,7 @@ const encodeAssetBody = {
       token_address: "string",
       token_id: "string"
     },
-    type: "ETH"
+    type: "ETH" // Or "ERC20" or "ERC721"
   }
 }
 
