@@ -1,8 +1,8 @@
 ---
-id: "nft-checkout-primary-with-moonpay"
+id: "nft-checkout-primary-setup"
 title: "Set up endpoints required for Moonpay NFT primary sale checkout"
-slug: "/nft-checkout-primary-with-moonpay"
-sidebar_position: 4
+slug: "/nft-checkout-primary-setup"
+sidebar_position: 1
 keywords: [imx-payments]
 ---
 
@@ -15,10 +15,10 @@ import ListAdmonition from '@site/src/components/ListAdmonition';
 :::caution Feature for managed partners only
 This is a feature intended for managed partners. If you are not a managed partner and would like to become one, please reach out to us on our [#dev-discussion channel](https://discord.gg/7URHuYFCN4) on Discord. 
 
-If you are a managed partner, your partner success manager needs to set up a commercial partnership with Moonpay for you in order to implement the [primary NFT sale checkout feature](../link-sdk/link-nft-checkout-primary.md). Please reach out to them to facilitate this.
+If you are a managed partner, your partner success manager needs to set up a commercial partnership with Moonpay for you. Please reach out to them to facilitate this.
 :::
 
-The [Moonpay primary NFT sale checkout feature](../link-sdk/link-nft-checkout-primary.md) enables users to mint and own an asset using a credit card.
+The [Moonpay primary NFT sale checkout feature](../../../link-sdk/link-nft-checkout-primary.md) enables users to mint and own an asset using a credit card.
 
 In order to use this feature, you need to complete the following:
 1. Establish a commercial partnership with Moonpay (your partner success manager will facilitate this for you)
@@ -45,10 +45,10 @@ You are required to provide the following endpoints:
 
 #### Headers required:
 
-| Name | Description |
-| --- | --- |
-| `IMX-Signature` - [How to validate this](#3-how-to-validate-the-imx-signature) | Signature to confirm that the request was made by ImmutableX |
-| `IMX-Timestamp` - [How to generate this](../../key-concepts/deep-dive-api-concepts.md#imx-timestamp-string) | Timestamp header to validate `IMX-Signature` |
+| Name                                                                                                           | Description                                                  |
+|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
+| `IMX-Signature` - [How to validate this](#3-how-to-validate-the-imx-signature)                                 | Signature to confirm that the request was made by ImmutableX |
+| `IMX-Timestamp` - [How to generate this](../../../key-concepts/deep-dive-api-concepts.md#imx-timestamp-string) | Timestamp header to validate `IMX-Signature`                 |
 
 #### Request body:
 
@@ -154,7 +154,7 @@ Response: {
 
 ### 2. Register with ImmutableX using created endpoints
 
-When you've set up the endpoints required in the previous step, reach out to your partner success manager to register them with ImmutableX.
+When you've set up the endpoints required in the previous step, please register with ImmutableX using the [API endpoint](https://docs.x.immutable.com/reference/#/operations/registerNftPrimarySalesContract).
 
 After registration, ImmutableX will send you a webhook key that will be used to validate the signature when initiating mint requests.
 
