@@ -53,7 +53,7 @@ If your NFT was minted directly on to ImmutableX (for no gas cost!), the asset w
 
 ## Smart Contracts
 
-**Does ImmutableX support ERC-1155s?**
+**Does ImmutableX support ERC1155s?**
 
 No, ImmutableX does not support or recommend the use of ERC1155. We recommend that you use as few smart contracts as possible and consider merging your smart contracts, differentiating NFTs with metadata rather than by which smart contract they originated in. 
 ImmutableX supports ERC721 smart contracts and recommends that you create a new ERC721 contract for each meaningfully different type of asset.
