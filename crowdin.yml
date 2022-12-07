@@ -3,6 +3,6 @@
 "files": [
   {
     "source": "/docs/main/**/*.*",
-    "translation": "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/main/%original_file_name%"
+    "translation": "/i18n/%two_letters_code%/docusaurus-plugin-content-docs/main//%original_path%/%original_file_name%"
   }
 ]

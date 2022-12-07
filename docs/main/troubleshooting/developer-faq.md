@@ -23,15 +23,15 @@ This is not supported at the moment, though most NFT projects don’t have a nee
 
 ## Metadata
 
-**Can I update the metadata of an ERC721 token in Layer 2?**
+**Can I update the metadata of an ERC721 token on Layer 2?**
 
-It is not possible to update immutable metadata (otherwise known as the blueprint) of an NFT that has been minted to Layer 2 because this is trustlessly passed to the Layer 1 smart contract when withdrawing — alongside the client token ID. However, you can update mutable metadata by changing the data returned by your metadata API. 
+There are [two ways](../key-concepts/deep-dive-metadata.md#on-l2-immutablex) of storing token metadata on ImmutableX: Providing a `metadata_api_url` when creating a collection and providing a `blueprint` string when minting a token on L2.
 
-Currently, our metadata crawler only runs once at the time of minting so if you make changes to the off-chain metadata that we retrieve from your endpoint, you need to [inform our customer support team](https://support.immutable.com) so it can be updated on ImmutableX. 
+***The `blueprint` cannot be changed:*** When a token which has been minted on L2 with a `blueprint` string is withdrawn to L1, the L1 smart contract is updated with this value, thus making it immutable. ImmutableX does not allow updates to a token's blueprint value on L2. 
 
-:::info "Pre-approval to refresh metadata"
-**Jan 2022:** If you intend to refresh metadata after your collection is minted, you need to have approval from our Partner Success team in advance of your initial mint. We are working on making this process entirely self-service, but in the meantime, please [submit a request here](https://support.immutable.com).
-:::
+***The `metadata_api_url` can be updated:*** Updating the `metadata_api_url` of a collection can be done via our [API](https://docs.x.immutable.com/reference/#/operations/updateCollection).
+
+Currently, our metadata crawler only runs once at the time of minting so if you make changes to the off-chain metadata that we retrieve from your endpoint, you need to [trigger a metadata refresh](https://docs.x.immutable.com/docs/asset-metadata-refreshes) so it can be updated on ImmutableX. 
 
 ## Orders
 
@@ -57,7 +57,7 @@ If your NFT was minted directly on to ImmutableX (for no gas cost!), the asset w
 
 ## Smart Contracts
 
-**Does ImmutableX support ERC-1155s?**
+**Does ImmutableX support ERC1155s?**
 
 No, ImmutableX does not support or recommend the use of ERC1155. We recommend that you use as few smart contracts as possible and consider merging your smart contracts, differentiating NFTs with metadata rather than by which smart contract they originated in. 
 ImmutableX supports ERC721 smart contracts and recommends that you create a new ERC721 contract for each meaningfully different type of asset.
