@@ -6,9 +6,11 @@ sidebar_position: 12
 keywords: [imx-payments]
 ---
 
-:::info Feature for managed partners only
+:::caution Feature for managed partners only
 This is a feature intended for managed partners and requires this service to be enabled for your account. As such you will need to be registered to be able to use this method.
-Please refer the document [here](/docs/nft-checkout-primary-setup/) to set up and register with IMX.
+
+Please refer the document [here](../advanced-guides/primary-sale-checkout-endpoints.md) to set up and register with IMX.
+
 For more information reach out to your Partner Success Manager, or the [#dev-discussion channel in discord](https://discord.gg/7URHuYFCN4).
 :::
 

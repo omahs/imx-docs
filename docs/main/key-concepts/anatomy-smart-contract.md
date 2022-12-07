@@ -1,6 +1,7 @@
 ---
 title: "Anatomy of a smart contract"
 slug: "/anatomy-smart-contract"
+keywords: [imx-dx]
 ---
 
 import ListAdmonition from '@site/src/components/ListAdmonition';
