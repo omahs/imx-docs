@@ -76,24 +76,24 @@ Find below the list of errors that can be displayed in Link.
 | 9000       | Failed to retrieve the order details | Something went wrong retrieving the order details. | Retry operation.If continue to fail, contact Customer Support. | Try to replicate the issue. Check console logs. |
 | 9001       | Failed to retrieve token details     | Something went wrong retrieving the token details. | Retry operation.If continue to fail, contact Customer Support. | Try to replicate the issue. Check console logs. |
 
-## Fiat to Crypto
+## Onramp
 
 | Error Code | Likely Scenario                    | Displayed Error Message | Possible User Actions                                          | Possible Developer Actions                 |
-|------------|------------------------------------|-------------------------|----------------------------------------------------------------|--------------------------------------------|
-| 10001      | Exchange status is failed          | Something went wrong.   | Retry operation.If continue to fail, contact Customer Support. | Check transaction status with IMX/Moonpay. |
-| 10002      | Unable to retrieve exchange status | Connection Error.       | Retry operation.If continue to fail, contact Customer Support. | Check transaction status with IMX/Moonpay. |
-| 10003      | Invalid crypto currencies          | Invalid currencies.     | Retry operation.If continue to fail, contact Customer Support. | Check supported tokens for Fiat to Crypto. |
-| 10004      | Could not get currencies           | Something went wrong.   | Retry operation.If continue to fail, contact Customer Support. | Check supported tokens for Fiat to Crypto. |
+| ---------- | ---------------------------------- | ----------------------- | -------------------------------------------------------------- |--------------------------------------------|
+| 10001      | Exchange status is failed          | Something went wrong.   | Retry operation.If continue to fail, contact Customer Support. | Check transaction status with IMX/MoonPay. |
+| 10002      | Unable to retrieve exchange status | Connection Error.       | Retry operation.If continue to fail, contact Customer Support. | Check transaction status with IMX/MoonPay. |
+| 10003      | Invalid crypto currencies          | Invalid currencies.     | Retry operation.If continue to fail, contact Customer Support. | Check supported tokens for Onramp.         |
+| 10004      | Could not get currencies           | Something went wrong.   | Retry operation.If continue to fail, contact Customer Support. | Check supported tokens for Onramp. |
 
-## Crypto to Fiat
+## Offramp
 
 | Error Code | Likely Scenario                    | Displayed Error Message  | Possible User Actions                                                                | Possible Developer Actions                      |
-|------------|------------------------------------|--------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------|
-| 11001      | Exchange status is failed          | Something went wrong.    | Retry operation.If continue to fail, contact Customer Support.                       | Check transaction status with IMX/Moonpay.      |
-| 11002      | Unable to retrieve exchange status | Connection Error.        | Retry operation.If continue to fail, contact Customer Support.                       | Check transaction status with IMX/Moonpay.      |
-| 11003      | Could not get currencies           | Something went wrong.    | Retry operation.If continue to fail, contact Customer Support.                       | Check supported tokens for Crypto to Fiat.      |
-| 11004      | No currencies left after filtering | Currencies not available | Retry operation.If continue to fail, contact Customer Support.                       | Check supported tokens for Crypto to Fiat.      |
-| 11005      | Invalid currency amount            | Invalid currency amount  | Retry operation with different amount.If continue to fail, contact Customer Support. | Check supported tokens for Crypto to Fiat.      |
+| ---------- | ---------------------------------- | ------------------------ | ------------------------------------------------------------------------------------ |-------------------------------------------------|
+| 11001      | Exchange status is failed          | Something went wrong.    | Retry operation.If continue to fail, contact Customer Support.                       | Check transaction status with IMX/MoonPay.      |
+| 11002      | Unable to retrieve exchange status | Connection Error.        | Retry operation.If continue to fail, contact Customer Support.                       | Check transaction status with IMX/MoonPay.      |
+| 11003      | Could not get currencies           | Something went wrong.    | Retry operation.If continue to fail, contact Customer Support.                       | Check supported tokens for Offramp.             |
+| 11004      | No currencies left after filtering | Currencies not available | Retry operation.If continue to fail, contact Customer Support.                       | Check supported tokens for Offramp.      |
+| 11005      | Invalid currency amount            | Invalid currency amount  | Retry operation with different amount.If continue to fail, contact Customer Support. | Check supported tokens for Offramp.      |
 | 11006      | Incorrect transaction format       | Something went wrong.    | Retry operation.If continue to fail, contact Customer Support.                       | Try to replicate the issue. Check console logs. |
 
 
@@ -103,9 +103,9 @@ Find below the list of errors that can be displayed in Link.
 |------------|--------------------------------|------------------------------------|-----------------------------------------------------------------|-------------------------------------------------|
 | 12000      | Feature is disabled            | NFT Primary sale is not supported. | Try later, when a feature will be announced                     | Check that a feature should be enabled or not.  |
 | 12001      | Cannot create a transaction    | Cannot create a transaction.       | Retry operation. If continue to fail, contact Customer Support. | Try to replicate the issue. Check console logs. |
-| 12002      | Cannot connect to imx-exchange | Connection Error.                  | Retry operation. If continue to fail, contact Customer Support. | Check transaction status with IMX/Moonpay.      |
+| 12002      | Cannot connect to imx-exchange | Connection Error.                  | Retry operation. If continue to fail, contact Customer Support. | Check transaction status with IMX/MoonPay.      |
 | 12003      | Polling error                  | Cannot retrieve status.            | Retry operation. If continue to fail, contact Customer Support. | Check logs why status polling is failing.       |
-| 12004      | Transaction is failed          | Transaction failed.                | Retry operation. If continue to fail, contact Customer Support. | Check transaction status with IMX/Moonpay.      |
+| 12004      | Transaction is failed          | Transaction failed.                | Retry operation. If continue to fail, contact Customer Support. | Check transaction status with IMX/MoonPay.      |
 
 ## Offers
 

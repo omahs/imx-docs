@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added Exchange transfers
-- Added Moonpay primary nft checkout
+- Added MoonPay primary nft checkout
 - Method to generate deterministic stark key
 
 ### Changed

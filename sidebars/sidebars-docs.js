@@ -55,6 +55,7 @@ module.exports = {
             'guides/basic-guides/mint-assets/index',
             'guides/basic-guides/transfers/index',
             'guides/basic-guides/deposits-withdrawals/index',
+            'guides/basic-guides/on-off-ramp/index',
           ]
         },
         {

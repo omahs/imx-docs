@@ -12,7 +12,7 @@ keywords: [imx-wallets]
 
 The Core SDK must be initialised before any of its classes are used. Upon initialisation the base environment and log level may be defined. Once initialised a shared instace will be available for accessing the [Workflow Functions](#workflow-functions).
 
-For example, you initialise the SDK and retrieve a URL to buy crypto through Moonpay:
+For example, you initialise the SDK and retrieve a URL to buy crypto through MoonPay:
 
 ```swift
 ImmutableX.initialize(base: .sandbox)

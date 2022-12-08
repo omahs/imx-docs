@@ -1,7 +1,7 @@
 ---
-id: "nft-checkout-primary-setup"
-title: "Set up endpoints required for Moonpay NFT primary sale checkout"
-slug: "/nft-checkout-primary-setup"
+id: "setup-primary-sale-card-checkout"
+title: "Set up required endpoints"
+slug: "/setup-primary-sale-card-checkout"
 sidebar_position: 1
 keywords: [imx-payments]
 ---
@@ -10,19 +10,17 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import ListAdmonition from '@site/src/components/ListAdmonition';
 
-# Set up endpoints required for the Moonpay NFT primary sale checkout feature
+# Set up required endpoints
 
 :::caution Feature for managed partners only
 This is a feature intended for managed partners. If you are not a managed partner and would like to become one, please reach out to us on our [#dev-discussion channel](https://discord.gg/7URHuYFCN4) on Discord. 
 
-If you are a managed partner, your partner success manager needs to set up a commercial partnership with Moonpay for you. Please reach out to them to facilitate this.
+If you are a managed partner, your partner success manager needs to set up a commercial partnership with MoonPay for you. Please reach out to them to facilitate this.
 :::
 
-The [Moonpay primary NFT sale checkout feature](../../../link-sdk/link-nft-checkout-primary.md) enables users to mint and own an asset using a credit card.
-
-In order to use this feature, you need to complete the following:
-1. Establish a commercial partnership with Moonpay (your partner success manager will facilitate this for you)
-2. [Register with ImmutableX with the required endpoints](#how-to-set-up-and-register-endpoints)
+In order to [implement](./implement.md) this NFT primary sale card checkout feature, you need to complete the following:
+1. Establish a commercial partnership with MoonPay (your partner success manager will facilitate this for you)
+2. [Set up and register with ImmutableX with the required endpoints](#how-to-set-up-and-register-endpoints)
 
 ## How to set up and register endpoints
 
@@ -38,7 +36,7 @@ In order to use this feature, you need to complete the following:
 
 You are required to provide the following endpoints:
 
-1. [Trigger the mint](#triggering-the-mint-endpoint): An endpoint to mint the asset once payment has been confirmed with Moonpay
+1. [Trigger the mint](#triggering-the-mint-endpoint): An endpoint to mint the asset once payment has been confirmed with MoonPay
 2. [Get asset info](#get-asset-info-endpoint): An endpoint to get information about the minted asset and render the checkout
 
 ### Triggering the mint endpoint
@@ -57,7 +55,7 @@ You are required to provide the following endpoints:
 | `offer_id` | String | The ID of the offer provided for the NFT to be minted |
 | `contract_address` | String | Smart contract address of the NFT |
 | `user` | String | User that the NFT will be minted for (will become the NFT's owner) |
-| `wallet_address` | String | Wallet address that will receive the payment, in crypto (from Moonpay), for the minted NFT |
+| `wallet_address` | String | Wallet address that will receive the payment, in crypto (from MoonPay), for the minted NFT |
 | `external_transaction_id` | String (UUID) | Unique ImmutableX transaction ID that can be used to get information about the transaction |
 
 #### Response:
@@ -120,7 +118,7 @@ This endpoint will be used to get information about the asset to be minted using
 | `image_url` | String | URL where the image to be displayed for the minted asset is hosted |
 | `price_currency_code` | String | Currency of the amount to be paid. Choose from: `"ETH"` or `"USDC"` |
 | `price` | String | Amount of the currency required to mint the token |
-| `seller_address` | String |  Wallet address that will receive the payment, in crypto (from Moonpay), for the minted NFT |
+| `seller_address` | String |  Wallet address that will receive the payment, in crypto (from MoonPay), for the minted NFT |
 
 #### Example:
 
@@ -154,7 +152,7 @@ Response: {
 
 ### 2. Register with ImmutableX using created endpoints
 
-When you've set up the endpoints required in the previous step, please register with ImmutableX using the [API endpoint](https://docs.x.immutable.com/reference/#/operations/registerNftPrimarySalesContract).
+When you've set up the endpoints required in the previous step, please register with ImmutableX using the [registerNftPrimarySalesContract](https://docs.x.immutable.com/reference/#/operations/registerNftPrimarySalesContract) API endpoint.
 
 After registration, ImmutableX will send you a webhook key that will be used to validate the signature when initiating mint requests.
 

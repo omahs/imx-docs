@@ -22,6 +22,11 @@ const ListAdmonition = ({
       title = label;
       icon = '📚';
       break;
+    case 'API reference':
+      type = TYPE.info;
+      title = label;
+      icon = '📚';
+      break;
     case 'Guides':
       type = TYPE.info;
       title = label;
