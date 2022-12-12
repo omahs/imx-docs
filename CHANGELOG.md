@@ -1,3 +1,10 @@
+## [1.32.2](https://github.com/immutable/imx-docs/compare/v1.32.1...v1.32.2) (2022-12-12)
+
+
+### Bug Fixes
+
+* **docs:** folder path fix ([5b94858](https://github.com/immutable/imx-docs/commit/5b94858bce86d54756ff0ca5e6e8ba67409cbc2a))
+
 ## [1.32.1](https://github.com/immutable/imx-docs/compare/v1.32.0...v1.32.1) (2022-11-15)
 
 
