@@ -5,11 +5,13 @@ slug: "/learn/tokenomics"
 keywords: [imx-growth]
 ---
 
+## Subject to legal privelige
 
-In this article you will learn
+In this article, you will learn:
 - What is tokenomics
-- Why its a critical part of a web3 gaming project
+- Why its a critical part of a Web3 gaming project
 - How to start designing tokenomics for a project
+ 
 
 ## Introduction
 
@@ -19,7 +21,7 @@ As opposed to Web2 games, where economies are controlled by the game developer, 
 
 ## What is tokenomics
 
-Tokenomics combines 'token' and 'economics', and refers to any economic ecosystem supported by tokens (fungible and/or non-fungible). While commonly used to refer to fungible tokens, it encompasses **all possible interactions** with **all tokens** within an ecosystem
+Tokenomics combines 'token' and 'economics', and refers to any economic ecosystem supported by tokens (fungible and/or non-fungible). While commonly used to refer to fungible tokens, it encompasses **all possible interactions** with **all tokens** within an ecosystem.
 
 ## Why is it important
 
@@ -29,16 +31,17 @@ There are numerous possibilities when it comes to tokens (both ERC721 and ERC20)
 - Community development - Acquire users with tokens
 - Governance - Enable users to vote on the project
 - Building game mechanics - Designing game loops around tokens
-- Fundraising - Selling tokens to investors
-- Monetisation - Taking a cut of transactions
+- Monetisation - Sale of tokens and/or taking a cut of transactions
 
-In a gaming context, understanding tokenomics and how they impact in-game economies is the key to designing a sustainable in-game economy. Sustainability is one of the greatest challenges in Web3 as any project can experience rapid growth in players and token price. However, not being able to manage this will lead to an equally fast decline.
+In-game economies are complex as they contain their own user segments, mechanics, and interactions. Here's [an example using Diablo II](https://metaversus.substack.com/p/diablo-ii). In Web3 gaming, understanding tokenomics and how they impact in-game economies is the key to designing a sustainable in-game economy.
 
-It's also important to consider tokenomics in **earlier** project stages because
+Sustainability is one of the greatest challenges in Web3 as any project can experience rapid growth in players and token demand. However, not being able to manage this can lead to an equally fast decline.
 
-- Tokenomics can directly impact future project decisions e.g. marketing, gameplay, and budget
+It's also important to consider tokenomics in **earlier** project stages because:
+
+- Tokenomics can directly impact future project decisions e.g. marketing, gameplay, and budget.
 - Managing tokens is resource intensive - a team is needed to manage strategy around tokens and in-game economy. Capital is also required for initiatives.
-- Decisions around tokenomics are difficult to change once the project is live
+- Decisions around tokenomics are difficult to change once the project is live.
 
 ## How do you start developing your tokenomics
 
@@ -57,7 +60,9 @@ A good starting point is asking yourself **how your tokens fit into the purpose,
 
 In this section, we'll introduce you to a few tokenomic concepts, how they impact game economies, and then tie this together with an example framework you can follow.
 
+We strongly recommend you seek your own expert legal and compliance advice as early as possible in the process of developing your tokenomics approach. There are a wide range of legal complexities to consider that are best thought through early, and the regulatory landscape continues to develop rapidly and diversely across jurisdictions.
+
 ## Articles in this section
 
-- [Core tokenomic concepts](../Tokenomics/Core%20tokenomic%20concepts)
-- [Designing your in-game economy](../Tokenomics/Designing%20an%20in%20game%20economy)
+- [Core tokenomic concepts](core-tokenomics-concepts)
+- [Designing your in-game economy](designing-in-game-economies)

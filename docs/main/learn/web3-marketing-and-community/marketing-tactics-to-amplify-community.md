@@ -9,7 +9,7 @@ In this article you will learn
 
 - An introduction to marketing tactics
 
-# Introduction
+**Introduction**
 
 While community ultimately drives the success of a game launch or primary sale, marketing helps to amplify community efforts by increasing the visibility and reach of your project.
 
@@ -25,7 +25,7 @@ In this section, we'll explore a range of marketing tactics that can amplify the
 
 There is no 'one size fits all approach' - with how early we are in Web3, marketing strategies have not matured and are constantly changing. They are a plethora of successful Web2 gaming projects and, beyond this, clever marketing execution of all sorts of products across the ages. These success stories can help you brainstorm ideas for your own campaigns, and adapting them to your project will save you resources that can be spent elsewhere.
 
-It's also worth mentioning that mainstream coverage from Web2 outlets is seen as a positive health indicator for the project, given that it is harder to achieve than Web3 coverage. Thus, you will likely need to combine your [community-building efforts](https://docs.google.com/document/d/1v4fTmOCXaNdYNVaXDogEYTv6_PGWjAMEYLA_tFupTXk/edit#) with marketing strategies for both Web2 and Web3 audiences.
+It's also worth mentioning that mainstream coverage from Web2 outlets is seen as a positive health indicator for the project, given that it is harder to achieve than Web3 coverage. Thus, you will likely need to combine your [community-building efforts](building-communities-in-different-channels) with marketing strategies for both Web2 and Web3 audiences.
 
 ## **Website and Branding**
 
@@ -59,7 +59,6 @@ Here are some examples of blog content:
 - [Gameplay tutorials](https://blog.godsunchained.com/2022/10/06/gods-unchained-game-modes/)
 - [Development updates](https://blog.godsunchained.com/2022/08/11/dev-update-august/)
 - [Team member spotlight](https://blog.godsunchained.com/2022/10/06/meet-the-team/)
-
 - [Partnership announcements or spotlights](https://www.immutable.com/blog/aqua-partner-profile)
 - [Lore updates](https://blog.godsunchained.com/2022/09/28/cosmic-shift-mechanics/)
 
@@ -73,7 +72,7 @@ Press releases are another channel to broadcast information. They are less impac
 
 ## **Email Marketing**
 
-Email marketing can be used for projects with multiple launches over a sustained period. Emails can be collected on the website or through a landing page associated with events or giveaways. By providing regular updates through emails, you can experiment with content, copy and headlines to find what increases email open rates.
+Email marketing can be used for projects with multiple launches over a sustained period. Emails can be collected on the website or through a landing page associated with events or giveaways. By providing regular updates through emails, you can experiment with content, copy and headlines to find what increases email open rates. Make sure you get your own legal advice to make sure how you collect user emails and undertake email marketing complies with all relevant laws and regulations.
 
 ## **Paid Advertising**
 
@@ -85,7 +84,7 @@ Opportunities for paid amplification of posts include:
 - Key Announcements Videos (YouTube, Twitter)
 - Events Promotions (Twitter)
 
-Note: Some platforms have terms and conditions around paid promotions on cryptocurrency, NFT and competitions. These should be reviewed on a case-by-case basis ahead of any paid promotion.
+Note: Some platforms have terms and conditions around paid promotions on cryptocurrency, NFT and competitions in addition to relevant laws and regulations. These should be reviewed on a case-by-case basis ahead of any paid promotion.
 
 ## **Agencies and Third Parties**
 

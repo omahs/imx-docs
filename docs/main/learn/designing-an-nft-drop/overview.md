@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Overview"
-slug: "/learn/launch-design"
+slug: "/learn/designing-an-nft-drop"
 keywords: [imx-growth]
 ---
 
@@ -67,5 +67,5 @@ Through these examples, we can see why it's critical to understand your primary 
 
 # Articles in this section
 
-- [Understanding launch mechanics](../Launch%20design/Understanding%20launch%20mechanics)
-- [Putting it all together](../Launch%20design/Putting%20it%20all%20together)
+- [Understanding launch mechanics](understanding-launch-mechanics)
+- [Putting it all together](putting-it-all-together)

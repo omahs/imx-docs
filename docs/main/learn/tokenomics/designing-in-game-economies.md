@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: "Designing an in game economy"
-slug: "/learn/designing-in-game-economy"
+slug: "/learn//designing-in-game-economies"
 keywords: [imx-growth]
 ---
 

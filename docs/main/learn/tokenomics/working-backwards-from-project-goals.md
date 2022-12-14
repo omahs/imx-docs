@@ -18,7 +18,7 @@ This template is a rough guideline to determine your approach to tokenization.
 
 1.  Fill in the following template
 
-![Template_workingbackwards](./src/static/img/../../../../../../../static/img/learn/template_workingbackwards.png)
+![Template_workingbackwards](../../..src/img/../../../../static/img/learn/template-working-backwards.png)
 
 1.  Review these additional points
 

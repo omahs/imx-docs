@@ -4,8 +4,9 @@ title: "Overview"
 slug: "/learn/narrative"
 keywords: [imx-growth]
 ---
+Subject to legal privelige
 
-In this article you will learn
+In this article you will learn:
 
 - What is narrative
 - Why narrative is important in Web3
@@ -21,7 +22,7 @@ For a Web3 gaming project, narrative typically encapsulates product, tokenomic d
 
 ## Why is narrative important?
 
-A project's narrative is the biggest driver of attention, investment and outcomes. Potential customers need to feel like a project has a high likelihood of being delivered, that it is differentiated from other projects, and it will be the 'next big thing'. In Web3 where the game product lags marketing and NFTs, this is uniquely critical.
+A project's narrative is the biggest driver of attention, investment and outcomes. Potential customers need to feel like a project has a high likelihood of being delivered, that it is differentiated from other projects, and it will be the 'next big thing'. In Web3 where the final game product can lag marketing and NFTs, this is uniquely critical.
 
 Internally, the narrative defines a single driving force for the project which informs the role of each team member. A powerful narrative sells the dream that the community (literally) buys into, creating a strong brand identity and an army of evangelists in the community.
 
@@ -31,10 +32,8 @@ Many of the most commercially successful Web3 gaming projects have shipped far l
 
 There are a number of ways to start your narrative creation process. Chances are you already know elements of this. Some of the reasons why you started the project in the first place is probably part of it (we'll go into sub-narratives). The following articles will provide a sample framework that you can use as a base to craft your own Web3 narrative.
 
-give you the right framework to work through with your team and develop this kickass narrative you need to differentiate and inspire your potential and current community members.
-
 ## Articles in this section
 
-- [Design a great core narrative](../Narrative/Designing%20a%20core%20narrative)
-- [Develop great sub-narratives](../Narrative/Designing%20sub%20narratives.md)
-- [How narrative impacts your game design](../Narrative/How%20narrative%20impacts%20game%20design)
+- [Design a great core narrative](designing-a-core-narrative)
+- [Develop great sub-narratives](designing-sub-narratives)
+- [How narrative impacts your game design](narrative-game-design)

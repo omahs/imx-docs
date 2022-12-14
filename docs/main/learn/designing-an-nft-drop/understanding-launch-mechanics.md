@@ -14,7 +14,7 @@ In this article you will learn
 
 ## Introduction
 
-In our [launch design introduction](https://docs.google.com/document/d/13ZMhiLP3DLgcFpmc1DT1LgzgMxQDyYbE5CXkhGYdyfI/edit#), we discussed why success is important and why you should specify launch goals. The next step is to understand the design decisions and trade-offs that can be made in designing your launch. These design decisions are called " **mechanics**" - they are key mechanics to consider when designing your launch are:
+In our [launch design introduction](designing-an-nft-drop), we discussed why success is important and why you should specify launch goals. The next step is to understand the design decisions and trade-offs that can be made in designing your launch. These design decisions are called " **mechanics**" - they are key mechanics to consider when designing your launch are:
 
 1. **NFT utility and target user segment:** what are you actually selling? Why would someone buy it? Who would buy it?
 2. **Pricing:** What will the assets cost? What is the mechanism of the sale?

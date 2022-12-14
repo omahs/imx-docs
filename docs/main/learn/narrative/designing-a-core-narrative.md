@@ -59,4 +59,4 @@ What doesn't work is when there's no mission and future aspiration beyond "play 
 
 **Next up**
 
-We suggest reading [developing sub narratives](https://docs.google.com/document/d/1hQrqPg8lKcbstU5vOAWCkp4exuRpLQ53Jy8txod0eIk/edit#) which helps you target your narrative to different audiences and also includes a template for you to fill out.
+We suggest reading [developing sub narratives](designing-sub-narratives) which helps you target your narrative to different audiences and also includes a template for you to fill out.

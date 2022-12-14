@@ -51,7 +51,7 @@ Discord is the primary community destination for Web3 natives. Along with Twitte
 - Be deliberate in creating channels to cater to different topics and purposes
 - Segment different channels into categories for clear organization
 - Include an international segment with different key languages based on your audience
-- Avoid creating too many channels to early. For discords with \<5k users, keep a small number of channels to consolidate conversation.
+- Avoid creating too many channels too early. For discords with \<5k users, keep a small number of channels to consolidate conversation.
 
 **Find active moderators across time zones to keep the server alive at all hours**
 
@@ -61,7 +61,7 @@ Discord is the primary community destination for Web3 natives. Along with Twitte
 
 - **Make Discord a project homebase** : Tease Discord exclusive information and content through your other social channels and website, driving fans back to Discord.
 - **Competitions and giveaways** : Run giveaways specifically on Discord, or require fans to join your discord to be eligible for competition entry.
-- **Live events** : Host events such as panels, fireside chats and AMAs directly on Discord. This is an opportunity to grow your Discord as well as engage new and existing fans. POAPs can even be used to give fans a takeaway..
+- **Live events** : Host events such as panels, fireside chats and AMAs directly on Discord. This is an opportunity to grow your Discord as well as engage new and existing fans. POAPs can even be used to give fans a takeaway.
 - **Collaborate with other projects** : Connect with partners who can provide value to your fans. Invite them to events on Discord and cross-pollinate between communities.
 - **Creative a positive #general channel:** The main public chatting channel, often called the #general channel, will be a primary destination for discussion. Ensure participation and oversight from moderators to make this a great experience for new and existing fans.
 
@@ -72,10 +72,13 @@ Discord is the primary community destination for Web3 natives. Along with Twitte
 - **Establish 'roles' as incentives:** Be clear about the different 'roles' that can be delegated to fans. By establishing a sense of ownership, hierarchy and significance (such as key fans being promoted to moderators), fans will be encouraged to work towards roles.
 - **Create a 'Discord Map':** Similar to an FAQ, create a static channel that serves as a map of the Discord. This can be used as both an onboarding flow and a general organizational tool.
 - **Consider third-party integrations:** Third party integrations allow increasing customization options such as gating parts of the server to NFT owners, verifying new users to prevent botting and implementing questing systems to incentivize behaviour. Integrations to consider include
-  - Setup and Management (necessary - choose one): [Dyno](https://dyno.gg/), [MEE6](https://mee6.xyz/), [Carl Bot](https://carl.gg/), [ProBot](https://probot.io/)
-  - Anti Raid (necessary): [Beemo](https://beemo.gg/)
-  - Discord Utility (nice to have): [Collab Land](https://collab.land/), [Server Stats Bot](https://serverstatsbot.com/)
-  - Recording AMAs (nice to have): [Craig](https://craig.chat/)
+  - Setup and Management (necessary - choose one): Such as [Dyno](https://dyno.gg/), [MEE6](https://mee6.xyz/), [Carl Bot](https://carl.gg/), [ProBot](https://probot.io/) or similar
+  - Anti Raid (necessary): Such as [Beemo](https://beemo.gg/) or similar
+  - Discord Utility (nice to have): Such as [Collab Land](https://collab.land/), [Server Stats Bot](https://serverstatsbot.com/) or similar
+  - Recording AMAs (nice to have): Such as [Craig](https://craig.chat/) or similar
+
+
+As always, make sure you do your own research when picking a tool to make sure it suits your needs - the above are simply examples of tools we have come across.
 
 ### Additional Channels
 
@@ -86,7 +89,7 @@ Discord is the primary community destination for Web3 natives. Along with Twitte
 - Instagram - Useful for announcements if audience is Web2
 - TikTok - Can be useful if targeting Gen Z
 
-## How to measure community health
+## General health check in
 
 Here are some general questions you can ask to check the state of your community:
 
@@ -96,7 +99,7 @@ Here are some general questions you can ask to check the state of your community
   - Ratio of online members to total members
   - Total # messages / total # users (1-2 messages per user indicates heavy bot presence/ low engagement. A high number per user indicates high engagement)
 3. Is your community _converting_ from other channels?
-  -  Twitter Followers / # Discord Followers (we consider a ratio \>1 successful).
+  - Twitter Followers / # Discord Followers (we consider a ratio \>1 successful).
 4. Is your community _retained_ or _churning_?
   - Is volume engagement increasing, static or decreasing over time?
 

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Overview"
-slug: "/learn/marketing-and-community"
+slug: "/learn/web3-marketing-and-community"
 keywords: [imx-growth]
 ---
 
@@ -18,7 +18,7 @@ We like to think of community as a noun and marketing as the verb that accompani
 - Community is the collection of your fans and collaborators
 - Marketing is how you get your fans and collaborators
 
-**Community** can include anyone that interacts with your project. These individuals can often be grouped into segments with similar characteristics and interests. Projects can segment however they like - a common method is via channels, e.g. Discord and Twitter. Another way of segmenting is via profiles, or roles in the ecosystem, e.g. players and investors.
+**Community** can include anyone that interacts with your project. These individuals can often be grouped into segments with similar characteristics and interests. Projects can segment however they like - a common method is via channels, e.g. Discord and Twitter. Another way of segmenting is via profiles, or roles in the ecosystem, e.g. players and traders.
 
 Some channels and profiles might overlap, meaning that certain channels might be predominantly a singular profile (i.e. GitHub and developers). In contrast, other channels might have multiple profiles (i.e. Discord has players and investors). Understanding these differences early means you'll be able to modulate your community strategies to make the most impact.
 
@@ -46,16 +46,13 @@ There is no silver-bullet solution to building an engaged and sustained communit
 
 ## Articles in this section
 
-- [Customer segmentation in Web3](Customer%20segmentation%20in%20Web3)
-- [Building communities in different channels](Building%20communities%20in%20different%20channels)
-- [Principles for community management](../Marketing%20&%20Community/Principles%20for%20community%20management)
-- [Marketing tactics to amplify community](../Marketing%20&%20Community/Marketing%20tactics%20to%20amplify%20community)
-- [How to manage collaboration](../Marketing%20&%20Community/Collaborations)
+- [Customer segmentation in Web3](customer-segmentation)
+- [Building communities in different channels](building-communities-in-different-channels)
+- [Principles for community management](principles-for-community-management)
+- [Marketing tactics to amplify community](marketing-tactics-to-amplify-community)
+- [How to manage collaboration](collaborations)
 
-## Resources
+## Additional Resources
 
 - [How to grow decentralized communities in Web3](https://medium.com/1kxnetwork/how-to-grow-decentralized-communities-1bf1044924f8)
 
-```info
-Note: I am unsure about the stance of including 3rd party documents
-```

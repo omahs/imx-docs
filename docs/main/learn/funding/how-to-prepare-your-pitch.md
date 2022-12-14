@@ -27,9 +27,9 @@ Before you put pen down on paper, it's important to get clarity on:
 - Your game and project narrative
 - Medium of the pitch
 
-As discussed in the [Understanding the Investor](https://docs.google.com/document/d/1mHQ14sunyDXlMKtrpvSwmFZrK9nNdh5zsB_1w10Tujs/edit#) topic, you should be prepared to develop multiple pitches depending on who the investor is, there should be no sacred cows when it comes to distilling and targeting the right message to the right audience.
+As discussed in the [understanding the Investor](understanding-the-investor) topic, you should be prepared to develop multiple pitches depending on who the investor is to deliver the right message to the right audience.
 
-Once you understand the investor, you'll need to adapt your game and project narrative to what the investor is looking for. Answering key questions on why they should care about your project, and invest in it. Some common questions are online in our [common investor questions](https://docs.google.com/document/d/16UuXdEN18yl4RDbvUcPL7M9wZRDYXUcW39xbu5-Vnw0/edit) article.
+Once you understand the investor, you'll need to adapt your game and project narrative to what the investor is looking for. Answering key questions on why they should care about your project, and invest in it. Some common questions are online in our [common investor questions](common-investor-questions) article.
 
 The medium of your pitch will help you determine an appropriate length and structure. Here are a few examples of different channels:
 
@@ -39,8 +39,7 @@ The medium of your pitch will help you determine an appropriate length and struc
 - Coffee chats
 - Send ahead read decks
 
-## - **![](https://lh3.googleusercontent.com/bzo5EZZZhGWMcZylOX-3Ho4uVLAZuDmfYB1oiliZXdHK8HmHXKIlq0sbtjVsnNr1opIiYiJVC2jtr7UJhlpPpuoxYT9vVfPU8XcZvP7DGOgYyWBEOIYfTZUVgPkzq6n8pV5UPjDqPH8i0f8UJaC0eiWQxDfaR7V56WZWViE-ZoMYwSJRJ8JEgv8Nj48vPw)**
-
+![](../../../../static/img/learn/pitch-length-2.png)
 
 You should use the Appendix of your pitch deck to highlight additional information from pitch discussions..A great set of appendices is really worth its weight in gold. t signals to investors that you know how to prioritize and that you have considered all the details and you're ready to provide more details.
 
@@ -70,13 +69,15 @@ A good starting point is to answer some typical headings a pitch would cover. Th
 - Team
 - Funding ask
 
-One way to practice how to answer these questions in a basic pitch is to follow this universal template [link: [https://www.slideshare.net/liubinskas/universal-startup-pitch-deck](https://www.slideshare.net/liubinskas/universal-startup-pitch-deck)] developed by Pollenizer Australia.
+One way to practice how to answer these questions in a basic pitch is to follow this [universal template](https://www.slideshare.net/liubinskas/universal-startup-pitch-deck) developed by Pollenizer Australia.
+
 
 **Developing your storylines**
 
-Once you have the basics down, it's important to then think about bigger picture, a good way to frame for this is discussed in this video by VC Brendan Baker [link: [https://www.youtube.com/watch?v=xr1PKaoflLo](https://www.youtube.com/watch?v=xr1PKaoflLo)]. The key concept here is to think about your pitch as a series of connected stories. You might start with a "pain and response" story, then tell the story of how early things you've done shows evidence it's working and ultimately go to a story which tells why you've built the best team to conquer this massive problem or opportunity.
+Once you have the basics down, it's important to then think about bigger picture, a good way to frame for this is discussed in [this video](https://www.youtube.com/watch?v=xr1PKaoflLo) by VC Brendan Baker. The key concept here is to think about your pitch as a series of connected stories. You might start with a "pain and response" story, then tell the story of how early things you've done shows evidence it's working and ultimately go to a story which tells why you've built the best team to conquer this massive problem or opportunity.
 
-![](https://lh6.googleusercontent.com/3a6rXr0W0RBRG89pG7h_8F1ECkbpza-FUiIWjmAfuQeHpQWd7CNIgSR1PZcvgwPAgzZ9-aJYjWw5TJAiz6651yehQc6UxzKsxwAXxXCPLQzq7opz1ry-Ro2UWJ9Z8c2UuyI8u0TLqNoD1IEx8qRHcJFoPmT1xo-iiUVLjgpuvQ2ZfvvOpDHO2v73_c-0UA)
+![](../../../../static/img/learn/pitch-length-2.png)
+
 
 
 **The extra 20%**

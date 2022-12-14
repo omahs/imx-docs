@@ -11,10 +11,8 @@ In this article you will learn
 
 **Prerequisites**
 
-- [Launch design introduction](https://docs.google.com/document/d/13ZMhiLP3DLgcFpmc1DT1LgzgMxQDyYbE5CXkhGYdyfI/edit#heading=h.xxi0l36v0oxc)
-- [Understanding launch mechanics](https://docs.google.com/document/d/1NXnbgPthRalvQwt-1_hdVhp8y7tDynI0H_V3c482zLI/edit#)
-
-In previous articles, we've discussed why success is important, defining your launch goals, and some mechanics you can use to engineer a sell-out. It's now time to put it all together! The theory is great, but it's time to get practical and focus on execution.
+- [Designing an NFT drop](designing-an-nft-drop)
+- [Understanding launch mechanics](understanding-launch-mechanics)
 
 # Launch targets
 
@@ -26,8 +24,7 @@ Some examples of SMART targets for an NFT launch are:
 
 - **Engineer a sellout** - 100% of available NFTs are purchased in \<1 day
 - **Attract unique buyers** - number of unique holders immediately after launch is \>25% of available NFTs
-- **Leave the community excited** - community perception of drop one week after launch is \>75% measured by a community pulse surrey.
-
+- **Leave the community excited** - community perception of drop one week after launch is \>75% measured by a community pulse survey.
 - **Build traders** - secondary trading volume in the two weeks after launch is \>10% of launch volume
 - **Build buying habit** - secondary trading prices in the two weeks after launch are \> primary sale price
 
@@ -53,7 +50,7 @@ Below are some practical recommendations to consider when planning for your laun
 
 # Putting it all together
 
-In this series, we've provided a lot of detailed information on concepts that you can use to inform your launch planning and design. It's a lot, so to summarize, we've put together a hand-dandy framework that you can use to guide you!
+In this series, we've provided a lot of detailed information on concepts that you can use to inform your launch planning and design. It's a lot, so to summarize, we've put together a handy-dandy framework that you can use to guide you!
 
 Here are the 8 steps you should follow:
 
@@ -71,8 +68,7 @@ Here are the 8 steps you should follow:
 3. Build in a 'temperature check' for community and technical readiness
 4. Allow at least 4 weeks between temperature checks and announcement of all details
 
-![](https://lh3.googleusercontent.com/2GNP7BCTTqwMp7Wk3fS2gZlbv5fAeigXin0N9KehvSNR6lADA_g5l3hAkOi17x9OhvNDvyuNcSLnWqcTe3lThPfuGCrurqVQ-tY_HPXkqzyt3zPSu-ezchmRBw-WpbGd52Wo3ugBP1qgAuPm2zqX5H2Hexp7Yd7xsVIlAngNkRQjIwZFihEb6imWMUNQ5g)
-
+![](../src/img/../../../../../static/img/learn/designing-your-launch-img.png)
 
 # Final thoughts
 
