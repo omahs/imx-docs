@@ -1,3 +1,10 @@
+## [1.32.3](https://github.com/immutable/imx-docs/compare/v1.32.2...v1.32.3) (2022-12-14)
+
+
+### Bug Fixes
+
+* **language:** add test folder ([1ebad5c](https://github.com/immutable/imx-docs/commit/1ebad5cc95eb88dc48f78fd21eaed49be59f4e56))
+
 ## [1.32.2](https://github.com/immutable/imx-docs/compare/v1.32.1...v1.32.2) (2022-12-12)
 
 
