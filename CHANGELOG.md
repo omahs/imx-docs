@@ -1,3 +1,10 @@
+## [1.32.4](https://github.com/immutable/imx-docs/compare/v1.32.3...v1.32.4) (2022-12-14)
+
+
+### Bug Fixes
+
+* **language:** update crowdin.yml ([e60e040](https://github.com/immutable/imx-docs/commit/e60e040ee28ba187fb59d09659c78fc4de58cff5))
+
 ## [1.32.3](https://github.com/immutable/imx-docs/compare/v1.32.2...v1.32.3) (2022-12-14)
 
 
