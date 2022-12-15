@@ -1,3 +1,10 @@
+## [1.32.5](https://github.com/immutable/imx-docs/compare/v1.32.4...v1.32.5) (2022-12-15)
+
+
+### Bug Fixes
+
+* **folder path:** broken link due to incorrect folder structure ([9b66d77](https://github.com/immutable/imx-docs/commit/9b66d77830f943b6d7e2560a52d4c683d00784c9))
+
 ## [1.32.4](https://github.com/immutable/imx-docs/compare/v1.32.3...v1.32.4) (2022-12-14)
 
 
