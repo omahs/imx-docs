@@ -4,6 +4,7 @@ slug: "/learn/getting-started"
 keywords: [imx-growth]
 ---
 
+check
 
 Welcome to the Learn section of our documentation. This section focuses on general Web3 knowledge aimed at maximizing the success of your project. For technical guides and code implementation, check out our [build section](https://docs.x.immutable.com/docs/start-here). 
 
@@ -38,4 +39,4 @@ Quickstart 
 
 **Disclaimer**
 
-Any information or content provided on this website is factual information for your general information only, is not financial product advice and does not consider your personal objectives, financial situation or needs. ImmutableX and contributors to this website are not liable for any decisions based on your use of this information or content. ImmutableX is not responsible for, and accepts no liability with respect to, any material, opinion, advice, statement or other content in this website that is attributed to a third party. ImmutableX does not hold an Australian financial services license. You should make your own enquiries and seek provisional advice before making any investment decisions.
+Any information or content provided on this website is factual information for your general information only, is not financial product advice and does not consider your personal objectives, financial situation or needs. ImmutableX and contributors to this website are not liable for any decisions based on your use of this information or content. ImmutableX is not responsible for, and accepts no liability with respect to, any material, opinion, advice, statement or other content in this website that is attributed to a third party. ImmutableX does not hold an Australian financial services license. You should make your own enquiries and seek provisional advice before making any investment decisions. 
