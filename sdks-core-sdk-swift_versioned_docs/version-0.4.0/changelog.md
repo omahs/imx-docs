@@ -17,10 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- (Breaking): rename ImmutableXCore to ImmutableX
+- (Breaking): rename ImmutableXCore to ImmutableX.
 This follows the new spec for the core SDKs that will come to swift shortly.
 
-- (Breaking): replace ropsten environment for sandbox
+- (Breaking): replace ropsten environment for sandbox.
 Ropsten has been deprecated and won't work anymore. Sandbox is the preferred testing environment.
 
 ## [0.3.1] - 2022-10-19

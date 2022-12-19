@@ -44,7 +44,56 @@ if err != nil {
 }
 ```
 
+## Generating Stark (Layer 2) keys
+
+Stark keys are required to transact on ImmutableX's StarkEx Layer 2. They are the equivalent of Ethereum keys on L1 and allow users to sign transactions like trade, transfer, etc.
+
+### Key registration
+
+On ImmutableX, the goal of generating a Stark key is to [register](https://docs.x.immutable.com/docs/how-to-register-users/) a mapping between the Stark public key and the user's Ethereum public key so that transactions requiring both L1 and L2 signers can be executed by users.
+
+### How to generate Stark keys on ImmutableX
+
+ImmutableX provides two Stark key generation methods:
+| Type of Stark key generated: | User connection methods: | When to use this method: | ImmutableX tools: |
+| --- | --- | --- | --- |
+| [Deterministic](#generating-or-retrieving-a-deterministic-key) - generated using the user's Ethereum key as a seed (which means that the same Ethereum key will always generate the same Stark key) | Users connect with their L1 wallet (ie. Metamask), as the L2 key can simply be obtained from the L1 key. | ***User experience*** - users don't have to store or remember Stark keys.<br/><br/> ***Interoperability*** - when generating Stark keys for a user, think about how else they will use these keys. If they will be connecting to other applications and those applications connect to users' Stark keys (L2 wallets) via an L1 wallet, then it is best that their Stark keys are generated using this method.  | [Link SDK](https://docs.x.immutable.com/docs/link-setup)<br/><br/>Core SDK's [`GenerateLegacyKey()`](https://github.com/immutable/imx-core-sdk-golang/blob/main/imx/signers/stark/factory.go#L57) method |
+| [Random and non-reproducible](#generating-a-random-non-deterministic-key) - not generated from a user's Ethereum key | Once this Stark key is [registered](#) on ImmutableX (mapped to an Ethereum key), the Stark key owner needs to know and input this.<br/><br/>**🚨 NOTE:** If this key isn't persisted and stored by the user, it cannot be recovered and a new key cannot be re-registered. | ***Security*** - a Stark key generated using this method is completely independent of an Ethereum key, so the compromise of an Ethereum key does not compromise a user's corresponding Stark key.<br/><br/>***Isolated use-case*** - this method is ideal for keys that are only used for one particular function, ie. in the backend of an application that allows tokens to be minted from a collection registered with this key. | <br/><br/>Core SDK's [`GenerateKey()`](https://github.com/immutable/imx-core-sdk-golang/blob/main/imx/signers/stark/factory.go#L33) method |
+
+### Generating or retrieving a deterministic key
+
+If your user has a Stark key that was generated using the deterministic method, the Core SDK provides a way for you to retrieve this key using the [`GenerateLegacyKey()`](https://github.com/immutable/imx-core-sdk-golang/blob/main/imx/signers/stark/factory.go#L57) method:
+```ts
+import { AlchemyProvider } from '@ethersproject/providers';
+import { Wallet } from '@ethersproject/wallet';
+import { generateLegacyStarkPrivateKey } from '@imtbl/core-sdk';
+
+// Create Ethereum signer
+const ethNetwork = 'goerli'; // Or 'mainnet'
+const provider = new AlchemyProvider(ethNetwork, YOUR_ALCHEMY_API_KEY);
+const ethSigner = new Wallet(YOUR_PRIVATE_ETH_KEY).connect(provider);
+
+// Get the legacy Stark private key
+const starkPrivateKey = generateLegacyStarkPrivateKey(ethSigner);
+```
+
+### Generating a random, non-deterministic key
+
+The Core SDK also provides a way to generate a random, non-reproducible key using the [`GenerateKey()`](https://github.com/immutable/imx-core-sdk-golang/blob/main/imx/signers/stark/factory.go#L33) method:
+
+#### 🚨🚨🚨 Warning 🚨🚨🚨
+> If you generate your own Stark private key, you will have to persist it. The key is [randomly generated](https://github.com/immutable/imx-core-sdk-golang/blob/main/imx/signers/stark/factory.go#L33) so **_cannot_** be deterministically re-generated.
+
+```go
+starkPrivateKey, err = stark.GenerateKey(l1signer)
+if err != nil {
+    log.Panicf("error in Generating Stark Private Key: %v\n", err)
+}
+```
+
 ## Operations requiring user signatures
+
+As Immutable X enables applications to execute signed transactions on both Ethereum (layer 1) and StarkEx (layer 2), signers are required for both these layers. In order to generate an Ethereum or Stark signer, a user's Ethereum or Stark private key is required.
 
 There are two types of operations requiring user signatures:
 
@@ -74,14 +123,9 @@ The first option, where an application obtains a user's private key directly, is
 
 The second option provides an application with an interface to the user's account by prompting the user to connect with their wallet application (ie. mobile or browser wallet). Once connected the app can begin asking the user to sign transactions and messages without having to reveal their private key.
 
-As Immutable X enables applications to execute signed transactions on both Ethereum (layer 1) and StarkEx (layer 2), signers are required for both these layers.
+## 1. Generate L1 and L2 signers
 
-### 1. Generate your own signers
-
-The Core SDK provides functionality for applications to generate Stark (L2) [private keys](https://github.com/immutable/imx-core-sdk-golang/blob/69af5db9a0be05afd9c91c6b371547cfe3bea719/imx/signers/stark/factory.go#L22) and [signers](https://github.com/immutable/imx-core-sdk-golang/blob/69af5db9a0be05afd9c91c6b371547cfe3bea719/imx/signers/stark/signer.go#L16).
-
-#### 🚨🚨🚨 Warning 🚨🚨🚨
-> If you generate your own Stark private key, you will have to persist it. The key is [randomly generated](https://github.com/immutable/imx-core-sdk-golang/blob/69af5db9a0be05afd9c91c6b371547cfe3bea719/imx/signers/stark/factory.go#L22) so **_cannot_** be deterministically re-generated.
+The Core SDK provides functionality for applications to generate Stark (L2) [signers](https://github.com/immutable/imx-core-sdk-golang/blob/69af5db9a0be05afd9c91c6b371547cfe3bea719/imx/signers/stark/signer.go#L16).
 
 ```go
 apiConfiguration := api.NewConfiguration()
@@ -99,12 +143,7 @@ if err != nil {
 
 // Endpoints like Withdrawal, Orders, Trades, Transfers require an L2 (stark) signer
 // Create Stark signer
-starkPrivateKey, err = stark.GenerateKey() // Or retrieve previously generated key
-if err != nil {
-    log.Panicf("error in Generating Stark Private Key: %v\n", err)
-}
-
-l2signer, err := stark.NewSigner(starkPrivateKey)
+l2signer, err := stark.NewSigner(YOUR_PRIVATE_STARK_KEY)
 if err != nil {
     log.Panicf("error in creating StarkSigner: %v\n", err)
 }
@@ -172,9 +211,9 @@ if err != nil {
 
 ### Contract requests
 
-ImmutableX is built as a ZK-rollup in partnership with StarkWare. We chose ZK-rollups because it is the only L2 scaling solution that has the same security guarantees as layer 1 Ethereum. The upshot of this is that you can mint or trade NFTs on ImmutableX with zero gas costs whilst not compromising on security -- the first true “layer 2” for NFTs on Ethereum.
+Immutable X is built as a ZK-rollup in partnership with StarkWare. We chose ZK-rollups because it is the only L2 scaling solution that has the same security guarantees as layer 1 Ethereum. The upshot of this is that you can mint or trade NFTs on Immutable X with zero gas costs whilst not compromising on security -- the first true “layer 2” for NFTs on Ethereum.
 
-The Core SDK provides interfaces for all smart contracts required to interact with the ImmutableX platform.
+The Core SDK provides interfaces for all smart contracts required to interact with the Immutable X platform.
 
 [See all smart contracts available in the Core SDK](#smart-contract-autogeneration)
 
@@ -212,7 +251,7 @@ The Immutable Solidity contracts can be found in the `contracts` folder. Contrac
 
 The Core contract is Immutable's main interface with the Ethereum blockchain, based on [StarkEx](https://docs.starkware.co/starkex-v4).
 
-[View contract](https://github.com/immutable/imx-core-sdk-golang/blob/632e4ed6975cf8da03e2dcb36291333391fe9f96/solidity/Core.sol)
+[View contract](./solidity/Core.sol)
 
 #### Registration
 
@@ -220,7 +259,7 @@ The Registration contract is a proxy smart contract for the Core contract that c
 
 For example, instead of making subsequent transaction requests to the Core contract, i.e. `registerUser` and `depositNft`, a single transaction request can be made to the proxy Registration contract - `registerAndWithdrawNft`.
 
-[View contract](https://github.com/immutable/imx-core-sdk-golang/blob/632e4ed6975cf8da03e2dcb36291333391fe9f96/solidity/Registration.sol)
+[View contract](./solidity/Registration.sol)
 
 #### IERC20
 

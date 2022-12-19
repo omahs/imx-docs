@@ -1,0 +1,25 @@
+{
+  "mainSidebar": [
+    {
+      "type": "category",
+      "label": "Core SDK Kotlin",
+      "items": [
+        "overview",
+        "installation",
+        "quickstart",
+        "sdk-functions",
+        "additional-info",
+        {
+          "type": "link",
+          "label": "Reference",
+          "href": "https://docs.x.immutable.com/sdk-references/core-sdk-kotlin/1.0.0-beta.1/"
+        },
+        {
+          "type": "link",
+          "label": "Github",
+          "href": "https://github.com/immutable/imx-core-sdk-kotlin-jvm/tree/v1.0.0-beta.1"
+        }
+      ]
+    }
+  ]
+}

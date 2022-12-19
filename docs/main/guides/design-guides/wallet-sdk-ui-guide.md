@@ -249,7 +249,7 @@ _Fiat onramp_ is still under development and not available in the SDK yet.
         </td>
         <td>
             <ul>
-                <li>Trigger the onramp flow (the Moonpay widget will take care of the rest)</li>
+                <li>Trigger the onramp flow (the MoonPay widget will take care of the rest)</li>
             </ul>
         </td>
     </tr>
@@ -277,11 +277,11 @@ _Crypto to fiat offramp_ is still under development and not available in the SDK
         </td>
         <td>
             <ul>
-                <li>Trigger the offramp flow (the Moonpay widget will take care of the rest)</li>
+                <li>Trigger the offramp flow (the MoonPay widget will take care of the rest)</li>
             </ul>
             Not mandatory, but useful to have:
             <ul>
-                <li>A note informing the user that the Moonpay offramp is only available to users in the US, UK, and EU.</li>
+                <li>A note informing the user that the MoonPay offramp is only available to users in the US, UK, and EU.</li>
             </ul>
         </td>
     </tr>

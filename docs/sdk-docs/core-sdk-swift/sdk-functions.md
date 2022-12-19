@@ -13,7 +13,7 @@ keywords: [imx-wallets]
 Utility functions accessed via `ImmutableX.shared` that will chain necessary API calls to complete a process or perform a transaction.
 
 - Register a user with ImmutableX
-- Buy cryptocurrency via Moonpay
+- Buy cryptocurrency via MoonPay
 - Buy ERC721
 - Sell ERC721
 - Cancel order
@@ -26,6 +26,6 @@ In order to use any workflow functions, you will need to pass in the connected w
 Once you have a `Signer` instance you can generate the user's STARK key pair and use the result to instantiate a `StarkSigner`, for example, by using the default `StandardStarkSigner` provided by the SDK.
 
 ```swift
-let keyPair = try await StarkKey.generateKeyPair(from: signer)
+let keyPair = try await StarkKey.generateLegacyKeyPair(from: signer)
 let starkSigner = StandardStarkSigner(pair: keyPair)
 ```

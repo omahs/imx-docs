@@ -1,0 +1,40 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.immutable.wallet.provider////PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet.provider/index.html
+$dokka.location:com.immutable.wallet.provider/Provider.WalletConnect///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet.provider/-provider/-wallet-connect/index.html
+$dokka.location:com.immutable.wallet.provider/Provider.WalletConnect/WalletConnect/#kotlin.String?#kotlin.String?#kotlin.String?#kotlin.collections.List[kotlin.String]?#kotlin.String?/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet.provider/-provider/-wallet-connect/-wallet-connect.html
+$dokka.location:com.immutable.wallet.provider/Provider.WalletConnect/appDescription/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet.provider/-provider/-wallet-connect/app-description.html
+$dokka.location:com.immutable.wallet.provider/Provider.WalletConnect/appIcons/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet.provider/-provider/-wallet-connect/app-icons.html
+$dokka.location:com.immutable.wallet.provider/Provider.WalletConnect/appName/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet.provider/-provider/-wallet-connect/app-name.html
+$dokka.location:com.immutable.wallet.provider/Provider.WalletConnect/appUrl/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet.provider/-provider/-wallet-connect/app-url.html
+$dokka.location:com.immutable.wallet.provider/Provider.WalletConnect/bridgeServerUrl/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet.provider/-provider/-wallet-connect/bridge-server-url.html
+$dokka.location:com.immutable.wallet.provider/Provider///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet.provider/-provider/index.html
+$dokka.location:com.immutable.wallet////PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/index.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/index.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/connect/#com.immutable.wallet.provider.Provider/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/connect.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/disconnect/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/disconnect.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/getWalletAddress/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/get-wallet-address.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/init/#android.app.Application/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/init.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/isConnected/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/is-connected.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/removeCallback/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/remove-callback.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/restartSession/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/restart-session.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/setCallback/#com.immutable.wallet.ImmutableXWalletCallback/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/set-callback.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/signer/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/signer.html
+$dokka.location:com.immutable.wallet/ImmutableXWallet/starkSigner/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet/stark-signer.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletCallback///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-callback/index.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletCallback/onStatus/#com.immutable.wallet.ImmutableXWalletStatus?#kotlin.Throwable?/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-callback/on-status.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletException///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-exception/index.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletException/ImmutableXWalletException/#kotlin.String/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-exception/-immutable-x-wallet-exception.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus.Connected///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/-connected/index.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus.Connecting///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/-connecting/index.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus.Disconnected///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/-disconnected/index.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus.PendingConnection///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/-pending-connection/index.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus.PendingConnection/PendingConnection/#android.content.Intent/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/-pending-connection/-pending-connection.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus.PendingConnection/intent/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/-pending-connection/intent.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus.PendingSignature///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/-pending-signature/index.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus.PendingSignature/PendingSignature/#android.content.Intent/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/-pending-signature/-pending-signature.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus.PendingSignature/intent/#/PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/-pending-signature/intent.html
+$dokka.location:com.immutable.wallet/ImmutableXWalletStatus///PointingToDeclaration/imx-wallet-sdk-android/com.immutable.wallet/-immutable-x-wallet-status/index.html
+com.immutable.wallet
+com.immutable.wallet.provider
+

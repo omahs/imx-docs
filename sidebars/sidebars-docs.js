@@ -20,7 +20,8 @@ module.exports = {
         'key-concepts/deep-dive-minting',
         'key-concepts/deep-dive-metadata',
         'key-concepts/deep-dive-royalties',
-        'key-concepts/deep-dive-deposits-withdrawals'
+        'key-concepts/deep-dive-deposits-withdrawals',
+        'key-concepts/deep-dive-api-concepts'
       ],
     },
     {
@@ -54,6 +55,7 @@ module.exports = {
             'guides/basic-guides/mint-assets/index',
             'guides/basic-guides/transfers/index',
             'guides/basic-guides/deposits-withdrawals/index',
+            'guides/basic-guides/on-off-ramp/index',
           ]
         },
         {
