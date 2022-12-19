@@ -1,3 +1,10 @@
+## [1.32.6](https://github.com/immutable/imx-docs/compare/v1.32.5...v1.32.6) (2022-12-19)
+
+
+### Bug Fixes
+
+* **docs/main/launch-collection/register-project/index.mdx:** fix broken page links ([8265943](https://github.com/immutable/imx-docs/commit/826594308cc39ac6ac335544c4ec639333daf118))
+
 ## [1.32.5](https://github.com/immutable/imx-docs/compare/v1.32.4...v1.32.5) (2022-12-15)
 
 
