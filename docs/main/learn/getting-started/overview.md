@@ -1,6 +1,7 @@
 ---
+sidebar_position: 1
 title: "Overview"
-slug: "/learn/getting-started"
+slug: "learn/getting-started"
 keywords: [imx-growth]
 ---
 

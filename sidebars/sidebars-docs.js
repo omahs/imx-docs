@@ -138,7 +138,6 @@ module.exports = {
     },
   ],
   learnSidebar: [
-    
     {
       type: 'category',
       label: 'Getting Started',
@@ -157,7 +156,7 @@ module.exports = {
         'learn/narrative/designing-a-core-narrative',
         'learn/narrative/designing-sub-narratives',
         'learn/narrative/how-narrative-impacts-game-design',
-               
+
       ],
     },
     {
@@ -169,7 +168,7 @@ module.exports = {
         'learn/tokenomics/core-tokenomics-concepts',
         'learn/tokenomics/designing-in-game-economies',
         'learn/tokenomics/working-backwards-from-project-goals'
-                    
+
       ],
     },
 
@@ -185,8 +184,8 @@ module.exports = {
         'learn/web3-marketing-and-community/marketing-tactics-to-amplify-community',
         'learn/web3-marketing-and-community/collaborations',
         'learn/web3-marketing-and-community/community-basics-template'
-                  
-                    
+
+
       ],
     },
 
@@ -198,11 +197,11 @@ module.exports = {
         'learn/designing-an-nft-drop/overview',
         'learn/designing-an-nft-drop/understanding-launch-mechanics',
         'learn/designing-an-nft-drop/putting-it-all-together',
-                
+
       ],
     },
-       
-    { 
+
+    {
       type: 'category',
       label: 'Funding',
       link: { type: 'doc', id: 'learn/funding/overview' },
@@ -211,19 +210,13 @@ module.exports = {
         'learn/funding/how-to-prepare-your-pitch',
         'learn/funding/investor-due-dilligence',
         'learn/funding/common-investor-questions',
-               
+
       ],
     },
-    { 
-      type: 'category',
+    {
+      type: 'doc',
       label: 'Disclaimer',
-      link: { type: 'doc', id: 'learn/disclaimer' },
-      items: [
-        'learn/disclaimer',
-              
-      ],
+      id: 'learn/disclaimer'
     },
   ],
-
-
 };

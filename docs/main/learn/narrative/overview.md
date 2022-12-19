@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: "Overview"
 slug: "/learn/narrative"
+pagination_next: "learn/narrative/designing-a-core-narrative"
 keywords: [imx-growth]
 ---
 
