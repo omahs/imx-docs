@@ -1,3 +1,10 @@
+## [1.32.7](https://github.com/immutable/imx-docs/compare/v1.32.6...v1.32.7) (2022-12-19)
+
+
+### Bug Fixes
+
+* fix build ([1d9744f](https://github.com/immutable/imx-docs/commit/1d9744f1741355560c9b5bc00a10f55445623e8c))
+
 ## [1.32.6](https://github.com/immutable/imx-docs/compare/v1.32.5...v1.32.6) (2022-12-19)
 
 
