@@ -13,7 +13,7 @@ In this article you will learn
 
 ## Introduction
 
-Tokenomics plays a key role in the long-term sustainability of projects and their ability to monetize. This impacts all of your customer segments, including players, developers and investors.
+Tokenomics plays a key role in the long-term sustainability of projects and their ability to monetize. This impacts all of your customer segments ranging from players to participants.
 
 As opposed to Web2 games, where economies are controlled by the game developer, Web3 gaming introduces ownership and external forces to in-game economies and monetization. This introduces opportunity, along with increased complexity in tokenomic designs. In some cases, designing tokenomics for a game can be comparable to managing the economy of a small nation.
 

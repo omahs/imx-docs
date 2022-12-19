@@ -27,7 +27,6 @@ Preparation is the key to delivering a good pitch. In this article we have provi
 - What milestones — particularly those related to growth and revenue — you will hit and when?
 - How much equity will you and the founding team maintain? (VCs want to make sure founders have enough skin in the game).
 - How much runway will the funding give you?
-- If a token round, what is the cliff/vesting period following token generation event (TGE)? why have you chosen these timeframes? (If you are 6+ months away from a TGE, investors will typically expect equity + token warrant deal)
 - If an equity round, what is the exit strategy?
 
 ## Investors
