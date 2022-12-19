@@ -5,7 +5,6 @@ slug: "/learn/customer-segmentation"
 keywords: [imx-growth]
 ---
 
-
 In this article you will learn
 
 - An introduction to customer segmentation
@@ -23,25 +22,29 @@ The purpose of segmentation is to help structure and test your strategy and tact
 ## How to segment
 Your customer segments and the relative attention you give to each segment today vs tomorrow, will differ depending on your lifecycle stage, your game mission, the type of game you're building, your target demographic, and a range of other factors.
 
-Here is a **general** framework for Web3 users. Having a logical split between customers makes it easier to differentiate between them - eg crypto native or not and player vs investor.
+Here's an example of a generic split:
 
-![](https://lh5.googleusercontent.com/CECbJLng49cnX1hnEf_mQ5_U8ttCb3BqJvf36nKpwuyQOoWYwGlJI2QpfVJRScXAqd5C_uvJRIFNJBzlMLhlPZu2fMCVVSuyN1l_35-SRTAWyD5WdAfrNjkoNeb3DAkQMrmo1hjvIquVJdXOnbS2T2eTWTMmaYsBNVR3gECUB-lXZGTcR1mAW-6_WHOP8g)
+![](../../../../static/img/learn/customer-segmentation-web3.png)
 
+There are many combinations of segments and you can go as deep as you'd like. Some projects may choose to segment further based on their needs and these subgroups will have significantly different behaviors. For example, players could also be broken down into lifecycle stages like 1-30 days or 30+ days and you may choose to use different strategies to target each group.
 
-Note: You may wish to develop your own segments further based on your project needs. For example, players can also be separated into lifecycles (1-30 days or 30+ days) - these groups will have significantly different behaviours and interests.
+If you're unsure where to start, having a high level split like Web3 audiences vs mainstream audiences can help you draw a clear line. You can also use segmentation by other parties for inspiration, for example [Naviik's 9 types of Blockchain Gamers](https://naavik.co/digest/blockchain-players) and slowly tailor these to your project.
+
 
 ## Template
 
 This template can be used as a preliminary exercise to segment your customers and determine tactics for each segment.
 
 1. We have filled in the first row as an example
-2. Fill in the other questions for each of your segments - they may vary from the examples we have used
+2. Fill in the other questions for each of your segments
 3. The tactics you focus on will be the ones that best serve your target segments
 
-|                          |                   |                                         |                                                                                                                                   |                                                                                                         |
-| ------------------------ | ----------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| **Segment**              | **Person**        | **Motivation**                          | **Priorities**                                                                                                                    | **Tactics**                                                                                             |
-| **Mainstream Player**    | Mainstream Gamer  | I am looking for a fun new game to play | <ul><li> Believe that the game will be fun to play with a strong concept and narrative </li> <li> Feel comfortable making the transition to web3 </li> </ul> | <ul><li> Develop a playable demo with positive reviews </li><li> Target prominent Web2 twitch streamers</li><li> Reddit AMA</li></ul>  |
-| **Degen player**         |                   |                                         |                                                                                                                                   |                                                                                                         |
-| **Mainstream investor ** |                   |                                         |                                                                                                                                   |                                                                                                         |
-| **Degen investor **      |                   |                                         |                                                                                                                                   |                                                                                                         |
+| **Segment** | **Person** | **Motivation** | **Priorities** | **Tactics** |
+| --- | --- | --- | --- | --- |
+| **Mainstream Player** | Mainstream Gamer | I am looking for a fun new game to play | <ul><li>Believe that the game will be fun to play with a strong concept and narrative</li><li>Feel comfortable making the transition to web3</li></ul> | <ul><li>Develop a playable demo with positive reviews</li><li>Target prominent Web2 twitch streamers</li><li>Reddit AMA </li></ul>
+  | **Degen Player** | | | | | 
+   **Mainstream Participant** | | | | 
+    **Degen Participant** | | | | 
+
+
+ 

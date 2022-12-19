@@ -4,9 +4,8 @@ title: "Overview"
 slug: "/learn/narrative"
 keywords: [imx-growth]
 ---
-Subject to legal privelige
 
-In this article you will learn:
+In this article you will learn
 
 - What is narrative
 - Why narrative is important in Web3

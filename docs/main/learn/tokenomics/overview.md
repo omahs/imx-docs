@@ -4,10 +4,8 @@ title: "Overview"
 slug: "/learn/tokenomics"
 keywords: [imx-growth]
 ---
+In this article you will learn
 
-## Subject to legal privelige
-
-In this article, you will learn:
 - What is tokenomics
 - Why its a critical part of a Web3 gaming project
 - How to start designing tokenomics for a project

@@ -5,17 +5,15 @@ slug: "/learn/why-do-an-NFT-drop"
 keywords: [imx-growth]
 ---
 
-**Subject to legal privelige**
-
-**In this article you will learn**
+In this article you will learn
 
 - Leading practices from ImmutableX regarding pre game NFT releases
 
 Game studios developing on ImmutableX often ask us about project phasing - whether they should release NFTs before launch, or focus all their efforts on finalizing their game. We have combined our experiences with almost a hundred projects across the protocol to help answer this question with a leading practice guide.
 
-_Tl;dr - executing an NFT release in the early days of a playable or test game remains the most effective way to phase your project_
+_Tl;DR - executing an NFT release in the early days of a playable or test game remains the most effective way to phase your project_
 
-The benefits of releasing NFTsprior to game launch fall into five categories:
+The benefits of releasing NFTs prior to game launch fall into five categories:
 
 1. Market validation
 2. User acquisition
@@ -45,7 +43,7 @@ Similar to the above, releasing NFTs early in the game's lifecycle allows for ex
 
 **Time to market**
 
-Finally, releasing NFTs early in the game's lifecycle can improve time to market for your project and can provide a strong first mover advantage. The Web3 gaming space is facing unprecedented investment and builders, but very few live projects. This may sometimes be exacerbated by macro sentiment generally reducing speculation. There is a unique opportunity to capture attention with a strategic NFT release tied to a broader game narrative, rather than building in stealth and trying to carve out attention alongside many competitors when market activity grows and/or when more games release. For example, there is significantly more competition when launching smartphone apps today vs launching them when smartphones were first released. Blocklords, a major game not releasing until 2023, has taken the opportunity to aggressively market a rolling cadence of airdrops, early access redemptions, and NFT sales, all accompanied by compelling pre-gameplay footage and a AAA narrative.
+Finally, releasing NFTs early in the game's lifecycle can improve time to market for your project and can provide a strong first mover advantage. The Web3 gaming space is facing unprecedented investment and builders, but very few live projects. This may sometimes be exacerbated by macro sentiment generally reducing speculation. There is a unique opportunity to capture attention with a strategic NFT release tied to a broader game narrative, rather than building in stealth and trying to carve out attention alongside many competitors when market activity grows and/or when more games release. For example, there is significantly more competition when launching smartphone apps today vs launching them when smartphones were first released. BLOCKLORDS, a major game not releasing until 2023, has taken the opportunity to aggressively market a rolling cadence of free banner claims, early access redemptions, and NFT sales, all accompanied by compelling pre-gameplay footage and a AAA narrative.
 
 **What's next? How do I design an NFT drop?**
 

@@ -5,8 +5,7 @@ slug: "/learn/understanding-launch-mechanics"
 keywords: [imx-growth]
 ---
 
-
-In this article you will learn
+In this article, you will learn:
 
 - What are 'launch mechanics'
 - Examples of launch mechanics
@@ -14,7 +13,7 @@ In this article you will learn
 
 ## Introduction
 
-In our [launch design introduction](designing-an-nft-drop), we discussed why success is important and why you should specify launch goals. The next step is to understand the design decisions and trade-offs that can be made in designing your launch. These design decisions are called " **mechanics**" - they are key mechanics to consider when designing your launch are:
+In our [designing an NFT drop introduction](../designing-an-nft-drop/overview.md), we discussed why success is important and why you should specify launch goals. The next step is to understand the design decisions and trade-offs that can be made in designing your launch. These design decisions are called " **mechanics**" - they are key mechanics to consider when designing your launch are:
 
 1. **NFT utility and target user segment:** what are you actually selling? Why would someone buy it? Who would buy it?
 2. **Pricing:** What will the assets cost? What is the mechanism of the sale?
@@ -23,7 +22,7 @@ In our [launch design introduction](designing-an-nft-drop), we discussed why suc
 
 Generally, for each mechanic in this article, we'll discuss options as if they are binary. In reality, they are not binary and should be considered ends of a multi-dimensional spectrum. The mechanics presented are suggestions and thought starters based on our experience rather than a definitive guide.
 
-New launch mechanics are being defined in web3 all the time, which is why it's important.
+New launch mechanics are being defined in Web3 all the time, which is why it's important.
 
 # Check the meta
 
@@ -43,25 +42,22 @@ You have likely already defined your NFT utility and target user segments, but i
 
 ### Define what you are selling
 
-It seems obvious, but make sure you are clear on exactly what you are selling. Once you've done this, check that what you are selling is aligned with your launch goals. For example, Land NFTs are generally a mechanism for fundraising, whereas low-value in-game items might not generate enough revenue to achieve a fundraising goal.
+It may seem straightforward, but make sure you are clear on exactly what you are selling. Once you've done this, check that what you are selling is aligned with your launch goals. For example, free minted in-game items can focus on community building, however since they can be minted at no cost, there may be less demand for it.
 
 ### Define the utility
 
-Be clear on why a customer would want to buy your NFT. For example, if you are selling land, what is the ROI and how does it work? It's important to check that your utility matters to your target segments. For example, gameplay benefits and in-game items are only valuable as investors think this will motivate buyers later.
+Be clear on why a customer would want to buy your NFT. For example, an in game asset can impact the appearance of a character, provide special access to an area, or connect to other forms of game utility. However, it's important to check that your utility matters to your target segment. This is important as demand for an asset will only be as valuable as the utility that a segment associates with it.
 
 ## Target User Segments
 
 To target your launch, define who you are selling to. This is your target user segment. There may be a mix of segments, but generally, you should have one primary target in mind. As you go about defining your mechanics, make sure that they make sense for your primary target.
 
- At Immutable, we consider user segments as three main groups: Investors, Traders, and Players.
+Here are a few examples of user segments: Early adopters and Players.
 
-### Investors
+###
+ Early adopters
 
-Investors can deploy significant capital and are focused on returns. They can seek capital appreciation or a productive return (ROI) for assets
-
-### Traders
-
-Traders can deploy significant capital and are focused on returns. They can be seeking a 'flip' of drops or longer-term trading of game assets
+Early adopters aim to be the first to gain access to an offering. They can benefit in various ways including prestige, becoming an influencer, or getting exclusive rewards.
 
 ### Players
 
@@ -73,14 +69,33 @@ When designing your launch, pricing is likely to be top of mind. These days, cry
 
 ## Pricing mechanism
 
-There are primarily three strategies we can compare when considering pricing: Fixed price, Auctions and Raffles. 
+There are primarily three strategies we can compare when considering pricing: Fixed price, Auctions and Raffles.
 
-|                 |                                                                  |                                                                                                                                                                |                                                                                                                                                                                     |
-| --------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                 | **Description**                                                  | **Pros**                                                                                                                                                       | **Cons**                                                                                                                                                                            |
-| **Fixed Price** | Price is set by you ahead of time                                |  <ul><li>Simplest execution</li><li>Can engineer a sellout and build habits by slightly lowering prices</li><li>transparency for buyers and predictability for the project</li></ul> | <ul><li>May leave money on the table. Vulnerable to botting.</li></ul>                                                                                                                             |
-| **Auctions**    | A Dutch or English Auction, where customers bid to set the price | <ul><li> Finds market price, no money on the table </li></ul>                                                                                                                   | <ul><li>Complex to execute</li><li>Unpredictable revenue </li><li> No money left on the table for buyers to benefit</li><li> Stalls secondary trading</li>  </ul>                                                   |
-| **Raffles **    | A customer buys a chance to obtain an asset                      | <ul><li> Increased potential revenue by raffling either whitelist or the asset itself     </li></ul>                                                                            | <ul><li>Complex to execute</li><li> Unpredictable revenue, vulnerable to effective under-pricing if few tickets sold </li> <li> Risks negative sentiment for those missing out and can lead to distrust </li></ul> |
+|
+ | **Description** | **Pros** | **Cons** |
+| --- | --- | --- | --- |
+| **Fixed Price** | Price is set by you ahead of time |
+- Simplest execution.
+- Can engineer a sellout and build buying habits by slightly lower prices.
+- Transparency for buyers and predictability for the project
+ |
+- May leave money on the table. Vulnerable to botting
+ |
+| **Auctions** | A Dutch or English Auction, where customers bid to set the price |
+- Finds market price, no money on the table
+ |
+- Complex to execute.
+- Unpredictable revenue.
+- No money left on the table for buyers to benefit - stalls secondary trading.
+ |
+| **Raffles** | A customer buys a chance to obtain an asset |
+- Increased potential revenue by raffling either whitelist or the asset itself
+ |
+- Complex to execute.
+- Unpredictable revenue, vulnerable to effective under-pricing if few tickets sold
+- Risks negative sentiment for those missing out and can lead to distrust
+- May require permits in some jurisdictions and you should seek legal advice
+ |
 
 ## Price value
 
@@ -92,7 +107,7 @@ Especially for your first launch, it is worth considering under-pricing as a pri
 
 Under-pricing is a tactic that can be used to increase the likelihood of a sellout. This also builds a customer buying habit for future launches and pushes trade activity to the secondary market post-launch, which is a strong signal to the market.
 
- The main downside to this approach is that money is left on the table, which is most relevant if your primary launch goal is to fundraise.
+ The main downside to this approach is that money is left on the table
 
 ### Using Market Price
 
@@ -102,18 +117,18 @@ Fair, i.e. market and price for your NFTs, can be a valuable strategy in some ca
 
 Whether you under-price or not, it's critical to know (or at the very least, approximate) the market price for your assets. In order of preference, we suggest determining the market price using the following tactics:
 
-1. First principles: calculating the price of your NFT based on the value it gives to the customer, e.g. yield-based for ROI generating assets
+1. First principles: calculating the price of your NFT based on the value it gives to the customer
 2. Project history: calculating the price of your NFTs based on data from demand for previous launches or current secondary trading volume
 3. Community feedback: directly or indirectly ask your community how much they'd be willing to pay. You can ask for expressions of interest, conduct polls, or monitor community chatter
 4. Market comparison: comparing the success of analogous drops in the market. For this to work, it's important to compare launches with similar NFT utility, launch mechanics, and community size.
 
 # Scarcity
 
-Scarcity drives excitement and FOMO, which seasoned web3 players will know is a driver of success in the space. Conversely, over-supply risks losing (or worse, never gaining) sale momentum which can be disastrous. Scarcity comprises the number of available NFTs for a given drop and how distribution is phased.
+Scarcity drives excitement and FOMO, which seasoned Web3 players will know is a driver of success in the space. Conversely, over-supply risks losing (or worse, never gaining) sale momentum which can be disastrous. Scarcity comprises the number of available NFTs for a given drop and how distribution is phased.
 
 ## Available NFTs
 
-Availability should be used as input based on community size/demand to engineer a sellout. In the absence of quantitative indication of demand from the community, a drop of no more than double community size is a reasonable start.
+Availability should be used as input based on community size/demand to engineer a sellout. In the absence of quantitative indication of demand from the community, a drop of no more than double community size might be a reasonable start for some projects.
 
 ### Volume cap
 
@@ -121,7 +136,7 @@ A volume cap is when there are a fixed number of NFTs for a given sale. The pros
 
 ### Time cap
 
-Having an unlimited supply that can only be accessed during a specific time frame can be valueable in some cases. The main pro is that it increases accessibility for a global customer base, which in turn may increase revenue. The flip side is that there is no clear market signal that the launch is going well or that it has sold out. This may cause buyers to "wait and see" which risks stalling an entire sale.
+Having an unlimited supply that can only be accessed during a specific time frame can be valuable in some cases. The main pro is that it increases accessibility for a global customer base, which in turn may increase revenue. The flip side is that there is no clear market signal that the launch is going well or that it has sold out. This may cause buyers to "wait and see" which risks stalling an entire sale.
 
 ## Phasing
 
@@ -143,7 +158,7 @@ Access to the sale itself (for example, whitelisting), and to the information de
 
 ## Access
 
-In all cases, 'per-wallet' limits should be set to control for bots and for a small number of users buying many of the available NFTs. While this reduces potential sales, the sentiment impact and risk of price dumps are worth the tradeoff
+In all cases, 'per-wallet' limits should be set to control for bots and for a small number of users buying many of the available NFTs. While this reduces potential sales, the sentiment impact and risk of price dumps are worth the tradeoff.
 
 Access decisions are particularly susceptible to the meta and market conditions, so make sure this is taken into account when designing this mechanic.
 
@@ -153,11 +168,11 @@ An open sale allows anyone, whether previously engaged with your project or not,
 
 ### Closed
 
-A closed sale employs tactics that reward the community for their participation through whitelisting, pre-sales or some other approach. This is a lever to reward the community and can tie whitelisting to user acquisition and pro-community activity. This, in turn, creates emotional ties to the project and can drive FOMO. The downside is that it's vulnerable to sentime (if a community perceives the mechanism of deciding access to be unfair) and limits the total number of possible buyers.
+A closed sale employs tactics that reward the community for their participation through whitelisting, pre-sales or some other approach. This is a lever to reward the community and can tie whitelisting to user acquisition and pro-community activity. This, in turn, creates emotional ties to the project and can drive FOMO. The downside is that it's vulnerable to sentiment (if a community perceives the mechanism of deciding access to be unfair) and limits the total number of possible buyers.
 
 ### Transparency
 
-Transparency refers to the amount of information a project gives to potential buyers in the lead-up to a launch. In general, and especially in bearish market conditions, we suggest an open approach, which provides users with relevant information on utility and sales mechanics (including any randomness). This builds trust with your community and avoids buyers dumping their NFTs after a disappointing purchase. The inverse approach is to obfuscate launch information to drive buyer speculation. The benefit of this approach is to drive sales activity based on speculation. This is a risky approach and should be implemented with caution - if the community is not sufficiently excited when the mystery is revealed you risk a post-sale dump.
+Transparency refers to the amount of information a project gives to potential buyers in the lead-up to a launch. In general, and especially in bearish market conditions, it may be worth considering an open approach, which provides users with relevant information on utility and sales mechanics (including any randomness). This builds trust with your community and avoids buyers dumping their NFTs after a disappointing purchase. The inverse approach is to obfuscate launch information to drive buyer speculation. The benefit of this approach is to drive sales activity based on speculation. This is a risky approach and should be implemented with caution - if the community is not sufficiently excited when the mystery is revealed you risk a post-sale dump.
 
 # In the next article…
 

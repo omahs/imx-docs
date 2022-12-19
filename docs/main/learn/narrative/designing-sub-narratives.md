@@ -5,8 +5,6 @@ slug: "/learn/designing-sub-narratives"
 keywords: [imx-growth]
 ---
 
-Subject to legal privilege
-
 In this article you will learn
 
 - What is a sub-narrative
@@ -19,13 +17,13 @@ Sub-narratives are the "secret sauce" and differentiate a successful Web3 projec
 Here are two key segments of Web3 games:
 
 - **Players** , who are seeking entertainment. Attracting players is critical for the success of the project and needs to be the priority: a growing player base inherently attracts the other user segments due to speculation.
-- **Earners** , who are seeking income either by interacting with market elements (flipping NFTs or gaming the economy), or directly playing to earn. Attracting earners brings liquidity and market activity to the project.
+- **Participants** , who are seeking income either by interacting with market elements (flipping NFTs or gaming the economy), or directly playing to earn. Attracting earners brings liquidity and market activity to the project.
 
 Sub-narratives cascade from your core narrative and allow you to target these user segments effectively.
 
 ## How do I get started with sub-narratives?
 
-A good starting point is [understanding your customer segments](https://docs.google.com/document/d/1AmnS6No7UzeJq2bCwIIXHLPUgP06IFItFQMAzLAINys/edit#heading=h.enpuu8qopzci). Understanding the different needs and motivations between Players and Earners is critical in forming the right narrative and communication strategies. Once you understand the customer, you can work backwards from desired actions you want them to perform, emotional levers which you need to heighten to drive the desired actions. The template below can be used as a guide.
+A good starting point is [understanding your customer segments](../learn/../web3-marketing-and-community/customer-segmentation-in-web3.md). Understanding the different needs and motivations between Players and Earners is critical in forming the right narrative and communication strategies. Once you understand the customer, you can work backwards from desired actions you want them to perform, emotional levers which you need to heighten to drive the desired actions. The template below can be used as a guide.
 
 ## Template: Putting core and sub-narratives together
 
