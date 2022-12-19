@@ -4,13 +4,20 @@ title: "Building communities in different channels"
 slug: "/learn/building-communities-in-different-channels"
 keywords: [imx-growth]
 ---
-In this article you will learn
 
-- How to build communities in Twitter and Discord
-- A short overview of other channels
-- Sample questions to ask to measure community health
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-# Building communities in different channels
+<ListAdmonition>
+    <ul>
+        <li> How to build communities in Twitter and Discord</li>
+        <li> A short overview of other channels </li>
+        <li> Sample questions to ask to measure community health </li>
+     </ul>
+</ListAdmonition>
+
+
+
+# Introduction
 
 In this article we will cover the basics for building your community on Twitter and Discord. These channels are the most prominent in Web3, and we will briefly touch upon other channels later in the article. Feel free to mix and match these tactics to your own channels, and note that these tips are a guideline since tactics will continually evolve.
 

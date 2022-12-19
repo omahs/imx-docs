@@ -5,10 +5,15 @@ slug: "/learn/funding"
 keywords: [imx-growth]
 ---
 
-## In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- What is fundraising
-- Why fundraising is important
+<ListAdmonition>
+    <ul>
+        <li>What is fundraising</li>
+        <li> Why fundraising is important</li>
+     </ul>
+</ListAdmonition>
+
 
 ## Introduction
 

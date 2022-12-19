@@ -5,11 +5,16 @@ slug: "/learn/core-tokenomics-concepts"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
 
-- Core concepts in tokenomics
-- Key decisions you'll need to make in your design
-- Trade-offs for these decisions
+import ListAdmonition from '@site/src/components/ListAdmonition';
+
+<ListAdmonition>
+    <ul>
+        <li>Core concepts in tokenomics</li>
+        <li>Key decisions you'll need to make in your design</li>
+        <li>Trade-offs for these decisions</li>
+    </ul>
+</ListAdmonition>
 
 
 ## **Introduction**
@@ -52,14 +57,12 @@ Token count refers to how many distinct ERC20 tokens are in the ecosystem
 
 Here are some considerations for choosing your own token model:
 
-|                  |                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Token Model**  | **Characteristics**                                                                                                                                                                                                                                                                                                                                         |
-| **No tokens**    | <ul><li> Simplest to execute </li><li> In-game economy not exposed to speculation on token in secondary markets</li><li> Simple monetisation once live: primary NFT sales and royalties on NFT trades </li><li> Off-chain resources / currencies likely required to build mature game loops </li></ul>                                                                                                                          |
-| **Single token** | <ul><li> Relatively simple to execute </li><li> In-game economy may be exposed to speculation on token in secondary markets </li><li> Can align incentives: participants hold and use the same token and  benefit from upside </li><li> Monetary policy decisions (adjusting emissions or supply) will impact both participants</li></ul>                                                        |
-| **Dual token**   | <ul><li> Familiar model for the market, particularly relevant for fundraising </li><li> Isolates in-game economy from speculation on ‘governance-style’ token, isolates participants from in-game monetary policy decisions</li><li> Can separate incentives: governance tokens extract value from players and their activity, players extract value by farming and dumping currency</li></ul> |
-| **3+ tokens**    | <ul><li>As above, plus:</li><li>  Additional tokens add additional controls for monetary policy and sustainability</li><li> However, they also add complexity and expose economy to unexpected outcomes </li></ul>                                                                                                                                                                |
-                                                                                                                   |
+| Token Model     | Characteristics |
+| ----------- | ----------- |
+| **No tokens **    | <ul><li> Simplest to execute </li><li> In-game economy not exposed to speculation on token in secondary markets</li><li> Simple monetisation once live: primary NFT sales and royalties on NFT trades </li><li> Off-chain resources / currencies likely required to build mature game loops </li></ul>                                                          |
+| **Single token** | <ul><li> Relatively simple to execute </li><li> In-game economy may be exposed to speculation on token in secondary markets </li><li> Can align incentives: participants hold and use the same token and  benefit from upside </li><li> Monetary policy decisions (adjusting emissions or supply) will impact both participants</li></ul>                               |
+| **Dual tokens**   | <ul><li> Familiar model for the market, particularly relevant for fundraising </li><li> Isolates in-game economy from speculation on ‘governance-style’ token, isolates participants from in-game monetary policy decisions</li><li> Can separate incentives: governance tokens extract value from players and their activity, players extract value by farming and dumping currency</li></ul> |        |
+| **3+ tokens**    | <ul><li>As above, plus:</li><li>  Additional tokens add additional controls for monetary policy and sustainability</li><li> However, they also add complexity and expose economy to unexpected outcomes </li></ul>                                  |
 
 
 

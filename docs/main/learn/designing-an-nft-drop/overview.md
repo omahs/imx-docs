@@ -5,11 +5,15 @@ slug: "/learn/designing-an-nft-drop"
 keywords: [imx-growth]
 ---
 
-In this article you will learn:
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- What a successful NFT launch looks like
-- What are launch goals
-- How launch goals impact launch design
+<ListAdmonition>
+    <ul>
+        <li>What a successful NFT launch looks like</li>
+        <li> What are launch goals</li>
+        <li> How launch goals impact launch design </li>
+     </ul>
+</ListAdmonition>
 
 # Introduction
 

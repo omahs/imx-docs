@@ -5,11 +5,17 @@ slug: "/learn/customer-segmentation"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- An introduction to customer segmentation
-- Why you should segment
-- A sample framework on segmentation
+<ListAdmonition>
+    <ul>
+        <li> An introduction to customer segmentation</li>
+         <li>Why you should segment</li>
+        <li>A sample framework on segmentation</li>
+    </ul>
+</ListAdmonition>
+
+
 
 ## Introduction
 

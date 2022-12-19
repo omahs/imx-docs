@@ -5,11 +5,16 @@ slug: "/learn/narrative"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- What is narrative
-- Why narrative is important in Web3
-- How to start developing your narrative
+<ListAdmonition>
+    <ul>
+        <li>What is narrative</li>
+        <li>Why narrative is important in Web3</li>
+        <li>How to start developing your narrative</li>
+    </ul>
+</ListAdmonition>
+
 
 ## Introduction
 

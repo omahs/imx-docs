@@ -5,11 +5,15 @@ slug: "/learn/understanding-launch-mechanics"
 keywords: [imx-growth]
 ---
 
-In this article, you will learn:
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- What are 'launch mechanics'
-- Examples of launch mechanics
-- Trade offs in launch mechanics
+<ListAdmonition>
+    <ul>
+        <li>What are 'launch mechanics'</li>
+        <li> Examples of launch mechanics</li>
+        <li> Trade offs in launch mechanics </li>
+     </ul>
+</ListAdmonition>
 
 ## Introduction
 
@@ -22,7 +26,7 @@ In our [designing an NFT drop introduction](../designing-an-nft-drop/overview.md
 
 Generally, for each mechanic in this article, we'll discuss options as if they are binary. In reality, they are not binary and should be considered ends of a multi-dimensional spectrum. The mechanics presented are suggestions and thought starters based on our experience rather than a definitive guide.
 
-New launch mechanics are being defined in Web3 all the time, which is why it's important.
+New launch mechanics are being defined in Web3 all the time, which is why it's important to..
 
 # Check the meta
 
@@ -34,9 +38,7 @@ When designing your launch, always consider the meta to maximize success.
 
 # Mechanic 1: NFT Utility and Target User Segment
 
-What are you actually selling? Why would someone buy it? Who would buy it?
-
-You have likely already defined your NFT utility and target user segments, but it's worthwhile to re-examine them so you can validate them against your launch goals and adjust as required. These mechanics are more open-ended as they depend on your project's overall design
+What are you actually selling? Why would someone buy it? Who would buy it? You have likely already defined your NFT utility and target user segments, but it's worthwhile to re-examine them so you can validate them against your launch goals and adjust as required. These mechanics are more open-ended as they depend on your project's overall design.
 
 ## NFT Utility
 
@@ -48,22 +50,21 @@ It may seem straightforward, but make sure you are clear on exactly what you are
 
 Be clear on why a customer would want to buy your NFT. For example, an in game asset can impact the appearance of a character, provide special access to an area, or connect to other forms of game utility. However, it's important to check that your utility matters to your target segment. This is important as demand for an asset will only be as valuable as the utility that a segment associates with it.
 
-## Target User Segments
+## Target user segments
 
 To target your launch, define who you are selling to. This is your target user segment. There may be a mix of segments, but generally, you should have one primary target in mind. As you go about defining your mechanics, make sure that they make sense for your primary target.
 
 Here are a few examples of user segments: Early adopters and Players.
 
-###
- Early adopters
+**Early adopters**
 
 Early adopters aim to be the first to gain access to an offering. They can benefit in various ways including prestige, becoming an influencer, or getting exclusive rewards.
 
-### Players
+**Players**
 
 Players buy to use. They can deploy less capital and are more utility-focused. They can be seeking gameplay benefits and utility within the community, such as status or early access.
 
-# Pricing
+# Mechanic 2: Pricing
 
 When designing your launch, pricing is likely to be top of mind. These days, crypto audiences are highly sensitive to anything they perceive as a money grab, so you should be careful in designing your pricing strategy. The two key pricing elements are the mechanism (how the price will change, if at all, over the launch) and the value (what the drop will cost).
 
@@ -71,31 +72,12 @@ When designing your launch, pricing is likely to be top of mind. These days, cry
 
 There are primarily three strategies we can compare when considering pricing: Fixed price, Auctions and Raffles.
 
-|
- | **Description** | **Pros** | **Cons** |
-| --- | --- | --- | --- |
-| **Fixed Price** | Price is set by you ahead of time |
-- Simplest execution.
-- Can engineer a sellout and build buying habits by slightly lower prices.
-- Transparency for buyers and predictability for the project
- |
-- May leave money on the table. Vulnerable to botting
- |
-| **Auctions** | A Dutch or English Auction, where customers bid to set the price |
-- Finds market price, no money on the table
- |
-- Complex to execute.
-- Unpredictable revenue.
-- No money left on the table for buyers to benefit - stalls secondary trading.
- |
-| **Raffles** | A customer buys a chance to obtain an asset |
-- Increased potential revenue by raffling either whitelist or the asset itself
- |
-- Complex to execute.
-- Unpredictable revenue, vulnerable to effective under-pricing if few tickets sold
-- Risks negative sentiment for those missing out and can lead to distrust
-- May require permits in some jurisdictions and you should seek legal advice
- |
+|  | Description    | Pros | Cons | 
+| ------| ----------- | ----------- | ---|
+| Fixed price | Price is set by you ahead of time    | <ul><li>Simplest execution</li><li>Can engineer a sellout and build buying habits by slightly lower prices</li><li>Transparency for buyers and predictability for the project</li></ul> | <ul><li>May leave money on the table. Vulnerable to botting</li></ul> | 
+| Auctions | A Dutch or English auction where customers bid to set the price  | <ul><li>Finds market price, no money on the table</li></ul>   | <ul><li>Complex to execute</li><li>Unpredictable revenue</li><li>No money left on the table for buyers to benefit - stalls secondary trading</li></ul> |    | --- |
+| Raffles | A customer buys a chance to obtain an asset  | <ul><li>Increased potential revenue by raffle either whitelist or the asset itself</li></ul> | <ul><li>Complex to execute</li><li>Unpredictable revenue, vulnerable to under pricing if few tickets sold</li><li>Risks negative sentiment for those missing out and can lead to distrust</li></ul> |        | --- |
+
 
 ## Price value
 
@@ -122,7 +104,7 @@ Whether you under-price or not, it's critical to know (or at the very least, app
 3. Community feedback: directly or indirectly ask your community how much they'd be willing to pay. You can ask for expressions of interest, conduct polls, or monitor community chatter
 4. Market comparison: comparing the success of analogous drops in the market. For this to work, it's important to compare launches with similar NFT utility, launch mechanics, and community size.
 
-# Scarcity
+# Mechanic 3: Scarcity
 
 Scarcity drives excitement and FOMO, which seasoned Web3 players will know is a driver of success in the space. Conversely, over-supply risks losing (or worse, never gaining) sale momentum which can be disastrous. Scarcity comprises the number of available NFTs for a given drop and how distribution is phased.
 
@@ -152,7 +134,7 @@ Phasing is a particularly useful lever to drive sellouts and excitement even whe
 
 Single drops are valuable when you have confidence that your launch will succeed. It allows you to project a flashy vanity metric to the market as all interest is driven to a single event. However, it is risky as it pins launch outcomes on a single event, so should be undertaken with caution.
 
-# Access and Transparency
+# Mechanic 4: Access and Transparency
 
 Access to the sale itself (for example, whitelisting), and to the information defining the sale, are key mechanics to tie to your launch goals.
 

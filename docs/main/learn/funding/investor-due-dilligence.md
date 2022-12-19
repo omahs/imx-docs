@@ -4,12 +4,15 @@ title: "Investor due dilligence"
 slug: "/learn/investor-due-dilligence"
 keywords: [imx-growth]
 ---
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-In this article you will learn
-
-- What is investor due diligence
-- The value of an appendix in a pitch deck
-- Standard documents to include in a pitch deck
+<ListAdmonition>
+    <ul>
+        <li> What is investor due diligence</li>
+        <li> The value of an appendix in a pitch deck</li>
+        <li>Standard documents to include in a pitch deck </li>
+     </ul>
+</ListAdmonition>
 
 ## Introduction
 
@@ -60,6 +63,3 @@ A theme we followed in this section of how to raise funding is that not all inve
 
 Agreeing upfront as to what are the topic areas of interest is usually a great starting point, when you get beyond the basic set of information above. Specifically it's important to discern what's nice to have and what's must have information.
 
-## Further reading
-
-- Checklist for due diligence

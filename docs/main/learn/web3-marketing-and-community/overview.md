@@ -5,11 +5,15 @@ slug: "/learn/web3-marketing-and-community"
 keywords: [imx-growth]
 ---
 
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-In this article you will learn
+<ListAdmonition>
+    <ul>
+        <li> What is marketing and community</li>
+        <li> Why marketing and community is important </li>
+    </ul>
+</ListAdmonition>
 
-- What is marketing and community
-- Why marketing and community is important
 
 ## Introduction
 

@@ -5,11 +5,16 @@ slug: "/learn/understanding-the-investor"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- Basic questions to ask when researching an investor
-- How to target the right investor
-- How an investor thinks
+<ListAdmonition>
+    <ul>
+        <li>Basic questions to ask when researching an investor</li>
+        <li> How to target the right investor</li>
+        <li> How an investor thinks </li>
+     </ul>
+</ListAdmonition>
+
 
 ## Introduction
 

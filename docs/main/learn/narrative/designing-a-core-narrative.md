@@ -5,9 +5,13 @@ slug: "/learn/designing-a-core-narrative"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- An introduction to the product, emotion and mission framework
+<ListAdmonition>
+    <ul>
+        <li>An introduction to the product, emotion and mission framework</li>
+    </ul>
+</ListAdmonition>
 
 ## Introduction
 

@@ -5,11 +5,16 @@ slug: "/learn/marketing-tactics-to-amplify-community"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- An introduction to marketing tactics
+<ListAdmonition>
+    <ul>
+        <li> An introduction to marketing tactics </li>
+    </ul>
+</ListAdmonition>
 
-**Introduction**
+
+## Introduction
 
 While community ultimately drives the success of a game launch or primary sale, marketing helps to amplify community efforts by increasing the visibility and reach of your project.
 

@@ -5,12 +5,15 @@ slug: "/learn/narrative-game-design"
 keywords: [imx-growth]
 ---
 
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-In this article you will learn
-
-- How narrative impacts game design
-- What is the possibility space
-- How the possibility space can relate in Web3
+<ListAdmonition>
+    <ul>
+        <li>How narrative impacts game design</li>
+        <li>What is the possibility space</li>
+        <li>How the possibility space can relate in Web3</li>
+    </ul>
+</ListAdmonition>
 
 ## Introduction
 

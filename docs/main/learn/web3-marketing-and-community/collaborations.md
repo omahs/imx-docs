@@ -4,11 +4,16 @@ title: "Collaborations"
 slug: "/learn/collaborations"
 keywords: [imx-growth]
 ---
-In this article you will learn
 
-- What you should have before collaborating
-- Different types of collaborations
-- A template for evaluating collaborations
+import ListAdmonition from '@site/src/components/ListAdmonition';
+
+<ListAdmonition>
+    <ul>
+        <li>What you should have before collaborating</li>
+        <li> Different types of collaborations</li>
+        <li> A template for evaluating collaborations </li>
+     </ul>
+</ListAdmonition>
 
 
 # Collaborations and partnerships

@@ -5,9 +5,14 @@ slug: "/learn/working-backwards-from-project-goals"
 keywords: [imx-growth]
 ---
 
-**Introduction**
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-This template is a rough guideline to determine your approach to tokenization.
+<ListAdmonition>
+    <ul>
+        <li>A template that can be used as a rough guideline to determine your approach to tokenization</li>
+    </ul>
+</ListAdmonition>
+
 
 **Prerequisites**
 
@@ -20,9 +25,7 @@ This template is a rough guideline to determine your approach to tokenization.
 
 ![Template_workingbackwards](../../..src/img/../../../../static/img/learn/template-working-backwards.png)
 
-1.  Review these additional points
-
-Once you've filled in the above,
+2.  Once you've filled in the above,
 
 **Check your initial decisions for simplicity:** fewer tokens and simpler interactions are easier to control. Reassess your outputs from the exercise against the project's goals - are they the most effective way to incentivize the behaviours you want and achieve your project's goals?
 

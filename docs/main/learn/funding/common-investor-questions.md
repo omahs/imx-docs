@@ -5,11 +5,15 @@ slug: "/learn/common-investor-questions"
 keywords: [imx-growth]
 ---
 
- In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- A list of common investor questions
+<ListAdmonition>
+    <ul>
+        <li>A list of common funding questions on team, funding, investors, growth models, competition, and gaming</li>
+     </ul>
+</ListAdmonition>
 
-**Introduction**
+## Introduction
 
 Preparation is the key to delivering a good pitch. In this article we have provided a list of common questions that we've seen asked before. One way you can use this information is to go through the entire list with your team and ensure you can answer each question. While there is no guarantee these specific questions will be asked, going through them one by one will help ensure your team is aligned on your project goals moving forwards.
 
@@ -20,7 +24,7 @@ Preparation is the key to delivering a good pitch. In this article we have provi
 - If your team has knowledge and skill gaps, how will you fill them?
 - What gives your team strong domain specific knowledge?
 
-## Funding logic
+## Fundraising
 
 - How do you plan to use investor funds and how long will they last you?
 - What will it take to get your startup to a point where new investors will be willing to contribute in a new round, knowing there will be a markup?

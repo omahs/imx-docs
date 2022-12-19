@@ -5,11 +5,16 @@ slug: "/learn/how-to-prepare-your-pitch"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- An introduction to pitching
-- A basic structure for developing your pitch
-- General tips for pitching
+<ListAdmonition>
+    <ul>
+        <li>An introduction to pitching</li>
+        <li> A basic structure for developing your pitch</li>
+        <li> General tips for pitching </li>
+     </ul>
+</ListAdmonition>
+
 
 ## Introduction
 

@@ -5,7 +5,14 @@ slug: "/learn/community-basics-template"
 keywords: [imx-growth]
 ---
 
-This template can be used as a way to introduce high level community management principles to your project.
+import ListAdmonition from '@site/src/components/ListAdmonition';
+
+<ListAdmonition>
+    <ul>
+        <li> A basic template that can be used to introduce high level community management principles to your project.</li>
+    </ul>
+</ListAdmonition>
+
 
 ## **Template**
 

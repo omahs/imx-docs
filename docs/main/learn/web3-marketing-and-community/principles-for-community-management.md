@@ -5,9 +5,13 @@ slug: "/learn/principles-for-community-management"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- Key principles around attracting, engaging and retaining users
+<ListAdmonition>
+    <ul>
+        <li> Key principles around attracting, engaging and retaining users</li>
+        </ul>
+</ListAdmonition>
 
 ## **Introduction**
 
@@ -22,9 +26,10 @@ These principles can be broken down into four categories (note that some ideas w
 
 One point to stress throughout this article is that you need to test and iterate with these strategies. Some strategies may work for certain audiences, but not others. Web3 has a dynamic landscape and you should always aim to collect data and adjust your approach based on your findings.
 
-## **Attracting new users**
 
-## Community leadership
+# Attracing new users
+
+### Community leadership
 
 Demonstrating credibility via a team with previous experience or industry backing is a powerful lever to stand out from thousands of other Web3 projects. This is particularly important in community building, where trust and authenticity are key to the public belief in the project.
 
@@ -49,7 +54,7 @@ Examples:
 - Amplifying community created content eg reposting a community article
 - Hiring community members for your project
 
-## Incentives
+### Incentives
 
 Incentives involve defining pro network activities and rewarding community members directly for performing these.
 
@@ -59,7 +64,7 @@ Examples:
 - Rewarding users that refer friends to Discord or trade NFTs
 - Rewarding users that beta test your game
 
-## Community Council
+### Community Council
 
 A community council created from different customer segments can help to drive engagement in your project by delivering clear feedback on your experiments. A diverse council reduces the chance of creating an echo chamber. It also drives involvement as many users simply like to have their voice heard. Web2 games like EVE online have[implemented this](https://community.eveonline.com/community/csm/)and involved the community council in game development - this helps the game since these decisions impact all players, and some players are powerful enough to influence the game economy.
 
@@ -71,29 +76,29 @@ Examples of council members:
 
 Some other factors to consider: varying customer segmentation based on behavior, or even real life characteristics, and whether to rotate council members out.
 
-## **Resolving conflicts**
+## Resolving conflicts
 
-## Planning
+### Planning
 
 The first step is acknowledging that you cannot please every user. By nature, segmentation means that you will have groups with different interests. Sometimes these interests will take your project in different directions - whales that bought in early may want X, while newer players will want Y.
 
 When it comes to major decisions, **you should preempt the response from every customer segment**. This involves thinking about how each segment will respond, why they might respond that way, and how you will respond to them. We've found that often our own predictions are wrong hence the need for experimentation.
 
-## Unifying the community
+### Unifying the community
 
 Being open minded to critiques can help build a unifying long term vision. Although segments will have different interests, there is one thing they all want: the success of the project. Revisiting the purpose of your project and reminding your community of the long term vision can help create common ground and unite your audiences. Link back to your original narrative consistently and when you make tough decisions, be prepared to explain how the decisions help the success of the project in the long run.
 
 It can also be useful to create direct channels for this feedback for example a forum, or a community council. Many critics will have vested interests in your project and acknowledging their feedback is an opportunity to evangelize them.
 
-## Research and empathize
+### Research and empathize
 
 Understanding how other projects target different customer segments, deal with controversy, and respond to their communities is a great way to improve your own perspective. There is no shortage of projects and significant events in crypto and there are many avenues to research. For example, you could look up the most recent hacks to see how projects responded and what the community reaction was. What was the difference between projects that recovered and those that did not? Alternatively, you could spend time in Discord for your favorite projects and take notes on how they address FUD.
 
 This method doesn't need to be limited to negative events, and it is also worthwhile noting what other projects do well with their communities. For example, which projects are the most hyped and how did that come to be? One thing is for sure - Web3 is always changing so strategies that worked in the past may rotate out of the meta, so spending time researching also gives you insight into current trends.
 
-## **General Engagement**
+## General Engagement
 
-## Communication cadence
+### Communication cadence
 
 Having a constant cadence of information and activity with the community is the baseline in Web3. Since users have the potential to be far more involved in Web3 projects, they tend to expect updates more frequently. If not updates, they will expect _some_ form of interaction, especially from the figurehead.
 
@@ -121,7 +126,7 @@ For example:
 
 Note that these cadences are not fixed. We recommend experimenting and seeing what works for your project. It may vary depending on the size and engagement of your audience.
 
-## Tone of Voice
+### Tone of Voice
 
 A consistent tone of voice (TOV) is important to establish community trust, interest and engagement throughout the project. Generally, the TOV of community messaging should match the tone of the game or project. This can be shaped by your community and marketing team.
 

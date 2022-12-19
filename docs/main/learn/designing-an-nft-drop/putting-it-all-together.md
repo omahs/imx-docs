@@ -5,11 +5,15 @@ slug: "/learn/putting-it-all-together"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- A sample framework for designing your launch
+<ListAdmonition>
+    <ul>
+        <li>A sample framework for designing your launch</li>
+     </ul>
+</ListAdmonition>
 
-**Prerequisites**
+## Prerequisites
 
 - [Designing an NFT drop](designing-an-nft-drop)
 - [Understanding launch mechanics](understanding-launch-mechanics)
@@ -18,11 +22,11 @@ In this article you will learn
 
 Previously, we introduced the concept of Launch Goals. Recall, a Launch Goal is a clearly articulated reason that you are launching and how this launch solves your project goals. Your Launch Goal is useful to guide your launch design as you consider tradeoffs across launch mechanics.
 
-A related but distinct concept is the Launch Target, which is just as important as Launch Goals when you are planning your launch. A Launch Target is a measure of success that you can use to assess the performance of your launch and course-correct for future launches. We suggest setting at least one SMART ( **S** pecific, **M** easurable, **A** ttainable, **R** elevant, **T** ime-bound) target for your launch. A lot has been written about setting SMART targets (such as [here](https://www.mindtools.com/pages/article/smart-goals.htm) and [here](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals)) so this article will not go into detail on how to do it, but we highly recommend reading up on the process and setting your own targets.
+A related but distinct concept is the **Launch Target**, which is just as important as Launch Goals when you are planning your launch. A Launch Target is a measure of success that you can use to assess the performance of your launch and course-correct for future launches. We suggest setting at least one SMART ( **S** pecific, **M** easurable, **A** ttainable, **R** elevant, **T** ime-bound) target for your launch. A lot has been written about setting SMART targets (such as [here](https://www.mindtools.com/pages/article/smart-goals.htm) and [here](https://www.atlassian.com/blog/productivity/how-to-write-smart-goals)) so this article will not go into detail on how to do it, but we highly recommend reading up on the process and setting your own targets.
 
 Some examples of SMART targets for an NFT launch are:
 
-- **Engineer a sellout** - 100% of available NFTs are purchased in \<1 day
+- **Engineer a sellout** - 100% of available NFTs are purchased in <1 day
 - **Attract unique buyers** - number of unique holders immediately after launch is \>25% of available NFTs
 - **Leave the community excited** - community perception of drop one week after launch is \>75% measured by a community pulse survey.
 - **Build traders** - secondary trading volume in the two weeks after launch is \>10% of launch volume

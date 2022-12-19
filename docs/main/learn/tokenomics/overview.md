@@ -4,12 +4,16 @@ title: "Overview"
 slug: "/learn/tokenomics"
 keywords: [imx-growth]
 ---
-In this article you will learn
 
-- What is tokenomics
-- Why its a critical part of a Web3 gaming project
-- How to start designing tokenomics for a project
- 
+import ListAdmonition from '@site/src/components/ListAdmonition';
+
+<ListAdmonition>
+    <ul>
+        <li>What is tokenomics</li>
+        <li>Why its a critical part of a Web3 gaming project</li>
+        <li>How to start designing tokenomics for a project</li>
+    </ul>
+</ListAdmonition>
 
 ## Introduction
 
@@ -43,11 +47,11 @@ It's also important to consider tokenomics in **earlier** project stages because
 
 ## How do you start developing your tokenomics
 
-Before thinking about whatto tokenize, consider whether tokenizing makes sense for your project and how tokens add value to your game.
+Before thinking about what to tokenize, consider whether tokenizing makes sense for your project and how tokens add value to your game.
 
 There are various token models today, ranging from Web2 games with no tokenized assets to Web3 games that tokenize all assets to games with a combination of both. We'll explore these in further articles, however, for now, be aware that Web2 games have demonstrated the ability to create fully functioning economies **without tokens** and that gamers have adverse reactions to monetization - thus, it's important to articulate a clear value-added from tokens.
 
-A good starting point is asking yourself **how your tokens fit into the purpose,** [**narrative**](https://docs.google.com/document/d/1iIttnR8UhaqjJ_fr7ivYJna9w2AqwFu4jieWSiwXJBg/edit#) **and goals of your project**. Once this is identified, there are a range of questions you can explore:
+A good starting point is asking yourself **how your tokens fit into the purpose,** [**narrative**](../learn/../narrative/overview.md) **and goals of your project**. Once this is identified, there are a range of questions you can explore:
 
 - Which assets should be tokenized
 - Should they be on/off-chain

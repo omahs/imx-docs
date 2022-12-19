@@ -5,15 +5,15 @@ slug: "/learn//designing-in-game-economies"
 keywords: [imx-growth]
 ---
 
-In this article you will learn
+import ListAdmonition from '@site/src/components/ListAdmonition';
 
-- An introduction to basic game economy concepts
-- How design decisions can impact the economy
+<ListAdmonition>
+    <ul>
+        <li>An introduction to basic game economy concepts</li>
+        <li>How design decisions can impact the economy</li>
+    </ul>
+</ListAdmonition>
 
-
-# Introduction
-
-In this article, we will explore a few key concepts and how they impact an in-game economy.
 
 ## **Economic openness**
 
