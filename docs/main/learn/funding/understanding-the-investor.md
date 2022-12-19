@@ -55,10 +55,9 @@ Some truisms to navigate are as follows:
 
 - The best investors will go through lots of deals, and typically will have the ability to pick and choose between the best high potential opportunities.
 
-![](../../../../static/img/learn/numbersgame-forinvestor.png)
 
-*Bars not to scale
-Source: 2014 Marc Andreessen session with the Stanford GSB [link](https://www.youtube.com/watch?v=JYYsXzt1VDc)*
+
+![](../../../../static/img/learn/numbers-game.png)
 
 
 
@@ -66,10 +65,10 @@ Source: 2014 Marc Andreessen session with the Stanford GSB [link](https://www.yo
 - Investors think about "derisking" - while they embrace high risk, high reward opportunities, they want to understand how you plan to "derisk" the investment for them.
 - Founder and team are often the most important factors. In Web3, this extends also to community (ie Product / Founder / Community fit).
 
-![](../../../../static/img/learn/factors-that-drive-decisions.png)
 
-*Other factors include: industry, valuation, ability to add value and fit
-Source: 2016 US National Bureau of Economic Research [link](https://www.nber.org/digest/dec16/how-do-venture-capitalists-make-decisions)*
+
+![](../../../../static/img/learn/investment-factors.png)
+
 
 Further, as marketing conditions change, investors will be more likely to scrutinize execution and traction metrics. Typical areas investors want more certainty are:
 
@@ -79,4 +78,6 @@ Further, as marketing conditions change, investors will be more likely to scruti
 - Founders and team with unique insight to win the market
 
 ## Further reading
-[Common investor questions](common-investor-questions)
+- [Common investor questions](common-investor-questions)
+- [Factors that drive decision making](https://www.nber.org/digest/dec16/how-do-venture-capitalists-make-decisions)
+- [Marc Andreessen session with Stanford GSB](https://www.youtube.com/watch?v=JYYsXzt1VDc)

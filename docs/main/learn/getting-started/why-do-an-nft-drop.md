@@ -11,7 +11,7 @@ In this article you will learn
 
 Game studios developing on ImmutableX often ask us about project phasing - whether they should release NFTs before launch, or focus all their efforts on finalizing their game. We have combined our experiences with almost a hundred projects across the protocol to help answer this question with a leading practice guide.
 
-_Tl;DR - executing an NFT release in the early days of a playable or test game remains the most effective way to phase your project_
+TL:DR - executing an NFT release in the early days of a playable or test game remains the most effective way to phase your project_
 
 The benefits of releasing NFTs prior to game launch fall into five categories:
 
@@ -35,7 +35,7 @@ NFT releases are a powerful user acquisition opportunity, especially in the earl
 
 **Technical integration**
 
-Minting and releasing NFTs are the simplest activities to execute on ImmutableX for new developers. By releasing NFTs, you are able to get familiar with ImmutableX technical interactions which de-risks future timelines and opens up opportunities to continue to develop the game and the blockchain elements in parallel. EmberSword is a recent major project who intentionally migrated and re-minted assets from a competing protocol early in their development cycle (game launch in late 2023) to establish early wins on the technical integration front and de-risk their launch.
+Minting and releasing NFTs are the simplest activities to execute on ImmutableX for new developers. By releasing NFTs, you are able to get familiar with ImmutableX technical interactions which de-risks future timelines and opens up opportunities to continue to develop the game and the blockchain elements in parallel. 
 
 **Game loops**
 

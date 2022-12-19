@@ -5,7 +5,7 @@ slug: "/learn/working-backwards-from-project-goals"
 keywords: [imx-growth]
 ---
 
-## **Introduction**
+**Introduction**
 
 This template is a rough guideline to determine your approach to tokenization.
 

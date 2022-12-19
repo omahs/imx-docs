@@ -4,8 +4,6 @@ slug: "/learn/getting-started"
 keywords: [imx-growth]
 ---
 
-check1
-
 Welcome to the Learn section of our documentation. This section focuses on general Web3 knowledge aimed at maximizing the success of your project. For technical guides and code implementation, check out our [build section](https://docs.x.immutable.com/docs/start-here). 
 
 Introduction

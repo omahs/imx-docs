@@ -42,3 +42,4 @@ To work out your sub-narratives, you're working from the bottom up
 4. What emotions will drive those actions?
 5. What sub-narratives evoke those emotions that tie into your core narrative?
 
+![](../../../../static/img/learn/narrative_diagram.png)
