@@ -140,7 +140,7 @@ module.exports = {
   learnSidebar: [
     {
       type: 'category',
-      label: 'Getting Started',
+      label: 'Getting started',
       link: { type: 'doc', id: 'learn/getting-started/overview' },
       items: [
         'learn/getting-started/overview',
@@ -174,7 +174,7 @@ module.exports = {
 
     {
       type: 'category',
-      label: 'Web3 Marketing and Community',
+      label: 'Web3 marketing and community',
       link: { type: 'doc', id: 'learn/web3-marketing-and-community/overview' },
       items: [
         'learn/web3-marketing-and-community/overview',
@@ -191,7 +191,7 @@ module.exports = {
 
     {
       type: 'category',
-      label: 'Designing an NFT Drop',
+      label: 'Designing an NFT drop',
       link: { type: 'doc', id: 'learn/designing-an-nft-drop/overview' },
       items: [
         'learn/designing-an-nft-drop/overview',
