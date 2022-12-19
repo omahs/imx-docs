@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-slug: "learn/getting-started"
+slug: "/learn/getting-started"
 keywords: [imx-growth]
 ---
 
