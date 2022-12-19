@@ -7,13 +7,15 @@ sidebar_position: 2
 # API changelog
 
 This page is to provide information on:
-* [Upcoming breaking changes](#upcoming-breaking-changes)
-* [Changelog (breaking and non-breaking changes)](#changelog)
+- [API changelog](#api-changelog)
+    - [Backwards compatible changes (non-breaking):](#backwards-compatible-changes-non-breaking)
+  - [Upcoming breaking changes](#upcoming-breaking-changes)
+  - [Changelog](#changelog)
 
 
 Currently, we use resource versioning (URI-based), i.e. `/v1/<endpoint>`. While we aim to ensure that breaking changes (non-[backwards compatible changes](#backwards-compatible-changes-non-breaking)) are versioned, there are occasions where it is necessary for us to introduce a breaking change to an existing endpoint. This will be communicated to you in advance, and information about this will also be made available on this page.
 
-#### Backwards compatible changes (non-breaking):
+### Backwards compatible changes (non-breaking):
 * Adding new API resources.
 * Adding new optional request parameters to existing API methods.
 * Adding new properties to existing API responses.
@@ -22,18 +24,10 @@ Currently, we use resource versioning (URI-based), i.e. `/v1/<endpoint>`. While 
 
 ## Upcoming breaking changes
 
-<table>
-  <tbody>
-    <tr>
-      <th>Anticipated date of change</th>
-      <th>Description of change</th>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<!-- TODO - convert this to a HTML table -->
+| Anticipated date of change | Description of change |
+| -------------------------- | --------------------- |
+|                            |                       |
 
 ## Changelog
 
@@ -44,6 +38,18 @@ Currently, we use resource versioning (URI-based), i.e. `/v1/<endpoint>`. While 
       <th>Non-breaking changes</th>
       <th>Breaking changes</th>
     </tr>
+    <tr>
+      <td>12 Dec 2022</td>
+      <td></td>
+      <td>
+        <b>Developer Hub</b>
+        <ul>
+            <li>Release of <a href="https://hub.immutable.com" target="_blank">Immutable Developer Hub</a></li>
+            <li>The <a href="https://docs.x.immutable.com/reference/#/operations/createProject" target="_blank">Create Project API</a> requires your email to be verified and you are fully onboarded via the Developer Hub</li>
+            <li>Onboarding requires <a href="https://docs.x.immutable.com//docs/launch-collection/register-project#1-signup-to-the-immutable-developer-hub">sign-up to Developer Hub</a> to create projects</li>
+        </ul>
+      </td>
+    </tr>    
     <tr>
       <td>3 Nov 2022</td>
       <td>
