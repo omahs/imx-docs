@@ -34,7 +34,7 @@ Some examples of SMART targets for an NFT launch are:
 
 # Launch Planning
 
-To be successful, a launch should be thought of as anintegrated campaign, and marketing, community and technical aspects must be considered.
+To be successful, a launch should be thought of as an integrated campaign, and marketing, community and technical aspects must be considered.
 
 Below are some practical recommendations to consider when planning for your launch. Marketing/community and technical execution are extremely important, which is why we've chosen these to highlight. However, they are just a starting point and should not be considered an exhaustive list. You should think through your launch from all angles and plan accordingly.
 

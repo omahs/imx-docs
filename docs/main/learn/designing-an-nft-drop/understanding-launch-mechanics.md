@@ -44,7 +44,7 @@ What are you actually selling? Why would someone buy it? Who would buy it? You h
 
 ### Define what you are selling
 
-It may seem straightforward, but make sure you are clear on exactly what you are selling. Once you've done this, check that what you are selling is aligned with your launch goals. For example, free minted in-game items can focus on community building, however since they can be minted at no cost, there may be less demand for it.
+It may seem straightforward, but make sure you are clear on exactly what you are selling. Once you've done this, check that what you are selling is aligned with your launch goals. For example, free minted in-game items can focus on community building, however since they can be minted at no cost, there may be less demand for them.
 
 ### Define the utility
 

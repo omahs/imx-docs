@@ -30,7 +30,7 @@ Quickstart 
 
 |Section|Summary|
 |:----|:----|
-|[Narrative](docs/main/learn/narrative/overview.md)|How to craft a compelling narrative|
+|[Narrative](docs/main/learn/narrative/overview.md)|How to craft a compelling Web3 and game project narrative|
 |[Tokenomics & in Game Economy](docs/main/learn/tokenomics/overview.md)|Understanding how different tokenomic concepts impact economy design|
 |[Web3 Marketing & Community](/docs/learn/web3-marketing-and-community)|Building and managing a community for a Web3 game|
 |[Designing an NFT Drop](designing-an-nft-drop)|Defining launch goals and mechanics|

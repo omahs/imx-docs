@@ -31,7 +31,7 @@ For the purpose of this series, a successful launch is defined by two things:
 
 It's important for your launch to sell out to send a signal to the market that this project is a winner. Time and time again, we've seen NFT projects on every chain fail to be successful in their first launch and subsequently be unable to regain any momentum they once had.
 
-Conversely, projects like Illuvium, which carefully designed their launch, executed one of the biggest Web3 sales of all time in June (on Immutable X), raking in $72M in primary sales despite bearish market conditions. The result of the successful launch was that the project garnered overwhelmingly positive community sentiment and excitement for the next launch.
+Conversely, projects like Illuvium, which carefully designed their launch, executed one of the biggest Web3 sales of all time in June (on ImmutableX), raking in $72M in primary sales despite bearish market conditions. The result of the successful launch was that the project garnered overwhelmingly positive community sentiment and excitement for the next launch.
 
 Consider a theoretical example: which of the following projects do you think people are most likely to investigate further?
 
