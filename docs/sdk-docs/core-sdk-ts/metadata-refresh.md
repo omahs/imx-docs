@@ -145,7 +145,7 @@ Please note, currently there's no webhook or push notification that can notify y
 
 ### Checking the status of failed requests
 
-If your requests fails for some reason, you should see the folowing response:
+If your requests fails for some reason, you should see the following response:
 
 ```ts
 {

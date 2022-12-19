@@ -22,6 +22,7 @@ For more information and use cases, see our explanatory article, [Deep dive into
 <ListAdmonition label="Guides">
     <ul>
         <li><a href="#core-sdk">Core SDK</a></li>
+        <li><a href="#api">API</a></li>
         <li>Link SDK:</li>
           <ul>
             <li><a href="./link-deposit-options">Deposits</a></li>
@@ -187,3 +188,267 @@ The function below will deposit ETH from L1 to L2. If you wish to deposit a diff
 
   </TabItem>
 </Tabs>
+
+## API
+* [Deposit](#deposit)
+* [Withdrawal](#withdrawal)
+
+### Deposit
+
+To understand what is going on under the hood with asset deposits, please see [this explainer](../../../key-concepts/deep-dive-deposits-withdrawals.md#deposits).
+
+#### Steps:
+1. [Get details of the deposit](#1-get-details-of-the-deposit)
+2. [Generate signers](#2-generate-signers-1)
+3. [Call contract method to deposit tokens](#3-call-contract-method-to-deposit-tokens)
+
+#### 1. Get details of the deposit
+<ListAdmonition title="Endpoint:">
+    <ul>
+        <li><a href="https://docs.x.immutable.com/reference#/operations/getSignableDeposit">getSignableDeposit</a></li>
+    </ul>
+</ListAdmonition>
+
+***Javascript example of depositing ETH from L1 to L2:***
+```js
+import fetch from "node-fetch";
+
+const depositDetails = {
+    amount: "0.001",
+    token: {
+        type: "ETH",
+        data: {
+            decimals: 18
+        }
+    },
+    user: "0x.." // Public L1 Ethereum address
+}
+
+fetch("https://api.sandbox.x.immutable.com/v1/signable-deposit-details", {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "body": JSON.stringify(depositDetails)
+}).then(response => {
+    console.log(response);
+}).catch(err => {
+    console.error(err);
+})
+```
+
+**Example response:**
+```js
+{
+    "amount": "string", // Amount this user is depositing
+    "asset_id": "string", // ID of the asset this user is depositing (applicable only to depositing ERC721)
+    "nonce": 0, // Random number generated of this transaction to verify that specific values are not reused
+    "stark_key": "string", // Public stark key of the depositing user
+    "vault_id": 0 // ID of the vault this user is depositing to
+}
+```
+
+The following response params are used in the [depositEth](https://github.com/immutable/imx-core-sdk/blob/main/src/contracts/contracts/Core.ts#L934-L939) contract method (see [Step 3](#3-call-contract-method-to-deposit-tokens)):
+* `stark_key`
+* `vault_id`
+
+#### 2. Generate signers
+Enabling users to deposit assets requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](../generate-signers/index.md).
+
+#### 3. Call contract method to deposit tokens
+
+```ts
+import { Contracts, Config } from '@imtbl/core-sdk';
+
+const config = Config.SANDBOX;
+
+// Get instance of core contract
+const contract = Contracts.Core.connect(
+  config.ethConfiguration.coreContractAddress,
+  ethSigner,
+);
+
+// Populate and send transaction
+const populatedTransaction = await contract.populateTransaction.depositEth(
+  starkPublicKey, // Use `stark_key` obtained in previous step
+  assetType, // "ETH", "ERC20" or "ERC721"
+  vaultId, // Use `vault_id` obtained in previous step
+);
+
+const transactionResponse = await ethSigner.sendTransaction(populatedTransaction);
+```
+
+### Withdrawal
+
+To understand what is going on under the hood with asset withdrawals, please see [this explainer](../../../key-concepts/deep-dive-deposits-withdrawals.md#withdrawals).
+
+#### Steps:
+1. [Get details of the withdrawal](#1-get-details-of-the-withdrawal)
+2. [Generate signers](#2-generate-signers-2)
+3. [Create withdrawal](#3-create-withdrawal)
+4. Call contract to complete withdrawal
+
+#### 1. Get details of the withdrawal
+<ListAdmonition title="Endpoint:">
+    <ul>
+        <li><a href="https://docs.x.immutable.com/reference#/operations/getSignableWithdrawal">getSignableWithdrawal</a></li>
+    </ul>
+</ListAdmonition>
+
+***Javascript example of withdrawing ETH from L2 to L1:***
+```js
+import fetch from "node-fetch";
+
+const withdrawalDetails = {
+    amount: "0.001",
+    token: {
+        type: "ETH",
+        data: {
+            decimals: 18
+        }
+    },
+    user: "0x.." // Public L1 Ethereum address
+}
+
+fetch("https://api.sandbox.x.immutable.com/v1/signable-withdrawal-details", {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "body": JSON.stringify(withdrawalDetails)
+}).then(response => {
+    console.log(response);
+}).catch(err => {
+    console.error(err);
+})
+```
+
+**Example response:**
+```js
+{
+    "amount": "string",
+    "asset_id": "string",
+    "nonce": 0,
+    "payload_hash": "string",
+    "signable_message": "string",
+    "stark_key": "string",
+    "vault_id": 0
+}
+```
+
+Explanation:
+
+| Response param | Description | How is it used in the [createWithdrawal](https://docs.x.immutable.com/reference/#/operations/createWithdrawal) request?<br/>(See [Step 3](#3-withdraw-token)) |
+| --- | --- | --- |
+| `amount` | Amount of token to be withdrawn to L1 | As `amount` in the request body |
+| `asset_id` | ID of the asset this user is withdrawing (applicable only to `ERC721` asset type) | As `asset_id` in the request body |
+| `nonce` | Random number generated of this transaction to verify that specific values are not reused |  As `nonce` in the request body |
+| `payload_hash` | Encoded payload hash | Used to generate the `stark_signature` in the request body by using the Stark (L2) signer to sign the `payload_hash`. |
+| `signable_message` | Message to sign with L1 wallet to verity withdrawal request | Used to generate the `x-imx-eth-signature` header by using the Ethereum (L1) signer to sign the `signable_message` |
+| `stark_key` | Public stark key of the withdrawing user | As `stark_key` in the request body |
+| `vault_id` | The ID of the vault the asset belong to | As `vault_id` in the request body |
+
+#### 2. Generate signers
+Enabling users to withdraw assets requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](../generate-signers/index.md).
+
+#### 3. Create withdrawal
+<ListAdmonition title="Endpoint:">
+    <ul>
+        <li><a href="https://docs.x.immutable.com/reference#/operations/createWithdrawal">createWithdrawal</a></li>
+    </ul>
+</ListAdmonition>
+
+***Javascript example of withdrawing ETH from L2 to L1:***
+```js
+import fetch from "node-fetch";
+
+// See previous step for how to generate signers
+const ethSignature = ethSigner.sign(signable_message) 
+const starkSignature = starkSigner.sign(payload_hash)
+
+const withdrawalBody = {
+    amount: "string",
+    asset_id: "string",
+    nonce: "string",
+    stark_key: "string",
+    stark_signature: starkSignature,
+    vauld_id: "string"
+}
+
+fetch("https://api.sandbox.x.immutable.com/v1/withdrawals", {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "x-imx-eth-address": "0x..", // Public Ethereum address of the withdrawing user
+        "x-imx-eth-signature": ethSignature
+    },
+    "body": JSON.stringify(withdrawalBody)
+}).then(response => {
+    console.log(response);
+}).catch(err => {
+    console.error(err);
+})
+```
+
+#### 4. Get the `assetType` value
+This value is required in the next step to complete the withdrawal.
+
+```js
+import fetch from "node-fetch";
+
+const assetType = "asset" // "mintable-asset" if you are withdrawing an ERC721 token that was minted on L2 to L1 for the first time
+
+const encodeAssetBody = {
+  token: {
+    data: {
+      blueprint: "string",
+      id: "string",
+      token_address: "string",
+      token_id: "string"
+    },
+    type: "ETH" // Or "ERC20" or "ERC721"
+  }
+}
+
+fetch(`https://api.sandbox.x.immutable.com/v1/encode/${assetType}`, {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "x-imx-eth-address": "0x..", // Public Ethereum address of the withdrawing user
+        "x-imx-eth-signature": ethSignature
+    },
+    "body": JSON.stringify(encodeAssetBody)
+}).then(response => {
+    console.log(response);
+
+    // Example response
+    // {
+    //     "asset_id": "string",
+    //     "asset_type": "string"
+    // }
+}).catch(err => {
+    console.error(err);
+})
+```
+
+#### 5. Call contract to complete withdrawal
+
+```js
+import { Contracts, Config } from '@imtbl/core-sdk';
+
+const config = Config.SANDBOX;
+
+// Get instance of core contract
+const contract = Contracts.Core.connect(
+  config.ethConfiguration.coreContractAddress,
+  ethSigner,
+);
+
+// Populate and send transaction
+const populatedTransaction = await contract.populateTransaction.withdraw(
+  starkPublicKey, // Use `stark_key` obtained in previous step
+  assetType, // Use the `asset_type` value returned in the response object in step 4
+);
+
+const transactionResponse = await ethSigner.sendTransaction(populatedTransaction);
+```

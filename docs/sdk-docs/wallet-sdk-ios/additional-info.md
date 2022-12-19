@@ -21,7 +21,7 @@ guard let signer = ImmutableXWallet.shared.signer,
     return
 }
 
-let result = try await ImmutableXCore.shared.buy(
+let result = try await ImmutableX.shared.createTrade(
     orderId: orderId, 
     signer: signer, 
     starkSigner: starkSigner

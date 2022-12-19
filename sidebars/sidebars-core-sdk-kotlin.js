@@ -8,14 +8,18 @@ module.exports = {
       items: [
         'overview',
         'installation',
-        // 'authentication', // auth instructions included in installation docs
         'quickstart',
         'sdk-functions',
         'additional-info',
         {
           type: 'link',
           label: 'Reference',
-          href: `${url}/sdk-references/core-sdk-kotlin/0-6-0/`,
+          href: `${url}/sdk-references/core-sdk-kotlin/1.0.0-beta.2/`,
+        },
+        {
+          type: 'link',
+          label: 'Github',
+          href: 'https://github.com/immutable/imx-core-sdk-kotlin-jvm/tree/v1.0.0-beta.2'
         },
       ],
     },

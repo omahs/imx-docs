@@ -354,7 +354,13 @@ Before you can create a project, you will need to register as a user. Registerin
 2. Press `Connect Wallet`
 3. Follow the prompts 
 
-## Step 12: Create Project
+## Step 12: Register your Email Address 
+
+Register with your email address at the [Immutable Developer Hub](https://hub.immutable.com) to access the ability to create projects on Immutable via the [Public API](https://docs.x.immutable.com/reference#/operations/createProject) or the CLI in the [imx-examples repo](https://github.com/immutable/imx-examples).
+
+You must first have a project in order to create collections that you can mint assets from on Immutable (L2).
+
+## Step 13: Create Project
 
  A [project](https://docs.x.immutable.com/docs/guides/onboarding/project-registration) is an admin level entity associatied with an owner wallet address. This address is needed to make changes like creating or updating collections. Begin by navigating to **src/onboarding/2-create-project.ts**.
 
@@ -369,7 +375,7 @@ Before you can create a project, you will need to register as a user. Registerin
 ![Step12](/img/zero-to-hero/Step12_2.png 'Step12')
 
 
-## Step 13: Register Collection
+## Step 14: Register Collection
   A [collection](https://docs.x.immutable.com/docs/collection-registration) is a group of NFTs that share a smart contract and each collection belongs to a project. Collections are displayed on the marketplace to end users, eg Gods Unchained. 
 
  Navigate to the ***src/onboarding/3-create-collections.ts*** file and populate the following values:
@@ -437,7 +443,7 @@ To register the collection, run the command `npm run onboarding:create-collectio
 Remember to remove the prepending double slashes ”//” in relation to the fields described below as these comment out the code.
 :::
 
-## Step 14: Create Metadata Schema
+## Step 15: Create Metadata Schema
 
 A collection's metadata schema describes the properties of the NFTs it can mint, as well as the potential values and types of those properties. These fields can be used as filters in the marketplace later on. Click [here](https://docs.x.immutable.com/docs/metadata-schema-registration) to learn more about Metadata Schema.
 
@@ -481,7 +487,7 @@ You can use the example metadata schema provided here, or use your own. Copy and
 
 To add metadata schema to the collection, run the command `npm run onboarding:add-metadata-schema` in the integrated terminal. 
 
-## Step 15: Mint NFT
+## Step 16: Mint NFT
 
 Now that we have added our contract to ImmutableX, the final step is to add our assets to the blockchain by minting them. 
 
@@ -549,7 +555,7 @@ Don't forget to press save after updating the values
  * `<number of tokens to mint>`  is the number of NFTs you wish to mint. In this tutorial, this number is 3. 
  * `<your wallet address>` is the MetaMask wallet you’re minting your NFTs to. For each contract (in other words, for each TOKEN_ADDRESS) you are minting tokens for, remember to set the TOKEN_ID in .env to the latest incremented index.
 
-## Step 16: List your NFT 
+## Step 17: List your NFT 
 
 Our assets will now be accessible in our Goerli Wallet. However, for other users to see them we will need to list them on the marketplace. 
 

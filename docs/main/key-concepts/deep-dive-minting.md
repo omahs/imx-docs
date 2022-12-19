@@ -2,6 +2,7 @@
 title: "Deep dive into minting"
 slug: "/deep-dive-minting"
 sidebar_position: 2
+keywords: [imx-dx]
 ---
 
 import ListAdmonition from '@site/src/components/ListAdmonition';

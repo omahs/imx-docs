@@ -45,7 +45,9 @@ try await ImmutableXWallet.shared.disconnect()
 
 ## Handle callbacks
 
-All the `ImmutableXWallet` methods (connect, disconnect, etc.) are asynchronous, and changes to the status are communicated via the callback.
+All the `ImmutableXWallet` methods (connect, disconnect, etc.) are asynchronous, and will only return when they've completed the operation. If a user is taken to a wallet app for a connection or signature and does not perform the required operation, the request will not complete, leading to a pending state that is communicated via the callback.
+
+Status callbacks are also useful for listening to status updates triggered from different screens.
 
 ### Set callback
 

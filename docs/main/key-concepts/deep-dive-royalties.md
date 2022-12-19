@@ -1,6 +1,7 @@
 ---
 title: "Deep dive into royalties"
 slug: "/deep-dive-royalties"
+keywords: [imx-dx]
 ---
 
 import ListAdmonition from '@site/src/components/ListAdmonition';

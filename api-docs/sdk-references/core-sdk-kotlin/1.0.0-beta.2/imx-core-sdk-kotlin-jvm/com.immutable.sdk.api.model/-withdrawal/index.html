@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Withdrawal</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>  </head>
+  <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">imx-core-sdk-kotlin-jvm</a></div>
+      <div>1.0.0-beta.2</div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div class="main-content" id="content" pageIds="imx-core-sdk-kotlin-jvm::com.immutable.sdk.api.model/Withdrawal///PointingToDeclaration//-1676474542">
+          <div class="breadcrumbs"><a href="../../../index.html">imx-core-sdk-kotlin-jvm</a>/<a href="../index.html">com.immutable.sdk.api.model</a>/<a href="index.html">Withdrawal</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span><span>Withdrawal</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Withdrawal</a><span class="token punctuation">(</span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;rollup_status&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>rollupStatus<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;sender&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>sender<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;status&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>status<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;timestamp&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>timestamp<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;token&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>token<span class="token operator">: </span><a href="../-token/index.html">Token</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;transaction_id&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>transactionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;withdrawn_to_wallet&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>withdrawnToWallet<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Parameters</h2>
+              <div data-togglable="Parameters">
+                <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>rollup</span><wbr></wbr><span><span>Status</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Status of the on-chain batch confirmation for this withdrawal</p></div></div></div></div></div><div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>sender</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Ethereum address of the user who requested this withdrawal</p></div></div></div></div></div><div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>status</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Status of this withdrawal</p></div></div></div></div></div><div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>timestamp</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Time when this withdrawal was initiated</p></div></div></div></div></div><div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>token</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"></div></div></div></div></div><div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>transaction</span><wbr></wbr><span><span>Id</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Sequential ID of this transaction</p></div></div></div></div></div><div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>withdrawn</span><wbr></wbr><span>To</span><wbr></wbr><span><span>Wallet</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">Withdrawal has been transferred to user's Layer 1 wallet</p></div></div></div></div></div></div></div></div></div>
+              </div>
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="1286223029%2FConstructors%2F-1676474542" anchor-label="Withdrawal" id="1286223029%2FConstructors%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-withdrawal.html"><span><span>Withdrawal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1286223029%2FConstructors%2F-1676474542"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-withdrawal.html"><span class="token function">Withdrawal</span></a><span class="token punctuation">(</span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;rollup_status&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>rollupStatus<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;sender&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>sender<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;status&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>status<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;timestamp&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>timestamp<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;token&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>token<span class="token operator">: </span><a href="../-token/index.html">Token</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;transaction_id&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>transactionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><span><span class="token annotation">@</span><span data-unresolved-link="com.squareup.moshi/Json///PointingToDeclaration/"><span class="token annotation">Json</span></span><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">&quot;withdrawn_to_wallet&quot;</span></span></span><wbr></wbr><span class="token punctuation">)</span> </span>withdrawnToWallet<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="-749909568%2FProperties%2F-1676474542" anchor-label="rollupStatus" id="-749909568%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="rollup-status.html">rollupStatus</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-749909568%2FProperties%2F-1676474542"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><a data-name="-749909568%2FProperties%2F-1676474542" anchor-label="rollupStatus" id="-749909568%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="rollup-status.html">rollupStatus</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-914543211%2FProperties%2F-1676474542" anchor-label="sender" id="-914543211%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="sender.html">sender</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-914543211%2FProperties%2F-1676474542"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><a data-name="-914543211%2FProperties%2F-1676474542" anchor-label="sender" id="-914543211%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="sender.html">sender</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1585935992%2FProperties%2F-1676474542" anchor-label="status" id="1585935992%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="status.html">status</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1585935992%2FProperties%2F-1676474542"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><a data-name="1585935992%2FProperties%2F-1676474542" anchor-label="status" id="1585935992%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="status.html">status</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="1842372058%2FProperties%2F-1676474542" anchor-label="timestamp" id="1842372058%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="timestamp.html">timestamp</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1842372058%2FProperties%2F-1676474542"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><a data-name="1842372058%2FProperties%2F-1676474542" anchor-label="timestamp" id="1842372058%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="timestamp.html">timestamp</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1799834665%2FProperties%2F-1676474542" anchor-label="token" id="-1799834665%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="token.html">token</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1799834665%2FProperties%2F-1676474542"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><a data-name="-1799834665%2FProperties%2F-1676474542" anchor-label="token" id="-1799834665%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="token.html">token</a><span class="token operator">: </span><a href="../-token/index.html">Token</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2021367241%2FProperties%2F-1676474542" anchor-label="transactionId" id="-2021367241%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="transaction-id.html">transactionId</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2021367241%2FProperties%2F-1676474542"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><a data-name="-2021367241%2FProperties%2F-1676474542" anchor-label="transactionId" id="-2021367241%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="transaction-id.html">transactionId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="702770456%2FProperties%2F-1676474542" anchor-label="withdrawnToWallet" id="702770456%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a>
+                <div class="table-row" data-filterable-current=":imx-core-sdk-kotlin-jvm:dokkaHtml/main" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex">
+                        <div><a href="withdrawn-to-wallet.html">withdrawnToWallet</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="702770456%2FProperties%2F-1676474542"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"><a data-name="702770456%2FProperties%2F-1676474542" anchor-label="withdrawnToWallet" id="702770456%2FProperties%2F-1676474542" data-filterable-set=":imx-core-sdk-kotlin-jvm:dokkaHtml/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="withdrawn-to-wallet.html">withdrawnToWallet</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,26 @@
+{
+  "mainSidebar": [
+    {
+      "type": "category",
+      "label": "Core SDK Swift",
+      "items": [
+        "overview",
+        "installation",
+        "quickstart",
+        "sdk-functions",
+        "additional-info",
+        "changelog",
+        {
+          "type": "link",
+          "label": "Reference",
+          "href": "https://docs.x.immutable.com/sdk-references/core-sdk-swift/1-0-0-beta-1/documentation/immutablexcore"
+        },
+        {
+          "type": "link",
+          "label": "Github",
+          "href": "https://github.com/immutable/imx-core-sdk-swift/tree/v1.0.0-beta.1"
+        }
+      ]
+    }
+  ]
+}
