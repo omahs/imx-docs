@@ -1,3 +1,24 @@
+## [1.32.5](https://github.com/immutable/imx-docs/compare/v1.32.4...v1.32.5) (2022-12-15)
+
+
+### Bug Fixes
+
+* **folder path:** broken link due to incorrect folder structure ([9b66d77](https://github.com/immutable/imx-docs/commit/9b66d77830f943b6d7e2560a52d4c683d00784c9))
+
+## [1.32.4](https://github.com/immutable/imx-docs/compare/v1.32.3...v1.32.4) (2022-12-14)
+
+
+### Bug Fixes
+
+* **language:** update crowdin.yml ([e60e040](https://github.com/immutable/imx-docs/commit/e60e040ee28ba187fb59d09659c78fc4de58cff5))
+
+## [1.32.3](https://github.com/immutable/imx-docs/compare/v1.32.2...v1.32.3) (2022-12-14)
+
+
+### Bug Fixes
+
+* **language:** add test folder ([1ebad5c](https://github.com/immutable/imx-docs/commit/1ebad5cc95eb88dc48f78fd21eaed49be59f4e56))
+
 ## [1.32.2](https://github.com/immutable/imx-docs/compare/v1.32.1...v1.32.2) (2022-12-12)
 
 
