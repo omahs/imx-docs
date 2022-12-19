@@ -1,6 +1,8 @@
 ---
+sidebar_position: 1
 title: "Overview"
-slug: "learn/getting-started"
+slug: "/learn/getting-started"
+pagination_next: "learn/getting-started/why-do-an-nft-drop"
 keywords: [imx-growth]
 ---
 
