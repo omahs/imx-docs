@@ -40,7 +40,7 @@ Currently, we use resource versioning (URI-based), i.e. `/v1/<endpoint>`. While 
     </tr>
     <tr>
       <td>12 Dec 2022</td>
-      <td><!-- non-breaking changes --></td>
+      <td></td>
       <td>
         <b>Developer Hub</b>
         <ul>
