@@ -137,4 +137,86 @@ module.exports = {
       id: 'contributing'
     },
   ],
+  learnSidebar: [
+    {
+      type: 'category',
+      label: 'Getting started',
+      link: { type: 'doc', id: 'learn/getting-started/overview' },
+      items: [
+        'learn/getting-started/overview',
+        'learn/getting-started/why-do-an-nft-drop'
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Narrative',
+      link: { type: 'doc', id: 'learn/narrative/overview' },
+      items: [
+        'learn/narrative/overview',
+        'learn/narrative/designing-a-core-narrative',
+        'learn/narrative/designing-sub-narratives',
+        'learn/narrative/how-narrative-impacts-game-design',
+
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Tokenomics',
+      link: { type: 'doc', id: 'learn/tokenomics/overview' },
+      items: [
+        'learn/tokenomics/overview',
+        'learn/tokenomics/core-tokenomics-concepts',
+        'learn/tokenomics/designing-in-game-economies',
+        'learn/tokenomics/working-backwards-from-project-goals'
+
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Web3 marketing and community',
+      link: { type: 'doc', id: 'learn/web3-marketing-and-community/overview' },
+      items: [
+        'learn/web3-marketing-and-community/overview',
+        'learn/web3-marketing-and-community/customer-segmentation-in-web3',
+        'learn/web3-marketing-and-community/building-communities-in-different-channels',
+        'learn/web3-marketing-and-community/principles-for-community-management',
+        'learn/web3-marketing-and-community/marketing-tactics-to-amplify-community',
+        'learn/web3-marketing-and-community/collaborations',
+        'learn/web3-marketing-and-community/community-basics-template'
+
+
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Designing an NFT drop',
+      link: { type: 'doc', id: 'learn/designing-an-nft-drop/overview' },
+      items: [
+        'learn/designing-an-nft-drop/overview',
+        'learn/designing-an-nft-drop/understanding-launch-mechanics',
+        'learn/designing-an-nft-drop/putting-it-all-together',
+
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Funding',
+      link: { type: 'doc', id: 'learn/funding/overview' },
+      items: [
+        'learn/funding/understanding-the-investor',
+        'learn/funding/how-to-prepare-your-pitch',
+        'learn/funding/investor-due-dilligence',
+        'learn/funding/common-investor-questions',
+
+      ],
+    },
+    {
+      type: 'doc',
+      label: 'Disclaimer',
+      id: 'learn/disclaimer'
+    },
+  ],
 };
