@@ -23,7 +23,7 @@ Creating a trade is also known as filling an order, or buying an asset. A user e
 In order to use the Core SDK, you need to [initialize it](../install-initialize/index.md#core-sdk).
 
 ### 2. Generate signers
-Creating an trade for a user requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](../generate-signers/index.md).
+Creating a trade for a user requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](../generate-signers/index.md).
 
 ### 3. Create the trade
 :::note When setting [taker fees](../../../overview/fees.md) in the trade params
