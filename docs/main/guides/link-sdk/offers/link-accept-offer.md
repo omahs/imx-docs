@@ -38,7 +38,10 @@ Input parameters:
 ```typescript
 {
   orderId: string, // order id of the offer to be accepted
-  fees?: Array<FeeEntry> // optionally specify seller marketplace fees
+  fees?: {
+    address: string, // recipient eth address
+    fee_percentage: number, // fee percentage
+  }[] // optionally specify seller marketplace fees in array
 }
 ```
 ![Accept an offer](/img/link-offers/accept-offer-prompt.png 'Accept an offer')
