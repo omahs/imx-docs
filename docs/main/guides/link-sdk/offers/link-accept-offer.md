@@ -23,7 +23,7 @@ const link = new Link("https://link.sandbox.x.immutable.com")
 // accept an offer by passing the orderId of the offer
 await link.acceptOffer({
   orderId: '940',
-   fees: [  // optionally specify seller marketplace fees in array
+  fees: [  // optionally specify seller marketplace fees in array
     {
       address: '0x383b14727ac2bD3923f1583789d5385C3A26f91E',
       fee_percentage: 0.5, // equal to 0.5%

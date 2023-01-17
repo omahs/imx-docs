@@ -26,7 +26,7 @@ await link.makeOffer({
   tokenAddress: '0x2ca7e3fa937cae708c32bc2713c20740f3c4fc3b',
   amount: '0.25',
   currencyAddress: ''
-   fees: [  // optionally specify buyer marketplace fees in array, protocol and royalty fees are applied automatically
+  fees: [  // optionally specify buyer marketplace fees in array, protocol and royalty fees are applied automatically
     {
       address: '0x383b14727ac2bD3923f1583789d5385C3A26f91E',
       fee_percentage: 0.5, // equal to 0.5%
