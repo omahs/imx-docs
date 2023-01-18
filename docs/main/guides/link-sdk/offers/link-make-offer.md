@@ -18,7 +18,7 @@ Check out our **[Link reference tool](https://tools.immutable.com/link-reference
 Here's how you can make an offer:
 
 ```typescript
-import { Link, ImmutableXClient, ImmutableOrderStatus} from ‘@imtbl/imx-sdk’;
+import { Link, ImmutableXClient, ImmutableOrderStatus} from '@imtbl/imx-sdk';
 const link = new Link("https://link.sandbox.x.immutable.com")
 // make an offer for 0.25 ETH
 await link.makeOffer({
@@ -26,6 +26,12 @@ await link.makeOffer({
   tokenAddress: '0x2ca7e3fa937cae708c32bc2713c20740f3c4fc3b',
   amount: '0.25',
   currencyAddress: ''
+  fees: [  // optionally specify buyer marketplace fees in array, protocol and royalty fees are applied automatically
+    {
+      address: '0x383b14727ac2bD3923f1583789d5385C3A26f91E',
+      fee_percentage: 0.5, // equal to 0.5%
+    },
+  ],
 });
 // NOTE: removing the currencyAddress property will default to the offer to be in ETH as well
 ```
@@ -40,6 +46,10 @@ Input parameters:
   amount: string,  // offer amount, must be greater than 0
   currencyAddress?: string, // contract address of the currency token, default is ETH
   expirationTimestamp?: string, // unix timestamp seconds as a string. Must be at least 1 week into the future, defaults to 99 years into the future
+  fees?: {
+    address: string, // recipient eth address
+    fee_percentage: number, // fee percentage
+  }[] // optionally specify buyer marketplace fees in array, protocol and royalty fees are applied automatically
 }
 ```
 
