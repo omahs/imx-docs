@@ -12,7 +12,7 @@ keywords: [imx-wallets]
 
 ## Link Event Types
 
-The Link SDK will dispatch events on the window obejct with type `imx-link-info` from time to time. 
+The Link SDK will dispatch events on the window object with type `imx-link-info` from time to time. 
 
 If this happens a Custom Event will be dispatched which will have the following shape:
 
