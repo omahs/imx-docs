@@ -12,7 +12,7 @@ keywords: [imx-wallets]
 
 ## Link Event Types
 
-The Link SDK will dispatch events on the window object with type `imx-link-info` from time to time. Currently this will only happen in the `link.buy()` flow when a user connects to a different game wallet before completing their purchase.
+The Link SDK will dispatch events on the window object with type `imx-link-info` from time to time. Currently this will only happen in the [Link.buy](./link-buy2.md) flow when a user connects to a different game wallet before completing their purchase.
 
 If this happens a Custom Event will be dispatched which will have the following shape:
 
