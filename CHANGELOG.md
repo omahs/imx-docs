@@ -1,3 +1,13 @@
+# [1.33.0](https://github.com/immutable/imx-docs/compare/v1.32.7...v1.33.0) (2023-01-24)
+
+
+### Features
+
+* add docs link to buy flow ([8496906](https://github.com/immutable/imx-docs/commit/8496906237101cfcab9b9989e7c2d80b6a1a3319))
+* added docs for Link Events ([9ae80d8](https://github.com/immutable/imx-docs/commit/9ae80d872d620dae2a0f3a210e03bb6a75dd55a5))
+* fix typo ([e7b703a](https://github.com/immutable/imx-docs/commit/e7b703a9b19408e17977d2de202eab03040be62e))
+* minor doc updates from PR comments ([e8357fe](https://github.com/immutable/imx-docs/commit/e8357fef264fa9d99e044ec49a42d86b080f27ba))
+
 ## [1.32.7](https://github.com/immutable/imx-docs/compare/v1.32.6...v1.32.7) (2022-12-19)
 
 
