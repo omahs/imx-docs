@@ -25,10 +25,10 @@
     "**/*.{ts,tsx}": "yarn run typecheck-staged"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-rc.1",
-    "@docusaurus/plugin-google-gtag": "^2.0.0-rc.1",
-    "@docusaurus/preset-classic": "^2.0.0-rc.1",
-    "@docusaurus/theme-common": "^2.0.0-rc.1",
+    "@docusaurus/core": "^2.0.0",
+    "@docusaurus/plugin-google-gtag": "^2.0.0",
+    "@docusaurus/preset-classic": "^2.0.0",
+    "@docusaurus/theme-common": "^2.0.0",
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
     "@mdx-js/react": "^1.6.22",
@@ -55,7 +55,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
-    "@docusaurus/module-type-aliases": "^2.0.0-rc.1",
+    "@docusaurus/module-type-aliases": "^2.0.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
