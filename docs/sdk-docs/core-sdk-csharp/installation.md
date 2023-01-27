@@ -7,3 +7,7 @@ keywords: [imx-dx]
 ---
 
 # Installation
+
+```sh
+dotnet add package Imx.Sdk
+```
