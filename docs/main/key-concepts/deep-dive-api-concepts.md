@@ -140,15 +140,19 @@ Different messages are required by the different attributes:
       <td><code>x-imx-eth-signature</code></td>
       <td>The message to be signed depends on each transaction. Typically, it contains information about the transaction that requires the user signature.
         <br/><br/>
-        Our API contains endpoints allowing you to obtain signable messages:
+        The messages required for the following endpoints are:
         <ul>
-          <li><a href="/reference/#/operations/getSignableDeposit">getSignableDeposit</a></li>
-          <li><a href="/reference/#/operations/getSignableOrder">getSignableOrder</a></li>
-          <li><a href="/reference/#/operations/getSignableCancelOrder">getSignableCancelOrder</a></li>
-          <li><a href="/reference/#/operations/getSignableTransfer">getSignableTransfer</a></li>
-          <li><a href="/reference/#/operations/getSignableWithdrawal">getSignableWithdrawal</a></li>
-          <li><a href="/reference/#/operations/getSignableTrade">getSignableTrade</a></li>
-          <li><a href="/reference/#/operations/getExchangeSignableTransfer">getExchangeSignableTransfer</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/Get%20a%20list%20of%20metadata%20refreshes">Get a list of metadata refreshes</a> - expects a message of <a href='#imx-timestamp-string'>IMX timestamp</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/Request%20a%20metadata%20refresh">Requesting a metadata refresh</a> - expects a message of <a href='#imx-timestamp-string'>IMX timestamp</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/Get%20metadata%20refresh%20results">Get metadata refresh results</a> - expects a message of <a href='#imx-timestamp-string'>IMX timestamp</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/Get%20metadata%20refresh%20errors">Get metadata refresh errors</a> - expects a message of <a href='#imx-timestamp-string'>IMX timestamp</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/createOrder">createOrder</a> - expects a message of <a href="/reference/#/operations/getSignableOrder">getSignableOrder</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/cancelOrder">cancelOrder</a> - expects a message of <a href="/reference/#/operations/getSignableOrder">getSignableOrder</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/createTransferV1">createTransferV1</a> - expects a message of <a href="/reference/#/operations/getSignableTransfer">getSignableTransfer</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/createTransfer">createTransfer</a> - expects a message of <a href="/reference/#/operations/getSignableTransfer">getSignableTransfer</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/createWithdrawal">createWithdrawal</a> - expects a message of <a href="/reference/#/operations/getSignableWithdrawal">getSignableWithdrawal</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/createTrade">createTrade</a> - expects a message of <a href="/reference/#/operations/getSignableTrade">getSignableTrade</a></li>
+            <li><a href="https://docs.x.immutable.com/reference#/operations/createExchangeTransfer">createExchangeTransfer</a> - expects a message of <a href="/reference/#/operations/getExchangeSignableTransfer">getExchangeSignableTransfer</a></li>
         </ul>
       </td>
     </tr>
