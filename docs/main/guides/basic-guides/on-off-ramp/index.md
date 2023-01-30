@@ -53,9 +53,6 @@ In order to use the Core SDK, you need to [initialize it](../install-initialize/
     </ul>
 </ListAdmonition> 
 
-<Tabs>
-<TabItem value="typescript" label="Typescript Core SDK">
-
 <ListAdmonition label="SDK reference">
     <ul>
         <li><a href="https://docs.x.immutable.com/sdk-references/core-sdk-ts/1-0-0/classes/immutablex.immutablex#createExchange">createExchange</a></li>
@@ -106,8 +103,6 @@ The user will be asked to connect to the exchange they want to use:
 
 </TabItem>
 </Tabs>
-</TabItem>
-</Tabs>
 
 After creating a transaction successfully, you will be provided with the specified provider's widget URL to be rendered where users can proceed with transfer.
 
@@ -122,25 +117,19 @@ The user proceeds with transfer details on the provider's widget.
     </ul>
 </ListAdmonition>
 
-Please consider checking the transaction status in a polling fashion in the background.
-
-<Tabs>
-<TabItem value="typescript" label="Typescript Core SDK">
-
 <ListAdmonition label="SDK reference">
     <ul>
         <li><a href="https://docs.x.immutable.com/sdk-references/core-sdk-ts/1-0-0/classes/immutablex.immutablex#getExchange">getExchange</a></li>
     </ul>
 </ListAdmonition> 
 
+Please consider checking the transaction status in a polling fashion in the background.
+
 ```ts
 const getExchangeTransactionResponse = await imxClient.getExchange({
   id: exchangeTxnResponse.id
 });
 ```
-
-</TabItem>
-</Tabs>
 
 The transfer process can take few minutes and during that time transaction can return a `pending` or `waitingPayment` status while it's still being processed.
 The final stage of transaction status can be:
@@ -161,9 +150,6 @@ In order to use the Core SDK, you need to [initialize it](../install-initialize/
         <li><a href="https://docs.x.immutable.com/reference/#/operations/createExchange">createExchange</a></li>
     </ul>
 </ListAdmonition> 
-
-<Tabs>
-<TabItem value="typescript" label="Typescript Core SDK">
 
 <ListAdmonition label="SDK reference">
     <ul>
@@ -203,9 +189,6 @@ const exchangeTxnParams: ExchangesApiCreateExchangeRequest = {
 const exchangeTxnResponse = await imxClient.createExchange(exchangeTxnParams);
 ```
 
-</TabItem>
-</Tabs>
-
 After creating a transaction successfully, you will be provided with the specified provider's widget URL to be rendered where users can proceed with entering transfer details.
 
 </TabItem>
@@ -219,25 +202,19 @@ After creating a transaction successfully, you will be provided with the specifi
     </ul>
 </ListAdmonition>
 
-Please consider checking the transaction status in a polling fashion in the background.
-
-<Tabs>
-<TabItem value="typescript" label="Typescript Core SDK">
-
 <ListAdmonition label="SDK reference">
     <ul>
         <li><a href="https://docs.x.immutable.com/sdk-references/core-sdk-ts/1-0-0/classes/immutablex.immutablex#getExchange">getExchange</a></li>
     </ul>
 </ListAdmonition> 
 
+Please consider checking the transaction status in a polling fashion in the background.
+
 ```ts
 const transactionDetails = await imxClient.getExchange({
   id: exchangeTxnResponse.id
 });
 ```
-
-</TabItem>
-</Tabs>
 
 ### 4. Generate signers
 Initiating an off-ramp request for a user requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](../generate-signers/index.md).
@@ -250,9 +227,6 @@ Initiating an off-ramp request for a user requires a user's signature, so your a
         <li><a href="https://docs.x.immutable.com/reference/#/operations/createExchangeTransfer">createExchangeTransfer</a></li>
     </ul>
 </ListAdmonition>
-
-<Tabs>
-<TabItem value="typescript" label="Typescript Core SDK">
 
 <ListAdmonition label="SDK reference">
     <ul>
@@ -276,9 +250,6 @@ const exchangeTransferResponse = await imxClient.exchangeTransfer(walletConnecti
 ```
 
 It will prompt the user to sign the request to proceed with the transaction.
-
-</TabItem>
-</Tabs>
 
 ### 6. Verify the transaction status
 

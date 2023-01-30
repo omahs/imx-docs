@@ -47,16 +47,13 @@ In order to use the Core SDK, you need to [initialize it](../../basic-guides/ins
     <ul>
         <li><a href="https://docs.x.immutable.com/reference/#/operations/createNftPrimary">createNftPrimary</a></li>
     </ul>
-</ListAdmonition> 
-
-<Tabs>
-<TabItem value="typescript" label="Typescript Core SDK">
+</ListAdmonition>
 
 <ListAdmonition label="SDK reference">
     <ul>
         <li><a href="https://docs.x.immutable.com/sdk-references/core-sdk-ts/1-0-0/classes/immutablex.immutablex#createNftPrimary">createNftPrimary</a></li>
     </ul>
-</ListAdmonition> 
+</ListAdmonition>
 
 ```typescript
 const nftPrimaryTxnParams: NftCheckoutPrimaryApiCreateNftPrimaryRequest = {
@@ -90,9 +87,6 @@ This displays the UI with the loaded MoonPay widget:
 
 ![MoonPay checkout widget](/img/core-sdk-nft-checkout-primary/moonpay-widget-for-checkout.png 'NFT primary sale card checkout')
 
-</TabItem>
-</Tabs>
-
 ### 3. Check the transaction status (optional)
 You can check the transaction status using the transaction ID from previous step. The status value should be `created` to confirm successful transaction creation.
 
@@ -101,9 +95,6 @@ You can check the transaction status using the transaction ID from previous step
         <li><a href="https://docs.x.immutable.com/reference/#/operations/getNftPrimaryTransaction">getNftPrimaryTransaction</a></li>
     </ul>
 </ListAdmonition> 
-
-<Tabs>
-<TabItem value="typescript" label="Typescript Core SDK">
 
 <ListAdmonition label="SDK reference">
     <ul>
@@ -116,9 +107,6 @@ const getNftPrimaryTransactionResponse = await imxClient.getNftPrimaryTransactio
     transactionId: nftPrimaryTxnResponse.data.transaction_id
 });
 ```
-
-</TabItem>
-</Tabs>
 
 ### 4. Minting is triggered once a successful payment has been received
 After the payment has been received by MoonPay, the mint process will be automatically triggered (via the endpoint that you created [here](./setup.md#triggering-the-mint-endpoint)).
@@ -134,9 +122,6 @@ Please consider checking the transaction status in a polling fashion in the back
     </ul>
 </ListAdmonition> 
 
-<Tabs>
-<TabItem value="typescript" label="Typescript Core SDK">
-
 <ListAdmonition label="SDK reference">
     <ul>
         <li><a href="https://docs.x.immutable.com/sdk-references/core-sdk-ts/1-0-0/classes/immutablex.immutablex#getNftPrimaryTransaction">getNftPrimaryTransaction</a></li>
@@ -148,8 +133,6 @@ const getNftPrimaryTransactionResponse = await imxClient.getNftPrimaryTransactio
     transactionId: nftPrimaryTxnResponse.data.transaction_id
 });
 ```
-</TabItem>
-</Tabs>
 
 The transfer process can take few minutes and during that time transaction can return a `pending` or `waitingPayment` status while it's still being processed.
 
