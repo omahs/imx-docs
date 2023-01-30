@@ -13,7 +13,7 @@ module.exports = {
         {
           type: 'link',
           label: 'Reference',
-          href: `${url}/sdk-references/core-sdk-csharp/0-1-0/docs`,
+          href: `${url}/sdk-references/core-sdk-csharp/0-1-0/apiclient`,
         },
         {
           type: 'link',
