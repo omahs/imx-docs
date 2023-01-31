@@ -346,7 +346,7 @@ Explanation:
 | `payload_hash` | Encoded payload hash | Used to generate the `stark_signature` in the request body by using the Stark (L2) signer to sign the `payload_hash`. |
 | `signable_message` | Message to sign with L1 wallet to verity withdrawal request | Used to generate the `x-imx-eth-signature` header by using the Ethereum (L1) signer to sign the `signable_message` |
 | `stark_key` | Public stark key of the withdrawing user | As `stark_key` in the request body |
-| `vault_id` | The ID of the vault the asset belong to | As `vault_id` in the request body |
+| `vault_id` | The ID of the vault the asset belongs to | As `vault_id` in the request body |
 
 #### 2. Generate signers
 Enabling users to withdraw assets requires a user's signature, so your application will need to create signers. See the guide on [how to generate signers](../generate-signers/index.md).
