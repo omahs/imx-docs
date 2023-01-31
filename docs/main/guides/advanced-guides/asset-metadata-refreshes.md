@@ -15,7 +15,7 @@ This [page](https://docs.x.immutable.com/sdk-docs/core-sdk-ts/metadata-refresh/)
 
 Metadata refreshes help games:
 
-- Support game play mechanics that rely on metadata such as levelling up characters, crafting and merging
+- Support gameplay mechanics that rely on metadata such as levelling up characters, crafting and merging
 - Refine the game balance
 - Refine and correct game content such art and copy
 - Delay reveals of primary sales
@@ -128,7 +128,7 @@ Another endpoint is available to [investigate the reason why the metadata for a 
 
 ### Viewing metadata refresh errors
 
-If 2 non-successful attemps have been made to retrieve the updated metadata values from the [Metadata API](/docs/minting-on-immutable-x#metadata-api), that token will be marked as `failed`. A more detailed explanation of why token metadata could not be updated for a particular refresh can be queried with the following endpoint:
+If 2 non-successful attempts have been made to retrieve the updated metadata values from the [Metadata API](/docs/minting-on-immutable-x#metadata-api), that token will be marked as `failed`. A more detailed explanation of why token metadata could not be updated for a particular refresh can be queried with the following endpoint:
 
 ```json
 GET /v1/metadata-refreshes/:refresh_id/errors
@@ -224,7 +224,7 @@ The above endpoint will return a list of refreshes ordered by `created_at` , sho
 
 ##### Filter by collection address
 
-The endpoint results can also be filtered by using the the query parameter `collection_address`:
+The endpoint results can also be filtered by using the query parameter `collection_address`:
 
 ```json
 GET /v1/metadata-refreshes?collection_address=COLLECTION_ADDRESS
