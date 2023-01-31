@@ -8,7 +8,7 @@ keywords: [imx-dx]
 
 # Initialization
 
-Initialize the Core SDK client with the network on which you want your application to run (see [all networks available](https://github.com/immutable/imx-core-sdk-csharp/blob/main/Src/IMX/Imx.Sdk/Client.cs#L17)):
+Initialize the Core SDK client with the network on which you want your application to run (see [all networks available](https://github.com/immutable/imx-core-sdk-csharp/blob/28d4e048c7fa4dbf0b3c7747aba60561814c6451/Src/IMX/Imx.Sdk/Client.cs#L18)):
 
 Select one of the following Ethereum networks ImmutableX platform currently supports.
 
