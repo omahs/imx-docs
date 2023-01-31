@@ -116,7 +116,7 @@ The [Docusaurus Documentation on Code Blocks](https://docusaurus.io/docs/markdow
 
 ### Add a table
 
-We use mdx to enable adding HTML based tables to our docs. In order to enable mdx on a page, ensure that it's extension is `.mdx`. Now, that page can render any react component or valid HTML. See an example of a table [here](./docs/guides/asset-management/asset-metadata.mdx)
+We use mdx to enable adding HTML based tables to our docs. In order to enable mdx on a page, ensure that its extension is `.mdx`. Now, that page can render any react component or valid HTML. See an example of a table [here](./docs/guides/asset-management/asset-metadata.mdx)
 
 Read more about using [MDX and React in Docusaurus](https://docusaurus.io/docs/markdown-features/react)
 
