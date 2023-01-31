@@ -99,7 +99,18 @@ const configuration = {
         routeBasePath: '/sdk-docs/core-sdk-golang',
         id: 'sdks-core-sdk-golang',
         sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-golang.js'),
-        includeCurrentVersion: false, // uncomment when golang docs are versioned
+        includeCurrentVersion: false,
+        ...pageOptions,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        path: 'docs/sdk-docs/core-sdk-csharp/',
+        routeBasePath: '/sdk-docs/core-sdk-csharp',
+        id: 'sdks-core-sdk-csharp',
+        sidebarPath: require.resolve('./sidebars/sidebars-core-sdk-csharp.js'),
+        // includeCurrentVersion: false, // uncomment when csharp docs are versioned
         ...pageOptions,
       },
     ],
