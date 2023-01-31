@@ -18,7 +18,7 @@ Applications monitoring the status of the assets will use the IMX Client to retr
 
 ## Setting up the SDK
 :::caution Note: If you are using the latest version of 'create-react-app'...
-You will encounter a bunch of webpack errors when you try use the [@imbt/imx-sdk](https://www.npmjs.com/package/@imtbl/imx-sdk) SDK with your app.
+You will encounter a bunch of webpack errors when you try to use the [@imbt/imx-sdk](https://www.npmjs.com/package/@imtbl/imx-sdk) SDK with your app.
 
 Follow this guide: [How to resolve webpack errors](https://docs.x.immutable.com/docs/create-react-app-webpack-5-errors)
 :::
