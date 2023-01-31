@@ -94,7 +94,7 @@ Previously, applications using the [Link SDK](../link-sdk/index.md) did not have
             <td><a href="/img/wallet-sdk-ui-guide/disconnect.png" target="_blank"><img src="/img/wallet-sdk-ui-guide/disconnect.png" alt="Disconnect Wallet" width="85%" height="85%" /></a></td>
             <td>
                 <ul>
-                    <li>Provide an way for users to disconnect their wallets from the application</li>
+                    <li>Provide a way for users to disconnect their wallets from the application</li>
                 </ul>    
             </td>
         </tr>
