@@ -1,3 +1,16 @@
+# [1.34.0](https://github.com/immutable/imx-docs/compare/v1.33.0...v1.34.0) (2023-01-31)
+
+
+### Bug Fixes
+
+* add imports ([d110465](https://github.com/immutable/imx-docs/commit/d110465746953a41a45c3cddd9012fb647b55b05))
+* fix tabs ([2c83c71](https://github.com/immutable/imx-docs/commit/2c83c718a120881e3696858eb48bfa60ed6b1123))
+
+
+### Features
+
+* add csharp core sdk docs ([fbf02ec](https://github.com/immutable/imx-docs/commit/fbf02eca3ed9be10572763e9aa8954f184a7e599))
+
 # [1.33.0](https://github.com/immutable/imx-docs/compare/v1.32.7...v1.33.0) (2023-01-24)
 
 
