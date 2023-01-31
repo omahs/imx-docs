@@ -13,7 +13,7 @@ An order is a sale listing for an asset. It contains details like price and sale
 ### Where is the order created?
 When an order is created, it is added to ImmutableX's [global orderbook service](https://www.immutable.com/blog/immutable-x-protocol-orderbook-solving-order-fragmentation) on StarkEx. This orderbook is shared by all applications built on the ImmutableX protocol, which means that it can be accessed and displayed by any of them - allowing your order to be visible and available to be transacted with by all protocol participants.
 
-This means that transations aren't siloed within certain applications, and has massive interoperability advantages for all assets and applications on the protocol.
+This means that transactions aren't siloed within certain applications, and has massive interoperability advantages for all assets and applications on the protocol.
 
 <ListAdmonition label="Guides">
     <ul>
